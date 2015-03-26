@@ -1,0 +1,31 @@
+<argList name="identifier">
+	<arg name="identifier" 
+		long="--id.identifier"
+		args="identifiername...[]"
+		countRange="{1,*}"
+		initMethod="initIdentifiers"
+		runMethod="runExtractIdentifiers"
+		lookupMethod="lookupIdentifiers"
+		outputMethod="outputIdentifiers"
+		>
+		<help>
+		</help>
+		<value name="ena">\w[A-Z]{2}[a-z]{6}\w</value>
+		<value name="pdb">\w[A-Z]{3}\d</value>
+	</arg>	
+	
+	<arg name="lookup"
+	    long="--id.lokkup"
+	    args="lengthRange"
+	    default="{1,*}"
+	    class="org.xmlcml.euclid.IntRange"
+	    parseMethod="parseLength"
+	    countRange="{1,1}"
+	    >
+	    <help>
+	    The allowed length of the identifier, described by a single org.xmlcml.euclid.IntRange (note there are no internal spaces). The default is `{1,*}` - any non-empty identifier - will be used if there is no `--id.length` attribute. When this attribute is present, the method `parseLength` will be called which saves the value of the `IntRange`.
+	    </help>
+    </arg>	
+    
+</argList>
+			
