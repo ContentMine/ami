@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.plugins.word;
+package org.xmlcml.ami2.plugins.species;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -12,22 +12,22 @@ import org.xmlcml.ami2.plugins.AMIPlugin;
  * @author pm286
  *
  */
-public class WordPlugin extends AMIPlugin {
+public class SpeciesPlugin extends AMIPlugin {
 
-	private static final Logger LOG = Logger.getLogger(WordPlugin.class);
+	private static final Logger LOG = Logger.getLogger(SpeciesPlugin.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 
-	public WordPlugin(String[] args) {
+	public SpeciesPlugin(String[] args) {
 		super();
-		this.argProcessor = new WordArgProcessor();
+		this.argProcessor = new SpeciesArgProcessor();
 		argProcessor.parseArgs(args);
 
 	}
 	
 	public static void main(String[] args) {
-		AMIArgProcessor argProcessor = new WordArgProcessor();
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor();
 		argProcessor.parseArgsRunAndOutput(args);
 	}
 
