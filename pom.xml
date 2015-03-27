@@ -72,21 +72,10 @@
 				<configuration>
 
 					<programs>
-					<!-- 
-						<program>
-							<mainClass>org.xmlcml.ami2.plugins.chem.ChemPlugin</mainClass>
-							<id>ami2-chem</id>
-						</program>
-						<program>
-							<mainClass>org.xmlcml.ami2.plugins.chem.oscar.OSCARPlugin</mainClass>
-							<id>ami2-oscar</id>
-						</program>
- -->
  						<program>
 							<mainClass>org.xmlcml.ami2.plugins.regex.RegexPlugin</mainClass>
 							<id>ami2-regex</id>
 						</program>
-						<!-- 
 						<program>
 							<mainClass>org.xmlcml.ami2.plugins.sequence.SequencePlugin</mainClass>
 							<id>ami2-sequence</id>
@@ -95,15 +84,8 @@
 							<mainClass>org.xmlcml.ami2.plugins.species.SpeciesPlugin</mainClass>
 							<id>ami2-species</id>
 						</program>
- -->
- 						<!-- 
 						<program>
-							<mainClass>org.xmlcml.ami2.plugins.tree.TreePlugin</mainClass>
-							<id>ami2-tree</id>
-						</program>
- -->
-						<program>
-							<mainClass>org.xmlcml.ami2.plugins.words.WordPlugin</mainClass>
+							<mainClass>org.xmlcml.ami2.plugins.word.WordPlugin</mainClass>
 							<id>ami2-words</id>
 						</program>
 					</programs>
@@ -161,21 +143,12 @@
 							</mapper>
 						</data>
 -->
-<!-- 
-						<data>
-							<type>link</type>
-							<symlink>true</symlink>
-							<linkName>/usr/bin/ami2-chem</linkName>
-							<linkTarget>/usr/share/ami-repo/bin/ami2-chem</linkTarget>
-						</data>
- -->
  						<data>
 							<type>link</type>
 							<symlink>true</symlink>
 							<linkName>/usr/bin/ami2-regex</linkName>
 							<linkTarget>/usr/share/ami-repo/bin/ami2-regex</linkTarget>
 						</data>
-						<!-- 
 						<data>
 							<type>link</type>
 							<symlink>true</symlink>
@@ -188,13 +161,6 @@
 							<linkName>/usr/bin/ami2-species</linkName>
 							<linkTarget>/usr/share/ami-repo/bin/ami2-species</linkTarget>
 						</data>
-						<data>
-							<type>link</type>
-							<symlink>true</symlink>
-							<linkName>/usr/bin/ami2-tree</linkName>
-							<linkTarget>/usr/share/ami-repo/bin/ami2-tree</linkTarget>
-						</data>
-						-->
 						<data>
 							<type>link</type>
 							<symlink>true</symlink>
