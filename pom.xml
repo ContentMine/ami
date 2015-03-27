@@ -77,15 +77,15 @@
 							<id>ami2-regex</id>
 						</program>
 						<program>
-							<mainClass>org.xmlcml.ami2.plugins.words.SequencePlugin</mainClass>
+							<mainClass>org.xmlcml.ami2.plugins.sequence.SequencePlugin</mainClass>
 							<id>ami2-sequence</id>
 						</program>
 						<program>
-							<mainClass>org.xmlcml.ami2.plugins.words.SpeciesPlugin</mainClass>
+							<mainClass>org.xmlcml.ami2.plugins.species.SpeciesPlugin</mainClass>
 							<id>ami2-species</id>
 						</program>
 						<program>
-							<mainClass>org.xmlcml.ami2.plugins.words.WordPlugin</mainClass>
+							<mainClass>org.xmlcml.ami2.plugins.word.WordPlugin</mainClass>
 							<id>ami2-words</id>
 						</program>
 					</programs>
