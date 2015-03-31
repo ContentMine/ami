@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
 
 public class SequenceArgProcessorTest {
 
@@ -26,7 +27,7 @@ public class SequenceArgProcessorTest {
 		File newDir = new File("target/plosone/sequences/");
 		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--sq.sequence --sq.length {6,20} --context 35 50 --sq.type dna prot -q "+newDir+" -i scholarly.html"; 
-		SequenceArgProcessor sequenceArgProcessor = new SequenceArgProcessor(args);
+		AMIArgProcessor sequenceArgProcessor = new SequenceArgProcessor(args);
 		sequenceArgProcessor.runAndOutput();
 		Assert.assertTrue("results dir: ", new File(newDir, "results").exists());
 		Assert.assertTrue("sequences dir: ", new File(newDir, "results/sequence").exists());

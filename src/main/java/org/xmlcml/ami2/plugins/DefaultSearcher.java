@@ -27,37 +27,52 @@ public class DefaultSearcher {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	protected Pattern pattern;
 	private AMIArgProcessor argProcessor;
 	protected Integer[] contextCounts;
-	private String match;
+	private String exactMatch;
 	private AbstractLookup lookup;
+	private NamedPattern namedPattern;
+	private Pattern pattern;
+	private String name;
 
-	public DefaultSearcher(AMIArgProcessor argProcessor, Pattern pattern) {
-		this.pattern = pattern;
+	public DefaultSearcher(AMIArgProcessor argProcessor, NamedPattern namedPattern) {
+		this.namedPattern = namedPattern;
 		this.argProcessor = argProcessor;
 		contextCounts = argProcessor.getContextCount();
+		this.pattern = namedPattern.getPattern();
+		this.name = namedPattern.getName();
 	}
 
 	/** create resultsElement.
 	 * 
-	 * May be empy if no hits
+	 * May be empty if no hits
 	 * 
 	 * @param xomElement
 	 * @return
 	 */
 	protected ResultsElement searchXomElement(Element xomElement) {
 		ResultsElement resultsElement = new ResultsElement();
-		List<ResultElement> resultElementList = search(xomElement.getValue()); // crude to start with
+		String value = getValue(xomElement);
+		List<ResultElement> resultElementList = search(value); // crude to start with
 		for (ResultElement resultElement : resultElementList) {
 			resultsElement.appendChild(resultElement);
 		}
 		return resultsElement;
 	}
 
+	/** flatten all tags.
+	 * 
+	 * @param xomElement
+	 * @return
+	 */
+	protected String getValue(Element xomElement) {
+		return xomElement.getValue();
+	}
+
 	protected List<ResultElement> search(String value) {
 		List<ResultElement> resultElementList = new ArrayList<ResultElement>();
 		Matcher matcher = pattern.matcher(value);
+		LOG.trace("AMI2Value "+value);
 		int start = 0;
 		while (matcher.find(start)) {
 			ResultElement resultElement = createResultElement(value, matcher);
@@ -67,23 +82,18 @@ public class DefaultSearcher {
 		return resultElementList;
 	}
 
-	protected ResultElement createResultElement(String value, Matcher matcher) {
-		ResultElement resultElement = new ResultElement();
-		matchAndAddPrePost(value, matcher, resultElement);
-		return resultElement;
-	}
-
 	protected void matchAndAddPrePost(String value, Matcher matcher,
 			ResultElement resultElement) {
-		match = matcher.group(0);
+		String exactMatch = matcher.group(0);
+		LOG.debug(">>> "+exactMatch);
 		int preEnd = matcher.start();
 		int preStart = Math.max(0, preEnd - contextCounts[0]);
 		int postStart = matcher.end();
 		int postEnd = Math.min(value.length(), postStart + contextCounts[1]);
-		resultElement.setPre(flattenTags(value.substring(preStart, preEnd)));
-		match = flattenTags(match);
-		resultElement.setMatch(match);
-		resultElement.setPost(flattenTags(value.substring(postStart, postEnd)));
+		resultElement.setPre(flattenHtmlInlineTags(value.substring(preStart, preEnd)));
+		exactMatch = flattenHtmlInlineTags(exactMatch);
+		resultElement.setExact(exactMatch);
+		resultElement.setPost(flattenHtmlInlineTags(value.substring(postStart, postEnd)));
 		lookupMatchAndAddLookupRefs(resultElement);
 	}
 
@@ -92,15 +102,15 @@ public class DefaultSearcher {
 		for (String lookupName : lookupInstanceByName.keySet()) {
 			AbstractLookup lookup = lookupInstanceByName.get(lookupName);
 			Map<String, String> lookupRefByMatch = lookup.getOrCreateLookupRefByMatch();
-			String lookupRef = lookupRefByMatch.get(match);
+			String lookupRef = lookupRefByMatch.get(exactMatch);
 			if (lookupRef == null) {
 				try {
-					lookupRef = lookup.lookup(match);
+					lookupRef = lookup.lookup(exactMatch);
 				} catch (IOException e) {
-					LOG.debug("Cannot find match: "+match+" in "+lookupName);
+					LOG.debug("Cannot find match: "+exactMatch+" in "+lookupName);
 				}
 				lookupRef = lookupRef == null ? NOT_FOUND : lookupRef;
-				lookupRefByMatch.put(match,  lookupRef);
+				lookupRefByMatch.put(exactMatch,  lookupRef);
 			}
 			if (!(NOT_FOUND.equals(lookupRef))) {
 				resultElement.addAttribute(new Attribute(lookupName, lookupRef));
@@ -108,7 +118,15 @@ public class DefaultSearcher {
 		}
 	}
 	
-	protected String flattenTags(String s) {
+	protected String flattenHtmlInlineTags(String s) {
+		s = s.replace("<a[^>]*>", "");
+		s = s.replace("</a>", "");
+		s = s.replace("<b>", "");
+		s = s.replace("</b>", "");
+		s = s.replace("<i>", "");
+		s = s.replace("</i>", "");
+		s = s.replace("<span[^>]*>", "");
+		s = s.replace("</span>", "");
 		return s;
 	}
 
@@ -123,4 +141,25 @@ public class DefaultSearcher {
 		return resultsElement;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	protected ResultElement createResultElement(String value, Matcher matcher) {
+		ResultElement resultElement = createResultElement();
+		matchAndAddPrePost(value, matcher, resultElement);
+		return resultElement;
+	}
+
+	/** 
+	 * Often overridden
+	 * 
+	 * @return
+	 */
+	protected ResultElement createResultElement() {
+		return new ResultElement();
+	}
+	
+	
+	
 }

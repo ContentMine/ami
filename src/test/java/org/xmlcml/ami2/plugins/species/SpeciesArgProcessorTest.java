@@ -12,6 +12,7 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
 
 public class SpeciesArgProcessorTest {
 
@@ -27,7 +28,7 @@ public class SpeciesArgProcessorTest {
 		File newDir = new File("target/plosone/species");
 		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--sp.species --context 35 50 --sp.type binomial binomialsp -q "+newDir+" -i scholarly.html"; 
-		SpeciesArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
+		AMIArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
 		speciesArgProcessor.runAndOutput();
 		Assert.assertTrue("results dir: ", new File(newDir, "results").exists());
 		Assert.assertTrue("species dir: ", new File(newDir, "results/species").exists());
@@ -42,12 +43,12 @@ public class SpeciesArgProcessorTest {
 	}
 	
 	@Test
-	@Ignore // accesses net
+//	@Ignore // accesses net
 	public void testSpeciesArgProcessorLookup() throws Exception {
 		File newDir = new File("target/plosone/species");
 		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--sp.species --context 35 50 --sp.type binomial binomialsp -q "+newDir+" -i scholarly.html --lookup wikipedia"; 
-		SpeciesArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
+		AMIArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
 		speciesArgProcessor.runAndOutput();
 		File binomialFile = new File(newDir, "results/species/binomial/results.xml");
 		Element binomialElement = new Builder().build(binomialFile).getRootElement();

@@ -1,6 +1,7 @@
 package org.xmlcml.ami2.plugins;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -9,6 +10,7 @@ import java.util.Map;
 
 import nu.xom.Element;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.lookups.AbstractLookup;
@@ -20,6 +22,7 @@ import org.xmlcml.files.ResultsElement;
 import org.xmlcml.html.HtmlElement;
 import org.xmlcml.html.HtmlFactory;
 import org.xmlcml.html.HtmlP;
+import org.xmlcml.xml.XMLUtil;
 
 /** 
  * Processes commandline arguments.
@@ -29,12 +32,13 @@ import org.xmlcml.html.HtmlP;
  */
 public class AMIArgProcessor extends DefaultArgProcessor {
 	
-	public static final String RESULTS = "results";
 	public static final Logger LOG = Logger.getLogger(AMIArgProcessor.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
+	private static final String ARG_PROCESSOR = "ArgProcessor";
+	public static final String RESULTS = "results";
 	protected static String RESOURCE_NAME_TOP = "/org/xmlcml/ami2";
 	protected static String PLUGIN_RESOURCE = RESOURCE_NAME_TOP+"/plugins";
 	private static String ARGS_RESOURCE = PLUGIN_RESOURCE+"/"+"args.xml";
@@ -52,6 +56,10 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	private String plugin;
 	private List<String> lookupNames;
     Map<String,AbstractLookup> lookupInstanceByName;
+	protected ResultsElement resultsElement;
+	protected HashMap<String, DefaultSearcher> searcherByNameMap;
+	protected List<DefaultSearcher> searcherList;
+	private HashMap<String, ResultsElement> resultsBySearcherNameMap;
 	
 	public AMIArgProcessor() {
 		super();
@@ -72,11 +80,9 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	
 	protected String createPluginArgsResourceName() {
 		String clazz = this.getClass().getSimpleName();
-		plugin = clazz.replace("ArgProcessor", "").toLowerCase();
+		plugin = clazz.replace(ARG_PROCESSOR, "").toLowerCase();
 		return AMIArgProcessor.PLUGIN_RESOURCE + "/"+plugin+"/"+ARGS_XML;
 	}
-
-
 
 	// ============= METHODS =============
 	
@@ -156,15 +162,19 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		return update;
 	}
 
-	@Override
-	/** parse args and resolve their dependencies.
-	 * 
-	 * (don't run any argument actions)
-	 * 
-	 */
-	public void parseArgs(String[] args) {
-		super.parseArgs(args);
+	public Integer[] getContextCount() {
+		return contextCount;
 	}
+
+//	@Override
+//	/** parse args and resolve their dependencies.
+//	 * 
+//	 * (don't run any argument actions)
+//	 * 
+//	 */
+//	public void parseArgs(String[] args) {
+//		super.parseArgs(args);
+//	}
 
 	protected List<HtmlP> extractPElements() {
 		HtmlElement htmlElement = getScholarlyHtmlElement(currentQuickscrapeNorma);
@@ -176,10 +186,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		HtmlElement htmlElement = getScholarlyHtmlElement(currentQuickscrapeNorma);
 		String value = htmlElement == null ? null : htmlElement.getValue();
 		return value == null ? new ArrayList<String>() :  new ArrayList<String>(Arrays.asList(value.split("\\s+")));
-	}
-
-	public Integer[] getContextCount() {
-		return contextCount;
 	}
 
 	public void addResultsElement(ResultsElement resultsElement0) {
@@ -235,7 +241,17 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		if (quickscrapeNorma != null && quickscrapeNorma.hasScholarlyHTML()) {
 			File scholarlyHtmlFile = quickscrapeNorma.getExistingScholarlyHTML();
 			try {
+				String debug = FileUtils.readFileToString(scholarlyHtmlFile);
+				LOG.debug(">>>>>"+debug.substring(0, 11600));
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			try {
+				Element xml = XMLUtil.parseQuietlyToDocument(scholarlyHtmlFile).getRootElement();
+//				htmlElement = HtmlElement.create(xml, false, true);
 				htmlElement = new HtmlFactory().parse(scholarlyHtmlFile);
+				LOG.debug("========================html "+htmlElement.toXML().substring(0, 11600));
 			} catch (Exception e) {
 				LOG.error("Cannot create scholarlyHtmlElement");
 			}
@@ -278,5 +294,99 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		return lookupInstanceByName;
 	}
 
+	/** create Subclassed Searcher.
+	 * 
+	 * //PLUGIN
+	 * 
+	 * Most plugins should Override this and create a FooSearcher.
+	 * 
+	 * @param namedPattern 
+	 * @return subclassed Plugin
+	 */
+	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
+		return new DefaultSearcher(this, namedPattern);
+	}
+
+	protected void ensureSearcherList() {
+		if (searcherList == null) {
+			searcherList = new ArrayList<DefaultSearcher>();
+		}
+	}
+
+	protected void createSearcherList(List<String> names) {
+		ensureSearcherBySearcherNameMap();
+		ensureSearcherList();
+		for (String name : names) {
+			DefaultSearcher sequenceSearcher = searcherByNameMap.get(name);
+			if (sequenceSearcher == null) {
+				LOG.error("unknown sequenceType: "+name+"; skipped");
+			} else {
+				searcherList.add(sequenceSearcher);
+			}
+		}
+	}
+
+	private void ensureSearcherBySearcherNameMap() {
+		if (searcherByNameMap == null) {
+			searcherByNameMap = new HashMap<String, DefaultSearcher>();
+		}
+	}
+
+	protected void outputResultElements(ArgumentOption option) {
+		resultsElementList = new ArrayList<ResultsElement>();
+		for (DefaultSearcher sequenceSearcher : searcherList) {
+			String name = sequenceSearcher.getName();
+			ResultsElement resultsElement = resultsBySearcherNameMap.get(name);
+			if (resultsElement != null) {
+				resultsElement.setTitle(name);
+				resultsElementList.add(resultsElement);
+			}
+		}
+		currentQuickscrapeNorma.createResultsDirectoriesAndOutputResultsElement(
+				option, resultsElementList, QuickscrapeNorma.RESULTS_XML);
+	}
+
+	protected void searchHtmlParaElements() {
+		List<HtmlP> pElements = extractPElements();
+		resultsBySearcherNameMap = new HashMap<String, ResultsElement>();
+		for (DefaultSearcher searcher : searcherList) {
+			String name = searcher.getName();
+			ResultsElement resultsElement = searcher.search(pElements);
+			resultsBySearcherNameMap.put(name, resultsElement);
+		}
+	}
+
+	protected void createAndStoreNamedSearchers(ArgumentOption option) {
+		List<Element> values = option.getOrCreateValues();
+		for (Element valueElement : values) {
+			try {
+				createAndStoreSearcher(valueElement);
+			} catch (Exception e) {
+				LOG.error("Could not create SpeciesSearcher "+valueElement.getAttributeValue(NAME)+"; "+e.getCause());
+				continue;
+			}
+		}
+		LOG.debug("searchers "+searcherByNameMap);
+	}
+
+	public void createAndStoreSearcher(Element valueElement) {
+		ensureSearcherByNameMap();
+		NamedPattern namedPattern = NamedPattern.createFromValueElement(valueElement);
+		if (namedPattern != null) {
+			DefaultSearcher searcher = createSearcher(namedPattern);
+			searcherByNameMap.put(namedPattern.getName(), searcher);
+		}
+	}
+
+	private void ensureSearcherByNameMap() {
+		if (searcherByNameMap == null) {
+			searcherByNameMap = new HashMap<String, DefaultSearcher>();
+		}
+	}
+
+	protected void createSearcherList(ArgumentOption option, ArgIterator argIterator) {
+		List<String> types = argIterator.getStrings(option);
+		createSearcherList(types);
+	}
 
 }
