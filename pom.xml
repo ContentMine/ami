@@ -73,6 +73,10 @@
 
 					<programs>
  						<program>
+							<mainClass>org.xmlcml.ami2.plugins.regex.IdentifierPlugin</mainClass>
+							<id>ami2-identifier</id>
+						</program>
+ 						<program>
 							<mainClass>org.xmlcml.ami2.plugins.regex.RegexPlugin</mainClass>
 							<id>ami2-regex</id>
 						</program>
