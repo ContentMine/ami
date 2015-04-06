@@ -129,9 +129,14 @@ public class LinneanNamer {
 		List<String> newNameList = new ArrayList<String>();
 		genusByAbbreviationMap = new HashMap<String, String>();
 		for (String name : nameList) {
+			name = name.trim().replace("\\s*", "\\s");
+//			if (name.indexOf("\\.") == -1) {
+//				LOG.debug("non dot: "+name);
+//				continue;
+//			}
 			LinneanName linneanName = LinneanNamer.createBinomial(name);
 			if (linneanName == null) {
-				LOG.debug("Not a binomial");
+				LOG.debug("Not a binomial: "+name);
 			} else {
 				String genusAbbreviation = linneanName.getGenusAbbreviation();
 				String fullGenus = genusByAbbreviationMap.get(genusAbbreviation);
@@ -151,7 +156,6 @@ public class LinneanNamer {
 				}
 				name = linneanName.getName();
 			}
-//			LOG.debug(name);
 			newNameList.add(name);
 		}
 		return newNameList;

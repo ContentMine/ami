@@ -240,18 +240,16 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		HtmlElement htmlElement = null;
 		if (quickscrapeNorma != null && quickscrapeNorma.hasScholarlyHTML()) {
 			File scholarlyHtmlFile = quickscrapeNorma.getExistingScholarlyHTML();
-			try {
-				String debug = FileUtils.readFileToString(scholarlyHtmlFile);
-				LOG.debug(">>>>>"+debug.substring(0, 11600));
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+//			try {
+//				String debug = FileUtils.readFileToString(scholarlyHtmlFile);
+//				LOG.debug(">>>>>"+debug.substring(0, 11600));
+//			} catch (IOException e1) {
+//				// TODO Auto-generated catch block
+//				e1.printStackTrace();
+//			}
 			try {
 				Element xml = XMLUtil.parseQuietlyToDocument(scholarlyHtmlFile).getRootElement();
-//				htmlElement = HtmlElement.create(xml, false, true);
 				htmlElement = new HtmlFactory().parse(scholarlyHtmlFile);
-				LOG.debug("========================html "+htmlElement.toXML().substring(0, 11600));
 			} catch (Exception e) {
 				LOG.error("Cannot create scholarlyHtmlElement");
 			}
@@ -352,6 +350,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		for (DefaultSearcher searcher : searcherList) {
 			String name = searcher.getName();
 			ResultsElement resultsElement = searcher.search(pElements);
+			resultsElement.setAllResultElementNames(name);
 			resultsBySearcherNameMap.put(name, resultsElement);
 		}
 	}

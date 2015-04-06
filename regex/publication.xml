@@ -1,69 +1,69 @@
 <compoundRegex title="publication">
-	<regex>electronic</regex>
-	<regex>edition</regex>
-	<regex>article</regex>
-	<regex>conforms</regex>
-	<regex>requirements</regex>
-	<regex>published</regex>
-	<regex>work</regex>
-	<regex>registered</regex>
-	<regex>online</regex>
-	<regex>LSID</regex>
-	<regex>information</regex>
-	<regex>web</regex>
-	<regex>browser</regex>
-	<regex>publication</regex>
-	<regex>ISSN</regex>
-	<regex>archived</regex>
-	<regex>digital</regex>
-	<regex>repositories:</regex>
-	<regex>PubMed Central</regex>
-	<regex>LOCKSS</regex>
-	<regex>Open Access</regex>
-	<regex>distributed</regex>
-	<regex>terms</regex>
-	<regex>Creative Commons</regex>
-	<regex>Creative Commons Attribution License</regex>
-	<regex>permits</regex>
-	<regex>unrestricted</regex>
-	<regex>distribution</regex>
-	<regex>reproduction</regex>
-	<regex>medium</regex>
-	<regex>provided</regex>
-	<regex>original</regex>
-	<regex>properly</regex>
-	<regex>credited</regex>
-	<regex>data</regex>
-	<regex>supporting</regex>
-	<regex>results</regex>
-	<regex>available</regex>
-	<regex>accession</regex>
-	<regex>authors</regex>
-	<regex>declare</regex>
-	<regex>competing</regex>
-	<regex>interests</regex>
-	<regex>conceived</regex>
-	<regex>study</regex>
-	<regex>carried</regex>
-	<regex>performed</regex>
-	<regex>analysis</regex>
-	<regex>coordinated</regex>
-	<regex>material</regex>
-	<regex>interpreted</regex>
-	<regex>context</regex>
-	<regex>results</regex>
-	<regex>wrote</regex>
-	<regex>read</regex>
-	<regex>approved</regex>
-	<regex>final</regex>
-	<regex>manuscript</regex>
-	<regex>thank</regex>
-	<regex>helpful</regex>
-	<regex>comments</regex>
-	<regex>discussion</regex>
-	<regex>received</regex>
-	<regex>funding</regex>
-	<regex>European Union Seventh Framework Programme</regex>
-	<regex>grant</regex>
-	<regex>agreement</regex>
+	<regex fields="electronic">electronic</regex>
+	<regex fields="edition">edition</regex>
+	<regex fields="article">article</regex>
+	<regex fields="conforms">conforms</regex>
+	<regex fields="a">requirements</regex>
+	<regex fields="a">published</regex>
+	<regex fields="a">work</regex>
+	<regex fields="a">registered</regex>
+	<regex fields="a">online</regex>
+	<regex fields="a">LSID</regex>
+	<regex fields="a">information</regex>
+	<regex fields="a">web</regex>
+	<regex fields="a">browser</regex>
+	<regex fields="a">publication</regex>
+	<regex fields="a">ISSN</regex>
+	<regex fields="a">archived</regex>
+	<regex fields="a">digital</regex>
+	<regex fields="a">repositories:</regex>
+	<regex fields="a">PubMed Central</regex>
+	<regex fields="a">LOCKSS</regex>
+	<regex fields="a">Open Access</regex>
+	<regex fields="a">distributed</regex>
+	<regex fields="a">terms</regex>
+	<regex fields="a">Creative Commons</regex>
+	<regex fields="a">Creative Commons Attribution License</regex>
+	<regex fields="a">permits</regex>
+	<regex fields="a">unrestricted</regex>
+	<regex fields="a">distribution</regex>
+	<regex fields="a">reproduction</regex>
+	<regex fields="a">medium</regex>
+	<regex fields="a">provided</regex>
+	<regex fields="a">original</regex>
+	<regex fields="a">properly</regex>
+	<regex fields="a">credited</regex>
+	<regex fields="a">data</regex>
+	<regex fields="a">supporting</regex>
+	<regex fields="a">results</regex>
+	<regex fields="a">available</regex>
+	<regex fields="a">accession</regex>
+	<regex fields="a">authors</regex>
+	<regex fields="a">declare</regex>
+	<regex fields="a">competing</regex>
+	<regex fields="a">interests</regex>
+	<regex fields="a">conceived</regex>
+	<regex fields="a">study</regex>
+	<regex fields="a">carried</regex>
+	<regex fields="a">performed</regex>
+	<regex fields="a">analysis</regex>
+	<regex fields="a">coordinated</regex>
+	<regex fields="a">material</regex>
+	<regex fields="a">interpreted</regex>
+	<regex fields="a">context</regex>
+	<regex fields="a">results</regex>
+	<regex fields="a">wrote</regex>
+	<regex fields="a">read</regex>
+	<regex fields="a">approved</regex>
+	<regex fields="a">final</regex>
+	<regex fields="a">manuscript</regex>
+	<regex fields="a">thank</regex>
+	<regex fields="a">helpful</regex>
+	<regex fields="a">comments</regex>
+	<regex fields="a">discussion</regex>
+	<regex fields="a">received</regex>
+	<regex fields="a">funding</regex>
+	<regex fields="a">European Union Seventh Framework Programme</regex>
+	<regex fields="a">grant</regex>
+	<regex fields="a">agreement</regex>
 </compoundRegex>

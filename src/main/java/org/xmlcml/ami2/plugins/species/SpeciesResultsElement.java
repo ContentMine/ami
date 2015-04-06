@@ -3,28 +3,31 @@ package org.xmlcml.ami2.plugins.species;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.xmlcml.files.ResultElement;
 import org.xmlcml.files.ResultsElement;
 import org.xmlcml.xml.XMLUtil;
 
 public class SpeciesResultsElement extends ResultsElement {
 
+	
+	private static final Logger LOG = Logger
+			.getLogger(SpeciesResultsElement.class);
+	static {
+		LOG.setLevel(Level.DEBUG);
+	}
+	
+	private static final String SPECIES = "species";
 	private List<String> nameList;
 
 	public SpeciesResultsElement(String title) {
 		super(title);
 	}
 
-//	public SpeciesResultsElement(SpeciesResultsElement resultsElement) {
-//		XMLUtil.copyAttributesFromTo(resultsElement, this);
-//		for (ResultElement resultElement : resultsElement) {
-//			this.appendChild(new SpeciesResultElement(resultElement));
-//		}
-//	}
-
-//	public void resolveAbbreviations() {
-//		getNameList();
-//	}
+	public SpeciesResultsElement() {
+		this(SPECIES);
+	}
 
 	public List<String> getExactList() {
 		if (nameList == null) {

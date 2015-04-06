@@ -53,9 +53,7 @@ public class RegexPluginTest {
 	public void testSimpleTestRegex() throws IOException {
 		String[] args = {
 				// add context for 25 chars preceding and 40 post
-				"--context", "25", "40",
-				"--r.regex", 
-			    	"regex/simpletest.xml",
+				"--context", "25", "40", "--r.regex", "regex/simpletest.xml",
 		};
 		RegexPlugin regexPlugin = new RegexPlugin(args);
 	}
@@ -71,24 +69,17 @@ public class RegexPluginTest {
 				"-i", "scholarly.html",
 				"-o", "results.xml",
 				"--context", "25", "40",
-				"--r.regex", 
-			    	"regex/agriculture.xml",
-			    	"regex/astrophys.xml",
-			    	"regex/commonnew.xml",
-			    	"regex/ebola.xml",
+				"--r.regex" ,
+			    	"regex/common.xml",
 			    	"regex/figure.xml",
-			    	"regex/genbank.xml",
-			    	"regex/metadata.xml",
-			    	"regex/pdb.xml",
 			    	"regex/phylotree.xml",
-			    	"regex/simpletest.xml",
 			    	"regex/stemtest.xml", // this doesn't exist and LOGs an error
 		};
 		RegexPlugin regexPlugin = new RegexPlugin(args);
 		AMIArgProcessor argProcessor = (AMIArgProcessor) regexPlugin.getArgProcessor();
 		Assert.assertNotNull(argProcessor);
 //		LOG.debug(argProcessor.getInputList());
-//		argProcessor.runAndOutput();
+		argProcessor.runAndOutput();
 //		QuickscrapeNorma qsNormaTemp = new QuickscrapeNorma(normaTemp);
 //		// fails at present
 ////		Assert.assertTrue("results.xml", qsNormaTemp.hasResultsXML());

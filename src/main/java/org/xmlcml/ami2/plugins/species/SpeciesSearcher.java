@@ -38,6 +38,10 @@ public class SpeciesSearcher extends DefaultSearcher {
 		xmlString = xmlString.replaceAll("</b>", "");
 		xmlString = xmlString.replaceAll("<a>", "");
 		xmlString = xmlString.replaceAll("</a>", "");
+		xmlString = xmlString.replaceAll("<p>", "");
+		xmlString = xmlString.replaceAll("</p>", "");
+		xmlString = xmlString.replaceAll("<div>", "");
+		xmlString = xmlString.replaceAll("</div>", "");
 		return xmlString;
 	}
 
@@ -46,7 +50,7 @@ public class SpeciesSearcher extends DefaultSearcher {
 		SpeciesResultsElement resultsElement = new SpeciesResultsElement("species");
 		for (HtmlP pElement : pElements) {
 			String xmlString = getValue(pElement);
-			LOG.debug(xmlString);
+			LOG.trace(xmlString);
 			List<ResultElement> resultElementList = this.search(xmlString);
 			for (ResultElement resultElement : resultElementList) {
 				resultsElement.appendChild(resultElement);
@@ -55,19 +59,10 @@ public class SpeciesSearcher extends DefaultSearcher {
 		List<String> exactList = resultsElement.getExactList();
 		LinneanNamer linneanNamer = new LinneanNamer();
 		List<String> matchList = linneanNamer.expandAbbreviations(exactList);
-		LOG.debug("EXACT "+exactList+"; MATCH "+matchList);
+		LOG.trace("EXACT "+exactList+"; MATCH "+matchList);
 		resultsElement.addMatchAttributes(matchList);
 		
 		return resultsElement;
-	}
-
-	@Override
-	protected String flattenHtmlInlineTags(String s) {
-		s = s.replaceAll("<i>", "");
-		s = s.replaceAll("</i>", "");
-		s = s.replaceAll("<b[^>]*>", "");
-		s = s.replaceAll("</b[^>]*>", "");
-		return s;
 	}
 
 	/**

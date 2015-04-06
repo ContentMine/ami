@@ -27,7 +27,7 @@ public class SpeciesArgProcessorTest {
 	public void testSpeciesArgProcessor() throws Exception {
 		File newDir = new File("target/plosone/species");
 		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
-		String args = "--sp.species --context 35 50 --sp.type binomial binomialsp -q "+newDir+" -i scholarly.html"; 
+		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
 		AMIArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
 		speciesArgProcessor.runAndOutput();
 		Assert.assertTrue("results dir: ", new File(newDir, "results").exists());

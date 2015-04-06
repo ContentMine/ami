@@ -72,7 +72,6 @@ public class DefaultSearcher {
 	protected List<ResultElement> search(String value) {
 		List<ResultElement> resultElementList = new ArrayList<ResultElement>();
 		Matcher matcher = pattern.matcher(value);
-		LOG.trace("AMI2Value "+value);
 		int start = 0;
 		while (matcher.find(start)) {
 			ResultElement resultElement = createResultElement(value, matcher);
@@ -85,7 +84,6 @@ public class DefaultSearcher {
 	protected void matchAndAddPrePost(String value, Matcher matcher,
 			ResultElement resultElement) {
 		String exactMatch = matcher.group(0);
-		LOG.debug(">>> "+exactMatch);
 		int preEnd = matcher.start();
 		int preStart = Math.max(0, preEnd - contextCounts[0]);
 		int postStart = matcher.end();
@@ -119,14 +117,7 @@ public class DefaultSearcher {
 	}
 	
 	protected String flattenHtmlInlineTags(String s) {
-		s = s.replace("<a[^>]*>", "");
-		s = s.replace("</a>", "");
-		s = s.replace("<b>", "");
-		s = s.replace("</b>", "");
-		s = s.replace("<i>", "");
-		s = s.replace("</i>", "");
-		s = s.replace("<span[^>]*>", "");
-		s = s.replace("</span>", "");
+		s = s.replaceAll("<[^>]*>", "");
 		return s;
 	}
 
