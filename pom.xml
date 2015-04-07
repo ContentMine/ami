@@ -150,6 +150,12 @@
  						<data>
 							<type>link</type>
 							<symlink>true</symlink>
+							<linkName>/usr/bin/ami2-identifier</linkName>
+							<linkTarget>/usr/share/ami-repo/bin/ami2-identifier</linkTarget>
+						</data>
+ 						<data>
+							<type>link</type>
+							<symlink>true</symlink>
 							<linkName>/usr/bin/ami2-regex</linkName>
 							<linkTarget>/usr/share/ami-repo/bin/ami2-regex</linkTarget>
 						</data>

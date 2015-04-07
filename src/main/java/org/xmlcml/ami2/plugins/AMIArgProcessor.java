@@ -298,11 +298,13 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	 * 
 	 * Most plugins should Override this and create a FooSearcher.
 	 * 
-	 * @param namedPattern 
+	 * @param namedPattern may be null for non-regex-based searchers
 	 * @return subclassed Plugin
 	 */
 	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
-		return new DefaultSearcher(this, namedPattern);
+		DefaultSearcher defaultSearcher = new DefaultSearcher(this);
+		defaultSearcher.setNamedPattern(namedPattern);
+		return defaultSearcher;
 	}
 
 	protected void ensureSearcherList() {

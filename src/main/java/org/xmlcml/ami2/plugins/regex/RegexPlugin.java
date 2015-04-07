@@ -24,6 +24,12 @@ public class RegexPlugin extends AMIPlugin {
 		
 	}
 
+	public RegexPlugin(String args) {
+		super();
+		this.argProcessor = new RegexArgProcessor(args);
+		
+	}
+
 	public static void main(String[] args) {
 		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
 		argProcessor.runAndOutput();

@@ -13,6 +13,9 @@ import nu.xom.Element;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.DefaultSearcher;
+import org.xmlcml.ami2.plugins.NamedPattern;
+import org.xmlcml.ami2.plugins.species.SpeciesSearcher;
 import org.xmlcml.args.ArgIterator;
 import org.xmlcml.args.ArgumentOption;
 import org.xmlcml.files.EuclidSource;
@@ -32,17 +35,27 @@ public class RegexArgProcessor extends AMIArgProcessor {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
+	static final String TILDE = "~";
+//	static final String TILDE_SUFFIX = "(?:[^\\\\s\\\\p{Punct}]*)";
+	static final String TILDE_SUFFIX = "(?:[^\\\\s]*\\\\p{Punct}?)";
+//	static final String TILDE_PREFIX = "(?:[^\\s\\p{Punct}]*)";
+	
 	private CompoundRegexList compoundRegexList;
 	private Map<String, ResultsElement> resultsByCompoundRegex;
 	protected List<String> words;
 	
 	public RegexArgProcessor() {
 		super();
+		this.addVariableAndExpandReferences(TILDE, TILDE_SUFFIX);
 	}
 
 	public RegexArgProcessor(String[] args) {
 		this();
 		parseArgs(args);
+	}
+
+	public RegexArgProcessor(String argString) {
+		this(argString.split("\\s+"));
 	}
 
 	// =============== METHODS ==============
@@ -61,7 +74,24 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	}
 
 	// =========================
-	
+
+	/** create Subclassed Searcher.
+	 * 
+	 * //PLUGIN
+	 * 
+	 * Most plugins should Override this and create a FooSearcher.
+	 * 
+	 * @param argProcessor
+	 * @param compoundRegex
+	 * @return subclassed Plugin
+	 */
+	public RegexSearcher createSearcher(AMIArgProcessor argProcessor, CompoundRegex compoundRegex) {
+		RegexSearcher regexSearcher = RegexSearcher.createSearcher(argProcessor);
+		regexSearcher.setCompoundRegex(compoundRegex);
+		return regexSearcher;
+	}
+
+
 	/** might need to refactor option to use its name.
 	 * 
 	 * @param option
@@ -81,7 +111,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 		List<HtmlP> pElements = extractPElements();
 		resultsByCompoundRegex = new HashMap<String, ResultsElement>();
 		for (CompoundRegex compoundRegex : compoundRegexList) {
-			RegexSearcher regexSearcher = new RegexSearcher(compoundRegex);
+			RegexSearcher regexSearcher = createSearcher(this, compoundRegex);
 			ResultsElement resultsElement = regexSearcher.search(pElements);
 			resultsByCompoundRegex.put(compoundRegex.getTitle(), resultsElement);
 		}
@@ -91,7 +121,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 		List<String> regexLocations = option.processArgs(tokens).getStringValues();
 		getOrCreateCompoundRegexList();
 		for (String regexLocation : regexLocations) {
-			LOG.debug("RegexLocation "+regexLocation);
+			LOG.trace("RegexLocation "+regexLocation);
 			try {
 				CompoundRegex compoundRegex = readAndCreateCompoundRegex(EuclidSource.getInputStream(regexLocation));
 				compoundRegexList.add(compoundRegex);
@@ -101,7 +131,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 			
 		}
 		for (CompoundRegex compoundRegex : compoundRegexList) {
-			LOG.debug(compoundRegex);
+			LOG.trace(compoundRegex);
 		}
 	}
 	

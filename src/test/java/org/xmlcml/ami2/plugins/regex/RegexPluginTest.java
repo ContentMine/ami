@@ -78,35 +78,31 @@ public class RegexPluginTest {
 		RegexPlugin regexPlugin = new RegexPlugin(args);
 		AMIArgProcessor argProcessor = (AMIArgProcessor) regexPlugin.getArgProcessor();
 		Assert.assertNotNull(argProcessor);
-//		LOG.debug(argProcessor.getInputList());
 		argProcessor.runAndOutput();
-//		QuickscrapeNorma qsNormaTemp = new QuickscrapeNorma(normaTemp);
-//		// fails at present
-////		Assert.assertTrue("results.xml", qsNormaTemp.hasResultsXML());
 	}
 	
 	@Test
-	public void testRegexPlugin() throws IOException {
+	public void testCONSORTRegex() throws IOException {
 		QuickscrapeNorma qsNorma = new QuickscrapeNorma(Fixtures.TEST_BMC_15_1_511_QSN);
-		File normaTemp = new File("target/bmc/regex/15_1_511_test");
+		File normaTemp = new File("target/consort0/15_1_511_test");
 		qsNorma.copyTo(normaTemp, true);
 		Assert.assertFalse("results.xml", qsNorma.hasResultsXML());
-		String[] args = {
-				"-q", normaTemp.toString(),
-				"-i", "scholarly.html",
-				"-o", "results.xml",
-				"--context", "25", "40",
-				"--r.regex", 
-				    "regex/consort0.xml",
-		};
-		RegexPlugin regexPlugin = new RegexPlugin(args);
+		String arg = "-q "+ normaTemp.toString()+" -i scholarly.html --context 25 40 --r.regex regex/consort0.xml";
+		RegexPlugin regexPlugin = new RegexPlugin(arg);
 		AMIArgProcessor argProcessor = (AMIArgProcessor) regexPlugin.getArgProcessor();
-		Assert.assertNotNull(argProcessor);
-		LOG.debug(argProcessor.getInputList());
 		argProcessor.runAndOutput();
-		QuickscrapeNorma qsNormaTemp = new QuickscrapeNorma(normaTemp);
-		// fails at present
-//		Assert.assertTrue("results.xml", qsNormaTemp.hasResultsXML());
+	    compareExpectedAndResults(Fixtures.TEST_BMC_15_1_511_QSN, normaTemp, "regex/consort0/results.xml");
+
+	}
+
+
+
+	private void compareExpectedAndResults(File expectedCM, File resultsCM, String results) {
+		String msg = XMLUtil.equalsCanonically(
+	    		new File(expectedCM, "expected/"+results), 
+	    		new File(resultsCM, "results/"+results),
+	    		true);
+	    Assert.assertNull("found: "+msg, msg);
 	}
 	
 	

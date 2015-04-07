@@ -2,7 +2,6 @@ package org.xmlcml.ami2.plugins;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -17,6 +16,7 @@ import org.xmlcml.ami2.lookups.AbstractLookup;
 import org.xmlcml.files.ResultElement;
 import org.xmlcml.files.ResultsElement;
 import org.xmlcml.html.HtmlP;
+import org.xmlcml.xml.XPathGenerator;
 
 public class DefaultSearcher {
 
@@ -35,12 +35,20 @@ public class DefaultSearcher {
 	private Pattern pattern;
 	private String name;
 
-	public DefaultSearcher(AMIArgProcessor argProcessor, NamedPattern namedPattern) {
-		this.namedPattern = namedPattern;
+	public DefaultSearcher(AMIArgProcessor argProcessor) {
 		this.argProcessor = argProcessor;
 		contextCounts = argProcessor.getContextCount();
-		this.pattern = namedPattern.getPattern();
-		this.name = namedPattern.getName();
+	}
+
+	public DefaultSearcher(AMIArgProcessor argProcessor, NamedPattern namedPattern) {
+		this(argProcessor);
+		this.setNamedPattern(namedPattern);
+	}
+
+	protected void setNamedPattern(NamedPattern namedPattern) {
+		this.namedPattern = namedPattern; // could be null
+		this.pattern = namedPattern == null ? null : namedPattern.getPattern();
+		this.name = namedPattern == null ? null : namedPattern.getName();
 	}
 
 	/** create resultsElement.
@@ -124,8 +132,10 @@ public class DefaultSearcher {
 	public ResultsElement search(List<HtmlP> pElements) {
 		ResultsElement resultsElement = new ResultsElement();
 		for (HtmlP pElement : pElements) {
+			String xpath = new XPathGenerator(pElement).getXPath();
 			ResultsElement subResultsElement = this.searchXomElement(pElement);
 			if (subResultsElement.size() > 0) {
+				subResultsElement.setXPath(xpath);
 				resultsElement.transferResultElements(subResultsElement);
 			}
 		}
