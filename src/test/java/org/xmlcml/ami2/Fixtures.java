@@ -35,16 +35,19 @@ public class Fixtures {
 	public static final File EXAMPLES_TEMP_16_1_1         = new File("target/examples_16_1_1");
 
 	public static void compareExpectedAndResults(File expectedCM, File resultsCM, String results) throws IOException {
+		
 		File expectedFile = new File(expectedCM, "expected/"+results);
 		Assert.assertTrue(""+expectedFile, expectedFile.exists());
-		LOG.debug(""+expectedFile+"; "+ FileUtils.readFileToString(expectedFile));
 		File resultsFile = new File(resultsCM, "results/"+results);
 		Assert.assertTrue(resultsFile.exists());
-		LOG.debug(""+resultsFile+"; "+FileUtils.readFileToString(resultsFile));
 		String msg = XMLUtil.equalsCanonically(
 	    		expectedFile, 
 	    		resultsFile,
 	    		true);
+		if (msg != null) {
+			LOG.debug(""+expectedFile+"; "+ FileUtils.readFileToString(expectedFile));
+			LOG.debug(""+resultsFile+"; "+FileUtils.readFileToString(resultsFile));
+		}
 	    Assert.assertNull("message: "+msg, msg);
 	}
 	
