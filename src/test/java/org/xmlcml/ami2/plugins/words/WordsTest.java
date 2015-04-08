@@ -108,11 +108,11 @@ public class WordsTest {
 
 	@Test
 	public void testSummarize() throws IOException {
-		if (Fixtures.EXAMPLES_TEMP.exists()) FileUtils.forceDelete(Fixtures.EXAMPLES_TEMP);
-		FileUtils.copyDirectory(Fixtures.EXAMPLES, Fixtures.EXAMPLES_TEMP);
+		if (Fixtures.EXAMPLES_TEMP_16_1_1.exists()) FileUtils.forceDelete(Fixtures.EXAMPLES_TEMP_16_1_1);
+		FileUtils.copyDirectory(Fixtures.EXAMPLES, Fixtures.EXAMPLES_TEMP_16_1_1);
 		LOG.debug("copied files");
 		String args = 
-			"-q  "+Fixtures.EXAMPLES_TEMP.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords"+STOPWORDS_TXT+" --w.case ignore --w.summary aggregate --summaryfile target/examples/";
+			"-q  "+Fixtures.EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords"+STOPWORDS_TXT+" --w.case ignore --w.summary aggregate --summaryfile target/examples/";
 		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 	}
@@ -120,11 +120,11 @@ public class WordsTest {
 
 	@Test
 	public void testSummarizeDocumentFrequencies() throws IOException {
-		if (Fixtures.EXAMPLES_TEMP.exists()) FileUtils.forceDelete(Fixtures.EXAMPLES_TEMP);
-		FileUtils.copyDirectory(Fixtures.EXAMPLES, Fixtures.EXAMPLES_TEMP);
+		if (Fixtures.EXAMPLES_TEMP_16_1_1.exists()) FileUtils.forceDelete(Fixtures.EXAMPLES_TEMP_16_1_1);
+		FileUtils.copyDirectory(Fixtures.EXAMPLES, Fixtures.EXAMPLES_TEMP_16_1_1);
 		LOG.debug("copied files");
 		String args = 
-			"-q "+Fixtures.EXAMPLES_TEMP.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" "+CLINICAL_STOPWORDS_TXT+" --w.case ignore --w.summary booleanFrequency --summaryfile target/examples/	--w.wordcount {3,*}";
+			"-q "+Fixtures.EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" "+CLINICAL_STOPWORDS_TXT+" --w.case ignore --w.summary booleanFrequency --summaryfile target/examples/	--w.wordcount {3,*}";
 		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 	}

@@ -53,9 +53,7 @@ public class RegexPluginTest {
 	public void testSimpleTestRegex() throws IOException {
 		String[] args = {
 				// add context for 25 chars preceding and 40 post
-				"--context", "25", "40",
-				"--r.regex", 
-			    	"regex/simpletest.xml",
+				"--context", "25", "40", "--r.regex", "regex/simpletest.xml",
 		};
 		RegexPlugin regexPlugin = new RegexPlugin(args);
 	}
@@ -71,53 +69,33 @@ public class RegexPluginTest {
 				"-i", "scholarly.html",
 				"-o", "results.xml",
 				"--context", "25", "40",
-				"--r.regex", 
-			    	"regex/agriculture.xml",
-			    	"regex/astrophys.xml",
-			    	"regex/commonnew.xml",
-			    	"regex/ebola.xml",
+				"--r.regex" ,
+			    	"regex/common.xml",
 			    	"regex/figure.xml",
-			    	"regex/genbank.xml",
-			    	"regex/metadata.xml",
-			    	"regex/pdb.xml",
 			    	"regex/phylotree.xml",
-			    	"regex/simpletest.xml",
 			    	"regex/stemtest.xml", // this doesn't exist and LOGs an error
 		};
 		RegexPlugin regexPlugin = new RegexPlugin(args);
 		AMIArgProcessor argProcessor = (AMIArgProcessor) regexPlugin.getArgProcessor();
 		Assert.assertNotNull(argProcessor);
-//		LOG.debug(argProcessor.getInputList());
-//		argProcessor.runAndOutput();
-//		QuickscrapeNorma qsNormaTemp = new QuickscrapeNorma(normaTemp);
-//		// fails at present
-////		Assert.assertTrue("results.xml", qsNormaTemp.hasResultsXML());
+		argProcessor.runAndOutput();
 	}
 	
 	@Test
-	public void testRegexPlugin() throws IOException {
+	public void testCONSORTRegex() throws IOException {
 		QuickscrapeNorma qsNorma = new QuickscrapeNorma(Fixtures.TEST_BMC_15_1_511_QSN);
-		File normaTemp = new File("target/bmc/regex/15_1_511_test");
+		File normaTemp = new File("target/consort0/15_1_511_test");
 		qsNorma.copyTo(normaTemp, true);
 		Assert.assertFalse("results.xml", qsNorma.hasResultsXML());
-		String[] args = {
-				"-q", normaTemp.toString(),
-				"-i", "scholarly.html",
-				"-o", "results.xml",
-				"--context", "25", "40",
-				"--r.regex", 
-				    "regex/consort0.xml",
-		};
-		RegexPlugin regexPlugin = new RegexPlugin(args);
+		String arg = "-q "+ normaTemp.toString()+" -i scholarly.html --context 25 40 --r.regex regex/consort0.xml";
+		Assert.assertEquals("-q target/consort0/15_1_511_test -i scholarly.html --context 25 40 --r.regex regex/consort0.xml", arg);
+		RegexPlugin regexPlugin = new RegexPlugin(arg);
 		AMIArgProcessor argProcessor = (AMIArgProcessor) regexPlugin.getArgProcessor();
-		Assert.assertNotNull(argProcessor);
-		LOG.debug(argProcessor.getInputList());
 		argProcessor.runAndOutput();
-		QuickscrapeNorma qsNormaTemp = new QuickscrapeNorma(normaTemp);
-		// fails at present
-//		Assert.assertTrue("results.xml", qsNormaTemp.hasResultsXML());
+		// compares result with: /ami2/src/test/resources/org/xmlcml/ami2/bmc/15_1_511/expected/regex/consort0/results.xml
+	    Fixtures.compareExpectedAndResults(Fixtures.TEST_BMC_15_1_511_QSN, normaTemp, "regex/consort0/results.xml");
 	}
-	
+
 	
 	@Test
 	public void testRegexPluginExtractNumbers() throws IOException {

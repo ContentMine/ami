@@ -1,34 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <results title="consort0">
- <result pre="e who were recruited via " name0="follow-up" value0="follow-up" post="telephone calls. No other demographics o"/>
- <result pre="t population, and use of " name0="follow-up" value0="follow-up" post="telephone calls to explain the study met"/>
- <result pre="n invitation letter plus " name0="follow-up" value0="follow-up" post="reminder telephone calls, and through va"/>
- <result pre=" wishing to use NRT were " name0="excluded" value0="excluded" post="to avoid any confounding of the effects "/>
- <result pre="ir smoking behaviour. We " name0="excluded" value0="excluded" post="those with severe mental health problems"/>
- <result pre=" sent without making any " name0="follow-up" value0="follow-up" post="telephone calls so a response rate to a "/>
- <result pre="to explore the effect of " name0="follow-up" value0="follow-up" post="calls on increasing recruitment rates. I"/>
- <result pre="f mailed invitations and " name0="follow-up" value0="follow-up" post="telephone calls as used for recruitment "/>
- <result pre=" had completed the final " name0="follow-up" value0="follow-up" post="assessment. "/>
- <result pre="vitation letters, making " name0="follow-up" value0="follow-up" post="phone calls to non-responders to the mai"/>
- <result pre="l invitation letter plus " name0="follow-up" value0="follow-up" post="telephone calls. Statistical analyses we"/>
- <result pre="ses were completed using " name0="stata" value0="Stata" post="SE (version 12.0, StataCorp LP, College "/>
- <result pre="om primary care (with no " name0="follow-up" value0="follow-up" post="telephone calls, n = 361) led to 5.1% of"/>
- <result pre="ith attempted contact by " name0="follow-up" value0="follow-up" post="telephone calls to non-responders (n = 4"/>
- <result pre="s sent from SSS (with no " name0="follow-up" value0="follow-up" post="telephone calls, n = 255) led to 6.8% of"/>
- <result pre="zed into the study. With " name0="follow-up" value0="follow-up" post="telephone calls to non-responders (n = 1"/>
- <result pre="th those recruited via a " name0="follow-up" value0="follow-up" post="telephone call, were more likely to have"/>
- <result pre="ia letter invitation and " name0="follow-up" value0="follow-up" post="telephone reminders (8.8% conversion rat"/>
- <result pre="ia letter invitation and " name0="follow-up" value0="follow-up" post="telephone reminders (11.1% conversion ra"/>
- <result pre="tter only. **Letter plus " name0="follow-up" value0="follow-up" post="telephone call. GP: General practitioner"/>
- <result pre="recruit 100 (letter plus " name0="follow-up" value0="follow-up" post="telephone calls - 11.1% response) "/>
- <result pre="tter only. **Letter plus " name0="follow-up" value0="follow-up" post="telephone call. GP: general practitioner"/>
- <result pre="recruit 100 (letter plus " name0="follow-up" value0="follow-up" post="telephone calls - 8.8% response) "/>
- <result pre="recruitment method up to " name0="[rr]andomi[zs]ation" value0="randomization" post="is shown in Figure "/>
- <result pre=" the study team, despite " name0="follow-up" value0="follow-up" post="attempts. "/>
- <result pre="ecruitment activity (via " name0="follow-up" value0="follow-up" post="telephone calls) and recruitment methods"/>
- <result pre="Whilst the use of " name0="follow-up" value0="follow-up" post="telephone calls was effective at increas"/>
- <result pre="that those recruited via " name0="follow-up" value0="follow-up" post="telephone calls represented a harder-to-"/>
- <result pre="cally active. The use of " name0="follow-up" value0="follow-up" post="telephone calls therefore may offer adde"/>
- <result pre="r invitation than to the " name0="follow-up" value0="follow-up" post="telephone call. These differences probab"/>
- <result pre="This paper presents " name0="[ii]ndependent" value0="independent" post="research funded by the National Institut"/>
+ <result pre="ged smokers into a pilot " name0="random" value0="randomized" post="controlled trial to explore the role of " xpath="/html[1]/body[1]/div[4]/div[1]/p[1]"/>
+ <result pre="We " name0="random" value0="randomized" post="between 5.1 and 11.1% of those invited t" xpath="/html[1]/body[1]/div[7]/div[1]/div[4]/p[1]"/>
+ <result pre="e who were recruited via " name0="followup" value0="follow-up" post="telephone calls. No other demographics o" xpath="/html[1]/body[1]/div[7]/div[1]/div[4]/p[1]"/>
+ <result pre="gies for recruiting into " name0="random" value0="randomized" post="trials 17 18 19 , particularly among di" xpath="/html[1]/body[1]/div[8]/p[3]"/>
+ <result pre="t population, and use of " name0="followup" value0="follow-up" post="telephone calls to explain the study met" xpath="/html[1]/body[1]/div[8]/p[3]"/>
+ <result pre="hase two pragmatic pilot " name0="random" value0="randomized" post="controlled trial: the Exercise Assisted " xpath="/html[1]/body[1]/div[8]/p[4]"/>
+ <result pre="ternational Standardized " name0="random" value0="Randomized" post="Controlled Trial Number (ISRCTN): 138379" xpath="/html[1]/body[1]/div[8]/p[4]"/>
+ <result pre="n invitation letter plus " name0="followup" value0="follow-up" post="reminder telephone calls, and through va" xpath="/html[1]/body[1]/div[8]/p[4]"/>
+ <result pre="ral support. The two-arm " name0="random" value0="randomized" post="controlled trial consisted of a weekly o" xpath="/html[1]/body[1]/div[8]/p[5]"/>
+ <result pre=" wishing to use NRT were " name0="exclude" value0="excluded" post="to avoid any confounding of the effects " xpath="/html[1]/body[1]/div[9]/div[3]/p[1]"/>
+ <result pre="ir smoking behaviour. We " name0="exclude" value0="excluded" post="those with severe mental health problems" xpath="/html[1]/body[1]/div[9]/div[3]/p[1]"/>
+ <result pre=" sent without making any " name0="followup" value0="follow-up" post="telephone calls so a response rate to a " xpath="/html[1]/body[1]/div[9]/div[4]/div[2]/p[1]"/>
+ <result pre="to explore the effect of " name0="followup" value0="follow-up" post="calls on increasing recruitment rates. I" xpath="/html[1]/body[1]/div[9]/div[4]/div[2]/p[1]"/>
+ <result pre="f mailed invitations and " name0="followup" value0="follow-up" post="telephone calls as used for recruitment " xpath="/html[1]/body[1]/div[9]/div[4]/div[3]/p[1]"/>
+ <result pre=" had completed the final " name0="followup" value0="follow-up" post="assessment. " xpath="/html[1]/body[1]/div[9]/div[4]/div[3]/table[1]/tbody[1]/tr[21]/td[2]/p[1]"/>
+ <result pre="articipants before being " name0="random" value0="randomized" post="into the trial. " xpath="/html[1]/body[1]/div[9]/div[4]/div[3]/p[2]"/>
+ <result pre="vitation letters, making " name0="followup" value0="follow-up" post="phone calls to non-responders to the mai" xpath="/html[1]/body[1]/div[9]/div[5]/p[4]"/>
+ <result pre=" the resulting number of " name0="random" value0="randomizations" post="from each location. Conversion rates for" xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre="l invitation letter plus " name0="followup" value0="follow-up" post="telephone calls. Statistical analyses we" xpath="/html[1]/body[1]/div[9]/div[6]/p[2]"/>
+ <result pre="ses were completed using " name0="stata" value0="Stata" post="SE (version 12.0, StataCorp LP, College " xpath="/html[1]/body[1]/div[9]/div[6]/p[2]"/>
+ <result pre="rch team per participant " name0="random" value0="randomized." post="Reasons for ineligibility were also reco" xpath="/html[1]/body[1]/div[9]/div[6]/p[3]"/>
+ <result pre="% of those invited being " name0="random" value0="randomized" post="into the study. With attempted contact b" xpath="/html[1]/body[1]/div[10]/div[2]/p[1]"/>
+ <result pre="% of those invited being " name0="random" value0="randomized" post="into the study. With follow-up telephone" xpath="/html[1]/body[1]/div[10]/div[2]/p[1]"/>
+ <result pre="om primary care (with no " name0="followup" value0="follow-up" post="telephone calls, n = 361) led to 5.1% of" xpath="/html[1]/body[1]/div[10]/div[2]/p[1]"/>
+ <result pre="ith attempted contact by " name0="followup" value0="follow-up" post="telephone calls to non-responders (n = 4" xpath="/html[1]/body[1]/div[10]/div[2]/p[1]"/>
+ <result pre="s sent from SSS (with no " name0="followup" value0="follow-up" post="telephone calls, n = 255) led to 6.8% of" xpath="/html[1]/body[1]/div[10]/div[2]/p[1]"/>
+ <result pre="zed into the study. With " name0="followup" value0="follow-up" post="telephone calls to non-responders (n = 1" xpath="/html[1]/body[1]/div[10]/div[2]/p[1]"/>
+ <result pre="C2 to E (" name0="exclude" value0="excluding" post="unemployed)" xpath="/html[1]/body[1]/div[10]/div[3]/table[1]/tbody[1]/tr[11]/td[1]/p[1]"/>
+ <result pre="th those recruited via a " name0="followup" value0="follow-up" post="telephone call, were more likely to have" xpath="/html[1]/body[1]/div[10]/div[3]/p[2]"/>
+ <result pre="ia letter invitation and " name0="followup" value0="follow-up" post="telephone reminders (8.8% conversion rat" xpath="/html[1]/body[1]/div[10]/div[4]/p[1]"/>
+ <result pre="ia letter invitation and " name0="followup" value0="follow-up" post="telephone reminders (11.1% conversion ra" xpath="/html[1]/body[1]/div[10]/div[4]/p[2]"/>
+ <result pre="tter only. **Letter plus " name0="followup" value0="follow-up" post="telephone call. GP: General practitioner" xpath="/html[1]/body[1]/div[10]/div[4]/div[3]/p[1]"/>
+ <result pre="recruit 100 (letter plus " name0="followup" value0="follow-up" post="telephone calls - 11.1% response) " xpath="/html[1]/body[1]/div[10]/div[4]/table[1]/thead[1]/tr[1]/td[4]/p[1]"/>
+ <result pre="tter only. **Letter plus " name0="followup" value0="follow-up" post="telephone call. GP: general practitioner" xpath="/html[1]/body[1]/div[10]/div[4]/div[5]/p[1]"/>
+ <result pre="recruit 100 (letter plus " name0="followup" value0="follow-up" post="telephone calls - 8.8% response) " xpath="/html[1]/body[1]/div[10]/div[4]/table[2]/thead[1]/tr[1]/td[4]/p[1]"/>
+ <result pre="recruitment method up to " name0="random" value0="randomization" post="is shown in Figure " xpath="/html[1]/body[1]/div[10]/div[4]/p[3]"/>
+ <result pre="d participant flow up to " name0="random" value0="randomization." post="" xpath="/html[1]/body[1]/div[10]/div[4]/div[10]/div[2]/p[1]"/>
+ <result pre=" the study team, despite " name0="followup" value0="follow-up" post="attempts. " xpath="/html[1]/body[1]/div[10]/div[5]/table[1]/tbody[1]/tr[10]/td[2]/p[1]"/>
+ <result pre="C2 to E (" name0="exclude" value0="excluding" post="unemployed)" xpath="/html[1]/body[1]/div[10]/div[5]/table[2]/tbody[1]/tr[6]/td[1]/p[1]"/>
+ <result pre="ecruitment activity (via " name0="followup" value0="follow-up" post="telephone calls) and recruitment methods" xpath="/html[1]/body[1]/div[11]/p[1]"/>
+ <result pre="Whilst the use of " name0="followup" value0="follow-up" post="telephone calls was effective at increas" xpath="/html[1]/body[1]/div[11]/p[5]"/>
+ <result pre="that those recruited via " name0="followup" value0="follow-up" post="telephone calls represented a harder-to-" xpath="/html[1]/body[1]/div[11]/p[5]"/>
+ <result pre="cally active. The use of " name0="followup" value0="follow-up" post="telephone calls therefore may offer adde" xpath="/html[1]/body[1]/div[11]/p[5]"/>
+ <result pre="r invitation than to the " name0="followup" value0="follow-up" post="telephone call. These differences probab" xpath="/html[1]/body[1]/div[11]/p[6]"/>
+ <result pre="ed with a GP, as well as " name0="exclude" value0="excluding" post="those with serious mental illness (group" xpath="/html[1]/body[1]/div[11]/p[10]"/>
+ <result pre="ternational Standardized " name0="random" value0="Randomized" post="Controlled Trial Number; LREC: Local Res" xpath="/html[1]/body[1]/div[13]/p[1]"/>
+ <result pre="obustness of a practical " name0="random" value0="randomized" post="trial of smoking reduction " xpath="/html[1]/body[1]/div[16]/div[2]/div[5]/div[1]/p[1]"/>
+ <result pre="o improve recruitment to " name0="random" value0="randomized" post="controlled trials: Cochrane systematic r" xpath="/html[1]/body[1]/div[16]/div[2]/div[17]/div[1]/p[1]"/>
+ <result pre="nfluences recruitment to " name0="random" value0="randomized" post="controlled trials? a review of trials fu" xpath="/html[1]/body[1]/div[16]/div[2]/div[18]/div[1]/p[1]"/>
+ <result pre="A pilot " name0="random" value0="randomized" post="trial to assess the methods and procedur" xpath="/html[1]/body[1]/div[16]/div[2]/div[20]/div[1]/p[1]"/>
 </results>

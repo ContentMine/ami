@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <results title="consort0">
- <result pre=" only then teeth will be " name0="allocat[^\s]*" value0="allocated" post="to one of the two interventions. Selecti"/>
- <result pre="e excavation). The total " name0="follow-up" value0="follow-up" post="time will be three years after completio"/>
- <result pre="ssed for the initial and " name0="follow-up" value0="follow-up" post="treatments and will be based on a micro-"/>
- <result pre="patient will be randomly " name0="allocat[^\s]*" value0="allocated" post="to receive one of two treatments (select"/>
- <result pre=" = 0.05 and 1-β = 0.9, a " name0="samplesizeof" value0="sample size of" post="n = 66 per group is required. Assuming a"/>
- <result pre="atment group allocation. " name0="[bb]linding" value0="Blinding" post="during the second excavation step and bl"/>
- <result pre="rformed or not. Clinical " name0="follow-up" value0="follow-up" post="examinations will also be performed blin"/>
- <result pre="n to the examiner during " name0="follow-up" value0="follow-up" post="examinations. "/>
- <result pre=" will be performed using " name0="randomnumbers?" value0="random number" post="tables (WH) before treatment is commence"/>
- <result pre="rmed after inclusion via " name0="randomnumbers?" value0="random number" post="tables (WH). Allocation will be performe"/>
- <result pre="inded to treatment group " name0="allocat[^\s]*" value0="allocation." post="Blinding during the second excavation st"/>
- <result pre=" not to reveal treatment " name0="allocat[^\s]*" value0="allocation" post="to the examiner during follow-up examina"/>
- <result pre=" be performed blinded to " name0="treatmentgroups?" value0="treatment group" post="allocation. Blinding during the second e"/>
- <result pre="ery bad) and initial and " name0="follow-up" value0="follow-up" post="treatment costs (calculated by combining"/>
- <result pre="After six months, a " name0="follow-up" value0="follow-up" post="examination will be performed. After the"/>
- <result pre=". After the examination, " name0="allocat[^\s]*" value0="allocation" post="will be revealed. If allocated to stepwi"/>
- <result pre="During " name0="follow-up" value0="follow-up" post="examinations, the following parameters w"/>
- <result pre="r, we will use two-sided " name0="[ii]ndependent" value0="independent" post="t tests or Mann-Whitney U test (to compa"/>
- <result pre="ue to imbalanced loss to " name0="follow-up" value0="follow-up" post="by handling drop-outs as non-success or "/>
- <result pre=" Handling of loss to " name0="follow-up" value0="follow-up" post=""/>
- <result pre="as non-success. Required " name0="follow-up" value0="follow-up" post="treatments will be recorded and survived"/>
- <result pre="ment both treatments and " name0="follow-up" value0="follow-up" post="assessments as outlined. For each center"/>
- <result pre="reated teeth will not be " name0="excluded" value0="excluded" post="from further analyses, but followed. Thu"/>
+ <result pre="rs: study protocol for a " name0="random" value0="randomized" post="controlled trial " xpath="/html[1]/body[1]/div[4]/div[1]/p[1]"/>
+ <result pre=" two-arm parallel group, " name0="random" value0="randomized" post="controlled clinical trial comparing sele" xpath="/html[1]/body[1]/div[7]/div[1]/div[3]/p[1]"/>
+ <result pre="e next 18 months will be " name0="exclude" value0="excluded." post="After inclusion, sequence generation wil" xpath="/html[1]/body[1]/div[7]/div[1]/div[3]/p[1]"/>
+ <result pre=" only then teeth will be " name0="allocate" value0="allocated" post="to one of the two interventions. Selecti" xpath="/html[1]/body[1]/div[7]/div[1]/div[3]/p[1]"/>
+ <result pre="ass ionomer cement, RCT: " name0="random" value0="randomized" post="controlled trial. " xpath="/html[1]/body[1]/div[8]/div[3]/p[1]"/>
+ <result pre=" Published " name0="random" value0="randomized" post="controlled trials comparing different ex" xpath="/html[1]/body[1]/div[8]/table[1]/caption[1]/p[1]"/>
+ <result pre=" two-arm parallel-group, " name0="random" value0="randomized" post="controlled trial at three pediatric univ" xpath="/html[1]/body[1]/div[9]/div[2]/p[1]"/>
+ <result pre="olar per patient will be " name0="random" value0="randomly" post="allocated to receive one of two treatmen" xpath="/html[1]/body[1]/div[9]/div[2]/p[1]"/>
+ <result pre="e excavation). The total " name0="followup" value0="follow-up" post="time will be three years after completio" xpath="/html[1]/body[1]/div[9]/div[2]/p[1]"/>
+ <result pre="ssed for the initial and " name0="followup" value0="follow-up" post="treatments and will be based on a micro-" xpath="/html[1]/body[1]/div[9]/div[2]/p[1]"/>
+ <result pre="patient will be randomly " name0="allocate" value0="allocated" post="to receive one of two treatments (select" xpath="/html[1]/body[1]/div[9]/div[2]/p[1]"/>
+ <result pre="The required " name0="samplesize" value0="sample size" post="was calculated based on the primary outc" xpath="/html[1]/body[1]/div[9]/div[4]/p[1]"/>
+ <result pre=" = 0.05 and 1-β = 0.9, a " name0="samplesize" value0="sample size" post="of n = 66 per group is required. Assumin" xpath="/html[1]/body[1]/div[9]/div[4]/p[1]"/>
+ <result pre="ired. The total required " name0="samplesize" value0="sample size" post="would thus be n = 228. To allow possible" xpath="/html[1]/body[1]/div[9]/div[4]/p[1]"/>
+ <result pre=" will be performed using " name0="random" value0="random" post="number tables (WH) before treatment is c" xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre="rmed after inclusion via " name0="random" value0="random" post="number tables (WH). Allocation will be p" xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre="nation will be performed " name0="blind" value0="blinded" post="as to whether further excavation will be" xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre="s will also be performed " name0="blind" value0="blinded" post="to treatment group allocation. Blinding " xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre="cond excavation step and " name0="blind" value0="blinding" post="of patients as to which treatment was pe" xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre="rformed or not. Clinical " name0="followup" value0="follow-up" post="examinations will also be performed blin" xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre="n to the examiner during " name0="followup" value0="follow-up" post="examinations. " xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre="inded to treatment group " name0="allocate" value0="allocation." post="Blinding during the second excavation st" xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre=" not to reveal treatment " name0="allocate" value0="allocation" post="to the examiner during follow-up examina" xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre="ery bad) and initial and " name0="followup" value0="follow-up" post="treatment costs (calculated by combining" xpath="/html[1]/body[1]/div[9]/div[7]/p[1]"/>
+ <result pre="After six months, a " name0="followup" value0="follow-up" post="examination will be performed. After the" xpath="/html[1]/body[1]/div[9]/div[8]/p[2]"/>
+ <result pre=". After the examination, " name0="allocate" value0="allocation" post="will be revealed. If allocated to stepwi" xpath="/html[1]/body[1]/div[9]/div[8]/p[2]"/>
+ <result pre="During " name0="followup" value0="follow-up" post="examinations, the following parameters w" xpath="/html[1]/body[1]/div[9]/div[8]/p[13]"/>
+ <result pre="that is, data missing at " name0="random" value0="random." post="To prevent data missing not at random, c" xpath="/html[1]/body[1]/div[9]/div[10]/p[1]"/>
+ <result pre=" for data not missing at " name0="random" value0="random" post="due to imbalanced loss to follow-up by h" xpath="/html[1]/body[1]/div[9]/div[10]/p[1]"/>
+ <result pre="ue to imbalanced loss to " name0="followup" value0="follow-up" post="by handling drop-outs as non-success or " xpath="/html[1]/body[1]/div[9]/div[10]/p[1]"/>
+ <result pre=" Handling of loss to " name0="followup" value0="follow-up" post="" xpath="/html[1]/body[1]/div[9]/div[10]/table[1]/caption[1]/p[1]"/>
+ <result pre="as non-success. Required " name0="followup" value0="follow-up" post="treatments will be recorded and survived" xpath="/html[1]/body[1]/div[9]/div[10]/table[1]/tbody[1]/tr[1]/td[3]/p[1]"/>
+ <result pre="The patient decides to " name0="withdraw" value0="withdraw" post="from the study." xpath="/html[1]/body[1]/div[9]/div[10]/table[1]/tbody[1]/tr[7]/td[1]/p[1]"/>
+ <result pre="tients have the right to " name0="withdraw" value0="withdraw" post="from the study at any time without givin" xpath="/html[1]/body[1]/div[9]/div[11]/div[5]/p[1]"/>
+ <result pre="g reasons. Regardless of " name0="withdraw" value0="withdrawal," post="patients will be provided with any treat" xpath="/html[1]/body[1]/div[9]/div[11]/div[5]/p[1]"/>
+ <result pre="ected up to the point of " name0="withdraw" value0="withdrawal." post="" xpath="/html[1]/body[1]/div[9]/div[11]/div[5]/p[1]"/>
+ <result pre="ment both treatments and " name0="followup" value0="follow-up" post="assessments as outlined. For each center" xpath="/html[1]/body[1]/div[9]/div[13]/div[2]/p[1]"/>
+ <result pre="erse events requiring un-" name0="blind" value0="blinding," post="code-breaking is possible. If the invest" xpath="/html[1]/body[1]/div[9]/div[13]/div[4]/p[1]"/>
+ <result pre="reated teeth will not be " name0="exclude" value0="excluded" post="from further analyses, but followed. Thu" xpath="/html[1]/body[1]/div[10]/p[3]"/>
+ <result pre="The Hall Technique; a " name0="random" value0="randomized" post="controlled clinical trial of a novel met" xpath="/html[1]/body[1]/div[14]/div[2]/div[3]/div[1]/p[1]"/>
+ <result pre="s primary molar teeth: a " name0="random" value0="randomised" post="controlled clinical trial " xpath="/html[1]/body[1]/div[14]/div[2]/div[12]/div[1]/p[1]"/>
+ <result pre="ches in primary teeth: a " name0="random" value0="randomised" post="controlled trial " xpath="/html[1]/body[1]/div[14]/div[2]/div[18]/div[1]/p[1]"/>
+ <result pre="rimary teeth: a 24-month " name0="random" value0="randomized" post="controlled trial " xpath="/html[1]/body[1]/div[14]/div[2]/div[19]/div[1]/p[1]"/>
+ <result pre="" name0="random" value0="Randomized" post="trial of partial vs. stepwise caries rem" xpath="/html[1]/body[1]/div[14]/div[2]/div[21]/div[1]/p[1]"/>
+ <result pre=" clinicians' behavior: a " name0="random" value0="randomized" post="controlled trial of fees and education" xpath="/html[1]/body[1]/div[14]/div[2]/div[31]/div[1]/p[1]"/>
+ <result pre="reporting parallel group " name0="random" value0="randomised" post="trials " xpath="/html[1]/body[1]/div[14]/div[2]/div[38]/div[1]/p[1]"/>
 </results>

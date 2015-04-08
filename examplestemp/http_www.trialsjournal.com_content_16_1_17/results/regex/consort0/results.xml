@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <results title="consort0">
- <result pre="eracy patients have been " name0="diagnosed" value0="diagnosed" post="with diabetes. The current standard of c"/>
- <result pre="ts, during the one-month " name0="follow-up" value0="follow-up" post="interview, what medications they are tak"/>
- <result pre="A " name0="samplesizeof" value0="sample size of" post="600 patients, 300 in each arm, was deter"/>
- <result pre="outcomes. For example, a " name0="samplesizeof" value0="sample size of" post="600 provides adequate power (86%) to det"/>
- <result pre="atment group will be the " name0="[ii]ndependent" value0="independent" post="variable of primary interest and will be"/>
- <result pre="e, hemoglobin A 1c). The " name0="treatmentgroups?" value0="treatment group" post="will be the independent variable of prim"/>
+ <result pre="se: study protocol for a " name0="random" value0="randomized" post="controlled trial " xpath="/html[1]/body[1]/div[4]/div[1]/p[1]"/>
+ <result pre=" study. Patients will be " name0="random" value0="randomized" post="to receive either usual care or the inte" xpath="/html[1]/body[1]/div[7]/div[1]/div[3]/p[1]"/>
+ <result pre="eracy patients have been " name0="diagnose" value0="diagnosed" post="with diabetes. The current standard of c" xpath="/html[1]/body[1]/div[9]/p[2]"/>
+ <result pre="in no set proportion and " name0="random" value0="randomize" post="each to receive either standard care or " xpath="/html[1]/body[1]/div[9]/p[3]"/>
+ <result pre="d; (2) have a documented " name0="diagnose" value0="diagnosis" post="of diabetes; (3) are currently taking at" xpath="/html[1]/body[1]/div[9]/p[3]"/>
+ <result pre="ts, during the one-month " name0="followup" value0="follow-up" post="interview, what medications they are tak" xpath="/html[1]/body[1]/div[9]/div[3]/div[2]/p[1]"/>
+ <result pre="A " name0="samplesize" value0="sample size" post="of 600 patients, 300 in each arm, was de" xpath="/html[1]/body[1]/div[9]/div[5]/p[1]"/>
+ <result pre=" research study based on " name0="samplesize" value0="sample size" post="calculations for the outcome measure of " xpath="/html[1]/body[1]/div[9]/div[5]/p[1]"/>
+ <result pre="m 17 , 28 , 29 . This " name0="samplesize" value0="sample size" post="also supports our exploratory analyses f" xpath="/html[1]/body[1]/div[9]/div[5]/p[1]"/>
+ <result pre="outcomes. For example, a " name0="samplesize" value0="sample size" post="of 600 provides adequate power (86%) to " xpath="/html[1]/body[1]/div[9]/div[5]/p[1]"/>
+ <result pre=": design of a multi-site " name0="random" value0="randomized" post="control trial " xpath="/html[1]/body[1]/div[15]/div[2]/div[18]/div[1]/p[1]"/>
 </results>

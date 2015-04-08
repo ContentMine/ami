@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <results title="consort0">
- <result pre="o be interviewed and the " name0="samplesizeof" value0="sample size of" post="the trial. "/>
- <result pre="lems associated with the " name0="[rr]andomi[zs]ation" value0="randomisation" post="process (n = 1), difficulty recruiting r"/>
- <result pre="hat point we got someone " name0="[ii]ndependent" value0="independent" post="(statistician) to look at the data and t"/>
- <result pre="what treatment they were " name0="assign[^\s]*" value0="assigned," post="you could see there was poor efficacy ov"/>
- <result pre=" blinded to intervention " name0="allocat[^\s]*" value0="allocation" post="they nonetheless had access to outcome d"/>
- <result pre="we actually put in for a " name0="placebo" value0="placebo" post="controlled efficacy trial, and the [fund"/>
- <result pre=" and we talked about the " name0="[rr]andomi[zs]ation" value0="randomisation" post="of patients and we presented some anecdo"/>
- <result pre="rison of descriptions of " name0="allocat[^\s]*" value0="allocation" post="concealment in trial protocols and the p"/>
- <result pre="scriptions of allocation " name0="conceal[^\s]*" value0="concealment" post="in trial protocols and the published rep"/>
- <result pre="Reporting on " name0="[bb]linding" value0="blinding" post="in trial protocols and corresponding pub"/>
+ <result pre="oject; and trial reports " name0="random" value0="randomly" post="sampled from 14,758 indexed on PubMed ov" xpath="/html[1]/body[1]/div[7]/div[1]/div[3]/p[1]"/>
+ <result pre="the ORBIT project and 85 " name0="random" value0="randomly" post="selected published trials indexed on Pub" xpath="/html[1]/body[1]/div[7]/div[1]/div[4]/p[1]"/>
+ <result pre="f society is undisputed. " name0="random" value0="Randomised" post="controlled trials (RCTs) are considered " xpath="/html[1]/body[1]/div[8]/p[1]"/>
+ <result pre=" 16 ; and trial reports " name0="random" value0="randomly" post="sampled from 14,758 indexed on PubMed ov" xpath="/html[1]/body[1]/div[9]/p[1]"/>
+ <result pre="the ORBIT project and 85 " name0="random" value0="randomly" post="selected published trials indexed on Pub" xpath="/html[1]/body[1]/div[10]/div[2]/p[1]"/>
+ <result pre="eviews and trial reports " name0="random" value0="randomly" post="sampled from 14,758 indexed on PubMed ov" xpath="/html[1]/body[1]/div[10]/div[2]/div[3]/div[2]/p[1]"/>
+ <result pre="o be interviewed and the " name0="samplesize" value0="sample size" post="of the trial. " xpath="/html[1]/body[1]/div[10]/div[3]/p[3]"/>
+ <result pre="ficulties and the target " name0="samplesize" value0="sample size" post="not being met. Thirteen trialists report" xpath="/html[1]/body[1]/div[10]/div[8]/p[1]"/>
+ <result pre="six trials, although the " name0="samplesize" value0="sample size" post="was achieved it was not without recruitm" xpath="/html[1]/body[1]/div[10]/div[8]/p[12]"/>
+ <result pre="lems associated with the " name0="random" value0="randomisation" post="process (n = 1), difficulty recruiting r" xpath="/html[1]/body[1]/div[10]/div[8]/p[15]"/>
+ <result pre=" that although they were " name0="blind" value0="blinded" post="to intervention allocation they nonethel" xpath="/html[1]/body[1]/div[10]/div[8]/p[18]"/>
+ <result pre=" blinded to intervention " name0="allocate" value0="allocation" post="they nonetheless had access to outcome d" xpath="/html[1]/body[1]/div[10]/div[8]/p[18]"/>
+ <result pre="tion, in three cases the " name0="samplesize" value0="sample size" post="being achieved earlier than expected. So" xpath="/html[1]/body[1]/div[10]/div[8]/p[19]"/>
+ <result pre="dy design and inadequate " name0="samplesize" value0="sample size" post="as problematic for publication: " xpath="/html[1]/body[1]/div[10]/div[9]/p[9]"/>
+ <result pre="he fact we didn’t have a " name0="placebo" value0="placebo," post="so that was a design aspect. And the des" xpath="/html[1]/body[1]/div[10]/div[9]/p[10]"/>
+ <result pre="we actually put in for a " name0="placebo" value0="placebo" post="controlled efficacy trial, and the [fund" xpath="/html[1]/body[1]/div[10]/div[9]/p[10]"/>
+ <result pre="&quot;I think because the " name0="samplesize" value0="sample size" post="was relatively small, and it was a negat" xpath="/html[1]/body[1]/div[10]/div[9]/p[11]"/>
+ <result pre="ed after 2 years with 35 " name0="random" value0="randomised," post="so clearly you are not going to get anyt" xpath="/html[1]/body[1]/div[10]/div[10]/p[2]"/>
+ <result pre=" and we talked about the " name0="random" value0="randomisation" post="of patients and we presented some anecdo" xpath="/html[1]/body[1]/div[10]/div[10]/p[2]"/>
+ <result pre=" Not reaching the target " name0="samplesize" value0="sample size" post="can mean that results are less reliable " xpath="/html[1]/body[1]/div[11]/p[3]"/>
+ <result pre="BIT project and 25% from " name0="random" value0="randomly" post="selected published trials indexed on Pub" xpath="/html[1]/body[1]/div[11]/div[2]/p[2]"/>
+ <result pre="RCT: " name0="random" value0="randomised" post="controlled trial" xpath="/html[1]/body[1]/div[13]/p[2]"/>
+ <result pre="ng and interpretation of " name0="random" value0="randomized" post="controlled trials with statistically non" xpath="/html[1]/body[1]/div[16]/div[2]/div[3]/div[1]/p[1]"/>
+ <result pre="miology and reporting of " name0="random" value0="randomised" post="trials published in PubMed journals" xpath="/html[1]/body[1]/div[16]/div[2]/div[4]/div[1]/p[1]"/>
+ <result pre="he quality of reports of " name0="random" value0="randomised" post="trials in 2000 and 2006: comparative stu" xpath="/html[1]/body[1]/div[16]/div[2]/div[5]/div[1]/p[1]"/>
+ <result pre="y of reporting of modern " name0="random" value0="randomized" post="controlled trials in medical oncology: a" xpath="/html[1]/body[1]/div[16]/div[2]/div[6]/div[1]/p[1]"/>
+ <result pre="Recruitment to " name0="random" value0="randomised" post="trials: strategies for trial enrollment " xpath="/html[1]/body[1]/div[16]/div[2]/div[8]/div[1]/p[1]"/>
+ <result pre="rriers to the conduct of " name0="random" value0="randomized" post="trials" xpath="/html[1]/body[1]/div[16]/div[2]/div[9]/div[1]/p[1]"/>
+ <result pre="How to conduct a " name0="random" value0="randomized" post="trial" xpath="/html[1]/body[1]/div[16]/div[2]/div[10]/div[1]/p[1]"/>
+ <result pre="improve the reporting of " name0="random" value0="randomised" post="trials " xpath="/html[1]/body[1]/div[16]/div[2]/div[15]/div[1]/p[1]"/>
+ <result pre="utcome reporting bias in " name0="random" value0="randomised" post="controlled trials on a cohort of systema" xpath="/html[1]/body[1]/div[16]/div[2]/div[16]/div[1]/p[1]"/>
+ <result pre="g, design and conduct of " name0="random" value0="randomised" post="trials: a retrospective cohort of NIHR H" xpath="/html[1]/body[1]/div[16]/div[2]/div[19]/div[1]/p[1]"/>
+ <result pre="ncreasing recruitment to " name0="random" value0="randomised" post="controlled trias: systematic review" xpath="/html[1]/body[1]/div[16]/div[2]/div[27]/div[1]/p[1]"/>
+ <result pre=", number and progress of " name0="random" value0="randomised" post="controlled trials" xpath="/html[1]/body[1]/div[16]/div[2]/div[28]/div[1]/p[1]"/>
+ <result pre="tators to recruitment in " name0="random" value0="randomised" post="controlled trials " xpath="/html[1]/body[1]/div[16]/div[2]/div[29]/div[1]/p[1]"/>
+ <result pre="rison of descriptions of " name0="allocate" value0="allocation" post="concealment in trial protocols and the p" xpath="/html[1]/body[1]/div[16]/div[2]/div[33]/div[1]/p[1]"/>
+ <result pre="Reporting on " name0="blind" value0="blinding" post="in trial protocols and corresponding pub" xpath="/html[1]/body[1]/div[16]/div[2]/div[34]/div[1]/p[1]"/>
+ <result pre="gical rigor in pediatric " name0="random" value0="randomized" post="trials " xpath="/html[1]/body[1]/div[16]/div[2]/div[45]/div[1]/p[1]"/>
+ <result pre="reporting parallel group " name0="random" value0="randomised" post="trials " xpath="/html[1]/body[1]/div[16]/div[2]/div[54]/div[1]/p[1]"/>
 </results>

@@ -1,0 +1,39 @@
+<argList name="identifier">
+	<arg name="identifier" 
+		long="--id.identifier"
+		args="identifiername...[]"
+		countRange="{0,0}"
+		initMethod="initIdentifiers"
+		runMethod="runExtractIdentifiers"
+		outputMethod="outputIdentifiers"
+		>
+		<help>
+		</help>
+		<value name="bio.ena" url="http://www.ncbi.nlm.nih.gov/Sequin/acc.html" 
+		    lookup="http://www.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&amp;term=${match}GENBANK_ID" >[A-Z]{2}\d{6}|[A-Z]{1}\d{5}</value>
+		<value name="bio.enaprot" url="http://www.ncbi.nlm.nih.gov/Sequin/acc.html">[A-Z]{3}\d{5}</value>
+		<value name="bio.pdb">\w[A-Z]{3}\d</value>
+		<value name="meta.orcid" url="http://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier">http://orcid\.org/(\d{4}-){3}\d{3}[\dX]</value>
+		<value name="clin.nct">NCT\d{8}</value>
+		<value name="clin.isrctn">ISRCTN.{0,20}\d{8}</value>
+		<value name="clin.umin">UMIN\d{9}</value>
+	</arg>	
+	
+    <arg name="type"
+	    long="--id.type"
+	    args="type"
+	    class="java.lang.String"
+	    pattern="(bio.ena|bio.enaprot|bio.pdb
+	             |meta.orcid
+	             |clin.nct|clin.isrctn)"
+	    parseMethod="parseTypes"
+	    countRange="{1,*}"
+	    >
+	    <help>
+	    The type of the identifier.
+	    This list will almost certainly increase
+	    </help>
+	</arg>
+    
+</argList>
+			

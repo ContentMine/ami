@@ -14,6 +14,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.MatcherResult;
+import org.xmlcml.args.VariableProcessor;
 
 /** a component of a regular expression
  * 
@@ -48,7 +49,9 @@ public class RegexComponent {
 	private static final String START_CONTEXT = "(.{0,";
 	private static final String END_CONTEXT = "})";
 
-	// ((.{1,50})( ... )\s+(.{1,50}))
+	// ((.{1,50})( ... )\p{Punct}?\s+(.{1,50}))
+//	private static String PRE_POST = "\\(\\.\\{\\d+,\\d+\\}\\)(.*)\\p{Punct}?\\\\s\\+\\(\\.\\{\\d+,\\d+\\}\\)";
+	// works most of the time but may eat spaces 
 	private static String PRE_POST = "\\(\\.\\{\\d+,\\d+\\}\\)(.*)\\\\s\\+\\(\\.\\{\\d+,\\d+\\}\\)";
 	private static final Pattern PRE_POST_PATTERN = Pattern.compile(PRE_POST);
 	// (...)
@@ -146,6 +149,26 @@ public class RegexComponent {
 		if (value == null) {
 			value = regexElement.getValue();
 		}
+		String newValue = substituteVariables(value);
+		if (newValue == null) {
+			LOG.error("Cannot expand variables in :"+value);
+		} else {
+			value = newValue;
+		}
+		return value;
+	}
+
+	private String substituteVariables(String value) {
+		// crude
+		value = value.replaceAll(RegexArgProcessor.TILDE, RegexArgProcessor.TILDE_SUFFIX);
+//		if (value.startsWith(RegexArgProcessor.TILDE)) {
+//			value = RegexArgProcessor.TILDE_PREFIX + value;
+//		}
+//		if (value.endsWith(RegexArgProcessor.TILDE)) {
+//			value = value+RegexArgProcessor.TILDE_SUFFIX;
+//		}
+		VariableProcessor variableProcessor = regexArgProcessor.ensureVariableProcessor();
+		value = variableProcessor.substituteVariables(value);
 		return value;
 	}
 

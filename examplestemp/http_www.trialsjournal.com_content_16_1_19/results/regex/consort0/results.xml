@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <results title="consort0">
- <result pre="mplants will be randomly " name0="allocat[^\s]*" value0="allocated" post="to group I (n = 48), in which the dressi"/>
- <result pre="atients will be randomly " name0="allocat[^\s]*" value0="allocated" post="to group I (n = 48), in which the dressi"/>
- <result pre="rative day to reveal the " name0="allocat[^\s]*" value0="allocation" post="of the patient. "/>
- <result pre="t postoperative day, the " name0="allocat[^\s]*" value0="allocation" post="envelopes will be opened. If the patient"/>
- <result pre=" is " name0="allocat[^\s]*" value0="allocated" post="to group I, the dressing will be removed"/>
- <result pre="lture. If the patient is " name0="allocat[^\s]*" value0="allocated" post="to group II, she will be instructed to n"/>
- <result pre="al procedures, patients’ " name0="follow-up" value0="follow-up" post="and interpretation of data. FEMF is invo"/>
+ <result pre="ts: study protocol for a " name0="random" value0="randomized" post="controlled trial " xpath="/html[1]/body[1]/div[4]/div[1]/p[1]"/>
+ <result pre="A " name0="random" value0="randomized" post="clinical trial was designed to assess tw" xpath="/html[1]/body[1]/div[7]/div[1]/div[3]/p[1]"/>
+ <result pre="ilicone implants will be " name0="random" value0="randomly" post="allocated to group I (n = 48), in which " xpath="/html[1]/body[1]/div[7]/div[1]/div[3]/p[1]"/>
+ <result pre="mplants will be randomly " name0="allocate" value0="allocated" post="to group I (n = 48), in which the dressi" xpath="/html[1]/body[1]/div[7]/div[1]/div[3]/p[1]"/>
+ <result pre="re not only difficult to " name0="diagnose" value0="diagnose," post="but may be very difficult to treat, espe" xpath="/html[1]/body[1]/div[8]/p[3]"/>
+ <result pre="A " name0="random" value0="randomized" post="clinical trial was designed to assess tw" xpath="/html[1]/body[1]/div[9]/div[2]/p[1]"/>
+ <result pre="be conducted in a double-" name0="blind" value0="blinded" post="manner in a university hospital in Brazi" xpath="/html[1]/body[1]/div[9]/div[2]/p[1]"/>
+ <result pre="r breast surgery will be " name0="exclude" value0="excluded." post="Patients with an indication for an areol" xpath="/html[1]/body[1]/div[9]/div[4]/p[1]"/>
+ <result pre="ressing wet will also be " name0="exclude" value0="excluded." post="" xpath="/html[1]/body[1]/div[9]/div[4]/p[1]"/>
+ <result pre="pha test risk of 5%, the " name0="samplesize" value0="sample size" post="has been estimated to be 48 patients per" xpath="/html[1]/body[1]/div[9]/div[5]/p[1]"/>
+ <result pre="Patients will be " name0="random" value0="randomly" post="allocated to group I (n = 48), in which " xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre=" will be determined by a " name0="random" value0="random," post="computer-generated sequence (Bioestat 5." xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre="atients will be randomly " name0="allocate" value0="allocated" post="to group I (n = 48), in which the dressi" xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre="rative day to reveal the " name0="allocate" value0="allocation" post="of the patient. " xpath="/html[1]/body[1]/div[9]/div[6]/p[1]"/>
+ <result pre="t postoperative day, the " name0="allocate" value0="allocation" post="envelopes will be opened. If the patient" xpath="/html[1]/body[1]/div[9]/div[7]/p[3]"/>
+ <result pre=" is " name0="allocate" value0="allocated" post="to group I, the dressing will be removed" xpath="/html[1]/body[1]/div[9]/div[7]/p[3]"/>
+ <result pre="lture. If the patient is " name0="allocate" value0="allocated" post="to group II, she will be instructed to n" xpath="/html[1]/body[1]/div[9]/div[7]/p[3]"/>
+ <result pre=" medicine, well-designed " name0="random" value0="randomized" post="clinical trials are essential to guide o" xpath="/html[1]/body[1]/div[10]/p[1]"/>
+ <result pre="al procedures, patients’ " name0="followup" value0="follow-up" post="and interpretation of data. FEMF is invo" xpath="/html[1]/body[1]/div[14]/p[1]"/>
+ <result pre="" name0="random" value0="Randomized" post="clinical trial comparing two options for" xpath="/html[1]/body[1]/div[15]/div[2]/div[28]/div[1]/p[1]"/>
+ <result pre="reduction mammaplasty: a " name0="random" value0="randomized" post="controlled trial" xpath="/html[1]/body[1]/div[15]/div[2]/div[32]/div[1]/p[1]"/>
+ <result pre="" name0="random" value0="Randomized" post="controlled trial on the effectiveness of" xpath="/html[1]/body[1]/div[15]/div[2]/div[33]/div[1]/p[1]"/>
+ <result pre="stic surgery procedures: " name0="random" value0="randomized" post="controlled trial " xpath="/html[1]/body[1]/div[15]/div[2]/div[34]/div[1]/p[1]"/>
 </results>

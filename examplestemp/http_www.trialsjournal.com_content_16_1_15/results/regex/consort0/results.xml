@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <results title="consort0">
- <result pre="No compliance and " name0="follow-up" value0="follow-up" post="difficulties due to familial, social, ge"/>
- <result pre="No compliance and " name0="follow-up" value0="follow-up" post="difficulties due to familial, social, ge"/>
- <result pre="No compliance and " name0="follow-up" value0="follow-up" post="difficulties due to familial, social, ge"/>
- <result pre="erned patients initially " name0="excluded" value0="excluded" post="during the MDC meetings (59 patients wer"/>
- <result pre="atients were secondarily " name0="excluded" value0="excluded" post="by the CRA and, finally, the PI definiti"/>
- <result pre="vely " name0="excluded" value0="excluded" post="four patients. There was no patient who "/>
- <result pre="DC team’s pre-selections " name0="excluded" value0="excluded" post="by the PI were due to mistakes on the ev"/>
- <result pre="rts. For example, the PI " name0="excluded" value0="excluded" post="18 CRA proposals because the patients ha"/>
- <result pre="ther, nine patients were " name0="excluded" value0="excluded" post="because they had some specific character"/>
+ <result pre="The performance of " name0="random" value0="randomized" post="controlled trials (RCTs) is often hinder" xpath="/html[1]/body[1]/div[7]/div[1]/div[2]/p[1]"/>
+ <result pre="The " name0="random" value0="randomized" post="controlled trial (RCT) is the gold stand" xpath="/html[1]/body[1]/div[8]/p[1]"/>
+ <result pre="No compliance and " name0="followup" value0="follow-up" post="difficulties due to familial, social, ge" xpath="/html[1]/body[1]/div[9]/div[3]/table[1]/tbody[1]/tr[23]/td[3]/p[1]"/>
+ <result pre="No compliance and " name0="followup" value0="follow-up" post="difficulties due to familial, social, ge" xpath="/html[1]/body[1]/div[9]/div[3]/table[1]/tbody[1]/tr[23]/td[4]/p[1]"/>
+ <result pre="No compliance and " name0="followup" value0="follow-up" post="difficulties due to familial, social, ge" xpath="/html[1]/body[1]/div[9]/div[3]/table[1]/tbody[1]/tr[23]/td[5]/p[1]"/>
+ <result pre="erned patients initially " name0="exclude" value0="excluded" post="during the MDC meetings (59 patients wer" xpath="/html[1]/body[1]/div[10]/div[4]/p[3]"/>
+ <result pre="atients were secondarily " name0="exclude" value0="excluded" post="by the CRA and, finally, the PI definiti" xpath="/html[1]/body[1]/div[10]/div[4]/p[3]"/>
+ <result pre="vely " name0="exclude" value0="excluded" post="four patients. There was no patient who " xpath="/html[1]/body[1]/div[10]/div[4]/p[3]"/>
+ <result pre="tients eligible for four " name0="random" value0="randomized" post="clinical trials carried out at the Compr" xpath="/html[1]/body[1]/div[10]/div[4]/div[5]/p[1]"/>
+ <result pre="tients eligible for four " name0="random" value0="randomized" post="clinical trials carried out at the Compr" xpath="/html[1]/body[1]/div[10]/div[4]/div[5]/div[2]/p[1]"/>
+ <result pre="DC team’s pre-selections " name0="exclude" value0="excluded" post="by the PI were due to mistakes on the ev" xpath="/html[1]/body[1]/div[10]/div[4]/p[5]"/>
+ <result pre="rts. For example, the PI " name0="exclude" value0="excluded" post="18 CRA proposals because the patients ha" xpath="/html[1]/body[1]/div[10]/div[4]/p[5]"/>
+ <result pre="ther, nine patients were " name0="exclude" value0="excluded" post="because they had some specific character" xpath="/html[1]/body[1]/div[10]/div[4]/p[5]"/>
+ <result pre="g data cannot be used to " name0="exclude" value0="exclude" post="the patients who are then selected as be" xpath="/html[1]/body[1]/div[11]/p[3]"/>
+ <result pre="ients, but does not over-" name0="exclude" value0="exclude" post="eligible patients. Therefore, we confirm" xpath="/html[1]/body[1]/div[12]/p[2]"/>
+ <result pre="RCT: " name0="random" value0="Randomized" post="controlled trial" xpath="/html[1]/body[1]/div[13]/p[10]"/>
+ <result pre="ncreasing recruitment to " name0="random" value0="randomised" post="controlled trials: systematic review " xpath="/html[1]/body[1]/div[16]/div[2]/div[1]/div[1]/p[1]"/>
+ <result pre="cles to participation in " name0="random" value0="randomised" post="cancer clinical trials: a systematic rev" xpath="/html[1]/body[1]/div[16]/div[2]/div[6]/div[1]/p[1]"/>
 </results>
