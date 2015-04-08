@@ -78,19 +78,13 @@ public class RegexPluginTest {
 	
 	@Test
 	public void testCONSORTRegex() throws IOException {
-		LOG.debug("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 		Fixtures.runStandardTestHarness(
 				Fixtures.TEST_BMC_15_1_511_QSN, 
 				new File("target/consort0/15_1_511_test/"), 
 				new RegexPlugin(),
 				"-q target/consort0/15_1_511_test/ -i scholarly.html --context 25 40 --r.regex regex/consort0.xml",
 				"regex/consort0/");
-		LOG.debug("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-		
 	}
-
-
-
 	
 	@Test
 	@Ignore // not yet implemented

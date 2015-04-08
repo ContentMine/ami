@@ -10,25 +10,28 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
 
-public class WordsTest {
+public class WordTest {
 
 	
 	private static final String STOPWORDS_TXT = "/org/xmlcml/ami2/plugins/word/stopwords.txt";
 	private static final String CLINICAL_STOPWORDS_TXT = "/org/xmlcml/ami2/plugins/word/clinicaltrials200.txt";
-	private static final Logger LOG = Logger.getLogger(WordsTest.class);
+	private static final Logger LOG = Logger.getLogger(WordTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
 	private static final String DATA_16_1_1 = 
 			new File(Fixtures.TEST_BMC_DIR, "http_www.trialsjournal.com_content_16_1_1").toString();
+	private static final String DATA_16_1_1A = 
+			new File(Fixtures.TEST_BMC_DIR, "http_www.trialsjournal.com_content_16_1_1a").toString();
 	private static final String TEMP_16_1_1 = 
 			"target/http_www.trialsjournal.com_content_16_1_1";
 
 	private static final String EXAMPLES =  "examples";
-	private static final String EXAMPLES_TEMP = "examplestemp";
+	private static final String EXAMPLES_TEMP = "target/examplestemp";
 
 	@Test
 	@Ignore // to avoid output
@@ -56,26 +59,29 @@ public class WordsTest {
 	
 	@Test
 	public void testSingleFile() throws IOException {
-		FileUtils.copyDirectory(
-				new File(DATA_16_1_1), new File(TEMP_16_1_1));
-		String args = 
-			"-q "+TEMP_16_1_1+
-			" --w.words "+WordArgProcessor.WORD_LENGTHS+" "+WordArgProcessor.WORD_FREQUENCIES+
-			" --w.stopwords "+STOPWORDS_TXT+
-			" --w.wordlengths {2,12}"+
-			" --w.wordtypes acronym ";
-		AMIArgProcessor argProcessor = new WordArgProcessor(args);
-		argProcessor.runAndOutput();
+		
+		String cmd = "-q target/word/16_1_1_test/ -i scholarly.html --context 25 40 --w.words wordLengths wordFrequencies --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
+		Fixtures.runStandardTestHarness(
+				new File(DATA_16_1_1), 
+				new File("target/word/16_1_1_test/"), 
+				new WordPlugin(),
+				cmd,
+				"word/lengths/", "word/frequencies/");
+
 	}
 
 	@Test
 	public void testExamplesFrequencies() throws IOException {
-		FileUtils.copyDirectory(
-				new File(EXAMPLES), new File(EXAMPLES_TEMP));
-		String args = 
-			"-q "+EXAMPLES_TEMP+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" "+CLINICAL_STOPWORDS_TXT;
-		AMIArgProcessor argProcessor = new WordArgProcessor(args);
-		argProcessor.runAndOutput();
+		
+		String cmd = "-q target/examplestemp1/ --w.words wordFrequencies "
+				+ "--w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt /org/xmlcml/ami2/plugins/word/clinicaltrials200.txt";		
+		Fixtures.runStandardTestHarness(
+				new File(DATA_16_1_1A), 
+				new File("target/examplestemp1/"), 
+				new WordPlugin(),
+				cmd,
+				"word/frequencies/");
+
 	}
 
 	@Test

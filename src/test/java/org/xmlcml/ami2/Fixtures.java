@@ -48,10 +48,10 @@ public class Fixtures {
 	 * @param cmDirectory contentMine directory
 	 * @param temp directory (will create)
 	 * @param plugin plugin to use
-	 * @param pluginAndOption directory for output (e.g. species/binomial/)
+	 * @param pluginAndOptions directories for output (e.g. species/binomial/)
 	 * @throws IOException
 	 */
-	public static void runStandardTestHarness(File cmDirectory, File temp, AMIPlugin plugin, String args, String pluginAndOption)
+	public static void runStandardTestHarness(File cmDirectory, File temp, AMIPlugin plugin, String args, String ... pluginAndOptions)
 			throws IOException {
 		LOG.debug("++++++++++++++++++++++   harness   +++++++++++++++++++++++");
 		LOG.debug("temp exists: "+temp+"; e: "+temp.exists()+"; d "+temp.isDirectory());
@@ -72,7 +72,9 @@ public class Fixtures {
 		LOG.debug("==========================="+argProcessor+"=============================");
 		LOG.debug("results exists? "+new File(temp,"results").exists());
 		
-	    Fixtures.compareExpectedAndResults(qsNorma.getDirectory(), temp, pluginAndOption + RESULTS_XML);
+		for (String pluginAndOption : pluginAndOptions) {
+			Fixtures.compareExpectedAndResults(qsNorma.getDirectory(), temp, pluginAndOption + RESULTS_XML);
+		}
 	}
 
 	/** compares results.xml files in expected and actual directories.
