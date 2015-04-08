@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.junit.Assert;
 import org.xmlcml.args.DefaultArgProcessor;
 
 public class AMIPlugin {
@@ -35,7 +34,7 @@ public class AMIPlugin {
 	
 	public AMIPlugin() {
 		// default - should be overridden
-		this.argProcessor = new AMIArgProcessor();
+		this.argProcessor = null;
 	}
 
 	protected AMIArgProcessor argProcessor;

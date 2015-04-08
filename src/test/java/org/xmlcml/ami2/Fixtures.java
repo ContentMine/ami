@@ -51,11 +51,20 @@ public class Fixtures {
 	 */
 	public static void runStandardTestHarness(File cmDirectory, File temp, AMIPlugin plugin, String pluginAndOption)
 			throws IOException {
+		LOG.debug("++++++++++++++++++++++   harness   +++++++++++++++++++++++");
+		LOG.debug("temp exists: "+temp+"; e: "+temp.exists()+"; d "+temp.isDirectory());
 		QuickscrapeNorma qsNorma = new QuickscrapeNorma(cmDirectory);
+		FileUtils.deleteDirectory(temp);
 		qsNorma.copyTo(temp, true);
-		Assert.assertFalse(RESULTS_XML, qsNorma.hasResultsXML());
+		temp.mkdirs();
+		LOG.debug("temp exists: "+temp+"; e: "+temp.exists()+"; d "+temp.isDirectory());
+		
+		Assert.assertFalse("exists? "+RESULTS_XML, qsNorma.hasResultsXML());
 		AMIArgProcessor argProcessor = (AMIArgProcessor) plugin.getArgProcessor();
+		LOG.debug("ARG PROCESSOR: "+argProcessor);
 		argProcessor.runAndOutput();
+		LOG.debug("==========================="+argProcessor+"=============================");
+		LOG.debug("results exists? "+new File(temp,"results").exists());
 	    Fixtures.compareExpectedAndResults(qsNorma.getDirectory(), temp, pluginAndOption + RESULTS_XML);
 	}
 
@@ -69,9 +78,9 @@ public class Fixtures {
 	public static void compareExpectedAndResults(File expectedCM, File resultsCM, String pluginAndOption) throws IOException {
 		
 		File expectedFile = new File(expectedCM, EXPECTED_DIR+pluginAndOption);
-		Assert.assertTrue("file should exist: "+expectedFile, expectedFile.exists());
+		Assert.assertTrue("expected file should exist : "+expectedFile, expectedFile.exists());
 		File resultsFile = new File(resultsCM, RESULTS_DIR+pluginAndOption);
-		Assert.assertTrue("file should exist: "+resultsFile, resultsFile.exists());
+		Assert.assertTrue("results file should exist: "+resultsFile, resultsFile.exists());
 		String msg = XMLUtil.equalsCanonically(
 	    		expectedFile, 
 	    		resultsFile,
