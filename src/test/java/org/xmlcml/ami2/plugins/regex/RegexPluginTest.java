@@ -50,7 +50,7 @@ public class RegexPluginTest {
 				// add context for 25 chars preceding and 40 post
 				"--context", "25", "40", "--r.regex", "regex/simpletest.xml",
 		};
-		AMIPlugin regexPlugin = new RegexPlugin(args);
+		new RegexPlugin(args);
 	}
 	
 	@Test
