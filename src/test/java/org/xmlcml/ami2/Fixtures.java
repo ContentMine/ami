@@ -2,6 +2,8 @@ package org.xmlcml.ami2;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
@@ -58,11 +60,15 @@ public class Fixtures {
 		qsNorma.copyTo(temp, true);
 		temp.mkdirs();
 		LOG.debug("temp exists: "+temp+"; e: "+temp.exists()+"; d "+temp.isDirectory());
+		List<File> files = new ArrayList<File>(FileUtils.listFiles(temp, null, true));
+		LOG.debug("FILES: "+files);
 		
 		Assert.assertFalse("exists? "+RESULTS_XML, qsNorma.hasResultsXML());
 		AMIArgProcessor argProcessor = (AMIArgProcessor) plugin.getArgProcessor();
 		LOG.debug("ARG PROCESSOR: "+argProcessor);
 		argProcessor.runAndOutput();
+		files = new ArrayList<File>(FileUtils.listFiles(temp, null, true));
+		LOG.debug("FILES after: "+files);
 		LOG.debug("==========================="+argProcessor+"=============================");
 		LOG.debug("results exists? "+new File(temp,"results").exists());
 	    Fixtures.compareExpectedAndResults(qsNorma.getDirectory(), temp, pluginAndOption + RESULTS_XML);
