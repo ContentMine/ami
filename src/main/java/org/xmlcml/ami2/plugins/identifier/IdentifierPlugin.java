@@ -2,7 +2,6 @@ package org.xmlcml.ami2.plugins.identifier;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 
 /** test plugin.
@@ -19,16 +18,22 @@ public class IdentifierPlugin extends AMIPlugin {
 		LOG.setLevel(Level.DEBUG);
 	}
 
+	public IdentifierPlugin() {
+		this.argProcessor = new IdentifierArgProcessor();
+	}
+
+	public IdentifierPlugin(String args) {
+		super();
+		this.argProcessor = new IdentifierArgProcessor(args);
+	}
+
 	public IdentifierPlugin(String[] args) {
 		super();
-		this.argProcessor = new IdentifierArgProcessor();
-		argProcessor.parseArgs(args);
-
+		this.argProcessor = new IdentifierArgProcessor(args);
 	}
 	
 	public static void main(String[] args) {
-		AMIArgProcessor argProcessor = new IdentifierArgProcessor();
-		argProcessor.parseArgsRunAndOutput(args);
+		new IdentifierArgProcessor().parseArgsRunAndOutput(args);
 	}
 
 

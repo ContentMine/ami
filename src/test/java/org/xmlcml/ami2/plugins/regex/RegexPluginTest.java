@@ -29,6 +29,7 @@ public class RegexPluginTest {
 	 * @throws IOException
 	 */
 	@Test
+	@Ignore // to avoid output
 	public void testSimpleTestRegexHelp() throws IOException {
 		String[] args = {
 				
@@ -48,7 +49,7 @@ public class RegexPluginTest {
 	public void testSimpleTestRegex() throws IOException {
 		String[] args = {
 				// add context for 25 chars preceding and 40 post
-				"--context", "25", "40", "--r.regex", "regex/simpletest.xml",
+				"--context", "25", "40", "--r.regex", "regex/common.xml",
 		};
 		new RegexPlugin(args);
 	}
@@ -68,7 +69,6 @@ public class RegexPluginTest {
 			    	"regex/common.xml",
 			    	"regex/figure.xml",
 			    	"regex/phylotree.xml",
-			    	"regex/stemtest.xml", // this doesn't exist and LOGs an error
 		};
 		AMIPlugin regexPlugin = new RegexPlugin(args);
 		AMIArgProcessor argProcessor = (AMIArgProcessor) regexPlugin.getArgProcessor();
@@ -82,7 +82,8 @@ public class RegexPluginTest {
 		Fixtures.runStandardTestHarness(
 				Fixtures.TEST_BMC_15_1_511_QSN, 
 				new File("target/consort0/15_1_511_test/"), 
-				new RegexPlugin("-q target/consort0/15_1_511_test/ -i scholarly.html --context 25 40 --r.regex regex/consort0.xml"),
+				new RegexPlugin(),
+				"-q target/consort0/15_1_511_test/ -i scholarly.html --context 25 40 --r.regex regex/consort0.xml",
 				"regex/consort0/");
 		LOG.debug("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 		

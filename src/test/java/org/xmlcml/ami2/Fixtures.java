@@ -51,7 +51,7 @@ public class Fixtures {
 	 * @param pluginAndOption directory for output (e.g. species/binomial/)
 	 * @throws IOException
 	 */
-	public static void runStandardTestHarness(File cmDirectory, File temp, AMIPlugin plugin, String pluginAndOption)
+	public static void runStandardTestHarness(File cmDirectory, File temp, AMIPlugin plugin, String args, String pluginAndOption)
 			throws IOException {
 		LOG.debug("++++++++++++++++++++++   harness   +++++++++++++++++++++++");
 		LOG.debug("temp exists: "+temp+"; e: "+temp.exists()+"; d "+temp.isDirectory());
@@ -65,12 +65,13 @@ public class Fixtures {
 		
 		Assert.assertFalse("exists? "+RESULTS_XML, qsNorma.hasResultsXML());
 		AMIArgProcessor argProcessor = (AMIArgProcessor) plugin.getArgProcessor();
-		LOG.debug("ARG PROCESSOR: "+argProcessor);
+		argProcessor.parseArgs(args);
 		argProcessor.runAndOutput();
 		files = new ArrayList<File>(FileUtils.listFiles(temp, null, true));
 		LOG.debug("FILES after: "+files);
 		LOG.debug("==========================="+argProcessor+"=============================");
 		LOG.debug("results exists? "+new File(temp,"results").exists());
+		
 	    Fixtures.compareExpectedAndResults(qsNorma.getDirectory(), temp, pluginAndOption + RESULTS_XML);
 	}
 

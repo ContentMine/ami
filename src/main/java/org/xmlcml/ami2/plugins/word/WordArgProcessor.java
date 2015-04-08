@@ -50,11 +50,13 @@ public class WordArgProcessor extends AMIArgProcessor {
 				WORD_LENGTHS
 		});
 	
-	public final static String ABBREVIATIONS = "abbreviation";
+	public final static String ABBREVIATION = "abbreviation";
+	public final static String ACRONYM = "acronym";
 	public final static String CAPITALIZED = "capitalized";
 	public final static List<String> WORD_TYPES = Arrays.asList(
 		new String[]{
-				ABBREVIATIONS,
+				ABBREVIATION,
+				ACRONYM,
 				CAPITALIZED
 		});
 	
@@ -63,7 +65,7 @@ public class WordArgProcessor extends AMIArgProcessor {
 	public final static List<String> CASE_TYPES = Arrays.asList(
 		new String[]{
 				IGNORE,
-				ABBREVIATIONS,
+				ABBREVIATION,
 				PRESERVE
 		});
 

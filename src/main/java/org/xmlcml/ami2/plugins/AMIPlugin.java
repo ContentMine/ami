@@ -64,7 +64,7 @@ public class AMIPlugin {
 				throw new RuntimeException("Cannot instantiate class: "+argProcessorName, e);
 			}
 			LOG.debug(argProcessor);
-			argProcessor.printHelp(null, null);;
+//			argProcessor.printHelp(null, null);;
 		}
 	}
 

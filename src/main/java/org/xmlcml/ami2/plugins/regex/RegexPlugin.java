@@ -17,17 +17,19 @@ public class RegexPlugin extends AMIPlugin {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+	
+	public RegexPlugin() {
+		this.argProcessor = new RegexArgProcessor();
+	}
 
 	public RegexPlugin(String[] args) {
 		super();
 		this.argProcessor = new RegexArgProcessor(args);
-		
 	}
 
 	public RegexPlugin(String args) {
 		super();
 		this.argProcessor = new RegexArgProcessor(args);
-		
 	}
 
 	public static void main(String[] args) {

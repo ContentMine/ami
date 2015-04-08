@@ -2,7 +2,6 @@ package org.xmlcml.ami2.plugins.word;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 
 /** test plugin.
@@ -19,16 +18,23 @@ public class WordPlugin extends AMIPlugin {
 		LOG.setLevel(Level.DEBUG);
 	}
 
+	
+	public WordPlugin() {
+		this.argProcessor = new WordArgProcessor();
+	}
+
 	public WordPlugin(String[] args) {
 		super();
-		this.argProcessor = new WordArgProcessor();
-		argProcessor.parseArgs(args);
-
+		this.argProcessor = new WordArgProcessor(args);
 	}
-	
+
+	public WordPlugin(String args) {
+		super();
+		this.argProcessor = new WordArgProcessor(args);
+	}
+
 	public static void main(String[] args) {
-		AMIArgProcessor argProcessor = new WordArgProcessor();
-		argProcessor.parseArgsRunAndOutput(args);
+		new WordArgProcessor(args).runAndOutput();		
 	}
 
 
