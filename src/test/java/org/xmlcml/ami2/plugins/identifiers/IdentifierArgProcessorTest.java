@@ -52,7 +52,6 @@ public class IdentifierArgProcessorTest {
 		Assert.assertEquals("--id.identifier --context 35 50 --id.type clin.nct clin.isrctn clin.umin -q target/examples_16_1_1 -i scholarly.html", args);
 		AMIArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
-		// compares result with: /ami2/src/test/resources/org/xmlcml/ami2/bmc/15_1_511/expected/regex/consort0/results.xml
 	    Fixtures.compareExpectedAndResults(Fixtures.TEST_TRIALS_16_1_1, newDir, "identifier/clin.nct/results.xml");
 	}
 
