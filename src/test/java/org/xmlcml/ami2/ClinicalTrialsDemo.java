@@ -7,6 +7,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
 
@@ -148,7 +149,7 @@ public class ClinicalTrialsDemo {
 				"--r.regex", 
 				    "regex/consort0.xml",
 		};
-		RegexPlugin regexPlugin = new RegexPlugin(args);
+		AMIPlugin regexPlugin = new RegexPlugin(args);
 		AMIArgProcessor argProcessor = (AMIArgProcessor) regexPlugin.getArgProcessor();
 		argProcessor.runAndOutput();
 	}

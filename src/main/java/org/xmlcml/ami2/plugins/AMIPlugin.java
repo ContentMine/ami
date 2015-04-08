@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.xmlcml.args.DefaultArgProcessor;
 
 public class AMIPlugin {
@@ -20,6 +21,7 @@ public class AMIPlugin {
 	static Map<String, String> argProcessorNameByName = null;
 	static {
 		argProcessorNameByName = new HashMap<String, String>();
+		putClass("identifier");
 		putClass("regex");
 		putClass("sequence");
 		putClass("simple");
@@ -32,6 +34,8 @@ public class AMIPlugin {
 	}
 	
 	public AMIPlugin() {
+		// default - should be overridden
+		this.argProcessor = new AMIArgProcessor();
 	}
 
 	protected AMIArgProcessor argProcessor;
@@ -63,12 +67,17 @@ public class AMIPlugin {
 			LOG.debug(argProcessor);
 			argProcessor.printHelp(null, null);;
 		}
-//		argProcessor = new AMIArgProcessor();
-//		argProcessor.parseArgs(args);
-//		argProcessor.runAndOutput();
 	}
 
 	public DefaultArgProcessor getArgProcessor() {
 		return argProcessor;
+	}
+
+	/** delegate to argProcessor.runAndOutput().
+	 * 
+	 */
+	public void runAndOutput() {
+		AMIArgProcessor argProcessor = (AMIArgProcessor) this.getArgProcessor();
+		argProcessor.runAndOutput();
 	}
 }

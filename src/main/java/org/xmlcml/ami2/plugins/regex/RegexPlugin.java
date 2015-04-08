@@ -31,7 +31,6 @@ public class RegexPlugin extends AMIPlugin {
 	}
 
 	public static void main(String[] args) {
-		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
-		argProcessor.runAndOutput();
+		new RegexArgProcessor(args).runAndOutput();		
 	}
 }

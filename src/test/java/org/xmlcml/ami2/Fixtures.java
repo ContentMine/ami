@@ -7,6 +7,9 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.AMIPlugin;
+import org.xmlcml.files.QuickscrapeNorma;
 import org.xmlcml.xml.XMLUtil;
 
 public class Fixtures {
@@ -32,14 +35,43 @@ public class Fixtures {
 	public final static File TEST_PLOSONE_MALARIA_0119475  = new File(Fixtures.TEST_PLOSONE_DIR, "journal.pone.0119475");
 
 	public static final File EXAMPLES              = new File("examples");
-	public static final File EXAMPLES_TEMP_16_1_1         = new File("target/examples_16_1_1");
+	public static final File EXAMPLES_TEMP_16_1_1  = new File("target/examples_16_1_1");
 
-	public static void compareExpectedAndResults(File expectedCM, File resultsCM, String results) throws IOException {
+	private static final String RESULTS_XML = "results.xml";
+	private static final String RESULTS_DIR = "results/";
+	private static final String EXPECTED_DIR = "expected/";
+
+	/** runs tests and compares expected and actual output.
+	 * 
+	 * @param cmDirectory contentMine directory
+	 * @param temp directory (will create)
+	 * @param plugin plugin to use
+	 * @param pluginAndOption directory for output (e.g. species/binomial/)
+	 * @throws IOException
+	 */
+	public static void runStandardTestHarness(File cmDirectory, File temp, AMIPlugin plugin, String pluginAndOption)
+			throws IOException {
+		QuickscrapeNorma qsNorma = new QuickscrapeNorma(cmDirectory);
+		qsNorma.copyTo(temp, true);
+		Assert.assertFalse(RESULTS_XML, qsNorma.hasResultsXML());
+		AMIArgProcessor argProcessor = (AMIArgProcessor) plugin.getArgProcessor();
+		argProcessor.runAndOutput();
+	    Fixtures.compareExpectedAndResults(qsNorma.getDirectory(), temp, pluginAndOption + RESULTS_XML);
+	}
+
+	/** compares results.xml files in expected and actual directories.
+	 * 
+	 * @param expectedCM cmDirectory (must contain expected/)
+	 * @param resultsCM cmDiecrory (must contain results/)
+	 * @param pluginAndOption e.g. "species/binomial/"
+	 * @throws IOException
+	 */
+	public static void compareExpectedAndResults(File expectedCM, File resultsCM, String pluginAndOption) throws IOException {
 		
-		File expectedFile = new File(expectedCM, "expected/"+results);
-		Assert.assertTrue(""+expectedFile, expectedFile.exists());
-		File resultsFile = new File(resultsCM, "results/"+results);
-		Assert.assertTrue(resultsFile.exists());
+		File expectedFile = new File(expectedCM, EXPECTED_DIR+pluginAndOption);
+		Assert.assertTrue("file should exist: "+expectedFile, expectedFile.exists());
+		File resultsFile = new File(resultsCM, RESULTS_DIR+pluginAndOption);
+		Assert.assertTrue("file should exist: "+resultsFile, resultsFile.exists());
 		String msg = XMLUtil.equalsCanonically(
 	    		expectedFile, 
 	    		resultsFile,
