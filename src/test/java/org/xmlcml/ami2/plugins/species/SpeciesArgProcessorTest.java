@@ -12,7 +12,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.norma.Norma;
 
 public class SpeciesArgProcessorTest {
 
@@ -78,14 +77,15 @@ public class SpeciesArgProcessorTest {
 				*/
 	}
 	
-	@Test
-	public void testMalariaArgProcessorNorma() throws Exception {
-		File newDir = new File("target/plosone/species/malaria");
-		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_MALARIA_0119475, newDir);
-		String args = "-q "+newDir+" -i fulltext.xml -o scholarly.html -x nlm2html"; 
-		Norma norma = new Norma();
-		norma.run(args);
-	}
+	// norma not committed yet
+//	@Test
+//	public void testMalariaArgProcessorNorma() throws Exception {
+//		File newDir = new File("target/plosone/species/malaria");
+//		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_MALARIA_0119475, newDir);
+//		String args = "-q "+newDir+" -i fulltext.xml -o scholarly.html -x nlm2html"; 
+//		Norma norma = new Norma();
+//		norma.run(args);
+//	}
 	
 
 	

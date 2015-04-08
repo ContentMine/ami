@@ -1,28 +1,28 @@
 <compoundRegex title="publication">
-	<regex fields="electronic">electronic</regex>
-	<regex fields="edition">edition</regex>
-	<regex fields="article">article</regex>
-	<regex fields="conforms">conforms</regex>
-	<regex fields="require">requirements</regex>
-	<regex fields="publish">published</regex>
+	<regex fields="electronic">electron~</regex>
+	<regex fields="edition">edit~</regex>
+	<regex fields="article">article~</regex>
+	<regex fields="conforms">conform~</regex>
+	<regex fields="require">requirement~</regex>
+	<regex fields="publish">publish~</regex>
 	<regex fields="work">work</regex>
-	<regex fields="register">registered</regex>
+	<regex fields="register">register~</regex>
 	<regex fields="online">online</regex>
-	<regex fields="lsid">LSID</regex>
-	<regex fields="issn">ISSN</regex>
-	<regex fields="archive">archived</regex>
+	<regex fields="lsid" case="required">LSID</regex>
+	<regex fields="issn" case="required">ISSN</regex>
+	<regex fields="archive">archiv~</regex>
 	<regex fields="digital">digital</regex>
-	<regex fields="repository">repositories:</regex>
-	<regex fields="pmc">PubMed Central</regex>
-	<regex fields="lockss">LOCKSS</regex>
-	<regex fields="openaccess">Open Access</regex>
-	<regex fields="cc">Creative Commons</regex>
+	<regex fields="repository">repositor~</regex>
+	<regex fields="pmc" case="required">PubMed Central</regex>
+	<regex fields="lockss" case="required">LOCKSS</regex>
+	<regex fields="openaccess" case="required">Open Access</regex>
+	<regex fields="cc" case="required">Creative Commons</regex>
 	<regex fields="accession">accession</regex>
-	<regex fields="author">authors</regex>
-	<regex fields="competing">competing interest</regex>
-	<regex fields="approve">approved</regex>
-	<regex fields="thank">thank</regex>
-	<regex fields="discussion">discussion</regex>
-	<regex fields="fund">funding</regex>
-	<regex fields="grant">grant</regex>
+	<regex fields="author">author~</regex>
+	<regex fields="competing">competing interest~</regex>
+	<regex fields="approve">approv~</regex>
+	<regex fields="thank">thank~</regex>
+	<regex fields="discussion">discuss~</regex>
+	<regex fields="fund">fund~</regex>
+	<regex fields="grant">grant~</regex>
 </compoundRegex>

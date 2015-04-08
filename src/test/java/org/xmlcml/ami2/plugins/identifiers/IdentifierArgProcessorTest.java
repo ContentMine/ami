@@ -45,20 +45,18 @@ public class IdentifierArgProcessorTest {
 	}
 	
 	@Test
-	public void testTenIdentifiersArgProcessor() throws Exception {
-		File newDir = Fixtures.EXAMPLES_TEMP;
-		FileUtils.copyDirectory(Fixtures.EXAMPLES, newDir);
-		String args = "--id.identifier --context 35 50 --id.type clin.nct clin.isrctn clin.umin -q "+newDir+" -i scholarly.html"; 
+	public void testIdentifiersArgProcessor() throws Exception {
+		File newDir = Fixtures.EXAMPLES_TEMP_16_1_1;
+		FileUtils.copyDirectory(Fixtures.TEST_TRIALS_16_1_1, newDir);
+		String args = "--id.identifier --context 35 50 --id.type clin.nct clin.isrctn clin.umin -q "+newDir+" -i scholarly.html";
+		Assert.assertEquals("--id.identifier --context 35 50 --id.type clin.nct clin.isrctn clin.umin -q target/examples_16_1_1 -i scholarly.html", args);
 		AMIArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
-		Assert.assertTrue("results dir ("+newDir+"): ", newDir.exists());
-//		File newFile = new File(newDir, "results/identifier/clin.nct/results.xml");
-//		Assert.assertTrue("ena file ", newFile.exists());
-//		Element newElement = new Builder().build(newFile).getRootElement();
-//		String newXml = newElement.toXML().replaceAll("\\s+", " ");
-//		newXml = newXml.substring(0,  Math.min(newXml.length(), 200));
-//		Assert.assertEquals("ena file ", "<results title=\"ena\"> <result pre=\"ecies. (GenBank accession numbers; \" match=\"GQ906358\" post=\", NR102976 and KC954171), 3 Arcobacter species (NR\" /> <result pre=\"nBank accession numbers; GQ906358, \" ", newXml);
+		// compares result with: /ami2/src/test/resources/org/xmlcml/ami2/bmc/15_1_511/expected/regex/consort0/results.xml
+	    Fixtures.compareExpectedAndResults(Fixtures.TEST_TRIALS_16_1_1, newDir, "identifier/clin.nct/results.xml");
 	}
+
+	
 	
 	@Test
 	@Ignore // accesses net

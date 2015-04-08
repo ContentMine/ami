@@ -88,23 +88,14 @@ public class RegexPluginTest {
 		qsNorma.copyTo(normaTemp, true);
 		Assert.assertFalse("results.xml", qsNorma.hasResultsXML());
 		String arg = "-q "+ normaTemp.toString()+" -i scholarly.html --context 25 40 --r.regex regex/consort0.xml";
+		Assert.assertEquals("-q target/consort0/15_1_511_test -i scholarly.html --context 25 40 --r.regex regex/consort0.xml", arg);
 		RegexPlugin regexPlugin = new RegexPlugin(arg);
 		AMIArgProcessor argProcessor = (AMIArgProcessor) regexPlugin.getArgProcessor();
 		argProcessor.runAndOutput();
-	    compareExpectedAndResults(Fixtures.TEST_BMC_15_1_511_QSN, normaTemp, "regex/consort0/results.xml");
-
+		// compares result with: /ami2/src/test/resources/org/xmlcml/ami2/bmc/15_1_511/expected/regex/consort0/results.xml
+	    Fixtures.compareExpectedAndResults(Fixtures.TEST_BMC_15_1_511_QSN, normaTemp, "regex/consort0/results.xml");
 	}
 
-
-
-	private void compareExpectedAndResults(File expectedCM, File resultsCM, String results) {
-		String msg = XMLUtil.equalsCanonically(
-	    		new File(expectedCM, "expected/"+results), 
-	    		new File(resultsCM, "results/"+results),
-	    		true);
-	    Assert.assertNull("found: "+msg, msg);
-	}
-	
 	
 	@Test
 	public void testRegexPluginExtractNumbers() throws IOException {

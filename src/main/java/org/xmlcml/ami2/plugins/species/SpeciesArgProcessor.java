@@ -1,9 +1,5 @@
 package org.xmlcml.ami2.plugins.species;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
@@ -11,9 +7,6 @@ import org.xmlcml.ami2.plugins.DefaultSearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
 import org.xmlcml.args.ArgIterator;
 import org.xmlcml.args.ArgumentOption;
-import org.xmlcml.files.QuickscrapeNorma;
-import org.xmlcml.files.ResultsElement;
-import org.xmlcml.html.HtmlP;
 
 /** 
  * Processes commandline arguments.
