@@ -59,7 +59,7 @@ public class WordTest {
 	
 	@Test
 	public void testSingleFile() throws IOException {
-		
+		// SHOWCASE
 		String cmd = "-q target/word/16_1_1_test/ -i scholarly.html --context 25 40 --w.words wordLengths wordFrequencies --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
 		Fixtures.runStandardTestHarness(
 				new File(DATA_16_1_1), 

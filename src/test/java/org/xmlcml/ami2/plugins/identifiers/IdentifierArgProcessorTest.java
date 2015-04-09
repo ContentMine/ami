@@ -14,6 +14,7 @@ import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.identifier.IdentifierArgProcessor;
+import org.xmlcml.ami2.plugins.identifier.IdentifierPlugin;
 
 public class IdentifierArgProcessorTest {
 
@@ -46,13 +47,23 @@ public class IdentifierArgProcessorTest {
 	
 	@Test
 	public void testIdentifiersArgProcessor() throws Exception {
-		File newDir = Fixtures.EXAMPLES_TEMP_16_1_1;
-		FileUtils.copyDirectory(Fixtures.TEST_TRIALS_16_1_1, newDir);
-		String args = "--id.identifier --context 35 50 --id.type clin.nct clin.isrctn clin.umin -q "+newDir+" -i scholarly.html";
-		Assert.assertEquals("--id.identifier --context 35 50 --id.type clin.nct clin.isrctn clin.umin -q target/examples_16_1_1 -i scholarly.html", args);
-		AMIArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
-		identifierArgProcessor.runAndOutput();
-	    Fixtures.compareExpectedAndResults(Fixtures.TEST_TRIALS_16_1_1, newDir, "identifier/clin.nct/results.xml");
+//		File newDir = Fixtures.EXAMPLES_TEMP_16_1_1;
+//		FileUtils.copyDirectory(Fixtures.TEST_TRIALS_16_1_1, newDir);
+//		String args = "--id.identifier --context 35 50 --id.type clin.nct clin.isrctn clin.umin -q "+newDir+" -i scholarly.html";
+//		Assert.assertEquals("--id.identifier --context 35 50 --id.type clin.nct clin.isrctn clin.umin -q target/examples_16_1_1 -i scholarly.html", args);
+//		AMIArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
+//		identifierArgProcessor.runAndOutput();
+//	    Fixtures.compareExpectedAndResults(Fixtures.TEST_TRIALS_16_1_1, newDir, "identifier/clin.nct/results.xml");
+	    
+		// SHOWCASE
+		String cmd = "-q target/examples_16_1_1/ -i scholarly.html --context 25 40 "
+				+ "--id.identifier --id.type clin.nct clin.isrctn";
+		Fixtures.runStandardTestHarness(
+				Fixtures.TEST_TRIALS_16_1_1, 
+				new File("target/examples_16_1_1/"), 
+				new IdentifierPlugin(),
+				cmd,
+				"identifier/clin.nct/", "identifier/clin.isrctn/");
 	}
 
 	
