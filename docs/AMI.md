@@ -214,7 +214,7 @@ Note that almost every plugin has:
  
 ## the `src/main/resources` tree
 
-The `resources` tree contaoins configuration files which are independent of the input files. Note that they use the same class/pacjage naming structure
+The `resources` tree contaoins configuration files which are independent of the input files. Note that they use the same class/package naming structure
 ```
 src
 └── main
@@ -237,7 +237,6 @@ src
 		            │   │   └── args.xml
 		            │   └── word
 		            │       ├── args.xml
-		            │       ├── clinicaltrials.xml
 		            │       ├── clinicaltrials200.txt
 		            │       └── stopwords.txt
 		            └── tagger // obsolete
@@ -246,5 +245,39 @@ src
  * `org/xmlcml/ami2/plugins/args.xml` configuration applies to all plugins.
  * `org/xmlcml/ami2/plugins/identifier/args.xml` configuration applies to just the `identifier` plugins (and so on)
  
+ The `args.xml` define what arguments are allowed and how they are used. In addition some plugins use extra files. In this case `ami-word` uses lists of "stopwords" - words to be excluded from final lists. Here there are 2 - one general (`stopwrds.txt`) and one for 200 common words in clinical trials (`clinicaltrials200.txt`). (We'll examine the args in detail later).
  
+ ## the `src/test/java` tree 
+ 
+ This mirrors the plugin classes:
+ ```
+src/test/java
+└── org
+    └── xmlcml
+        └── ami2
+            ├── ClinicalTrialsDemo.java
+            ├── Fixtures.java
+            ├── lookups
+            │   └── WikipediaLookupTest.java
+            └── plugins
+                ├── AMIPluginTest.java
+                ├── RegressionDemoTest.java
+                ├── identifiers
+                │   └── IdentifierArgProcessorTest.java
+                ├── regex
+                │   └── RegexPluginTest.java
+                ├── sequence
+                │   └── SequenceArgProcessorTest.java
+                ├── simple
+                │   └── SimplePluginTest.java
+                ├── species
+                │   └── SpeciesArgProcessorTest.java
+                └── word
+                    └── WordTest.java
+ ```
+  * `Fixtures.java` defines files and routines used by all tests.
+  * each class has a test. Reading these should give some idea of how the class is used. 
+  
+  Results come out in `results` and will be described elsewhere.
+  
 
