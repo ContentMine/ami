@@ -23,7 +23,7 @@ AMI is highly modular and consists of Java code, XML control, data and tests.
  
  AMI is built as a `maven` framework. This shouldn't worry you - just accept that many of the filenames are conventional. Here's the current structure
  
- .
+``` .
 ├── LICENSE
 ├── README.md
 ├── docs
