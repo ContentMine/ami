@@ -1,0 +1,58 @@
+{
+  "fulltext_pdf": {
+    "value": []
+  },
+  "fulltext_html": {
+    "value": []
+  },
+  "fulltext_xml": {
+    "value": []
+  },
+  "title": {
+    "value": []
+  },
+  "author": {
+    "value": [
+      "Chim W. Chan",
+      "Naoko Sakihama",
+      "Shin-Ichiro Tachibana",
+      "Zulkarnain Md Idris",
+      "J. Koji Lum",
+      "Kazuyuki Tanabe",
+      "Akira Kaneko"
+    ]
+  },
+  "date": {
+    "value": [
+      "2015-03-20T07:00:00Z"
+    ]
+  },
+  "doi": {
+    "value": [
+      "10.1371/journal.pone.0119475"
+    ]
+  },
+  "volume": {
+    "value": [
+      "10"
+    ]
+  },
+  "issue": {
+    "value": [
+      "3"
+    ]
+  },
+  "firstpage": {
+    "value": [
+      "e0119475"
+    ]
+  },
+  "description": {
+    "value": []
+  },
+  "abstract": {
+    "value": [
+      "AbstractUnderstanding the transmission and movement of Plasmodium parasites is crucial for malaria elimination and prevention of resurgence. Located at the limit of malaria transmission in the Pacific, Vanuatu is an ideal candidate for elimination programs due to low endemicity and the isolated nature of its island setting. We analyzed the variation in the merozoite surface protein 1 (msp1) and the circumsporozoite protein (csp) of P. falciparum and P. vivax populations to examine the patterns of gene flow and population structures among seven sites on five islands in Vanuatu. Genetic diversity was in general higher in P. vivax than P. falciparum from the same site. In P. vivax, high genetic diversity was likely maintained by greater extent of gene flow among sites and among islands. Consistent with the different patterns of gene flow, the proportion of genetic variance found among islands was substantially higher in P. falciparum (28.81–31.23%) than in P. vivax (-0.53–3.99%). Our data suggest that the current island-by-island malaria elimination strategy in Vanuatu, while adequate for P. falciparum elimination, might need to be complemented with more centrally integrated measures to control P. vivax movement across islands.\n"
+    ]
+  }
+}
