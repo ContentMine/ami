@@ -13,6 +13,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.identifier.IdentifierPlugin;
 
 public class SequenceArgProcessorTest {
 
@@ -56,4 +57,17 @@ public class SequenceArgProcessorTest {
 
 	}
 	
+	@Test
+	public void testSequenceHarness() throws Exception {
+		// SHOWCASE
+		String cmd = "--sq.sequence --context 35 50 --sq.type dna prot -q target/plosone/sequences/ -i scholarly.html"; 
+		Fixtures.runStandardTestHarness(
+				Fixtures.TEST_PLOSONE_SEQUENCE_0121780, 
+				new File("target/plosone/sequences/"), 
+				new SequencePlugin(),
+				cmd,
+				"sequence/dna/", "sequence/prot/");
+	}
+
+
 }

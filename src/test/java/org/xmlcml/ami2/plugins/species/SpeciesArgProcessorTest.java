@@ -12,6 +12,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.sequence.SequencePlugin;
 
 public class SpeciesArgProcessorTest {
 
@@ -56,27 +57,41 @@ public class SpeciesArgProcessorTest {
 	}
 	
 	
+//	@Test
+//	public void testMalariaArgProcessor() throws Exception {
+//		File newDir = new File("target/plosone/species/malaria");
+//		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_MALARIA_0119475, newDir);
+//		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
+//		AMIArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
+//		speciesArgProcessor.runAndOutput();
+//		Assert.assertTrue("results dir: ", new File(newDir, "results").exists());
+//		Assert.assertTrue("species dir: ", new File(newDir, "results/species").exists());
+//		Assert.assertTrue("binomial dir ", new File(newDir, "results/species/binomial").exists());
+//		File binomialFile = new File(newDir, "results/species/binomial/results.xml");
+//		Assert.assertTrue("binomial file ", binomialFile.exists());
+//		Element binomialElement = new Builder().build(binomialFile).getRootElement();
+//		String binomialXml = binomialElement.toXML().replaceAll("\\s+", " ");
+////		binomialXml = binomialXml.substring(0,  200);
+//		/** mend the test
+//		Assert.assertEquals("binomial file ", "<results title=\"binomial\"> <result pre=\"ntimicrobial activity (assessed on \" match=\"Vibrio harveyi\" post=\" cultures) was limited in both H and WSU samples (\" />"
+//				+ " <result pre=\"ia genus Vibrio, including", binomialXml);
+//				*/
+//	}
+
 	@Test
-	public void testMalariaArgProcessor() throws Exception {
-		File newDir = new File("target/plosone/species/malaria");
-		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_MALARIA_0119475, newDir);
-		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
-		AMIArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
-		speciesArgProcessor.runAndOutput();
-		Assert.assertTrue("results dir: ", new File(newDir, "results").exists());
-		Assert.assertTrue("species dir: ", new File(newDir, "results/species").exists());
-		Assert.assertTrue("binomial dir ", new File(newDir, "results/species/binomial").exists());
-		File binomialFile = new File(newDir, "results/species/binomial/results.xml");
-		Assert.assertTrue("binomial file ", binomialFile.exists());
-		Element binomialElement = new Builder().build(binomialFile).getRootElement();
-		String binomialXml = binomialElement.toXML().replaceAll("\\s+", " ");
-//		binomialXml = binomialXml.substring(0,  200);
-		/** mend the test
-		Assert.assertEquals("binomial file ", "<results title=\"binomial\"> <result pre=\"ntimicrobial activity (assessed on \" match=\"Vibrio harveyi\" post=\" cultures) was limited in both H and WSU samples (\" />"
-				+ " <result pre=\"ia genus Vibrio, including", binomialXml);
-				*/
+	public void testSpeciesHarness() throws Exception {
+		// SHOWCASE
+		String cmd = "--sp.species --context 35 50 --sp.type binomial genus genussp -q target/plosone/species/malaria -i scholarly.html"; 
+ 
+		Fixtures.runStandardTestHarness(
+				Fixtures.TEST_PLOSONE_MALARIA_0119475, 
+				new File("target/plosone/species/malaria"), 
+				new SpeciesPlugin(),
+				cmd,
+				"species/binomial/", "species/genus/", "species/genussp/");
 	}
-	
+
+
 	// norma not committed yet
 //	@Test
 //	public void testMalariaArgProcessorNorma() throws Exception {

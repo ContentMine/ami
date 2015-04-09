@@ -73,7 +73,7 @@
 
 					<programs>
  						<program>
-							<mainClass>org.xmlcml.ami2.plugins.regex.IdentifierPlugin</mainClass>
+							<mainClass>org.xmlcml.ami2.plugins.identifier.IdentifierPlugin</mainClass>
 							<id>ami2-identifier</id>
 						</program>
  						<program>
@@ -90,7 +90,7 @@
 						</program>
 						<program>
 							<mainClass>org.xmlcml.ami2.plugins.word.WordPlugin</mainClass>
-							<id>ami2-words</id>
+							<id>ami2-word</id>
 						</program>
 					</programs>
 
@@ -174,8 +174,8 @@
 						<data>
 							<type>link</type>
 							<symlink>true</symlink>
-							<linkName>/usr/bin/ami2-words</linkName>
-							<linkTarget>/usr/share/ami-repo/bin/ami2-words</linkTarget>
+							<linkName>/usr/bin/ami2-word</linkName>
+							<linkTarget>/usr/share/ami-repo/bin/ami2-word</linkTarget>
 						</data>
 
 					</dataSet>

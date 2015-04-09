@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0119475</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-14-38920</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title><italic>Plasmodium vivax</italic> and <italic>Plasmodium falciparum</italic> at the Crossroads of Exchange among Islands in Vanuatu: Implications for Malaria Elimination Strategies</article-title>
+<alt-title alt-title-type="running-head"><italic>P</italic>. <italic>vivax</italic> and <italic>P</italic>. <italic>falciparum</italic> Gene Flow in Vanuatu</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Chan</surname>
+<given-names>Chim W.</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+<xref rid="cor001" ref-type="corresp">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Sakihama</surname>
+<given-names>Naoko</given-names>
+</name>
+<xref rid="aff002" ref-type="aff"><sup>2</sup></xref>
+<xref rid="currentaff001" ref-type="fn"><sup>¤a</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Tachibana</surname>
+<given-names>Shin-Ichiro</given-names>
+</name>
+<xref rid="aff002" ref-type="aff"><sup>2</sup></xref>
+<xref rid="currentaff002" ref-type="fn"><sup>¤b</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Idris</surname>
+<given-names>Zulkarnain Md</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Lum</surname>
+<given-names>J. Koji</given-names>
+</name>
+<xref rid="aff003" ref-type="aff"><sup>3</sup></xref>
+<xref rid="aff004" ref-type="aff"><sup>4</sup></xref>
+<xref rid="aff005" ref-type="aff"><sup>5</sup></xref>
+</contrib>
+<contrib contrib-type="author" deceased="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Tanabe</surname>
+<given-names>Kazuyuki</given-names>
+</name>
+<xref rid="aff002" ref-type="aff"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Kaneko</surname>
+<given-names>Akira</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+<xref rid="aff006" ref-type="aff"><sup>6</sup></xref>
+<xref rid="aff007" ref-type="aff"><sup>7</sup></xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Island Malaria Group, Department of Microbiology, Tumor and Cell Biology, Karolinska Institutet, Stockholm, Sweden</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Laboratory of Malariology, Research Institute for Microbial Diseases, Osaka University, Osaka, Japan</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>Laboratory of Evolutionary Anthropology and Health, Binghamton University, Binghamton, New York, United States of America</addr-line></aff>
+<aff id="aff004"><label>4</label> <addr-line>Department of Anthropology, Binghamton University, Binghamton, New York, United States of America</addr-line></aff>
+<aff id="aff005"><label>5</label> <addr-line>Department of Biological Sciences, Binghamton University, Binghamton, New York, United States of America</addr-line></aff>
+<aff id="aff006"><label>6</label> <addr-line>Department of Parasitology, Graduate School of Medicine, Osaka City University, Osaka, Japan</addr-line></aff>
+<aff id="aff007"><label>7</label> <addr-line>Institute of Tropical Medicine, Nagasaki University, Nagasaki, Japan</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Snounou</surname>
+<given-names>Georges</given-names>
+</name>
+<role>Academic Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Université Pierre et Marie Curie, FRANCE</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: JKL KT AK. Performed the experiments: NS SIT KT. Analyzed the data: CWC NS SIT ZMI JKL KT. Contributed reagents/materials/analysis tools: NS SIT JKL KT AK. Wrote the paper: CWC NS SIT ZMI JKL AK.</p>
+</fn>
+<fn fn-type="current-aff" id="currentaff001">
+<label>¤a</label><p>Current address: Laboratory of Biology, Osaka Institute of Technology, Ohmiya, Asahi-ku, Osaka, Japan</p>
+</fn>
+<fn fn-type="current-aff" id="currentaff002">
+<label>¤b</label><p>Current address: Department of Biology and Geosciences, Graduate School of Science, Osaka City University, Osaka, Japan</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">chim.chan@ki.se</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>20</day>
+<month>3</month>
+<year>2015</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2015</year>
+</pub-date>
+<volume>10</volume>
+<issue>3</issue>
+<elocation-id>e0119475</elocation-id>
+<history>
+<date date-type="received">
+<day>1</day>
+<month>9</month>
+<year>2014</year>
+</date>
+<date date-type="accepted">
+<day>20</day>
+<month>1</month>
+<year>2015</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2015</copyright-year>
+<copyright-holder>Chan et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0119475" xlink:type="simple"/>
+<abstract>
+<p>Understanding the transmission and movement of <italic>Plasmodium</italic> parasites is crucial for malaria elimination and prevention of resurgence. Located at the limit of malaria transmission in the Pacific, Vanuatu is an ideal candidate for elimination programs due to low endemicity and the isolated nature of its island setting. We analyzed the variation in the merozoite surface protein 1 (<italic>msp1</italic>) and the circumsporozoite protein (<italic>csp</italic>) of <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> populations to examine the patterns of gene flow and population structures among seven sites on five islands in Vanuatu. Genetic diversity was in general higher in <italic>P</italic>. <italic>vivax</italic> than <italic>P</italic>. <italic>falciparum</italic> from the same site. In <italic>P</italic>. <italic>vivax</italic>, high genetic diversity was likely maintained by greater extent of gene flow among sites and among islands. Consistent with the different patterns of gene flow, the proportion of genetic variance found among islands was substantially higher in <italic>P</italic>. <italic>falciparum</italic> (28.81–31.23%) than in <italic>P</italic>. <italic>vivax</italic> (-0.53–3.99%). Our data suggest that the current island-by-island malaria elimination strategy in Vanuatu, while adequate for <italic>P</italic>. <italic>falciparum</italic> elimination, might need to be complemented with more centrally integrated measures to control <italic>P</italic>. <italic>vivax</italic> movement across islands.</p>
+</abstract>
+<funding-group>
+<funding-statement>Financial support for this study was provided to AK by the Swedish Research Council (<ext-link ext-link-type="uri" xlink:href="http://www.vr.se" xlink:type="simple">www.vr.se</ext-link>, grant numbers 523-2009-3233, 348-2012-6346, and 348-2013-6311), the Japan Society for the Promotion of Science (JSPS, <ext-link ext-link-type="uri" xlink:href="https://www.jsps.go.jp/english/" xlink:type="simple">https://www.jsps.go.jp/english/</ext-link>) Core-to-Core Program, B. Asia-Africa Science Platforms, JSPS KAKENHI (grant numbers 24390141 and 26257504), Health Labour Sciences Research Grant, Research on Global Health issues, and Nagasaki University Institute of Tropical Medicine collaborative research grant. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="2"/>
+<table-count count="5"/>
+<page-count count="13"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability" xlink:type="simple">
+<meta-name>Data Availability</meta-name>
+<meta-value>DNA sequences described in this paper are available in the GenBank database (accession numbers AB116596-AB116607, AB539022-AB539045, and AB539540-AB539553). Frequencies of haplotypes are contained within the paper and its supporting information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>Renewed commitment to control malaria over the last decade has resulted in major reductions in case incidence and disease mortality rates, and 32 of 99 countries with endemic malaria are pursuing an elimination strategy [<xref rid="pone.0119475.ref001" ref-type="bibr">1</xref>,<xref rid="pone.0119475.ref002" ref-type="bibr">2</xref>]. Outside of sub-Saharan Africa, <italic>Plasmodium vivax</italic> infections present unique and additional challenges for elimination due to the parasite’s propensity to relapse and the limitations of primaquine [<xref rid="pone.0119475.ref001" ref-type="bibr">1</xref>,<xref rid="pone.0119475.ref003" ref-type="bibr">3</xref>]. Further, malaria resurgence has the potential to undermine control and elimination efforts [<xref rid="pone.0119475.ref004" ref-type="bibr">4</xref>–<xref rid="pone.0119475.ref006" ref-type="bibr">6</xref>]. To this end, parasite population genetics studies are fundamental in identifying routes of transmission and gene flow, such that appropriate strategy for control and intervention might be implemented [<xref rid="pone.0119475.ref007" ref-type="bibr">7</xref>].</p>
+<p>Islands provide an ideal model for natural ecological experiments and present a great opportunity for intervention studies. Vanuatu is an archipelago consisting of 68 inhabited islands located at the southeastern limit of malaria transmission in the Pacific. Malaria is mainly hypo- to meso-endemic, with a general decrease in annual parasite incidence (API) from the northwest to the southeast. <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> are the predominant species, with a slightly higher prevalence of the latter especially on the southern islands [<xref rid="pone.0119475.ref008" ref-type="bibr">8</xref>]. Since the early 1990s, transmission rates have decreased as a result of malaria control measures and general improvement in health of the community [<xref rid="pone.0119475.ref009" ref-type="bibr">9</xref>,<xref rid="pone.0119475.ref010" ref-type="bibr">10</xref>]. On the southernmost island of Aneityum, a comprehensive elimination program was initiated in 1991 and elimination was achieved with a high degree of commitment from the local community in 1999 [<xref rid="pone.0119475.ref011" ref-type="bibr">11</xref>]. The Aneityum Project served as a proof of principle for the intensification of the malaria control program with the ultimate goal of elimination [<xref rid="pone.0119475.ref009" ref-type="bibr">9</xref>,<xref rid="pone.0119475.ref010" ref-type="bibr">10</xref>].</p>
+<p>Previous population genetics studies of <italic>P</italic>. <italic>falciparum</italic> and the malaria vector <italic>Anopheles farauti s</italic>.<italic>s</italic>. in Vanuatu showed that populations were largely isolated on individual islands, with little gene flow among islands [<xref rid="pone.0119475.ref012" ref-type="bibr">12</xref>,<xref rid="pone.0119475.ref013" ref-type="bibr">13</xref>]. These findings implied that malaria control measures might be carried out on an island-by-island basis, which is the strategy currently used in the Pacific [<xref rid="pone.0119475.ref010" ref-type="bibr">10</xref>].</p>
+<p>Merozoite surface protein 1 (MSP1) and circumsporozoite protein (CSP) are major surface antigens in <italic>P</italic>. <italic>falciparum</italic> and <italic>P vivax</italic>. These antigens are highly polymorphic, making them useful markers for assessment of parasite genetic diversity [<xref rid="pone.0119475.ref007" ref-type="bibr">7</xref>]. Earlier we examined <italic>msp1</italic> and <italic>csp</italic> polymorphisms in parasites from Vanuatu in the context of vaccine development for <italic>P</italic>. <italic>falciparum</italic> [<xref rid="pone.0119475.ref014" ref-type="bibr">14</xref>] and persisting humoral immunity after elimination on Aneityum Island for <italic>P</italic>. <italic>vivax</italic> [<xref rid="pone.0119475.ref005" ref-type="bibr">5</xref>]. In this study, using <italic>msp1</italic> and <italic>csp</italic> data previously generated for other aspects of malaria control, we compared the patterns of gene flow and population genetic structures in <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> from seven sites on five islands in Vanuatu, and discussed the implications of our results in relation to the current malaria elimination strategy.</p>
+</sec>
+<sec id="sec002" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<sec id="sec003">
+<title>Ethics Statement</title>
+<p>This study was approved by the Ministry of Health in Vanuatu and the Ethical Research Committee of Karolinska Institutet in Sweden. Due to the lack of a standardized writing system for the local “kastom” languages in Vanuatu, verbal informed consent was obtained from all adult participants and legal guardians in the case of minors. All pertinent information about the study, including the purpose, procedures, risks, benefits, and alternatives to participation, was provided to potential participants in both Bislama (lingua franca in Vanuatu; understood by most school-aged children and adults) by AK and the “kastom” language (understood by all participants) by local interpreters. The consent procedure was witnessed by a third party (e.g. teacher, village chief, nurse from local dispensary), who also recorded the name of each participant as he/she enrolled in the study. The Ministry of Health in Vanuatu and the Ethical Research Committee of Karolinska Institutet in Sweden approved the use of this consent procedure.</p>
+</sec>
+<sec id="sec004">
+<title>Sample collections</title>
+<p><italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> isolates were collected during malariometric surveys conducted at seven sites on five islands (Gaua, Santo, Pentecost, Malakula, and Tanna) from five provinces in Vanuatu between 1996 and 2002 [<xref rid="pone.0119475.ref005" ref-type="bibr">5</xref>,<xref rid="pone.0119475.ref014" ref-type="bibr">14</xref>] (<xref rid="pone.0119475.g001" ref-type="fig">Fig. 1</xref>). Finger-pricked blood samples were collected on Whatman 31ET Chr filter paper (Whatman, Maidstone, UK) and stored desiccated [<xref rid="pone.0119475.ref005" ref-type="bibr">5</xref>].</p>
+<fig id="pone.0119475.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0119475.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Map of Vanuatu showing the seven collection sites (black circles) on five islands.</title>
+<p>The names of the six provinces in Vanuatu are capitalized and underlined, and approximate provincial boundaries are indicated by solid lines. Species-specific parasite rates (<italic>P</italic>. <italic>falciparum</italic>/<italic>P</italic>. <italic>vivax</italic>) for each site were determined by microscopy. Maps were provided by the Library at the CIA (regional) and DIVA-GIS (Vanuatu).</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0119475.g001" position="float" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec005">
+<title>DNA extractions, PCR amplifications, and genotyping/sequences</title>
+<p>A subset of microscopy-positive samples from each site was randomly selected for this study. Genomic DNA was extracted from blood spotted on filter paper using the QIAamp DNA Blood Mini Kit (QIAgen, Germantown, MD) according to the manufacturer’s instructions. PCR amplifications, and genotyping and/or sequencing of the merozoite surface protein 1 (<italic>msp1</italic>) and the circumsporozoite protein (<italic>csp</italic>) genes in <italic>P</italic>. <italic>falciparum</italic> [<xref rid="pone.0119475.ref014" ref-type="bibr">14</xref>,<xref rid="pone.0119475.ref015" ref-type="bibr">15</xref>] and <italic>P</italic>. <italic>vivax</italic> [<xref rid="pone.0119475.ref005" ref-type="bibr">5</xref>,<xref rid="pone.0119475.ref016" ref-type="bibr">16</xref>] were described previously. For each locus, samples with multiple alleles or genotypes were excluded for molecular analyses. The sequences described in this study have been deposited in the GenBank database (accession numbers AB116596-AB116607, AB539022-AB539045, and AB539540-AB539553).</p>
+</sec>
+<sec id="sec006">
+<title>Molecular analyses</title>
+<p>For each locus, unbiased haplotype diversity (<italic>H</italic>) for each site was calculated using the equation <italic>H</italic> = n(1 - ∑ X<sub>i</sub><sup>2</sup>)/(n−1), where n is the number of haplotypes and X<sub>i</sub> is the frequency of the i-th haplotype [<xref rid="pone.0119475.ref017" ref-type="bibr">17</xref>].</p>
+<p>Gene flow among populations was examined at two different levels. First, gene flow was examined among the seven sites. Second, populations from the same islands were pooled and gene flow was examined among the five islands.</p>
+<p>For each locus, pairwise F<sub>ST</sub> genetic distances among sites were estimated using the program Arlequin 3.5 [<xref rid="pone.0119475.ref018" ref-type="bibr">18</xref>]. Genetic distances for <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> were based on the frequencies of shared haplotypes defined by sequence polymorphisms. The statistical significance of F<sub>ST</sub> distances was evaluated by randomly permuting haplotypes between sites approximately 10,000 times to generate a null distribution against which the observed value was compared. Gene flow between sites was inferred when the pairwise F<sub>ST</sub> genetic distance was not statistically significant (<italic>p</italic> &gt; 0.05).</p>
+<p>Genetic variation partitioned within populations, between populations within islands, and among islands was estimated by analysis of molecular variance (AMOVA) using the program Arlequin 3.5 [<xref rid="pone.0119475.ref018" ref-type="bibr">18</xref>]. The statistical significance of the observed values was evaluated by randomly permuting sequences among sites approximately 1,000 times to generate a null distribution against which the observed values were compared.</p>
+</sec>
+</sec>
+<sec id="sec007" sec-type="results">
+<title>Results</title>
+<sec id="sec008">
+<title><italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> infections</title>
+<p>Overall, PCR amplifications of <italic>msp1</italic> and <italic>csp</italic> revealed more <italic>P</italic>. <italic>falciparum</italic> infections among the seven sites in Vanuatu (<xref rid="pone.0119475.t001" ref-type="table">Table 1</xref>). <italic>P</italic>. <italic>falciparum</italic> was the predominant species in our samples from Pentecost and Malakula (<xref rid="pone.0119475.t001" ref-type="table">Table 1</xref>). Different PCR efficacies between the <italic>msp1</italic> and the <italic>csp</italic> amplifications were likely the cause for the slightly different numbers of infections detected in each site (<xref rid="pone.0119475.t001" ref-type="table">Table 1</xref>). Multiple-genotype infections were more common in <italic>P</italic>. <italic>vivax</italic> than <italic>P</italic>. <italic>falciparum</italic> for both <italic>msp1</italic> (13.8% vs. 4.1%) and <italic>csp</italic> (36.2% vs. 3.6%) (<xref rid="pone.0119475.t001" ref-type="table">Table 1</xref>).</p>
+<table-wrap id="pone.0119475.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0119475.t001</object-id>
+<label>Table 1</label> <caption><title>Numbers of merozoite surface protein 1 (<italic>msp1</italic>) and circumsporozoite protein (<italic>csp</italic>) sequences from seven sites in Vanuatu.</title></caption>
+<alternatives>
+<graphic id="pone.0119475.t001g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0119475.t001" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1"/>
+<th align="left" rowspan="1" colspan="1"><italic>msp1</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>msp1</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>csp</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>csp</italic></th>
+</tr>
+<tr>
+<th align="left" rowspan="1" colspan="1">Site</th>
+<th align="left" rowspan="1" colspan="1"><italic>P</italic>. <italic>falciparum</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>P</italic>. <italic>vivax</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>P</italic>. <italic>falciparum</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>P</italic>. <italic>vivax</italic></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">East Gaua</td>
+<td align="left" rowspan="1" colspan="1">16 (3)</td>
+<td align="left" rowspan="1" colspan="1">23 (1)</td>
+<td align="left" rowspan="1" colspan="1">19 (0)</td>
+<td align="left" rowspan="1" colspan="1">14 (8)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">West Gaua</td>
+<td align="left" rowspan="1" colspan="1">14 (0)</td>
+<td align="left" rowspan="1" colspan="1">10 (3)</td>
+<td align="left" rowspan="1" colspan="1">10 (0)</td>
+<td align="left" rowspan="1" colspan="1">6 (7)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Santo</td>
+<td align="left" rowspan="1" colspan="1">24 (2)</td>
+<td align="left" rowspan="1" colspan="1">27 (4)</td>
+<td align="left" rowspan="1" colspan="1">21 (0)</td>
+<td align="left" rowspan="1" colspan="1">23 (6)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">East Pentecost</td>
+<td align="left" rowspan="1" colspan="1">25 (1)</td>
+<td align="left" rowspan="1" colspan="1">12 (2)</td>
+<td align="left" rowspan="1" colspan="1">26 (0)</td>
+<td align="left" rowspan="1" colspan="1">10 (9)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">West Pentecost</td>
+<td align="left" rowspan="1" colspan="1">16 (0)</td>
+<td align="left" rowspan="1" colspan="1">3 (2)</td>
+<td align="left" rowspan="1" colspan="1">14 (0)</td>
+<td align="left" rowspan="1" colspan="1">2 (4)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Malakula</td>
+<td align="left" rowspan="1" colspan="1">62 (1)</td>
+<td align="left" rowspan="1" colspan="1">14 (4)</td>
+<td align="left" rowspan="1" colspan="1">61 (6)</td>
+<td align="left" rowspan="1" colspan="1">12 (7)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Tanna</td>
+<td align="left" rowspan="1" colspan="1">8 (0)</td>
+<td align="left" rowspan="1" colspan="1">11 (0)</td>
+<td align="left" rowspan="1" colspan="1">8 (0)</td>
+<td align="left" rowspan="1" colspan="1">7 (1)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Total</td>
+<td align="left" rowspan="1" colspan="1">165 (7)</td>
+<td align="left" rowspan="1" colspan="1">100 (16)</td>
+<td align="left" rowspan="1" colspan="1">159 (6)</td>
+<td align="left" rowspan="1" colspan="1">74 (42)</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t001fn001"><p>The numbers of infection with multiple genotypes are given in parentheses.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec009">
+<title><italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> genetic diversities</title>
+<p>Genotyping and sequencing of <italic>msp1</italic> and <italic>csp</italic> revealed that <italic>P</italic>. <italic>vivax</italic> was more genetically diverse than <italic>P</italic>. <italic>falciparum</italic> in our samples from Vanuatu. In <italic>P</italic>. <italic>falciparum</italic>, six <italic>msp1</italic> and five <italic>csp</italic> haplotypes were observed, whereas in <italic>P</italic>. <italic>vivax</italic> 14 <italic>msp1</italic> and 20 <italic>csp</italic> haplotypes were observed (Tables A-D in <xref rid="pone.0119475.s001" ref-type="supplementary-material">S1 File</xref>). All <italic>P</italic>. <italic>falciparum</italic> isolates from Tanna (n = 8) were genetically identical for both <italic>msp1</italic> and <italic>csp</italic> (Tables A and B in <xref rid="pone.0119475.s001" ref-type="supplementary-material">S1 File</xref>). In <italic>P</italic>. <italic>falciparum</italic>, <italic>msp1</italic> diversities ranged from 0 in Tanna to 0.692 in West Gaua, while <italic>csp</italic> diversities ranged from 0 in East Pentecost and Tanna to 0.733 in West Gaua (<xref rid="pone.0119475.t002" ref-type="table">Table 2</xref>). Very few <italic>P</italic>. <italic>vivax</italic> isolates were successfully genotyped in West Pentecost (<xref rid="pone.0119475.t001" ref-type="table">Table 1</xref>), resulting in the extreme difference in diversity estimates between the two loci (0 for <italic>msp1</italic> vs. 1 for <italic>csp</italic>; <xref rid="pone.0119475.t002" ref-type="table">Table 2</xref>). Excluding this site, <italic>msp1</italic> diversities ranged from 0.697 in East Pentecost to 0.889 in West Gaua, while <italic>csp</italic> diversities ranged from 0.822 in East Pentecost to 0.952 in Tanna (<xref rid="pone.0119475.t002" ref-type="table">Table 2</xref>). Haplotype diversities were significantly higher in <italic>P</italic>. <italic>vivax</italic> than <italic>P</italic>. <italic>falciparum</italic> for both <italic>msp1</italic> (<italic>t</italic>-test; <italic>p</italic> = 0.0135) and <italic>csp</italic> (<italic>p</italic> = 0.004) when <italic>P</italic>. <italic>vivax</italic> from West Pentecost was excluded for comparison.</p>
+<table-wrap id="pone.0119475.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0119475.t002</object-id>
+<label>Table 2</label> <caption><title>Haplotype diversities of <italic>msp1</italic> and <italic>csp</italic> in <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> from seven sites in Vanuatu.</title></caption>
+<alternatives>
+<graphic id="pone.0119475.t002g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0119475.t002" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1"/>
+<th align="left" rowspan="1" colspan="1"><italic>msp1</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>msp1</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>csp</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>csp</italic></th>
+</tr>
+<tr>
+<th align="left" rowspan="1" colspan="1">Site</th>
+<th align="left" rowspan="1" colspan="1"><italic>P</italic>. <italic>falciparum</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>P</italic>. <italic>vivax</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>P</italic>. <italic>falciparum</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>P</italic>. <italic>vivax</italic></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">East Gaua</td>
+<td align="char" char="." rowspan="1" colspan="1">0.6583</td>
+<td align="char" char="." rowspan="1" colspan="1">0.8854</td>
+<td align="char" char="." rowspan="1" colspan="1">0.5906</td>
+<td align="char" char="." rowspan="1" colspan="1">0.8791</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">West Gaua</td>
+<td align="char" char="." rowspan="1" colspan="1">0.6923</td>
+<td align="char" char="." rowspan="1" colspan="1">0.8889</td>
+<td align="char" char="." rowspan="1" colspan="1">0.7333</td>
+<td align="char" char="." rowspan="1" colspan="1">0.8667</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Santo</td>
+<td align="char" char="." rowspan="1" colspan="1">0.6703</td>
+<td align="char" char="." rowspan="1" colspan="1">0.8234</td>
+<td align="char" char="." rowspan="1" colspan="1">0.5286</td>
+<td align="char" char="." rowspan="1" colspan="1">0.9012</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">East Pentecost</td>
+<td align="char" char="." rowspan="1" colspan="1">0.5133</td>
+<td align="char" char="." rowspan="1" colspan="1">0.6970</td>
+<td align="char" char="." rowspan="1" colspan="1">0.0000</td>
+<td align="char" char="." rowspan="1" colspan="1">0.8222</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">West Pentecost</td>
+<td align="char" char="." rowspan="1" colspan="1">0.4583</td>
+<td align="char" char="." rowspan="1" colspan="1">0.0000</td>
+<td align="char" char="." rowspan="1" colspan="1">0.3626</td>
+<td align="char" char="." rowspan="1" colspan="1">1.0000</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Malakula</td>
+<td align="char" char="." rowspan="1" colspan="1">0.5600</td>
+<td align="char" char="." rowspan="1" colspan="1">0.8791</td>
+<td align="char" char="." rowspan="1" colspan="1">0.7098</td>
+<td align="char" char="." rowspan="1" colspan="1">0.8788</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Tanna</td>
+<td align="char" char="." rowspan="1" colspan="1">0.0000</td>
+<td align="char" char="." rowspan="1" colspan="1">0.7091</td>
+<td align="char" char="." rowspan="1" colspan="1">0.0000</td>
+<td align="char" char="." rowspan="1" colspan="1">0.9524</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+<sec id="sec010">
+<title>Patterns of gene flow</title>
+<sec id="sec011">
+<title>Seven-site analyses</title>
+<p>Analyses of F<sub>ST</sub> genetic distances showed that gene flow among <italic>P</italic>. <italic>falciparum</italic> populations was restricted. Between populations, gene flow in <italic>msp1</italic> was limited to those from the same islands (Gaua and Pentecost; <xref rid="pone.0119475.t003" ref-type="table">Table 3</xref>), while gene flow in <italic>csp</italic> was observed between the two populations on Gaua, between West Gaua and Malakula, and between Tanna and the two populations on Pentecost (<xref rid="pone.0119475.t003" ref-type="table">Table 3</xref>).</p>
+<table-wrap id="pone.0119475.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0119475.t003</object-id>
+<label>Table 3</label> <caption><title>Pairwise F<sub>ST</sub> genetic distances based on <italic>msp1</italic> (lower triangle) and <italic>csp</italic> (upper triangle) haplotype frequencies in <italic>P</italic>. <italic>falciparum</italic> from seven sites in Vanuatu.</title></caption>
+<alternatives>
+<graphic id="pone.0119475.t003g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0119475.t003" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Site</th>
+<th align="left" rowspan="1" colspan="1">East Gaua</th>
+<th align="left" rowspan="1" colspan="1">West Gaua</th>
+<th align="left" rowspan="1" colspan="1">Santo</th>
+<th align="left" rowspan="1" colspan="1">East Pentecost</th>
+<th align="left" rowspan="1" colspan="1">West Pentecost</th>
+<th align="left" rowspan="1" colspan="1">Malakula</th>
+<th align="left" rowspan="1" colspan="1">Tanna</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">East Gaua</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">−0.001<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">0.100</td>
+<td align="char" char="." rowspan="1" colspan="1">0.614</td>
+<td align="char" char="." rowspan="1" colspan="1">0.346</td>
+<td align="char" char="." rowspan="1" colspan="1">0.188</td>
+<td align="left" rowspan="1" colspan="1">0.463</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">West Gaua</td>
+<td align="char" char="." rowspan="1" colspan="1">−0.065<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">0.160</td>
+<td align="char" char="." rowspan="1" colspan="1">0.647</td>
+<td align="char" char="." rowspan="1" colspan="1">0.301</td>
+<td align="char" char="." rowspan="1" colspan="1">0.055<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.440</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Santo</td>
+<td align="char" char="." rowspan="1" colspan="1">0.308</td>
+<td align="char" char="." rowspan="1" colspan="1">0.288</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">0.759</td>
+<td align="char" char="." rowspan="1" colspan="1">0.509</td>
+<td align="char" char="." rowspan="1" colspan="1">0.275</td>
+<td align="left" rowspan="1" colspan="1">0.646</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">East Pentecost</td>
+<td align="char" char="." rowspan="1" colspan="1">0.193</td>
+<td align="char" char="." rowspan="1" colspan="1">0.217</td>
+<td align="char" char="." rowspan="1" colspan="1">0.386</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">0.240</td>
+<td align="char" char="." rowspan="1" colspan="1">0.327</td>
+<td align="left" rowspan="1" colspan="1">0.000<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">West Pentecost</td>
+<td align="char" char="." rowspan="1" colspan="1">0.338</td>
+<td align="char" char="." rowspan="1" colspan="1">0.340</td>
+<td align="char" char="." rowspan="1" colspan="1">0.391</td>
+<td align="char" char="." rowspan="1" colspan="1">0.068<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">0.133</td>
+<td align="left" rowspan="1" colspan="1">0.088<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Malakula</td>
+<td align="char" char="." rowspan="1" colspan="1">0.106</td>
+<td align="char" char="." rowspan="1" colspan="1">0.142</td>
+<td align="char" char="." rowspan="1" colspan="1">0.324</td>
+<td align="char" char="." rowspan="1" colspan="1">0.067</td>
+<td align="char" char="." rowspan="1" colspan="1">0.251</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">0.251</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Tanna</td>
+<td align="char" char="." rowspan="1" colspan="1">0.591</td>
+<td align="char" char="." rowspan="1" colspan="1">0.585</td>
+<td align="char" char="." rowspan="1" colspan="1">0.209</td>
+<td align="char" char="." rowspan="1" colspan="1">0.645</td>
+<td align="char" char="." rowspan="1" colspan="1">0.708</td>
+<td align="char" char="." rowspan="1" colspan="1">0.512</td>
+<td align="left" rowspan="1" colspan="1"/>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t003fn001"><p>Gene flow as defined by non-statistically significant (<italic>p</italic> &gt; 0.05) F<sub>ST</sub> distance is indicated by an asterisk (*).</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>In contrast, a greater degree gene flow among <italic>P</italic>. <italic>vivax</italic> populations was observed. Examination of the <italic>msp1</italic> F<sub>ST</sub> distances revealed gene flow among all <italic>P</italic>. <italic>vivax</italic> populations in northern and central Vanuatu except those between East Gaua and West Pentecost (<xref rid="pone.0119475.t004" ref-type="table">Table 4</xref>). The population in Tanna remained genetically distinct from all other populations, however (<xref rid="pone.0119475.t004" ref-type="table">Table 4</xref>). For <italic>csp</italic>, gene flow was observed among all populations on Santo, Pentecost, Malakula, and Tanna. The two populations on Gaua were genetically distinct from those in Santo and East Pentecost. Also, East Gaua was genetically distinct from Malakula, while West Gaua was distinct from Tanna (<xref rid="pone.0119475.t004" ref-type="table">Table 4</xref>).</p>
+<table-wrap id="pone.0119475.t004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0119475.t004</object-id>
+<label>Table 4</label> <caption><title>Pairwise F<sub>ST</sub> genetic distances based on <italic>msp1</italic> (lower triangle) and <italic>csp</italic> (upper triangle) haplotype frequencies in <italic>P</italic>. <italic>vivax</italic> from seven sites in Vanuatu.</title></caption>
+<alternatives>
+<graphic id="pone.0119475.t004g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0119475.t004" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Site</th>
+<th align="left" rowspan="1" colspan="1">East Gaua</th>
+<th align="left" rowspan="1" colspan="1">West Gaua</th>
+<th align="left" rowspan="1" colspan="1">Santo</th>
+<th align="left" rowspan="1" colspan="1">East Pentecost</th>
+<th align="left" rowspan="1" colspan="1">West Pentecost</th>
+<th align="left" rowspan="1" colspan="1">Malakula</th>
+<th align="left" rowspan="1" colspan="1">Tanna</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">East Gaua</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">0.034<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">0.075</td>
+<td align="char" char="." rowspan="1" colspan="1">0.123</td>
+<td align="char" char="." rowspan="1" colspan="1">0.056<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">0.094</td>
+<td align="left" rowspan="1" colspan="1">0.017<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">West Gaua</td>
+<td align="char" char="." rowspan="1" colspan="1">−0.005<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">0.073</td>
+<td align="char" char="." rowspan="1" colspan="1">0.129</td>
+<td align="char" char="." rowspan="1" colspan="1">0.094<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">0.089<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.089</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Santo</td>
+<td align="char" char="." rowspan="1" colspan="1">0.014<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">0.011<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">−0.004<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">0.008<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">0.001<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.028<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">East Pentecost</td>
+<td align="char" char="." rowspan="1" colspan="1">0.056<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">0.041<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">−0.029<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">0.132<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">0.045<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.063<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">West Pentecost</td>
+<td align="char" char="." rowspan="1" colspan="1">0.203</td>
+<td align="char" char="." rowspan="1" colspan="1">0.164<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">0.210<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">0.193<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">−0.043<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="left" rowspan="1" colspan="1">-0.041<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Malakula</td>
+<td align="char" char="." rowspan="1" colspan="1">0.003<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">−0.023<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">−0.034<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">−0.028<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="char" char="." rowspan="1" colspan="1">0.166<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">0.065<xref rid="t004fn001" ref-type="table-fn">*</xref></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Tanna</td>
+<td align="char" char="." rowspan="1" colspan="1">0.164</td>
+<td align="char" char="." rowspan="1" colspan="1">0.114</td>
+<td align="char" char="." rowspan="1" colspan="1">0.205</td>
+<td align="char" char="." rowspan="1" colspan="1">0.264</td>
+<td align="char" char="." rowspan="1" colspan="1">0.438</td>
+<td align="left" rowspan="1" colspan="1">0.170</td>
+<td align="left" rowspan="1" colspan="1"/>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t004fn001"><p>Gene flow as defined by non-statistically significant (<italic>p</italic> &gt; 0.05) F<sub>ST</sub> distance is indicated by an asterisk (*).</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec012">
+<title>Five-island analyses</title>
+<p>Analyses of F<sub>ST</sub> distances among islands revealed patterns of gene flow consistent with those from the seven-site analyses. For <italic>P</italic>. <italic>falciparum</italic>, gene flow among populations on different islands was very minimal. <italic>P</italic>. <italic>falciparum</italic> populations in central Vanuatu (Santo, Pentecost, and Malakula) were significantly differentiated from one another, despite relatively small distances separating these islands. Gene flow between Pentecost and Tanna was observed as a result of the significant sharing of the 42NE haplotype in <italic>csp</italic> (<xref rid="pone.0119475.g002" ref-type="fig">Fig. 2</xref>; Table B in <xref rid="pone.0119475.s001" ref-type="supplementary-material">S1 File</xref>). For <italic>P</italic>. <italic>vivax</italic>, gene flow among populations on different islands was more widespread. Gene flow among islands in central Vanuatu (Santo, Malakula, and Pentecost) was evident in both <italic>msp1</italic> and <italic>csp</italic> (<xref rid="pone.0119475.g002" ref-type="fig">Fig. 2</xref>). However, gene flow between the peripheral islands of Gaua and Tanna and the central islands was more limited. For Gaua, gene flow with Santo and Malakula was observed for <italic>msp1</italic> only, while for Tanna, gene flow with all other islands was observed for <italic>csp</italic> only (<xref rid="pone.0119475.g002" ref-type="fig">Fig. 2</xref>).</p>
+<fig id="pone.0119475.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0119475.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Gene flow among <italic>P</italic>. <italic>falciparum</italic> (gray) and <italic>P</italic>. <italic>vivax</italic> (black) populations from five islands in Vanuatu.</title>
+<p>Solid lines represent inferred gene flow based on merozoite surface protein 1 (<italic>msp1</italic>) F<sub>ST</sub> genetic distances, while dotted lines represent gene flow based on circumsporozoite protein (<italic>csp</italic>) distances. No gene flow was observed in <italic>P</italic>. <italic>falciparum msp1</italic>. The map of Vanuatu was provided by DIVA-GIS.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0119475.g002" position="float" xlink:type="simple"/>
+</fig>
+</sec>
+</sec>
+<sec id="sec013">
+<title>Partitioning of genetic variation</title>
+<p>Different population genetic structures for <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> were revealed by AMOVA (<xref rid="pone.0119475.t005" ref-type="table">Table 5</xref>). For <italic>P</italic>. <italic>falciparum</italic>, while most of the genetic variation (66.7–70.7%) was found within sites, variation among islands was substantial (28.8–31.2%) and statistically significant (<italic>p</italic> = 0.014 for <italic>msp1</italic> and <italic>p</italic> = 0.028 for <italic>csp</italic>). This is consistent with the F<sub>ST</sub> genetic distance analyses described above that showed significant genetic differentiation among most islands (<xref rid="pone.0119475.g002" ref-type="fig">Fig. 2</xref>). In contrast, almost all genetic variation (93.1–94.8%) in <italic>P</italic>. <italic>vivax</italic> was found within sites, and the lack of significant variation among islands (<italic>p</italic> = 0.221 for <italic>msp1</italic> and <italic>p</italic> = 0.510 for <italic>csp</italic>) was in agreement with gene flow among islands as revealed in the F<sub>ST</sub> genetic distance analyses (<xref rid="pone.0119475.g002" ref-type="fig">Fig. 2</xref>).</p>
+<table-wrap id="pone.0119475.t005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0119475.t005</object-id>
+<label>Table 5</label> <caption><title>Percentages of genetic variance partitioned at different population levels using analysis of molecular variance (AMOVA).</title></caption>
+<alternatives>
+<graphic id="pone.0119475.t005g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0119475.t005" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1"/>
+<th align="left" rowspan="1" colspan="1"><italic>P</italic>. <italic>falciparum</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>P</italic>. <italic>falciparum</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>P</italic>. <italic>vivax</italic></th>
+<th align="left" rowspan="1" colspan="1"><italic>P</italic>.<italic>vivax</italic></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">Source of variation</td>
+<td align="left" rowspan="1" colspan="1"><italic>msp1</italic>, %</td>
+<td align="left" rowspan="1" colspan="1"><italic>csp</italic>, %</td>
+<td align="left" rowspan="1" colspan="1"><italic>msp1</italic>, %</td>
+<td align="left" rowspan="1" colspan="1"><italic>csp</italic>, %</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Among islands</td>
+<td align="left" rowspan="1" colspan="1">28.81<xref rid="t005fn001" ref-type="table-fn">*</xref></td>
+<td align="left" rowspan="1" colspan="1">31.23<xref rid="t005fn001" ref-type="table-fn">*</xref></td>
+<td align="left" rowspan="1" colspan="1">3.99</td>
+<td align="left" rowspan="1" colspan="1">-0.53</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Within island, between sites</td>
+<td align="left" rowspan="1" colspan="1">0.53</td>
+<td align="left" rowspan="1" colspan="1">2.06</td>
+<td align="left" rowspan="1" colspan="1">2.93</td>
+<td align="left" rowspan="1" colspan="1">5.77</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Within sites</td>
+<td align="left" rowspan="1" colspan="1">70.66</td>
+<td align="left" rowspan="1" colspan="1">66.71</td>
+<td align="left" rowspan="1" colspan="1">93.07</td>
+<td align="left" rowspan="1" colspan="1">94.77</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t005fn001"><p>* <italic>p</italic> &lt; 0.05</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+</sec>
+<sec id="sec014" sec-type="conclusions">
+<title>Discussion</title>
+<p>In Vanuatu, <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> are the major malaria species, with a slight predominance of the latter [<xref rid="pone.0119475.ref008" ref-type="bibr">8</xref>]. In our samples we observed more <italic>P</italic>. <italic>falciparum</italic> than <italic>P</italic>. <italic>vivax</italic> infections, especially on Pentecost and Malakula (<xref rid="pone.0119475.t001" ref-type="table">Table 1</xref>). Such difference might reflect the seasonal fluctuations in species prevalence in Vanuatu. Malaria transmission in Vanuatu is perennial. While incidence of <italic>P</italic>. <italic>vivax</italic> shows little seasonal fluctuation, incidence of <italic>P</italic>. <italic>falciparum</italic> peaks during the rainy season, from November to April [<xref rid="pone.0119475.ref008" ref-type="bibr">8</xref>].</p>
+<p>Despite a slightly higher prevalence in our samples, <italic>P</italic>. <italic>falciparum</italic> showed consistently less genetic diversity than <italic>P</italic>. <italic>vivax</italic> in both <italic>msp1</italic> and <italic>csp</italic> across all sites except in West Pentecost, where few <italic>P</italic>. <italic>vivax</italic> isolates were found (Tables <xref rid="pone.0119475.t001" ref-type="table">1</xref> and <xref rid="pone.0119475.t002" ref-type="table">2</xref>). Structural difference in orthologous genes between these two species may partially account for the difference in genetic diversity observed. For example, in <italic>P</italic>. <italic>falciparum</italic> sequence variation in <italic>msp1</italic> is dimorphic (either K1 or MAD 20 allelic type) and much of the variation is limited to the presence (or absence) and length of unique nine base-pair repeats in block 2 [<xref rid="pone.0119475.ref019" ref-type="bibr">19</xref>]. In contrast, <italic>msp1</italic> in <italic>P</italic>. <italic>vivax</italic> contains multiple variable blocks with extensive variation in repeats and nucleotide substitutions, and numerous potential recombination sites within and between variable blocks [<xref rid="pone.0119475.ref020" ref-type="bibr">20</xref>]. Direct comparison of genetic diversity in these orthologous loci between species may not be straightforward, nonetheless our result of lower genetic diversity in <italic>P</italic>. <italic>falciparum</italic> than in sympatric <italic>P</italic>. <italic>vivax</italic> was consistent with previous studies using neutral microsatellites [<xref rid="pone.0119475.ref021" ref-type="bibr">21</xref>,<xref rid="pone.0119475.ref022" ref-type="bibr">22</xref>] and other surface antigens such as apical membrane antigen 1 (<italic>ama1</italic>) [<xref rid="pone.0119475.ref023" ref-type="bibr">23</xref>,<xref rid="pone.0119475.ref024" ref-type="bibr">24</xref>].</p>
+<p>Compared to <italic>P</italic>. <italic>falciparum</italic>, multiple-genotype infections were more common in <italic>P</italic>. <italic>vivax</italic> (<xref rid="pone.0119475.t001" ref-type="table">Table 1</xref>). High frequencies of multiple-genotype infections facilitate meiotic recombination in the <italic>Anopheles</italic> mosquito vectors, leading to generation of novel genotypes [<xref rid="pone.0119475.ref025" ref-type="bibr">25</xref>] and greater genetic diversity in <italic>P</italic>. <italic>vivax</italic> (<xref rid="pone.0119475.t002" ref-type="table">Table 2</xref>). In our <italic>P</italic>. <italic>vivax</italic> samples, the higher frequency of multiple-genotype infections in <italic>csp</italic> vs. <italic>msp1</italic> (36.2% vs. 13.8%; <xref rid="pone.0119475.t001" ref-type="table">Table 1</xref>) was consistent with previous results from Thailand [<xref rid="pone.0119475.ref026" ref-type="bibr">26</xref>] and India [<xref rid="pone.0119475.ref027" ref-type="bibr">27</xref>].</p>
+<p>Both MSP1 and CSP are major surface antigens, and high levels of polymorphisms in these loci are known to be a result of selection by host immunity [<xref rid="pone.0119475.ref007" ref-type="bibr">7</xref>,<xref rid="pone.0119475.ref014" ref-type="bibr">14</xref>]. However, it remains unclear whether the selective pressure on, and by extension genetic diversity in the orthologous loci of <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> are directly comparable [<xref rid="pone.0119475.ref007" ref-type="bibr">7</xref>]. Differential <italic>msp1</italic> and <italic>csp</italic> genetic diversity in our samples might reflect differential selection by host immunity, i.e. stronger immune selection on the <italic>P</italic>. <italic>falciparum</italic> orthologs reduced genetic diversity observed in our samples. Moreover, specific host immune response to MSP1 and CSP may differ between <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic>, resulting in different patterns of selection seen among the orthologs [<xref rid="pone.0119475.ref028" ref-type="bibr">28</xref>,<xref rid="pone.0119475.ref029" ref-type="bibr">29</xref>]. It has been shown that in <italic>P</italic>. <italic>vivax</italic>, rapid expansion and contraction of repeats in <italic>csp</italic> by slipped-strand mispairing was driven by immune selection [<xref rid="pone.0119475.ref029" ref-type="bibr">29</xref>], consistent with our observation of related and near-identical <italic>csp</italic> haployptes (e.g. VC06/13/16/19; Table D in <xref rid="pone.0119475.s001" ref-type="supplementary-material">S1 File</xref>) and high frequencies of <italic>csp</italic> multiple-genotype infections (<xref rid="pone.0119475.t001" ref-type="table">Table 1</xref>).</p>
+<p>At the global level different evolutionary histories of <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> likely contributed to the high level of genetic diversity seen in the latter [<xref rid="pone.0119475.ref030" ref-type="bibr">30</xref>], however in Vanuatu the role of population history in shaping parasite genetic diversity is not well understood. <italic>P</italic>. <italic>vivax</italic> is believed to have accompanied <italic>Homo sapiens</italic> when the latter first settled the Pacific &gt; 40,000 years before present (ybp), compared to the relatively recent arrival of <italic>P</italic>. <italic>falciparum</italic> within the last 10,000 years [<xref rid="pone.0119475.ref031" ref-type="bibr">31</xref>–<xref rid="pone.0119475.ref033" ref-type="bibr">33</xref>]. However, northern Vanuatu was first settled only 3200 ybp by Lapita migrants from the Solomon Islands [<xref rid="pone.0119475.ref034" ref-type="bibr">34</xref>], suggesting that both <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> were introduced to Vanuatu at the same time [<xref rid="pone.0119475.ref008" ref-type="bibr">8</xref>,<xref rid="pone.0119475.ref031" ref-type="bibr">31</xref>,<xref rid="pone.0119475.ref032" ref-type="bibr">32</xref>]. Despite similar time depth within Vanuatu, the founder effect associated with the initial colonization might have been different between the two parasite species. Previous studies on <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> population genetics showed a decrease in <italic>P</italic>. <italic>falciparum</italic> microsatellite genetic diversity in Temotu Province of the Solomon Islands when compared to Papua New Guinea, but no decrease in <italic>P</italic>. <italic>vivax</italic> [<xref rid="pone.0119475.ref021" ref-type="bibr">21</xref>,<xref rid="pone.0119475.ref035" ref-type="bibr">35</xref>], suggesting that the effective (reproductive) population sizes of the founding populations in the Solomon Islands might have been different between these two parasite species. To the southeast of the Solomon Islands, the initial introduction of malaria parasites to Vanuatu represents yet another founding event. Our observation of lower genetic diversity in <italic>P</italic>. <italic>falciparum</italic> from Vanuatu is consistent with the results from Temotu Province in the Solomon Islands [<xref rid="pone.0119475.ref021" ref-type="bibr">21</xref>], which was also first settled by Lapita migrants about 3200 ybp [<xref rid="pone.0119475.ref036" ref-type="bibr">36</xref>], further supporting the idea that genetic drift (founder effect) might have played a greater role in shaping the genetic diversity of <italic>P</italic>. <italic>falciparum</italic> than that of <italic>P</italic>. <italic>vivax</italic> in Vanuatu.</p>
+<p>In Vanuatu, inter-island gene flow likely contributed to the higher genetic diversity in <italic>P</italic>. <italic>vivax</italic> populations in two ways. First, gene flow mitigates the loss of haplotypes due to genetic drift in isolated island populations. In <italic>P</italic>. <italic>vivax</italic>, the most abundant <italic>msp1</italic> and <italic>csp</italic> haplotypes were shared among all five sampled islands, whereas in <italic>P</italic>. <italic>falciparum</italic> no <italic>msp1</italic> and <italic>csp</italic> haplotypes were shared by more than three and four islands, respectively (Tables A and B in <xref rid="pone.0119475.s001" ref-type="supplementary-material">S1 File</xref>). Second, maintenance of distinct haplotypes in a population allows for generation of novel haplotypes by recombination. For example, in <italic>P</italic>. <italic>vivax msp1</italic> haplotypes VM03 and VM08 might have arisen from a recombination event between haplotypes VM01 and VM06 on Malakula, where all four lineages were found (Table C in <xref rid="pone.0119475.s001" ref-type="supplementary-material">S1 File</xref>). Recombination within the poly-Q sequence in block 6 of <italic>msp1</italic> might have further enhanced the polymorphic nature of the gene in <italic>P</italic>. <italic>vivax</italic> (Table C in <xref rid="pone.0119475.s001" ref-type="supplementary-material">S1 File</xref>). In contrast, limited recombination events [<xref rid="pone.0119475.ref019" ref-type="bibr">19</xref>] as a result of isolation shown here and previously [<xref rid="pone.0119475.ref012" ref-type="bibr">12</xref>] might have contributed to the relatively lower level of genetic diversity observed in <italic>P</italic>. <italic>falciparum</italic>.</p>
+<p>Gene flow in <italic>P</italic>. <italic>vivax</italic> might be facilitated by its ability to form dormant hypnozoites in the host liver and the rapid development and emergence of gametocytes. Anti-hypnozoite treatment with primaquine is not usually administered to local <italic>P</italic>. <italic>vivax</italic> cases in Vanuatu [<xref rid="pone.0119475.ref005" ref-type="bibr">5</xref>]. Furthermore, unlike those with blood-stage parasites, <italic>P</italic>. <italic>vivax</italic> hypnozoite-carriers are asymptomatic and might therefore be less averse to long-distance travel (e.g. between islands). Once activated, latent hypnozoites develop into merozoites, which invade red blood cells to start the erythrocytic cycle of infection. In contrast to <italic>P</italic>. <italic>falciparum</italic>, <italic>P</italic>. <italic>vivax</italic> gametocytes are known to develop early, often before symptoms appear and treatments are sought, making <italic>P</italic>. <italic>vivax</italic> transmission efficient and persistent [<xref rid="pone.0119475.ref037" ref-type="bibr">37</xref>,<xref rid="pone.0119475.ref038" ref-type="bibr">38</xref>]. The period of extrinsic development of <italic>P</italic>. <italic>vivax</italic> is known to be shorter than that of <italic>P</italic>. <italic>falciparum</italic> [<xref rid="pone.0119475.ref039" ref-type="bibr">39</xref>], which may further facilitate <italic>P</italic>. <italic>vivax</italic> transmission. In Vanuatu, <italic>An</italic>. <italic>farauti s</italic>.<italic>s</italic>. is the sole malaria vector [<xref rid="pone.0119475.ref013" ref-type="bibr">13</xref>]. It is unknown whether the efficiency with which this vector transmits parasites is different between <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic>, and how this difference, if it exists, might affect gene flow and genetic diversity.</p>
+<p>Even though <italic>P</italic>. <italic>vivax</italic> showed a greater degree of gene flow, the extent of parasite movement appears to be distance dependent. Gene flow among <italic>P</italic>. <italic>vivax</italic> populations from the central islands of Santo, Malakula, and Pentecost was observed for both <italic>msp1</italic> and <italic>csp</italic>, while populations from the peripheral islands of Gaua and Tanna were more isolated, showing gene flow with these central island populations in only one locus. Parasite movement among Santo, Malakula, Pentecost, and to a less extent Gaua, is consistent with the existence of traditional exchange networks in northern and central Vanuatu, where both cultural (e.g. shell, pottery, mats) and biological (e.g. kava, yams, pigs) items are transported and traded across many islands [<xref rid="pone.0119475.ref040" ref-type="bibr">40</xref>]. It is reasonable to hypothesize that <italic>P</italic>. <italic>vivax</italic> is also transported and exchanged among these islands, albeit unintentionally. Tanna is not known to be a part of the aforementioned traditional exchange networks, instead parasite movement and gene flow between Tanna and these other islands might reflect the recent convenience of interisland air travel [<xref rid="pone.0119475.ref009" ref-type="bibr">9</xref>].</p>
+<p>As samples used in this study were collected over a span of six years (1996 to 2002), potential temporal variation in parasite populations should be considered in the interpretation of parasite genetic diversity and gene flow. We evaluated the temporal “stability” of parasite populations from four sites (Santo, Malakula, East and West Pentecost) in which there were samples from at least two years. Analyses of <italic>msp1</italic> and <italic>csp</italic> F<sub>ST</sub> genetic distances revealed no year-to-year differentiation among <italic>P</italic>. <italic>vivax</italic> populations from the same site, indicating that <italic>P</italic>. <italic>vivax</italic> populations remained relatively stable over the sampled period. For <italic>P</italic>. <italic>falciparum</italic>, genetic differentiation was observed among temporal populations from Malakula (both <italic>msp1</italic> and <italic>csp</italic>) and East Pentecost (<italic>msp1</italic> only). Given that <italic>P</italic>. <italic>falciparum</italic> incidence in Vanuatu shows strong seasonality [<xref rid="pone.0119475.ref008" ref-type="bibr">8</xref>], drastic year-to-year changes in the genetic makeup of <italic>P</italic>. <italic>falciparum</italic> populations due to genetic drift during the dry season are not unexpected. More comprehensive sampling of contemporaneous parasite populations from different islands will allow for a more refined description of gene flow in both <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic>.</p>
+<p>Distinct parasite population structures and patterns of gene flow between <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> have important implications on the current malaria initiatives in Vanuatu. Our previous analyses of <italic>P</italic>. <italic>falciparum</italic> and <italic>An</italic>. <italic>farauti s</italic>.<italic>s</italic>. genetic diversities showed that these two species were largely localized to individual islands [<xref rid="pone.0119475.ref012" ref-type="bibr">12</xref>,<xref rid="pone.0119475.ref013" ref-type="bibr">13</xref>]. However for <italic>P</italic>. <italic>vivax</italic>, we demonstrated that parasite movement among islands and across provincial boundaries is common, suggesting that the current island-by-island elimination strategy might need to be complemented with more integrated control and coordination among islands and provinces [<xref rid="pone.0119475.ref010" ref-type="bibr">10</xref>]. Moreover, the risk of resurgence or reintroduction of parasites from other islands after elimination should not be underestimated, as shown by our own experience on Aneityum Island, where <italic>P</italic>. <italic>vivax</italic> from Tanna was responsible for the outbreak six years after initial elimination [<xref rid="pone.0119475.ref005" ref-type="bibr">5</xref>].</p>
+</sec>
+<sec id="sec015" sec-type="conclusions">
+<title>Conclusions</title>
+<p>In Vanuatu, <italic>P</italic>. <italic>falciparum</italic> and <italic>P</italic>. <italic>vivax</italic> were both present but showed different levels of genetic diversity and different patterns of gene flow and population structures. The high level of diversity in <italic>P</italic>. <italic>vivax</italic> populations was maintained by greater degree of gene flow among islands, which also resulted in greater genetic similarity among populations on different islands. Our data suggested that the current malaria control strategy might need to be bolstered with centrally integrated components and coordination among islands and provinces to ensure elimination and sustainable malaria freedom.</p>
+</sec>
+<sec id="sec016">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0119475.s001" xlink:href="info:doi/10.1371/journal.pone.0119475.s001" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:type="simple">
+<label>S1 File</label>
+<caption>
+<title>Distributions of merozoite surface surface protein 1 (msp1) and circumsporozoite protein (csp) haplotypes in <italic>Plasmodium falciparum</italic> and <italic>Plasmodium vivax</italic> from seven sites in Vanuatu.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>The authors would like to express their sincere gratitude to the study participants and the local survey assistants on various islands, and George Taleo, Morris Kalkoa, James Yaviong, Hope Leodoro, Sam Yamar, and Peter Kalcei from the Ministry of Health in Vanuatu.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0119475.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Feachem</surname> <given-names>RG</given-names></name>, <name name-style="western"><surname>Phillips</surname> <given-names>AA</given-names></name>, <name name-style="western"><surname>Hwang</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Cotter</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Wielgosz</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Greenwood</surname> <given-names>BM</given-names></name>, <etal>et al</etal>. <article-title>Shrinking the malaria map: progress and prospects</article-title>. <source>Lancet</source> <year>2010</year>;<volume>376</volume>:<fpage>1566</fpage>–<lpage>1578</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/S0140-6736(10)61270-6" xlink:type="simple">10.1016/S0140-6736(10)61270-6</ext-link></comment> <object-id pub-id-type="pmid">21035842</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alonso</surname> <given-names>PL</given-names></name>, <name name-style="western"><surname>Tanner</surname> <given-names>M</given-names></name>. <article-title>Public health challenges and prospects for malaria control and elimination</article-title>. <source>Nat Med</source> <year>2013</year>;<volume>19</volume>:<fpage>150</fpage>–<lpage>155</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nm.3077" xlink:type="simple">10.1038/nm.3077</ext-link></comment> <object-id pub-id-type="pmid">23389615</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Price</surname> <given-names>RN</given-names></name>, <name name-style="western"><surname>Tjitra</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Guerra</surname> <given-names>CA</given-names></name>, <name name-style="western"><surname>Yeung</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>White</surname> <given-names>NJ</given-names></name>, <name name-style="western"><surname>Anstey</surname> <given-names>NM</given-names></name>. <article-title>Vivax malaria: neglected and not benign</article-title>. <source>Am J Trop Med Hyg</source> <year>2007</year>;<volume>77</volume>(<issue>6 Suppl</issue>):<fpage>79</fpage>–<lpage>87</lpage>. <object-id pub-id-type="pmid">18165478</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cohen</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Smith</surname> <given-names>DL</given-names></name>, <name name-style="western"><surname>Cotter</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Ward</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Yamey</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Sabot</surname> <given-names>OJ</given-names></name>, <etal>et al</etal>. <article-title>Malaria resurgence: a systematic review and assessment of its causes</article-title>. <source>Malar J</source> <year>2012</year>;<volume>11</volume>:<fpage>122</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1475-2875-11-122" xlink:type="simple">10.1186/1475-2875-11-122</ext-link></comment> <object-id pub-id-type="pmid">22531245</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kaneko</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Chaves</surname> <given-names>LF</given-names></name>, <name name-style="western"><surname>Taleo</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Kalkoa</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Isozumi</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Wickremasinghe</surname> <given-names>R</given-names></name>, <etal>et al</etal>. <article-title>Characteristic age distribution of <italic>Plasmodium vivax</italic> infections after malaria elimination on Aneityum Island</article-title>. <source>Infect Immun</source> <year>2014</year>;<volume>82</volume>:<fpage>243</fpage>–<lpage>252</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/IAI.00931-13" xlink:type="simple">10.1128/IAI.00931-13</ext-link></comment> <object-id pub-id-type="pmid">24166950</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Murhandarwati</surname> <given-names>EE</given-names></name>, <name name-style="western"><surname>Fuad</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Nugraheni</surname> <given-names>MD</given-names></name>, <name name-style="western"><surname>Suyanto</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Wijayanti</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Widartono</surname> <given-names>BS</given-names></name>, <etal>et al</etal>. <article-title>Early malaria resurgence in pre-elimination areas in Kokap Subdistrict, Kulon Progo, Indonesia</article-title>. <source>Malar J</source> <year>2014</year>;<volume>13</volume>:<fpage>130</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1475-2875-13-130" xlink:type="simple">10.1186/1475-2875-13-130</ext-link></comment> <object-id pub-id-type="pmid">24684702</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Arnott</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Barry</surname> <given-names>AE</given-names></name>, <name name-style="western"><surname>Reeder</surname> <given-names>JC</given-names></name>. <article-title>Understanding the population genetics of <italic>Plasmodium vivax</italic> is essential for malaria control and elimination</article-title>. <source>Malar J</source> <year>2012</year>;<volume>11</volume>:<fpage>14</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1475-2875-11-14" xlink:type="simple">10.1186/1475-2875-11-14</ext-link></comment> <object-id pub-id-type="pmid">22233585</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kaneko</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Taleo</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Kalkoa</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Yaviong</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Reeve</surname> <given-names>PA</given-names></name>, <name name-style="western"><surname>Ganczakowski</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>Malaria epidemiology, glucose 6-phosphate dehydrogenase deficiency and human settlement in the Vanuatu Archipelago</article-title>. <source>Acta Trop</source> <year>1998</year>;<volume>70</volume>:<fpage>285</fpage>–<lpage>302</lpage>. <object-id pub-id-type="pmid">9777715</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><collab xlink:type="simple">Pacific Malaria Initiative Survey Group (PMISG) on behalf of the Ministries of Health of Vanuatu and Solomon Islands</collab>. <article-title>Malaria on isolated Melanesian islands prior to the initiation of malaria elimination activities</article-title>. <source>Malar J</source> <year>2010</year>;<volume>9</volume>:<fpage>218</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1475-2875-9-218" xlink:type="simple">10.1186/1475-2875-9-218</ext-link></comment> <object-id pub-id-type="pmid">20659316</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref010"><label>10</label><mixed-citation publication-type="other" xlink:type="simple">Asia Pacific Malaria Elimination Network. Country briefing: eliminating malaria in Vanuatu. 2013. Available: <ext-link ext-link-type="uri" xlink:href="http://apmen.org/storage/country-briefings/Vanuatu.pdf" xlink:type="simple">http://apmen.org/storage/country-briefings/Vanuatu.pdf</ext-link>.</mixed-citation></ref>
+<ref id="pone.0119475.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kaneko</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Taleo</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Kalkoa</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Yamar</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Kobayakawa</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Björkman</surname> <given-names>A</given-names></name>. <article-title>Malaria eradication on islands</article-title>. <source>Lancet</source> <year>2000</year>;<volume>356</volume>:<fpage>160</fpage>–<lpage>164</lpage>. <object-id pub-id-type="pmid">10963263</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lum</surname> <given-names>JK</given-names></name>, <name name-style="western"><surname>Kaneko</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Taleo</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Amos</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Reiff</surname> <given-names>DM</given-names></name>. <article-title>Genetic diversity and gene flow of humans, <italic>Plasmodium falciparum</italic>, and <italic>Anopheles farauti s</italic>.<italic>s</italic>. of Vanuatu: inferred malaria dispersal and implications for malaria control</article-title>. <source>Acta Trop</source> <year>2007</year>;<volume>103</volume>:<fpage>102</fpage>–<lpage>107</lpage>. <object-id pub-id-type="pmid">17662681</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Reiff</surname> <given-names>DM</given-names></name>, <name name-style="western"><surname>Kaneko</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Taleo</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Amos</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Lum</surname> <given-names>JK</given-names></name>. <article-title>Population structure and gene flow of <italic>Anopheles farauti s</italic>.<italic>s</italic>. (Diptera: Culicidae) among ten sites on five islands of Vanuatu: implications for malaria control</article-title>. <source>J Med Entomol</source> <year>2007</year>;<volume>44</volume>:<fpage>601</fpage>–<lpage>607</lpage>. <object-id pub-id-type="pmid">17695014</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tanabe</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Sakihama</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Kaneko</surname> <given-names>A</given-names></name>. <article-title>Stable SNPs in malaria antigen genes in isolated populations</article-title>. <source>Science</source> <year>2004</year>;<volume>303</volume>:<fpage>493</fpage>. <object-id pub-id-type="pmid">14739451</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sakihama</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Mitamura</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Kaneko</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Horii</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Tanabe</surname> <given-names>K</given-names></name>. <article-title>Long PCR amplification of <italic>Plasmodium falciparum</italic> DNA extracted from filter paper blots</article-title>. <source>Exp Parasitol</source> <year>2001</year>;<volume>97</volume>:<fpage>50</fpage>–<lpage>54</lpage>. <object-id pub-id-type="pmid">11207114</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tanabe</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Escalante</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Sakihama</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Honda</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Arisue</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Horii</surname> <given-names>T</given-names></name>, <etal>et al</etal>. <article-title>Recent independent evolution of <italic>msp1</italic> polymorphism in <italic>Plasmodium vivax</italic> and related simian malaria parasites</article-title>. <source>Mol Biochem Parasitol</source> <year>2007</year>;<volume>156</volume>:<fpage>74</fpage>–<lpage>79</lpage>. <object-id pub-id-type="pmid">17706800</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref017"><label>17</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Nei</surname> <given-names>M</given-names></name>. <chapter-title>Molecular evolutionary genetics</chapter-title>. <publisher-loc>New York</publisher-loc>: <publisher-name>Columbia University Press</publisher-name>; <year>1987</year>.</mixed-citation></ref>
+<ref id="pone.0119475.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Excoffier</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Lischer</surname> <given-names>HEL</given-names></name>. <article-title>Arlequin suite ver 3.5: a new series of programs to perform population genetics analyses under Linux and Windows</article-title>. <source>Mol Ecol Resour</source> <year>2010</year>;<volume>10</volume>:<fpage>564</fpage>–<lpage>567</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1755-0998.2010.02847.x" xlink:type="simple">10.1111/j.1755-0998.2010.02847.x</ext-link></comment> <object-id pub-id-type="pmid">21565059</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sakihama</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Kaneko</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Hattori</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Tanabe</surname> <given-names>K</given-names></name>. <article-title>Limited recombination events in merozoite surface protein-1 alleles of <italic>Plasmodium falciparum</italic> on islands</article-title>. <source>Gene</source> <year>2001</year>;<volume>279</volume>:<fpage>41</fpage>–<lpage>48</lpage>. <object-id pub-id-type="pmid">11722844</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Putaporntip</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Jongwutiwes</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Sakihama</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Ferreira</surname> <given-names>MU</given-names></name>, <name name-style="western"><surname>Kho</surname> <given-names>WG</given-names></name>, <name name-style="western"><surname>Kaneko</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>Mosaic organization and heterogeneity in frequency of allelic recombination of the <italic>Plasmodium vivax</italic> merozoite surface protein-1 locus</article-title>. <source>Proc Natl Acad Sci USA</source> <year>2002</year>;<volume>99</volume>:<fpage>16348</fpage>–<lpage>16353</lpage>. <object-id pub-id-type="pmid">12466500</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gray</surname> <given-names>KA</given-names></name>, <name name-style="western"><surname>Dowd</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Bain</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Bobogare</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Wini</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Shanks</surname> <given-names>GD</given-names></name>, <etal>et al</etal>. <article-title>Population genetics of <italic>Plasmodium falciparum</italic> and <italic>Plasmodium vivax</italic> and asymptomatic malaria in Temotu Province, Solomon Islands</article-title>. <source>Malar J</source> <year>2013</year>;<volume>12</volume>:<fpage>429</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1475-2875-12-429" xlink:type="simple">10.1186/1475-2875-12-429</ext-link></comment> <object-id pub-id-type="pmid">24261646</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Orjuela-Sánchez</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Sá</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Brandi</surname> <given-names>MC</given-names></name>, <name name-style="western"><surname>Rodrigues</surname> <given-names>PT</given-names></name>, <name name-style="western"><surname>Bastos</surname> <given-names>MS</given-names></name>, <name name-style="western"><surname>Amaratunga</surname> <given-names>C</given-names></name>, <etal>et al</etal>. <article-title>Higher microsatellite diversity in <italic>Plasmodium vivax</italic> than in sympatric <italic>Plasmodium falciparum</italic> populations in Pursat, Western Cambodia</article-title>. <source>Exp Parasitol</source> <year>2013</year>;<volume>134</volume>:<fpage>318</fpage>–<lpage>326</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.exppara.2013.03.029" xlink:type="simple">10.1016/j.exppara.2013.03.029</ext-link></comment> <object-id pub-id-type="pmid">23562882</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ord</surname> <given-names>RL</given-names></name>, <name name-style="western"><surname>Tami</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Sutherland</surname> <given-names>CJ</given-names></name>. <article-title><italic>ama1</italic> genes of sympatric <italic>Plasmodium vivax</italic> and <italic>P</italic>. <italic>falciparum</italic> from Venezuela differ significantly in genetic diversity and recombination frequency</article-title>. <source>PLoS One</source> <year>2008</year>;<volume>3</volume>:<fpage>e3366</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0003366" xlink:type="simple">10.1371/journal.pone.0003366</ext-link></comment> <object-id pub-id-type="pmid">18846221</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Arnott</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Wapling</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Mueller</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Ramsland</surname> <given-names>PA</given-names></name>, <name name-style="western"><surname>Siba</surname> <given-names>PM</given-names></name>, <name name-style="western"><surname>Reeder</surname> <given-names>JC</given-names></name>, <etal>et al</etal>. <article-title>Distinct patterns of diversity, population structure and evolution in the AMA1 genes of sympatric Plasmodium falciparum and Plasmodium vivax populations of Papua New Guinea from an area of similarly high transmission</article-title>. <source>Malar J</source> <year>2014</year>;<volume>13</volume>:<fpage>233</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1475-2875-13-233" xlink:type="simple">10.1186/1475-2875-13-233</ext-link></comment> <object-id pub-id-type="pmid">24930015</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kerr</surname> <given-names>PJ</given-names></name>, <name name-style="western"><surname>Ranford-Cartwright</surname> <given-names>LC</given-names></name>, <name name-style="western"><surname>Walliker</surname> <given-names>D</given-names></name>. <article-title>Proof of intragenic recombination in <italic>Plasmodium falciparum</italic></article-title>. <source>Mol Biochem Parasitol</source> <year>1994</year>;<volume>66</volume>:<fpage>241</fpage>–<lpage>248</lpage>. <object-id pub-id-type="pmid">7808474</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Imwong</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Pukrittayakamee</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Grüner</surname> <given-names>AC</given-names></name>, <name name-style="western"><surname>Rénia</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Letourneur</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Looareesuwan</surname> <given-names>S</given-names></name>, <etal>et al</etal>. <article-title>Practical PCR genotyping protocols for Plasmodium vivax using Pvcs and Pvmsp1</article-title>. <source>Malar J</source> <year>2005</year>;<volume>4</volume>:<fpage>20</fpage>. <object-id pub-id-type="pmid">15854233</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kim</surname> <given-names>JR</given-names></name>, <name name-style="western"><surname>Imwong</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Nandy</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Chotivanich</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Nontprasert</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Tonomsing</surname> <given-names>N</given-names></name>, <etal>et al</etal>. <article-title>Genetic diversity of Plasmodium vivax in Kolkata, India</article-title>. <source>Malar J</source> <year>2006</year>;<volume>5</volume>:<fpage>71</fpage>. <object-id pub-id-type="pmid">16907979</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pacheco</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Poe</surname> <given-names>AC</given-names></name>, <name name-style="western"><surname>Collins</surname> <given-names>WE</given-names></name>, <name name-style="western"><surname>Lal</surname> <given-names>AA</given-names></name>, <name name-style="western"><surname>Tanabe</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Kariuki</surname> <given-names>SK</given-names></name>, <etal>et al</etal>. <article-title>A comparative study of the genetic diversity of the 42kDa fragment of the merozoite surface protein 1 in <italic>Plasmodium falciparum</italic> and <italic>P</italic>. <italic>vivax</italic></article-title>. <source>Infect Genet Evol</source> <year>2007</year>;<volume>7</volume>:<fpage>180</fpage>–<lpage>187</lpage>. <object-id pub-id-type="pmid">17010678</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Parobek</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Bailey</surname> <given-names>JA</given-names></name>, <name name-style="western"><surname>Hathaway</surname> <given-names>NJ</given-names></name>, <name name-style="western"><surname>Socheat</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Rogers</surname> <given-names>WO</given-names></name>, <name name-style="western"><surname>Juliano</surname> <given-names>JJ</given-names></name>. <article-title>Differing patterns of selection and geospatial genetic diversity within two leading <italic>Plasmodium vivax</italic> candidate vaccine antigens</article-title>. <source>PLoS Negl Trop Dis</source> <year>2014</year>;<volume>8</volume>:<fpage>e2796</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pntd.0002796" xlink:type="simple">10.1371/journal.pntd.0002796</ext-link></comment> <object-id pub-id-type="pmid">24743266</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Neafsey</surname> <given-names>DE</given-names></name>, <name name-style="western"><surname>Galinsky</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Jiang</surname> <given-names>RH</given-names></name>, <name name-style="western"><surname>Young</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Sykes</surname> <given-names>SM</given-names></name>, <name name-style="western"><surname>Saif</surname> <given-names>S</given-names></name>, <etal>et al</etal>. <article-title>The malaria parasite <italic>Plasmodium vivax</italic> exhibits greater genetic diversity than <italic>Plasmodium falciparum</italic></article-title>. <source>Nat Genet</source> <year>2012</year>;<volume>44</volume>:<fpage>1046</fpage>–<lpage>1050</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/ng.2373" xlink:type="simple">10.1038/ng.2373</ext-link></comment> <object-id pub-id-type="pmid">22863733</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref031"><label>31</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Groube</surname> <given-names>LM</given-names></name>. <chapter-title>Contradictions and malaria in Melanesian and Australian prehistory</chapter-title>. In: <name name-style="western"><surname>Spriggs</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Yen</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Ambrose</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Jones</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Thorne</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Andrews</surname> <given-names>A</given-names></name>, editors. <source>A Community of Culture: The People and Prehistory of the Pacific</source>. <publisher-loc>Canberra</publisher-loc>: <publisher-name>Department of Prehistory, Australian National University</publisher-name>; <year>1993</year>. pp. <fpage>164</fpage>–<lpage>186</lpage>.</mixed-citation></ref>
+<ref id="pone.0119475.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Clark</surname> <given-names>JT</given-names></name>, <name name-style="western"><surname>Kelly</surname> <given-names>KM</given-names></name>. <article-title>Human genetics, paleoenvironments, and malaria: relationships and implications for the settlement of Oceania</article-title>. <source>Am Anthropol</source> <year>1993</year>;<volume>95</volume>:<fpage>612</fpage>–<lpage>630</lpage>.</mixed-citation></ref>
+<ref id="pone.0119475.ref033"><label>33</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Buckley</surname> <given-names>HR</given-names></name>. <chapter-title>‘The predators within’: investigating the relationship between malaria and health in the prehistoric Pacific Islands</chapter-title>. In: <name name-style="western"><surname>Oxenham</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Tales</surname> <given-names>N</given-names></name>, editors. <source>Bioarchaeology of Southeast Asia</source>. <publisher-loc>Cambridge</publisher-loc>: <publisher-name>Cambridge University Press</publisher-name>; <year>2005</year>. pp. <fpage>309</fpage>–<lpage>332</lpage>.</mixed-citation></ref>
+<ref id="pone.0119475.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hedrick</surname> <given-names>J</given-names></name>. <article-title>Lapita style pottery from Malo Island</article-title>. <source>J Polyn Soc</source> <year>1971</year>;<volume>80</volume>:<fpage>5</fpage>–<lpage>19</lpage>.</mixed-citation></ref>
+<ref id="pone.0119475.ref035"><label>35</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Anderson</surname> <given-names>TJ</given-names></name>, <name name-style="western"><surname>Haubold</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Williams</surname> <given-names>JT</given-names></name>, <name name-style="western"><surname>Estrada-Franco</surname> <given-names>JG</given-names></name>, <name name-style="western"><surname>Richardson</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Mollinedo</surname> <given-names>R</given-names></name>, <etal>et al</etal>. <article-title>Microsatellite markers reveal a spectrum of population structures in the malaria parasite <italic>Plasmodium falciparum</italic></article-title>. <source>Mol Biol Evol</source> <year>2000</year>;<volume>17</volume>:<fpage>1467</fpage>–<lpage>1482</lpage>. <object-id pub-id-type="pmid">11018154</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref036"><label>36</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sheppard</surname> <given-names>PJ</given-names></name>, <name name-style="western"><surname>Walter</surname> <given-names>R</given-names></name>. <article-title>A revised model of Solomon Islands culture history</article-title>. <source>J Polyn Soc</source> <year>2006</year>;<volume>115</volume>:<fpage>47</fpage>–<lpage>76</lpage>.</mixed-citation></ref>
+<ref id="pone.0119475.ref037"><label>37</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bousema</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Drakeley</surname> <given-names>C</given-names></name>. <article-title>Epidemiology and infectivity of <italic>Plasmodium falciparum</italic> and <italic>Plasmodium vivax</italic> gametocytes in relation to malaria control and elimination</article-title>. <source>Clin Microbiol Rev</source> <year>2011</year>;<volume>24</volume>:<fpage>377</fpage>–<lpage>410</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/CMR.00051-10" xlink:type="simple">10.1128/CMR.00051-10</ext-link></comment> <object-id pub-id-type="pmid">21482730</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref038"><label>38</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Galinski</surname> <given-names>MR</given-names></name>, <name name-style="western"><surname>Meyer</surname> <given-names>EV</given-names></name>, <name name-style="western"><surname>Barnwell</surname> <given-names>JW</given-names></name>. <article-title><italic>Plasmodium vivax</italic>: modern strategies to study a persistent parasite’s life cycle</article-title>. <source>Adv Parasitol</source> <year>2013</year>;<volume>81</volume>:<fpage>1</fpage>–<lpage>26</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/B978-0-12-407826-0.00001-1" xlink:type="simple">10.1016/B978-0-12-407826-0.00001-1</ext-link></comment> <object-id pub-id-type="pmid">23384620</object-id></mixed-citation></ref>
+<ref id="pone.0119475.ref039"><label>39</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Macdonald</surname> <given-names>G</given-names></name>. <chapter-title>The epidemiology and control of malaria</chapter-title>. <publisher-loc>London</publisher-loc>: <publisher-name>Oxford University Press</publisher-name>; <year>1957</year>.</mixed-citation></ref>
+<ref id="pone.0119475.ref040"><label>40</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Huffman</surname> <given-names>K</given-names></name>. <chapter-title>Trading, cultural exchange and copyright: important aspects of Vanuatu arts</chapter-title>. In: <name name-style="western"><surname>Bonnemaison</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Huffman</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Kaufmann</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Tryon</surname> <given-names>D</given-names></name>, editors. <source>Arts of Vanuatu</source>. <publisher-loc>Bathurst</publisher-loc>: <publisher-name>Crawford House Press</publisher-name>; <year>1996</year>. pp. <fpage>182</fpage>–<lpage>194</lpage>.</mixed-citation></ref>
+</ref-list>
+</back>
+</article>
