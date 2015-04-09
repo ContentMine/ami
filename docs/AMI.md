@@ -164,6 +164,9 @@ src
 		                └── word
 
 ```
+
+## `src/main/java` tree
+
 Ignoring `lookups` (and some general classes) we can see 6 plugins (`identifier`, ... `word`). They all have a similar structure:
 ```
 src/main/java/org/xmlcml/ami2/plugins/
@@ -209,6 +212,39 @@ Note that almost every plugin has:
  * a `Searcher` (`IdentifierSearcher.java`) which searches the input for matches, records and processes them. This is the heart of the logic of the plugin. It may be as simple as a default regeular expression (almost a dummy) or a complete NLP-based chemistry matching system (OSCAR).
  * a `ResultElement` and maybe `ResultsElement` which manage the post-match logic (e.g. transforming the raw match into a semantic object. Thus `SpeciesResultsElement` tries to expand abbreviations such as `V. harveyi` to `Vibrio Harveyi`. Note the helper classes such as `LinneanNamer`.
  
+## the `src/main/resources` tree
+
+The `resources` tree contaoins configuration files which are independent of the input files. Note that they use the same class/pacjage naming structure
 ```
+src
+└── main
+	└── resources
+		├── log4j.properties
+		└── org
+		    └── xmlcml
+		        └── ami2
+		            ├── plugins
+		            │   ├── args.xml
+		            │   ├── identifier
+		            │   │   └── args.xml
+		            │   ├── regex
+		            │   │   └── args.xml
+		            │   ├── sequence
+		            │   │   └── args.xml
+		            │   ├── simple
+		            │   │   └── args.xml
+		            │   ├── species
+		            │   │   └── args.xml
+		            │   └── word
+		            │       ├── args.xml
+		            │       ├── clinicaltrials.xml
+		            │       ├── clinicaltrials200.txt
+		            │       └── stopwords.txt
+		            └── tagger // obsolete
 ```
+ * `log4j.properies controls the `debug` output from the `log4j` logging tool. 
+ * `org/xmlcml/ami2/plugins/args.xml` configuration applies to all plugins.
+ * `org/xmlcml/ami2/plugins/identifier/args.xml` configuration applies to just the `identifier` plugins (and so on)
+ 
+ 
 
