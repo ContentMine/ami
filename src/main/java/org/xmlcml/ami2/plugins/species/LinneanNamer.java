@@ -136,7 +136,7 @@ public class LinneanNamer {
 //			}
 			LinneanName linneanName = LinneanNamer.createBinomial(name);
 			if (linneanName == null) {
-				LOG.debug("Not a binomial: "+name);
+				LOG.trace("Not a binomial: "+name);
 			} else {
 				String genusAbbreviation = linneanName.getGenusAbbreviation();
 				String fullGenus = genusByAbbreviationMap.get(genusAbbreviation);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="consort0">
+ <result pre="-specific LBP (NSLBP), a " name0="diagnose" value0="diagnosis" post="based on exclusion of a specific cause o" xpath="/html[1]/body[1]/div[9]/p[1]"/>
+ <result pre="tion health, to alter or " name0="diagnose" value0="diagnose" post="the course of a health condition, or to " xpath="/html[1]/body[1]/div[10]/table[1]/tbody[1]/tr[2]/td[2]/p[1]"/>
+ <result pre="re proposed to describe, " name0="stratify" value0="stratify," post="and compare reports on patients with chr" xpath="/html[1]/body[1]/div[10]/div[4]/p[4]"/>
+ <result pre="ble researchers were not " name0="exclude" value0="excluded" post="from this list, convenience sampling was" xpath="/html[1]/body[1]/div[10]/div[7]/div[2]/p[1]"/>
+ <result pre="). It was decided not to " name0="exclude" value0="exclude" post="their opinion from the Delphi results, w" xpath="/html[1]/body[1]/div[10]/div[7]/div[2]/p[4]"/>
+ <result pre="s within core areas were " name0="random" value0="randomized." post="Panel members were asked to indicate if " xpath="/html[1]/body[1]/div[10]/div[8]/div[2]/p[1]"/>
+ <result pre=": a systematic review of " name0="random" value0="randomized" post="clinical trials " xpath="/html[1]/body[1]/div[16]/div[2]/div[5]/div[1]/p[1]"/>
+ <result pre="utcome reporting bias in " name0="random" value0="randomized" post="controlled trials on a cohort of systema" xpath="/html[1]/body[1]/div[16]/div[2]/div[9]/div[1]/p[1]"/>
+</results>

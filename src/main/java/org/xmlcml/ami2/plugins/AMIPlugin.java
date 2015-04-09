@@ -20,6 +20,7 @@ public class AMIPlugin {
 	static Map<String, String> argProcessorNameByName = null;
 	static {
 		argProcessorNameByName = new HashMap<String, String>();
+		putClass("identifier");
 		putClass("regex");
 		putClass("sequence");
 		putClass("simple");
@@ -32,6 +33,8 @@ public class AMIPlugin {
 	}
 	
 	public AMIPlugin() {
+		// default - should be overridden
+		this.argProcessor = null;
 	}
 
 	protected AMIArgProcessor argProcessor;
@@ -61,14 +64,19 @@ public class AMIPlugin {
 				throw new RuntimeException("Cannot instantiate class: "+argProcessorName, e);
 			}
 			LOG.debug(argProcessor);
-			argProcessor.printHelp(null, null);;
+//			argProcessor.printHelp(null, null);;
 		}
-//		argProcessor = new AMIArgProcessor();
-//		argProcessor.parseArgs(args);
-//		argProcessor.runAndOutput();
 	}
 
 	public DefaultArgProcessor getArgProcessor() {
 		return argProcessor;
+	}
+
+	/** delegate to argProcessor.runAndOutput().
+	 * 
+	 */
+	public void runAndOutput() {
+		AMIArgProcessor argProcessor = (AMIArgProcessor) this.getArgProcessor();
+		argProcessor.runAndOutput();
 	}
 }

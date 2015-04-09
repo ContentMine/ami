@@ -90,7 +90,7 @@ public class WordCollectionFactory {
 	private void createWordSets() {
 		List<String> rawWords = wordArgProcessor.extractWordsFromScholarlyHtml();
 		currentWords = rawWords;
-		if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.ABBREVIATIONS)) {
+		if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.ABBREVIATION)) {
 			currentWords = createAbbreviations();
 		} else if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.CAPITALIZED)) {
 			currentWords = createCapitalized();
@@ -184,7 +184,7 @@ public class WordCollectionFactory {
 				currentWords.add(word);
 			}
 		}
-		LOG.debug("stopwords "+stopwords.size()+"; current words: "+currentWords.size());
+		LOG.trace("stopwords "+stopwords.size()+"; current words: "+currentWords.size());
 		return currentWords;
 	}
 	

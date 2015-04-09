@@ -317,11 +317,11 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		ensureSearcherBySearcherNameMap();
 		ensureSearcherList();
 		for (String name : names) {
-			DefaultSearcher sequenceSearcher = searcherByNameMap.get(name);
-			if (sequenceSearcher == null) {
-				LOG.error("unknown sequenceType: "+name+"; skipped");
+			DefaultSearcher optionSearcher = searcherByNameMap.get(name);
+			if (optionSearcher == null) {
+				LOG.error("unknown optionType: "+name+"; skipped");
 			} else {
-				searcherList.add(sequenceSearcher);
+				searcherList.add(optionSearcher);
 			}
 		}
 	}
@@ -334,8 +334,8 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 
 	protected void outputResultElements(ArgumentOption option) {
 		resultsElementList = new ArrayList<ResultsElement>();
-		for (DefaultSearcher sequenceSearcher : searcherList) {
-			String name = sequenceSearcher.getName();
+		for (DefaultSearcher optionSearcher : searcherList) {
+			String name = optionSearcher.getName();
 			ResultsElement resultsElement = resultsBySearcherNameMap.get(name);
 			if (resultsElement != null) {
 				resultsElement.setTitle(name);
@@ -358,6 +358,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	}
 
 	protected void createAndStoreNamedSearchers(ArgumentOption option) {
+		LOG.trace("create named Searchers");
 		List<Element> values = option.getOrCreateValues();
 		for (Element valueElement : values) {
 			try {
@@ -374,6 +375,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		ensureSearcherByNameMap();
 		NamedPattern namedPattern = NamedPattern.createFromValueElement(valueElement);
 		if (namedPattern != null) {
+			LOG.trace("added named pattern "+namedPattern);
 			DefaultSearcher searcher = createSearcher(namedPattern);
 			searcherByNameMap.put(namedPattern.getName(), searcher);
 		}
