@@ -135,6 +135,80 @@ and `resources` holds any data the tests need.
 ```    
     └── resources
 ```
- 
 
+## anatomy of a plugin
+
+Each plugin is split across some or all of the 4 branches. In the future we'll have tools to create them, but at present you need to do this yourself. Every java class should have a unique name ("fully qualified name") which normally uses a domain name. Our plugins (we'll use the dummy name `foo`) have the form:
+```
+package org.xmlcml.ami2.plugins.foo;
+
+public class FooPlugin extends AMIPlugin { ...
+```
+[The packagename  `org.xmlcml...` arises from the extensive use of chemistry (xml-cml.org) in much of PMR's code. You may also see `uk.ac.cam.ch...` in some places.] So our current plugins have the tree structure:
+```
+src
+└── main
+    └── java
+		└── org
+		    └── xmlcml
+		        └── ami2
+		            ├── lookups
+		            	...
+		            └── plugins
+		                ...
+		                ├── identifier
+		                ├── regex
+		                ├── sequence
+		                ├── simple
+		                ├── species
+		                └── word
+
+```
+Ignoring `lookups` (and some general classes) we can see 6 plugins (`identifier`, ... `word`). They all have a similar structure:
+```
+src/main/java/org/xmlcml/ami2/plugins/
+├── identifier
+│   ├── IdentifierArgProcessor.java
+│   ├── IdentifierPlugin.java
+│   ├── IdentifierSearcher.java
+├── regex
+│   ├── CompoundRegex.java
+│   ├── CompoundRegexList.java
+│   ├── RegexArgProcessor.java
+│   ├── RegexComponent.java
+│   ├── RegexPlugin.java
+│   └── RegexSearcher.java
+├── sequence
+│   ├── SequenceArgProcessor.java
+│   ├── SequencePlugin.java
+│   ├── SequenceResultElement.java
+│   ├── SequenceSearcher.java
+├── simple
+│   ├── SimpleArgProcessor.java
+│   └── SimplePlugin.java
+├── species
+│   ├── LinneanName.java
+│   ├── LinneanNamer.java
+│   ├── SpeciesArgProcessor.java
+│   ├── SpeciesPlugin.java
+│   ├── SpeciesResultElement.java
+│   ├── SpeciesResultsElement.java
+│   ├── SpeciesSearcher.java
+└── word
+    ├── WordArgProcessor.java
+    ├── WordCollectionFactory.java
+    ├── WordPlugin.java
+    ├── WordResultElement.java
+    ├── WordResultsElement.java
+    ├── WordResultsElementList.java
+    └── WordSetWrapper.java
+```
+Note that almost every plugin has:
+ * an `ArgProcessor` (`IdentifierArgProcessor.java`) which scanns the input and interprets and executes the arguments in the commandline
+ * a `Plugin` (`IdentifierPlugin.java`) which manages overall control for the plugin
+ * a `Searcher` (`IdentifierSearcher.java`) which searches the input for matches, records and processes them. This is the heart of the logic of the plugin. It may be as simple as a default regeular expression (almost a dummy) or a complete NLP-based chemistry matching system (OSCAR).
+ * a `ResultElement` and maybe `ResultsElement` which manage the post-match logic (e.g. transforming the raw match into a semantic object. Thus `SpeciesResultsElement` tries to expand abbreviations such as `V. harveyi` to `Vibrio Harveyi`. Note the helper classes such as `LinneanNamer`.
+ 
+```
+```
 
