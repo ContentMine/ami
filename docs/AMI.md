@@ -93,6 +93,20 @@ The rest only matters to a Java programmer.
  
 ## the `src` trees
 
+The overall structure is:
+```
+src
+├── deb
+│   └── control
+├── main
+│   ├── assembly
+│   ├── java
+│   └── resources
+└── test
+    ├── java
+    └── resources
+```
+
 If you are tweaking a plugin you may need to know some of this
 ```
 src
@@ -101,7 +115,7 @@ src
 ```
 ├── main
 ```
-it containes the source code. You shouldn't have to deal with it unless you create a plugin ...
+it contains the source code. You shouldn't have to deal with it unless you create a plugin ...
 ```
 │   ├── java
 ```
