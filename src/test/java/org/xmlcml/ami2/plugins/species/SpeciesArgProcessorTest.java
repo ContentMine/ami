@@ -12,6 +12,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.sequence.SequencePlugin;
 
 public class SpeciesArgProcessorTest {
 
@@ -76,7 +77,21 @@ public class SpeciesArgProcessorTest {
 				+ " <result pre=\"ia genus Vibrio, including", binomialXml);
 				*/
 	}
-	
+
+	@Test
+	public void testSpeciesHarness() throws Exception {
+		// SHOWCASE
+		String cmd = "--sp.species --context 35 50 --sp.type binomial genus genussp -q target/plosone/species/malaria -i scholarly.html"; 
+ 
+		Fixtures.runStandardTestHarness(
+				Fixtures.TEST_PLOSONE_MALARIA_0119475, 
+				new File("target/plosone/species/malaria"), 
+				new SpeciesPlugin(),
+				cmd,
+				"species/binomial/", "species/genus/", "species/genussp/");
+	}
+
+
 	// norma not committed yet
 //	@Test
 //	public void testMalariaArgProcessorNorma() throws Exception {
