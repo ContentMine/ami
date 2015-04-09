@@ -21,14 +21,14 @@ AMI is highly modular and consists of Java code, XML control, data and tests.
  * the data suports the plugin (e.g. `stopwords.txt` for `ami-word`)
  * the tests help development, but also check the correctness of the code and make sure that bugs don't creep in ("regression"). Tests are also useful in showing some of the options - e.g. for tutorials.
  
- AMI is built as a `maven` framework. This shouldn't worry you - just accept that many of the filenames are conventional. Here's the current structure
+ AMI is built as a `maven` framework. This shouldn't worry you - just accept that many of the filenames are conventional. Here's the current structure:
  
 ``` .
 ├── LICENSE
 ├── README.md
 ├── docs
 ```
-*.md files are markdown files and display well on web servers 
+`docs` contains documentation in `*.md` files (markdown) 
 ```
 │   ├── AMI.md
 │   ├── COCHRANE_20150316.md
@@ -38,7 +38,7 @@ AMI is highly modular and consists of Java code, XML control, data and tests.
 │   ├── WORDS.md
 ...
 ```
-Some example files for clinical trials.
+Then a directory with some example files (here clinical trials).
 ```
 ├── examples
 │   ├── http_www.trialsjournal.com_content_16_1_1
@@ -47,11 +47,11 @@ Some example files for clinical trials.
 │   ├── http_www.trialsjournal.com_content_16_1_2
 │   └── http_www.trialsjournal.com_content_16_1_3
 ```
-POM is a magic file that tells  Maven how to build the system automatically
+`pom.xml` is a magic file that tells  Maven how to build the system automatically. It may need tweaking if we add a plugin.
 ```
 ├── pom.xml
 ```
-A directory of CompoundRegex files (for use by `ami-regex`)
+There's a communal directory of CompoundRegex files (for use by `ami-regex`) and we'd expect people to edit this or add new ones.
 ```
 ├── regex
 │   ├── common.xml
@@ -60,15 +60,15 @@ A directory of CompoundRegex files (for use by `ami-regex`)
 │   ├── phylotree.xml
 │   └── publication.xml
 ```
-the source code and supporting files
+`src` contains the source code and supporting files
 ```
 ├── src
 ```
-The file to control the `*.deb` creation.
+`deb` contains the file to control the `*.deb` creation.
 ```
 │   ├── deb
 ```
-`main` is for building the deployable system (*.jar, *.deb, etc)
+`main` is for building the deployable system (`*.jar`, `*.deb`, etc)
 ```
 │   ├── main
 ```
@@ -80,7 +80,7 @@ The file to control the `*.deb` creation.
 ```
 └── target
 ```
-distributable executable files
+`target` contains the distributable executable files (these change with every build).
 ```
     ├── ami2-0.1-SNAPSHOT-bin.tar.gz
     ├── ami2-0.1-SNAPSHOT-bin.zip
@@ -93,25 +93,34 @@ The rest only matters to a Java programmer.
  
 ## the `src` trees
 
-If you are tweaking a plugin you may nee to know some of this
+If you are tweaking a plugin you may need to know some of this
 ```
 src
 ```
-`main is for the deployed system
+`main` is for the deployed system
 ```
 ├── main
 ```
-The source code. You shouldn't have to deal with it unless you create a plugin.
+it containes the source code. You shouldn't have to deal with it unless you create a plugin ...
 ```
 │   ├── java
 ```
-Configuration and modification of the common data for the program (i.e. independent of a particular problem). 
+... and configuration and modification of the common data for the program (i.e. independent of a particular problem). 
 ```
 │   └── resources
+```
+`test` is valuable for exploring what the program does. Also any new functionality should be test-driven (TDD) where possible. 
+```
 └── test
+```
+In an ideal world every `src/main/java` class should have a set of tests in `src/test/java`
+```
     ├── java
+```
+and `resources` holds any data the tests need.
+```    
     └── resources
- 
+```
  
 
 
