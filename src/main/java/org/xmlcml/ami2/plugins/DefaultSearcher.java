@@ -20,8 +20,7 @@ import org.xmlcml.xml.XPathGenerator;
 
 public class DefaultSearcher {
 
-	
-	private static final String NOT_FOUND = "NOT_FOUND";
+		private static final String NOT_FOUND = "NOT_FOUND";
 	private static final Logger LOG = Logger.getLogger(DefaultSearcher.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -45,7 +44,7 @@ public class DefaultSearcher {
 		this.setNamedPattern(namedPattern);
 	}
 
-	protected void setNamedPattern(NamedPattern namedPattern) {
+	public void setNamedPattern(NamedPattern namedPattern) {
 		this.namedPattern = namedPattern; // could be null
 		this.pattern = namedPattern == null ? null : namedPattern.getPattern();
 		this.name = namedPattern == null ? null : namedPattern.getName();

@@ -6,8 +6,7 @@ import nu.xom.Element;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-
-import com.gargoylesoftware.htmlunit.util.NameValuePair;
+import org.xmlcml.ami2.plugins.regex.RegexComponent;
 
 /** holds lexical pattern and name for plugin.
  * 
@@ -32,6 +31,20 @@ public class NamedPattern {
 	public NamedPattern(String name, String patternString) {
 		this.name = name;
 		createPattern(patternString);
+	}
+
+	public static NamedPattern createFromRegexElement(Element regexElement) {
+		NamedPattern namedPattern = null;
+		String fields = regexElement.getAttributeValue(RegexComponent.FIELDS);
+		if (fields != null) {
+			String field[] = fields.trim().split("\\s+");
+			String name = field.length == 1 ? field[0] : null;
+			String patternString = regexElement.getValue();
+			if (name != null && patternString != null) {
+				namedPattern = new NamedPattern(name, patternString);
+			}
+		}
+		return namedPattern;
 	}
 
 	public static NamedPattern createFromValueElement(Element valueElement) {

@@ -28,7 +28,7 @@ public class RegexSearcher extends DefaultSearcher {
 	Element resultElement;
 
 
-	private RegexSearcher(AMIArgProcessor argProcessor) {
+	public RegexSearcher(AMIArgProcessor argProcessor) {
 		super(argProcessor);
 	}
 
@@ -62,13 +62,5 @@ public class RegexSearcher extends DefaultSearcher {
 		LOG.debug(compoundRegex.getTitle()+"/"+compoundRegex.getRegexValues().size());
 	}
 
-//	ResultsElement search(List<HtmlP> pElements) {
-//		ResultsElement resultsElement = new ResultsElement();
-//		for (HtmlP pElement : pElements) {
-//			ResultsElement subResultsElement = this.searchXomElement(pElement);
-//			resultsElement.transferResultElements(subResultsElement);
-//		}
-//		return resultsElement;
-//	}
 
 }

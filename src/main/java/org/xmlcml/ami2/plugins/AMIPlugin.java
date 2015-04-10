@@ -50,7 +50,7 @@ public class AMIPlugin {
 			if (argProcessorName == null) {
 				throw new RuntimeException("Cannot find class for plugin: "+plugin);
 			}
-			LOG.debug("argProcessor: "+argProcessorName);
+			LOG.trace("argProcessor: "+argProcessorName);
 			Class argProcessorClass = null;
 			try {
 				argProcessorClass = Class.forName(argProcessorName);
@@ -63,7 +63,7 @@ public class AMIPlugin {
 			} catch (Exception e) {
 				throw new RuntimeException("Cannot instantiate class: "+argProcessorName, e);
 			}
-			LOG.debug(argProcessor);
+			LOG.trace(argProcessor);
 //			argProcessor.printHelp(null, null);;
 		}
 	}

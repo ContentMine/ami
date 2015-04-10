@@ -1,22 +1,27 @@
 package org.xmlcml.ami2.plugins;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import nu.xom.Builder;
+import nu.xom.Document;
 import nu.xom.Element;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.lookups.AbstractLookup;
+import org.xmlcml.ami2.plugins.regex.CompoundRegex;
+import org.xmlcml.ami2.plugins.regex.CompoundRegexList;
+import org.xmlcml.ami2.plugins.regex.RegexComponent;
 import org.xmlcml.args.ArgIterator;
 import org.xmlcml.args.ArgumentOption;
 import org.xmlcml.args.DefaultArgProcessor;
+import org.xmlcml.files.EuclidSource;
 import org.xmlcml.files.QuickscrapeNorma;
 import org.xmlcml.files.ResultsElement;
 import org.xmlcml.html.HtmlElement;
@@ -60,6 +65,8 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	protected HashMap<String, DefaultSearcher> searcherByNameMap;
 	protected List<DefaultSearcher> searcherList;
 	private HashMap<String, ResultsElement> resultsBySearcherNameMap;
+	protected CompoundRegexList compoundRegexList;
+	protected List<Element> regexElementList;
 	
 	public AMIArgProcessor() {
 		super();
@@ -358,23 +365,40 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	}
 
 	protected void createAndStoreNamedSearchers(ArgumentOption option) {
-		LOG.trace("create named Searchers");
 		List<Element> values = option.getOrCreateValues();
+		createNamedSearchers(values);
+	}
+
+	protected void createNamedSearchers(List<Element> values) {
 		for (Element valueElement : values) {
 			try {
-				createAndStoreSearcher(valueElement);
+				if (RegexComponent.REGEX.equals(valueElement.getLocalName())) {
+					NamedPattern namedPattern = NamedPattern.createFromRegexElement(valueElement);
+					createSearcherAndAddToMap(namedPattern);
+				} else {
+					createSearcherAndAddToMap(valueElement);
+				}
 			} catch (Exception e) {
-				LOG.error("Could not create SpeciesSearcher "+valueElement.getAttributeValue(NAME)+"; "+e.getCause());
+				LOG.error("Could not create NamedSearcher "+valueElement.getAttributeValue(NAME)+"; "+e.getCause());
 				continue;
 			}
 		}
-		LOG.debug("searchers "+searcherByNameMap);
+		LOG.trace("searchers "+searcherByNameMap);
 	}
 
-	public void createAndStoreSearcher(Element valueElement) {
+	public void createSearcherAndAddToMap(Element valueElement) {
 		ensureSearcherByNameMap();
 		NamedPattern namedPattern = NamedPattern.createFromValueElement(valueElement);
 		if (namedPattern != null) {
+			LOG.trace("added named pattern "+namedPattern);
+			DefaultSearcher searcher = createSearcher(namedPattern);
+			searcherByNameMap.put(namedPattern.getName(), searcher);
+		}
+	}
+
+	public void createSearcherAndAddToMap(NamedPattern namedPattern) {
+		if (namedPattern != null) {
+			ensureSearcherByNameMap();
 			LOG.trace("added named pattern "+namedPattern);
 			DefaultSearcher searcher = createSearcher(namedPattern);
 			searcherByNameMap.put(namedPattern.getName(), searcher);
@@ -390,6 +414,67 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	protected void createSearcherList(ArgumentOption option, ArgIterator argIterator) {
 		List<String> types = argIterator.getStrings(option);
 		createSearcherList(types);
+	}
+
+	protected void createRegexElementList(ArgumentOption option, List<String> tokens) {
+		List<String> regexLocations = option.processArgs(tokens).getStringValues();
+		ensureRegexElementList();
+		for (String regexLocation : regexLocations) {
+			LOG.trace("RegexLocation "+regexLocation);
+			try {
+				Element rawCompoundRegex = new Builder().build(EuclidSource.getInputStream(regexLocation)).getRootElement();
+				List<Element> elements = XMLUtil.getQueryElements(rawCompoundRegex, ".//*[local-name()='regex']");
+				regexElementList.addAll(elements);
+			} catch (Exception e) {
+				LOG.error("Cannot parse regexLocation: ("+e+")"+regexLocation);
+			}
+		}
+	}
+
+	private void ensureRegexElementList() {
+		if (regexElementList == null) {
+			regexElementList = new ArrayList<Element>();
+		}
+	}
+
+	protected void createCompoundRegexes(ArgumentOption option, List<String> tokens) {
+		List<String> regexLocations = option.processArgs(tokens).getStringValues();
+		getOrCreateCompoundRegexList();
+		for (String regexLocation : regexLocations) {
+			LOG.trace("RegexLocation "+regexLocation);
+			try {
+				CompoundRegex compoundRegex = readAndCreateCompoundRegex(EuclidSource.getInputStream(regexLocation));
+				compoundRegexList.add(compoundRegex);
+			} catch (Exception e) {
+				LOG.error("Cannot parse regexLocation: ("+e+")"+regexLocation);
+			}
+			
+		}
+	}
+
+	public CompoundRegexList getOrCreateCompoundRegexList() {
+		if (compoundRegexList == null) {
+			compoundRegexList = new CompoundRegexList();
+		}
+		return compoundRegexList;
+	}
+
+	/** creates a regex from InputStream if possible
+	 * 	 * 
+	 * @param file
+	 * @param is TODO
+	 * @return null if not a regex file
+	 * @exception RuntimeException if cannot read/parse
+	 */
+	public CompoundRegex readAndCreateCompoundRegex(InputStream is) {
+		Element rootElement = null;
+		try {
+			Document doc = new Builder().build(is);
+			rootElement = doc.getRootElement();
+		} catch (Exception e) {
+			throw new RuntimeException("Cannot read or parse regexInputStream", e);
+		}
+		return new CompoundRegex(this, rootElement);
 	}
 
 }

@@ -24,7 +24,7 @@ public class RegressionDemoTest {
 	public void testIdentifiersArgProcessor() throws Exception {
 		// SHOWCASE
 		String cmd = "-q target/examples_16_1_1/ -i scholarly.html --context 25 40 "
-				+ "--id.identifier --id.type clin.nct clin.isrctn";
+				+ "--id.identifier --id.regex regex/identifiers.xml --id.type clin.nct clin.isrctn";
 		Fixtures.runStandardTestHarness(
 				new File("src/test/resources/org/xmlcml/ami2/regressiondemos/http_www.trialsjournal.com_content_16_1_1/"),
 				new File("target/examples_16_1_1/"), 

@@ -67,7 +67,7 @@ public class CompoundRegex {
 
 	// make combined patternString (experimental still) 
 
-	List<RegexComponent> getOrCreateRegexComponentList() {
+	public List<RegexComponent> getOrCreateRegexComponentList() {
 		if (regexComponentList == null) {
 			regexComponentList = new ArrayList<RegexComponent>();
 			if (COMPOUND_REGEX.equals(root.getLocalName())) {
@@ -125,7 +125,7 @@ public class CompoundRegex {
 		RegexComponent regexComponent = null;
 		if (regexElement != null) {
 			regexComponent = new RegexComponent(this, regexArgProcessor);
-			regexComponent.setElement(regexElement);
+			regexComponent.setRegexElement(regexElement);
 			regexComponent.createPatternAndFields();
 			regexComponent.expandAddDefaultsAndVerifyRegex();
 		}

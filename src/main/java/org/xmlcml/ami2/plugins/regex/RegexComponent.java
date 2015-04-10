@@ -30,10 +30,10 @@ public class RegexComponent {
 		LOG.setLevel(Level.DEBUG);
 	}
 
-	private static final String FIELDS = "fields";
+	public static final String FIELDS = "fields";
 	private static final String WEIGHT = "weight";
 	private static final String PATTERN = "pattern";
-	private static final String REGEX = "regex";
+	public static final String REGEX = "regex";
 	private static final String CASE = "case";
 	public static final String INSENSITIVE = "insensitive";
 	public static final String REQUIRED = "required";
@@ -141,8 +141,12 @@ public class RegexComponent {
 		return "("+value+")";
 	}
 
-	void setElement(Element regexElement) {
+	void setRegexElement(Element regexElement) {
 		this.regexElement = regexElement;
+	}
+	
+	public Element getRegexElement() {
+		return regexElement;
 	}
 
 	public String getOrCreateValue() {
