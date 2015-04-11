@@ -1,23 +1,17 @@
 package org.xmlcml.ami2.plugins.identifier;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.regex.Pattern;
 
 import nu.xom.Element;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.DefaultSearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
+import org.xmlcml.ami2.plugins.regex.RegexSearcher;
 import org.xmlcml.args.ArgIterator;
 import org.xmlcml.args.ArgumentOption;
-import org.xmlcml.euclid.IntRange;
-import org.xmlcml.files.QuickscrapeNorma;
-import org.xmlcml.files.ResultsElement;
-import org.xmlcml.html.HtmlP;
 
 /** 
  * Processes commandline arguments.
@@ -51,6 +45,21 @@ public class IdentifierArgProcessor extends AMIArgProcessor {
 		createAndStoreNamedSearchers(option);
 	}
 
+	public void parseRegex(ArgumentOption option, ArgIterator argIterator) {
+		List<String> tokens= argIterator.createTokenListUpToNextNonDigitMinus(option);
+		createRegexElementList(option, tokens); // compoundRegexList
+		createSearchers();
+	}
+
+	private void createSearchers() {
+		ensureSearcherList();
+		for (Element regexElement : regexElementList) {
+			NamedPattern namedPattern = NamedPattern.createFromRegexElement(regexElement);
+			createSearcherAndAddToMap(namedPattern);
+		}
+		LOG.trace("MAP: "+searcherByNameMap);
+	}
+
 	public void parseTypes(ArgumentOption option, ArgIterator argIterator) {
 		createSearcherList(option, argIterator);
 	}
@@ -64,6 +73,13 @@ public class IdentifierArgProcessor extends AMIArgProcessor {
 	}
 	
 	// =============================
+
+	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
+		DefaultSearcher defaultSearcher = new DefaultSearcher(this);
+		defaultSearcher.setNamedPattern(namedPattern);
+		return defaultSearcher;
+	}
+
 
 
 }

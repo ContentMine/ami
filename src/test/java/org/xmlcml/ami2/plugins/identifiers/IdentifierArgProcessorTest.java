@@ -49,7 +49,7 @@ public class IdentifierArgProcessorTest {
 	public void testIdentifiersArgProcessor() throws Exception {
 		// SHOWCASE
 		String cmd = "-q target/examples_16_1_1/ -i scholarly.html --context 25 40 "
-				+ "--id.identifier --id.type clin.nct clin.isrctn";
+				+ "--id.identifier --id.regex regex/identifiers.xml --id.type clin.nct clin.isrctn";
 		Fixtures.runStandardTestHarness(
 				Fixtures.TEST_TRIALS_16_1_1, 
 				new File("target/examples_16_1_1/"), 
@@ -69,6 +69,17 @@ public class IdentifierArgProcessorTest {
 		AMIArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
 		File enaFile = new File(newDir, "results/identifier/ena/results.xml");
+		Element enaElement = new Builder().build(enaFile).getRootElement();
+	}
+	
+	@Test
+	public void testNewIdentifier() throws Exception {
+		File newDir = new File("target/plosone/identifier");
+		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
+		String args = "--id.identifier --context 35 50 --id.regex regex/identifiers.xml --id.type bio.ena -q "+newDir+" -i scholarly.html"; 
+		AMIArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
+		identifierArgProcessor.runAndOutput();
+		File enaFile = new File(newDir, "results/identifier/bio.ena/results.xml");
 		Element enaElement = new Builder().build(enaFile).getRootElement();
 	}
 	

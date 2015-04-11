@@ -53,24 +53,24 @@ public class Fixtures {
 	 */
 	public static void runStandardTestHarness(File cmDirectory, File temp, AMIPlugin plugin, String args, String ... pluginAndOptions)
 			throws IOException {
-		LOG.debug("++++++++++++++++++++++   harness   +++++++++++++++++++++++");
-		LOG.debug("temp exists: "+temp+"; e: "+temp.exists()+"; d "+temp.isDirectory());
+		LOG.trace("++++++++++++++++++++++   harness   +++++++++++++++++++++++");
+		LOG.trace("temp exists: "+temp+"; e: "+temp.exists()+"; d "+temp.isDirectory());
 		QuickscrapeNorma qsNorma = new QuickscrapeNorma(cmDirectory);
 		FileUtils.deleteDirectory(temp);
 		qsNorma.copyTo(temp, true);
 		temp.mkdirs();
-		LOG.debug("temp exists: "+temp+"; e: "+temp.exists()+"; d "+temp.isDirectory());
+		LOG.trace("temp exists: "+temp+"; e: "+temp.exists()+"; d "+temp.isDirectory());
 		List<File> files = new ArrayList<File>(FileUtils.listFiles(temp, null, true));
-		LOG.debug("FILES: "+files);
+		LOG.trace("FILES: "+files);
 		
 		Assert.assertFalse("exists? "+RESULTS_XML, qsNorma.hasResultsXML());
 		AMIArgProcessor argProcessor = (AMIArgProcessor) plugin.getArgProcessor();
 		argProcessor.parseArgs(args);
 		argProcessor.runAndOutput();
 		files = new ArrayList<File>(FileUtils.listFiles(temp, null, true));
-		LOG.debug("FILES after: "+files);
-		LOG.debug("==========================="+argProcessor+"=============================");
-		LOG.debug("results exists? "+new File(temp,"results").exists());
+		LOG.trace("FILES after: "+files);
+		LOG.trace("==========================="+argProcessor+"=============================");
+		LOG.trace("results exists? "+new File(temp,"results").exists());
 		
 		for (String pluginAndOption : pluginAndOptions) {
 			Fixtures.compareExpectedAndResults(qsNorma.getDirectory(), temp, pluginAndOption + RESULTS_XML);
