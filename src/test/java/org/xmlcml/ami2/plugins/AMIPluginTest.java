@@ -9,4 +9,5 @@ public class AMIPluginTest {
 		String[] args = {"regex"};
 		AMIPlugin.main(args);
 	}
+	
 }

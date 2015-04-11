@@ -76,6 +76,8 @@ public class Fixtures {
 			Fixtures.compareExpectedAndResults(qsNorma.getDirectory(), temp, pluginAndOption + RESULTS_XML);
 		}
 	}
+	
+	
 
 	/** compares results.xml files in expected and actual directories.
 	 * 

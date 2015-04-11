@@ -7,7 +7,7 @@ rm -rf temp*
 
 echo identifiers
 cp -R http_www.trialsjournal.com_content_16_1_1/ temp0
-../../../../../../../target/appassembler/bin/ami2-identifier -q temp0 -i scholarly.html --context 25 40 --id.identifier --id.type clin.nct clin.isrctn
+../../../../../../../target/appassembler/bin/ami2-identifier -q temp0 -i scholarly.html --context 25 40 --id.identifier --id.regex ../../../../../../../regex/identifiers.xml --id.type clin.nct clin.isrctn
 
 echo regex
 cp -R bmc_trials_15_1_511/ temp1

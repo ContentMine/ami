@@ -3,6 +3,10 @@ package org.xmlcml.ami2.plugins;
 import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.eclipse.jetty.util.log.Log;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
 import org.xmlcml.ami2.plugins.identifier.IdentifierPlugin;
@@ -10,6 +14,7 @@ import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.ami2.plugins.sequence.SequencePlugin;
 import org.xmlcml.ami2.plugins.species.SpeciesPlugin;
 import org.xmlcml.ami2.plugins.word.WordPlugin;
+import org.xmlcml.files.QuickscrapeNorma;
 
 /** collection of archetypal tests from each plugin.
  * 
@@ -20,6 +25,12 @@ import org.xmlcml.ami2.plugins.word.WordPlugin;
  */
 public class RegressionDemoTest {
 
+	
+	private static final Logger LOG = Logger
+			.getLogger(RegressionDemoTest.class);
+	static {
+		LOG.setLevel(Level.DEBUG);
+	}
 	@Test
 	public void testIdentifiersArgProcessor() throws Exception {
 		// SHOWCASE
@@ -102,6 +113,63 @@ public class RegressionDemoTest {
 				"word/lengths/", "word/frequencies/");
 		
 
+	}
+
+	@Test
+	public void testMultipleInput() throws Exception {
+		// SHOWCASE
+		String cmd0 = "--sp.species --context 35 50 --sp.type binomial genus genussp ";
+		String cmd1 = " -i scholarly.html"; 
+
+		String[] testFilenames = {
+				"src/test/resources/org/xmlcml/ami2/regressiondemos/bmc_trials_15_1_511/",
+				"src/test/resources/org/xmlcml/ami2/regressiondemos/http_www.trialsjournal.com_content_16_1_1/",
+		};
+		String[] copyFilenames = {
+				"target/multiple/bmc_trials_15_1_511/",
+				"target/multiple/http_www.trialsjournal.com_content_16_1_1/",
+//				"target/plosone/species/malaria",
+//				"target/plosone/species/malaria",
+		};
+		if (testFilenames.length != copyFilenames.length) {
+			throw new RuntimeException("copy length ("+copyFilenames.length+") != test length ("+testFilenames.length+")");
+		}
+		int i = 0;
+		File[] copyFiles = new File[copyFilenames.length];
+		for (String testFilename : testFilenames) {
+			File testFile = new File(testFilename);
+			if (!testFile.exists()) {
+				throw new RuntimeException("testFile does not exist: "+testFile);
+			}
+			if (!testFile.isDirectory()) {
+				throw new RuntimeException("testFile is not a directory: "+testFile);
+			}
+			try {
+				new QuickscrapeNorma(testFile);
+			} catch (Exception e) {
+				throw new RuntimeException(testFile + " is not a ContentMine directory");
+			}
+			copyFiles[i] = new File(copyFilenames[i]);
+//			FileUtils.copyDirectory(testFile, copyFiles[i]);
+			i++;
+		}
+		String cmd = "";
+		cmd += cmd0;
+		cmd += " -q ";
+		for (File copyFile : copyFiles) {
+			cmd += " "+copyFile+" ";
+		}
+		cmd += cmd1;
+		LOG.debug(cmd);
+//		cmd = "--sp.species --context 35 50 --sp.type binomial genus genussp -q target/plosone/species/malaria target/plosone/species/malaria -i scholarly.html"; 
+//		cmd = "--sp.species --context 35 50 --sp.type binomial genus genussp -q target/plosone/species/malaria -i scholarly.html";
+		String[] args = cmd.split("\\s+");
+//		LOG.debug(cmd);
+		
+		SpeciesPlugin plugin = new SpeciesPlugin(args);
+		plugin.runAndOutput();
+		
+		
 	}
 
 
