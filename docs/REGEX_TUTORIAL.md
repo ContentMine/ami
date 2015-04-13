@@ -9,7 +9,7 @@ You should be familiar with how to run `ami-species`. Regex uses very similar co
 `ami-regex` reads in 1 or more regexes from files, or URLs. The typical format is
 
 ```
-ami2-regex -q target/plos10 -i scholarly.html --context 25 40 --r.regex regex/consort0.xml
+ami2-regex -q workshop/02_ami/plos_one_latest_10 -i scholarly.html --context 25 40 --r.regex workshop/02_ami/regex/consort0.xml
 ```
 Here:
  *  `-q` is the location of the CM directories to be searched (as before).
@@ -68,7 +68,7 @@ Most of the words can have suffix variants. We indicate this by a tilde which we
 There's no reason why more than regex should not be used. Try
 
 ```
-ami2-regex -q target/plos10 -i scholarly.html --context 25 40 --r.regex regex/consort0.xml  regex/publication.xml
+ami2-regex -q workshop/02_ami/plos_one_latest_10 -i scholarly.html --context 25 40 --r.regex workshop/02_ami/regex/consort0.xml  workshop/02_ami/regex/publication.xml
 ```
 
 ## identifiers
@@ -99,9 +99,9 @@ This shorthand is useful for power-users but confusing for beginners, but there 
 
 the query looks like:
 ```
-ami2-identifier -q target/plos10 -i scholarly.html --context 25 40 --id.identifier --id.regex regex/identifiers.xml --id.type bio.ena
+ami2-identifier -q workshop/02_ami/plos_one_latest_10 -i scholarly.html --context 25 40 --id.identifier --id.regex workshop/02_ami/regex/identifiers.xml --id.type bio.ena
 ```
-Most of this is familiar. The ` --id.regex regex/identifiers.xml` uses the file regex/identifiers.xml (you may need to add the directory) and `--id.type bio.ena` uses only the `bio.ena` regex in there.
+Most of this is familiar. The ` --id.regex workshop/02_ami/regex/identifiers.xml` uses the file workshop/02_ami/regex/identifiers.xml (you may need to add the directory) and `--id.type bio.ena` uses only the `bio.ena` regex in there.
 
 Results:
 ```
@@ -124,7 +124,18 @@ looks like `e0116215` might be interesting!
 
 Use the clinical trial identifiers (NCT and ISCRTN) to see if any are included:
 ```
-ami2-identifier -q target/plos10 -i scholarly.html --context 25 40 --id.identifier --id.regex regex/identifiers.xml --id.type clin.nct clin.iscrtn
+ami2-identifier -q workshop/02_ami/plos_one_latest_10 -i scholarly.html --context 25 40 --id.identifier --id.regex workshop/02_ami/regex/identifiers.xml --id.type clin.nct clin.iscrtn
 ```
+
+## BagOfWords
+
+A collection of words with frequency of occurrence. We remove common english words ("stopwords"). You can remove others with the
+`w.stopwords` flag.
+
+```
+ami2-word -q workshop/02_ami/plos_one_latest_10 -i scholarly.html --context 35 50 --w.words wordFrequencies --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt
+
+```
+The results are not only in `results.xml` but also `results.html` where we have scaled the font size to represent frequency. 
 
 
