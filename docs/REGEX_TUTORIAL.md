@@ -84,6 +84,7 @@ These are based on regexes, here in `regex/identifiers.xml`. (There could be mul
 	<regex fields="clin.nct">NCT\d{8}</regex>
 	<regex fields="clin.isrctn">ISRCTN.{0,20}\d{8}</regex>
 </compoundRegex>
+```
 
 ### ENA genbank
 
