@@ -83,4 +83,13 @@ public class IdentifierArgProcessorTest {
 		Element enaElement = new Builder().build(enaFile).getRootElement();
 	}
 	
+	@Test
+	public void testSeveralArticles() throws Exception {
+		File newDir = new File("target/plosone/identifiers");
+		FileUtils.copyDirectory(new File("examples/"), newDir);
+		String args = "--id.identifier --context 35 50 --id.regex regex/identifiers.xml --id.type clin.nct clin.isrctn -q "+newDir+" -i scholarly.html"; 
+		AMIArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
+		identifierArgProcessor.runAndOutput();
+	}
+	
 }
