@@ -4,6 +4,7 @@ import java.io.File;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
+import org.xmlcml.ami2.plugins.gene.GenePlugin;
 import org.xmlcml.ami2.plugins.identifier.IdentifierPlugin;
 import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.ami2.plugins.species.SpeciesPlugin;
@@ -55,14 +56,22 @@ public class TutorialTest {
 		identifierPlugin.runAndOutput();
 		
 	}
-	
-	
+		
 	@Test
 	public void testBagOfWords() throws Exception {
 		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/word10"));
 		String args = "-q target/word10/ -i scholarly.html --context 35 50 --w.words wordFrequencies --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
 		WordPlugin wordPlugin = new WordPlugin(args);
 		wordPlugin.runAndOutput();
+		
+	}
+	
+	@Test
+	public void testGene() throws Exception {
+		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/gene10"));
+		String args = "-q target/gene10/ -i scholarly.html --context 35 50 --g.gene --g.type human mouse";
+		GenePlugin genePlugin = new GenePlugin(args);
+		genePlugin.runAndOutput();
 		
 	}
 }

@@ -21,7 +21,7 @@ public class SpeciesResultsElement extends ResultsElement {
 	private static final String SPECIES = "species";
 	private List<String> nameList;
 
-	public SpeciesResultsElement(String title) {
+	private SpeciesResultsElement(String title) {
 		super(title);
 	}
 

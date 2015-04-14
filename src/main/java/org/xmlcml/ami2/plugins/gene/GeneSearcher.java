@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.plugins.species;
+package org.xmlcml.ami2.plugins.gene;
 
 import java.util.List;
 
@@ -13,15 +13,15 @@ import org.xmlcml.files.ResultElement;
 import org.xmlcml.files.ResultsElement;
 import org.xmlcml.html.HtmlP;
 
-public class SpeciesSearcher extends DefaultSearcher {
+public class GeneSearcher extends DefaultSearcher {
 
 	
-	public static final Logger LOG = Logger.getLogger(SpeciesSearcher.class);
+	public static final Logger LOG = Logger.getLogger(GeneSearcher.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 
-	public SpeciesSearcher(AMIArgProcessor argProcessor, NamedPattern namedPattern) {
+	public GeneSearcher(AMIArgProcessor argProcessor, NamedPattern namedPattern) {
 		super(argProcessor, namedPattern);
 	}
 
@@ -47,7 +47,7 @@ public class SpeciesSearcher extends DefaultSearcher {
 
 	@Override
 	public ResultsElement search(List<HtmlP> pElements) {
-		SpeciesResultsElement resultsElement = new SpeciesResultsElement();
+		GeneResultsElement resultsElement = new GeneResultsElement();
 		for (HtmlP pElement : pElements) {
 			String xmlString = getValue(pElement);
 			LOG.trace(xmlString);
@@ -57,10 +57,10 @@ public class SpeciesSearcher extends DefaultSearcher {
 			}
 		}
 		List<String> exactList = resultsElement.getExactList();
-		LinneanNamer linneanNamer = new LinneanNamer();
-		List<String> matchList = linneanNamer.expandAbbreviations(exactList);
-		LOG.trace("EXACT "+exactList+"; MATCH "+matchList);
-		resultsElement.addMatchAttributes(matchList);
+//		LinneanNamer linneanNamer = new LinneanNamer();
+//		List<String> matchList = linneanNamer.expandAbbreviations(exactList);
+//		LOG.trace("EXACT "+exactList+"; MATCH "+matchList);
+//		resultsElement.addMatchAttributes(matchList);
 		
 		return resultsElement;
 	}
@@ -68,8 +68,8 @@ public class SpeciesSearcher extends DefaultSearcher {
 	/**
 	 *  //PLUGIN
 	 */
-	public SpeciesResultElement createResultElement() {
-		return new SpeciesResultElement();
+	public GeneResultElement createResultElement() {
+		return new GeneResultElement();
 	}
 
 }
