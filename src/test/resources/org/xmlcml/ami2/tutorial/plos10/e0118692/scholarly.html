@@ -1,0 +1,2847 @@
+<?xml version="1.0" encoding="UTF-8"?><div tagx="article">
+   <head>
+      <meta content="Public Library of Science" name="citation_publisher"></meta>
+      <meta content="10.1371/journal.pone.0118692" name="citation_doi"></meta>
+      <meta content="Repeatability of Quantitative Sodium Magnetic Resonance Imaging for Estimating Pseudo-Intracellular Sodium Concentration and Pseudo-Extracellular Volume Fraction in Brain at 3 T" name="citation_title"></meta>
+      <title>Repeatability of Quantitative Sodium Magnetic Resonance Imaging for Estimating Pseudo-Intracellular
+         Sodium Concentration and Pseudo-Extracellular Volume Fraction in Brain at 3 T
+      </title>
+      <div tagx="contrib-group">
+         <meta content="Guillaume Madelin" name="citation_author"></meta>
+         <meta content="" name="citation_author_institution_ref"></meta>
+         <meta content="James Babb" name="citation_author"></meta>
+         <meta content="" name="citation_author_institution_ref"></meta>
+         <meta content="Ding Xia" name="citation_author"></meta>
+         <meta content="" name="citation_author_institution_ref"></meta>
+         <meta content="Ravinder R. Regatte" name="citation_author"></meta>
+         <meta content="" name="citation_author_institution_ref"></meta>
+      </div>
+      <meta content="guillaume.madelin@nyumc.org" name="email"></meta>
+      <meta content="Competing Interests: The authors have declared that no competing interests exist." name="conflict"></meta>
+      <meta content="Conceived and designed the experiments: GM. Performed the experiments: GM DX. Analyzed the data: GM JB RRR. Contributed reagents/materials/analysis tools: GM JB. Wrote the paper: GM JB DX RRR." name="contribs"></meta>
+      <meta content="2015-3-9" name="citation_pubdate"></meta>
+      <meta content="Copyright 2015: Madelin et al" name="citation_copyright"></meta>
+      <meta content="Licence This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited" name="citation_licence"></meta>
+      <meta content="This study was supported by the following funding: CTSI Pilot Project Award at NYU Langone Medical Center from National Institutes of Health/National Center for Advancing Translational Sciences grant UL1 TR000038 (GM), and National Institutes of Health R01 AR060238 (RRR). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript." name="citation_funding"></meta>
+      <meta content="15" name="citation_pagecount"></meta>
+      <meta content="Data AvailabilityData are in S1 Dataset." name="citation_data"></meta>
+   </head>
+   <div id="abstract" tag="abstract">
+      <p>The purpose of this study is to assess the repeatability of the quantification of
+         pseudo-intracellular sodium concentration (C
+         <div tagx="sub">1</div>) and pseudo-extracellular volume fraction (α) estimated in brain in vivo using sodium
+         magnetic resonance (MRI) at 3 T. Eleven healthy subjects were scanned twice, with
+         two sodium MRI acquisitions (with and without fluid suppression by inversion recovery),
+         and two double inversion recovery (DIR) proton MRI. DIR MRIs were used to create masks
+         of gray and white matter (GM, WM), that were subsequently applied to the C
+         <div tagx="sub">1</div> and α maps calculated from sodium MRI and a tissue three-compartment model, in order
+         to measure the distributions of these two parameters in GM, WM or full brain (GM+WM)
+         separately. The mean, median, mode, standard deviation (std), skewness and kurtosis
+         of the C
+         <div tagx="sub">1</div> and α distributions in whole GM, WM and full brain were calculated for each subject,
+         averaged over all data, and used as parameters for the repeatability assessment. The
+         coefficient of variation (CV) was calculated as a measure of reliability for the detection
+         of intra-subject changes in C
+         <div tagx="sub">1</div> and αfor each parameter, while intraclass correlation (ICC) was used as a measure
+         of repeatability. It was found that the CV of most of the parameters was around 10–20%
+         (except for C
+         <div tagx="sub">1</div> kurtosis which is about 40%) for C
+         <div tagx="sub">1</div> and α measurements, and that ICC was moderate to very good (0.4 to 0.9) for C
+         <div tagx="sub">1</div> parameters and for some of the α parameters (mainly skewness and kurtosis). In conclusion,
+         the proposed method could allow to reliably detect changes of 50% and above of the
+         different measurement parameters of C
+         <div tagx="sub">1</div> and αin neuropathologies (multiple sclerosis, tumor, stroke, Alzheimer’s disease)
+         compared to healthy subjects, and that skewness and kurtosis of the distributions
+         of C
+         <div tagx="sub">1</div> and αseem to be the more sensitive parameters to these changes.
+      </p>
+   </div>
+   <div id="sec001">
+      <h2>Introduction</h2>
+      <p>Sodium ions (
+         <sup>23</sup>Na
+         <sup>+</sup>) are vital components in the human brain, and their homeostasis is a major process
+         in cells through coupled exchange with potassium ions K
+         <sup>+</sup> between the intra- and extracellular compartments through the Na
+         <sup>+</sup>/K
+         <sup>+</sup>-ATPase (sodium-potassium pump) [
+         <span ref-type="bibr" rid="pone.0118692.ref001">1</span>]. This pumping process maintains a constant gradient of sodium concentration across
+         the cell membrane (about 10–15 mM intracellular versus 140 mM extracellular), which
+         is used to control cell volume, pH balance, glucose and neurotransmitter transport,
+         membrane electrical potential (and pulse transmission), and protect the cells from
+         swelling. Dysregulation of the sodium-potassium pump, or of ATP-dependent processes
+         in the cells, will provoke dysregulation of ion homeostasis and therefore leads to
+         an increase of intracellular sodium concentration (C
+         <div tagx="sub">1</div>) as the gradient cannot be sustained anymore, and furthermore to cell death and subsequent
+         increase of extracellular volume fraction (
+         <i>α</i>). These two parameters (C
+         <div tagx="sub">1</div> and 
+         <i>α</i>) are very sensitive to cell viability and ion homeostasis [
+         <span ref-type="bibr" rid="pone.0118692.ref002">2</span>–
+         <span ref-type="bibr" rid="pone.0118692.ref004">4</span>]. Measuring variations in C
+         <div tagx="sub">1</div> in brain in vivo could help assess the degree of cell hypometabolism or injury [
+         <span ref-type="bibr" rid="pone.0118692.ref003">3</span>], tumor malignancy [
+         <span ref-type="bibr" rid="pone.0118692.ref005">5</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref006">6</span>] or resistance to therapy [
+         <span ref-type="bibr" rid="pone.0118692.ref007">7</span>]. Measuring variations in 
+         <i>α</i> could give more information on effusion or disruption of cell packing [
+         <span ref-type="bibr" rid="pone.0118692.ref008">8</span>], dehydration [
+         <span ref-type="bibr" rid="pone.0118692.ref009">9</span>], changes in vascularization and tumor edema angiogenesis [
+         <span ref-type="bibr" rid="pone.0118692.ref010">10</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref011">11</span>] or metabolite clearance in the brain [
+         <span ref-type="bibr" rid="pone.0118692.ref012">12</span>]. Measuring both C
+         <div tagx="sub">1</div> and 
+         <i>α</i> in vivo could therefore be of great importance for assessing early signs of neuropathologies
+         characterized by a loss of cell integrity or homeostasis, such as brain tumors [
+         <span ref-type="bibr" rid="pone.0118692.ref013">13</span>–
+         <span ref-type="bibr" rid="pone.0118692.ref015">15</span>], multiple sclerosis [
+         <span ref-type="bibr" rid="pone.0118692.ref016">16</span>], stroke [
+         <span ref-type="bibr" rid="pone.0118692.ref017">17</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref018">18</span>], or Alzheimer’s disease [
+         <span ref-type="bibr" rid="pone.0118692.ref019">19</span>].
+      </p>
+      <p>Sodium magnetic resonance imaging (MRI) [
+         <span ref-type="bibr" rid="pone.0118692.ref002">2</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref020">20</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref021">21</span>] is a non-invasive MRI technique based on the detection of the sodium ions present
+         in different concentrations in biological tissues [
+         <span ref-type="bibr" rid="pone.0118692.ref002">2</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref020">20</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref022">22</span>], that could allow us to measure directly C
+         <div tagx="sub">1</div> and 
+         <i>α</i> in a quantitative manner. We recently developed a simple method based on sodium MRI
+         along with double inversion recovery (DIR) proton MRI, for estimating these two parameters
+         in the gray matter (GM), white matter (WM) and full brain separately [
+         <span ref-type="bibr" rid="pone.0118692.ref023">23</span>]. This method is based on two sodium acquisitions, with and without fluid (cerebro-spinal
+         fluid—CSF—and extracellular) suppression by inversion recovery, and a three-compartment
+         model (intracellular, extracellular and solid compartments) for quantifying simultaneously
+         C
+         <div tagx="sub">1</div> and 
+         <i>α</i> in brain. In this article, we will refer to C
+         <div tagx="sub">1</div> and 
+         <i>α</i> as the pseudo-intracellular sodium concentration and pseudo-extracellular volume
+         fraction, respectively. The term ‘pseudo’ represents experimental uncertainties arising
+         from low signal-to-noise ratio (SNR) of sodium MRI, partial volume effects, inter-compartmental
+         T1 variations (between intracellular and extracellular spaces), imperfect inversion
+         pulse, and presence of signal from bound sodium in the extracellular compartment that
+         is not completely suppressed by IR and which can therefore reduce the accuracy of
+         C
+         <div tagx="sub">1</div> and 
+         <i>α</i> calculations. The final results can be presented as 3D maps of C
+         <div tagx="sub">1</div> and 
+         <i>α</i> and as distributions of C
+         <div tagx="sub">1</div> and 
+         <i>α</i> values for whole GM, WM or full brain. These distributions can be characterized by
+         global statistical measures such as mean, median, mode, standard deviation (std),
+         skewness or kurtosis, which could be used for detection of pathologies in brain. In
+         the present work, we want to assess the repeatability of these measures on healthy
+         volunteers scanned twice (within a month, on average) on a clinical 3 T scanner, in
+         order to determine the order of magnitude of the changes in C
+         <div tagx="sub">1</div> and 
+         <i>α</i> that could be detectable in patients with neuropathologies.
+      </p>
+   </div>
+   <div id="sec002">
+      <h2>Materials and Methods</h2>
+      <div id="sec003">
+         <h3>Volunteers and Ethics Statement</h3>
+         <p>The brains of eleven healthy volunteers (6 men, 5 women, mean age = 32.1 ± 7.9 years)
+            were scanned twice within a month (on average) with exactly the same proton/sodium
+            protocol. This study was approved by the institutional review board (IRB) of New York
+            University Langone Medical Center and all volunteers signed informed consent form
+            (#11783, Technical Development of up to 7T Magnetic Field Level) prior to the scans.
+         </p>
+      </div>
+      <div id="sec004">
+         <h3>MRI hardware</h3>
+         <p>All scans were performed at 3 T on a Tim Trio system (Siemens, Erlangen, Germany)
+            using a dual-tuned 
+            <sup>1</sup>H/
+            <sup>23</sup>Na birdcage radiofrequency (RF) coil tuned at 128/33 MHz (Stark Contrast, Erlangen,
+            Germany).
+         </p>
+      </div>
+      <div id="sec005">
+         <h3>Proton MRI acquisition</h3>
+         <p>Two double inversion recovery (DIR) MRI acquisitions were performed. The first DIR
+            image was acquired in order to suppress both CSF and WM using the DIR Turbo Spin Echo
+            SPACE sequence [
+            <span ref-type="bibr" rid="pone.0118692.ref024">24</span>, 
+            <span ref-type="bibr" rid="pone.0118692.ref025">25</span>] with the following parameters: TR = 7500 ms, TE = 300 ms, field-of-view (FOV) =
+            220×320×320 mm
+            <sup>3</sup> isocenter, resolution = 2.5 mm isotropic, inversion times TI
+            <div tagx="sub">1</div> = 2650 ms and TI
+            <div tagx="sub">2</div> = 550 ms, time of acquisition (TA) = 4:00 min. The second DIR image was acquired
+            in order to suppress both CSF and GM with the same parameters as the first DIR except
+            TI
+            <div tagx="sub">1</div> = 2800 ms and TI
+            <div tagx="sub">2</div> = 800 ms.
+         </p>
+      </div>
+      <div id="sec006">
+         <h3>Sodium MRI acquisition</h3>
+         <p>Sodium acquisitions were performed using the 3D ultrashort echo time (UTE) non-Cartesian
+            FLORET sequence [
+            <span ref-type="bibr" rid="pone.0118692.ref026">26</span>] with the following parameters:
+         </p>
+         <div tagx="list">
+            <div tagx="list-item">
+               <p>Sequence 1—without fluid suppression: TR = 80 ms, TE = 0.2 ms, flip angle (FA) = 80°/0.5
+                  ms, 3 hubs at 45°, 200 interleaves/hub, 745 data points / interleaf, dwell time 10
+                  
+                  <i>μ</i>s, 14 averages, FOV = 320 mm isotropic, acquisition resolution = 5 mm isotropic. TA
+                  = 11:00 min.
+               </p>
+            </div>
+            <div tagx="list-item">
+               <p>Sequence 2—with fluid suppression by inversion recovery (IR): a ‘soft’ rectangular
+                  inversion pulse [
+                  <span ref-type="bibr" rid="pone.0118692.ref027">27</span>] of 180°/6 ms was added to the FLORET sequence with an inversion time TI = 24 ms
+                  (calculated from the centers of the pulses), TR = 100 ms, TE = 0.2 ms, FA = 90°/0.5
+                  ms, 3 hubs at 45°, 85 interleaves/hub, 746 data points / interleaf, dwell time 10
+                  
+                  <i>μ</i>s, 40 averages, FOV = 320 mm isotropic isocenter, acquisition resolution = 6.7 mm
+                  isotropic. TA = 17:00 min. A spoiler gradient of 4 ms was also included during TI
+                  for removing any transverse magnetization generated by imperfections of the inversion
+                  pulse.
+               </p>
+            </div>
+         </div>
+         <p>All sodium images were reconstructed offline in Matlab (MathWorks, Natick, MA, USA)
+            with standard 3D regridding [
+            <span ref-type="bibr" rid="pone.0118692.ref028">28</span>] and density compensation [
+            <span ref-type="bibr" rid="pone.0118692.ref029">29</span>] with a nominal resolution of 2.5 mm isotropic (128×128×128 voxels), matching the
+            nominal resolution of the DIR proton images.
+         </p>
+      </div>
+      <div id="sec007">
+         <h3>Data processing summary</h3>
+         <p>The data processing (in Matlab) for calculating the final pseudo-intracellular sodium
+            concentration (C
+            <div tagx="sub">1</div>) and pseudo-extracellular volume fraction (
+            <i>α</i>) maps is described in details in Ref. [
+            <span ref-type="bibr" rid="pone.0118692.ref023">23</span>]. In the present article, we will just summarize this data processing in 4 steps:
+         </p>
+         <div tagx="list">
+            <div tagx="list-item">
+               <p>
+                  <b>Calibration phantoms</b>
+                  <b>and linear regression</b>: The signal from five calibration phantoms (Agar gel 3% with 10, 30, 50, 70 and 100
+                  mM NaCl, 17 mm diameter and 100 mm length) placed within the FOV on the side of the
+                  head was measured and averaged over 4 consecutive slices (10 voxels/phantom/slice).
+                  Their relaxation times were also measured as T1 = 38 ms and T2* = 7 ms at 3 T. The
+                  loss of signal of the sodium phantoms due to relaxation during RF pulses and delays
+                  was estimated by full density operator simulation of spin 3/2 dynamics [
+                  <span ref-type="bibr" rid="pone.0118692.ref030">30</span>–
+                  <span ref-type="bibr" rid="pone.0118692.ref032">32</span>] during the RF pulse sequence and was used to correct the phantom signals, by factors
+                  the 1.10 (sequence 1) and 1.60 (sequence 2). Linear regression of the corrected signals
+                  of the phantoms versus their sodium concentrations was then performed (
+                  <span ref-type="fig" rid="pone.0118692.g001">Fig. 1A</span>). Linear regression was considered as valid only when the coefficients of determination
+                  R
+                  <sup>2</sup> ⩾ 0.99 and adjusted 
+                  <div tagx="inline-formula">
+                     <div tagx="math">
+                        <div tagx="mrow">
+                           <div tagx="msubsup">
+                              <div tagx="mi">R</div>
+                              <div tagx="mrow">
+                                 <div tagx="mi">a</div>
+                                 <div tagx="mi">d</div>
+                                 <div tagx="mi">j</div>
+                              </div>
+                              <div tagx="mn">2</div>
+                           </div>
+                           <div tagx="mo">⩾</div>
+                           <div tagx="mn">0.98</div>
+                        </div>
+                     </div>
+                  </div> [
+                  <span ref-type="bibr" rid="pone.0118692.ref033">33</span>], in order to improve the robustness of the method against noise and signal variations
+                  in the phantoms.
+               </p>
+            </div>
+            <div tagx="list-item">
+               <p>
+                  <b>Intermediate sodium maps</b>: The apparent total sodium concentration (aTSC) and apparent pseudo-intracellular
+                  sodium concentration (aISC) maps were calculated from sequences 1 and 2, respectively,
+                  using the coefficients of the linear regression of phantom signals (
+                  <span ref-type="fig" rid="pone.0118692.g001">Fig. 1A</span>). Using average sodium relaxation times in brain from the literature [
+                  <span ref-type="bibr" rid="pone.0118692.ref002">2</span>, 
+                  <span ref-type="bibr" rid="pone.0118692.ref014">14</span>, 
+                  <span ref-type="bibr" rid="pone.0118692.ref020">20</span>, 
+                  <span ref-type="bibr" rid="pone.0118692.ref021">21</span>, 
+                  <span ref-type="bibr" rid="pone.0118692.ref027">27</span>] (T1∼35 ms, and T2
+                  <div tagx="sub">
+                     <i>short</i>
+                  </div>∼5 ms, T2
+                  <div tagx="sub">
+                     <i>long</i>
+                  </div>∼25 ms, in parenchyma), correction factors of the sodium maps (0.85 for aTSC and 0.5
+                  for aISC) were calculated using full density operator simulation of the sodium spin
+                  dynamics [
+                  <span ref-type="bibr" rid="pone.0118692.ref030">30</span>–
+                  <span ref-type="bibr" rid="pone.0118692.ref032">32</span>] during the RF pulse sequences 1 and 2 respectively.
+               </p>
+            </div>
+            <div tagx="list-item">
+               <p>
+                  <b>GM and WM masks</b>: 3D GM and WM and full brain (WM+GM) masks were calculated from the 
+                  <sup>1</sup>H DIR acquisitions using SPM8 [
+                  <span ref-type="bibr" rid="pone.0118692.ref034">34</span>] in Matlab. From the resulting GM (or WM) SPM probability map, only pixels with a
+                  probability ⩾ 0.75 of being in the GM (or WM) were kept in the GM (or WM) mask. The
+                  aTSC and aISC maps were then multiplied by the GM, WM and full brain masks (
+                  <span ref-type="fig" rid="pone.0118692.g001">Fig. 1A</span>). These masked aTSC and aISC maps were therefore used for the quantification of C
+                  <div tagx="sub">1</div> and 
+                  <b>
+                     <i>α</i>
+                  </b> in order to measure the distributions of these 2 parameters separately in WM, GM
+                  and full brain.
+               </p>
+            </div>
+            <div tagx="list-item">
+               <p>
+                  <b>C
+                     <div tagx="sub">1</div> and 
+                     <i>α</i> maps
+                  </b>: Pseudo-intracellular sodium concentration (C
+                  <div tagx="sub">1</div>) and pseudo-extracellular volume fraction (
+                  <i>α</i>) quantification was based on a simple three-compartment model (
+                  <span ref-type="fig" rid="pone.0118692.g001">Fig. 1B</span>). In this model, the extracellular compartment (including interstitial volume, CSF,
+                  plasma and blood) has a constant average sodium concentration C
+                  <div tagx="sub">2</div>∼140 mM [
+                  <span ref-type="bibr" rid="pone.0118692.ref002">2</span>, 
+                  <span ref-type="bibr" rid="pone.0118692.ref018">18</span>, 
+                  <span ref-type="bibr" rid="pone.0118692.ref020">20</span>, 
+                  <span ref-type="bibr" rid="pone.0118692.ref021">21</span>, 
+                  <span ref-type="bibr" rid="pone.0118692.ref035">35</span>]. We also considered that the water (fluid) volume fraction is constant and take
+                  averages values w
+                  <div tagx="sub">
+                     <i>WM</i>
+                  </div> = 0.7, w
+                  <div tagx="sub">
+                     <i>GM</i>
+                  </div> = 0.85 and w
+                  <div tagx="sub">
+                     <i>brain</i>
+                  </div> = 0.775 (mean value from WM and GM)[
+                  <span ref-type="bibr" rid="pone.0118692.ref036">36</span>–
+                  <span ref-type="bibr" rid="pone.0118692.ref038">38</span>]. We also assumed here that all extracellular sodium signals are completely suppressed
+                  by inversion recovery in sequence 2, or within noise level of the image (due to imperfection
+                  of inversion pulse and possible variations of T1 from CSF and other extracellular
+                  fluids). The value of each voxel of the aTSC map is by definition equal to the total
+                  sodium concentration within each voxel: aTSC = (C
+                  <div tagx="sub">1</div>×V
+                  <div tagx="sub">1</div>+C
+                  <div tagx="sub">2</div>×V
+                  <div tagx="sub">2</div>)/V
+                  <div tagx="sub">
+                     <i>t</i>
+                  </div> (with V
+                  <div tagx="sub">
+                     <i>t</i>
+                  </div> = total volume of the voxel). The value of each voxel of the aISC map is by definition
+                  equal to the intracellular sodium concentration only: aISC=(C
+                  <div tagx="sub">1</div>×V
+                  <div tagx="sub">1</div>)/V
+                  <div tagx="sub">
+                     <i>t</i>
+                  </div>. From these assumptions and equations, we can calculate the unknown parameters C
+                  <div tagx="sub">1</div> and 
+                  <i>α</i> of interest, using the relationships given in 
+                  <span ref-type="fig" rid="pone.0118692.g001">Fig. 1B</span> and with w taking the values w
+                  <div tagx="sub">
+                     <i>WM</i>
+                  </div>, w
+                  <div tagx="sub">
+                     <i>GM</i>
+                  </div> and w
+                  <div tagx="sub">
+                     <i>brain</i>
+                  </div> depending on the masked aTSC and aISC maps used: α = (aTSC−aISC)/C
+                  <div tagx="sub">2</div> and C
+                  <div tagx="sub">1</div> = (C
+                  <div tagx="sub">2</div>×aISC)/(w×C
+                  <div tagx="sub">2</div>−aTSC+aISC). This calculation is performed for each voxel. All voxels are then recombined
+                  in maps of C
+                  <div tagx="sub">1</div> and 
+                  <i>α</i> in WM, GM and full brain, as shown in 
+                  <span ref-type="fig" rid="pone.0118692.g001">Fig. 1C</span>. The distribution of values of C
+                  <div tagx="sub">1</div> and 
+                  <i>α</i> over whole WM, GM or full brain can also be plotted as histograms (
+                  <span ref-type="fig" rid="pone.0118692.g001">Fig. 1D</span>), and the properties of each distribution can be characterized for each volunteer
+                  in terms of histogram summary statistics: mean, median, mode, standard deviation (std),
+                  skewness and kurtosis. The reliability of the method will be assessed in terms of
+                  repeatability of these six summary statistics.
+               </p>
+            </div>
+         </div>
+         <div tagx="fig">
+            <div tagx="object-id">10.1371/journal.pone.0118692.g001</div>
+            <div tagx="label">Fig 1</div>
+            <caption>
+               <div tagx="title">Summary of the brain data MRI acquisition and processing.</div>
+               <p>
+                  <b>A</b>. (
+                  <b>1</b>) Sodium MRI acquisition with and without IR, and proton DIR acquisition. (
+                  <b>2</b>) Linear regression of reference phantoms signals. (
+                  <b>3</b>) Calculation of aTSC and aISC maps. (
+                  <b>4</b>) Calculation of the masks of GM, WM and full brain (GM+WM) from DIR data. (
+                  <b>5</b>) Multiplication of sodium maps by the masks. 
+                  <b>B</b>. Three-compartment model: compartment 1 = intracellular space of volume V
+                  <div tagx="sub">1</div> and sodium concentration C
+                  <div tagx="sub">1</div>; compartment 2 = extracellular space of volume V
+                  <div tagx="sub">2</div>, sodium concentration C
+                  <div tagx="sub">2</div> and extracellular volume fraction 
+                  <i>α</i>; compartment 3 = solid compartment of volume V
+                  <div tagx="sub">
+                     <i>s</i>
+                  </div> and no sodium. Total volume is V
+                  <div tagx="sub">
+                     <i>t</i>
+                  </div> = V
+                  <div tagx="sub">1</div>+ V
+                  <div tagx="sub">2</div> +V
+                  <div tagx="sub">
+                     <i>s</i>
+                  </div>. Water volume fraction is denoted w. 
+                  <b>C</b>. C
+                  <div tagx="sub">1</div> and 
+                  <i>α</i> maps in full brain, GM, and WM calculated from aTSC, aISC and the 3-compartment model.
+                  
+                  <b>D</b>. Histograms of C
+                  <div tagx="sub">1</div> and 
+                  <i>α</i> values over the whole full brain, whole GM and whole WM data. GM = gray matter, WM
+                  = white matter, GM+WM = full brain. Reproduced from Figs. 
+                  <span ref-type="fig" rid="pone.0118692.g001">1</span>–
+                  <span ref-type="fig" rid="pone.0118692.g004">4</span> from Ref. [
+                  <span ref-type="bibr" rid="pone.0118692.ref023">23</span>].
+               </p>
+            </caption>
+            <div tagx="graphic"></div>
+         </div>
+         <p>Note that no RF (B
+            <div tagx="sub">1</div>) map was acquired in this preliminary study, as it was not deemed necessary from
+            preliminary data acquired while testing this technique. We used a birdcage coil with
+            homogeneous transmit and receive B
+            <div tagx="sub">1</div> fields, no improvement in the quality of the images, nor in the sodium data quantification
+            was observed when B
+            <div tagx="sub">1</div> correction was applied. Moreover, B
+            <div tagx="sub">1</div> correction for the fluid suppressed images (from inversion recovery) is not trivial,
+            as the effect of B
+            <div tagx="sub">1</div> inhomogeneities on the images depends not only on the pulses (inversion and excitation)
+            but also on the T1 of the tissues and the relaxation of their magnetization during
+            the inversion time, which varies in different compartments of the brain.
+         </p>
+      </div>
+      <div id="sec008">
+         <h3>Lesion simulations</h3>
+         <p>Simulations of ‘fluid’ (cystic-like) and ‘solid’ (tumor-like) lesions, either compact
+            (10×10×10 voxels) or randomly distributed over the whole brain (1000 voxels over 86571,
+            which correspond to about 1.15% of all voxels in brain) were also performed and are
+            presented in Supporting Information (
+            <span ref-type="supplementary-material" rid="pone.0118692.s002">S1 File</span>). These simulations are similar to the ones presented in Ref. [
+            <span ref-type="bibr" rid="pone.0118692.ref023">23</span>] Supplementary Material. These simulated lesions include voxels with partial volume
+            effect from the CSF. Random 1-voxel lesions are distributed over the whole brain (including
+            voxels with partial volume effect from CSF). Details are given in the captions of
+            the figures A to D in 
+            <span ref-type="supplementary-material" rid="pone.0118692.s002">S1 File</span>.
+         </p>
+      </div>
+      <div id="sec009">
+         <h3>Statistical analysis</h3>
+         <p>Restricted maximum likelihood estimation of the variance components in a random effects
+            model was used to estimate the intra-subject variance (i.e., the variance between
+            results from replicate scans of the same subject) and inter-subject variance (the
+            variance between results from different subjects) of each measure (i.e., mean, median,
+            mode, std, skewness and kurtosis) within each tissue. The estimated variance components
+            were used to compute the coefficient of variance (CV, in %) as the square root of
+            the intra-subject variance expressed as a percentage of the mean, and the intra-class
+            correlation (ICC) as the inter-subject variance divided by the sum of the intra- and
+            inter-subject variances. By expressing the intra-subject variance relative to the
+            overall mean of a given measure, the CV is considered an indicator of the utility
+            of a measure for detecting within-subject changes over time; temporal changes that
+            are not substantively greater in magnitude than the CV would be difficult to distinguish
+            from changes attributable to random noise. It is noted that the CV is not appropriate
+            for measures (e.g., skewness) that can be both positive and negative since the mean
+            of such a measure does not represent the magnitude of a typical observed value of
+            the measure. The ICC is a measure of the repeatability (or test-retest reliability)
+            of the method [
+            <span ref-type="bibr" rid="pone.0118692.ref039">39</span>]. It ranges from 0 to 1, with values near 1 implying that the ratio of the intra-subject
+            variance to the inter-subject variance is close to 0. As a result, the ICC should
+            be high (close to 1) if a measure is to be potentially useful for the detection of
+            a mean difference between subject groups. In a similar fashion as described in Ref.
+            [
+            <span ref-type="bibr" rid="pone.0118692.ref040">40</span>], repeatability was regarded as very good if ICC ⩾ 0.8 (•• symbol in the tables),
+            good if 0.6 ⩽ ICC &lt; 0.8 (• symbol), fair/moderate if 0.4 ⩽ ICC &lt; 0.6 (∘ symbol) and
+            poor if ICC &lt; 0.4 (◊ symbol). Similarly, CV was regarded as very good if CV ⩽ 10%
+            (•• symbol in the tables), good if 10% &lt; CV ⩽ 20% (• symbol), fair/moderate if 20%
+            &lt; ICC ⩽ 30% (∘ symbol) and poor if CV &gt; 30% (◊ symbol). Statistical computations were
+            performed with SAS 9.3 (SAS Institute, Cary, NC).
+         </p>
+      </div>
+   </div>
+   <div id="sec010">
+      <h2>Results</h2>
+      <p>
+         <span ref-type="fig" rid="pone.0118692.g002">Fig. 2</span> show an example C
+         <div tagx="sub">1</div> and 
+         <i>α</i> maps and distributions from two scans of the same volunteer. Note the higher intensities,
+         mainly in 
+         <i>α</i> maps, near the ventricles, due to residual partial volume effect from CSF. The C
+         <div tagx="sub">1</div> and 
+         <i>α</i> distributions from scan and re-scan present very similar shapes between the two scans,
+         for GM, WM and full brain (GM+WM). 
+         <span ref-type="fig" rid="pone.0118692.g003">Fig. 3</span> and 
+         <span ref-type="fig" rid="pone.0118692.g004">4</span> show scatter plots of mean, median, mode, std, skewness and kurtosis of C
+         <div tagx="sub">1</div> and 
+         <i>α</i> from the eleven volunteers scanned twice (1
+         <sup>st</sup> scan vs. 2
+         <sup>nd</sup> scan), in GM, WM and full brain. Data from the histogram statistics for all volunteers
+         and all scans can be seen in Supporting Information (
+         <span ref-type="supplementary-material" rid="pone.0118692.s001">S1 Dataset</span>). On 
+         <span ref-type="fig" rid="pone.0118692.g003">Fig. 3</span>, we observe that all mean, median and mode C
+         <div tagx="sub">1</div> values from scan/re-scan are in the range 5–20 mM. The mean, median and mode 
+         <i>α</i> values are in the range 0.10–0.25, over whole GM, WM and full brain. Std C
+         <div tagx="sub">1</div> values are all regrouped around 5 mM, while std 
+         <i>α</i> values are in the range 0.05–0.10. On 
+         <span ref-type="fig" rid="pone.0118692.g004">Fig. 4</span>, we observe that most of the values of skewness and kurtosis are close to the diagonal
+         (good match between scan and re-scan measurements), with the exception of a few data
+         points. Skewness values for C
+         <div tagx="sub">1</div> are all regrouped around 0, while they are in the range 1–3 for 
+         <i>α</i>. Kurtosis values for C
+         <div tagx="sub">1</div> are tightly regrouped in the range 3–5, while they are more spread out for 
+         <i>α</i>, in the range 5–15.
+      </p>
+      <div tagx="fig">
+         <div tagx="object-id">10.1371/journal.pone.0118692.g002</div>
+         <div tagx="label">Fig 2</div>
+         <caption>
+            <div tagx="title">Examples of scan-rescan C
+               <div tagx="sub">1</div> and 
+               <i>α</i> maps (1 transverse slice) and distributions (over whole GM, WM and full brain) for
+               one volunteer.
+            </div>
+            <p>
+               <b>A</b>. Scan 1: C
+               <div tagx="sub">1</div> and 
+               <i>α</i> maps. 
+               <b>B</b>. Scan 1: C
+               <div tagx="sub">1</div> and 
+               <i>α</i> distributions. 
+               <b>C</b>. Scan 2: C
+               <div tagx="sub">1</div> and 
+               <i>α</i> maps. 
+               <b>D</b>. Scan 2: C
+               <div tagx="sub">1</div> and 
+               <i>α</i> distributions. Transverse slices were matched visually as well as possible.
+            </p>
+         </caption>
+         <div tagx="graphic"></div>
+      </div>
+      <div tagx="fig">
+         <div tagx="object-id">10.1371/journal.pone.0118692.g003</div>
+         <div tagx="label">Fig 3</div>
+         <caption>
+            <div tagx="title">Plots of mean, median, mode and standard deviation (std) of the C
+               <div tagx="sub">1</div> and 
+               <i>α</i> distributions from 11 volunteers scanned twice (1
+               <sup>st</sup> scan vs. 2
+               <sup>nd</sup> scan).
+            </div>
+            <p>
+               <b>A</b>. Mean and std of C
+               <div tagx="sub">1</div>. 
+               <b>B</b>. Median and mode of C
+               <div tagx="sub">1</div>. 
+               <b>C</b>. Mean and std of 
+               <i>α</i>. 
+               <b>D</b>. Median and mode of 
+               <i>α</i>. GM = gray matter, WM = white matter, Full = full brain (GM+WM).
+            </p>
+         </caption>
+         <div tagx="graphic"></div>
+      </div>
+      <div tagx="fig">
+         <div tagx="object-id">10.1371/journal.pone.0118692.g004</div>
+         <div tagx="label">Fig 4</div>
+         <caption>
+            <div tagx="title">Plots of skewness and kurtosis of the C
+               <div tagx="sub">1</div> and 
+               <i>α</i> distributions from 11 volunteers scanned twice (1
+               <sup>st</sup> scan vs. 2
+               <sup>nd</sup> scan).
+            </div>
+            <p>
+               <b>A</b>. Skewness of C
+               <div tagx="sub">1</div> and 
+               <i>α</i>. 
+               <b>B</b>. Kurtosis of C
+               <div tagx="sub">1</div> and 
+               <i>α</i>. GM = gray matter, WM = white matter, Full = full brain (GM+WM).
+            </p>
+         </caption>
+         <div tagx="graphic"></div>
+      </div>
+      <p>Tables 
+         <span ref-type="table" rid="pone.0118692.t001">1</span> and 
+         <span ref-type="table" rid="pone.0118692.t002">2</span> present the mean
+         <div tagx="sub">all</div>, std
+         <div tagx="sub">all</div>, CV and ICC of the C
+         <div tagx="sub">1</div> and 
+         <i>α</i> measurements, over all data (n = 22, from 11 volunteers scanned twice). Note that
+         the mean and std over all data were labeled mean
+         <div tagx="sub">all</div> and std
+         <div tagx="sub">all</div> to avoid confusion with the mean and std of the measurements of C
+         <div tagx="sub">1</div> and 
+         <i>α</i> for each volunteer and scan. Results can be summarized as below.
+      </p>
+      <div tagx="table-wrap">
+         <div tagx="object-id">10.1371/journal.pone.0118692.t001</div>
+         <div tagx="label">Table 1</div>
+         <caption>
+            <div tagx="title">Repeatability of pseudo-intracellular sodium concentration (C
+               <div tagx="sub">1</div>).
+            </div>
+         </caption>
+         <div tagx="alternatives">
+            <div tagx="graphic"></div>
+            <table frame="box" rules="all" border="0">
+               <colgroup span="1">
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+               </colgroup>
+               <thead>
+                  <tr>
+                     <div tagx="th">
+                        <b>C
+                           <div tagx="sub">1</div> (mM)
+                        </b>
+                     </div>
+                     <div tagx="th">
+                        <b>Mean
+                           <div tagx="sub">all</div>
+                        </b>
+                     </div>
+                     <div tagx="th">
+                        <b>Std
+                           <div tagx="sub">all</div>
+                        </b>
+                     </div>
+                     <div tagx="th">
+                        <b>Inter-Var</b>
+                     </div>
+                     <div tagx="th">
+                        <b>Intra-Var</b>
+                     </div>
+                     <div tagx="th">
+                        <b>CV (%)</b>
+                     </div>
+                     <div tagx="th"></div>
+                     <div tagx="th">
+                        <b>ICC</b>
+                     </div>
+                     <div tagx="th"></div>
+                  </tr>
+               </thead>
+               <div tagx="tbody">
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">
+                        <b>GM</b>
+                     </td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Mean</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>11.41</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.49</td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.48</td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.53</td>
+                     <td align="left" rowspan="1" colspan="1">10.8</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.492</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Median</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>11.74</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.55</td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.60</td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.66</td>
+                     <td align="left" rowspan="1" colspan="1">11.0</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.491</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Mode</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>11.26</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">3.11</td>
+                     <td align="char" char="." rowspan="1" colspan="1">9.02</td>
+                     <td align="char" char="." rowspan="1" colspan="1">2.13</td>
+                     <td align="left" rowspan="1" colspan="1">13.0</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.809</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Std</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>4.32</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.64</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.28</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.27</td>
+                     <td align="left" rowspan="1" colspan="1">11.9</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.517</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Skewness</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>-0.14</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.29</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.07</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.03</td>
+                     <td align="left" rowspan="1" colspan="1">NA</td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.732</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Kurtosis</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>3.37</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.51</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.26</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.05</td>
+                     <td align="left" rowspan="1" colspan="1">6.4</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.846</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">
+                        <b>WM</b>
+                     </td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Mean</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>13.59</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">2.02</td>
+                     <td align="char" char="." rowspan="1" colspan="1">2.80</td>
+                     <td align="char" char="." rowspan="1" colspan="1">2.67</td>
+                     <td align="left" rowspan="1" colspan="1">12.0</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.511</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Median</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>13.71</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">2.20</td>
+                     <td align="char" char="." rowspan="1" colspan="1">3.37</td>
+                     <td align="char" char="." rowspan="1" colspan="1">3.10</td>
+                     <td align="left" rowspan="1" colspan="1">12.8</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.520</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Mode</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>11.89</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">3.39</td>
+                     <td align="char" char="." rowspan="1" colspan="1">9.18</td>
+                     <td align="char" char="." rowspan="1" colspan="1">5.23</td>
+                     <td align="left" rowspan="1" colspan="1">19.2</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.637</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Std</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>4.66</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.87</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.51</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.52</td>
+                     <td align="left" rowspan="1" colspan="1">15.5</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.493</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Skewness</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>-0.07</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.27</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.06</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.03</td>
+                     <td align="left" rowspan="1" colspan="1">NA</td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.681</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Kurtosis</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>4.01</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.68</td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.51</td>
+                     <td align="char" char="." rowspan="1" colspan="1">2.62</td>
+                     <td align="left" rowspan="1" colspan="1">40.4</td>
+                     <td align="left" rowspan="1" colspan="1">◊</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.365</td>
+                     <td align="left" rowspan="1" colspan="1">◊</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">
+                        <b>Full brain</b>
+                     </td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Mean</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>12.56</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.69</td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.98</td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.90</td>
+                     <td align="left" rowspan="1" colspan="1">11.0</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.510</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Median</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>12.79</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.80</td>
+                     <td align="char" char="." rowspan="1" colspan="1">2.26</td>
+                     <td align="char" char="." rowspan="1" colspan="1">2.09</td>
+                     <td align="left" rowspan="1" colspan="1">11.3</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.520</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Mode</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>12.31</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">3.41</td>
+                     <td align="char" char="." rowspan="1" colspan="1">7.89</td>
+                     <td align="char" char="." rowspan="1" colspan="1">7.85</td>
+                     <td align="left" rowspan="1" colspan="1">22.8</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.501</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Std</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>4.66</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.73</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.36</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.36</td>
+                     <td align="left" rowspan="1" colspan="1">12.9</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.497</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Skewness</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>-0.08</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.29</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.07</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.03</td>
+                     <td align="left" rowspan="1" colspan="1">NA</td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.728</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Kurtosis</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>3.58</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.66</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.44</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.04</td>
+                     <td align="left" rowspan="1" colspan="1">5.6</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.916</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                  </tr>
+               </div>
+            </table>
+         </div>
+         <div tagx="table-wrap-foot">
+            <div tagx="fn">
+               <p>Mean and standard deviation (two first columns) of mean, median, mode, standard deviation
+                  (std), skewness and kurtosis of C
+                  <div tagx="sub">1</div> were calculated over all data (n = 22, from 11 volunteers scanned twice). Note that
+                  the mean and std over all data were labeled mean
+                  <div tagx="sub">all</div> and std
+                  <div tagx="sub">all</div> to avoid confusion with the mean and std of the measurements of C
+                  <div tagx="sub">1</div> and 
+                  <i>α</i> for each volunteer and scan. Inter- and intra-subject variance (Inter-Var and Intra-Var
+                  respectively), coefficient of variation (CV, in %) and intra-class correlation (ICC)
+                  were calculated as described in the Statistical analysis section (see text). NA: Not
+                  available; the CV is not appropriate for measures (e.g., skewness) that are not inherently
+                  non-negative. Symbols represent subjective evaluation of CV and ICC: •• = very good
+                  (ICC ⩾ 0.8 or CV ⩽ 10%), • = good (0.6 ⩽ ICC &lt; 0.8 or 10% &lt; CV ⩽ 20%), ∘ = fair/moderate
+                  (0.4 ⩽ ICC &lt; 0.6 or 20% &lt; CV ⩽ 30%), ◊ = poor (ICC &lt; 0.4 or CV ⩾ 30%).
+               </p>
+            </div>
+         </div>
+      </div>
+      <div tagx="table-wrap">
+         <div tagx="object-id">10.1371/journal.pone.0118692.t002</div>
+         <div tagx="label">Table 2</div>
+         <caption>
+            <div tagx="title">Repeatability of pseudo-extracellular volume fraction (
+               <i>α</i>).
+            </div>
+         </caption>
+         <div tagx="alternatives">
+            <div tagx="graphic"></div>
+            <table frame="box" rules="all" border="0">
+               <colgroup span="1">
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+                  <col align="left" valign="top" span="1"></col>
+               </colgroup>
+               <thead>
+                  <tr>
+                     <div tagx="th">
+                        <b>
+                           <i>α</i>
+                        </b>
+                     </div>
+                     <div tagx="th">
+                        <b>Mean
+                           <div tagx="sub">all</div>
+                        </b>
+                     </div>
+                     <div tagx="th">
+                        <b>Std
+                           <div tagx="sub">all</div>
+                        </b>
+                     </div>
+                     <div tagx="th">
+                        <b>Inter-Var</b>
+                     </div>
+                     <div tagx="th">
+                        <b>Intra-Var</b>
+                     </div>
+                     <div tagx="th">
+                        <b>CV (%)</b>
+                     </div>
+                     <div tagx="th"></div>
+                     <div tagx="th">
+                        <b>ICC</b>
+                     </div>
+                     <div tagx="th"></div>
+                  </tr>
+               </thead>
+               <div tagx="tbody">
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">
+                        <b>GM</b>
+                     </td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Mean</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>0.210</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.017</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0001</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0003</td>
+                     <td align="left" rowspan="1" colspan="1">8.9</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.217</td>
+                     <td align="left" rowspan="1" colspan="1">◊</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Median</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>0.196</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.016</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.00007</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0004</td>
+                     <td align="left" rowspan="1" colspan="1">9.7</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.169</td>
+                     <td align="left" rowspan="1" colspan="1">◊</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Mode</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>0.180</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.235</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0002</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0007</td>
+                     <td align="left" rowspan="1" colspan="1">15.3</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.181</td>
+                     <td align="left" rowspan="1" colspan="1">◊</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Std</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>0.078</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.011</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.00009</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.00005</td>
+                     <td align="left" rowspan="1" colspan="1">8.8</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.657</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Skewness</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>1.24</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.38</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.10</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.08</td>
+                     <td align="left" rowspan="1" colspan="1">NA</td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.549</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Kurtosis</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>5.74</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.82</td>
+                     <td align="char" char="." rowspan="1" colspan="1">2.19</td>
+                     <td align="char" char="." rowspan="1" colspan="1">2.32</td>
+                     <td align="left" rowspan="1" colspan="1">26.6</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.485</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">
+                        <b>WM</b>
+                     </td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Mean</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>0.171</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.017</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.00007</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0004</td>
+                     <td align="left" rowspan="1" colspan="1">11.8</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.155</td>
+                     <td align="left" rowspan="1" colspan="1">◊</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Median</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>0.161</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.017</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.00005</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0005</td>
+                     <td align="left" rowspan="1" colspan="1">13.3</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.104</td>
+                     <td align="left" rowspan="1" colspan="1">◊</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Mode</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>0.153</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.022</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0001</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0008</td>
+                     <td align="left" rowspan="1" colspan="1">18.1</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.108</td>
+                     <td align="left" rowspan="1" colspan="1">◊</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Std</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>0.063</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.011</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0001</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.00005</td>
+                     <td align="left" rowspan="1" colspan="1">10.9</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.702</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Skewness</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>1.88</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.43</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.10</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.16</td>
+                     <td align="left" rowspan="1" colspan="1">NA</td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.387</td>
+                     <td align="left" rowspan="1" colspan="1">◊</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Kurtosis</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>10.26</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">2.44</td>
+                     <td align="char" char="." rowspan="1" colspan="1">3.50</td>
+                     <td align="char" char="." rowspan="1" colspan="1">5.02</td>
+                     <td align="left" rowspan="1" colspan="1">21.8</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.411</td>
+                     <td align="left" rowspan="1" colspan="1">∘</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">
+                        <b>Full brain</b>
+                     </td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Mean</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>0.197</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.013</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.00003</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0003</td>
+                     <td align="left" rowspan="1" colspan="1">8.4</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.097</td>
+                     <td align="left" rowspan="1" colspan="1">◊</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Median</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>0.183</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.013</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.00001</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0003</td>
+                     <td align="left" rowspan="1" colspan="1">9.6</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.042</td>
+                     <td align="left" rowspan="1" colspan="1">◊</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Mode</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>0.164</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.020</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.00008</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.0006</td>
+                     <td align="left" rowspan="1" colspan="1">14.9</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.120</td>
+                     <td align="left" rowspan="1" colspan="1">◊</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Std</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>0.076</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.010</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.00008</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.00005</td>
+                     <td align="left" rowspan="1" colspan="1">9.3</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.613</td>
+                     <td align="left" rowspan="1" colspan="1">•</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Skewness</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>1.37</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.24</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.06</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.004</td>
+                     <td align="left" rowspan="1" colspan="1">NA</td>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.938</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Kurtosis</td>
+                     <td align="char" char="." rowspan="1" colspan="1">
+                        <b>6.26</b>
+                     </td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.17</td>
+                     <td align="char" char="." rowspan="1" colspan="1">1.38</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.12</td>
+                     <td align="left" rowspan="1" colspan="1">5.4</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                     <td align="char" char="." rowspan="1" colspan="1">0.922</td>
+                     <td align="left" rowspan="1" colspan="1">••</td>
+                  </tr>
+               </div>
+            </table>
+         </div>
+         <div tagx="table-wrap-foot">
+            <div tagx="fn">
+               <p>Mean and standard deviation (two first columns) of mean, median, mode, standard deviation
+                  (std), skewness and kurtosis of 
+                  <i>α</i> were calculated over all data (n = 22, from 11 volunteers scanned twice). Note that
+                  the mean and std over all data were labeled mean
+                  <div tagx="sub">all</div> and std
+                  <div tagx="sub">all</div> to avoid confusion with the mean and std of the measurements of C
+                  <div tagx="sub">1</div> and 
+                  <i>α</i> for each volunteer and scan. Inter- and intra-subject variance (Inter-Var and Intra-Var
+                  respectively), coefficient of variation (CV, in %) and intra-class correlation (ICC)
+                  were calculated as described in the Statistical analysis section (see text). NA: Not
+                  available; the CV is not appropriate for measures (e.g., skewness) that are not inherently
+                  non-negative. Symbols represent subjective evaluation of CV and ICC: •• = very good
+                  (ICC ⩾ 0.8 or CV ⩽ 10%), • = good (0.6 ⩽ ICC &lt; 0.8 or 10% &lt; CV ⩽ 20%), ∘ = fair/moderate
+                  (0.4 ⩽ ICC &lt; 0.6 or 20% &lt; CV ⩽ 30%), ◊ = poor (ICC &lt; 0.4 or CV ⩾ 30%).
+               </p>
+            </div>
+         </div>
+      </div>
+      <div id="sec011">
+         <h3>Mean
+            <div tagx="sub">all</div> and std
+            <div tagx="sub">all</div>
+         </h3>
+         <p>
+            <b>C
+               <div tagx="sub">1</div>
+            </b>—We can observe that mean C
+            <div tagx="sub">1</div> over the 22 scans had a mean
+            <div tagx="sub">all</div>±std
+            <div tagx="sub">all</div> of 11.4±1.5 mM in GM and slightly higher 13.6±2 mM in WM, std was 4.5±0.7 mM in both
+            GM and WM, skewness was 0±0.3 in both GM and WM, kurtosis was 3.4±0.5 in GM and slightly
+            higher 4.0±1.7 in WM (but with higher variability). Median and mode values were in
+            the same range as the mean value, in GM and WM respectively. For full brain, all the
+            measures were of the same order of magnitude than in GM and WM.
+         </p>
+         <p>
+            <b>α</b>—We can observe that mean 
+            <i>α</i> measured over the 22 scans had a mean
+            <div tagx="sub">all</div>±std
+            <div tagx="sub">all</div> of 0.21±0.02 in GM and lower 0.17±0.02 in WM, std was 0.08±0.01 mM in GM and slightly
+            lower 0.06±0.01 in WM, skewness was 1.2±0.4 in GM and higher 1.9±0.4 in WM, kurtosis
+            was 5.7±1.8 in GM and almost doubled 10.3±2.4 in WM. Due to the positive skewness
+            of the 
+            <i>α</i> distribution, median and mode values were slightly lower than the mean values, in
+            GM and WM respectively. For full brain, all the measures were of the same order of
+            magnitude than in GM and WM.
+         </p>
+      </div>
+      <div id="sec012">
+         <h3>CV</h3>
+         <p>
+            <b>C
+               <div tagx="sub">1</div>
+            </b>—We can observe that the CV in GM was ∼12% for mean, median, mode and std, and lower
+            ∼6% for kurtosis. CV values were generally higher in WM: ∼12% for mean and median,
+            ∼19% for mode, ∼16% for std and ∼40% for kurtosis. The CV values in full brain were
+            of the same order of the values for GM and WM, except in the case of kurtosis where
+            CV is low ∼6%.
+         </p>
+         <p>
+            <b>α</b>—We can observe that CV in GM was ∼10% for mean and median and std, ∼15% for mode,
+            and much higher ∼27% for kurtosis. The same trend occurred in WM, with CV ∼12% for
+            mean, median and std, ∼18% for mode and ∼22% for kurtosis. The CV values in full brain
+            were of the same order of the values for GM and WM, except in the case of kurtosis
+            where CV was low ∼5%.
+         </p>
+      </div>
+      <div id="sec013">
+         <h3>ICC</h3>
+         <p>
+            <b>C
+               <div tagx="sub">1</div>
+            </b>—In both GM and WM, ICC was moderate ∼0.5 for mean, median and std, and good to very
+            good ∼0.6–0.8 for mode and skewness. For kurtosis, ICC was high ∼0.8 in GM, but much
+            lower ∼0.4 in WM, due to intra-subject variance in this tissue. For full brain, ICC
+            was moderate ∼0.5 for mean, median, mode and std, but good to very good for skewness
+            (∼0.7) and kurtosis (∼0.9), respectively.
+         </p>
+         <p>
+            <b>α</b>—In both GM and WM, ICC was low ∼0.1–0.2 for mean, median and mode, good ∼0.7 for
+            std, and poor to moderate for skewness and kurtosis (∼0.4–0.5). In full brain however,
+            ICC for skewness and kurtosis were both very good ∼0.9, while it was still good for
+            std (∼0.6), and very low for mean, median and mode (∼0.1).
+         </p>
+      </div>
+   </div>
+   <div id="sec014">
+      <h2>Discussion</h2>
+      <p>Mean, median, mode and std values of C
+         <div tagx="sub">1</div> were all in good agreement with values from the literature for intracellular sodium
+         concentrations in healthy brain tissues, which are generally in the range 5–15 mM
+         [
+         <span ref-type="bibr" rid="pone.0118692.ref020">20</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref041">41</span>]. The mean, median and mode 
+         <i>α</i> values were also in good agreement with values from the literature for extracellular
+         volume fraction in healthy brain tissues, generally in the range 0.15–0.25 [
+         <span ref-type="bibr" rid="pone.0118692.ref008">8</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref011">11</span>]. From the mean skewness and kurtosis values, we found that the C
+         <div tagx="sub">1</div> distribution over whole GM, WM or full brain was very close to the normal (Gaussian)
+         distribution (skewness = 0, kurtosis = 3), while the 
+         <i>α</i> distributions in GM and WM deviate from the normal distribution. The positive skewness
+         (range 1–2) for 
+         <i>α</i> indicates a higher range of values above the mean value, while higher kurtosis (&gt;
+         3) indicates a more ‘peaked’ distribution of 
+         <i>α</i>, with fatter tails, compared to normal distribution. These disparities for 
+         <i>α</i> from the normal distribution occur mostly because of both methodological and physiological
+         reasons. From the methodology point-of-view, due to the low resolution of the 
+         <sup>23</sup>Na and 
+         <sup>1</sup>H images, both C
+         <div tagx="sub">1</div> and 
+         <i>α</i> maps exhibit residual partial volume effect that can influence their distributions,
+         mainly in regions close the CSF which will therefore have high 
+         <i>α</i> &gt; 0.2 (increase skewness of 
+         <i>α</i>). Moreover, incomplete inversion of the magnetization and noisy data can also generate
+         voxels with both higher and lower values compared to normal distribution and therefore
+         create fat tails. For the physiological point-of-view, the difference in kurtosis
+         of 
+         <i>α</i> between GM and WM could be explained by the differences in cell packing characteristics
+         and structure [
+         <span ref-type="bibr" rid="pone.0118692.ref042">42</span>] between these two tissues. It is generally considered that WM has a more anisotropic
+         structure than GM [
+         <span ref-type="bibr" rid="pone.0118692.ref042">42</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref043">43</span>], due to the presence of axons and glial cells, associated with a wider range of
+         extracellular volume fractions (therefore higher kurtosis that GM), and potentially
+         more high values of 
+         <i>α</i> &gt; 0.2 (higher skewness than GM). As intracellular sodium concentrations in all cells
+         in the brain don’t vary too much from the 5–15 mM range, the C
+         <div tagx="sub">1</div> distributions don’t differ significantly between GM and WM.
+      </p>
+      <p>The skewness and kurtosis of both the C
+         <div tagx="sub">1</div> and 
+         <i>α</i> distributions measured with this protocol may also be in part the results of the
+         discrepancy between the edge definitions of the 
+         <sup>1</sup>H DIR images (2.5 mm resolution), the 
+         <sup>23</sup>Na aTSC images (5 mm resolution for the data acquisition) and the 
+         <sup>23</sup>Na aISC images (6.7 mm resolution). Because of all these limitations, it can be difficult
+         with the present method to assign a relevant biological or clinical meaning to the
+         skewness and kurtosis of the distributions. As we are more interested in changes in
+         these variables from healthy to non-healthy tissues, and because the exact same protocol
+         is applied to all subjects, this lack of accurate biological interpretation should
+         not impair the ability of the method to assess changes in C
+         <div tagx="sub">1</div> and 
+         <i>α</i> due to pathologies.
+      </p>
+      <p>Except for C
+         <div tagx="sub">1</div> kurtosis where the CV &gt; 40%, all measures of C
+         <div tagx="sub">1</div> and 
+         <i>α</i> can be considered good variables for detecting changes over time in individuals (intra-subject
+         variations), provided that the changes are above 20% of their mean values. From the
+         error propagation calculated in [
+         <span ref-type="bibr" rid="pone.0118692.ref023">23</span>], the uncertainty on the measurements of both C
+         <div tagx="sub">1</div> and 
+         <i>α</i> was calculated as around 40% for standard uncertainties on water fraction (w) and
+         extracellular sodium concentration (C
+         <div tagx="sub">2</div>) approximations. Taking CV and uncertainties into account, it is therefore reasonable
+         to estimate that in general the proposed method would be able to detect changes in
+         C
+         <div tagx="sub">1</div> and 
+         <i>α</i> of about 50% and above (to be on the safe side), which corresponds to mean C
+         <div tagx="sub">1</div> &gt; 20–25 mM and mean 
+         <i>α</i> &gt; 0.3, both for local (regions-of-interest) or global (whole tissue) measurements.
+         Due to all the model assumptions, the low SNR of sodium MRI, the error propagation
+         due to uncertainties in the relaxation times, in the water fraction and in other post-processing
+         parameters, we can estimate that changes below 50% will not be a reliable. If we consider
+         only changes of 50% and above for mean C
+         <div tagx="sub">1</div> and 
+         <i>α</i>, as expected in many neuropathologies from the literature [
+         <span ref-type="bibr" rid="pone.0118692.ref005">5</span>–
+         <span ref-type="bibr" rid="pone.0118692.ref011">11</span>], the combination of C
+         <div tagx="sub">1</div> and 
+         <i>α</i> measurements can also provide good classification between different groups of subjects
+         (moderate to good ICCs), mainly if measurements are performed over full brain.
+      </p>
+      <p>For example, in stroke, it is generally estimated that an apparent total tissue sodium
+         concentration (aTSC) of 65–70 mM is a marker of irreversible tissue damage (cell death).
+         This would correspond to an intracellular sodium concentration of about 40–50 mM (see
+         for example Ref. [
+         <span ref-type="bibr" rid="pone.0118692.ref003">3</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref017">17</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref018">18</span>]). We could therefore reasonably expect that 20mM &lt; C
+         <div tagx="sub">1</div> &lt; 50 mM would correspond to loss of homeostasis that might be reversible, and C
+         <div tagx="sub">1</div> &gt; 50 mM would correspond to irreversible loss of cell viability. For cancer, tumor
+         cells have altered physiology, such as evasion of apoptosis, limitless replicative
+         potential, tissue invasion [
+         <span ref-type="bibr" rid="pone.0118692.ref044">44</span>], and therefore also altered homeostasis. In that case, it can be expected that increases
+         in C
+         <div tagx="sub">1</div> and 
+         <i>α</i> above 50% and even more can be linked to tumor malignancy, and potentially grading
+         and staging (See Ref. [
+         <span ref-type="bibr" rid="pone.0118692.ref002">2</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref013">13</span>–
+         <span ref-type="bibr" rid="pone.0118692.ref015">15</span>] and references within).
+      </p>
+      <p>As ICC for skewness and kurtosis in full brain are very good, these two variables
+         seem to be the best features for detecting differences between subjects. From the
+         simulations of different lesions (see 
+         <span ref-type="supplementary-material" rid="pone.0118692.s002">S1 File</span>), we can see that compact fluid lesions (cystic-like) can be detected on the 
+         <i>α</i> maps, compact solid lesions (tumor-like) can be detected on the C
+         <div tagx="sub">1</div> maps, but random lesions cannot be detected on either 
+         <i>α</i> or C
+         <div tagx="sub">1</div> maps. However, these lesions (compact and random) can be detected on the C
+         <div tagx="sub">1</div> and 
+         <i>α</i> distributions (over whole brain), mainly through changes in skewness and kurtosis,
+         while other measures remained almost unchanged.
+      </p>
+      <p>As a first approximation in this study, we assume that all extracellular sodium is
+         either completely suppressed by IR (with TI optimized to suppress fluids) or reduced
+         within noise level (for ‘bound’ extracellular sodium, which can be expected to have
+         intermediate T1 between fluid sodium T1 and bound sodium T1 from within the cells).
+         Future studies will take this into account by using a more complex tissue model (more
+         compartments) which will include the presence of sodium with restricted motion within
+         the interstitial space, that is different from extracellular CSF or plasma space.
+      </p>
+      <p>Due to time constraints for the subjects (we try to keep scans of the volunteers in
+         about 45–60 min maximum) and for scanner availability, the sodium scans were optimized
+         to last 11 min and 17 min by using shorter TRs (80 ms and 100 ms). Although these
+         TRs are not optimized for full recovery of the longitudinal magnetization, we found
+         that the parameters used were a good compromise between SNR and total acquisition
+         time for this pilot study. Relaxation times in pathologies are unknown and might affect
+         the quantification, but we expect these relaxation times within and outside pathological
+         cells to be still quite similar to the relaxation times within and outside normal
+         cells, respectively. For example, assuming an average T1 ∼30 ms in parenchyma [
+         <span ref-type="bibr" rid="pone.0118692.ref002">2</span>], a variation of ±20% in T1 of the tissue will induce a variation of signal of only
+         3.6% in sodium images acquired without fluid suppression and TR = 80 ms, and a variation
+         of about 5% in sodium images acquired with fluid suppression and TR = 100 ms, compared
+         to acquisitions with TR = 150 ms (fully recovered magnetization with TR = 5×T1). These
+         signal variations will propagate to the C
+         <div tagx="sub">1</div> and 
+         <i>α</i> quantification and are included in the general error propagation calculated in Ref.
+         [
+         <span ref-type="bibr" rid="pone.0118692.ref023">23</span>] for aTSC and aISC quantification, which add up to about 40% when combined with water
+         fraction and extracellular sodium concentrations uncertainties.
+      </p>
+      <p>Partial volume effect is a real concern for this data and was already partially discussed
+         in Ref. [
+         <span ref-type="bibr" rid="pone.0118692.ref023">23</span>] (p.4–5). Images were acquired with different resolutions in this pilot study for
+         practical reasons: we wanted to be able to scan people within a reasonable time without
+         losing too much SNR, mainly for sodium with fluid suppression. We are now working
+         on ways to improve the SNR of the images (new multichannel coil, iterative reconstruction
+         such as compressed sensing, data denoising) in order to increase the resolution of
+         the images, with and without fluid suppression (we expect to reach 3–4 mm isotropic
+         for both, with about 10–12 min acquisition time for each acquisition).
+      </p>
+      <p>No sodium signal from zero concentration in reference phantoms was measured for the
+         linear regression, as it is hidden in the noise of the images. As sodium images have
+         low SNR, we observed that adding measurements of [Na] = 0 mM (therefore noise) can
+         induce large errors in the quantifications, which are very sensitive to the slopes
+         of the linear regressions. Future increases of the SNR of the images, as already described
+         above, will improve the robustness of the method to noise.
+      </p>
+      <p>In conclusion, estimating the pseudo-intracellular sodium concentration (C
+         <div tagx="sub">1</div>) and pseudo-extracellular volume fraction (
+         <i>α</i>) in brain in vivo is feasible using a combination of DIR proton MRI and sodium MRI,
+         with moderate to good repeatability (ICC) and CV. This preliminary method will be
+         furthermore improved in future studies by implementation of compressed sensing reconstruction
+         [
+         <span ref-type="bibr" rid="pone.0118692.ref045">45</span>] and data denoising methods [
+         <span ref-type="bibr" rid="pone.0118692.ref046">46</span>] for increasing the signal-to-noise ratio, accelerating sodium acquisitions, and/or
+         increasing the resolution of the sodium images. Water fraction estimation with proton
+         MRI [
+         <span ref-type="bibr" rid="pone.0118692.ref037">37</span>, 
+         <span ref-type="bibr" rid="pone.0118692.ref038">38</span>], which was considered as fixed in the present work, will also be included in the
+         future, as this parameter also changes with pathologies. Future studies with multichannel
+         RF coils will also include the calculation of sodium B
+         <div tagx="sub">1</div> maps and the development of B
+         <div tagx="sub">1</div> inhomogeneities correction for the calculation of C
+         <div tagx="sub">1</div> and 
+         <i>α</i>, in combination with increased SNR and resolution, to reduce CSF partial volume effect
+         and inefficient CSF suppression effect on data quantification. Next steps will include
+         estimating the efficiency of the method on patients for assessing different neuropathologies
+         such as multiple sclerosis, brain tumors, traumatic brain injuries, or Alzheimer’s
+         disease, either locally on C
+         <div tagx="sub">1</div> and/or 
+         <i>α</i> maps, or globally using the distributions of C
+         <div tagx="sub">1</div> and/or 
+         <i>α</i> over whole GM, whole WM or whole brain.
+      </p>
+   </div>
+   <div id="sec015">
+      <h2>Supporting Information</h2>
+      <div tagx="supplementary-material">
+         <div tagx="label">S1 Dataset</div>
+         <caption>
+            <div tagx="title">Dataset of C
+               <div tagx="sub">1</div> and 
+               <i>α</i> measurements (mean, median, mode, standard deviation, skewness, kurtosis) in GM,
+               WM and full brain, for all scans of all volunteers.
+            </div>
+            <p>(XLSX)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+      <div tagx="supplementary-material">
+         <div tagx="label">S1 File</div>
+         <caption>
+            <p>
+               <b>Figure A.</b> Pseudo-intracellular sodium concentration (C
+               <div tagx="sub">1</div>) maps of the brain of a healthy volunteer (1 axial slice) with artificial ‘fluid’
+               and ‘solid’ inclusions.
+            </p>
+            <p>
+               <b>Figure B.</b> Distributions of all pseudo-intracellular sodium concentration (C
+               <div tagx="sub">1</div>) values in full brain (GM+WM, black), GM (blue), WM (red) from a volunteer, with
+               artificial ‘fluid’ and ‘solid’ inclusions.
+            </p>
+            <p>
+               <b>Figure C.</b> Pseudo-extracellular volume fraction (
+               <i>α</i>) maps of the brain of a healthy volunteer (1 axial slice) with artificial ‘fluid’
+               and ‘solid’ inclusions.
+            </p>
+            <p>
+               <b>Figure D.</b> Distributions of all pseudo-extracellular volume fraction (
+               <i>α</i>) values in full brain (GM+WM, black), GM (blue), WM (red) from a volunteer, with
+               artificial ‘fluid’ and ‘solid’ inclusions.
+            </p>
+            <p>(PDF)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+   </div>
+   <div tagx="back">
+      <div tag="ref-list">
+         <ul>
+            <div tagx="title">References</div>
+            <li tag="ref">
+               <div tagx="label">1</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Rose</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Valdes</span>
+                     <span tagx="given-names">R</span>
+                  </span> (
+                  <span tagx="year">1994</span>) 
+                  <span tagx="article-title">Understanding the sodium pump and its relevance to disease</span>. 
+                  <span tagx="source">Clin Chem</span>
+                  <span tagx="volume">40</span>(
+                  <div tagx="issue">9</div>): 
+                  <span tagx="fpage">1674</span>–
+                  <span tagx="lpage">1685</span>
+                  <div tagx="object-id">8070076</div>
+                  <div tagx="pub-id">8070076</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">2</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Madelin</span>
+                     <span tagx="given-names">G</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Regatte</span>
+                     <span tagx="given-names">R</span>
+                  </span> (
+                  <span tagx="year">2013</span>) 
+                  <span tagx="article-title">Biomedical applications of sodium MRI in vivo</span>. 
+                  <span tagx="source">J Magn Reson Imaging</span>
+                  <span tagx="volume">38</span>: 
+                  <span tagx="fpage">511</span>–
+                  <span tagx="lpage">529</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1002/jmri.24168</div>
+                  </div>
+                  <div tagx="object-id">23722972</div>
+                  <div tagx="pub-id">23722972</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">3</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Boada</span>
+                     <span tagx="given-names">FE</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">LaVerde</span>
+                     <span tagx="given-names">G</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Jungreis</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Nemoto</span>
+                     <span tagx="given-names">E</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Tanase</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2005</span>) 
+                  <span tagx="article-title">Loss of cell ion homeostasis and cell viability in the brain: what sodium MRI can
+                     tell us
+                  </span>. 
+                  <span tagx="source">Curr Top Dev Biol</span>
+                  <span tagx="volume">70</span>: 
+                  <span tagx="fpage">77</span>–
+                  <span tagx="lpage">101</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/S0070-2153(05)70004-1</div>
+                  </div>
+                  <div tagx="object-id">16338338</div>
+                  <div tagx="pub-id">16338338</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">4</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Syková</span>
+                     <span tagx="given-names">E</span>
+                  </span> (
+                  <span tagx="year">1997</span>) 
+                  <span tagx="article-title">The extracellular space in the CNS: its regulation, volume and geometry in normal
+                     and pathological neuronal function
+                  </span>. 
+                  <span tagx="source">The Neuroscientist</span>
+                  <span tagx="volume">3</span>: 
+                  <span tagx="fpage">28</span>–
+                  <span tagx="lpage">41</span>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">5</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Cameron</span>
+                     <span tagx="given-names">I</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Smith</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Pool</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Sparks</span>
+                     <span tagx="given-names">R</span>
+                  </span> (
+                  <span tagx="year">1980</span>) 
+                  <span tagx="article-title">Intracellular concentration of sodium and other elements as related to mitogenesis
+                     and oncogenesis in vivo
+                  </span>. 
+                  <span tagx="source">Cancer Res</span>
+                  <span tagx="volume">40</span>(
+                  <div tagx="issue">5</div>): 
+                  <span tagx="fpage">1493</span>–
+                  <span tagx="lpage">1500</span>
+                  <div tagx="object-id">7370987</div>
+                  <div tagx="pub-id">7370987</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">6</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Zs-Nagy</span>
+                     <span tagx="given-names">I</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Lustyik</span>
+                     <span tagx="given-names">G</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Lukács</span>
+                     <span tagx="given-names">G</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Zs-Nagy</span>
+                     <span tagx="given-names">V</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Balázs</span>
+                     <span tagx="given-names">G</span>
+                  </span> (
+                  <span tagx="year">1983</span>) 
+                  <span tagx="article-title">Correlation of malignancy with the intracellular Na+:K+ ratio in human thyroid tumors</span>. 
+                  <span tagx="source">Cancer Res</span>
+                  <span tagx="volume">43</span>(
+                  <div tagx="issue">11</div>): 
+                  <span tagx="fpage">5395</span>–
+                  <span tagx="lpage">5402</span>.
+                  <div tagx="pub-id">6616471</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">7</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Schepkin</span>
+                     <span tagx="given-names">V</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Bejarano</span>
+                     <span tagx="given-names">FC</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Morgan</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Gower-Winter</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Ozambela</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2012</span>) 
+                  <span tagx="article-title">In vivo magnetic resonance imaging of sodium and diffusion in rat glioma at 21.1 T</span>. 
+                  <span tagx="source">Magn Reson Med</span>
+                  <span tagx="volume">67</span>(
+                  <div tagx="issue">4</div>): 
+                  <span tagx="fpage">1159</span>–
+                  <span tagx="lpage">1166</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1002/mrm.23077</div>
+                  </div>
+                  <div tagx="object-id">21748798</div>
+                  <div tagx="pub-id">21748798</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">8</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Nicholson</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Kamali-Zare</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Tao</span>
+                     <span tagx="given-names">L</span>
+                  </span> (
+                  <span tagx="year">2011</span>) 
+                  <span tagx="article-title">Brain extracellular space as a diffusion barrier</span>. 
+                  <span tagx="source">Comput Visual Sci</span>
+                  <span tagx="volume">14</span>(
+                  <div tagx="issue">7</div>): 
+                  <span tagx="fpage">309</span>–
+                  <span tagx="lpage">325</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1007/s00791-012-0185-9</div>
+                  </div>
+                  <div tagx="pub-id">23172993</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">9</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Cheek</span>
+                     <span tagx="given-names">DB</span>
+                  </span> (
+                  <span tagx="year">1961</span>) 
+                  <span tagx="article-title">Extracellular volume: its structure and measurement and the influence of age and disease</span>. 
+                  <span tagx="source">J Pediat</span>
+                  <span tagx="volume">58</span>(
+                  <div tagx="issue">1</div>): 
+                  <span tagx="fpage">103</span>–
+                  <span tagx="lpage">125</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/S0022-3476(61)80068-1</div>
+                  </div>
+                  <div tagx="object-id">13692714</div>
+                  <div tagx="pub-id">13692714</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">10</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Bakay</span>
+                     <span tagx="given-names">L</span>
+                  </span> (
+                  <span tagx="year">1970</span>) 
+                  <span tagx="article-title">The extracellular space in brain tumours I. Morphological considerations</span>. 
+                  <span tagx="source">Brain</span>
+                  <span tagx="volume">93</span>(
+                  <div tagx="issue">4</div>): 
+                  <span tagx="fpage">693</span>–
+                  <span tagx="lpage">698</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1093/brain/93.4.693</div>
+                  </div>
+                  <div tagx="object-id">4321422</div>
+                  <div tagx="pub-id">4321422</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">11</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Syková</span>
+                     <span tagx="given-names">E</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Nicholson</span>
+                     <span tagx="given-names">C</span>
+                  </span> (
+                  <span tagx="year">2008</span>) 
+                  <span tagx="article-title">Diffusion in brain extracellular space</span>. 
+                  <span tagx="source">Physiol Rev</span>
+                  <span tagx="volume">88</span>(
+                  <div tagx="issue">4</div>): 
+                  <span tagx="fpage">1277</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1152/physrev.00027.2007</div>
+                  </div>
+                  <div tagx="object-id">18923183</div>
+                  <div tagx="pub-id">18923183</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">12</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Xie</span>
+                     <span tagx="given-names">L</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Kang</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Xu</span>
+                     <span tagx="given-names">Q</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Chen</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Liao</span>
+                     <span tagx="given-names">Y</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2013</span>) 
+                  <span tagx="article-title">Sleep drives metabolite clearance from the adult brain</span>. 
+                  <span tagx="source">Science</span>
+                  <span tagx="volume">342</span>: 
+                  <span tagx="fpage">373</span>–
+                  <span tagx="lpage">377</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1126/science.1241224</div>
+                  </div>
+                  <div tagx="object-id">24136970</div>
+                  <div tagx="pub-id">24136970</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">13</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Ouwerkerk</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Bleich</span>
+                     <span tagx="given-names">K</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Gillen</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Pomper</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Bottomley</span>
+                     <span tagx="given-names">P</span>
+                  </span> (
+                  <span tagx="year">2003</span>) 
+                  <span tagx="article-title">Tissue sodium concentration in human brain tumors as measured with 23Na MR imaging</span>. 
+                  <span tagx="source">Radiology</span>
+                  <span tagx="volume">227</span>(
+                  <div tagx="issue">2</div>): 
+                  <span tagx="fpage">529</span>–
+                  <span tagx="lpage">537</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1148/radiol.2272020483</div>
+                  </div>
+                  <div tagx="object-id">12663825</div>
+                  <div tagx="pub-id">12663825</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">14</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Nagel</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Bock</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hartmann</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Gerigk</span>
+                     <span tagx="given-names">L</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Neumann</span>
+                     <span tagx="given-names">JO</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2011</span>) 
+                  <span tagx="article-title">The potential of relaxation-weighted sodium magnetic resonance imaging as demonstrated
+                     on brain tumors
+                  </span>. 
+                  <span tagx="source">Invest Radiol</span>
+                  <span tagx="volume">46</span>(
+                  <div tagx="issue">9</div>): 
+                  <span tagx="fpage">539</span>–
+                  <span tagx="lpage">547</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1097/RLI.0b013e31821ae918</div>
+                  </div>
+                  <div tagx="object-id">21577129</div>
+                  <div tagx="pub-id">21577129</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">15</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Kline</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Wu</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Petrylak</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Szabolcs</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Alderson</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2000</span>) 
+                  <span tagx="article-title">Rapid in vivo monitoring of chemotherapeutic response using weighted sodium magnetic
+                     resonance imaging
+                  </span>. 
+                  <span tagx="source">Clin Cancer Res</span>
+                  <span tagx="volume">6</span>(
+                  <div tagx="issue">6</div>): 
+                  <span tagx="fpage">2146</span>–
+                  <span tagx="lpage">2156</span>
+                  <div tagx="object-id">10873063</div>
+                  <div tagx="pub-id">10873063</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">16</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Inglese</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Madelin</span>
+                     <span tagx="given-names">G</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Oesingmann</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Babb</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Wu</span>
+                     <span tagx="given-names">W</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2010</span>) 
+                  <span tagx="article-title">Brain tissue sodium concentration in multiple sclerosis: a sodium imaging study at
+                     3 tesla
+                  </span>. 
+                  <span tagx="source">Brain</span>
+                  <span tagx="volume">133</span>(
+                  <div tagx="issue">3</div>): 
+                  <span tagx="fpage">847</span>–
+                  <span tagx="lpage">857</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1093/brain/awp334</div>
+                  </div>
+                  <div tagx="object-id">20110245</div>
+                  <div tagx="pub-id">20110245</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">17</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Thulborn</span>
+                     <span tagx="given-names">K</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Davis</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Snyder</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Yonas</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Kassam</span>
+                     <span tagx="given-names">A</span>
+                  </span> (
+                  <span tagx="year">2005</span>) 
+                  <span tagx="article-title">Sodium MR imaging of acute and subacute stroke for assessment of tissue viability</span>. 
+                  <span tagx="source">Neuroimag Clin N Am</span>
+                  <span tagx="volume">15</span>(
+                  <div tagx="issue">3</div>): 
+                  <span tagx="fpage">639</span>–
+                  <span tagx="lpage">653</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/j.nic.2005.08.003</div>
+                  </div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">18</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Boada</span>
+                     <span tagx="given-names">F</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Qian</span>
+                     <span tagx="given-names">Y</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Nemoto</span>
+                     <span tagx="given-names">E</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Jovin</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Jungreis</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2012</span>) 
+                  <span tagx="article-title">Sodium MRI and the assessment of irreversible tissue damage during hyper-acute stroke</span>. 
+                  <span tagx="source">Transl Stroke Res</span>
+                  <span tagx="volume">3</span>(
+                  <div tagx="issue">2</div>): 
+                  <span tagx="fpage">236</span>–
+                  <span tagx="lpage">245</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1007/s12975-012-0168-7</div>
+                  </div>
+                  <div tagx="object-id">24323779</div>
+                  <div tagx="pub-id">24323779</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">19</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Mellon</span>
+                     <span tagx="given-names">E</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Pilkinton</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Clark</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Elliott</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Witschey</span>
+                     <span tagx="given-names">W</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2009</span>) 
+                  <span tagx="article-title">Sodium MR imaging detection of mild Alzheimer disease: preliminary study</span>. 
+                  <span tagx="source">Am J Neuroradiol</span>
+                  <span tagx="volume">30</span>(
+                  <div tagx="issue">5</div>): 
+                  <span tagx="fpage">978</span>–
+                  <span tagx="lpage">984</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.3174/ajnr.A1495</div>
+                  </div>
+                  <div tagx="object-id">19213826</div>
+                  <div tagx="pub-id">19213826</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">20</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Ouwerkerk</span>
+                     <span tagx="given-names">R</span>
+                  </span> (
+                  <span tagx="year">2011</span>) 
+                  <div tagx="chapter-title">Sodium MRI</div> In: 
+                  <span tagx="source">Magnetic Resonance Neuroimaging</span>, 
+                  <div tagx="publisher-name">Springer</div> pp. 
+                  <span tagx="fpage">175</span>–
+                  <span tagx="lpage">201</span>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">21</div>
+               <div tagx="mixed-citation">Bottomley P (2012) Sodium MRI in Man: Technique and Findings. eMagRes.</div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">22</div>
+               <div tagx="mixed-citation">Lu A, Atkinson I, Thulborn K (2010) Sodium magnetic resonance imaging and its bioscale
+                  of tissue sodium concentration. eMagRes.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">23</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Madelin</span>
+                     <span tagx="given-names">G</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Kline</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Walvick</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Regatte</span>
+                     <span tagx="given-names">R</span>
+                  </span> (
+                  <span tagx="year">2014</span>) 
+                  <span tagx="article-title">A method for estimating intracellular sodium concentration and extracellular volume
+                     fraction in brain in vivo using sodium magnetic resonance imaging
+                  </span>. 
+                  <span tagx="source">Sci Rep</span>
+                  <span tagx="volume">4</span>: 
+                  <span tagx="fpage">4763</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1038/srep04763</div>
+                  </div>
+                  <div tagx="object-id">24755879</div>
+                  <div tagx="pub-id">24755879</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">24</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Meara</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Barker</span>
+                     <span tagx="given-names">G</span>
+                  </span> (
+                  <span tagx="year">2005</span>) 
+                  <span tagx="article-title">Evolution of the longitudinal magnetization for pulse sequences using a fast spin-echo
+                     readout: Application to fluid-attenuated inversion-recovery and double inversion-recovery
+                     sequences
+                  </span>. 
+                  <span tagx="source">Magn Reson Med</span>
+                  <span tagx="volume">54</span>(
+                  <div tagx="issue">1</div>): 
+                  <span tagx="fpage">241</span>–
+                  <span tagx="lpage">245</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1002/mrm.20541</div>
+                  </div>
+                  <div tagx="object-id">15968670</div>
+                  <div tagx="pub-id">15968670</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">25</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Busse</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hariharan</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Vu</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Brittain</span>
+                     <span tagx="given-names">J</span>
+                  </span> (
+                  <span tagx="year">2006</span>) 
+                  <span tagx="article-title">Fast spin echo sequences with very long echo trains: design of variable refocusing
+                     flip angle schedules and generation of clinical T2 contrast
+                  </span>. 
+                  <span tagx="source">Magn Reson Med</span>
+                  <span tagx="volume">55</span>(
+                  <div tagx="issue">5</div>): 
+                  <span tagx="fpage">1030</span>–
+                  <span tagx="lpage">1037</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1002/mrm.20863</div>
+                  </div>
+                  <div tagx="object-id">16598719</div>
+                  <div tagx="pub-id">16598719</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">26</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Pipe</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Zwart</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Aboussouan</span>
+                     <span tagx="given-names">E</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Robison</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Devaraj</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2011</span>) 
+                  <span tagx="article-title">A new design and rationale for 3D orthogonally oversampled k-space trajectories</span>. 
+                  <span tagx="source">Magn Reson Med</span>
+                  <span tagx="volume">66</span>(
+                  <div tagx="issue">5</div>): 
+                  <span tagx="fpage">1303</span>–
+                  <span tagx="lpage">1311</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1002/mrm.22918</div>
+                  </div>
+                  <div tagx="object-id">21469190</div>
+                  <div tagx="pub-id">21469190</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">27</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Stobbe</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Beaulieu</span>
+                     <span tagx="given-names">C</span>
+                  </span> (
+                  <span tagx="year">2005</span>) 
+                  <span tagx="article-title">In vivo sodium magnetic resonance imaging of the human brain using soft inversion
+                     recovery fluid attenuation
+                  </span>. 
+                  <span tagx="source">Magn Reson Med</span>
+                  <span tagx="volume">54</span>(
+                  <div tagx="issue">5</div>): 
+                  <span tagx="fpage">1305</span>–
+                  <span tagx="lpage">1310</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1002/mrm.20696</div>
+                  </div>
+                  <div tagx="object-id">16217782</div>
+                  <div tagx="pub-id">16217782</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">28</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Schomberg</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Timmer</span>
+                     <span tagx="given-names">J</span>
+                  </span> (
+                  <span tagx="year">1995</span>) 
+                  <span tagx="article-title">The gridding method for image reconstruction by Fourier transformation</span>. 
+                  <span tagx="source">IEEE Trans Med Imag</span>
+                  <span tagx="volume">14</span>(
+                  <div tagx="issue">3</div>): 
+                  <span tagx="fpage">596</span>–
+                  <span tagx="lpage">607</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1109/42.414625</div>
+                  </div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">29</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Pipe</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Menon</span>
+                     <span tagx="given-names">P</span>
+                  </span> (
+                  <span tagx="year">1999</span>) 
+                  <span tagx="article-title">Sampling density compensation in MRI: rationale and an iterative numerical solution</span>. 
+                  <span tagx="source">Magn Reson Med</span>
+                  <span tagx="volume">41</span>(
+                  <div tagx="issue">1</div>): 
+                  <span tagx="fpage">179</span>–
+                  <span tagx="lpage">186</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1002/(SICI)1522-2594(199901)41:1%3C179::AID-MRM25%3E3.0.CO;2-V</div>
+                  </div>
+                  <div tagx="object-id">10025627</div>
+                  <div tagx="pub-id">10025627</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">30</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Jerschow</span>
+                     <span tagx="given-names">A</span>
+                  </span> (
+                  <span tagx="year">2005</span>) 
+                  <span tagx="article-title">From nuclear structure to the quadrupolar NMR interaction and high-resolution spectroscopy</span>. 
+                  <span tagx="source">Prog NMR Spect</span>
+                  <span tagx="volume">46</span>(
+                  <div tagx="issue">1</div>): 
+                  <span tagx="fpage">63</span>–
+                  <span tagx="lpage">78</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/j.pnmrs.2004.12.001</div>
+                  </div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">31</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Lee</span>
+                     <span tagx="given-names">JS</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Regatte</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Jerschow</span>
+                     <span tagx="given-names">A</span>
+                  </span> (
+                  <span tagx="year">2009</span>) 
+                  <span tagx="article-title">Optimal excitation of 23Na nuclear spins in the presence of residual quadrupolar coupling
+                     and quadrupolar relaxation
+                  </span>. 
+                  <span tagx="source">J Chem Phys</span>
+                  <span tagx="volume">131</span>(
+                  <div tagx="issue">17</div>): 
+                  <span tagx="fpage">174501</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1063/1.3253970</div>
+                  </div>
+                  <div tagx="object-id">19895019</div>
+                  <div tagx="pub-id">19895019</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">32</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Madelin</span>
+                     <span tagx="given-names">G</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Lee</span>
+                     <span tagx="given-names">JS</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Regatte</span>
+                     <span tagx="given-names">RR</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Jerschow</span>
+                     <span tagx="given-names">A</span>
+                  </span> (
+                  <span tagx="year">2014</span>) 
+                  <span tagx="article-title">Sodium MRI: Methods and applications</span>. 
+                  <span tagx="source">Prog NMR Spect</span>
+                  <span tagx="volume">79</span>: 
+                  <span tagx="fpage">14</span>–
+                  <span tagx="lpage">47</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/j.pnmrs.2014.02.001</div>
+                  </div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">33</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Theil</span>
+                     <span tagx="given-names">H</span>
+                  </span> (
+                  <span tagx="year">1958</span>) 
+                  <span tagx="source">Economic forecasts and policy</span>. 
+                  <div tagx="publisher-name">North-Holland Publisher</div>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">34</div>
+               <div tagx="mixed-citation">Ashburner J, Barnes G, Chen CC, Daunizeau J, Flandin G, et al. (2012) SPM8 Manual
+                  The FIL Methods Group (and honorary members).
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">35</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Yu</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Choi</span>
+                     <span tagx="given-names">D</span>
+                  </span> (
+                  <span tagx="year">2000</span>) 
+                  <span tagx="article-title">Ions, cell volume, and apoptosis</span>. 
+                  <span tagx="source">PNAS</span>
+                  <span tagx="volume">97</span>(
+                  <div tagx="issue">17</div>): 
+                  <span tagx="fpage">9360</span>–
+                  <span tagx="lpage">9362</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1073/pnas.97.17.9360</div>
+                  </div>
+                  <div tagx="object-id">10944207</div>
+                  <div tagx="pub-id">10944207</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">36</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Go</span>
+                     <span tagx="given-names">K</span>
+                  </span> (
+                  <span tagx="year">1997</span>) 
+                  <div tagx="chapter-title">The normal and pathological physiology of brain water</div> In: 
+                  <span tagx="source">Advances and technical standards in neurosurgery</span>. 
+                  <div tagx="publisher-name">Springer</div> pp. 
+                  <span tagx="fpage">47</span>–
+                  <span tagx="lpage">142</span>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">37</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Neeb</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Ermer</span>
+                     <span tagx="given-names">V</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Stocker</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Shah</span>
+                     <span tagx="given-names">NJ</span>
+                  </span> (
+                  <span tagx="year">2008</span>) 
+                  <span tagx="article-title">Fast quantitative mapping of absolute water content with full brain coverage</span>. 
+                  <span tagx="source">NeuroImage</span>
+                  <span tagx="volume">42</span>(
+                  <div tagx="issue">3</div>): 
+                  <span tagx="fpage">1094</span>–
+                  <span tagx="lpage">1109</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/j.neuroimage.2008.03.060</div>
+                  </div>
+                  <div tagx="object-id">18632287</div>
+                  <div tagx="pub-id">18632287</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">38</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Sabati</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Maudsley</span>
+                     <span tagx="given-names">A</span>
+                  </span> (
+                  <span tagx="year">2013</span>) 
+                  <span tagx="article-title">Fast and high-resolution quantitative mapping of tissue water content with full brain
+                     coverage for clinically-driven studies
+                  </span>. 
+                  <span tagx="source">Magn Reson Imag</span>
+                  <span tagx="volume">31</span>(
+                  <div tagx="issue">10</div>): 
+                  <span tagx="fpage">1752</span>–
+                  <span tagx="lpage">1759</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/j.mri.2013.08.001</div>
+                  </div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">39</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Wolak</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Fairbairn</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Paulsen</span>
+                     <span tagx="given-names">Y</span>
+                  </span> (
+                  <span tagx="year">2012</span>) 
+                  <span tagx="article-title">Guidelines for estimating repeatability</span>. 
+                  <span tagx="source">Methods Ecol Evol</span>
+                  <span tagx="volume">3</span>(
+                  <div tagx="issue">1</div>): 
+                  <span tagx="fpage">129</span>–
+                  <span tagx="lpage">137</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1111/j.2041-210X.2011.00125.x</div>
+                  </div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">40</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Fleiss</span>
+                     <span tagx="given-names">J</span>
+                  </span> (
+                  <span tagx="year">2011</span>) 
+                  <span tagx="source">Design and analysis of clinical experiments</span>, 
+                  <span tagx="volume">volume 73</span>
+                  <div tagx="publisher-name">John Wiley &amp; Sons</div>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">41</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Lodish</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Berk</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Zipursky</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Matsudaira</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Baltimore</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2000</span>) 
+                  <span tagx="source">Molecular cell biology</span>. 
+                  <div tagx="publisher-name">Freeman Publisher</div>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">42</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Le Bihan</span>
+                     <span tagx="given-names">D</span>
+                  </span> (
+                  <span tagx="year">2003</span>) 
+                  <span tagx="article-title">Looking into the functional architecture of the brain with diffusion MRI</span>. 
+                  <span tagx="source">Nat Rev Neurosci</span>
+                  <span tagx="volume">4</span>(
+                  <div tagx="issue">6</div>): 
+                  <span tagx="fpage">469</span>–
+                  <span tagx="lpage">480</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1038/nrn1119</div>
+                  </div>
+                  <div tagx="object-id">12778119</div>
+                  <div tagx="pub-id">12778119</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">43</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Assaf</span>
+                     <span tagx="given-names">Y</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Pasternak</span>
+                     <span tagx="given-names">O</span>
+                  </span> (
+                  <span tagx="year">2008</span>) 
+                  <span tagx="article-title">Diffusion tensor imaging (DTI)-based white matter mapping in brain research: a review</span>. 
+                  <span tagx="source">J Mol Neurosci</span>
+                  <span tagx="volume">34</span>(
+                  <div tagx="issue">1</div>): 
+                  <span tagx="fpage">51</span>–
+                  <span tagx="lpage">61</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1007/s12031-007-0029-0</div>
+                  </div>
+                  <div tagx="object-id">18157658</div>
+                  <div tagx="pub-id">18157658</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">44</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Hanahan</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Weinberg</span>
+                     <span tagx="given-names">RA</span>
+                  </span> (
+                  <span tagx="year">2000</span>) 
+                  <span tagx="article-title">The hallmarks of cancer</span>. 
+                  <span tagx="source">Cell</span>
+                  <span tagx="volume">100</span>(
+                  <div tagx="issue">1</div>): 
+                  <span tagx="fpage">57</span>–
+                  <span tagx="lpage">70</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/S0092-8674(00)81683-9</div>
+                  </div>
+                  <div tagx="object-id">10647931</div>
+                  <div tagx="pub-id">10647931</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">45</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Lustig</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Donoho</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Santos</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Pauly</span>
+                     <span tagx="given-names">J</span>
+                  </span> (
+                  <span tagx="year">2008</span>) 
+                  <span tagx="article-title">Compressed sensing MRI</span>. 
+                  <span tagx="source">IEEE Signal Processing Mag</span>
+                  <span tagx="volume">25</span>(
+                  <div tagx="issue">2</div>): 
+                  <span tagx="fpage">72</span>–
+                  <span tagx="lpage">82</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1109/MSP.2007.914728</div>
+                  </div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">46</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Aminghafari</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Cheze</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Poggi</span>
+                     <span tagx="given-names">JM</span>
+                  </span> (
+                  <span tagx="year">2006</span>) 
+                  <span tagx="article-title">Multivariate denoising using wavelets and principal component analysis</span>. 
+                  <span tagx="source">Comput Stat Data Anal</span>
+                  <span tagx="volume">50</span>(
+                  <div tagx="issue">9</div>): 
+                  <span tagx="fpage">2381</span>–
+                  <span tagx="lpage">2398</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/j.csda.2004.12.010</div>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>
