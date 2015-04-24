@@ -7,11 +7,11 @@ import nu.xom.Element;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.ami2.plugins.DefaultSearcher;
+import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
-import org.xmlcml.ami2.plugins.regex.RegexSearcher;
-import org.xmlcml.args.ArgIterator;
-import org.xmlcml.args.ArgumentOption;
+import org.xmlcml.cmine.args.ArgIterator;
+import org.xmlcml.cmine.args.ArgumentOption;
+import org.xmlcml.cmine.files.DefaultSearcher;
 
 /** 
  * Processes commandline arguments.
@@ -69,13 +69,13 @@ public class IdentifierArgProcessor extends AMIArgProcessor {
 	}
 
 	public void outputIdentifiers(ArgumentOption option) {
-		outputResultElements(option);
+		getOrCreateContentProcessor().outputResultElements(option, this);
 	}
 	
 	// =============================
 
 	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
-		DefaultSearcher defaultSearcher = new DefaultSearcher(this);
+		AMISearcher defaultSearcher = new AMISearcher(this);
 		defaultSearcher.setNamedPattern(namedPattern);
 		return defaultSearcher;
 	}

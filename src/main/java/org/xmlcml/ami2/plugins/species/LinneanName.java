@@ -1,7 +1,5 @@
 package org.xmlcml.ami2.plugins.species;
 
-import java.util.Collection;
-import java.util.regex.Pattern;
 
 /** a species of form "Genus species" or "G. species"
  * 

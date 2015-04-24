@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="human">
+ <result pre="the most effective model of care ( " exact="DU" post=" " name="human"/>
+ <result pre="Usual care, " exact="NL" post=" = $0 + 0.96𝕜 " name="human"/>
+ <result pre="PEACH, " exact="NL" post=" = $1,027 + 0𝕜 " name="human"/>
+</results>

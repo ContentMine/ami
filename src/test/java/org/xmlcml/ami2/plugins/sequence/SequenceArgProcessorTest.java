@@ -12,8 +12,7 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.ami2.plugins.identifier.IdentifierPlugin;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public class SequenceArgProcessorTest {
 
@@ -30,7 +29,7 @@ public class SequenceArgProcessorTest {
 		File newDir = new File("target/plosone/sequences/");
 		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--sq.sequence --sq.length {6,20} --context 35 50 --sq.type dna prot -q "+newDir+" -i scholarly.html"; 
-		AMIArgProcessor sequenceArgProcessor = new SequenceArgProcessor(args);
+		DefaultArgProcessor sequenceArgProcessor = new SequenceArgProcessor(args);
 		sequenceArgProcessor.runAndOutput();
 		Assert.assertTrue("results dir: ", new File(newDir, "results").exists());
 		Assert.assertTrue("sequences dir: ", new File(newDir, "results/sequence").exists());

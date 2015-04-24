@@ -12,9 +12,9 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.identifier.IdentifierArgProcessor;
 import org.xmlcml.ami2.plugins.identifier.IdentifierPlugin;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public class IdentifierArgProcessorTest {
 
@@ -31,7 +31,7 @@ public class IdentifierArgProcessorTest {
 		File newDir = new File("target/plosone/identifier");
 		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--id.identifier --context 35 50 --id.type ena pdb orcid -q "+newDir+" -i scholarly.html"; 
-		AMIArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
+		DefaultArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
 		// FIXME
 		Assert.assertTrue("results dir: ", new File(newDir, "results").exists());
@@ -66,7 +66,7 @@ public class IdentifierArgProcessorTest {
 		File newDir = new File("target/plosone/identifier");
 		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--id.identifier --context 35 50 --id.type ena -q "+newDir+" -i scholarly.html --lookup wikipedia"; 
-		AMIArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
+		DefaultArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
 		File enaFile = new File(newDir, "results/identifier/ena/results.xml");
 		Element enaElement = new Builder().build(enaFile).getRootElement();
@@ -77,7 +77,7 @@ public class IdentifierArgProcessorTest {
 		File newDir = new File("target/plosone/identifier");
 		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--id.identifier --context 35 50 --id.regex regex/identifiers.xml --id.type bio.ena -q "+newDir+" -i scholarly.html"; 
-		AMIArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
+		DefaultArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
 		File enaFile = new File(newDir, "results/identifier/bio.ena/results.xml");
 		Element enaElement = new Builder().build(enaFile).getRootElement();
@@ -88,7 +88,7 @@ public class IdentifierArgProcessorTest {
 		File newDir = new File("target/plosone/identifiers");
 		FileUtils.copyDirectory(new File("examples/"), newDir);
 		String args = "--id.identifier --context 35 50 --id.regex regex/identifiers.xml --id.type clin.nct clin.isrctn -q "+newDir+" -i scholarly.html"; 
-		AMIArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
+		DefaultArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
 	}
 	

@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.args.DefaultArgProcessor;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public class AMIPlugin {
 
@@ -37,7 +37,7 @@ public class AMIPlugin {
 		this.argProcessor = null;
 	}
 
-	protected AMIArgProcessor argProcessor;
+	protected DefaultArgProcessor argProcessor;
 
 	public static void main(String[] args) {
 		new AMIPlugin().run(args);
@@ -76,7 +76,7 @@ public class AMIPlugin {
 	 * 
 	 */
 	public void runAndOutput() {
-		AMIArgProcessor argProcessor = (AMIArgProcessor) this.getArgProcessor();
+		DefaultArgProcessor argProcessor = (DefaultArgProcessor) this.getArgProcessor();
 		argProcessor.runAndOutput();
 	}
 }

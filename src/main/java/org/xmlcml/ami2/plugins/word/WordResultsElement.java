@@ -5,9 +5,9 @@ import java.util.Set;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.euclid.IntArray;
-import org.xmlcml.files.ResultElement;
-import org.xmlcml.files.ResultsElement;
 import org.xmlcml.xml.XMLUtil;
 
 public class WordResultsElement extends ResultsElement {

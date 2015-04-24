@@ -3,10 +3,10 @@ package org.xmlcml.ami2.plugins.gene;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.ami2.plugins.DefaultSearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
-import org.xmlcml.args.ArgIterator;
-import org.xmlcml.args.ArgumentOption;
+import org.xmlcml.cmine.args.ArgIterator;
+import org.xmlcml.cmine.args.ArgumentOption;
+import org.xmlcml.cmine.files.DefaultSearcher;
 
 /** 
  * Processes commandline arguments.
@@ -50,7 +50,7 @@ public class GeneArgProcessor extends AMIArgProcessor {
 	}
 
 	public void outputGene(ArgumentOption option) {
-		outputResultElements(option);
+		getOrCreateContentProcessor().outputResultElements(option, this);
 	}
 	
 	public void parseSummary(ArgumentOption option, ArgIterator argIterator) {

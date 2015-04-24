@@ -3,8 +3,8 @@ package org.xmlcml.ami2.plugins.sequence;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.args.ArgIterator;
-import org.xmlcml.args.ArgumentOption;
+import org.xmlcml.cmine.args.ArgIterator;
+import org.xmlcml.cmine.args.ArgumentOption;
 import org.xmlcml.euclid.IntRange;
 
 /** 
@@ -54,7 +54,7 @@ public class SequenceArgProcessor extends AMIArgProcessor {
 	}
 
 	public void outputSequences(ArgumentOption option) {
-		outputResultElements(option);
+		getOrCreateContentProcessor().outputResultElements(option, this);
 	}
 	
 	public void parseSummary(ArgumentOption option, ArgIterator argIterator) {

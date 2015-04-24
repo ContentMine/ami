@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public class GeneArgProcessorTest {
 
@@ -49,7 +49,7 @@ public class GeneArgProcessorTest {
 		File newDir = new File("target/plosone/species");
 		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--sp.species --context 35 50 --sp.type binomial binomialsp -q "+newDir+" -i scholarly.html --lookup wikipedia"; 
-		AMIArgProcessor speciesArgProcessor = new GeneArgProcessor(args);
+		DefaultArgProcessor speciesArgProcessor = new GeneArgProcessor(args);
 		speciesArgProcessor.runAndOutput();
 		File binomialFile = new File(newDir, "results/species/binomial/results.xml");
 		Element binomialElement = new Builder().build(binomialFile).getRootElement();

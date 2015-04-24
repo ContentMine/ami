@@ -7,13 +7,13 @@ import nu.xom.Element;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.ami2.plugins.DefaultSearcher;
+import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
-import org.xmlcml.files.ResultElement;
-import org.xmlcml.files.ResultsElement;
+import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.html.HtmlP;
 
-public class SpeciesSearcher extends DefaultSearcher {
+public class SpeciesSearcher extends AMISearcher {
 
 	
 	public static final Logger LOG = Logger.getLogger(SpeciesSearcher.class);
@@ -26,7 +26,7 @@ public class SpeciesSearcher extends DefaultSearcher {
 	}
 
 	@Override 
-	protected String getValue(Element xomElement) {
+	public String getValue(Element xomElement) {
 		String xmlString = xomElement.toXML();
 		// this is ucky, but since we know the HTML is normalized it's probably OK
 		xmlString = xomElement.toXML().replaceAll("\\s+", " ");

@@ -3,8 +3,6 @@ package org.xmlcml.ami2.plugins.simple;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIPlugin;
-import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
-import org.xmlcml.files.QuickscrapeNorma;
 
 /** test plugin.
  * 

@@ -3,10 +3,8 @@ package org.xmlcml.ami2.plugins;
 import java.io.File;
 import java.io.IOException;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.eclipse.jetty.util.log.Log;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
 import org.xmlcml.ami2.plugins.identifier.IdentifierPlugin;
@@ -14,7 +12,7 @@ import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.ami2.plugins.sequence.SequencePlugin;
 import org.xmlcml.ami2.plugins.species.SpeciesPlugin;
 import org.xmlcml.ami2.plugins.word.WordPlugin;
-import org.xmlcml.files.QuickscrapeNorma;
+import org.xmlcml.cmine.files.CMDir;
 
 /** collection of archetypal tests from each plugin.
  * 
@@ -145,7 +143,7 @@ public class RegressionDemoTest {
 				throw new RuntimeException("testFile is not a directory: "+testFile);
 			}
 			try {
-				new QuickscrapeNorma(testFile);
+				new CMDir(testFile);
 			} catch (Exception e) {
 				throw new RuntimeException(testFile + " is not a ContentMine directory");
 			}
