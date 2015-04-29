@@ -1,9 +1,7 @@
 package org.xmlcml.ami2.plugins;
 
-import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,14 +16,14 @@ import org.xmlcml.ami2.lookups.AbstractLookup;
 import org.xmlcml.ami2.plugins.regex.CompoundRegex;
 import org.xmlcml.ami2.plugins.regex.CompoundRegexList;
 import org.xmlcml.ami2.plugins.regex.RegexComponent;
-import org.xmlcml.args.ArgIterator;
-import org.xmlcml.args.ArgumentOption;
-import org.xmlcml.args.DefaultArgProcessor;
-import org.xmlcml.files.EuclidSource;
-import org.xmlcml.files.QuickscrapeNorma;
-import org.xmlcml.files.ResultsElement;
-import org.xmlcml.html.HtmlElement;
-import org.xmlcml.html.HtmlFactory;
+import org.xmlcml.cmine.args.ArgIterator;
+import org.xmlcml.cmine.args.ArgumentOption;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.ContentProcessor;
+import org.xmlcml.cmine.files.DefaultSearcher;
+import org.xmlcml.cmine.files.EuclidSource;
+import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.html.HtmlP;
 import org.xmlcml.xml.XMLUtil;
 
@@ -48,23 +46,14 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	protected static String PLUGIN_RESOURCE = RESOURCE_NAME_TOP+"/plugins";
 	private static String ARGS_RESOURCE = PLUGIN_RESOURCE+"/"+"args.xml";
 
-	private static final String OVERWRITE = "overwrite";
-	private static final String NO_DUPLICATES = "noDuplicates";
-	private static final String MERGE = "merge";
 	protected static final String NAME = "name";
 
 	private Integer[] contextCount = new Integer[] {98, 98};
 	private List<String> params;
+	
 	private XPathProcessor xPathProcessor;
-	protected List<ResultsElement> resultsElementList;
-	private String update;
 	private String plugin;
-	private List<String> lookupNames;
     Map<String,AbstractLookup> lookupInstanceByName;
-	protected ResultsElement resultsElement;
-	protected HashMap<String, DefaultSearcher> searcherByNameMap;
-	protected List<DefaultSearcher> searcherList;
-	private HashMap<String, ResultsElement> resultsBySearcherNameMap;
 	protected CompoundRegexList compoundRegexList;
 	protected List<Element> regexElementList;
 	
@@ -165,10 +154,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		this.params = params;
 	}
 
-	public String getUpdate() {
-		return update;
-	}
-
 	public Integer[] getContextCount() {
 		return contextCount;
 	}
@@ -183,49 +168,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 //		super.parseArgs(args);
 //	}
 
-	protected List<HtmlP> extractPElements() {
-		HtmlElement htmlElement = getScholarlyHtmlElement(currentQuickscrapeNorma);
-		List<HtmlP> pElements = HtmlP.extractSelfAndDescendantIs(htmlElement);
-		return pElements;
-	}
-
-	public List<String> extractWordsFromScholarlyHtml() {
-		HtmlElement htmlElement = getScholarlyHtmlElement(currentQuickscrapeNorma);
-		String value = htmlElement == null ? null : htmlElement.getValue();
-		return value == null ? new ArrayList<String>() :  new ArrayList<String>(Arrays.asList(value.split("\\s+")));
-	}
-
-	public void addResultsElement(ResultsElement resultsElement0) {
-		ensureResultsElementList();
-		String title = resultsElement0.getTitle();
-		if (title == null) {
-			throw new RuntimeException("Results Element must have title");
-		}
-		checkNoDuplicatedTitle(title);
-		resultsElementList.add(resultsElement0);
-	}
-
-	private void checkNoDuplicatedTitle(String title) {
-		for (ResultsElement resultsElement : resultsElementList) {
-			if (title.equals(resultsElement.getTitle())) {
-				String duplicates = getUpdate();
-				if (OVERWRITE.equals(duplicates)) {
-					// carry on
-				} else if (NO_DUPLICATES.equals(duplicates)) {
-					throw new RuntimeException("Cannot have two ResultsElement with same title: "+title);
-				} else if (MERGE.equals(duplicates)) {
-					throw new RuntimeException("Merge not supported: Cannot have two ResultsElement with same title: "+title);
-				}
-			}
-		}
-	}
-	
-	private void ensureResultsElementList() {
-		if (resultsElementList == null) {
-			resultsElementList = new ArrayList<ResultsElement>();
-		}
-	}
-
 	public void parseArgsRunAndOutput(String[] args) {
 		this.parseArgs(args);
 		this.runAndOutput();
@@ -233,35 +175,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 
 	public String getPlugin() {
 		return plugin;
-	}
-
-	/** gets the HtmlElement for ScholarlyHtml.
-	 * 
-	 * ugly static because Euclid cannot depend on html library.
-	 * 
-	 * DO NOT MOVE TO QuickscrapeNorma
-	 * 
-	 * @return
-	 */
-	public static HtmlElement getScholarlyHtmlElement(QuickscrapeNorma quickscrapeNorma) {
-		HtmlElement htmlElement = null;
-		if (quickscrapeNorma != null && quickscrapeNorma.hasScholarlyHTML()) {
-			File scholarlyHtmlFile = quickscrapeNorma.getExistingScholarlyHTML();
-//			try {
-//				String debug = FileUtils.readFileToString(scholarlyHtmlFile);
-//				LOG.debug(">>>>>"+debug.substring(0, 11600));
-//			} catch (IOException e1) {
-//				// TODO Auto-generated catch block
-//				e1.printStackTrace();
-//			}
-			try {
-				Element xml = XMLUtil.parseQuietlyToDocument(scholarlyHtmlFile).getRootElement();
-				htmlElement = new HtmlFactory().parse(scholarlyHtmlFile);
-			} catch (Exception e) {
-				LOG.error("Cannot create scholarlyHtmlElement");
-			}
-		}
-		return htmlElement;
 	}
 
 	private void loadLookupClassesFromArgValues(ArgumentOption option) {
@@ -309,22 +222,16 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	 * @return subclassed Plugin
 	 */
 	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
-		DefaultSearcher defaultSearcher = new DefaultSearcher(this);
+		AMISearcher defaultSearcher = new AMISearcher(this);
 		defaultSearcher.setNamedPattern(namedPattern);
 		return defaultSearcher;
-	}
-
-	protected void ensureSearcherList() {
-		if (searcherList == null) {
-			searcherList = new ArrayList<DefaultSearcher>();
-		}
 	}
 
 	protected void createSearcherList(List<String> names) {
 		ensureSearcherBySearcherNameMap();
 		ensureSearcherList();
 		for (String name : names) {
-			DefaultSearcher optionSearcher = searcherByNameMap.get(name);
+			DefaultSearcher optionSearcher = (DefaultSearcher) searcherByNameMap.get(name);
 			if (optionSearcher == null) {
 				LOG.error("unknown optionType: "+name+"; skipped");
 			} else {
@@ -339,28 +246,14 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		}
 	}
 
-	protected void outputResultElements(ArgumentOption option) {
-		resultsElementList = new ArrayList<ResultsElement>();
-		for (DefaultSearcher optionSearcher : searcherList) {
-			String name = optionSearcher.getName();
-			ResultsElement resultsElement = resultsBySearcherNameMap.get(name);
-			if (resultsElement != null) {
-				resultsElement.setTitle(name);
-				resultsElementList.add(resultsElement);
-			}
-		}
-		currentQuickscrapeNorma.createResultsDirectoriesAndOutputResultsElement(
-				option, resultsElementList, QuickscrapeNorma.RESULTS_XML);
-	}
-
 	protected void searchHtmlParaElements() {
-		List<HtmlP> pElements = extractPElements();
-		resultsBySearcherNameMap = new HashMap<String, ResultsElement>();
+		List<HtmlP> pElements = currentCMDir.extractPElements();
+//		resultsBySearcherNameMap = new HashMap<String, ResultsElement>();
 		for (DefaultSearcher searcher : searcherList) {
 			String name = searcher.getName();
 			ResultsElement resultsElement = searcher.search(pElements);
 			resultsElement.setAllResultElementNames(name);
-			resultsBySearcherNameMap.put(name, resultsElement);
+			currentCMDir.putInContentProcessor(name, resultsElement);
 		}
 	}
 
@@ -475,6 +368,14 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 			throw new RuntimeException("Cannot read or parse regexInputStream", e);
 		}
 		return new CompoundRegex(this, rootElement);
+	}
+
+	public CMDir getCurrentCMDir() {
+		return currentCMDir;
+	}
+
+	protected ContentProcessor getOrCreateContentProcessor() {
+		return (currentCMDir == null) ? null : currentCMDir.getOrCreateContentProcessor();
 	}
 
 }

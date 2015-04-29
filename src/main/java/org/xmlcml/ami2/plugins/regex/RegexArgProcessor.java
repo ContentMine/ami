@@ -1,6 +1,5 @@
 package org.xmlcml.ami2.plugins.regex;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,13 +7,11 @@ import java.util.Map;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.ami2.plugins.DefaultSearcher;
-import org.xmlcml.ami2.plugins.NamedPattern;
-import org.xmlcml.ami2.plugins.species.SpeciesSearcher;
-import org.xmlcml.args.ArgIterator;
-import org.xmlcml.args.ArgumentOption;
-import org.xmlcml.files.QuickscrapeNorma;
-import org.xmlcml.files.ResultsElement;
+import org.xmlcml.cmine.args.ArgIterator;
+import org.xmlcml.cmine.args.ArgumentOption;
+import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.ContentProcessor;
+import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.html.HtmlP;
 
 /** 
@@ -30,9 +27,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	}
 	
 	static final String TILDE = "~";
-//	static final String TILDE_SUFFIX = "(?:[^\\\\s\\\\p{Punct}]*)";
 	static final String TILDE_SUFFIX = "(?:[^\\\\s]*\\\\p{Punct}?)";
-//	static final String TILDE_PREFIX = "(?:[^\\s\\p{Punct}]*)";
 	
 	private Map<String, ResultsElement> resultsByCompoundRegex;
 	protected List<String> words;
@@ -90,18 +85,19 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	 * @param option
 	 */
 	private void outputResultElementsx(ArgumentOption option) {
-		resultsElementList = new ArrayList<ResultsElement>();
+		ContentProcessor currentContentProcessor = currentCMDir.getOrCreateContentProcessor();
+		currentContentProcessor.clearResultsElementList();
 		for (CompoundRegex compoundRegex : compoundRegexList) {
 			String regexTitle = compoundRegex.getTitle();
 			ResultsElement resultsElement = resultsByCompoundRegex.get(regexTitle);
 			resultsElement.setTitle(regexTitle);
-			resultsElementList.add(resultsElement);
+			currentContentProcessor.addResultsElement(resultsElement);
 		}
-		currentQuickscrapeNorma.createResultsDirectoriesAndOutputResultsElement(option, resultsElementList, QuickscrapeNorma.RESULTS_XML);
+		currentContentProcessor.createResultsDirectoriesAndOutputResultsElement(option, CMDir.RESULTS_XML);
 	}
 
 	private void runRegex() {
-		List<HtmlP> pElements = extractPElements();
+		List<HtmlP> pElements = currentCMDir.extractPElements();
 		resultsByCompoundRegex = new HashMap<String, ResultsElement>();
 		for (CompoundRegex compoundRegex : compoundRegexList) {
 			RegexSearcher regexSearcher = createSearcher(this, compoundRegex);

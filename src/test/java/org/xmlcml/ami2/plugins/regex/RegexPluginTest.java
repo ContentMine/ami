@@ -9,9 +9,9 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
-import org.xmlcml.files.QuickscrapeNorma;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.files.CMDir;
 
 public class RegexPluginTest {
 	
@@ -56,10 +56,9 @@ public class RegexPluginTest {
 	
 	@Test
 	public void testRegexPlugins() throws IOException {
-		QuickscrapeNorma qsNorma = new QuickscrapeNorma(Fixtures.TEST_BMC_15_1_511_QSN);
+		CMDir cmDir = new CMDir(Fixtures.TEST_BMC_15_1_511_CMDIR);
 		File normaTemp = new File("target/bmc/regex/15_1_511_test");
-		qsNorma.copyTo(normaTemp, true);
-		Assert.assertFalse("results.xml", qsNorma.hasResultsXML());
+		cmDir.copyTo(normaTemp, true);
 		String[] args = {
 				"-q", normaTemp.toString(),
 				"-i", "scholarly.html",
@@ -71,7 +70,7 @@ public class RegexPluginTest {
 			    	"regex/phylotree.xml",
 		};
 		AMIPlugin regexPlugin = new RegexPlugin(args);
-		AMIArgProcessor argProcessor = (AMIArgProcessor) regexPlugin.getArgProcessor();
+		DefaultArgProcessor argProcessor = (DefaultArgProcessor) regexPlugin.getArgProcessor();
 		Assert.assertNotNull(argProcessor);
 		argProcessor.runAndOutput();
 	}
@@ -79,7 +78,7 @@ public class RegexPluginTest {
 	@Test
 	public void testCONSORTRegex() throws IOException {
 		Fixtures.runStandardTestHarness(
-				Fixtures.TEST_BMC_15_1_511_QSN, 
+				Fixtures.TEST_BMC_15_1_511_CMDIR, 
 				new File("target/consort0/15_1_511_test/"), 
 				new RegexPlugin(),
 				"-q target/consort0/15_1_511_test/ -i scholarly.html --context 25 40 --r.regex regex/consort0.xml",

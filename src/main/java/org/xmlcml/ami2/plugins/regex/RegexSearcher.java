@@ -7,15 +7,12 @@ import nu.xom.Element;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.ami2.plugins.DefaultSearcher;
+import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.MatcherResult;
-import org.xmlcml.ami2.plugins.NamedPattern;
-import org.xmlcml.files.ResultElement;
-import org.xmlcml.files.ResultsElement;
-import org.xmlcml.html.HtmlElement;
-import org.xmlcml.html.HtmlP;
+import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cmine.files.ResultsElement;
 
-public class RegexSearcher extends DefaultSearcher {
+public class RegexSearcher extends AMISearcher {
 
 	
 	private static final Logger LOG = Logger.getLogger(RegexSearcher.class);
@@ -42,7 +39,7 @@ public class RegexSearcher extends DefaultSearcher {
 
 	// ====== args ========
 
-	protected ResultsElement searchXomElement(Element xomElement) {
+	public ResultsElement searchXomElement(Element xomElement) {
 		List<RegexComponent> regexComponents = compoundRegex.getOrCreateRegexComponentList();
 		ResultsElement resultsElement = new ResultsElement();
 		for (RegexComponent regexComponent : regexComponents) {

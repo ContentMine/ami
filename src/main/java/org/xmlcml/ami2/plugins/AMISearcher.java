@@ -1,27 +1,23 @@
 package org.xmlcml.ami2.plugins;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import nu.xom.Attribute;
-import nu.xom.Element;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.lookups.AbstractLookup;
-import org.xmlcml.files.ResultElement;
-import org.xmlcml.files.ResultsElement;
-import org.xmlcml.html.HtmlP;
-import org.xmlcml.xml.XPathGenerator;
+import org.xmlcml.ami2.plugins.gene.GeneResultElement;
+import org.xmlcml.cmine.files.DefaultSearcher;
+import org.xmlcml.cmine.files.ResultElement;
 
-public class DefaultSearcher {
+public class AMISearcher extends DefaultSearcher {
 
 		private static final String NOT_FOUND = "NOT_FOUND";
-	private static final Logger LOG = Logger.getLogger(DefaultSearcher.class);
+	private static final Logger LOG = Logger.getLogger(AMISearcher.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -31,15 +27,14 @@ public class DefaultSearcher {
 	private String exactMatch;
 	private AbstractLookup lookup;
 	private NamedPattern namedPattern;
-	private Pattern pattern;
-	private String name;
-
-	public DefaultSearcher(AMIArgProcessor argProcessor) {
+	public Pattern pattern;
+	
+	public AMISearcher(AMIArgProcessor argProcessor) {
 		this.argProcessor = argProcessor;
 		contextCounts = argProcessor.getContextCount();
 	}
 
-	public DefaultSearcher(AMIArgProcessor argProcessor, NamedPattern namedPattern) {
+	public AMISearcher(AMIArgProcessor argProcessor, NamedPattern namedPattern) {
 		this(argProcessor);
 		this.setNamedPattern(namedPattern);
 	}
@@ -48,44 +43,6 @@ public class DefaultSearcher {
 		this.namedPattern = namedPattern; // could be null
 		this.pattern = namedPattern == null ? null : namedPattern.getPattern();
 		this.name = namedPattern == null ? null : namedPattern.getName();
-	}
-
-	/** create resultsElement.
-	 * 
-	 * May be empty if no hits
-	 * 
-	 * @param xomElement
-	 * @return
-	 */
-	protected ResultsElement searchXomElement(Element xomElement) {
-		ResultsElement resultsElement = new ResultsElement();
-		String value = getValue(xomElement);
-		List<ResultElement> resultElementList = search(value); // crude to start with
-		for (ResultElement resultElement : resultElementList) {
-			resultsElement.appendChild(resultElement);
-		}
-		return resultsElement;
-	}
-
-	/** flatten all tags.
-	 * 
-	 * @param xomElement
-	 * @return
-	 */
-	protected String getValue(Element xomElement) {
-		return xomElement.getValue();
-	}
-
-	protected List<ResultElement> search(String value) {
-		List<ResultElement> resultElementList = new ArrayList<ResultElement>();
-		Matcher matcher = pattern.matcher(value);
-		int start = 0;
-		while (matcher.find(start)) {
-			ResultElement resultElement = createResultElement(value, matcher);
-			resultElementList.add(resultElement);
-			start = matcher.end();
-		}
-		return resultElementList;
 	}
 
 	protected void matchAndAddPrePost(String value, Matcher matcher,
@@ -128,38 +85,23 @@ public class DefaultSearcher {
 		return s;
 	}
 
-	public ResultsElement search(List<HtmlP> pElements) {
-		ResultsElement resultsElement = new ResultsElement();
-		for (HtmlP pElement : pElements) {
-			String xpath = new XPathGenerator(pElement).getXPath();
-			ResultsElement subResultsElement = this.searchXomElement(pElement);
-			if (subResultsElement.size() > 0) {
-				subResultsElement.setXPath(xpath);
-				resultsElement.transferResultElements(subResultsElement);
-			}
-		}
-		return resultsElement;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	protected ResultElement createResultElement(String value, Matcher matcher) {
+	@Override
+	public ResultElement createResultElement(String value, Matcher matcher) {
 		ResultElement resultElement = createResultElement();
 		matchAndAddPrePost(value, matcher, resultElement);
 		return resultElement;
 	}
-
-	/** 
-	 * Often overridden
-	 * 
-	 * @return
+	
+	/**
+	 *  //PLUGIN
 	 */
-	protected ResultElement createResultElement() {
-		return new ResultElement();
+	public ResultElement createResultElement() {
+		return new AMIResultElement();
 	}
-	
-	
-	
+
+
+	@Override
+	protected Pattern getPattern() {
+		return pattern;
+	}
 }

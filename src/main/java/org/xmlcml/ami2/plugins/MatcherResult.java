@@ -8,7 +8,7 @@ import nu.xom.IllegalNameException;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.files.ResultElement;
+import org.xmlcml.cmine.files.ResultElement;
 
 /** holds immediate result of match.
  * 

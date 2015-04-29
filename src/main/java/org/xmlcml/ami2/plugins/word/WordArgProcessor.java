@@ -11,16 +11,17 @@ import java.util.Set;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.args.ArgIterator;
-import org.xmlcml.args.ArgumentOption;
-import org.xmlcml.args.DefaultArgProcessor;
+import org.xmlcml.cmine.args.ArgIterator;
+import org.xmlcml.cmine.args.ArgumentOption;
+import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.ContentProcessor;
+import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cmine.files.ResultsElementList;
 import org.xmlcml.euclid.IntArray;
 import org.xmlcml.euclid.IntRange;
 import org.xmlcml.euclid.RealArray;
 import org.xmlcml.euclid.RealRange;
-import org.xmlcml.files.QuickscrapeNorma;
-import org.xmlcml.files.ResultElement;
-import org.xmlcml.files.ResultsElement;
 import org.xmlcml.html.HtmlBody;
 import org.xmlcml.html.HtmlElement;
 import org.xmlcml.html.HtmlHtml;
@@ -98,7 +99,6 @@ public class WordArgProcessor extends AMIArgProcessor {
 	WordResultsElement aggregatedFrequenciesElement;
 	private IntRange wordCount;
 	private WordResultsElement booleanFrequencyElement;
-
 	public WordArgProcessor() {
 		super();
 	}
@@ -191,13 +191,16 @@ public class WordArgProcessor extends AMIArgProcessor {
 	 * 
 	 * @param option
 	 */
+//	@Deprecated 
+	// this 
 	public void outputWords(ArgumentOption option) {
-		List<File> outputDirectories = currentQuickscrapeNorma.createResultsDirectoriesAndOutputResultsElement(
-				option, resultsElementList, QuickscrapeNorma.RESULTS_XML);
-		for (int i = 0; i < outputDirectories.size(); i++) {
-			File outputDirectory = outputDirectories.get(i);
-			File htmlFile = new File(outputDirectory, QuickscrapeNorma.RESULTS_HTML);
-			writeResultsElementAsHTML(htmlFile, (WordResultsElement)resultsElementList.get(i));
+		ContentProcessor currentContentProcessor = getOrCreateContentProcessor();
+		ResultsElementList resultsElementList = currentContentProcessor.getOrCreateResultsElementList();
+		for (int i = 0; i < resultsElementList.size(); i++) {
+			File outputDirectory = currentContentProcessor.createResultsDirectoryAndOutputResultsElement(
+					option, resultsElementList.get(i), CMDir.RESULTS_XML);
+			File htmlFile = new File(outputDirectory, CMDir.RESULTS_HTML);
+			writeResultsElementAsHTML(htmlFile, (WordResultsElement) resultsElementList.get(i));
 		}
 	}
 	
@@ -211,7 +214,7 @@ public class WordArgProcessor extends AMIArgProcessor {
 	}
 	
 	public void finalSummary(ArgumentOption option) {
-		WordResultsElementList frequenciesElementList = this.aggregateOverQSNormaList(getPlugin(), WordArgProcessor.FREQUENCIES);
+		WordResultsElementList frequenciesElementList = this.aggregateOverCMDirList(getPlugin(), WordArgProcessor.FREQUENCIES);
 		WordCollectionFactory wordCollectionFactory = new WordCollectionFactory(this);
 		for (String method : summaryMethods) {
 			runSummaryMethod(frequenciesElementList, wordCollectionFactory, method);
@@ -253,14 +256,14 @@ public class WordArgProcessor extends AMIArgProcessor {
 		}
 	}
 
-	public WordResultsElementList aggregateOverQSNormaList(String pluginName, String methodName) {
+	public WordResultsElementList aggregateOverCMDirList(String pluginName, String methodName) {
 		WordResultsElementList resultsElementList = new WordResultsElementList();
-		for (QuickscrapeNorma qsn : quickscrapeNormaList) {
-			ResultsElement resultsElement = qsn.getResultsElement(pluginName, methodName);
+		for (CMDir cmDir : cmDirList) {
+			ResultsElement resultsElement = cmDir.getResultsElement(pluginName, methodName);
 			if (resultsElement == null) {
-				LOG.error("Null results element, skipped "+qsn.getDirectory());
+				LOG.error("Null results element, skipped "+cmDir.getDirectory());
 			} else {
-				WordResultsElement wordResultsElement = new WordResultsElement(qsn.getResultsElement(pluginName, methodName));
+				WordResultsElement wordResultsElement = new WordResultsElement(cmDir.getResultsElement(pluginName, methodName));
 				resultsElementList.add(wordResultsElement);
 			}
 		}
@@ -406,4 +409,9 @@ public class WordArgProcessor extends AMIArgProcessor {
 			chosenWordTypes = new ArrayList<String>();
 		}
 	}
+
+	public void addResultsElement(ResultsElement resultsElement) {
+		getOrCreateContentProcessor().addResultsElement(resultsElement);
+	}
+
 }

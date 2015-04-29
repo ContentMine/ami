@@ -7,7 +7,7 @@ import nu.xom.Attribute;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.files.ResultElement;
+import org.xmlcml.cmine.files.ResultElement;
 
 /** the fields matched in a regex mapped to the field names.
  * 

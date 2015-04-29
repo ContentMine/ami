@@ -5,9 +5,8 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.files.ResultElement;
-import org.xmlcml.files.ResultsElement;
-import org.xmlcml.xml.XMLUtil;
+import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cmine.files.ResultsElement;
 
 public class SpeciesResultsElement extends ResultsElement {
 
@@ -19,8 +18,6 @@ public class SpeciesResultsElement extends ResultsElement {
 	}
 	
 	private static final String SPECIES = "species";
-	private List<String> nameList;
-
 	private SpeciesResultsElement(String title) {
 		super(title);
 	}
