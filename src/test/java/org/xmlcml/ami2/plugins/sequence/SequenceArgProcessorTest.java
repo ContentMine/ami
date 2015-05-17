@@ -37,7 +37,7 @@ public class SequenceArgProcessorTest {
 		File dnaFile = new File(newDir, "results/sequence/dna/results.xml");
 		Assert.assertTrue("dna file ", dnaFile.exists());
 		Element dnaElement = new Builder().build(dnaFile).getRootElement();
-		String dnaXml = dnaElement.toXML().replaceAll("\\s+", " ");
+		String dnaXml = dnaElement.toXML().replaceAll(DefaultArgProcessor.WHITESPACE, " ");
 		Assert.assertEquals("dna file ", "<results title=\"dna\">"+
 " <result pre=\"used by Sweet et al, 2010; (357F) (\" match=\"5’-CCTACGGGAGGCAGCAG-3’\" post=\") and (518R) (5’ATTACCGCGGCTGCTGG-3’), a segment o\" />"+
 " <result pre=\"-CCTACGGGAGGCAGCAG-3’) and (518R) (\" match=\"5’ATTACCGCGGCTGCTGG-3’\" post=\"), a segment of the bacterial 16S rRNA gene was am\" />"+
@@ -51,7 +51,7 @@ public class SequenceArgProcessorTest {
 		File protFile = new File(newDir, "results/sequence/prot/results.xml");
 		Assert.assertTrue("prot file ", protFile.exists());
 		Element protElement = new Builder().build(protFile).getRootElement();
-		String protXml = protElement.toXML().replaceAll("\\s+", " ");
+		String protXml = protElement.toXML().replaceAll(DefaultArgProcessor.WHITESPACE, " ");
 		Assert.assertEquals("prot file ", "<results title=\"prot\" />", protXml);
 
 	}

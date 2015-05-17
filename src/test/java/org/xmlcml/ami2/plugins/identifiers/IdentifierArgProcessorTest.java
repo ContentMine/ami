@@ -40,7 +40,7 @@ public class IdentifierArgProcessorTest {
 		File enaFile = new File(newDir, "results/identifier/ena/results.xml");
 		Assert.assertTrue("ena file ", enaFile.exists());
 		Element enaElement = new Builder().build(enaFile).getRootElement();
-		String enaXml = enaElement.toXML().replaceAll("\\s+", " ");
+		String enaXml = enaElement.toXML().replaceAll(DefaultArgProcessor.WHITESPACE, " ");
 		enaXml = enaXml.substring(0,  Math.min(enaXml.length(), 200));
 		Assert.assertEquals("ena file ", "<results title=\"ena\"> <result pre=\"ecies. (GenBank accession numbers; \" match=\"GQ906358\" post=\", NR102976 and KC954171), 3 Arcobacter species (NR\" /> <result pre=\"nBank accession numbers; GQ906358, \" ", enaXml);
 	}

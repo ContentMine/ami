@@ -266,7 +266,8 @@ public class WordCollectionFactory {
 
 	/** convenience method (for my memory!) */
 	public static Iterable<Entry<String>> getEntriesSortedByValue(Multiset<String> wordSet) {
-		return ImmutableSortedMultiset.copyOf(wordSet).entrySet();
+//		return  com.google.common.collect.ImmutableSortedMultiset.copyOf(wordSet).entrySet();
+		return  ImmutableSortedMultiset.copyOf(wordSet).entrySet();
 	}
 
 	/** convenience method (for my memory!) */

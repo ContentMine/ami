@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.HashMultimap;
@@ -43,7 +44,7 @@ public class LinneanNamer {
 	public static LinneanName createBinomial(String gs) {
 		LinneanName binomial = null;
 		if (gs != null) {
-			gs = gs.replaceAll("\\s+", " ");
+			gs = gs.replaceAll(DefaultArgProcessor.WHITESPACE, " ");
 			String[] ss = gs.split(" ");
 			if (ss.length == 2) {
 				binomial = new LinneanName(ss[0], ss[1]);

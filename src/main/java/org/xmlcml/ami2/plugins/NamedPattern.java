@@ -7,6 +7,7 @@ import nu.xom.Element;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.regex.RegexComponent;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 /** holds lexical pattern and name for plugin.
  * 
@@ -37,7 +38,7 @@ public class NamedPattern {
 		NamedPattern namedPattern = null;
 		String fields = regexElement.getAttributeValue(RegexComponent.FIELDS);
 		if (fields != null) {
-			String field[] = fields.trim().split("\\s+");
+			String field[] = fields.trim().split(DefaultArgProcessor.WHITESPACE);
 			String name = field.length == 1 ? field[0] : null;
 			String patternString = regexElement.getValue();
 			if (name != null && patternString != null) {

@@ -43,7 +43,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	}
 
 	public RegexArgProcessor(String argString) {
-		this(argString.split("\\s+"));
+		this(argString.split(WHITESPACE));
 	}
 
 	// =============== METHODS ==============
