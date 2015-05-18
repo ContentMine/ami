@@ -32,7 +32,7 @@ public class GeneArgProcessor extends AMIArgProcessor {
 	}
 
 	public GeneArgProcessor(String argString) {
-		this(argString.split("\\s+"));
+		this(argString.split(WHITESPACE));
 	}
 
 	// =============== METHODS ==============

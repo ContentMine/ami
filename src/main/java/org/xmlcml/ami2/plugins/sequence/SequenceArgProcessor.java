@@ -32,7 +32,7 @@ public class SequenceArgProcessor extends AMIArgProcessor {
 	}
 
 	public SequenceArgProcessor(String argString) {
-		this(argString.split("\\s+"));
+		this(argString.split(WHITESPACE));
 	}
 
 	// =============== METHODS ==============

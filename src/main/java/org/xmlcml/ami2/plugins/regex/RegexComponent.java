@@ -14,6 +14,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.MatcherResult;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.args.VariableProcessor;
 
 /** a component of a regular expression
@@ -134,7 +135,7 @@ public class RegexComponent {
 	private String addPrePost(String value) {
 		Integer[] contextCounts = regexArgProcessor.getContextCount();
 //		return "("+START_CONTEXT+contextCounts[0]+END_CONTEXT+value+"\\s+"+START_CONTEXT+contextCounts[1]+END_CONTEXT+")";
-		return START_CONTEXT+contextCounts[0]+END_CONTEXT+value+"\\s+"+START_CONTEXT+contextCounts[1]+END_CONTEXT;
+		return START_CONTEXT+contextCounts[0]+END_CONTEXT+value+DefaultArgProcessor.WHITESPACE+START_CONTEXT+contextCounts[1]+END_CONTEXT;
 	}
 
 	private String addSingle(String value) {
@@ -201,7 +202,7 @@ public class RegexComponent {
 			String fields = regexElement.getAttributeValue(FIELDS);
 			boolean hasWord = true;
 			if (fields != null) {
-				fieldList = new ArrayList<String>(Arrays.asList(fields.split("\\s+")));
+				fieldList = new ArrayList<String>(Arrays.asList(fields.split(DefaultArgProcessor.WHITESPACE)));
 				if (fieldList.size() == 4) {
 					if (!FIELD_NAMES[1].equals(fieldList.get(1)) ||
 						!FIELD_NAMES[3].equals(fieldList.get(3))) {

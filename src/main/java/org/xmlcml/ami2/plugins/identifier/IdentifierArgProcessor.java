@@ -36,7 +36,7 @@ public class IdentifierArgProcessor extends AMIArgProcessor {
 	}
 
 	public IdentifierArgProcessor(String argString) {
-		this(argString.split("\\s+"));
+		this(argString.split(WHITESPACE));
 	}
 
 	// =============== METHODS ==============

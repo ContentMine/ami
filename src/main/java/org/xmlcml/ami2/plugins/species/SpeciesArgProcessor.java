@@ -33,7 +33,7 @@ public class SpeciesArgProcessor extends AMIArgProcessor {
 	}
 
 	public SpeciesArgProcessor(String argString) {
-		this(argString.split("\\s+"));
+		this(argString.split(WHITESPACE));
 	}
 
 	// =============== METHODS ==============

@@ -47,7 +47,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	private static String ARGS_RESOURCE = PLUGIN_RESOURCE+"/"+"args.xml";
 
 	protected static final String NAME = "name";
-
 	private Integer[] contextCount = new Integer[] {98, 98};
 	private List<String> params;
 	
@@ -197,8 +196,11 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 			AbstractLookup lookup;
 			try {
 				lookup = (AbstractLookup) lookupClass.newInstance();
-			} catch (InstantiationException | IllegalAccessException e) {
+			} catch (InstantiationException e) {
 				LOG.error("Cannot instantiate, skipping: "+lookupClass+"; "+e.getMessage());
+				continue;
+			} catch (IllegalAccessException e) {
+				LOG.error("Cannot access, skipping: "+lookupClass+"; "+e.getMessage());
 				continue;
 			}
 			lookupInstanceByName.put(name, lookup);

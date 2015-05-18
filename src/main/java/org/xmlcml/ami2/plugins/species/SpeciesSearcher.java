@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.ResultElement;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.html.HtmlP;
@@ -29,7 +30,7 @@ public class SpeciesSearcher extends AMISearcher {
 	public String getValue(Element xomElement) {
 		String xmlString = xomElement.toXML();
 		// this is ucky, but since we know the HTML is normalized it's probably OK
-		xmlString = xomElement.toXML().replaceAll("\\s+", " ");
+		xmlString = xomElement.toXML().replaceAll(DefaultArgProcessor.WHITESPACE, " ");
 		// some markup is of form <i>Foo</i>. <i>bar</i>
 		xmlString = xmlString.replaceAll("</i>\\.\\s+<i>", ". ");
 		xmlString = xmlString.replaceAll("<span[^>]*>", "");
