@@ -1,6 +1,7 @@
 package org.xmlcml.ami2.lookups;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -22,6 +23,22 @@ http://www.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term="+genbank_id
 	
 	public String lookup(String genbankId) throws IOException {
 //		LOG.error(" Genbank lookup NYI");
+		return null;
+	}
+
+/**
+	http://www.ebi.ac.uk/ena/data/view/Taxon:Gorilla%20gorilla,Taxon:Erithacus&display=xml
+*/
+	
+	public String lookupTaxonomy(String genus) throws IOException {
+		return null;
+	}
+
+	public String lookupTaxonomy(List<String> queryList) throws IOException {
+		return null;
+	}
+
+	public String lookupTaxonomy(String genus, String specific) throws IOException {
 		return null;
 	}
 

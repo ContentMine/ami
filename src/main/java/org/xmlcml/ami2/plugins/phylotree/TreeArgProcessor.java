@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.plugins.simple;
+package org.xmlcml.ami2.plugins.phylotree;
 
 import java.util.List;
 
@@ -16,25 +16,25 @@ import org.xmlcml.cmine.files.ResultsElement;
  * 
  * @author pm286
  */
-public class SimpleArgProcessor extends AMIArgProcessor {
+public class TreeArgProcessor extends AMIArgProcessor {
 	
-	public static final Logger LOG = Logger.getLogger(SimpleArgProcessor.class);
+	public static final Logger LOG = Logger.getLogger(TreeArgProcessor.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
 	protected List<String> words;
 
-	public SimpleArgProcessor() {
+	public TreeArgProcessor() {
 		super();
 	}
 
-	public SimpleArgProcessor(String[] args) {
+	public TreeArgProcessor(String[] args) {
 		this();
 		parseArgs(args);
 	}
 
-	public SimpleArgProcessor(String argString) {
+	public TreeArgProcessor(String argString) {
 		this(argString.split(WHITESPACE));
 	}
 
@@ -42,22 +42,6 @@ public class SimpleArgProcessor extends AMIArgProcessor {
 
 	public void parseSimple(ArgumentOption option, ArgIterator argIterator) {
 		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
-	}
-	
-	public void countWords(ArgumentOption option) {
-		words = currentCMDir.extractWordsFromScholarlyHtml();
-	}
-
-	public void outputWordCounts(ArgumentOption option) {
-		String outputFilename = getOutput();
-		if (!CMDir.isReservedFilename(outputFilename)) {
-			throw new RuntimeException("Output is not a reserved file: "+outputFilename);
-		}
-		ResultsElement resultsElement = new ResultsElement();
-		ResultElement resultElement = new ResultElement();
-		resultElement.setValue("wordCount", String.valueOf(words.size()));
-		resultsElement.appendChild(resultElement);
-		getOrCreateContentProcessor().writeResults(outputFilename, resultsElement);
 	}
 	
 	// =============================

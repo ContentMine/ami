@@ -3,6 +3,7 @@ package org.xmlcml.ami2.plugins.simple;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIPlugin;
+import org.xmlcml.ami2.plugins.sequence.SequenceArgProcessor;
 
 /** test plugin.
  * 
@@ -30,5 +31,11 @@ public class SimplePlugin extends AMIPlugin {
 		argProcessor.runAndOutput();
 	}
 
+	public SimplePlugin(String args) {
+		super();
+		this.argProcessor = new SimpleArgProcessor(args);
+	}
+
+	
 
 }
