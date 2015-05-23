@@ -35,9 +35,10 @@ public class WikipediaLookupTest {
 		URL url = defaultLookup.createWikidataXMLURL("Q83310");
 		Element element = defaultLookup.getXML(url);
 		XMLUtil.debug(element, "Mus");
-		Assert.assertEquals("Q83310", 
-				"<api success=\"1\"><entities><entity pageid=\"85709\" ns=\"0\" title=\"Q83310\" lastrevid=\"194466801\" modifi",
-				element.toXML().substring(0, 100));
+		// details (e.g. lastrevid change)
+//		Assert.assertEquals("Q83310", 
+//				"<api success=\"1\"><entities><entity pageid=\"85709\" ns=\"0\" title=\"Q83310\" lastrevid=\"194466801\" modifi",
+//				element.toXML().substring(0, 100));
 	}
 	
 	/** these don't work with Wikipedia

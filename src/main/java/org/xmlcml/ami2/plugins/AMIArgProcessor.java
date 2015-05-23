@@ -263,7 +263,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 			AbstractLookup lookup;
 			try {
 				lookup = (AbstractLookup) lookupClass.newInstance();
-			} catch (InstantiationException | IllegalAccessException e) {
+			} catch (Exception e) {
 				LOG.error("Cannot instantiate, skipping: "+lookupClass+"; "+e.getMessage());
 				continue;
 			}

@@ -41,7 +41,6 @@ public class CompoundRegexList implements Iterable<CompoundRegex> {
 		return sb.toString();
 	}
 
-	@Override
 	public Iterator<CompoundRegex> iterator() {
 		ensureCompoundRegexList();
 		return compoundRegexList.iterator();
