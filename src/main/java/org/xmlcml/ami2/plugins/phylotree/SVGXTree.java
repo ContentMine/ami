@@ -61,7 +61,7 @@ public class SVGXTree extends SVGG {
 	
 	private double eps;
 	SVGElement parentSVGElement;
-	private TreeAnalyzer treeAnalyzer;
+	private PhyloTreeSVGAnalyzer treeAnalyzer;
 	List<SVGXTreeNode> rootNodeList;
 	private double edgeLengthFontSize = 6.;
 	private String edgeLengthFill = "red";
@@ -79,7 +79,7 @@ public class SVGXTree extends SVGG {
 			this.setId(TREE+parentSVGG.getId());
 			this.setId(parentSVGG.getId());
 		}
-		this.treeAnalyzer = new TreeAnalyzer(this);
+		this.treeAnalyzer = new PhyloTreeSVGAnalyzer(this);
 	}
 
 	/** create tree from SVG
@@ -94,7 +94,7 @@ public class SVGXTree extends SVGG {
 		List<SVGLine> lines = SVGLine.extractSelfAndDescendantLines(container);
 		lines = LineMerger.mergeLines(lines, eps, method);		
 		SVGXTree tree = new SVGXTree(container);
-		TreeAnalyzer treeAnalyzer = tree.getTreeAnalyzer();
+		PhyloTreeSVGAnalyzer treeAnalyzer = tree.getTreeAnalyzer();
 		treeAnalyzer.analyzeBranchesAtLineEnds(lines);
 		tree.buildTree();
 		return tree;
@@ -218,7 +218,7 @@ public class SVGXTree extends SVGG {
 		}
 	}
 
-	public TreeAnalyzer getTreeAnalyzer() {
+	public PhyloTreeSVGAnalyzer getTreeAnalyzer() {
 		return treeAnalyzer;
 	}
 

@@ -34,7 +34,7 @@ public class SVGXTreeNode extends SVGG {
 	public final static double DEFAULT_RAD = 2.0;
 	private SVGElement svgElement;
 	private ComplexLine tempVarComplexLine;
-	private TreeAnalyzer treeAnalyzer;
+	private PhyloTreeSVGAnalyzer treeAnalyzer;
 //	String id;
 	private SVGXTreeEdge edge;
 	private SVGXTreeNode parentNode;
@@ -49,13 +49,13 @@ public class SVGXTreeNode extends SVGG {
 
 	private Double distanceToClosestWord;
 
-	public SVGXTreeNode(TreeAnalyzer treeAnalyzer, Real2 point) {
+	public SVGXTreeNode(PhyloTreeSVGAnalyzer treeAnalyzer, Real2 point) {
 		this.svgElement = SVGXTreeNode.createNewSVGPrimitive(point);
 		this.treeAnalyzer = treeAnalyzer;
 		initx();
 	}
 
-	public SVGXTreeNode(TreeAnalyzer treeAnalyzer, ComplexLine complexLine) {
+	public SVGXTreeNode(PhyloTreeSVGAnalyzer treeAnalyzer, ComplexLine complexLine) {
 		this.svgElement = complexLine.getBackbone();
 		this.tempVarComplexLine = complexLine;
 		this.treeAnalyzer = treeAnalyzer;

@@ -28,8 +28,8 @@ import org.xmlcml.svg2xml.text.Word;
  * 
  * @author pm286
  */
-public class TreeAnalyzer {
-	private static final Logger LOG = Logger.getLogger(TreeAnalyzer.class);
+public class PhyloTreeSVGAnalyzer {
+	private static final Logger LOG = Logger.getLogger(PhyloTreeSVGAnalyzer.class);
 
 	public static final double DEFAULT_PIXEL_EPS = 0.01;
 
@@ -55,14 +55,21 @@ public class TreeAnalyzer {
 
 	SVGElement parentSVGElement;
 	private ArrayList<SVGXTreeNode> childlessNodeList;
+	private int selectedIslandIndex;
 
 	private double eps = DEFAULT_PIXEL_EPS;
 
-	public TreeAnalyzer(SVGXTree tree) {
+	public PhyloTreeSVGAnalyzer(SVGXTree tree) {
 		this.tree = tree;
 		parentSVGElement = tree.parentSVGElement;
 	}
 	
+	public PhyloTreeSVGAnalyzer() {
+//		setDefaults();
+//		clearVariables();
+	}
+
+
 	/** 
 	 * Separates lines into horizontal and vertical and classifies them by
 	 * what branches or none they have at the ends.
@@ -443,5 +450,11 @@ public class TreeAnalyzer {
 		}
 		return childlessNodeList;
 	}
+	
+	public void setSelectedIslandIndex(int islandIndex) {
+		this.selectedIslandIndex = islandIndex;
+	}
+
+
 
 }

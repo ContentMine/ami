@@ -15,7 +15,7 @@ import org.xmlcml.graphics.svg.linestuff.ComplexLine.SideOrientation;
 public class LineContainer {
 
 	
-	private static double eps = TreeAnalyzer.DEFAULT_PIXEL_EPS;
+	private static double eps = PhyloTreeSVGAnalyzer.DEFAULT_PIXEL_EPS;
 	
 	private List<SVGLine> lines;
 	private LineContainer perpendicularContainer;

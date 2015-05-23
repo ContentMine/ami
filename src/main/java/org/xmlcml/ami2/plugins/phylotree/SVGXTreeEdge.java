@@ -14,11 +14,11 @@ public class SVGXTreeEdge extends SVGG {
 	
 	private ComplexLine complexLine;
 	private SVGXTreeNode childNode;
-	private TreeAnalyzer treeAnalyzer;
+	private PhyloTreeSVGAnalyzer treeAnalyzer;
 	private SVGXTreeNode parentNode;
 	private Double length;
 
-	public SVGXTreeEdge(TreeAnalyzer treeAnalyzer, ComplexLine line) {
+	public SVGXTreeEdge(PhyloTreeSVGAnalyzer treeAnalyzer, ComplexLine line) {
 		this.complexLine = line;
 		this.treeAnalyzer = treeAnalyzer;
 		treeAnalyzer.edgeList.add(this);

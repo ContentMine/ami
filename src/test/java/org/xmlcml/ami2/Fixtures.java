@@ -41,6 +41,8 @@ public class Fixtures {
 	public final static File TEST_IJSEM_SEQUENCE_0121780  = new File(Fixtures.TEST_IJSEM_DIR, "plosjournal.pone.0121780_sequence");
 	public final static File TEST_IJSEM_MALARIA_0119475  = new File(Fixtures.TEST_IJSEM_DIR, "journal.pone.0119475");
 
+	public final static File TEST_PHYLO_DIR          = new File(Fixtures.TEST_AMI_DIR, "phylo");
+
 	public static final File EXAMPLES              = new File("examples");
 	public static final File EXAMPLES_TEMP_16_1_1  = new File("target/examples_16_1_1");
 

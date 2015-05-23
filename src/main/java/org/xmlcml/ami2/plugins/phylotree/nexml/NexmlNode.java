@@ -20,20 +20,23 @@ public class NexmlNode extends NexmlElement {
 	
 	public static int DECIMAL_PLACES = 0;
 	
-	private List<NexmlEdge> nexmlChildEdges;
-	private List<NexmlNode> nexmlChildNodes;
+//	private List<NexmlEdge> nexmlChildEdges;
+	private List<NexmlNode> childNexmlNodes;
+	List<NexmlEdge> nexmlEdges;
 	private NexmlTree nexmlTree;
 	private NexmlNode parentNexmlNode;
 
 	public NexmlNode() {
 		super(TAG);
+		nexmlEdges = new ArrayList<NexmlEdge>();
+		childNexmlNodes = new ArrayList<NexmlNode>();
 	}
 
 	/** constructor from reading nexml.
 	 * 
 	 */
 	public NexmlNode(NexmlTree nexmlTree) {
-		super(TAG);
+		this();
 		this.nexmlTree = nexmlTree;
 	}
 
@@ -67,19 +70,19 @@ public class NexmlNode extends NexmlElement {
 		return getAttributeValue(ROOT) != null;
 	}
 
-	public void addChildEdge(NexmlEdge childEdge) {
-		ensureChildEdgesAndNodes();
-		this.nexmlChildEdges.add(childEdge);
-		NexmlNode childNode = nexmlTree.getNode(childEdge.getTargetId());
-		if (childNode != null) {
-			childNode.setParentNexmlNode(this);
-			this.addChildNexmlNode(childNode);
-		}
-	}
+//	public void addChildEdge(NexmlEdge childEdge) {
+//		ensureChildEdgesAndNodes();
+//		this.nexmlChildEdges.add(childEdge);
+//		NexmlNode childNode = nexmlTree.getNode(childEdge.getTargetId());
+//		if (childNode != null) {
+//			childNode.setParentNexmlNode(this);
+//			this.addChildNexmlNode(childNode);
+//		}
+//	}
 
 	void addChildNexmlNode(NexmlNode childNode) {
 		ensureChildEdgesAndNodes();
-		nexmlChildNodes.add(childNode);
+		childNexmlNodes.add(childNode);
 	}
 
 	void setParentNexmlNode(NexmlNode nexmlNode) {
@@ -90,23 +93,25 @@ public class NexmlNode extends NexmlElement {
 		return parentNexmlNode;
 	}
 
+	/** this may not be the correct approach.
+	 * 
+	 */
 	private void ensureChildEdgesAndNodes() {
-		if (this.nexmlChildEdges == null) {
-			this.nexmlChildEdges = new ArrayList<NexmlEdge>();
-			this.nexmlChildNodes = new ArrayList<NexmlNode>();
+		if (this.childNexmlNodes == null) {
+//			this.nexmlChildEdges = new ArrayList<NexmlEdge>();
+			this.childNexmlNodes = new ArrayList<NexmlNode>();
 		}
 	}
 
 	public String getNewick() {
-		LOG.debug(this.getId());
 		StringBuilder sb = new StringBuilder();
 		getNexmlChildNodes();
-		if (nexmlChildNodes.size() > 0) {
+		if (childNexmlNodes.size() > 0) {
 			sb.append("(");
-			for (int i = 0; i < nexmlChildNodes.size(); i++) {
-				NexmlNode childNode = nexmlChildNodes.get(i);
+			for (int i = 0; i < childNexmlNodes.size(); i++) {
+				NexmlNode childNode = childNexmlNodes.get(i);
 				sb.append(childNode.getNewick());
-				if (i < nexmlChildNodes.size() - 1) {
+				if (i < childNexmlNodes.size() - 1) {
 					sb.append(",");
 				}
 			}
@@ -136,12 +141,11 @@ public class NexmlNode extends NexmlElement {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(getId());
-		sb.append("; p: "+getParentNexmlId()+"; ");
 		ensureChildEdgesAndNodes();
-		if (nexmlChildNodes.size() > 0) {
+		if (childNexmlNodes.size() > 0) {
 			sb.append("[");
-			for (int i = 0; i < nexmlChildNodes.size(); i++) {
-				sb.append(nexmlChildNodes.get(i).getId()+" ");
+			for (int i = 0; i < childNexmlNodes.size(); i++) {
+				sb.append(childNexmlNodes.get(i).getId()+" ");
 			}
 			sb.append("]");
 		}
@@ -152,18 +156,18 @@ public class NexmlNode extends NexmlElement {
 		return parentNexmlNode == null ? null : parentNexmlNode.getId(); 
 	}
 
-	public List<NexmlNode> createDescendantNodes() {
-		List<NexmlNode> nodes = new ArrayList<NexmlNode>();
-		addNodes(this, nodes);
-		return nodes;
-	}
-
-	public List<NexmlEdge> createDescendantEdges() {
-		List<NexmlEdge> edges = new ArrayList<NexmlEdge>();
-		addEdges(this, edges);
-		return edges;
-	}
-
+//	public List<NexmlNode> createDescendantNodes() {
+//		List<NexmlNode> nodes = new ArrayList<NexmlNode>();
+//		addNodes(this, nodes);
+//		return nodes;
+//	}
+//
+//	public List<NexmlEdge> createDescendantEdges() {
+//		List<NexmlEdge> edges = new ArrayList<NexmlEdge>();
+//		addEdges(this, edges);
+//		return edges;
+//	}
+//
 	private void addNodes(NexmlNode node, List<NexmlNode> nodes) {
 		List<NexmlNode> childNodes = node.getNexmlChildNodes();
 		for (NexmlNode childNode : childNodes) {
@@ -172,24 +176,38 @@ public class NexmlNode extends NexmlElement {
 		}
 	}
 
-	private void addEdges(NexmlNode node, List<NexmlEdge> edges) {
-		List<NexmlEdge> childEdges = node.getNexmlChildEdges();
-		for (NexmlEdge childEdge : childEdges) {
-			edges.add(childEdge);
-		}
-		List<NexmlNode> childNodes = node.getNexmlChildNodes();
-		for (NexmlNode childNode : childNodes) {
-			addEdges(childNode, edges);
-		}
-	}
+//	private void addEdges(NexmlNode node, List<NexmlEdge> edges) {
+//		List<NexmlEdge> childEdges = node.getNexmlChildEdges();
+//		for (NexmlEdge childEdge : childEdges) {
+//			edges.add(childEdge);
+//		}
+//		List<NexmlNode> childNodes = node.getNexmlChildNodes();
+//		for (NexmlNode childNode : childNodes) {
+//			addEdges(childNode, edges);
+//		}
+//	}
 
 	private List<NexmlNode> getNexmlChildNodes() {
 		ensureChildEdgesAndNodes();
-		return nexmlChildNodes;
+		return childNexmlNodes;
 	}
 	
-	private List<NexmlEdge> getNexmlChildEdges() {
-		ensureChildEdgesAndNodes();
-		return nexmlChildEdges;
+//	private List<NexmlEdge> getNexmlChildEdges() {
+//		ensureChildEdgesAndNodes();
+//		return nexmlChildEdges;
+//	}
+
+	public String getRootValue() {
+		return this.getAttributeValue(ROOT);
+	}
+
+	public void addNexmlEdge(NexmlEdge nexmlEdge) {
+		if (!nexmlEdges.contains(nexmlEdge)) {
+			nexmlEdges.add(nexmlEdge);
+		}
+	}
+
+	public void addChildNode(NexmlNode childNexmlNode) {
+		this.childNexmlNodes.add(childNexmlNode);
 	}
 }

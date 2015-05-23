@@ -1,0 +1,18 @@
+<argList name="phylo">
+	<arg name="phylo" 
+		long="--ph.phylo"
+		args=""
+		countRange="{1,*}"
+		runMethod="runPhylo"
+		outputMethod="outputResultElements"
+		>
+		<help>
+		</help>
+		<!-- 
+		<value name="trailing_tilde">(?:[^\s\p{Punct}]*)</value>
+		-->
+	</arg>	
+	
+	
+</argList>
+			

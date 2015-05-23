@@ -27,7 +27,7 @@ public class NexmlTree extends NexmlElement {
 	private Map<String, NexmlNode> nodeByIdMap;
 	private Multimap<String, NexmlEdge> edgeBySourceMap;
 	private Multimap<String, NexmlEdge> edgeByTargetMap;
-	private NexmlNode rootNode;
+	private NexmlNode rootNexmlNode;
 	private List<NexmlNode> rootList;
 	private Set<NexmlNode> unusedNodeSet;
 	private Set<NexmlNode> tipSet;
@@ -132,42 +132,49 @@ public class NexmlTree extends NexmlElement {
 		if (rootNodes.size() == 0) {
 			LOG.error("NO Root nodes");
 		} else if (rootNodes.size() == 1) {
-			this.rootNode = rootNodes.get(0);
+			this.rootNexmlNode = rootNodes.get(0);
 		} else {
-			this.rootNode = rootNodes.get(0);
-//			rootNodes.remove(rootNode);
-			for (int i = 1; i < rootNodes.size(); i++) {
-				NexmlTree newTree = new NexmlTree();
-				newTree.rootNode = rootNodes.get(i);
-				newTree.transferNodeAndDescendants(newTree.rootNode, nodeList);
-			}
+			LOG.debug("Cannot process multiple roots ");
+//			this.rootNexmlNode = rootNodes.get(0);
+////			rootNodes.remove(rootNode);
+//			for (int i = 1; i < rootNodes.size(); i++) {
+//				NexmlTree newTree = new NexmlTree();
+//				newTree.rootNexmlNode = rootNodes.get(i);
+//				newTree.transferNodeAndDescendants(newTree.rootNexmlNode, nodeList);
+//			}
 		}
 	}
+	
 
-	private void transferNodeAndDescendants(NexmlNode rootNode,	List<NexmlNode> nodeList) {
-		this.nodeList = new ArrayList<NexmlNode>();
-		this.edgeList = new ArrayList<NexmlEdge>();
-		List<NexmlNode> descendantNodeList = rootNode.createDescendantNodes();
-		for (NexmlNode node : descendantNodeList) {
-			this.nodeList.add(node);
-		}
-		List<NexmlEdge> descendantEdgeList = rootNode.createDescendantEdges();
-		for (NexmlEdge edge : descendantEdgeList) {
-			this.edgeList.add(edge);
-		}
-	}
+//	private void transferNodeAndDescendants(NexmlNode rootNode,	List<NexmlNode> nodeList) {
+//		this.nodeList = new ArrayList<NexmlNode>();
+//		this.edgeList = new ArrayList<NexmlEdge>();
+//		List<NexmlNode> descendantNodeList = rootNode.createDescendantNodes();
+//		for (NexmlNode node : descendantNodeList) {
+//			this.nodeList.add(node);
+//		}
+//		List<NexmlEdge> descendantEdgeList = rootNode.createDescendantEdges();
+//		for (NexmlEdge edge : descendantEdgeList) {
+//			this.edgeList.add(edge);
+//		}
+//	}
 
 	public String getNewick() {
 		getRootNode();
-		return rootNode.getNewick();
+		return rootNexmlNode.getNewick();
 	}
 
 	private NexmlNode getRootNode() {
-		if (rootNode == null) {
-			LOG.error("No root Node");
-			getRootList();
+		if (rootNexmlNode == null) {
+			LOG.error("No root Node ... looking ");
+			getNodeListAndMap();
+			for (NexmlNode nexmlNode : nodeList) {
+				if (NexmlFactory.TRUE.equals(nexmlNode.getRootValue())) {
+					rootNexmlNode = nexmlNode;
+				}
+			}
 		}
-		return rootNode;
+		return rootNexmlNode;
 	}
 
 	public List<NexmlNode> getRootList() {

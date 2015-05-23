@@ -12,28 +12,28 @@ import org.xmlcml.ami2.plugins.sequence.SequenceArgProcessor;
  * @author pm286
  *
  */
-public class TreePlugin extends AMIPlugin {
+public class PhyloTreePlugin extends AMIPlugin {
 
-	private static final Logger LOG = Logger.getLogger(TreePlugin.class);
+	private static final Logger LOG = Logger.getLogger(PhyloTreePlugin.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 
 //	private TreeArgProcessor argProcessor;
 	
-	public TreePlugin(String[] args) {
+	public PhyloTreePlugin(String[] args) {
 		super();
-		this.argProcessor = new TreeArgProcessor(args);
+		this.argProcessor = new PhyloTreeArgProcessor(args);
 	}
 	
 	public static void main(String[] args) {
-		TreeArgProcessor argProcessor = new TreeArgProcessor(args);
+		PhyloTreeArgProcessor argProcessor = new PhyloTreeArgProcessor(args);
 		argProcessor.runAndOutput();
 	}
 
-	public TreePlugin(String args) {
+	public PhyloTreePlugin(String args) {
 		super();
-		this.argProcessor = new TreeArgProcessor(args);
+		this.argProcessor = new PhyloTreeArgProcessor(args);
 	}
 
 	
