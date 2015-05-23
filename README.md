@@ -8,7 +8,9 @@ AMI has been through 2 major revisions, and most recently has been split into tw
 
 ## Plugins
 
-It is often strightforward to develop text-based searches, and this is accessible to most committed scientists. Graphics is always harder and requires bespoke programming. Plugins have been developed for at least:
+AMI has a plugin architecture where each problem or community has its own plugin. Examples are "species", "sequence", "regex" and soon some chemistry.
+
+It is often straightforward to develop text-based searches, and this is accessible to most committed scientists. Graphics is always harder and requires bespoke programming. Plugins have been developed for at least:
 
 ### text targets
 
