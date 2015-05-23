@@ -1,35 +1,24 @@
 package org.xmlcml.ami2.plugins.sequence;
 
-import java.util.regex.Pattern;
-
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.ami2.plugins.DefaultSearcher;
+import org.xmlcml.ami2.plugins.AMISearcher;
+import org.xmlcml.ami2.plugins.NamedPattern;
+import org.xmlcml.cmine.files.ResultElement;
 
-public class SequenceSearcher extends DefaultSearcher {
+public class SequenceSearcher extends AMISearcher {
 
-	
-	public static final Logger LOG = Logger.getLogger(SequenceSearcher.class);
-	static {
-		LOG.setLevel(Level.DEBUG);
+	public SequenceSearcher(AMIArgProcessor argProcessor,NamedPattern namedPattern) {
+		super(argProcessor, namedPattern);
 	}
 	
-	private SequenceType sequenceType;
-
-
-	public SequenceSearcher(AMIArgProcessor argProcessor, SequenceType sequenceType, Pattern pattern) {
-		super(argProcessor, pattern);
-		this.sequenceType = sequenceType;
-
-	}
-	
-	public SequenceType getSequenceType() {
-		return sequenceType;
+	/**
+	 *  //PLUGIN
+	 */
+	@Override
+	public ResultElement createResultElement() {
+		return new SequenceResultElement();
 	}
 
-	public String getType() {
-		return sequenceType.getType();
-	}
+
 
 }

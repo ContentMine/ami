@@ -1,0 +1,3581 @@
+<?xml version="1.0" encoding="UTF-8"?><div tagx="article">
+   <head>
+      <meta content="Public Library of Science" name="citation_publisher"></meta>
+      <meta content="10.1371/journal.pone.0115544" name="citation_doi"></meta>
+      <meta content="Better Informing Decision Making with Multiple Outcomes Cost-Effectiveness Analysis under Uncertainty in Cost-Disutility Space" name="citation_title"></meta>
+      <title>Better Informing Decision Making with Multiple Outcomes Cost-Effectiveness Analysis
+         under Uncertainty in Cost-Disutility Space
+      </title>
+      <div tagx="contrib-group">
+         <meta content="Nikki McCaffrey" name="citation_author"></meta>
+         <meta content="1" name="citation_author_institution_ref"></meta>
+         <meta content="Meera Agar" name="citation_author"></meta>
+         <meta content="2" name="citation_author_institution_ref"></meta>
+         <meta content="Janeane Harlum" name="citation_author"></meta>
+         <meta content="3" name="citation_author_institution_ref"></meta>
+         <meta content="Jonathon Karnon" name="citation_author"></meta>
+         <meta content="4" name="citation_author_institution_ref"></meta>
+         <meta content="David Currow" name="citation_author"></meta>
+         <meta content="5" name="citation_author_institution_ref"></meta>
+         <meta content="Simon Eckermann" name="citation_author"></meta>
+         <meta content="6" name="citation_author_institution_ref"></meta>
+      </div>
+      <div tagx="contrib-group"></div>
+      <meta content="nicola.mccaffrey@flinders.edu.au" name="email"></meta>
+      <meta content="Competing Interests: The authors have declared that no competing interests exist." name="conflict"></meta>
+      <meta content="Conceived and designed the experiments: NM MA JH DC SE. Performed the experiments: NM. Analyzed the data: NM JK SE. Contributed reagents/materials/analysis tools: SE. Wrote the paper: NM MA JH JK DC SE." name="contribs"></meta>
+      <meta content="2015-3-9" name="citation_pubdate"></meta>
+      <meta content="Copyright 2015: McCaffrey et al" name="citation_copyright"></meta>
+      <meta content="Licence This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited" name="citation_licence"></meta>
+      <meta content="This study was funded by the Australian Government’s Department of Health under the National Palliative Care Strategy. The funding agency has no control over study design, analysis, reporting nor dissemination." name="citation_funding"></meta>
+      <meta content="19" name="citation_pagecount"></meta>
+      <meta content="Data AvailabilityAll relevant data are within the paper and its Supporting Information files." name="citation_data"></meta>
+   </head>
+   <div id="abstract" tag="abstract">
+      <div id="sec001">
+         <h2>Introduction</h2>
+         <p>Comparing multiple, diverse outcomes with cost-effectiveness analysis (CEA) is important,
+            yet challenging in areas like palliative care where domains are unamenable to integration
+            with survival. Generic multi-attribute utility values exclude important domains and
+            non-health outcomes, while partial analyses—where outcomes are considered separately,
+            with their joint relationship under uncertainty ignored—lead to incorrect inference
+            regarding preferred strategies. 
+         </p>
+      </div>
+      <div id="sec002">
+         <h2>Objective</h2>
+         <p>The objective of this paper is to consider whether such decision making can be better
+            informed with alternative presentation and summary measures, extending methods previously
+            shown to have advantages in multiple strategy comparison.
+         </p>
+      </div>
+      <div id="sec003">
+         <h2>Methods</h2>
+         <p>Multiple outcomes CEA of a home-based palliative care model (PEACH) relative to usual
+            care is undertaken in cost disutility (CDU) space and compared with analysis on the
+            cost-effectiveness plane. Summary measures developed for comparing strategies across
+            potential threshold values for multiple outcomes include: expected net loss (ENL)
+            planes quantifying differences in expected net benefit; the ENL contour identifying
+            preferred strategies minimising ENL and their expected value of perfect information;
+            and cost-effectiveness acceptability planes showing probability of strategies minimising
+            ENL.
+         </p>
+      </div>
+      <div id="sec004">
+         <h2>Results</h2>
+         <p>Conventional analysis suggests PEACH is cost-effective when the threshold value per
+            additional day at home (
+            <div tagx="inline-formula">
+               <div tagx="inline-graphic"></div>
+            </div>
+            <div tagx="sub">1</div>) exceeds $1,068 or dominated by usual care when only the proportion of home deaths
+            is considered. In contrast, neither alternative dominate in CDU space where cost and
+            outcomes are jointly considered, with the optimal strategy depending on threshold
+            values. For example, PEACH minimises ENL when 
+            <div tagx="inline-formula">
+               <div tagx="inline-graphic"></div>
+            </div>
+            <div tagx="sub">1</div>=$2,000 and 
+            <div tagx="inline-formula">
+               <div tagx="inline-graphic"></div>
+            </div>
+            <div tagx="sub">2</div>=$2,000 (threshold value for dying at home), with a 51.6% chance of PEACH being cost-effective.
+         </p>
+      </div>
+      <div id="sec005">
+         <h2>Conclusion</h2>
+         <p>Comparison in CDU space and associated summary measures have distinct advantages to
+            multiple domain comparisons, aiding transparent and robust joint comparison of costs
+            and multiple effects under uncertainty across potential threshold values for effect,
+            better informing net benefit assessment and related reimbursement and research decisions.
+         </p>
+      </div>
+   </div>
+   <div id="sec006">
+      <h2>Introduction</h2>
+      <p>Conventional cost-effectiveness analysis (CEA) is limited to consideration of one
+         measure of effect such as life years gained [
+         <span ref-type="bibr" rid="pone.0115544.ref001">1</span>]. However, when multiple outcome domains are important such single outcome comparison
+         can lead to conflicting conclusions concerning preferred strategies [
+         <span ref-type="bibr" rid="pone.0115544.ref002">2</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref003">3</span>]. Consequently, decisions about the costs and benefits of funding allocations can
+         be misinformed and lead to inefficient distribution of finite health care resources
+         [
+         <span ref-type="bibr" rid="pone.0115544.ref002">2</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref004">4</span>].
+      </p>
+      <p>The widely applied quality-adjusted life year (QALY) measure overcomes this limitation
+         to the extent that impacts on multiple domains of health can be integrated with survival
+         [
+         <span ref-type="bibr" rid="pone.0115544.ref001">1</span>]. However, QALYs calculated using generic multi-attribute utility instruments (MAUIs)
+         such as the EQ-5D [
+         <span ref-type="bibr" rid="pone.0115544.ref005">5</span>] focus upon health alone as the sole indicator of value. Empirical studies have shown
+         that individuals may also gain utility from factors relating to the provision of health
+         care [
+         <span ref-type="bibr" rid="pone.0115544.ref006">6</span>–
+         <span ref-type="bibr" rid="pone.0115544.ref008">8</span>]. Economic analyses focusing on health alone do not enable robust coverage of the
+         impacts of interventions in complex disease areas where multiple, diverse domains
+         of effect are important. For example, in palliative care, many patients obtain value
+         from receiving home-based rather than hospital care [
+         <span ref-type="bibr" rid="pone.0115544.ref009">9</span>].
+      </p>
+      <p>In palliative care, the use of the QALY measure is also limited by the:</p>
+      <div tagx="list">
+         <div tagx="list-item">
+            <p>omission of important patient-valued domains from generic MAUIs, such as preparation
+               for death and existential issues [
+               <span ref-type="bibr" rid="pone.0115544.ref010">10</span>, 
+               <span ref-type="bibr" rid="pone.0115544.ref011">11</span>];
+            </p>
+         </div>
+         <div tagx="list-item">
+            <p>changes in patient and clinical perspective due to the proximity of death when valuing
+               utility;
+            </p>
+         </div>
+         <div tagx="list-item">
+            <p>dearth of palliative care specific utility instruments incorporating the key domains
+               important to patients receiving palliative care [
+               <span ref-type="bibr" rid="pone.0115544.ref012">12</span>];
+            </p>
+         </div>
+         <div tagx="list-item">
+            <p>limited availability of suitable palliative care quality of life (QOL) measurement
+               tools to ‘map’ to common MAUIs; and
+            </p>
+         </div>
+         <div tagx="list-item">
+            <p>the inability to integrate the impacts on carers’ utility, survival and willingness
+               to care [
+               <span ref-type="bibr" rid="pone.0115544.ref003">3</span>, 
+               <span ref-type="bibr" rid="pone.0115544.ref013">13</span>, 
+               <span ref-type="bibr" rid="pone.0115544.ref014">14</span>].
+            </p>
+         </div>
+      </div>
+      <p>One option might be to develop a condition-specific MAUI to incorporate palliative
+         care-related effects of interest. Naturally, this would require identifying salient
+         health and non-health related QOL domains and items for inclusion within each domain.
+         Furthermore, confirmation of the content and construct validity and responsiveness
+         of the condition-specific MAUI would be necessary [
+         <span ref-type="bibr" rid="pone.0115544.ref015">15</span>]. However, such research would be expected to take years to complete and still faces
+         issues of how to weight or combine effects to inform societal decision making with
+         the objective of maximising budget constrained net benefit (NB) across research, reimbursement
+         and regulation decisions [
+         <span ref-type="bibr" rid="pone.0115544.ref016">16</span>]. Alternatively, cost-consequences analysis (CCA) [
+         <span ref-type="bibr" rid="pone.0115544.ref001">1</span>] with disaggregated mean costs and multiple outcomes explicitly presented has been
+         advocated as a preferred method in these situations [
+         <span ref-type="bibr" rid="pone.0115544.ref017">17</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref018">18</span>]. However, in CCA, cost and multiple outcomes are treated separately without consideration
+         of their interaction or joint uncertainty.
+      </p>
+      <p>As Briggs et. al. argue in seminal papers on the death of cost-minimisation [
+         <span ref-type="bibr" rid="pone.0115544.ref019">19</span>], and cost effectiveness under uncertainty [
+         <span ref-type="bibr" rid="pone.0115544.ref020">20</span>], separate and sequential hypothesis tests on differences in outcomes and costs lead
+         to fallacious inferences. It is important that CEA represents joint uncertainty associated
+         with cost and outcomes so that funders and policy makers can make valid inferences
+         and optimise across joint research, reimbursement, regulation and pricing decisions
+         [
+         <span ref-type="bibr" rid="pone.0115544.ref016">16</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref021">21</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref022">22</span>]. Jointly evaluating costs with multiple effects and their potential values under
+         uncertainty would enable robust and transparent trade offs between impacts of strategies
+         and the NB of strategies under uncertainty and hence aid consideration of the consequences
+         of reimbursement decisions. Further, if summary measures representing the expected
+         value of perfect information were developed, these measures could start to address
+         decisions related to the value of conducting future research relative to the cost
+         of obtaining the additional information [
+         <span ref-type="bibr" rid="pone.0115544.ref016">16</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref021">21</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref023">23</span>]. Ultimately, economic evaluations can easily misrepresent the relative NB of palliative
+         and end-of-life care without simultaneous consideration of costs and multiple outcome
+         domains under uncertainty. Accessible, robust and generalisable methods for jointly
+         comparing cost and multiple outcomes under uncertainty consistent with budget constrained
+         maximisation of NB are needed to better inform funding decisions in such settings.
+      </p>
+      <p>For multiple strategy comparisons Eckermann et al. [
+         <span ref-type="bibr" rid="pone.0115544.ref024">24</span>–
+         <span ref-type="bibr" rid="pone.0115544.ref026">26</span>] demonstrate distinct decision making advantages of: (i) presenting costs and effects
+         on the cost-disutility (CDU) plane, with effects framed from a utility reducing perspective,
+         e.g. mortality, morbidity or reduction in QALYs, and flexible axes where costs and
+         effects are measured relative to the least costly and most effective strategies respectively;
+         and (ii) simply calculated expected net loss (ENL) curves and frontiers for each strategy
+         which identify both the optimal strategy in minimising ENL at any threshold value
+         and their expected value of perfect information (EVPI). This paper extends these methods
+         to consider multiple outcomes under uncertainty and whether and how such comparison
+         can be used to better inform societal decision making when optimising budget constrained
+         NB.
+      </p>
+      <p>The next section summarises conventional CCA and CEA applied to compare multiple outcomes
+         with alternative palliative care models. The new methodology, multiple outcomes comparison
+         in CDU space, and associated summary measures are then introduced and illustrated.
+         The relative merits of these alternative methods for multiple outcomes CEA are discussed
+         in palliative care settings and more generally with multi-criteria decision analysis
+         (MCDA) and finally conclusions and implications are drawn.
+      </p>
+   </div>
+   <div id="sec007">
+      <h2>Methods</h2>
+      <p>The cost effectiveness of a home-based palliative care model (Palliative Care Extended
+         Packages at Home (PEACH)) which aimed to expedite discharge and enable patients to
+         remain at home is evaluated relative to usual care using participant-level data from
+         a pilot study. Full details of the economic evaluation are presented elsewhere [
+         <span ref-type="bibr" rid="pone.0115544.ref027">27</span>]. Ethics approval for the pilot study was granted by Sydney South West Area Health
+         Service Human Research Ethics Committees. Written informed consent was obtained from
+         the pilot study participants.
+      </p>
+      <div id="sec008">
+         <h3>Cost-consequences and cost-effectiveness analyses</h3>
+         <p>Mean incremental per patient effects and net costs were calculated for PEACH relative
+            to usual care including: days at home; place of death; PEACH intervention costs; costs
+            of specialist palliative care service use; and costs of acute hospital and palliative
+            care unit inpatient stays and outpatient visits. Net benefit (
+            <span ref-type="disp-formula" rid="pone.0115544.e001">Equation 1</span>) was calculated to address analytical and inferential shortcomings of the incremental
+            cost-effectiveness ratio (ICER), while retaining the same underlying cost effectiveness
+            objective [
+            <span ref-type="bibr" rid="pone.0115544.ref020">20</span>, 
+            <span ref-type="bibr" rid="pone.0115544.ref028">28</span>–
+            <span ref-type="bibr" rid="pone.0115544.ref031">31</span>]. Under the NB approach, an intervention is considered cost- effective if, at specified
+            decision-maker threshold values, the monetary value of the incremental effects is
+            greater than the incremental costs i.e., incremental net benefit (INB) is positive
+            (see 
+            <span ref-type="disp-formula" rid="pone.0115544.e002">Equation 2</span>) [
+            <span ref-type="bibr" rid="pone.0115544.ref024">24</span>]. The intervention with the greatest INB is considered the most cost-effective in
+            multiple intervention comparison. In budget constrained health systems, threshold
+            values for effects should be the health shadow price for a unit gain of effect reflecting
+            opportunity cost and maximisation of health system outcomes, i.e. represent the best
+            alternative way of achieving the same effects [
+            <span ref-type="bibr" rid="pone.0115544.ref022">22</span>, 
+            <span ref-type="bibr" rid="pone.0115544.ref032">32</span>–
+            <span ref-type="bibr" rid="pone.0115544.ref034">34</span>].
+            
+            <div tagx="disp-formula">
+               <div tagx="alternatives">
+                  <div tagx="graphic"></div>
+                  <div tagx="math">
+                     <div tagx="mi">N</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">B</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">=</div>
+                     <div tagx="mi">𝕜</div>
+                     <div tagx="mo">×</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">E</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">-</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">C</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div tagx="label">Equation 1</div>
+            </div>
+            <div tagx="disp-formula">
+               <div tagx="alternatives">
+                  <div tagx="graphic"></div>
+                  <div tagx="math">
+                     <div tagx="mi">𝕜</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">E</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">-</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">E</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">0</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">-</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">C</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">-</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">C</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">0</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">&gt;</div>
+                     <div tagx="mn">0</div>
+                  </div>
+               </div>
+               <div tagx="label">Equation 2</div>
+            </div>
+            where, 1 = evaluated intervention, 0 = comparator, 
+            <i>C</i> = cost, 
+            <i>E</i> = effectiveness and 
+            <i>k</i> = the threshold value.
+         </p>
+         <p>INB and cost-effectiveness acceptability curves (CEACs) were estimated at potential
+            threshold values for one extra day at home, the primary outcome [
+            <span ref-type="bibr" rid="pone.0115544.ref031">31</span>, 
+            <span ref-type="bibr" rid="pone.0115544.ref035">35</span>]. Uncertainty for costs, effects and cost effectiveness were estimated bootstrapping
+            on participants’ costs and effects pairs across 10,000 replicates.
+         </p>
+      </div>
+      <div id="sec009">
+         <h3>Comparison on the cost-disutility plane</h3>
+         <div id="sec010">
+            <h3>Net benefit correspondence theorem (NBCT)</h3>
+            <p>Eckermann [
+               <span ref-type="bibr" rid="pone.0115544.ref036">36</span>] and Eckermann, Briggs and Willan [
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>] demonstrated a one to one correspondence between (i) maximising NB and (ii) minimising
+               costs and the decision maker’s value of events from a utility-reducing perspective.
+               Applying this approach, the equation for INB (
+               <span ref-type="disp-formula" rid="pone.0115544.e002">Equation 2</span>) [
+               <span ref-type="bibr" rid="pone.0115544.ref028">28</span>] is transformed into the following,
+               
+               <div tagx="disp-formula">
+                  <div tagx="alternatives">
+                     <div tagx="graphic"></div>
+                     <div tagx="math">
+                        <div tagx="mi">I</div>
+                        <div tagx="mi">N</div>
+                        <div tagx="msub">
+                           <div tagx="mrow">
+                              <div tagx="mi">B</div>
+                           </div>
+                           <div tagx="mrow">
+                              <div tagx="mi">*</div>
+                              <div tagx="mi">i</div>
+                           </div>
+                        </div>
+                        <div tagx="mo">=</div>
+                        <div tagx="mo">(</div>
+                        <div tagx="mi">𝕜</div>
+                        <div tagx="mo">×</div>
+                        <div tagx="mi">D</div>
+                        <div tagx="msub">
+                           <div tagx="mrow">
+                              <div tagx="mi">U</div>
+                           </div>
+                           <div tagx="mrow">
+                              <div tagx="mi">i</div>
+                           </div>
+                        </div>
+                        <div tagx="mo">+</div>
+                        <div tagx="msub">
+                           <div tagx="mrow">
+                              <div tagx="mi">C</div>
+                           </div>
+                           <div tagx="mrow">
+                              <div tagx="mi">i</div>
+                           </div>
+                        </div>
+                        <div tagx="mo">)</div>
+                        <div tagx="mo">-</div>
+                        <div tagx="mo">(</div>
+                        <div tagx="mi">𝕜</div>
+                        <div tagx="mo">×</div>
+                        <div tagx="mi">D</div>
+                        <div tagx="msub">
+                           <div tagx="mrow">
+                              <div tagx="mi">U</div>
+                           </div>
+                           <div tagx="mrow">
+                              <div tagx="mi">*</div>
+                           </div>
+                        </div>
+                        <div tagx="mo">+</div>
+                        <div tagx="msub">
+                           <div tagx="mrow">
+                              <div tagx="mi">C</div>
+                           </div>
+                           <div tagx="mrow">
+                              <div tagx="mi">*</div>
+                           </div>
+                        </div>
+                        <div tagx="mo">)</div>
+                     </div>
+                  </div>
+                  <div tagx="label">Equation 3</div>
+               </div>
+               where 
+               <i>DU</i> are effects framed from a disutility perspective, 
+               <i>C</i> represents costs, 
+               <i>i</i> represents the strategy under consideration and * is the optimal strategy at threshold
+               value for a unit of effect.
+            </p>
+         </div>
+         <div id="sec011">
+            <h3>Radial efficiency measures on the CDU plane</h3>
+            <p>Reframing effects from a utility-reducing perspective and comparing strategies on
+               the CDU plane allows NB improvement with contraction to the vertex; that is performance
+               improves with equi-proportionally contraction of costs and effects to the origin.
+               Importantly, these radial properties enable efficiency measures invariant to scale
+               of axes, unlike non-radial efficiency measures [
+               <span ref-type="bibr" rid="pone.0115544.ref037">37</span>] and allow conventional economic, technical and allocative efficiency measures [
+               <span ref-type="bibr" rid="pone.0115544.ref022">22</span>–
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>, 
+               <span ref-type="bibr" rid="pone.0115544.ref029">29</span>] to be calculated using standard frontier estimation methods such as data envelopment
+               analysis (DEA) or index methods. Generally, employing input-orientated DEA, a piecewise,
+               convex, inner-boundary is formed reflecting combinations of multiple inputs that cannot
+               be proportionally contracted with the feasible set (convex combination of other strategies)
+               [
+               <span ref-type="bibr" rid="pone.0115544.ref038">38</span>].
+            </p>
+            <p>Farrell [
+               <span ref-type="bibr" rid="pone.0115544.ref037">37</span>], in 1957, also showed radial properties enable economic efficiency to be expressed
+               as the product of technical and allocative efficiency [
+               <span ref-type="bibr" rid="pone.0115544.ref037">37</span>]. Hence when factor prices are applied [
+               <span ref-type="bibr" rid="pone.0115544.ref038">38</span>] efficiency can be calculated [
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>, 
+               <span ref-type="bibr" rid="pone.0115544.ref026">26</span>, 
+               <span ref-type="bibr" rid="pone.0115544.ref036">36</span>] and decomposed into technical and allocative efficiency components. In 
+               <span ref-type="fig" rid="pone.0115544.g001">Fig. 1</span>, BB’ represents possible combinations of inputs for a given cost. S’ represents an
+               allocatively efficient point because this lies on the production possibilities frontier
+               with minimal cost given factor prices, i.e. is using the appropriate mix of inputs
+               given input prices to produce the given output. Allocative 
+               <i>inefficiency</i> at point T is represented by RS/0S. That is, the amount by which production costs
+               can be reduced if the ratio of inputs used by the firm at point T were identical to
+               those used by the firm at point S’, the technically and allocatively efficient firm
+               [
+               <span ref-type="bibr" rid="pone.0115544.ref037">37</span>].
+            </p>
+            <div tagx="fig">
+               <div tagx="object-id">10.1371/journal.pone.0115544.g001</div>
+               <div tagx="label">Fig 1</div>
+               <caption>
+                  <div tagx="title">Farrell’s production possibilities frontier for two inputs and one output (adapted
+                     from Coelli [
+                     <span ref-type="bibr" rid="pone.0115544.ref041">41</span>].
+                  </div>
+               </caption>
+               <div tagx="graphic"></div>
+            </div>
+            <p>Traditionally results presented graphically on the cost-effectiveness plane use a
+               fixed comparator with improved performance indicated by south-east movement. Further,
+               with multiple strategy comparison, the point of reference changes along the efficiency
+               frontier [
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>]. The use of standard frontier estimation methods are prevented on the cost-effectiveness
+               plane by the absence of radial properties.
+            </p>
+            <p>For multiple strategies with a 
+               <i>single</i> effect, Eckermann et al [
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>, 
+               <span ref-type="bibr" rid="pone.0115544.ref025">25</span>] show that comparison at potential threshold value for effects on the CDU plane naturally
+               leads to considering the net loss (NL) statistic for strategies, the expected net
+               loss (ENL) relative to the strategy maximising NB, ENL curves for each strategy and
+               the ENL frontier as the lower bound of ENL curves.
+            </p>
+            <p>In this paper use of DEA in CDU space is also shown to facilitate explicit and robust
+               consideration of the interaction of uncertainty between costs and 
+               <i>multiple</i> outcomes and lead to useful summary measures including:
+            </p>
+            <div tagx="list">
+               <div tagx="list-item">
+                  <p>Threshold regions, combinations of threshold values for joint outcomes where alternative
+                     service models maximise NB [
+                     <span ref-type="bibr" rid="pone.0115544.ref038">38</span>].
+                  </p>
+               </div>
+               <div tagx="list-item">
+                  <p>ENL planes which quantify differences in ENL [
+                     <span ref-type="bibr" rid="pone.0115544.ref028">28</span>] across threshold values for multiple outcomes, (i) time at home 
+                     <i>and</i> (ii) death at home rather than in an inpatient setting;
+                  </p>
+               </div>
+               <div tagx="list-item">
+                  <p>The ENL contour which identifies the service model that minimises ENL across bootstrapped
+                     replicates for combinations of threshold values across multiple outcomes [
+                     <span ref-type="bibr" rid="pone.0115544.ref024">24</span>, 
+                     <span ref-type="bibr" rid="pone.0115544.ref025">25</span>]; and
+                  </p>
+               </div>
+               <div tagx="list-item">
+                  <p>Cost-effectiveness acceptability planes which show the probability of each service
+                     model minimising ENL at given combinations of value of effects for multiple outcomes.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="sec012">
+         <h3>Comparison in cost-disutility space</h3>
+         <div id="sec013">
+            <h3>Technical efficiency frontier</h3>
+            <p>The technical efficiency frontier was constructed using DEA with a Farrell input-orientated
+               technical efficiency model run under constant returns to scale [
+               <span ref-type="bibr" rid="pone.0115544.ref039">39</span>]. Mean incremental cost relative to the cheapest model of care and mean incremental
+               effects relative to the most effective model of care framed from a disutility perspective
+               were included as strongly disposable inputs. The resulting frontier identifies service
+               models that minimise cost for given effects framed from a disutility perspective [
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>–
+               <span ref-type="bibr" rid="pone.0115544.ref025">25</span>, 
+               <span ref-type="bibr" rid="pone.0115544.ref036">36</span>]. A technical efficiency score of one indicates that service models form part of
+               the technical efficiency frontier and minimise costs for given effect rates at some
+               combination of threshold values. Technical efficiency scores less than one indicate
+               the model of care is dominated or extended dominated by the other strategies and does
+               not form part of the frontier, i.e. is technically inefficient. In other words, both
+               cost and disutility of effects can be equi-proportionally reduced relative to a given
+               strategy or convex combinations of other strategies.
+            </p>
+         </div>
+         <div id="sec014">
+            <h3>Deterministic cost effectiveness analyses</h3>
+            <p>To determine threshold regions where alternative models of care are preferred, NL
+               is first calculated from incremental analysis in CDU space. Applying the net benefit
+               correspondence theorem [
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>], the objective of maximising NB is equivalent to minimising NL. The NL of any given
+               model of care (
+               <i>i</i>) is the loss in NB from choosing 
+               <i>i</i> rather than the optimal model of care (*) at given threshold value 
+               <i>k</i> for one effect and can be found as follows:
+               
+               <div tagx="disp-formula">
+                  <div tagx="alternatives">
+                     <div tagx="graphic"></div>
+                     <div tagx="math">
+                        <div tagx="mi">N</div>
+                        <div tagx="msub">
+                           <div tagx="mrow">
+                              <div tagx="mi">L</div>
+                           </div>
+                           <div tagx="mrow">
+                              <div tagx="mi">*</div>
+                              <div tagx="mi">i</div>
+                           </div>
+                        </div>
+                        <div tagx="mo">=</div>
+                        <div tagx="mo">(</div>
+                        <div tagx="mi">𝕜</div>
+                        <div tagx="mo">×</div>
+                        <div tagx="mi">D</div>
+                        <div tagx="msub">
+                           <div tagx="mrow">
+                              <div tagx="mi">U</div>
+                           </div>
+                           <div tagx="mrow">
+                              <div tagx="mi">i</div>
+                           </div>
+                        </div>
+                        <div tagx="mo">+</div>
+                        <div tagx="msub">
+                           <div tagx="mrow">
+                              <div tagx="mi">C</div>
+                           </div>
+                           <div tagx="mrow">
+                              <div tagx="mi">i</div>
+                           </div>
+                        </div>
+                        <div tagx="mo">)</div>
+                        <div tagx="mo">-</div>
+                        <div tagx="mo">(</div>
+                        <div tagx="mi">𝕜</div>
+                        <div tagx="mo">×</div>
+                        <div tagx="mi">D</div>
+                        <div tagx="msub">
+                           <div tagx="mrow">
+                              <div tagx="mi">U</div>
+                           </div>
+                           <div tagx="mrow">
+                              <div tagx="mi">*</div>
+                           </div>
+                        </div>
+                        <div tagx="mo">+</div>
+                        <div tagx="msub">
+                           <div tagx="mrow">
+                              <div tagx="mi">C</div>
+                           </div>
+                           <div tagx="mrow">
+                              <div tagx="mi">*</div>
+                           </div>
+                        </div>
+                        <div tagx="mo">)</div>
+                     </div>
+                  </div>
+                  <div tagx="label">Equation 4</div>
+               </div>
+               where 
+               <i>DU</i> is the outcome framed from a utility-reducing perspective and 
+               <i>C</i> represents costs.
+            </p>
+            <p>This relationship can be extended to include multiple outcomes [
+               <span ref-type="bibr" rid="pone.0115544.ref038">38</span>]. For example, for two outcomes and two strategies, 
+               <i>i</i> and 
+               <i>j</i>:
+            </p>
+            <div tagx="disp-formula">
+               <div tagx="alternatives">
+                  <div tagx="graphic"></div>
+                  <div tagx="math">
+                     <div tagx="mi">N</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">L</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">*</div>
+                           <div tagx="mi">i</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">=</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">𝕜</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">×</div>
+                     <div tagx="mi">D</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">U</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">i</div>
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">+</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">𝕜</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">2</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">×</div>
+                     <div tagx="mi">D</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">U</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">i</div>
+                           <div tagx="mn">2</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">+</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">C</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">i</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">-</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">𝕜</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">×</div>
+                     <div tagx="mi">D</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">U</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">*</div>
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">+</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">𝕜</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">2</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">×</div>
+                     <div tagx="mi">D</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">U</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">*</div>
+                           <div tagx="mn">2</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">+</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">C</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">*</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div tagx="label">Equation 5</div>
+            </div>
+            <div tagx="disp-formula">
+               <div tagx="alternatives">
+                  <div tagx="graphic"></div>
+                  <div tagx="math">
+                     <div tagx="mi">N</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">L</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">*</div>
+                           <div tagx="mi">j</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">=</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">𝕜</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">×</div>
+                     <div tagx="mi">D</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">U</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">j</div>
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">+</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">𝕜</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">2</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">×</div>
+                     <div tagx="mi">D</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">U</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">j</div>
+                           <div tagx="mn">2</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">+</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">C</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">i</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">-</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">𝕜</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">×</div>
+                     <div tagx="mi">D</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">U</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">*</div>
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">+</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">𝕜</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">2</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">×</div>
+                     <div tagx="mi">D</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">U</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">*</div>
+                           <div tagx="mn">2</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">+</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">C</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">*</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div tagx="label">Equation 6</div>
+            </div>
+            <p>With deterministic analysis the preferred model of care is the model which minimises
+               mean NL at any given combination of threshold values, i.e. 
+               <i>C + DU</i>
+               <div tagx="sub">1</div>𝕜
+               <div tagx="sub">1</div> + 
+               <i>DU</i>
+               <div tagx="sub">2</div>𝕜
+               <div tagx="sub">2</div> is minimised. Therefore, strategy 
+               <i>i</i> is preferred to strategy 
+               <i>j</i> when the mean NL of 
+               <i>i</i> is lower than the mean NL of 
+               <i>j</i>, and vice versa. To find the regions where alternative models of care are preferred,
+               the boundary of the regions is first determined by equating the NL expressions for
+               adjacent compared strategies on the frontier in CDU space, and solving for 𝕜
+               <div tagx="sub">1</div> and 𝕜
+               <div tagx="sub">2</div>, i.e.
+            </p>
+            <div tagx="disp-formula">
+               <div tagx="alternatives">
+                  <div tagx="graphic"></div>
+                  <div tagx="math">
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">C</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">i</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">+</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">𝕜</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">×</div>
+                     <div tagx="mi">D</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">U</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">i</div>
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">+</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">𝕜</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">2</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">×</div>
+                     <div tagx="mi">D</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">U</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">i</div>
+                           <div tagx="mn">2</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">=</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">C</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">j</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">+</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">𝕜</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">×</div>
+                     <div tagx="mi">D</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">U</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">j</div>
+                           <div tagx="mn">1</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                     <div tagx="mo">+</div>
+                     <div tagx="mo">(</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">𝕜</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mn">2</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">×</div>
+                     <div tagx="mi">D</div>
+                     <div tagx="msub">
+                        <div tagx="mrow">
+                           <div tagx="mi">U</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">j</div>
+                           <div tagx="mn">2</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                  </div>
+               </div>
+               <div tagx="label">Equation 7</div>
+            </div>
+            <p>Values either side of the boundary readily identify the combinations of potential
+               threshold values where each model minimises the mean NL.
+            </p>
+         </div>
+         <div id="sec015">
+            <h3>Stochastic cost-effectiveness analyses (accounting for joint uncertainty)</h3>
+            <p>Bootstrapping methods allow modelling of uncertainty across the joint distribution
+               of incremental costs and multiple incremental outcomes from the participant-level
+               data, allowing for covariance between costs and effects [
+               <span ref-type="bibr" rid="pone.0115544.ref040">40</span>]. The following measures are calculated using the bootstrap replicates and summarise
+               the expected return on investment and risk of return across potential threshold values
+               for multiple outcomes given current uncertainty.
+            </p>
+            <p>Choosing a strategy that does not minimise the NL incurs an incremental NL relative
+               to the optimal strategy. For each service model, at a given set of threshold values
+               the NL relative to the NB maximising strategy in each replicate is calculated and
+               averaged across 10,000 replicates to estimate ENL [
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>]. An expected loss arises for the proportion of replicates in which the service model
+               does not maximise the NB at the specified threshold values, reflecting decision uncertainty
+               given current trial evidence.
+            </p>
+            <p>As in the case of ENL curves for a single effect [
+               <span ref-type="bibr" rid="pone.0115544.ref022">22</span>], ENL planes quantify differences in ENL across models of care for different combinations
+               of values for effects. ENL planes are formed by varying the threshold values for the
+               multiple effects and re-calculating the average ENL across replicates for each model
+               of care. The distance between planes represents the difference in ENL between models
+               of care at any set of threshold values for effects under uncertainty [
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>].
+            </p>
+            <p>The contour is formed by the lower bound of the ENL planes across models of care,
+               i.e. the lowest ENL values at combinations of threshold values are determined from
+               consideration of both planes, analogous to the ENL frontier as the lower bound of
+               ENL curves [
+               <span ref-type="bibr" rid="pone.0115544.ref016">16</span>, 
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>]. The contour readily identifies the service model that minimises ENL for any set
+               of values [
+               <span ref-type="bibr" rid="pone.0115544.ref022">22</span>] for 𝕜
+               <div tagx="sub">1</div> and 𝕜
+               <div tagx="sub">2</div>in the case of the PEACH study.
+            </p>
+            <p>The expected value of perfect information (EVPI) is the loss from a bad decision that
+               could be avoided with perfect, rather than current information [
+               <span ref-type="bibr" rid="pone.0115544.ref021">21</span>]. As with the ENL frontier, the ENL contour naturally represents the EVPI per patient
+               associated with choosing the strategy minimising ENL [
+               <span ref-type="bibr" rid="pone.0115544.ref016">16</span>, 
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>] given current uncertainty, but as a function of threshold values for multiple rather
+               than single effects.
+            </p>
+            <p>Cost-effectiveness acceptability planes (CEAPs) show the probability that each model
+               of care minimises ENL conditional on threshold values for multiple effects. For each
+               model of care, the CEAP is formed by determining the proportion of replicates that
+               minimise ENL for different combinations of threshold values for effects.
+            </p>
+         </div>
+      </div>
+   </div>
+   <div id="sec016">
+      <h2>Results</h2>
+      <div id="sec017">
+         <h3>Cost-consequences and cost-effectiveness analyses</h3>
+         <p>A summary of the trial-based incremental costs and consequences framed from a utility
+            perspective are presented in 
+            <span ref-type="table" rid="pone.0115544.t001">Table 1</span>. INB curves and CEACs are presented in McCaffrey et al [
+            <span ref-type="bibr" rid="pone.0115544.ref027">27</span>]. PEACH is the preferred service model when the threshold value for one extra day
+            at home (𝕜
+            <div tagx="sub">1</div>) exceeds $1,068 as the value of expected incremental benefits exceeds expected incremental
+            costs. However, the CCA suggests PEACH is dominated by usual care when the proportion
+            of home deaths is considered.
+         </p>
+         <div tagx="table-wrap">
+            <div tagx="object-id">10.1371/journal.pone.0115544.t001</div>
+            <div tagx="label">Table 1</div>
+            <caption>
+               <div tagx="title">Summary of incremental costs and outcomes framed from a utility perspective at 28
+                  days for PEACH versus usual care.
+               </div>
+            </caption>
+            <div tagx="alternatives">
+               <div tagx="graphic"></div>
+               <table frame="hsides" rules="groups">
+                  <colgroup span="1">
+                     <col align="left" valign="middle" span="1"></col>
+                     <col align="left" valign="middle" span="1"></col>
+                     <col align="left" valign="middle" span="1"></col>
+                     <col align="left" valign="middle" span="1"></col>
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <div tagx="th"></div>
+                        <div tagx="th">PEACH</div>
+                        <div tagx="th">Usual Care</div>
+                        <div tagx="th">Increment</div>
+                     </tr>
+                     <tr>
+                        <div tagx="th">(n = 23)
+                           <span ref-type="table-fn" rid="t001fn001">
+                              <sup>1</sup>
+                           </span>
+                        </div>
+                        <div tagx="th">(n = 8)</div>
+                        <div tagx="th"></div>
+                     </tr>
+                  </thead>
+                  <div tagx="tbody">
+                     <tr>
+                        <td colspan="4" align="left" rowspan="1">
+                           <b>Consequences, mean (95% CI
+                              <span ref-type="table-fn" rid="t001fn002">
+                                 <sup>2</sup>
+                              </span>)
+                           </b>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2" align="left" colspan="1">Number of days at home</td>
+                        <td align="left" rowspan="1" colspan="1">13.09</td>
+                        <td align="left" rowspan="1" colspan="1">12.13</td>
+                        <td align="left" rowspan="1" colspan="1">0.96</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">(8.52, 17.65)</td>
+                        <td align="left" rowspan="1" colspan="1">(5.88, 18.38)</td>
+                        <td align="left" rowspan="1" colspan="1">(-6.79, 8.64)</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2" align="left" colspan="1">Proportion of participants who died, %</td>
+                        <td align="left" rowspan="1" colspan="1">69.57</td>
+                        <td align="left" rowspan="1" colspan="1">62.50</td>
+                        <td align="left" rowspan="1" colspan="1">7.07</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">(52.17, 86.96)</td>
+                        <td align="left" rowspan="1" colspan="1">(25.00, 100)</td>
+                        <td align="left" rowspan="1" colspan="1">(-45.11, 30.43)</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2" align="left" colspan="1">Of those who died, the proportion of home deaths %</td>
+                        <td align="left" rowspan="1" colspan="1">56.25</td>
+                        <td align="left" rowspan="1" colspan="1">80.00</td>
+                        <td align="left" rowspan="1" colspan="1">-23.75</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">(31.25, 80.00)</td>
+                        <td align="left" rowspan="1" colspan="1">(33.33, 100)</td>
+                        <td align="left" rowspan="1" colspan="1">(-63.16, 25.00)</td>
+                     </tr>
+                     <tr>
+                        <td colspan="4" align="left" rowspan="1">
+                           <b>Costs, mean (95% CI
+                              <span ref-type="table-fn" rid="t001fn002">
+                                 <sup>2</sup>
+                              </span>)
+                           </b>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2" align="left" colspan="1">PEACH</td>
+                        <td align="left" rowspan="1" colspan="1">$3,489</td>
+                        <td align="left" rowspan="1" colspan="1">0</td>
+                        <td align="left" rowspan="1" colspan="1">$3,489</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">($2,170, $4,943)</td>
+                        <td align="left" rowspan="1" colspan="1"></td>
+                        <td align="left" rowspan="1" colspan="1">($2,170, $4,943)</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">Specialist palliative care services</td>
+                        <td align="left" rowspan="1" colspan="1">$361 ($256, $470)</td>
+                        <td align="left" rowspan="1" colspan="1">$372 ($229, $526)</td>
+                        <td align="left" rowspan="1" colspan="1">-$11 (-$196, $168)</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2" align="left" colspan="1">Inpatient stay
+                           <span ref-type="table-fn" rid="t001fn003">
+                              <sup>3</sup>
+                           </span>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">$2,603</td>
+                        <td align="left" rowspan="1" colspan="1">$5,053</td>
+                        <td align="left" rowspan="1" colspan="1">-$2,450</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">($1,205, $4,147)</td>
+                        <td align="left" rowspan="1" colspan="1">($2,084, $8,139)</td>
+                        <td align="left" rowspan="1" colspan="1">(-$5,843, $957)</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2" align="left" colspan="1">
+                           <b>Total</b>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">$6,452</td>
+                        <td align="left" rowspan="1" colspan="1">$5,425</td>
+                        <td align="left" rowspan="1" colspan="1">$1,027</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">($,4,469, $8,586)</td>
+                        <td align="left" rowspan="1" colspan="1">($2,404, $8,531)</td>
+                        <td align="left" rowspan="1" colspan="1">(-$2,612, $4,738)</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2" colspan="3" align="left">
+                           <b>Threshold value</b>
+                           <span ref-type="table-fn" rid="t001fn004">
+                              <sup>
+                                 <b>4</b>
+                              </sup>
+                           </span>
+                           <b>above which the mean INB becomes positive (95% CI)</b>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">
+                           <b>$1,068</b>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">(-$6,627, $6,578)</td>
+                     </tr>
+                  </div>
+               </table>
+            </div>
+            <div tagx="table-wrap-foot">
+               <div tagx="fn">
+                  <p>
+                     <sup>1</sup> one participant in the PEACH arm was excluded from the analysis due to incomplete
+                     cost data;
+                  </p>
+               </div>
+               <div tagx="fn">
+                  <p>
+                     <sup>2</sup> calculated with bootstrap analysis;
+                  </p>
+               </div>
+               <div tagx="fn">
+                  <p>
+                     <sup>3</sup> hospital or palliative care unit;
+                  </p>
+               </div>
+               <div tagx="fn">
+                  <p>
+                     <sup>4</sup> for one extra day at home
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="sec018">
+         <h3>Analysis in cost-disutility space</h3>
+         <p>A summary of the trial-based incremental costs and consequences framed from a utility-reducing
+            perspective are presented in 
+            <span ref-type="table" rid="pone.0115544.t002">Table 2</span>. The mean incremental cost relative to the cheapest model of care and mean incremental
+            effects framed from a disutility perspective relative to the most effective model
+            of care are calculated for each service model. For example, when considering incremental
+            inpatient days, the mean incremental effect for PEACH is zero because PEACH is the
+            most effective model of care (14.9–14.9). Similarly, as usual care is the cheapest
+            model of care, the mean incremental cost for usual care is zero ($5,425—$5,425).
+         </p>
+         <div tagx="table-wrap">
+            <div tagx="object-id">10.1371/journal.pone.0115544.t002</div>
+            <div tagx="label">Table 2</div>
+            <caption>
+               <div tagx="title">Summary of incremental costs and outcomes framed from a disutility perspective at
+                  28 days for PEACH versus usual care.
+               </div>
+            </caption>
+            <div tagx="alternatives">
+               <div tagx="graphic"></div>
+               <table frame="hsides" rules="groups">
+                  <colgroup span="1">
+                     <col align="left" valign="middle" span="1"></col>
+                     <col align="left" valign="middle" span="1"></col>
+                     <col align="left" valign="middle" span="1"></col>
+                     <col align="left" valign="middle" span="1"></col>
+                     <col align="left" valign="middle" span="1"></col>
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <div tagx="th"></div>
+                        <div tagx="th">Model of care</div>
+                        <div tagx="th">Increment</div>
+                     </tr>
+                     <tr>
+                        <div tagx="th"></div>
+                        <div tagx="th">PEACH</div>
+                        <div tagx="th">Usual Care</div>
+                        <div tagx="th">PEACH</div>
+                        <div tagx="th">Usual Care</div>
+                     </tr>
+                     <tr>
+                        <div tagx="th">(n = 23)
+                           <span ref-type="table-fn" rid="t002fn001">
+                              <sup>1</sup>
+                           </span>
+                        </div>
+                        <div tagx="th">(n = 8)</div>
+                        <div tagx="th"></div>
+                        <div tagx="th"></div>
+                     </tr>
+                  </thead>
+                  <div tagx="tbody">
+                     <tr>
+                        <td colspan="5" align="left" rowspan="1">
+                           <b>Consequences, mean (95% CI
+                              <span ref-type="table-fn" rid="t002fn002">
+                                 <sup>2</sup>
+                              </span>)
+                           </b>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2" align="left" colspan="1">Number of inpatient days</td>
+                        <td align="left" rowspan="1" colspan="1">14.91</td>
+                        <td align="left" rowspan="1" colspan="1">15.88</td>
+                        <td align="left" rowspan="1" colspan="1">0
+                           <span ref-type="table-fn" rid="t002fn003">
+                              <sup>3</sup>
+                           </span>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">0.96
+                           <span ref-type="table-fn" rid="t002fn003">
+                              <sup>3</sup>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">(10.35, 19.48)</td>
+                        <td align="left" rowspan="1" colspan="1">(9.63, 22.13)</td>
+                        <td align="left" rowspan="1" colspan="1">(0, 6.78)</td>
+                        <td align="left" rowspan="1" colspan="1">(0, 8.64)</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2" align="left" colspan="1">Of those who died, the proportion of inpatient deaths, %</td>
+                        <td align="left" rowspan="1" colspan="1">43.75</td>
+                        <td align="left" rowspan="1" colspan="1">20.00</td>
+                        <td align="left" rowspan="1" colspan="1">23.75
+                           <span ref-type="table-fn" rid="t002fn003">
+                              <sup>3</sup>
+                           </span>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">0
+                           <span ref-type="table-fn" rid="t002fn003">
+                              <sup>3</sup>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">(20.00, 68.75)</td>
+                        <td align="left" rowspan="1" colspan="1">(0, 66.67)</td>
+                        <td align="left" rowspan="1" colspan="1">(0, 63.16)</td>
+                        <td align="left" rowspan="1" colspan="1">(0, 25.00)</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2" align="left" colspan="1">
+                           <b>Costs, mean (95% CI
+                              <span ref-type="table-fn" rid="t002fn002">
+                                 <sup>2</sup>
+                              </span>)
+                           </b>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">$6,452</td>
+                        <td align="left" rowspan="1" colspan="1">$5,425</td>
+                        <td align="left" rowspan="1" colspan="1">$1,027
+                           <span ref-type="table-fn" rid="t002fn004">
+                              <sup>4</sup>
+                           </span>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">$0
+                           <span ref-type="table-fn" rid="t002fn004">
+                              <sup>4</sup>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">($4,469, $8,586)</td>
+                        <td align="left" rowspan="1" colspan="1">($2,404, $8,531)</td>
+                        <td align="left" rowspan="1" colspan="1">(0, $4,738)</td>
+                        <td align="left" rowspan="1" colspan="1">(0, $2,612)</td>
+                     </tr>
+                  </div>
+               </table>
+            </div>
+            <div tagx="table-wrap-foot">
+               <div tagx="fn">
+                  <p>
+                     <sup>1</sup> one participant in the PEACH arm was excluded from the analysis due to incomplete
+                     cost data;
+                  </p>
+               </div>
+               <div tagx="fn">
+                  <p>
+                     <sup>2</sup> calculated with bootstrap analysis;
+                  </p>
+               </div>
+               <div tagx="fn">
+                  <p>
+                     <sup>3</sup> relative to the most effective model of care (
+                     <i>DU</i>
+                     <div tagx="sub">1
+                        <i>i</i>
+                     </div>
+                     <i>-DU</i>
+                     <div tagx="sub">1*</div>);
+                  </p>
+               </div>
+               <div tagx="fn">
+                  <p>
+                     <sup>4</sup> relative to the cheapest model of care (
+                     <i>C</i>
+                     <div tagx="sub">
+                        <i>i</i>
+                     </div>-
+                     <i>C</i>
+                     <div tagx="sub">*</div>)
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div id="sec019">
+            <h3>Technical efficiency frontier</h3>
+            <p>Both models of care are part of the technical efficiency frontier in CDU space where
+               costs and multiple outcomes are considered (
+               <span ref-type="fig" rid="pone.0115544.g002">Fig. 2</span>), i.e. both models of care minimise NL for some set of threshold values for time
+               spent at home and place of death. The frontier in CDU space (line A-B in 
+               <span ref-type="fig" rid="pone.0115544.g002">Fig. 2</span>) represents the inner bound of linear combinations of service models closest to the
+               origin, i.e. those minimising ENL at different combinations of threshold values for
+               effects.
+            </p>
+            <div tagx="fig">
+               <div tagx="object-id">10.1371/journal.pone.0115544.g002</div>
+               <div tagx="label">Fig 2</div>
+               <caption>
+                  <div tagx="title">Technical efficiency frontier in cost-disutility space for PEACH and usual care.</div>
+               </caption>
+               <div tagx="graphic"></div>
+            </div>
+         </div>
+         <div id="sec020">
+            <h3>Threshold regions</h3>
+            <p>Following the incremental analysis in CDU space (
+               <span ref-type="table" rid="pone.0115544.t002">Table 2</span>), the mean NL for each model of care can be expressed as follows (see 
+               <span ref-type="disp-formula" rid="pone.0115544.e007">Equation 7</span>):
+               
+               <div tagx="list">
+                  <div tagx="list-item">
+                     <p>Usual care, 
+                        <i>NL</i> = $0 + 0.96𝕜
+                        <div tagx="sub">1</div> + 0𝕜
+                        <div tagx="sub">2</div> = 0.96𝕜
+                        <div tagx="sub">1</div>; and
+                     </p>
+                  </div>
+                  <div tagx="list-item">
+                     <p>PEACH, 
+                        <i>NL</i> = $1,027 + 0𝕜
+                        <div tagx="sub">1</div> + 0.24𝕜
+                        <div tagx="sub">2</div> = $1,027 + 0.24𝕜
+                        <div tagx="sub">2</div>
+                     </p>
+                  </div>
+               </div>
+               Where 𝕜
+               <div tagx="sub">1</div> is the threshold value for one extra day at home over 28 days and 𝕜
+               <div tagx="sub">2</div> is the threshold value for one extra home death over 28 days.
+            </p>
+            <p>Equating the NL expressions determines the boundary between regions of threshold value
+               combinations where each model of care is preferred, represented by the line in 
+               <span ref-type="fig" rid="pone.0115544.g003">Fig. 3</span>.
+            </p>
+            <div tagx="fig">
+               <div tagx="object-id">10.1371/journal.pone.0115544.g003</div>
+               <div tagx="label">Fig 3</div>
+               <caption>
+                  <div tagx="title">Threshold regions over which each service model is preferred.</div>
+               </caption>
+               <div tagx="graphic"></div>
+            </div>
+            <p>PEACH is preferred to usual care when the mean NL of PEACH is lower than the mean
+               NL of usual care, i.e. $1,027 + 0.24𝕜
+               <div tagx="sub">2</div> &lt; 0.96𝕜
+               <div tagx="sub">1</div>, simply rearranged to 𝕜
+               <div tagx="sub">1</div> &gt; 0.25𝕜
+               <div tagx="sub">2</div> + $1,068. Hence, for example when threshold values for both an extra day at home
+               (𝕜
+               <div tagx="sub">1</div>) and home deaths (𝕜
+               <div tagx="sub">2</div>) are $2,000, PEACH minimises NL and is the preferred model of care; point A in 
+               <span ref-type="fig" rid="pone.0115544.g003">Fig. 3</span>. Conversely, when 𝕜
+               <div tagx="sub">1</div> = $2,000 and 𝕜
+               <div tagx="sub">2</div> = $4,000, usual care is preferred (point B, 
+               <span ref-type="fig" rid="pone.0115544.g003">Fig. 3</span>). This highlights that neither alternative dominated the other in CDU space when
+               incremental cost, days at home 
+               <i>and</i> the proportion of home deaths are jointly considered.
+            </p>
+         </div>
+         <div id="sec021">
+            <h3>Expected net loss planes</h3>
+            <p>
+               <span ref-type="fig" rid="pone.0115544.g004">Fig. 4</span> shows a two dimensional representation of the ENL planes for PEACH and usual care.
+               The threshold value per extra day at home is represented along the x-axis and the
+               mean ENL per patient on the y-axis. Using the previous example, when 𝕜
+               <div tagx="sub">1</div> = $2,000 and 𝕜
+               <div tagx="sub">2</div> = $2,000, PEACH minimises the ENL with an average loss in expected NB of $3,004 per
+               participant. This loss arises as there are a proportion of replicates (4,838/10,000)
+               in which PEACH does not maximise the NB at these threshold values. At these same values
+               the ENL per patient if usual care is adopted is $3,354. If 𝕜
+               <div tagx="sub">1</div> = $2,000 and 𝕜
+               <div tagx="sub">2</div> = $4,000 the ENL per patient increases to $3,301 for PEACH and reduces to $3,172
+               for usual care. The distance between planes represents the difference in per patient
+               ENL between models of care at any set of threshold values for effects under uncertainty
+               [
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>]. For example, when 𝕜
+               <div tagx="sub">1</div> = $2,000 and 𝕜
+               <div tagx="sub">2</div> = $2,000 the mean ENL per patient if PEACH is adopted is $3,004 and $3,354 if usual
+               care is chosen, with a difference in ENL of $350 per patient.
+            </p>
+            <div tagx="fig">
+               <div tagx="object-id">10.1371/journal.pone.0115544.g004</div>
+               <div tagx="label">Fig 4</div>
+               <caption>
+                  <div tagx="title">Expected net loss planes (two dimensional representation).</div>
+               </caption>
+               <div tagx="graphic"></div>
+            </div>
+         </div>
+         <div id="sec022">
+            <h3>Expected net loss contour</h3>
+            <p>
+               <span ref-type="fig" rid="pone.0115544.g005">Fig. 5</span> is a two dimensional representation of the ENL contour which is formed by the lower
+               bound of the ENL planes across models of care (see Figs. 
+               <span ref-type="fig" rid="pone.0115544.g004">4</span> and 
+               <span ref-type="fig" rid="pone.0115544.g005">5</span>) [
+               <span ref-type="bibr" rid="pone.0115544.ref016">16</span>, 
+               <span ref-type="bibr" rid="pone.0115544.ref024">24</span>]. The dotted line indicates the combinations of 𝕜
+               <div tagx="sub">1</div> and 𝕜
+               <div tagx="sub">2</div>, where usual care minimises the ENL, whereas the solid line illustrates combinations
+               of 𝕜
+               <div tagx="sub">1</div> and 𝕜
+               <div tagx="sub">2</div> where PEACH minimises the ENL. Using the previous example, if 𝕜
+               <div tagx="sub">1</div> = $2,000 and 𝕜
+               <div tagx="sub">2</div> = $2,000, PEACH minimises the ENL at $3,004 per participant across 10,000 replicates.
+               When 𝕜
+               <div tagx="sub">1</div> = $2,000 and 𝕜
+               <div tagx="sub">2</div> = $4,000, usual care minimises the ENL. Furthermore, in the latter scenario choosing
+               usual care minimizes ENL at $3,172 but given current uncertainty, PEACH minimizes
+               ENL in 4,905/10,000 replicates. This loss of $3,172 per participant from choosing
+               usual care would be avoided with perfect information as the decision-maker would be
+               able to pick the service model minimizing ENL in each realisation.
+            </p>
+            <div tagx="fig">
+               <div tagx="object-id">10.1371/journal.pone.0115544.g005</div>
+               <div tagx="label">Fig 5</div>
+               <caption>
+                  <div tagx="title">Expected net loss contour (two dimensional representation).</div>
+               </caption>
+               <div tagx="graphic"></div>
+            </div>
+         </div>
+         <div id="sec023">
+            <h3>Cost-effectiveness acceptability planes</h3>
+            <p>
+               <span ref-type="fig" rid="pone.0115544.g006">Fig. 6</span> shows the CEAPs which represents the probability that the strategy under consideration
+               minimizes ENL at given combinations of value of effects for multiple outcomes. For
+               example, when 𝕜
+               <div tagx="sub">1</div> = $2,000 and 𝕜
+               <div tagx="sub">2</div> = $4,000 there is a 49.05% chance that PEACH is the preferred option because PEACH
+               minimizes ENL in 4,905/10,000 replicates.
+            </p>
+            <div tagx="fig">
+               <div tagx="object-id">10.1371/journal.pone.0115544.g006</div>
+               <div tagx="label">Fig 6</div>
+               <caption>
+                  <div tagx="title">Cost-effectiveness acceptability planes (two dimensional representation).</div>
+               </caption>
+               <div tagx="graphic"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="sec024">
+      <h2>Discussion</h2>
+      <p>When assessing the cost effectiveness of interventions with multiple outcomes, presentation
+         in CDU space and use of ENL planes and contours to summarise cost effectiveness has
+         been illustrated to overcome limitations of conventional CEA and CCA analysis. Partial
+         analysis, where individual outcomes and costs are considered separately, suggested
+         PEACH is associated with higher costs and increased benefits over 28 days relative
+         to usual care when time spent at home was the sole measure considered. However, PEACH
+         was dominated by usual care when the proportion of home deaths alone was considered.
+         These results illustrate that choice of effect where analysis is restricted to single
+         effect substantially alters cost-effectiveness inferences. In comparison, neither
+         service model dominated in CDU space, when incremental cost and multiple outcomes
+         were jointly considered. Compared with CCA the proposed approach has distinct advantages
+         in allowing for joint uncertainty of incremental cost and outcomes, and cost effectiveness.
+         If societal decision making asymptotes to risk neutrality [
+         <span ref-type="bibr" rid="pone.0115544.ref026">26</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref041">41</span>] then findings suggest PEACH maximises expected NB when 𝕜
+         <div tagx="sub">1</div> &gt; 0.25𝕜
+         <div tagx="sub">2</div> + $1,068. If preferences are somewhat risk-averse, trade-offs may also arise between
+         minimising ENL and maximising the probability of minimising ENL across compared strategies
+         for discrete regions of threshold values.
+      </p>
+      <p>This paper extends previous work showing advantages of the CDU plane for comparing
+         multiple strategies. Cost and multiple effects of alternative models of care are clearly
+         presented in CDU space, facilitating identification, presentation and exploration
+         of trade-offs between effects. Collectively, the new summary measures compared expected
+         NB between strategies across any set of feasible threshold values for multiple effects
+         and the impact of joint uncertainty. Threshold regions display the combinations of
+         values over which alternative models of care minimise mean NL or equivalently maximise
+         NB. ENL planes present differences in ENL between alternatives, while the ENL contour
+         simultaneously establishes: (i) the intervention that minimises ENL; and (ii) EVPI
+         with current evidence. Finally, CEAPs estimate the probability that interventions
+         minimise ENL. This may be of particular interest across discrete threshold regions
+         where the model of care with the lowest ENL does not have the greatest probability
+         of minimising ENL if societal decision making remains somewhat risk averse [
+         <span ref-type="bibr" rid="pone.0115544.ref041">41</span>]. However, it should be stressed that CEAPs, like CEACs, do not directly identify
+         the strategy that minimises ENL [
+         <span ref-type="bibr" rid="pone.0115544.ref025">25</span>], unlike ENL planes and contours. The summary measures presented in this paper allow
+         decision-makers to explicitly trade off expected return on investment with the risk
+         of return at different relative and absolute threshold values for multiple outcomes.
+      </p>
+      <p>
+         <span ref-type="table" rid="pone.0115544.t003">Table 3</span> contrasts and summarises suggested graphical representation and summary measures
+         for informing societal decision making when comparing two strategies and multiple
+         strategies with single and multiple effects.
+      </p>
+      <div tagx="table-wrap">
+         <div tagx="object-id">10.1371/journal.pone.0115544.t003</div>
+         <div tagx="label">Table 3</div>
+         <caption>
+            <div tagx="title">Best presentation and summary measures for informing risk-neutral and somewhat risk
+               averse decision making [
+               <span ref-type="bibr" rid="pone.0115544.ref025">25</span>].
+            </div>
+         </caption>
+         <div tagx="alternatives">
+            <div tagx="graphic"></div>
+            <table frame="hsides" rules="groups">
+               <colgroup span="1">
+                  <col align="left" valign="middle" span="1"></col>
+                  <col align="left" valign="middle" span="1"></col>
+                  <col align="left" valign="middle" span="1"></col>
+               </colgroup>
+               <thead>
+                  <tr>
+                     <div tagx="th"></div>
+                     <div tagx="th">Risk preferences</div>
+                  </tr>
+                  <tr>
+                     <div tagx="th">Scenario</div>
+                     <div tagx="th">Risk-neutral
+                        <span ref-type="table-fn" rid="t003fn001">
+                           <sup>#</sup>
+                        </span>
+                     </div>
+                     <div tagx="th">Somewhat risk averse
+                        <span ref-type="table-fn" rid="t003fn002">
+                           <sup>^</sup>
+                        </span>
+                     </div>
+                  </tr>
+               </thead>
+               <div tagx="tbody">
+                  <tr>
+                     <td rowspan="4" align="left" colspan="1">Two strategies &amp; one effect</td>
+                     <td align="left" rowspan="1" colspan="1">CE plane</td>
+                     <td align="left" rowspan="1" colspan="1">CE plane</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">INB curve</td>
+                     <td align="left" rowspan="1" colspan="1">INB curves &amp; CI</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">ENL curves &amp; frontier</td>
+                     <td align="left" rowspan="1" colspan="1">CEA curve</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1">ENL curves &amp; frontier</td>
+                  </tr>
+                  <tr>
+                     <td rowspan="4" align="left" colspan="1">Two strategies &amp; multiple effects</td>
+                     <td align="left" rowspan="1" colspan="1">Frontier in CDU space
+                        <span ref-type="table-fn" rid="t003fn003">
+                           <sup>$</sup>
+                        </span>
+                     </td>
+                     <td align="left" rowspan="1" colspan="1">Frontier in CDU space
+                        <span ref-type="table-fn" rid="t003fn003">
+                           <sup>$</sup>
+                        </span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Threshold regions</td>
+                     <td align="left" rowspan="1" colspan="1">Threshold regions</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">ENL planes and contour</td>
+                     <td align="left" rowspan="1" colspan="1">ENL planes and contour</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1">CEAP</td>
+                  </tr>
+                  <tr>
+                     <td rowspan="3" align="left" colspan="1">Multiple strategies &amp; a single effect</td>
+                     <td align="left" rowspan="1" colspan="1">CDU plane</td>
+                     <td align="left" rowspan="1" colspan="1">CDU plane</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">ENL curves &amp; frontier</td>
+                     <td align="left" rowspan="1" colspan="1">ENL curves and frontier</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1">Trade-offs in discrete threshold regions where they arise between minimising ENL and
+                        P(min NL) taken from relevant bilateral CEA curves
+                     </td>
+                  </tr>
+                  <tr>
+                     <td rowspan="4" align="left" colspan="1">Multiple strategies &amp; multiple effects</td>
+                     <td align="left" rowspan="1" colspan="1">Frontier in CDU space
+                        <span ref-type="table-fn" rid="t003fn003">
+                           <sup>$</sup>
+                        </span>
+                     </td>
+                     <td align="left" rowspan="1" colspan="1">Frontier in CDU space
+                        <span ref-type="table-fn" rid="t003fn003">
+                           <sup>$</sup>
+                        </span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">Threshold regions</td>
+                     <td align="left" rowspan="1" colspan="1">Threshold regions</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1">ENL planes &amp; contour</td>
+                     <td align="left" rowspan="1" colspan="1">ENL planes and contour</td>
+                  </tr>
+                  <tr>
+                     <td align="left" rowspan="1" colspan="1"></td>
+                     <td align="left" rowspan="1" colspan="1">Trade-offs in discrete threshold regions where they arise between minimising ENL and
+                        P(min NL) taken from relevant bilateral CEAPs
+                     </td>
+                  </tr>
+               </div>
+            </table>
+         </div>
+         <div tagx="table-wrap-foot">
+            <div tagx="fn">
+               <p>
+                  <sup>#</sup> objective is to maximise ENB;
+               </p>
+            </div>
+            <div tagx="fn">
+               <p>
+                  <sup>^</sup> trade-offs can arise over discrete threshold regions between the strategy maximising
+                  ENB and strategies with a higher probability of maximising NB relative to that strategy;
+               </p>
+            </div>
+            <div tagx="fn">
+               <p>
+                  <sup>$</sup> for a maximum of two effects; CDU = cost-disutility; CE = cost-effectiveness; CEA
+                  = cost-effectiveness acceptability; CEAP = cost-effectiveness acceptability plane;
+                  CI = confidence intervals; ENL = expected net loss; INB = incremental net monetary
+                  benefit; P(min NL) = probability of minimising net loss
+               </p>
+            </div>
+         </div>
+      </div>
+      <p>Contemporary economic evaluation methods are limited when comparing interventions
+         with multiple outcomes. Although CCA explicitly presents multiple outcomes and costs,
+         they are considered independently rather than jointly when allowing for uncertainty.
+         Also, this approach does not allow for differences in ENB. Multiple outcomes comparison
+         in CDU space retains advantages of CCA in comparing multiple outcomes while additionally
+         allowing rigorous assessment of joint uncertainty across multiple outcomes and estimation
+         of differences in ENL. Furthermore, the ability of the methods developed to allow
+         for different relative preferences [
+         <span ref-type="bibr" rid="pone.0115544.ref042">42</span>] is also valuable for informing individual patient and population level decisions
+         under uncertainty.
+      </p>
+      <p>Cost-benefit analysis could include multiple effects. However, this approach is limited
+         by the difficulties of valuing health outcomes in monetary terms and the influence
+         of ability to pay on willingness to pay [
+         <span ref-type="bibr" rid="pone.0115544.ref043">43</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref044">44</span>]. Multiple outcomes comparison in CDU space allows explicit exploration of relative
+         and absolute monetary values for multiple outcomes on preferred strategies. Further,
+         this approach permits robust analysis of the impact of uncertainty around monetary
+         threshold values with ENL contours.
+      </p>
+      <p>Cost-effectiveness analysis is limited by a uni-dimensional measure, where choice
+         of outcome can give rise to outcome selection bias as illustrated in this paper. Cost-utility
+         analysis (CUA) is limited by narrowly defined health-related QOL domains in the commonly
+         applied generic MAUIs which exclude important domains unable to be integrated with
+         patient survival in complex disease areas such as palliative care, e.g. utility from
+         preparing for death [
+         <span ref-type="bibr" rid="pone.0115544.ref045">45</span>], carer and family impacts and non-health outcomes [
+         <span ref-type="bibr" rid="pone.0115544.ref046">46</span>]. The novel methodology presented in this paper enables simultaneous evaluation of
+         such diverse domains of effect.
+      </p>
+      <p>Previously there have been only a few attempts to develop specific methods to evaluate
+         and present costs and multiple outcomes under uncertainty in an explicit manner. Bjorner
+         and Keiding [
+         <span ref-type="bibr" rid="pone.0115544.ref047">47</span>] proposed a relative cost-effectiveness measure. Negrin and Vazquez-Polo [
+         <span ref-type="bibr" rid="pone.0115544.ref048">48</span>] presented an alternative Bayesian cost-effectiveness framework. The Bjorner and
+         Keiding approach compares the performance of each intervention relative to the worst
+         performing intervention in a set of interventions using DEA [
+         <span ref-type="bibr" rid="pone.0115544.ref047">47</span>]. However, their relative cost-effectiveness measure does not inform decisions between
+         non-dominated interventions, nor allow consideration of stochastic uncertainty, or
+         allow estimation of the probability of maximising expected NB. The Bayesian methodology
+         [
+         <span ref-type="bibr" rid="pone.0115544.ref048">48</span>] graphically represents the intervention most likely to maximise NB at various combinations
+         of threshold values for multiple outcomes using a cost-effectiveness acceptability
+         frontier. Geometrically, this is similar to the CEAP derived from comparison in CDU
+         space. However, neither of these previous approaches provides summary measures for
+         quantifying differences in ENB between strategies under uncertainty, which is the
+         critical comparison required to inform risk-neutral or somewhat risk-averse decision
+         making [
+         <span ref-type="bibr" rid="pone.0115544.ref025">25</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref041">41</span>].
+      </p>
+      <p>In this paper, the NBCT is applied with CEA to inform health technology assessment.
+         Similarly, the novel approach to multiple outcome comparison illustrated here could
+         be applied to compare multiple outcomes, objectives and facets of chronic disease
+         management programs [
+         <span ref-type="bibr" rid="pone.0115544.ref049">49</span>], health promotion and disease prevention in complex community care settings [
+         <span ref-type="bibr" rid="pone.0115544.ref050">50</span>–
+         <span ref-type="bibr" rid="pone.0115544.ref056">56</span>]. Multiple aspects relevant to such comparisons might include self-management capability,
+         co-ordination and process aspects of care, network impacts and community uptake and
+         ownership of promotion interventions in complex settings. Other forms of multiple
+         criteria decision analysis (MCDA) have been proposed to allow for multiple objectives
+         and outcomes in some of these settings [
+         <span ref-type="bibr" rid="pone.0115544.ref057">57</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref058">58</span>]. The NBCT [
+         <span ref-type="bibr" rid="pone.0115544.ref024">24</span>–
+         <span ref-type="bibr" rid="pone.0115544.ref026">26</span>] applied to multiple outcomes [
+         <span ref-type="bibr" rid="pone.0115544.ref059">59</span>] would enable a comparison of such multiple criteria consistent with maximising NB
+         and is summarised with ENL planes and contours. Unlike CEACs [
+         <span ref-type="bibr" rid="pone.0115544.ref058">58</span>] and other transformations proposed, the ENL planes and contour and ENL curves and
+         frontiers [
+         <span ref-type="bibr" rid="pone.0115544.ref024">24</span>] are consistent with differences in ENB. This is particularly important given the
+         primary importance under the Arrow-Lind theorem [
+         <span ref-type="bibr" rid="pone.0115544.ref041">41</span>] to compare differences in ENB and avoid confounding of relevant probabilities between
+         potentially optimal strategies that arises with multiple strategy CEACs in multiple
+         strategy comparisons [
+         <span ref-type="bibr" rid="pone.0115544.ref025">25</span>]. Consequently, application of the proposed methodology in alternative health promotion
+         and prevention settings as well as disease areas, with their associated multiple effects
+         or criteria of interest for decision making are suggested as valuable. Applying the
+         values and preferences of individuals, different patient populations and societal
+         decision makers across jurisdictions for relevant multiple outcomes should be considered
+         in future research to further demonstrate the flexibility of this approach.
+      </p>
+      <p>If the threshold values for effects in NB are to aid optimization of health outcomes
+         from a fixed budget then assuming the new technology or strategy has net costs the
+         threshold value should reflect the opportunity cost of reimbursement in adopting and
+         financing the new service, technology or strategy [
+         <span ref-type="bibr" rid="pone.0115544.ref022">22</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref032">32</span>–
+         <span ref-type="bibr" rid="pone.0115544.ref034">34</span>]. That is, the opportunity cost of reimbursing a new technology is the most cost-effective
+         expansion of existing services financed by contraction or displacement of the least
+         cost-effective service. The opportunity cost and threshold value should be estimated
+         allowing for characteristic allocative and displacement inefficiency in health systems
+         where the least cost-effective program in contraction (ICER = 
+         <i>m</i>) has a higher ICER than the most cost-effective program in expansion (ICER = 
+         <i>n</i>) and displaced services (ICER = 
+         <i>d</i>). The health shadow price derived by Pekarsky [
+         <span ref-type="bibr" rid="pone.0115544.ref034">34</span>] (see 
+         <span ref-type="disp-formula" rid="pone.0115544.e008">Equation 8</span>), allows for allocative inefficiency (
+         <i>n &lt; m</i>) and displacement inefficiency (
+         <i>d &lt; m</i>) to reflect the opportunity cost of best alternative adoption and financing actions
+         in reimbursing new technology.
+      </p>
+      <div tagx="disp-formula">
+         <div tagx="alternatives">
+            <div tagx="graphic"></div>
+            <div tagx="math">
+               <div tagx="msub">
+                  <div tagx="mrow">
+                     <div tagx="mi">β</div>
+                  </div>
+                  <div tagx="mrow">
+                     <div tagx="mi">c</div>
+                  </div>
+               </div>
+               <div tagx="mo">=</div>
+               <div tagx="msubsup">
+                  <div tagx="mrow">
+                     <div tagx="mo">(</div>
+                     <div tagx="mfrac">
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">n</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">+</div>
+                     <div tagx="mfrac">
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">d</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">+</div>
+                     <div tagx="mfrac">
+                        <div tagx="mrow">
+                           <div tagx="mn">1</div>
+                        </div>
+                        <div tagx="mrow">
+                           <div tagx="mi">m</div>
+                        </div>
+                     </div>
+                     <div tagx="mo">)</div>
+                  </div>
+                  <div tagx="mrow"></div>
+                  <div tagx="mrow">
+                     <div tagx="mo">-</div>
+                     <div tagx="mn">1</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div tagx="label">Equation 8</div>
+      </div>
+      <p>The health shadow price threshold has a value of 
+         <i>n</i>, equivalent to the ICER of the most cost-effective expansion of current programs
+         if displacement is efficient (
+         <i>d</i> = 
+         <i>m</i>), but is less than 
+         <i>n</i> where displacement is suboptimal (
+         <i>d</i> &lt; 
+         <i>m</i>), reflecting the potential to improve displacement as well as adoption actions [
+         <span ref-type="bibr" rid="pone.0115544.ref022">22</span>]. In the case of multiple effects the associated threshold values should be determined
+         by their relevant health shadow prices as these represent the best alternative way
+         for societal decision makers to achieve each outcome.
+      </p>
+      <p>Multiple outcomes analysis in CDU space with use of the ENL contour as a summary measure
+         while highlighting which strategy optimises ENB across potential threshold values
+         for effects also naturally represents the expected value of perfect information [
+         <span ref-type="bibr" rid="pone.0115544.ref024">24</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref025">25</span>]. This provides a starting point to consider use of value of information (VOI) methods
+         to inform decisions under uncertainty of whether undertaking further research is optimal.
+         VOI methods aid optimisation of trial design in maximising expected return on investment
+         from further research, comparing the expected value relative to expected cost of additional
+         research allowing for relevant decision contexts [
+         <span ref-type="bibr" rid="pone.0115544.ref016">16</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref021">21</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref060">60</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref061">61</span>].
+      </p>
+      <div id="sec025">
+         <h3>Limitations</h3>
+         <p>Despite distinct advantages over existing methods for multiple outcome comparisons,
+            there are some issues to consider. While multiple outcomes comparison presented in
+            CDU space enables flexible and robust comparison under uncertainty, as with other
+            multiple outcome approaches issues of valuation and trade-offs between outcomes arise.
+            Relative decision-maker threshold values are required for funding or policy decisions
+            in any jurisdiction of interest for their population, practice, and preferences conditional
+            on the budget constrained decision context whether based on cost-effectiveness, cost-utility
+            or cost-benefit analyses. Multiple outcomes comparison in CDU space, unlike alternative
+            methods, enables explicit joint comparison of costs and multiple outcomes prior to
+            valuation and encourages explicit valuation and acknowledgment of trade-offs between
+            outcomes in the decision-making process. These issues are particularly important where
+            the maximand for cost-effectiveness analysis is not stated. In cost-utility analyses,
+            multiple threshold valuation also occurs for different outcomes or domains within
+            the MAUI but is less explicit or readily identified. Generally, valuing effects should,
+            as with the proposed approach, be explicit to enable appropriate translation of impacts
+            to decision making in different contexts.
+         </p>
+         <p>The methodology presented can be applied to any number of strategies and any number
+            and types of outcome measures. However, whilst graphical presentation for comparison
+            is feasible in two- and three-dimensional space, further dimensions cannot be easily
+            graphically represented in ways that are currently familiar in societal decision-making.
+            Similarly, knowledge of frontier methods such as DEA may be restricted to those with
+            mathematical or economic backgrounds and hence application of these methods to fully
+            exploit the benefits of multiple outcomes comparison in CDU space could require educational
+            support to aid knowledge translation. Despite this, the general formulae promote transferability
+            of the method across different populations and jurisdictions given different values
+            can be imputed for each outcome depending on perspective and context.
+         </p>
+         <p>Further research is required to exploit the societal decision making advantages of
+            robustly comparing multiple outcomes and multiple strategies in CDU space illustrated
+            in this paper. Application of the approach in alternative disease areas, with different
+            numbers of multiple effects and/or strategies would be particularly valuable. The
+            views of bodies and individuals involved in societal-decision making on the relative
+            merits of alternative presentation and summary measures for evaluating the cost-effectiveness
+            of interventions with multiple effects could also be sought to explore the interface
+            between theoretical and practical advantages and lead to further development of the
+            methodology in practice.
+         </p>
+      </div>
+   </div>
+   <div id="sec026">
+      <h2>Conclusion</h2>
+      <p>Better methods are needed to compare the cost effectiveness of alternative strategies
+         with multiple outcomes under uncertainty in complex service delivery areas such as
+         palliative care. On the cost-effectiveness plane analysis is restricted to one outcome
+         and not all outcome domains can be integrated with survival in estimating QALYs. Furthermore,
+         cost-consequences analyses fail to allow for joint uncertainty across outcomes. Comparison
+         in CDU space with ENL planes, contours and CEAPS have been shown to allow presentation
+         of uncertainty across multiple outcomes with summary measures quantifying differences
+         in ENB and the probability of maximising ENB at any given set of threshold values
+         for multiple outcomes. Incorrect inferences are avoided using these presentation and
+         summary measures and risk-neutral or somewhat risk-averse societal decision making
+         better informed, while the potential value of future research (EVPI) is also estimated.
+         In summary, analysis in CDU space provides a readily accessible and systematic way
+         to compare multiple outcomes in CEA and NB assessment under uncertainty. In comparing
+         multiple strategies a more robust picture of the likely trade-offs between costs and
+         benefits, the consequences of funding decisions and the need for future research reduces
+         inferential errors and better informs societal decisions [
+         <span ref-type="bibr" rid="pone.0115544.ref016">16</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref021">21</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref062">62</span>, 
+         <span ref-type="bibr" rid="pone.0115544.ref063">63</span>].
+      </p>
+   </div>
+   <div id="sec027">
+      <h2>Supporting Information</h2>
+      <div tagx="supplementary-material">
+         <div tagx="label">S1 File</div>
+         <caption>
+            <div tagx="title">Raw data.</div>
+            <p>(DOCX)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+   </div>
+   <div tagx="back">
+      <div tagx="ack">
+         <p>The authors wish to thank the patients and carers involved in the PEACH study and
+            the palliative care staff from South Western Sydney Local Health District for their
+            help and participation in the pilot study. Thanks also go to Ms. Debbie Marriott for
+            her assistance with manuscript formatting and submission and the reviewers for their
+            valuable comments on earlier drafts.
+         </p>
+      </div>
+      <div tag="ref-list">
+         <ul>
+            <div tagx="title">References</div>
+            <li tag="ref">
+               <div tagx="label">1</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Drummond</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Sculpher</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Torrance</span>
+                     <span tagx="given-names">G</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">O’Brien</span>
+                     <span tagx="given-names">B</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Stoddart</span>
+                     <span tagx="given-names">G</span>
+                  </span> (
+                  <span tagx="year">2005</span>) 
+                  <span tagx="source">Methods for the economic evaluation of health care programmes</span>. 
+                  <div tagx="publisher-loc">Oxford, UK</div>: 
+                  <div tagx="publisher-name">Oxford University Press</div> p
+                  <span tagx="fpage">137</span>–
+                  <span tagx="lpage">209</span>
+                  <div tagx="object-id">15693028</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">2</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Sindelar</span>
+                     <span tagx="given-names">JL</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Jofre-Bonet</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">French</span>
+                     <span tagx="given-names">MT</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">McLellan</span>
+                     <span tagx="given-names">AT</span>
+                  </span> (
+                  <span tagx="year">2004</span>) 
+                  <span tagx="article-title">Cost-effectiveness analysis of addiction treatment: paradoxes of multiple outcomes</span>. 
+                  <span tagx="source">Drug and Alcohol Dependence</span>
+                  <span tagx="volume">73</span>: 
+                  <span tagx="fpage">41</span>–
+                  <span tagx="lpage">50</span>
+                  <div tagx="object-id">14687958</div>
+                  <div tagx="pub-id">14687958</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">3</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Al-Janabi</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">McCaffrey</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Ratcliffe</span>
+                     <span tagx="given-names">J</span>
+                  </span> (
+                  <span tagx="year">2013</span>) 
+                  <span tagx="article-title">Carer Preferences in Economic Evaluation and Healthcare Decision Making</span>. 
+                  <span tagx="source">The Patient—Patient-Centered Outcomes Research</span>
+                  <span tagx="volume">6</span>: 
+                  <span tagx="fpage">235</span>–
+                  <span tagx="lpage">239</span>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">4</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Hoch</span>
+                     <span tagx="given-names">JS</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Dewa</span>
+                     <span tagx="given-names">CS</span>
+                  </span> (
+                  <span tagx="year">2007</span>) 
+                  <span tagx="article-title">Lessons from trial-based cost-effectiveness analyses of mental health interventions:
+                     why uncertainty about the outcome, estimate and willingness to pay matters
+                  </span>. 
+                  <span tagx="source">Pharmacoeconomics</span>
+                  <span tagx="volume">25</span>: 
+                  <span tagx="fpage">807</span>–
+                  <span tagx="lpage">816</span>
+                  <div tagx="object-id">17887803</div>
+                  <div tagx="pub-id">17887803</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">5</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Brooks</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Rabin</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">de Charro</span>
+                     <span tagx="given-names">F</span>
+                  </span> (
+                  <span tagx="year">2003</span>) 
+                  <span tagx="source">The Measurement and Valuation of Health Status Using EQ-5D: A European Perspective</span>. 
+                  <div tagx="publisher-loc">Dordrecht, The Netherlands</div>: 
+                  <div tagx="publisher-name">Kluwer Academic Publishers</div>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">6</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Ratcliffe</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Buxton</span>
+                     <span tagx="given-names">M</span>
+                  </span> (
+                  <span tagx="year">1999</span>) 
+                  <span tagx="article-title">Patients’ preferences regarding the process and outcomes of life-saving technology.
+                     An application of conjoint analysis to liver transplantation
+                  </span>. 
+                  <span tagx="source">Int J Technol Assess Health Care</span>
+                  <span tagx="volume">15</span>: 
+                  <span tagx="fpage">340</span>–
+                  <span tagx="lpage">351</span>
+                  <div tagx="object-id">10507193</div>
+                  <div tagx="pub-id">10507193</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">7</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Ratcliffe</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Van Haselen</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Buxton</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hardy</span>
+                     <span tagx="given-names">K</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Colehan</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2002</span>) 
+                  <span tagx="article-title">Assessing patients’ preferences for characteristics associated with homeopathic and
+                     conventional treatment of asthma: a conjoint analysis study
+                  </span>. 
+                  <span tagx="source">Thorax</span>
+                  <span tagx="volume">57</span>: 
+                  <span tagx="fpage">503</span>–
+                  <span tagx="lpage">508</span>
+                  <div tagx="object-id">12037224</div>
+                  <div tagx="pub-id">12037224</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">8</div>
+               <div tagx="mixed-citation">Shih A, Schoenbaum S (2007) Measuring Hospital Performance: The Importance of Process
+                  Measures: The Commonwealth Fund.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">9</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Agar</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Currow</span>
+                     <span tagx="given-names">DC</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Shelby-James</span>
+                     <span tagx="given-names">TM</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Plummer</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Sanderson</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2008</span>) 
+                  <span tagx="article-title">Preference for place of care and place of death in palliative care: are these different
+                     questions?
+                  </span>
+                  <span tagx="source">Palliative Medicine</span>
+                  <span tagx="volume">22</span>: 
+                  <span tagx="fpage">787</span>–
+                  <span tagx="lpage">795</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1177/0269216308092287</div>
+                  </div>
+                  <div tagx="object-id">18755830</div>
+                  <div tagx="pub-id">18755830</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">10</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">McCaffrey</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Currow</span>
+                     <span tagx="given-names">DC</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Eckermann</span>
+                     <span tagx="given-names">S</span>
+                  </span> (
+                  <span tagx="year">2009</span>) 
+                  <span tagx="article-title">Measuring Impacts of Value to Patients Is Crucial When Evaluating Palliative Care</span>. 
+                  <span tagx="source">Journal of Pain and Symptom Management</span>
+                  <span tagx="volume">37</span>: 
+                  <span tagx="fpage">e7</span>–
+                  <span tagx="lpage">e9</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/j.jpainsymman.2008.11.010</div>
+                  </div>
+                  <div tagx="object-id">19500720</div>
+                  <div tagx="pub-id">19500720</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">11</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Cohen S</span>
+                     <span tagx="given-names">MB</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Bruera</span>
+                     <span tagx="given-names">E</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Provost</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Rowe</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Tong</span>
+                     <span tagx="given-names">K</span>
+                  </span> (
+                  <span tagx="year">1997</span>) 
+                  <span tagx="article-title">Validity of the McGill Quality of Life Questionnaire in the palliative care setting:
+                     a multicentre Canadian study demonstrating the importance of the existential domain
+                  </span>. 
+                  <span tagx="source">Palliative Medicine</span>
+                  <span tagx="volume">11</span>: 
+                  <span tagx="fpage">3</span>–
+                  <span tagx="lpage">20</span>
+                  <div tagx="object-id">9068681</div>
+                  <div tagx="pub-id">9068681</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">12</div>
+               <div tagx="mixed-citation">Gold MR, Menzel P, Nord E, Pinto-Prades J-L, Richardson J, et al. (1999) Toward a
+                  Broader View of Values in Cost-Effectiveness Analysis of Health. The Hastings Center
+                  Report. p7.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">13</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Currow</span>
+                     <span tagx="given-names">DC</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Burns</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Agar</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Phillips</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">McCaffrey</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2011</span>) 
+                  <span tagx="article-title">Palliative Caregivers Who Would Not Take on the Caring Role Again</span>. 
+                  <span tagx="source">Journal of Pain and Symptom Management</span>
+                  <span tagx="volume">41</span>: 
+                  <span tagx="fpage">661</span>–
+                  <span tagx="lpage">672</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/j.jpainsymman.2010.06.017</div>
+                  </div>
+                  <div tagx="object-id">21227632</div>
+                  <div tagx="pub-id">21227632</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">14</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Al-Janabi</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Flynn</span>
+                     <span tagx="given-names">TN</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Coast</span>
+                     <span tagx="given-names">J</span>
+                  </span> (
+                  <span tagx="year">2011</span>) 
+                  <span tagx="article-title">QALYs and carers</span>. 
+                  <span tagx="source">PharmacoEconomics</span>
+                  <span tagx="volume">29</span>: 
+                  <span tagx="fpage">1015</span>–
+                  <span tagx="lpage">1023</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.2165/11593940-000000000-00000</div>
+                  </div>
+                  <div tagx="object-id">22077576</div>
+                  <div tagx="pub-id">22077576</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">15</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Brazier</span>
+                     <span tagx="given-names">JE</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Rowen</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Mavranezouli</span>
+                     <span tagx="given-names">I</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Tsuchiya</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Young</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2012</span>) 
+                  <span tagx="article-title">Developing and testing methods for deriving preference-based measures of health from
+                     condition-specific measures (and other patient-based measures of outcome)
+                  </span>. 
+                  <span tagx="source">Health Technol Assess</span>
+                  <span tagx="volume">16</span>: 
+                  <span tagx="fpage">1</span>–
+                  <span tagx="lpage">114</span>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">16</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Eckermann</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Karnon</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Willan</span>
+                     <span tagx="given-names">AR</span>
+                  </span> (
+                  <span tagx="year">2010</span>) 
+                  <span tagx="article-title">The Value of Value of Information: Best Informing Research Design and Prioritization
+                     Using Current Methods
+                  </span>. 
+                  <span tagx="source">PharmacoEconomics</span>
+                  <span tagx="volume">28</span>: 
+                  <span tagx="fpage">699</span>–
+                  <span tagx="lpage">709</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.2165/11537370-000000000-00000</div>
+                  </div>
+                  <div tagx="object-id">20629473</div>
+                  <div tagx="pub-id">20629473</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">17</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Sculpher</span>
+                     <span tagx="given-names">MJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Price</span>
+                     <span tagx="given-names">M</span>
+                  </span> (
+                  <span tagx="year">2003</span>) 
+                  <span tagx="article-title">Measuring costs and consequences in economic evaluation in asthma</span>. 
+                  <span tagx="source">Respir Med</span>
+                  <span tagx="volume">97</span>: 
+                  <span tagx="fpage">508</span>–
+                  <span tagx="lpage">520</span>
+                  <div tagx="object-id">12735668</div>
+                  <div tagx="pub-id">12735668</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">18</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Coast</span>
+                     <span tagx="given-names">J</span>
+                  </span> (
+                  <span tagx="year">2004</span>) 
+                  <span tagx="article-title">Is economic evaluation in touch with society’s health values?</span>
+                  <span tagx="source">BMJ</span>
+                  <span tagx="volume">329</span>: 
+                  <span tagx="fpage">1233</span>–
+                  <span tagx="lpage">1236</span>
+                  <div tagx="object-id">15550430</div>
+                  <div tagx="pub-id">15550430</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">19</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Briggs</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">O’Brien</span>
+                     <span tagx="given-names">B</span>
+                  </span> (
+                  <span tagx="year">2001</span>) 
+                  <span tagx="article-title">The Death of Cost-Minimization Analysis?</span>
+                  <span tagx="source">Health Economics</span>
+                  <span tagx="volume">10</span>: 
+                  <span tagx="fpage">179</span>–
+                  <span tagx="lpage">184</span>
+                  <div tagx="object-id">11252048</div>
+                  <div tagx="pub-id">11252048</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">20</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Briggs</span>
+                     <span tagx="given-names">AH</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">O’Brien</span>
+                     <span tagx="given-names">BJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Blackhouse</span>
+                     <span tagx="given-names">G</span>
+                  </span> (
+                  <span tagx="year">2002</span>) 
+                  <span tagx="article-title">Thinking Outside the Box: Recent Advances in the Analysis and Presentation of Uncertainty
+                     in Cost-Effectiveness Studies
+                  </span>. 
+                  <span tagx="source">Annual Reviews Public Health</span>
+                  <span tagx="volume">23</span>: 
+                  <span tagx="fpage">377</span>–
+                  <span tagx="lpage">401</span>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">21</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Eckermann</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Willan</span>
+                     <span tagx="given-names">AR</span>
+                  </span> (
+                  <span tagx="year">2007</span>) 
+                  <span tagx="article-title">Expected value of information and decision making in HTA</span>. 
+                  <span tagx="source">Health Economics</span>
+                  <span tagx="volume">16</span>: 
+                  <span tagx="fpage">195</span>–
+                  <span tagx="lpage">209</span>
+                  <div tagx="object-id">16981193</div>
+                  <div tagx="pub-id">16981193</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">22</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Eckermann</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Pekarsky</span>
+                     <span tagx="given-names">B</span>
+                  </span> (
+                  <span tagx="year">2014</span>) 
+                  <span tagx="article-title">Can the real opportunity cost stand up: displaced services, the straw man outside
+                     the room
+                  </span>. 
+                  <span tagx="source">Pharmacoeconomics</span>
+                  <span tagx="volume">32</span>: 
+                  <span tagx="fpage">319</span>–
+                  <span tagx="lpage">325</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1007/s40273-014-0140-3</div>
+                  </div>
+                  <div tagx="object-id">24515251</div>
+                  <div tagx="pub-id">24515251</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">23</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Claxton</span>
+                     <span tagx="given-names">K</span>
+                  </span> (
+                  <span tagx="year">2008</span>) 
+                  <span tagx="article-title">Exploring uncertainty in cost-effectiveness analysis</span>. 
+                  <span tagx="source">Pharmacoeconomics</span>
+                  <span tagx="volume">26</span>: 
+                  <span tagx="fpage">781</span>–
+                  <span tagx="lpage">798</span>
+                  <div tagx="object-id">18767898</div>
+                  <div tagx="pub-id">18767898</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">24</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Eckermann</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Briggs</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Willan</span>
+                     <span tagx="given-names">A</span>
+                  </span> (
+                  <span tagx="year">2008</span>) 
+                  <span tagx="article-title">Health technology assessment in the cost-disutility plane</span>. 
+                  <span tagx="source">Medical Decision Making</span>
+                  <span tagx="volume">28</span>: 
+                  <span tagx="fpage">172</span>–
+                  <span tagx="lpage">181</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1177/0272989X07312474</div>
+                  </div>
+                  <div tagx="object-id">18356312</div>
+                  <div tagx="pub-id">18356312</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">25</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Eckermann</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Willan</span>
+                     <span tagx="given-names">A</span>
+                  </span> (
+                  <span tagx="year">2011</span>) 
+                  <span tagx="article-title">Presenting evidence and summary measures to best inform societal decisions when comparing
+                     multiple strategies
+                  </span>. 
+                  <span tagx="source">PharmacoEconomics</span>
+                  <span tagx="volume">29</span>: 
+                  <span tagx="fpage">563</span>–
+                  <span tagx="lpage">577</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.2165/11587100-000000000-00000</div>
+                  </div>
+                  <div tagx="object-id">21671686</div>
+                  <div tagx="pub-id">21671686</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">26</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Eckermann</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Coelli</span>
+                     <span tagx="given-names">T</span>
+                  </span> (
+                  <span tagx="year">2013</span>) 
+                  <span tagx="article-title">Including quality attributes in efficiency measures consistent with net benefit: creating
+                     incentives for evidence based medicine in practice
+                  </span>. 
+                  <span tagx="source">Soc Sci Med</span>
+                  <span tagx="volume">76</span>: 
+                  <span tagx="fpage">159</span>–
+                  <span tagx="lpage">168</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/j.socscimed.2012.10.020</div>
+                  </div>
+                  <div tagx="object-id">23153543</div>
+                  <div tagx="pub-id">23153543</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">27</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">McCaffrey</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Agar</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Harlum</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Karnon</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Currow</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2013</span>) 
+                  <span tagx="article-title">Is home-based palliative care cost-effective? An economic evaluation of the Palliative
+                     Care Extended Packages at Home (PEACH) pilot
+                  </span>. 
+                  <span tagx="source">BMJ Supportive &amp; Palliative Care</span>
+                  <span tagx="volume">3</span>: 
+                  <span tagx="fpage">431</span>–
+                  <span tagx="lpage">435</span>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">28</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Stinnett</span>
+                     <span tagx="given-names">AA</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Mullahy</span>
+                     <span tagx="given-names">J</span>
+                  </span> (
+                  <span tagx="year">1998</span>) 
+                  <span tagx="article-title">Net health benefits: a new framework for the analysis of uncertainty in cost-effectiveness
+                     analysis
+                  </span>. 
+                  <span tagx="source">Medical Decision Making</span>
+                  <span tagx="volume">18</span>: 
+                  <span tagx="fpage">S68</span>–
+                  <span tagx="lpage">80</span>
+                  <div tagx="object-id">9566468</div>
+                  <div tagx="pub-id">9566468</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">29</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Willan</span>
+                     <span tagx="given-names">AR</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Lin</span>
+                     <span tagx="given-names">DY</span>
+                  </span> (
+                  <span tagx="year">2001</span>) 
+                  <span tagx="article-title">Incremental net benefit in randomized clinical trials</span>. 
+                  <span tagx="source">Stat Med</span>
+                  <span tagx="volume">20</span>: 
+                  <span tagx="fpage">1563</span>–
+                  <span tagx="lpage">1574</span>
+                  <div tagx="object-id">11391688</div>
+                  <div tagx="pub-id">11391688</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">30</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Zethraeus</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Johannesson</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Jonsson</span>
+                     <span tagx="given-names">B</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Lothgren</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Tambour</span>
+                     <span tagx="given-names">M</span>
+                  </span> (
+                  <span tagx="year">2003</span>) 
+                  <span tagx="article-title">Advantages of using the net-benefit approach for analysing uncertainty in economic
+                     evaluation studies
+                  </span>. 
+                  <span tagx="source">Pharmacoeconomics</span>
+                  <span tagx="volume">21</span>: 
+                  <span tagx="fpage">39</span>–
+                  <span tagx="lpage">48</span>
+                  <div tagx="object-id">12484802</div>
+                  <div tagx="pub-id">12484802</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">31</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Stinnett</span>
+                     <span tagx="given-names">A</span>
+                  </span> (
+                  <span tagx="year">1996</span>) 
+                  <span tagx="article-title">Net Health Benefits: a new framework for the evaluation of uncertainty in medical
+                     cost-effectiveness analysis
+                  </span>. 
+                  <span tagx="source">Medical Decision Making</span>
+                  <span tagx="volume">16</span>: 
+                  <span tagx="fpage">463</span>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">32</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Birch</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Gafni</span>
+                     <span tagx="given-names">A</span>
+                  </span> (
+                  <span tagx="year">1992</span>) 
+                  <span tagx="article-title">Cost effectiveness/utility analyses. Do current decision rules lead us to where we
+                     want to be?
+                  </span>
+                  <span tagx="source">J Health Econ</span>
+                  <span tagx="volume">11</span>: 
+                  <span tagx="fpage">279</span>–
+                  <span tagx="lpage">296</span>
+                  <div tagx="object-id">10122540</div>
+                  <div tagx="pub-id">10122540</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">33</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Pekarsky</span>
+                     <span tagx="given-names">B</span>
+                  </span> (
+                  <span tagx="year">2010</span>) 
+                  <span tagx="article-title">Should financial incentives be used to differentially reward ‘me-too’ and innovative
+                     drugs?
+                  </span>
+                  <span tagx="source">PharmacoEconomics</span>
+                  <span tagx="volume">28</span>: 
+                  <span tagx="fpage">1</span>–
+                  <span tagx="lpage">17</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.2165/11587410-000000000-00000</div>
+                  </div>
+                  <div tagx="object-id">21182340</div>
+                  <div tagx="pub-id">20014872</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">34</div>
+               <div tagx="mixed-citation">Pekarsky B (2012) Trusts, constraints and the counterfactual: reframing the political
+                  economy of new drugs (PhD dissertation). University of Adelaide.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">35</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Fenwick</span>
+                     <span tagx="given-names">E</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Byford</span>
+                     <span tagx="given-names">S</span>
+                  </span> (
+                  <span tagx="year">2005</span>) 
+                  <span tagx="article-title">A guide to cost-effectiveness acceptability curves</span>. 
+                  <span tagx="source">Br J Psychiatry</span>
+                  <span tagx="volume">187</span>: 
+                  <span tagx="fpage">106</span>–
+                  <span tagx="lpage">108</span>
+                  <div tagx="object-id">16055820</div>
+                  <div tagx="pub-id">16055820</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">36</div>
+               <div tagx="mixed-citation">Eckermann S (2004) Hospital Performance Including Quality: Creating Economic Incentives
+                  Consistent with Evidence-Based Medicine. (PhD Dissertation), University of New South
+                  Wales, Sydney.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">37</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Farrell</span>
+                     <span tagx="given-names">MJ</span>
+                  </span> (
+                  <span tagx="year">1957</span>) 
+                  <span tagx="article-title">The Measurement of Productive Efficiency</span>. 
+                  <span tagx="source">Journal of the Royal Statistical Society Series A (General)</span>
+                  <span tagx="volume">120</span>: 
+                  <span tagx="fpage">253</span>–
+                  <span tagx="lpage">290</span>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">38</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">McCaffrey</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Karnon</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Currow</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Eckermann</span>
+                     <span tagx="given-names">S</span>
+                  </span> (
+                  <span tagx="year">2010</span>) 
+                  <span tagx="article-title">The Old Dog &amp; the Poor Relation: Informing funding decisions in palliative care with
+                     cost-consequence analysis in the cost-disutility plane
+                  </span>. 
+                  <span tagx="source">Palliative Medicine</span>
+                  <span tagx="volume">24</span>: 
+                  <span tagx="fpage">S207</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1177/0269216310366390</div>
+                  </div>
+                  <div tagx="object-id">20522880</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">39</div>
+               <div tagx="mixed-citation">Coelli T (1996) A guide to DEAP Version 2.1: A data envelopment analysis (computer)
+                  program. CEPA Working Papers. Armidale, NSW 2351: Department of Econometrics, University
+                  of New England.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">40</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Campbell</span>
+                     <span tagx="given-names">MK</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Torgerson</span>
+                     <span tagx="given-names">DJ</span>
+                  </span> (
+                  <span tagx="year">1999</span>) 
+                  <span tagx="article-title">Bootstrapping: estimating confidence intervals for cost-effectiveness ratios</span>. 
+                  <span tagx="source">QJM</span>
+                  <span tagx="volume">92</span>: 
+                  <span tagx="fpage">177</span>–
+                  <span tagx="lpage">182</span>
+                  <div tagx="object-id">10326078</div>
+                  <div tagx="pub-id">10326078</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">41</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Arrow</span>
+                     <span tagx="given-names">KJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Lind</span>
+                     <span tagx="given-names">RC</span>
+                  </span> (
+                  <span tagx="year">1970</span>) 
+                  <span tagx="article-title">Uncertainty and the Evaluation of Public Investment Decisions</span>. 
+                  <span tagx="source">The American Economic Review</span>
+                  <span tagx="volume">60</span>: 
+                  <span tagx="fpage">364</span>–
+                  <span tagx="lpage">378</span>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">42</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Hanson</span>
+                     <span tagx="given-names">LC</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Winzelberg</span>
+                     <span tagx="given-names">G</span>
+                  </span> (
+                  <span tagx="year">2013</span>) 
+                  <span tagx="article-title">Research priorities for geriatric palliative care: goals, values, and preferences</span>. 
+                  <span tagx="source">J Palliat Med</span>
+                  <span tagx="volume">16</span>: 
+                  <span tagx="fpage">1175</span>–
+                  <span tagx="lpage">1179</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1089/jpm.2013.9475</div>
+                  </div>
+                  <div tagx="object-id">24007351</div>
+                  <div tagx="pub-id">24007351</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">43</div>
+               <div tagx="mixed-citation">Pharmaceutical Benefits Advisory Committee (2008) Guidelines for preparing submissions
+                  to the Pharmaceutical Benefits Advisory Committee (Version 4.3). Canberra: Department
+                  of Health &amp; Ageing, Commonwealth of Australia.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">44</div>
+               <div tagx="mixed-citation">
+                  <div tagx="collab">National Institute for Clinical Excellence</div> (
+                  <span tagx="year">2008</span>) 
+                  <span tagx="source">Guide to the methods of technology appraisal</span>. 
+                  <div tagx="publisher-loc">London, UK</div>: 
+                  <div tagx="publisher-name">National Institute for Clinical Excellence</div>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">45</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">McCaffrey</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Currow</span>
+                     <span tagx="given-names">DC</span>
+                  </span> (
+                  <span tagx="year">2010</span>) 
+                  <span tagx="article-title">Psychometric development of a single-item end-of-life patient-reported outcome (EOLPRO):
+                     the first piece of the puzzle
+                  </span>. 
+                  <span tagx="source">Palliative Medicine</span>, 
+                  <span tagx="volume">24</span>: 
+                  <span tagx="fpage">s58</span>.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">46</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Williams</span>
+                     <span tagx="given-names">I</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">McIver</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Moore</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Bryan</span>
+                     <span tagx="given-names">S</span>
+                  </span> (
+                  <span tagx="year">2008</span>) 
+                  <span tagx="article-title">The use of economic evaluations in NHS decision-making: a review and empirical investigation</span>. 
+                  <span tagx="source">Health Technology Assessment</span>
+                  <span tagx="volume">12</span>: 
+                  <span tagx="fpage">1</span>–
+                  <span tagx="lpage">58</span>
+                  <div tagx="object-id">18796263</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">47</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Bjorner</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Keiding</span>
+                     <span tagx="given-names">H</span>
+                  </span> (
+                  <span tagx="year">2004</span>) 
+                  <span tagx="article-title">Cost-effectiveness with multiple outcomes</span>. 
+                  <span tagx="source">Health Economics</span>
+                  <span tagx="volume">13</span>: 
+                  <span tagx="fpage">1181</span>–
+                  <span tagx="lpage">1190</span>
+                  <div tagx="object-id">15386670</div>
+                  <div tagx="pub-id">15386670</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">48</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Negrin</span>
+                     <span tagx="given-names">MA</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Vazquez-Polo</span>
+                     <span tagx="given-names">FJ</span>
+                  </span> (
+                  <span tagx="year">2006</span>) 
+                  <span tagx="article-title">Bayesian cost-effectiveness analysis with two measures of effectiveness: the cost-effectiveness
+                     acceptability plane
+                  </span>. 
+                  <span tagx="source">Health Econ</span>
+                  <span tagx="volume">15</span>: 
+                  <span tagx="fpage">363</span>–
+                  <span tagx="lpage">372</span>
+                  <div tagx="object-id">16259048</div>
+                  <div tagx="pub-id">16259048</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">49</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Lemmens</span>
+                     <span tagx="given-names">KM</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Nieboer</span>
+                     <span tagx="given-names">AP</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Rutten-Van Molken</span>
+                     <span tagx="given-names">MP</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van Schayck</span>
+                     <span tagx="given-names">CP</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Asin</span>
+                     <span tagx="given-names">JD</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2010</span>) 
+                  <span tagx="article-title">Application of a theoretical model to evaluate COPD disease management</span>. 
+                  <span tagx="source">BMC Health Serv Res</span>
+                  <span tagx="volume">10</span>: 
+                  <span tagx="fpage">81</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1186/1472-6963-10-81</div>
+                  </div>
+                  <div tagx="object-id">20346135</div>
+                  <div tagx="pub-id">20346135</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">50</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Hawe</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Ghali</span>
+                     <span tagx="given-names">L</span>
+                  </span> (
+                  <span tagx="year">2008</span>) 
+                  <span tagx="article-title">Use of social network analysis to map the social relationships of staff and teachers
+                     at school
+                  </span>. 
+                  <span tagx="source">Health Educ Res</span>
+                  <span tagx="volume">23</span>: 
+                  <span tagx="fpage">62</span>–
+                  <span tagx="lpage">69</span>
+                  <div tagx="object-id">17289659</div>
+                  <div tagx="pub-id">17289659</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">51</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Hawe</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Shiell</span>
+                     <span tagx="given-names">A</span>
+                  </span> (
+                  <span tagx="year">2000</span>) 
+                  <span tagx="article-title">Social capital and health promotion: a review</span>. 
+                  <span tagx="source">Soc Sci Med</span>
+                  <span tagx="volume">51</span>: 
+                  <span tagx="fpage">871</span>–
+                  <span tagx="lpage">885</span>
+                  <div tagx="object-id">10972431</div>
+                  <div tagx="pub-id">10972431</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">52</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Hawe</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Shiell</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Riley</span>
+                     <span tagx="given-names">T</span>
+                  </span> (
+                  <span tagx="year">2004</span>) 
+                  <span tagx="article-title">Complex interventions: how “out of control” can a randomised controlled trial be?</span>
+                  <span tagx="source">BMJ</span>
+                  <span tagx="volume">328</span>: 
+                  <span tagx="fpage">1561</span>–
+                  <span tagx="lpage">1563</span>
+                  <div tagx="object-id">15217878</div>
+                  <div tagx="pub-id">15217878</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">53</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Hawe</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Shiell</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Riley</span>
+                     <span tagx="given-names">T</span>
+                  </span> (
+                  <span tagx="year">2009</span>) 
+                  <span tagx="article-title">Theorising interventions as events in systems</span>. 
+                  <span tagx="source">Am J Community Psychol</span>
+                  <span tagx="volume">43</span>: 
+                  <span tagx="fpage">267</span>–
+                  <span tagx="lpage">276</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1007/s10464-009-9229-9</div>
+                  </div>
+                  <div tagx="object-id">19390961</div>
+                  <div tagx="pub-id">19390961</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">54</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Shiell</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hawe</span>
+                     <span tagx="given-names">P</span>
+                  </span> (
+                  <span tagx="year">1996</span>) 
+                  <span tagx="article-title">Health promotion community development and the tyranny of individualism</span>. 
+                  <span tagx="source">Health Econ</span>
+                  <span tagx="volume">5</span>: 
+                  <span tagx="fpage">241</span>–
+                  <span tagx="lpage">247</span>
+                  <div tagx="object-id">8817298</div>
+                  <div tagx="pub-id">8817298</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">55</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Shiell</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hawe</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Gold</span>
+                     <span tagx="given-names">L</span>
+                  </span> (
+                  <span tagx="year">2008</span>) 
+                  <span tagx="article-title">Complex interventions or complex systems? Implications for health economic evaluation</span>. 
+                  <span tagx="source">BMJ</span>
+                  <span tagx="volume">336</span>: 
+                  <span tagx="fpage">1281</span>–
+                  <span tagx="lpage">1283</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1136/bmj.39569.510521.AD</div>
+                  </div>
+                  <div tagx="object-id">18535071</div>
+                  <div tagx="pub-id">18535071</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">56</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Eckermann</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Dawber</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Yeatman</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Quinsey</span>
+                     <span tagx="given-names">K</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Morris</span>
+                     <span tagx="given-names">D</span>
+                  </span> (
+                  <span tagx="year">2014</span>) 
+                  <span tagx="article-title">Evaluating return on investment in a school based health promotion and prevention
+                     program: The investment multiplier for the Stephanie Alexander Kitchen Garden National
+                     Program
+                  </span>. 
+                  <span tagx="source">Soc Sci Med</span>
+                  <span tagx="volume">114</span>: 
+                  <span tagx="fpage">103</span>–
+                  <span tagx="lpage">112</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/j.socscimed.2014.05.056</div>
+                  </div>
+                  <div tagx="object-id">24922607</div>
+                  <div tagx="pub-id">24922607</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">57</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Tsiachristas</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Cramm</span>
+                     <span tagx="given-names">JM</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Nieboer</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Rutten-van Molken</span>
+                     <span tagx="given-names">M</span>
+                  </span> (
+                  <span tagx="year">2013</span>) 
+                  <span tagx="article-title">Broader economic evaluation of disease management programs using multi-criteria decision
+                     analysis
+                  </span>. 
+                  <span tagx="source">Int J Technol Assess Health Care</span>
+                  <span tagx="volume">29</span>: 
+                  <span tagx="fpage">301</span>–
+                  <span tagx="lpage">308</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1017/S0266462313000202</div>
+                  </div>
+                  <div tagx="object-id">23759317</div>
+                  <div tagx="pub-id">23759317</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">58</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Postmus</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Tervonen</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van Valkenhoef</span>
+                     <span tagx="given-names">G</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hillege</span>
+                     <span tagx="given-names">HL</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Buskens</span>
+                     <span tagx="given-names">E</span>
+                  </span> (
+                  <span tagx="year">2013</span>) 
+                  <span tagx="article-title">A multi-criteria decision analysis perspective on the health economic evaluation of
+                     medical interventions
+                  </span>. 
+                  <span tagx="source">Eur J Health Econ</span>. 
+                  <div tagx="month">7</div> 11 (epub ahead of print).
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">59</div>
+               <div tagx="mixed-citation">McCaffrey N (2013) Modelling joint cost and multiple outcomes uncertainty on the cost-disutility
+                  plane: case studies in palliative care (PhD dissertation). Central Library: Flinders
+                  University.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">60</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Willan</span>
+                     <span tagx="given-names">AR</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Eckermann</span>
+                     <span tagx="given-names">S</span>
+                  </span> (
+                  <span tagx="year">2012</span>) 
+                  <span tagx="article-title">Value of information and pricing new healthcare interventions</span>. 
+                  <span tagx="source">Pharmacoeconomics</span>
+                  <span tagx="volume">30</span>: 
+                  <span tagx="fpage">447</span>–
+                  <span tagx="lpage">459</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.2165/11592250-000000000-00000</div>
+                  </div>
+                  <div tagx="object-id">22591129</div>
+                  <div tagx="pub-id">22591129</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">61</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Kent</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Briggs</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Eckermann</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Berry</span>
+                     <span tagx="given-names">C</span>
+                  </span> (
+                  <span tagx="year">2013</span>) 
+                  <span tagx="article-title">Are value of information methods ready for prime time? An application to alternative
+                     treatment strategies for NSTEMI patients
+                  </span>. 
+                  <span tagx="source">Int J Technol Assess Health Care</span>
+                  <span tagx="volume">29</span>: 
+                  <span tagx="fpage">435</span>–
+                  <span tagx="lpage">442</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1017/S0266462313000433</div>
+                  </div>
+                  <div tagx="object-id">24290337</div>
+                  <div tagx="pub-id">24290337</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">62</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Claxton</span>
+                     <span tagx="given-names">K</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Briggs</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Buxton</span>
+                     <span tagx="given-names">MJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Culyer</span>
+                     <span tagx="given-names">AJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">McCabe</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2008</span>) 
+                  <span tagx="article-title">Value based pricing for NHS drugs: an opportunity not to be missed?</span>
+                  <span tagx="source">Bmj</span>
+                  <span tagx="volume">336</span>: 
+                  <span tagx="fpage">251</span>–
+                  <span tagx="lpage">254</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1136/bmj.39434.500185.25</div>
+                  </div>
+                  <div tagx="object-id">18244997</div>
+                  <div tagx="pub-id">18244997</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">63</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Koerkamp</span>
+                     <span tagx="given-names">BG</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hunink</span>
+                     <span tagx="given-names">MGM</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Stijnen</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hammitt</span>
+                     <span tagx="given-names">JK</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Kuntz</span>
+                     <span tagx="given-names">KM</span>
+                  </span>, 
+                  <div tagx="etal">et al</div> (
+                  <span tagx="year">2007</span>) 
+                  <span tagx="article-title">Limitations of acceptability curves for presenting uncertainty in cost-effectiveness
+                     analysis
+                  </span>. 
+                  <span tagx="source">Medical Decision Making</span>
+                  <span tagx="volume">27</span>: 
+                  <span tagx="fpage">101</span>(
+                  <span tagx="lpage">111</span>). 
+                  <div tagx="object-id">17409361</div>
+                  <div tagx="pub-id">17409361</div>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>

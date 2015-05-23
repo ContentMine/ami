@@ -1,16 +1,14 @@
 package org.xmlcml.ami2.lookups;
 
 import java.net.URL;
-import java.util.Arrays;
-import java.util.List;
 
 import nu.xom.Element;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.lookups.WikipediaLookup;
 import org.xmlcml.euclid.IntArray;
 import org.xmlcml.xml.XMLUtil;
 
@@ -23,6 +21,7 @@ public class WikipediaLookupTest {
 	}
 	
 	@Test
+	@Ignore // LOOKUP 
 	public void getWikidataIdForSpecies() throws Exception {
 		WikipediaLookup wikipediaLookup = new WikipediaLookup();
 		IntArray intArray = wikipediaLookup.getWikidataIDsAsIntArray("Mus musculus");
@@ -30,6 +29,7 @@ public class WikipediaLookupTest {
 	}
 	
 	@Test
+	@Ignore // LOOKUP 
 	public void getWikidataXMLForID() throws Exception {
 		WikipediaLookup defaultLookup = new WikipediaLookup();
 		URL url = defaultLookup.createWikidataXMLURL("Q83310");

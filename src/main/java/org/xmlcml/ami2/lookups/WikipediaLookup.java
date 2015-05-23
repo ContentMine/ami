@@ -85,11 +85,16 @@ Mar 14 (9 days ago)
 
 	@Override
 	public String lookup(String speciesName) throws IOException {
-		IntArray wikidataIntArray = getWikidataIDsAsIntArray(speciesName);
-		String result = wikidataIntArray.toString();
-		// remove all brackets
-		result = result == null ? null : result.replaceAll("[\\(\\)]", "");
-		return (result == null || result.trim().equals("")) ? null : result; 
+		if (speciesName != null) {
+			IntArray wikidataIntArray = getWikidataIDsAsIntArray(speciesName);
+			String result = wikidataIntArray.toString();
+			// remove all brackets
+			result = result == null ? null : result.replaceAll("[\\(\\)]", "");
+			return (result == null || result.trim().equals("")) ? null : result; 
+		} else {
+			LOG.error("null species");
+			return null;
+		}
 	}
 	
 	public IntArray getWikidataIDsAsIntArray(String speciesName) throws IOException {

@@ -1,25 +1,31 @@
 package org.xmlcml.ami2.plugins;
 
-import java.io.File;
+import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import nu.xom.Builder;
+import nu.xom.Document;
 import nu.xom.Element;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.lookups.AbstractLookup;
-import org.xmlcml.args.ArgIterator;
-import org.xmlcml.args.ArgumentOption;
-import org.xmlcml.args.DefaultArgProcessor;
-import org.xmlcml.files.QuickscrapeNorma;
-import org.xmlcml.files.ResultsElement;
-import org.xmlcml.html.HtmlElement;
-import org.xmlcml.html.HtmlFactory;
+import org.xmlcml.ami2.plugins.regex.CompoundRegex;
+import org.xmlcml.ami2.plugins.regex.CompoundRegexList;
+import org.xmlcml.ami2.plugins.regex.RegexComponent;
+import org.xmlcml.cmine.args.ArgIterator;
+import org.xmlcml.cmine.args.ArgumentOption;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.ContentProcessor;
+import org.xmlcml.cmine.files.DefaultSearcher;
+import org.xmlcml.cmine.files.EuclidSource;
+import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.html.HtmlP;
+import org.xmlcml.xml.XMLUtil;
 
 /** 
  * Processes commandline arguments.
@@ -29,29 +35,26 @@ import org.xmlcml.html.HtmlP;
  */
 public class AMIArgProcessor extends DefaultArgProcessor {
 	
-	public static final String RESULTS = "results";
 	public static final Logger LOG = Logger.getLogger(AMIArgProcessor.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
+	private static final String ARG_PROCESSOR = "ArgProcessor";
+	public static final String RESULTS = "results";
 	protected static String RESOURCE_NAME_TOP = "/org/xmlcml/ami2";
 	protected static String PLUGIN_RESOURCE = RESOURCE_NAME_TOP+"/plugins";
 	private static String ARGS_RESOURCE = PLUGIN_RESOURCE+"/"+"args.xml";
 
-	private static final String OVERWRITE = "overwrite";
-	private static final String NO_DUPLICATES = "noDuplicates";
-	private static final String MERGE = "merge";
 	protected static final String NAME = "name";
-
 	private Integer[] contextCount = new Integer[] {98, 98};
 	private List<String> params;
+	
 	private XPathProcessor xPathProcessor;
-	protected List<ResultsElement> resultsElementList;
-	private String update;
 	private String plugin;
-	private List<String> lookupNames;
     Map<String,AbstractLookup> lookupInstanceByName;
+	protected CompoundRegexList compoundRegexList;
+	protected List<Element> regexElementList;
 	
 	public AMIArgProcessor() {
 		super();
@@ -72,11 +75,9 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	
 	protected String createPluginArgsResourceName() {
 		String clazz = this.getClass().getSimpleName();
-		plugin = clazz.replace("ArgProcessor", "").toLowerCase();
+		plugin = clazz.replace(ARG_PROCESSOR, "").toLowerCase();
 		return AMIArgProcessor.PLUGIN_RESOURCE + "/"+plugin+"/"+ARGS_XML;
 	}
-
-
 
 	// ============= METHODS =============
 	
@@ -152,66 +153,19 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		this.params = params;
 	}
 
-	public String getUpdate() {
-		return update;
-	}
-
-	@Override
-	/** parse args and resolve their dependencies.
-	 * 
-	 * (don't run any argument actions)
-	 * 
-	 */
-	public void parseArgs(String[] args) {
-		super.parseArgs(args);
-	}
-
-	protected List<HtmlP> extractPElements() {
-		HtmlElement htmlElement = getScholarlyHtmlElement(currentQuickscrapeNorma);
-		List<HtmlP> pElements = HtmlP.extractSelfAndDescendantIs(htmlElement);
-		return pElements;
-	}
-
-	public List<String> extractWordsFromScholarlyHtml() {
-		HtmlElement htmlElement = getScholarlyHtmlElement(currentQuickscrapeNorma);
-		String value = htmlElement == null ? null : htmlElement.getValue();
-		return value == null ? new ArrayList<String>() :  new ArrayList<String>(Arrays.asList(value.split("\\s+")));
-	}
-
 	public Integer[] getContextCount() {
 		return contextCount;
 	}
 
-	public void addResultsElement(ResultsElement resultsElement0) {
-		ensureResultsElementList();
-		String title = resultsElement0.getTitle();
-		if (title == null) {
-			throw new RuntimeException("Results Element must have title");
-		}
-		checkNoDuplicatedTitle(title);
-		resultsElementList.add(resultsElement0);
-	}
-
-	private void checkNoDuplicatedTitle(String title) {
-		for (ResultsElement resultsElement : resultsElementList) {
-			if (title.equals(resultsElement.getTitle())) {
-				String duplicates = getUpdate();
-				if (OVERWRITE.equals(duplicates)) {
-					// carry on
-				} else if (NO_DUPLICATES.equals(duplicates)) {
-					throw new RuntimeException("Cannot have two ResultsElement with same title: "+title);
-				} else if (MERGE.equals(duplicates)) {
-					throw new RuntimeException("Merge not supported: Cannot have two ResultsElement with same title: "+title);
-				}
-			}
-		}
-	}
-	
-	private void ensureResultsElementList() {
-		if (resultsElementList == null) {
-			resultsElementList = new ArrayList<ResultsElement>();
-		}
-	}
+//	@Override
+//	/** parse args and resolve their dependencies.
+//	 * 
+//	 * (don't run any argument actions)
+//	 * 
+//	 */
+//	public void parseArgs(String[] args) {
+//		super.parseArgs(args);
+//	}
 
 	public void parseArgsRunAndOutput(String[] args) {
 		this.parseArgs(args);
@@ -220,27 +174,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 
 	public String getPlugin() {
 		return plugin;
-	}
-
-	/** gets the HtmlElement for ScholarlyHtml.
-	 * 
-	 * ugly static because Euclid cannot depend on html library.
-	 * 
-	 * DO NOT MOVE TO QuickscrapeNorma
-	 * 
-	 * @return
-	 */
-	public static HtmlElement getScholarlyHtmlElement(QuickscrapeNorma quickscrapeNorma) {
-		HtmlElement htmlElement = null;
-		if (quickscrapeNorma != null && quickscrapeNorma.hasScholarlyHTML()) {
-			File scholarlyHtmlFile = quickscrapeNorma.getExistingScholarlyHTML();
-			try {
-				htmlElement = new HtmlFactory().parse(scholarlyHtmlFile);
-			} catch (Exception e) {
-				LOG.error("Cannot create scholarlyHtmlElement");
-			}
-		}
-		return htmlElement;
 	}
 
 	private void loadLookupClassesFromArgValues(ArgumentOption option) {
@@ -278,5 +211,170 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		return lookupInstanceByName;
 	}
 
+	/** create Subclassed Searcher.
+	 * 
+	 * //PLUGIN
+	 * 
+	 * Most plugins should Override this and create a FooSearcher.
+	 * 
+	 * @param namedPattern may be null for non-regex-based searchers
+	 * @return subclassed Plugin
+	 */
+	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
+		AMISearcher defaultSearcher = new AMISearcher(this);
+		defaultSearcher.setNamedPattern(namedPattern);
+		return defaultSearcher;
+	}
+
+	protected void createSearcherList(List<String> names) {
+		ensureSearcherBySearcherNameMap();
+		ensureSearcherList();
+		for (String name : names) {
+			DefaultSearcher optionSearcher = (DefaultSearcher) searcherByNameMap.get(name);
+			if (optionSearcher == null) {
+				LOG.error("unknown optionType: "+name+"; skipped");
+			} else {
+				searcherList.add(optionSearcher);
+			}
+		}
+	}
+
+	private void ensureSearcherBySearcherNameMap() {
+		if (searcherByNameMap == null) {
+			searcherByNameMap = new HashMap<String, DefaultSearcher>();
+		}
+	}
+
+	protected void searchHtmlParaElements() {
+		List<HtmlP> pElements = currentCMDir.extractPElements();
+//		resultsBySearcherNameMap = new HashMap<String, ResultsElement>();
+		for (DefaultSearcher searcher : searcherList) {
+			String name = searcher.getName();
+			ResultsElement resultsElement = searcher.search(pElements);
+			resultsElement.setAllResultElementNames(name);
+			currentCMDir.putInContentProcessor(name, resultsElement);
+		}
+	}
+
+	protected void createAndStoreNamedSearchers(ArgumentOption option) {
+		List<Element> values = option.getOrCreateValues();
+		createNamedSearchers(values);
+	}
+
+	protected void createNamedSearchers(List<Element> values) {
+		for (Element valueElement : values) {
+			try {
+				if (RegexComponent.REGEX.equals(valueElement.getLocalName())) {
+					NamedPattern namedPattern = NamedPattern.createFromRegexElement(valueElement);
+					createSearcherAndAddToMap(namedPattern);
+				} else {
+					createSearcherAndAddToMap(valueElement);
+				}
+			} catch (Exception e) {
+				LOG.error("Could not create NamedSearcher "+valueElement.getAttributeValue(NAME)+"; "+e.getCause());
+				continue;
+			}
+		}
+		LOG.trace("searchers "+searcherByNameMap);
+	}
+
+	public void createSearcherAndAddToMap(Element valueElement) {
+		ensureSearcherByNameMap();
+		NamedPattern namedPattern = NamedPattern.createFromValueElement(valueElement);
+		if (namedPattern != null) {
+			LOG.trace("added named pattern "+namedPattern);
+			DefaultSearcher searcher = createSearcher(namedPattern);
+			searcherByNameMap.put(namedPattern.getName(), searcher);
+		}
+	}
+
+	public void createSearcherAndAddToMap(NamedPattern namedPattern) {
+		if (namedPattern != null) {
+			ensureSearcherByNameMap();
+			LOG.trace("added named pattern "+namedPattern);
+			DefaultSearcher searcher = createSearcher(namedPattern);
+			searcherByNameMap.put(namedPattern.getName(), searcher);
+		}
+	}
+
+	private void ensureSearcherByNameMap() {
+		if (searcherByNameMap == null) {
+			searcherByNameMap = new HashMap<String, DefaultSearcher>();
+		}
+	}
+
+	protected void createSearcherList(ArgumentOption option, ArgIterator argIterator) {
+		List<String> types = argIterator.getStrings(option);
+		createSearcherList(types);
+	}
+
+	protected void createRegexElementList(ArgumentOption option, List<String> tokens) {
+		List<String> regexLocations = option.processArgs(tokens).getStringValues();
+		ensureRegexElementList();
+		for (String regexLocation : regexLocations) {
+			LOG.trace("RegexLocation "+regexLocation);
+			try {
+				Element rawCompoundRegex = new Builder().build(EuclidSource.getInputStream(regexLocation)).getRootElement();
+				List<Element> elements = XMLUtil.getQueryElements(rawCompoundRegex, ".//*[local-name()='regex']");
+				regexElementList.addAll(elements);
+			} catch (Exception e) {
+				LOG.error("Cannot parse regexLocation: ("+e+")"+regexLocation);
+			}
+		}
+	}
+
+	private void ensureRegexElementList() {
+		if (regexElementList == null) {
+			regexElementList = new ArrayList<Element>();
+		}
+	}
+
+	protected void createCompoundRegexes(ArgumentOption option, List<String> tokens) {
+		List<String> regexLocations = option.processArgs(tokens).getStringValues();
+		getOrCreateCompoundRegexList();
+		for (String regexLocation : regexLocations) {
+			LOG.trace("RegexLocation "+regexLocation);
+			try {
+				CompoundRegex compoundRegex = readAndCreateCompoundRegex(EuclidSource.getInputStream(regexLocation));
+				compoundRegexList.add(compoundRegex);
+			} catch (Exception e) {
+				LOG.error("Cannot parse regexLocation: ("+e+")"+regexLocation);
+			}
+			
+		}
+	}
+
+	public CompoundRegexList getOrCreateCompoundRegexList() {
+		if (compoundRegexList == null) {
+			compoundRegexList = new CompoundRegexList();
+		}
+		return compoundRegexList;
+	}
+
+	/** creates a regex from InputStream if possible
+	 * 	 * 
+	 * @param file
+	 * @param is TODO
+	 * @return null if not a regex file
+	 * @exception RuntimeException if cannot read/parse
+	 */
+	public CompoundRegex readAndCreateCompoundRegex(InputStream is) {
+		Element rootElement = null;
+		try {
+			Document doc = new Builder().build(is);
+			rootElement = doc.getRootElement();
+		} catch (Exception e) {
+			throw new RuntimeException("Cannot read or parse regexInputStream", e);
+		}
+		return new CompoundRegex(this, rootElement);
+	}
+
+	public CMDir getCurrentCMDir() {
+		return currentCMDir;
+	}
+
+	protected ContentProcessor getOrCreateContentProcessor() {
+		return (currentCMDir == null) ? null : currentCMDir.getOrCreateContentProcessor();
+	}
 
 }

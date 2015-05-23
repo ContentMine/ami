@@ -2,7 +2,6 @@ package org.xmlcml.ami2.plugins.sequence;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 
 /** test plugin.
@@ -18,18 +17,23 @@ public class SequencePlugin extends AMIPlugin {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+	
+	public SequencePlugin() {
+		this.argProcessor = new SequenceArgProcessor();
+	}
 
 	public SequencePlugin(String[] args) {
 		super();
-		this.argProcessor = new SequenceArgProcessor();
-		argProcessor.parseArgs(args);
-
+		this.argProcessor = new SequenceArgProcessor(args);
 	}
-	
+
+	public SequencePlugin(String args) {
+		super();
+		this.argProcessor = new SequenceArgProcessor(args);
+	}
+
 	public static void main(String[] args) {
-		AMIArgProcessor argProcessor = new SequenceArgProcessor();
-		argProcessor.parseArgsRunAndOutput(args);
+		new SequenceArgProcessor(args).runAndOutput();		
 	}
-
 
 }

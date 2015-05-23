@@ -6,9 +6,10 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public class ClinicalTrialsDemo {
 
@@ -20,13 +21,12 @@ public class ClinicalTrialsDemo {
 	
 	public static void main(String[] args) throws IOException {
 //		runManyFiles();
-		runDirectoryWithQSNormaDirs();
+		runDirectoryWithCMDirs();
 //		runRegex();
 	}
 
 	private static void runManyFiles() throws IOException {
 //		FileUtils.copyDirectory(new File("trialsdata/"), new File("trialstemp/"));
-		LOG.debug("copied files");
 		String args[] = {
 			"-q", // output from quickscrape
     "trialstemp/http_www.trialsjournal.com_content_16_1_1/",
@@ -117,21 +117,18 @@ public class ClinicalTrialsDemo {
 	"--w.words", WordArgProcessor.WORD_FREQUENCIES,
 	"--w.stopwords", STOPWORDS_TXT,
 	"--w.wordlengths", "2", "12",
-	"--w.wordtypes", "acronym", "GROT",
+	"--w.wordtypes", "acronym",
 		};
-		AMIArgProcessor argProcessor = new WordArgProcessor(args);
+		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 	}
 	
-	private static void runDirectoryWithQSNormaDirs() throws IOException {
+	private static void runDirectoryWithCMDirs() throws IOException {
 		FileUtils.copyDirectory(new File("trialsdata/"), new File("trialstemp/"));
-		LOG.debug("copied files");
 		String args[] = {
-			"-q", "trialstemp/", // contains 86 QSN files
-	"--w.words", WordArgProcessor.WORD_FREQUENCIES,
-	"--w.stopwords", STOPWORDS_TXT,
+			"-q trialstemp/ --w.words " + WordArgProcessor.WORD_FREQUENCIES + " --w.stopwords" +STOPWORDS_TXT,
 		};
-		AMIArgProcessor argProcessor = new WordArgProcessor(args);
+		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 	}
 	
@@ -139,17 +136,16 @@ public class ClinicalTrialsDemo {
 	
 	private static void runRegex() throws IOException {
 //		FileUtils.copyDirectory(new File("trialsdata/"), new File("trialstemp/"));
-		LOG.debug("copied files");
 		String[] args = {
-				"-q", "trialstemp/", // contains 86 QSN files
+				"-q", "trialstemp/", // contains 86 CMDir files
 				"-i", "scholarly.html",
 				"-o", "results.xml",
 				"--context", "40", "40",
 				"--r.regex", 
 				    "regex/consort0.xml",
 		};
-		RegexPlugin regexPlugin = new RegexPlugin(args);
-		AMIArgProcessor argProcessor = (AMIArgProcessor) regexPlugin.getArgProcessor();
+		AMIPlugin regexPlugin = new RegexPlugin(args);
+		DefaultArgProcessor argProcessor = (DefaultArgProcessor) regexPlugin.getArgProcessor();
 		argProcessor.runAndOutput();
 	}
 }

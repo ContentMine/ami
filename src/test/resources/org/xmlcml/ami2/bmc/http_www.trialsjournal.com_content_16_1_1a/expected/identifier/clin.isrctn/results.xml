@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="clin.isrctn">
+ <result pre="andomized Controlled Trial Number (" exact="ISRCTN): 13837944" post=", UK Clinical Research Network (UKCRN) Study ID: 8" xpath="/html[1]/body[1]/div[8]/p[4]" name="clin.isrctn"/>
+</results>

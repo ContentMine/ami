@@ -1,23 +1,10 @@
 package org.xmlcml.ami2.lookups;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.List;
 
-import nu.xom.Element;
-
-import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.euclid.IntArray;
-import org.xmlcml.xml.XMLUtil;
-
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 public class GenbankLookup extends AbstractLookup {
 
@@ -36,6 +23,22 @@ http://www.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term="+genbank_id
 	
 	public String lookup(String genbankId) throws IOException {
 //		LOG.error(" Genbank lookup NYI");
+		return null;
+	}
+
+/**
+	http://www.ebi.ac.uk/ena/data/view/Taxon:Gorilla%20gorilla,Taxon:Erithacus&display=xml
+*/
+	
+	public String lookupTaxonomy(String genus) throws IOException {
+		return null;
+	}
+
+	public String lookupTaxonomy(List<String> queryList) throws IOException {
+		return null;
+	}
+
+	public String lookupTaxonomy(String genus, String specific) throws IOException {
 		return null;
 	}
 

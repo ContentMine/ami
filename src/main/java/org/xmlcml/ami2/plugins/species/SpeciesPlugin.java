@@ -2,7 +2,6 @@ package org.xmlcml.ami2.plugins.species;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 
 /** test plugin.
@@ -18,18 +17,22 @@ public class SpeciesPlugin extends AMIPlugin {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+	
+	public SpeciesPlugin() {
+		this.argProcessor = new SpeciesArgProcessor();
+	}
 
 	public SpeciesPlugin(String[] args) {
 		super();
-		this.argProcessor = new SpeciesArgProcessor();
-		argProcessor.parseArgs(args);
-
+		this.argProcessor = new SpeciesArgProcessor(args);
 	}
-	
+
+	public SpeciesPlugin(String args) {
+		super();
+		this.argProcessor = new SpeciesArgProcessor(args);
+	}
+
 	public static void main(String[] args) {
-		AMIArgProcessor argProcessor = new SpeciesArgProcessor();
-		argProcessor.parseArgsRunAndOutput(args);
+		new SpeciesArgProcessor(args).runAndOutput();		
 	}
-
-
 }

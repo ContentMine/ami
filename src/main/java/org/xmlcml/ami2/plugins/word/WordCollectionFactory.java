@@ -4,13 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import nu.xom.Attribute;
+import nu.xom.IllegalCharacterDataException;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.files.ResultElement;
-import org.xmlcml.files.ResultsElement;
-import org.xmlcml.files.ResultsElementList;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cmine.files.ResultsElementList;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableSortedMultiset;
@@ -70,39 +72,43 @@ public class WordCollectionFactory {
 	void extractWords() {
 		createWordSets();
 		if (wordArgProcessor.getChosenMethods().contains(WordArgProcessor.WORD_LENGTHS)) {
-			createWordLengths();
+			wordArgProcessor.addResultsElement(createWordLengthsResultsElement());
 		}
 		if (wordArgProcessor.getChosenMethods().contains(WordArgProcessor.WORD_FREQUENCIES)) {
-			createWordFrequencies();
+			wordArgProcessor.addResultsElement(getWordFrequencies());
 		}
-	}
-
-	private void createWordLengths() {
-		ResultsElement element = getWordlengths();
-		wordArgProcessor.addResultsElement(element);
-	}
-
-	private void createWordFrequencies() {
-		ResultsElement element = getWordFrequencies();
-		wordArgProcessor.addResultsElement(element);
 	}
 
 	private void createWordSets() {
-		List<String> rawWords = wordArgProcessor.extractWordsFromScholarlyHtml();
-		currentWords = rawWords;
-		if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.ABBREVIATIONS)) {
-			currentWords = createAbbreviations();
-		} else if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.CAPITALIZED)) {
-			currentWords = createCapitalized();
-		} else {
-			if (wordArgProcessor.getWordCaseList().contains(WordArgProcessor.IGNORE)) {
-				currentWords = toLowerCase(currentWords);
+		CMDir currentCMDir = wordArgProcessor.getCurrentCMDir();
+		List<String> rawWords = null;
+		if (currentCMDir != null) {
+			if (currentCMDir.hasScholarlyHTML()) {
+				rawWords = currentCMDir.extractWordsFromScholarlyHtml();
+			} else if (currentCMDir.hasFulltextPDFTXT()) {
+				rawWords = currentCMDir.extractWordsFromPDFTXT();
+			} else {
+				LOG.warn("No scholarlyHtml or PDFTXT: "+currentCMDir.getDirectory());
 			}
 		}
-//		stopwords = WordSetWrapper.getCommonEnglishStopwordSet();
-//		currentWords = applyStopwordFilter(stopwords, rawWords);
-		for (WordSetWrapper stopwordSet : wordArgProcessor.getStopwordSetList()) {
-			currentWords = applyStopwordFilter(stopwordSet, currentWords);
+		createCurrentWords(rawWords);
+	}
+
+	private void createCurrentWords(List<String> rawWords) {
+		if (rawWords != null) {
+			currentWords = rawWords;
+			if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.ABBREVIATION)) {
+				currentWords = createAbbreviations();
+			} else if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.CAPITALIZED)) {
+				currentWords = createCapitalized();
+			} else {
+				if (wordArgProcessor.getWordCaseList().contains(WordArgProcessor.IGNORE)) {
+					currentWords = toLowerCase(currentWords);
+				}
+			}
+			for (WordSetWrapper stopwordSet : wordArgProcessor.getStopwordSetList()) {
+				currentWords = applyStopwordFilter(stopwordSet, currentWords);
+			}
 		}
 	}
 
@@ -184,7 +190,7 @@ public class WordCollectionFactory {
 				currentWords.add(word);
 			}
 		}
-		LOG.debug("stopwords "+stopwords.size()+"; current words: "+currentWords.size());
+		LOG.trace("stopwords "+stopwords.size()+"; current words: "+currentWords.size());
 		return currentWords;
 	}
 	
@@ -196,7 +202,7 @@ public class WordCollectionFactory {
 		return newList;
 	}
 
-	private WordResultsElement getWordlengths() {
+	private WordResultsElement createWordLengthsResultsElement() {
 		Multiset<Integer> lengthSet = HashMultiset.create();
 		for (String word : currentWords) {
 			lengthSet.add(word.length());
@@ -217,20 +223,26 @@ public class WordCollectionFactory {
 	
 	private WordResultsElement getWordFrequencies() {
 		Multiset<String> wordSet = HashMultiset.create();
-		for (String rawWord : currentWords) {
-//			rawWord = rawWord.toLowerCase(); // normalize case
-			rawWord = rawWord.replaceAll("[\\d+]", ""); // remove numbers
-//			if (!stopwords.contains(rawWord.toLowerCase()) 
-			if (rawWord.length() >= minRawWordLength 
-					&& rawWord.length() <= maxRawWordLength) { //remove stopwords and short strings
-				wordSet.add(rawWord);
-			}
-		}		
-		entriesSortedByCount = getEntriesSortedByCount(wordSet);
-		entriesSortedByValue = getEntriesSortedByValue(wordSet);
-		Iterable<Multiset.Entry<String>> sortedEntries = getSortedEntries();
-		frequenciesElement =  createFrequenciesElement(sortedEntries);
+		if (currentWords == null) {
+			LOG.warn("No current words ");
+			frequenciesElement = null;
+		} else {
+			for (String rawWord : currentWords) {
+	//			rawWord = rawWord.toLowerCase(); // normalize case
+				rawWord = rawWord.replaceAll("[\\d+]", ""); // remove numbers
+	//			if (!stopwords.contains(rawWord.toLowerCase()) 
+				if (rawWord.length() >= minRawWordLength 
+						&& rawWord.length() <= maxRawWordLength) { //remove stopwords and short strings
+					wordSet.add(rawWord);
+				}
+			}		
+			entriesSortedByCount = getEntriesSortedByCount(wordSet);
+			entriesSortedByValue = getEntriesSortedByValue(wordSet);
+			Iterable<Multiset.Entry<String>> sortedEntries = getSortedEntries();
+			frequenciesElement =  createFrequenciesElement(sortedEntries);
+		}
 		return frequenciesElement;
+			
 	}
 
 	private WordResultsElement createFrequenciesElement(
@@ -240,7 +252,12 @@ public class WordCollectionFactory {
 			int count = +entry.getCount();
 			if (count < minCountInSet) continue;
 			WordResultElement frequencyElement = new WordResultElement(FREQUENCY_ATT);
-			frequencyElement.addAttribute(new Attribute(WordResultElement.WORD_ATT, String.valueOf(entry.getElement())));
+			// some values are not allowed in attribute values
+			try {
+				frequencyElement.addAttribute(new Attribute(WordResultElement.WORD_ATT, String.valueOf(entry.getElement())));
+			} catch (IllegalCharacterDataException e) {
+				continue;
+			}
 			frequencyElement.addAttribute(new Attribute(WordResultElement.COUNT_ATT, String.valueOf(count)));
 			frequenciesElement.appendChild(frequencyElement);
 		}
@@ -249,7 +266,8 @@ public class WordCollectionFactory {
 
 	/** convenience method (for my memory!) */
 	public static Iterable<Entry<String>> getEntriesSortedByValue(Multiset<String> wordSet) {
-		return ImmutableSortedMultiset.copyOf(wordSet).entrySet();
+//		return  com.google.common.collect.ImmutableSortedMultiset.copyOf(wordSet).entrySet();
+		return  ImmutableSortedMultiset.copyOf(wordSet).entrySet();
 	}
 
 	/** convenience method (for my memory!) */
@@ -358,7 +376,7 @@ public class WordCollectionFactory {
 		return aggregatedFrequenciesElement;
 	}
 
-	WordResultsElement createBooleanFrequencies(AMIArgProcessor wordArgProcessor, WordResultsElementList frequenciesElementList) {
+	WordResultsElement createBooleanFrequencies(DefaultArgProcessor wordArgProcessor, WordResultsElementList frequenciesElementList) {
 		aggregatedFrequenciesElement = createAggregatedFrequenciesElement(frequenciesElementList);
 		booleanFrequenciesElement = new WordResultsElement(BOOLEAN_FREQUENCIES);
 		for (ResultElement termElement : aggregatedFrequenciesElement) {
@@ -380,7 +398,7 @@ public class WordCollectionFactory {
 	 * @param frequenciesElementList
 	 * @return
 	 */
-	WordResultsElement createTFIDFFrequencies(AMIArgProcessor wordArgProcessor, WordResultsElementList frequenciesElementList) {
+	WordResultsElement createTFIDFFrequencies(DefaultArgProcessor wordArgProcessor, WordResultsElementList frequenciesElementList) {
 //		WordResultsElement aggregatedFrequenciesElement = createAggregatedFrequenciesElement(frequenciesElementList);
 		WordResultsElement booleanFrequencyElement = new WordResultsElement(TFIDF_FREQUENCIES);
 //		for (ResultElement termElement : aggregatedFrequenciesElement) {

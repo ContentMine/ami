@@ -1,5 +1,0 @@
-# AMI Tutorial
-
-OUTDATED...
-
-

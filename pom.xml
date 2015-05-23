@@ -7,11 +7,17 @@
 	<version>0.1-SNAPSHOT</version>
 	<description>Plugin architecture for converting Normalized science to Semantic science</description>
     <name>AMI</name>
+<!--
 	<parent>
 		<groupId>uk.ac.cam.ch.wwmm</groupId>
 		<artifactId>wwmm-parent</artifactId>
 		<version>5-SNAPSHOT</version>
 	</parent>
+-->
+<!-- this should not be necessary -->
+<properties>
+	<guava.version>18.0</guava.version>
+</properties>
 
 	<!--Remove <repositories> for releases to Maven central -->
 	<repositories>
@@ -73,6 +79,14 @@
 
 					<programs>
  						<program>
+							<mainClass>org.xmlcml.ami2.plugins.gene.GenePlugin</mainClass>
+							<id>ami2-gene</id>
+						</program>
+ 						<program>
+							<mainClass>org.xmlcml.ami2.plugins.identifier.IdentifierPlugin</mainClass>
+							<id>ami2-identifier</id>
+						</program>
+ 						<program>
 							<mainClass>org.xmlcml.ami2.plugins.regex.RegexPlugin</mainClass>
 							<id>ami2-regex</id>
 						</program>
@@ -86,7 +100,7 @@
 						</program>
 						<program>
 							<mainClass>org.xmlcml.ami2.plugins.word.WordPlugin</mainClass>
-							<id>ami2-words</id>
+							<id>ami2-word</id>
 						</program>
 					</programs>
 
@@ -146,6 +160,18 @@
  						<data>
 							<type>link</type>
 							<symlink>true</symlink>
+							<linkName>/usr/bin/ami2-gene</linkName>
+							<linkTarget>/usr/share/ami-repo/bin/ami2-gene</linkTarget>
+						</data>
+ 						<data>
+							<type>link</type>
+							<symlink>true</symlink>
+							<linkName>/usr/bin/ami2-identifier</linkName>
+							<linkTarget>/usr/share/ami-repo/bin/ami2-identifier</linkTarget>
+						</data>
+ 						<data>
+							<type>link</type>
+							<symlink>true</symlink>
 							<linkName>/usr/bin/ami2-regex</linkName>
 							<linkTarget>/usr/share/ami-repo/bin/ami2-regex</linkTarget>
 						</data>
@@ -164,8 +190,8 @@
 						<data>
 							<type>link</type>
 							<symlink>true</symlink>
-							<linkName>/usr/bin/ami2-words</linkName>
-							<linkTarget>/usr/share/ami-repo/bin/ami2-words</linkTarget>
+							<linkName>/usr/bin/ami2-word</linkName>
+							<linkTarget>/usr/share/ami-repo/bin/ami2-word</linkTarget>
 						</data>
 
 					</dataSet>
@@ -197,33 +223,14 @@
 	</build>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.apache.directory.studio</groupId>
-			<artifactId>org.apache.commons.io</artifactId>
-			<version>2.4</version>
-		</dependency>
 		<!-- removed until the functionality is added
 		<dependency>
 			<groupId>org.xml-cml</groupId>
 			<artifactId>javaocrnew</artifactId>
 			<version>0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>org.xml-cml</groupId>
-			<artifactId>svg2xml</artifactId>
-			<version>0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.xml-cml</groupId>
-			<artifactId>svgbuilder</artifactId>
-			<version>0.1-SNAPSHOT</version>
-		</dependency>
-		-->
-		<dependency>
-			<groupId>org.xml-cml</groupId>
-			<artifactId>html</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
+-->
+
 		<dependency>
 			<groupId>org.xml-cml</groupId>
 			<artifactId>norma</artifactId>
@@ -235,11 +242,13 @@
 			<artifactId>jumbo</artifactId>
 			<version>6.1-SNAPSHOT</version>
 		</dependency>
+-->
 		<dependency>
 			<groupId>org.xml-cml</groupId>
 			<artifactId>diagramanalyzer</artifactId>
 			<version>0.1-SNAPSHOT</version>
 		</dependency>
+<!-- removed until functionality os added
 		<dependency>
 			<groupId>uk.ac.cam.ch.wwmm.oscar</groupId>
 			<artifactId>oscar4-api</artifactId>
@@ -261,6 +270,16 @@
 			<artifactId>lucene-analyzers-common</artifactId>
 			<version>4.10.3</version>
 		</dependency>
+		<!--  this should not be necessary 
+		There seems to be a rougue version of guava somewhere
+		(http://stackoverflow.com/questions/28978277/guava-multisets-copyhighestcountfirst-method-suddenly-not-working)
+		 -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+ 			<version>${guava.version}</version>
+		</dependency>
+
 
 		<!-- tests -->
 		<dependency>
@@ -269,6 +288,7 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+<!--
 		<dependency>
 			<groupId>com.google.caliper</groupId>
 			<artifactId>caliper</artifactId>
@@ -281,6 +301,7 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.3.2</version>
 		</dependency>
+-->
 		<!-- removed until the functionality is added
 		<dependency>
 			<groupId>cml</groupId>

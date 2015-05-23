@@ -1,0 +1,35 @@
+<argList name="gene">
+
+	<arg name="gene" 
+		long="--g.gene"
+		args=""
+		countRange="{0,0}"
+		initMethod="initGene"
+		runMethod="runExtractGene"
+		outputMethod="outputGene"
+		>
+		<help>
+    This runs the search - there are no argument values. 
+		</help>
+		<!-- NEVER search HTML with regexes, but here it's safe -->
+		<!--  ABCDE , NF1, BRCA1, HIST1H1E-->
+		<value   name="human">&lt;i>\s*([A-Z]{2,99}(?:\d+(?:[A-Z]{1,3})?)*)\s*&lt;/i></value> 
+		<!--  Brca1-->
+		<value name="mouse">&lt;i>\s*([A-Z][a-z]{1,99}(?:\d+(?:[a-z]{1,3})?)*)\s*&lt;/i></value> 
+	</arg>	
+	
+	<arg name="type"
+	    long="--g.type"
+	    args="type"
+	    class="java.lang.String"
+	    pattern="(human|mouse)"
+	    parseMethod="parseTypes"
+	    countRange="{1,*}"
+	    >
+	    <help>
+	    The type of the gene. Only human is implemented.
+	    </help>
+	</arg>
+    
+</argList>
+			

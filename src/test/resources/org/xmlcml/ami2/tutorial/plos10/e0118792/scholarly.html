@@ -1,0 +1,2903 @@
+<?xml version="1.0" encoding="UTF-8"?><div tagx="article">
+   <head>
+      <meta content="Public Library of Science" name="citation_publisher"></meta>
+      <meta content="10.1371/journal.pone.0118792" name="citation_doi"></meta>
+      <meta content="Distinct Human Stem Cell Populations in Small and Large Intestine" name="citation_title"></meta>
+      <title>Distinct Human Stem Cell Populations in Small and Large Intestine</title>
+      <div tagx="contrib-group">
+         <meta content="Julie M. Cramer" name="citation_author"></meta>
+         <meta content="1" name="citation_author_institution_ref"></meta>
+         <meta content="Timothy Thompson" name="citation_author"></meta>
+         <meta content="3" name="citation_author_institution_ref"></meta>
+         <meta content="Albert Geskin" name="citation_author"></meta>
+         <meta content="4" name="citation_author_institution_ref"></meta>
+         <meta content="William LaFramboise" name="citation_author"></meta>
+         <meta content="4" name="citation_author_institution_ref"></meta>
+         <meta content="Eric Lagasse" name="citation_author"></meta>
+         <meta content="1" name="citation_author_institution_ref"></meta>
+      </div>
+      <div tagx="contrib-group"></div>
+      <meta content="lagasse@pitt.edu" name="email"></meta>
+      <meta content="Competing Interests: The authors have declared that no competing interests exist." name="conflict"></meta>
+      <meta content="Conceived and designed the experiments: JMC AG WL EL. Performed the experiments: JMC TT AG. Analyzed the data: JMC TT AG WL EL. Contributed reagents/materials/analysis tools: JMC WL EL. Wrote the paper: JMC AG WL EL." name="contribs"></meta>
+      <meta content="2015-3-9" name="citation_pubdate"></meta>
+      <meta content="Copyright 2015: Cramer et al" name="citation_copyright"></meta>
+      <meta content="Licence This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited" name="citation_licence"></meta>
+      <meta content="This work was supported by National Institutes of Health grant DK085711 (EL) and National Cancer Institute Cancer Center Support grant P30 CA 47904 (WL). The project described was also supported by Award Number T32EB001026-06 from the National Institute of Biomedical Imaging and Bioengineering. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institute of Biomedical Imaging and Bioengineering or the National Institutes of Health. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript." name="citation_funding"></meta>
+      <meta content="17" name="citation_pagecount"></meta>
+      <meta content="Data AvailabilityAll relevant data are within the paper and its Supporting Information files, except gene array data. The gene array data presented in the manuscript has been deposited at the NCBI Gene Expression Omnibus under the annotation: GSE56525." name="citation_data"></meta>
+   </head>
+   <div id="abstract" tag="abstract">
+      <p>The intestine is composed of an epithelial layer containing rapidly proliferating
+         cells that mature into two regions, the small and the large intestine. Although previous
+         studies have identified stem cells as the cell-of-origin for intestinal epithelial
+         cells, no studies have directly compared stem cells derived from these anatomically
+         distinct regions. Here, we examine intrinsic differences between primary epithelial
+         cells isolated from human fetal small and large intestine, after 
+         <i>in vitro</i> expansion, using the Wnt agonist R-spondin 2. We utilized flow cytometry, fluorescence-activated
+         cell sorting, gene expression analysis and a three-dimensional 
+         <i>in vitro</i> differentiation assay to characterize their stem cell properties. We identified stem
+         cell markers that separate subpopulations of colony-forming cells in the small and
+         large intestine and revealed important differences in differentiation, proliferation
+         and disease pathways using gene expression analysis. Single cells from small and large
+         intestine cultures formed organoids that reflect the distinct cellular hierarchy found
+         
+         <i>in vivo</i> and respond differently to identical exogenous cues. Our characterization identified
+         numerous differences between small and large intestine epithelial stem cells suggesting
+         possible connections to intestinal disease.
+      </p>
+   </div>
+   <div id="sec001">
+      <h2>Introduction</h2>
+      <p>The intestine consists of two major subdivisions: the small intestine (SI) and the
+         large intestine (LI), which differ in structure and function. The SI is largely responsible
+         for the digestion and absorption of food while the LI aids in final water absorption
+         and waste removal. Among other signaling pathways, Wnt and Notch control the well-defined
+         epithelial hierarchy in the intestine, helping to maintain stem cell homeostasis.
+         Since these pathways require receptors, ligands and transcriptional regulation, it
+         is unclear whether differences observed between the SI and LI are primarily due to
+         intrinsic or extrinsic mechanisms [
+         <span ref-type="bibr" rid="pone.0118792.ref001">1</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref002">2</span>]. Understanding these differences is crucial, since failure of intestinal stem cells
+         to properly proliferate and differentiate may lead to cancer, which is 20 times more
+         prevalent in the LI than the SI in humans [
+         <span ref-type="bibr" rid="pone.0118792.ref003">3</span>]. However, a thorough investigation of the origin of the differences between the
+         SI and LI has yet to be done.
+      </p>
+      <p>The identification and characterization of stem cells in the intestine has evolved
+         rather rapidly in recent years. 
+         <i>In vivo</i> lineage tracing studies have identified leucine-rich repeat-containing G-protein
+         coupled receptor 5 (LGR5)
+         <sup>+</sup> stem cells in the mouse as cells capable of generating all the epithelial cells of
+         the intestine and forming crypt-like structures 
+         <i>in vitro</i> [
+         <span ref-type="bibr" rid="pone.0118792.ref004">4</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref005">5</span>]. Interestingly, LGR5 is intricately involved in the synergistic activation of the
+         Wnt pathway, via the R-Spondin protein family, which is responsible for homeostatic
+         crypt formation and maintenance in the intestine [
+         <span ref-type="bibr" rid="pone.0118792.ref006">6</span>–
+         <span ref-type="bibr" rid="pone.0118792.ref008">8</span>]. This pathway is also commonly altered in colon cancer via mutation of adenomatous
+         polyposis coli (APC), causing an accumulation of beta-catenin in the nucleus and enhanced
+         Wnt signaling [
+         <span ref-type="bibr" rid="pone.0118792.ref009">9</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref010">10</span>]. Rapidly growing adenomas form in the mouse after deletion of APC in LGR5
+         <sup>+</sup> intestinal stem cells, suggesting that normal stem cells are the cell-of-origin of
+         intestinal cancer [
+         <span ref-type="bibr" rid="pone.0118792.ref011">11</span>]. Additionally, murine adenomas revealed continual LGR5
+         <sup>+</sup> stem cell activity, providing functional evidence of a cancerous stem cell population
+         in primary intestinal adenomas [
+         <span ref-type="bibr" rid="pone.0118792.ref012">12</span>].
+      </p>
+      <p>The Wnt pathway has extensive cross-talk with the Notch pathway in its control over
+         cell fate decisions, proliferation and tumorigenesis [
+         <span ref-type="bibr" rid="pone.0118792.ref001">1</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref013">13</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref014">14</span>]. More specifically, activation of the Notch pathway represses secretory cell differentiation
+         but inhibition of the Notch pathway leads to activation of atonal homolog 1 (ATOH1)
+         promoting goblet cell differentiation (
+         <span ref-type="supplementary-material" rid="pone.0118792.s001">S1 Fig.</span>) [
+         <span ref-type="bibr" rid="pone.0118792.ref001">1</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref015">15</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref016">16</span>]. Thus far, a majority of studies elucidating these pathways in the intestine have
+         not made clear distinctions between the SI and LI, possibly missing differences with
+         important consequences.
+      </p>
+      <p>The majority of intestinal stem cell characterization has been performed in animal
+         models because cells from normal human intestine has been notoriously difficult to
+         grow 
+         <i>in vitro</i> and lineage tracing cannot be performed practically in humans. To overcome these
+         limitations, we used feeder cells as a stromal layer to provide cell-cell interactions
+         with human intestinal cells and promote epithelial cell growth [
+         <span ref-type="bibr" rid="pone.0118792.ref017">17</span>]. Our lab has previously used this system to isolate and expand tumor cells with
+         stem cell properties (cancer stem cells, CSCs) from human metastatic colon cancer
+         [
+         <span ref-type="bibr" rid="pone.0118792.ref018">18</span>]. Here, we isolated human fetal intestinal cells from primary tissue and expanded
+         the cells on the feeder layer. Other 
+         <i>in vitro</i> models have successfully been used to study and understand stem cell biology such
+         as the three-dimensional system introduced by Sato, et al [
+         <span ref-type="bibr" rid="pone.0118792.ref005">5</span>]. Importantly, we compared cells expanded from SI and LI isolated from the same donor
+         tissue, minimizing potential discrepancies due to genetic variability. We also expanded
+         the SI and LI cells in identical culture conditions, to allow for the comparison of
+         intrinsically programmed differences. The stem cell enriched cultures from human SI
+         and LI allowed us to compare stem cell and differentiation properties to determine
+         key differences between these two cell populations, with possible implications to
+         disease occurrence in these two regions of the intestine.
+      </p>
+   </div>
+   <div id="sec002">
+      <h2>Results</h2>
+      <div id="sec003">
+         <h3>SI and LI epithelial cells expanded in vitro are enriched for cells expressing stem
+            cell markers
+         </h3>
+         <p>To investigate the 
+            <i>in vitro</i> potential of cells isolated from the SI and LI, we used human intestinal tissues
+            around gestational week 23. At this stage, crypts in both fetal SI and LI are structurally
+            similar to those observed in adult, consisting of epithelial cells of all lineages,
+            with the exception of a higher number of goblet cells in fetal tissue (
+            <span ref-type="fig" rid="pone.0118792.g001">Fig. 1A</span>). We used a feeder layer to expand cells from the SI and LI as it has previously
+            been shown to expand human colon CSCs from metastatic colon cancer specimens [
+            <span ref-type="bibr" rid="pone.0118792.ref018">18</span>]. In addition, we found that growth of normal fetal intestinal cells on the feeder
+            layer required the addition of R-spondin 2, a Wnt agonist acting via the LGR5 receptor
+            [
+            <span ref-type="bibr" rid="pone.0118792.ref008">8</span>,
+            <span ref-type="bibr" rid="pone.0118792.ref019">19</span>]. This was not surprising considering that R-spondin 1 is known to be important for
+            the 
+            <i>in vitro</i> expansion of intestinal cells and all four R-spondins bind the same receptor family
+            and are expected to be somewhat redundant [
+            <span ref-type="bibr" rid="pone.0118792.ref005">5</span>,
+            <span ref-type="bibr" rid="pone.0118792.ref008">8</span>]. In total, 29 pairs of SI and LI were isolated and processed for culture on the
+            feeder layer. After plating ∼80,000 primary cells/cm
+            <sup>2</sup>, only 18 pairs formed rare colonies after approximately two weeks (62% success rate),
+            indicating that only a small population of cells from primary tissue was capable of
+            surviving selection under these culture conditions. Some samples were much more efficient
+            at forming colonies than others, resulting in an estimated efficiency rate range of
+            0.00015–0.005%. Serial passaging led to more robust expansion of intestinal cells.
+            Phenotypic differences in colony density, cell size and shape were observed between
+            cells expanded from SI and LI and could be passaged at least 10 times with no apparent
+            morphological changes or oncogenic transformation (
+            <span ref-type="fig" rid="pone.0118792.g001">Fig. 1B</span> and 
+            <span ref-type="supplementary-material" rid="pone.0118792.s006">S1 Table</span>). After primary cell expansion 
+            <i>in vitro</i>, flow cytometric analyses revealed enrichment of epithelial cells, as marked by Epithelial
+            Cell Adhesion Molecule (EPCAM), from 21.6 to 92.3% in cells expanded from SI and from
+            34.3% to 92.4% in cells expanded from LI (
+            <span ref-type="fig" rid="pone.0118792.g001">Fig. 1C&amp;D</span>). Over twenty cell-surface markers were interrogated for all SI and LI epithelial
+            cell cultures. The most reproducible and relevant markers indicated that expanded
+            intestinal cells expressed several markers associated with stemness. CD133.1 (AC133)
+            has been suggested as a marker of CSCs in the intestine [
+            <span ref-type="bibr" rid="pone.0118792.ref020">20</span>–
+            <span ref-type="bibr" rid="pone.0118792.ref022">22</span>], as well as a marker for normal stem cells such as hematopoietic stem cells [
+            <span ref-type="bibr" rid="pone.0118792.ref023">23</span>] or neuronal stem cells [
+            <span ref-type="bibr" rid="pone.0118792.ref024">24</span>]. While primary cells from SI and LI contained less than 1% CD133.1
+            <sup>+</sup> cells, approximately 70% of the expanded cells expressed CD133.1 (
+            <span ref-type="fig" rid="pone.0118792.g001">Fig. 1E</span>). Other putative stem cell markers showed similar expression profiles, including
+            CD166 [
+            <span ref-type="bibr" rid="pone.0118792.ref025">25</span>] and CD24 [
+            <span ref-type="bibr" rid="pone.0118792.ref026">26</span>], both enriched in expression over primary cells, similar to CD133.1 (
+            <span ref-type="fig" rid="pone.0118792.g001">Fig. 1F</span> and data not shown) [
+            <span ref-type="bibr" rid="pone.0118792.ref018">18</span>]. A previous study using human tissue from three months to eighteen years of age
+            reported isolation, characterization and expansion of stem cell populations from single
+            cells [
+            <span ref-type="bibr" rid="pone.0118792.ref027">27</span>]. Attempts were made to expand fetal primary intestinal cells after cell sorting,
+            but no robust long-term colonies were generated from sorted primary cells. The developmental
+            difference in pre-natal versus post-natal and adult tissues may account for our failure
+            to generate long-term colonies from single cells. The environment is much more dynamic
+            and mucinous in the prenatal developmental state even though adult-like structures
+            are present. We therefore expanded bulk intestinal epithelial cells 
+            <i>in vitro</i> directly from dissociated tissue prior to further characterization.
+         </p>
+         <div tagx="fig">
+            <div tagx="object-id">10.1371/journal.pone.0118792.g001</div>
+            <div tagx="label">Fig 1</div>
+            <caption>
+               <div tagx="title">
+                  <i>In vitro</i> expanded primary epithelial cells from human fetal small and large intestine express
+                  stem cell markers.
+               </div>
+               <p>
+                  <b>A-F</b>, top panels: small intestine, bottom panels: large intestine (
+                  <b>A</b>) Hematoxylin and eosin paraffin sections of normal fetal intestine at 23 weeks of
+                  gestation. (
+                  <b>B</b>) Intestinal cells expanded on the feeder layer (yellow outline). (
+                  <b>C-F</b>) Representative analyses of primary and expanded cells at passages 4, 5 or 6 with
+                  the percentage of gated live cells provided. (
+                  <b>C</b>) Flow cytometric analysis (dot plots) of freshly isolated primary intestinal cells.
+                  Gating strategy identifies total live cells (left panels) and EPCAM
+                  <sup>+</sup> cells, excluding blood cells (CD45
+                  <sup>+</sup>CD235a
+                  <sup>+</sup>) (right panels). (
+                  <b>D</b>) Flow cytometric analysis of expanded cells. Gating strategy identifies total live
+                  cells (left panels) and EPCAM
+                  <sup>+</sup> cells, excluding rodent feeder layer cells (HLA
+                  <sup>−</sup>) (right panels). (
+                  <b>E</b>) Flow cytometric analysis (5% probability contour plots) of primary and expanded
+                  intestinal cells, stained with EPCAM and CD133.1. (
+                  <b>F</b>) Expanded intestinal cells also express other putative stem cell markers. Histograms
+                  represent unstained control (blue) and stained with CD166 or CD24 (red) of live EPCAM
+                  <sup>+</sup> cells. Scale bars = 100μm for panel A and B.
+               </p>
+            </caption>
+            <div tagx="graphic"></div>
+         </div>
+      </div>
+      <div id="sec004">
+         <h3>Differential expression of stem cell surface markers separate disparate colony-forming
+            activity in cells expanded from SI and LI
+         </h3>
+         <p>We observed greater expression of CD133.1 in cells expanded from LI compared to SI,
+            while CD13, an aminopeptidase responsible for hydrolyzing N-terminal amino acids at
+            the brush border membrane, showed higher expression in the SI (
+            <span ref-type="fig" rid="pone.0118792.g002">Fig. 2A</span>). [
+            <span ref-type="bibr" rid="pone.0118792.ref028">28</span>]. In addition, CD66c, also known as carcinoembryonic antigen-related cell adhesion
+            molecule 6 (CEACAM6), was notably higher in cells expanded from SI (79.8% CD66c
+            <sup>hi</sup>) compared to cells expanded from LI (89.4% CD66c
+            <sup>low</sup>) (
+            <span ref-type="fig" rid="pone.0118792.g002">Fig. 2A</span>). These trends were consistent in expanded cells from three paired SI and LI samples
+            as seen by staining index profiles (
+            <span ref-type="fig" rid="pone.0118792.g002">Fig. 2B</span>). The staining index describes the extent to which a positive population is resolved
+            from the negative control population.
+         </p>
+         <div tagx="fig">
+            <div tagx="object-id">10.1371/journal.pone.0118792.g002</div>
+            <div tagx="label">Fig 2</div>
+            <caption>
+               <div tagx="title">Expanded small and large intestinal cells show different cell surface marker expression.</div>
+               <p>(
+                  <b>A</b>) Flow cytometric analysis of CD133.1, CD13 and CD66c expression on expanded cells
+                  from one paired SI and LI sample (SI and LI depicted here originated from the same
+                  tissue source). The histograms show one representative set of three paired samples
+                  examined presenting unstained control (blue) and stained live, EPCAM
+                  <sup>+</sup> cells (red). For CD66c, the percentage of low and high expressing cells is provided.
+                  All markers were PE-labeled. The same control was used for SI CD13 and CD66c as well
+                  as LI CD133 and CD13 because the staining was done at the same time. (
+                  <b>B</b>) Corresponding staining index of three paired samples showing reproducible results
+                  between the paired SI and LI samples (1, 2 and 3) (staining index = D/W, where D is
+                  the distance between the positive and negative populations and W is two standard deviations
+                  of the negative population).
+               </p>
+            </caption>
+            <div tagx="graphic"></div>
+         </div>
+         <p>To demonstrate the functional importance of the differential expression of cell surface
+            markers, we used limiting dilution analysis (LDA) to assess the clonogenic potential
+            of epithelial cell populations derived from SI and LI. LDA is a quantitative measurement
+            that can determine the colony-forming frequency of a specific cell population. Increased
+            colony-forming frequency correlates with stem cell activity [
+            <span ref-type="bibr" rid="pone.0118792.ref029">29</span>]. Since CD66c showed a heterogeneous and opposite expression pattern in cells expanded
+            from SI and LI, we asked whether it could distinguish colony-forming ability within
+            these two populations of intestinal epithelial cells. Using Fluorescence-Activated
+            Cell Sorting (FACS), we sorted expanded cells from three tissue-matched samples of
+            SI and LI in limiting dilution based on high and low CD66c expression. Four weeks
+            after plating, we calculated the colony-forming unit (CFU) frequency of the cells
+            by linear regression [
+            <span ref-type="bibr" rid="pone.0118792.ref030">30</span>]. The frequency of the EPCAM
+            <sup>+</sup> colony-forming cells from SI and LI was similar, and ranged from 1/10 to 1/106. Interestingly,
+            cells expanded from SI that expressed low levels of CD66c had a higher CFU frequency
+            than CD66c
+            <sup>hi</sup> cells, while LDA results for cells expanded from LI were reversed (
+            <span ref-type="table" rid="pone.0118792.t001">Table 1</span>). Therefore, even though a majority of cells expanded from SI are CD66c
+            <sup>hi</sup>, as seen in the staining index (
+            <span ref-type="fig" rid="pone.0118792.g002">Fig. 2B</span>), the subpopulation of CD66c
+            <sup>low</sup> cells are the cells with more colony-forming ability (
+            <span ref-type="table" rid="pone.0118792.t001">Table 1</span>). The opposite is true for cells derived from LI. In consequence, the disparity in
+            expression of CD66c can be used to enrich for expanded SI and LI cells with self-renewal
+            potential.
+         </p>
+         <div tagx="table-wrap">
+            <div tagx="object-id">10.1371/journal.pone.0118792.t001</div>
+            <div tagx="label">Table 1</div>
+            <caption>
+               <div tagx="title">Limiting Dilution Analysis (LDA) indicates that opposing CD66c expression separates
+                  colony-forming ability in epithelial cells expanded from SI and LI.
+               </div>
+            </caption>
+            <div tagx="alternatives">
+               <div tagx="graphic"></div>
+               <table frame="hsides" rules="groups">
+                  <colgroup span="1">
+                     <col align="left" valign="middle" span="1"></col>
+                     <col align="left" valign="middle" span="1"></col>
+                     <col align="left" valign="middle" span="1"></col>
+                     <col align="left" valign="middle" span="1"></col>
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <div tagx="th">Sample</div>
+                        <div tagx="th">Markers</div>
+                        <div tagx="th">CFU Freq.</div>
+                        <div tagx="th">SE Range in CFU Frequency</div>
+                     </tr>
+                  </thead>
+                  <div tagx="tbody">
+                     <tr>
+                        <td rowspan="3" align="left" colspan="1">
+                           <b>SI 1</b>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+</td>
+                        <td align="left" rowspan="1" colspan="1">1/60</td>
+                        <td align="left" rowspan="1" colspan="1">1/73–1/49</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+/CD66c
+                           <sup>low</sup>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">1/11</td>
+                        <td align="left" rowspan="1" colspan="1">1/15–1/8</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+/CD66c
+                           <sup>hi</sup>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">1/78</td>
+                        <td align="left" rowspan="1" colspan="1">1/103–1/58</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="3" align="left" colspan="1">
+                           <b>SI 2</b>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+</td>
+                        <td align="left" rowspan="1" colspan="1">1/10</td>
+                        <td align="left" rowspan="1" colspan="1">1/16–1/6</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+/CD66c
+                           <sup>low</sup>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">1/12</td>
+                        <td align="left" rowspan="1" colspan="1">1/17–1/9</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+/CD66c
+                           <sup>hi</sup>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">1/25</td>
+                        <td align="left" rowspan="1" colspan="1">1/30–1/18</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="3" align="left" colspan="1">
+                           <b>SI 3</b>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+</td>
+                        <td align="left" rowspan="1" colspan="1">1/25</td>
+                        <td align="left" rowspan="1" colspan="1">1/30–1/20</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+/CD66c
+                           <sup>low</sup>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">1/11</td>
+                        <td align="left" rowspan="1" colspan="1">1/16–1/8</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+/CD66c
+                           <sup>hi</sup>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">1/34</td>
+                        <td align="left" rowspan="1" colspan="1">1/45–1/25</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="3" align="left" colspan="1">
+                           <b>LI 1</b>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+</td>
+                        <td align="left" rowspan="1" colspan="1">1/22</td>
+                        <td align="left" rowspan="1" colspan="1">1/27–1/18</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+/CD66c
+                           <sup>low</sup>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">1/24</td>
+                        <td align="left" rowspan="1" colspan="1">1/32–1/18</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+/CD66c
+                           <sup>hi</sup>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">1/9</td>
+                        <td align="left" rowspan="1" colspan="1">1/13–1/7</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="3" align="left" colspan="1">
+                           <b>LI 2</b>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+</td>
+                        <td align="left" rowspan="1" colspan="1">1/106</td>
+                        <td align="left" rowspan="1" colspan="1">1/129–1/87</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+/CD66c
+                           <sup>low</sup>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">1/211</td>
+                        <td align="left" rowspan="1" colspan="1">1/279–1/160</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+/CD66c
+                           <sup>hi</sup>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">1/15</td>
+                        <td align="left" rowspan="1" colspan="1">1/20–1/11</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="3" align="left" colspan="1">
+                           <b>LI 3</b>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+</td>
+                        <td align="left" rowspan="1" colspan="1">1/38</td>
+                        <td align="left" rowspan="1" colspan="1">1/47–1/31</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+/CD66c
+                           <sup>low</sup>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">1/77</td>
+                        <td align="left" rowspan="1" colspan="1">1/103–1/58</td>
+                     </tr>
+                     <tr>
+                        <td align="left" rowspan="1" colspan="1">HLA+/EpCAM+/CD66c
+                           <sup>hi</sup>
+                        </td>
+                        <td align="left" rowspan="1" colspan="1">1/13</td>
+                        <td align="left" rowspan="1" colspan="1">1/18–1/10</td>
+                     </tr>
+                  </div>
+               </table>
+            </div>
+         </div>
+      </div>
+      <div id="sec005">
+         <h3>Gene expression analysis of epithelial cells expanded from SI and LI indicated separate
+            molecular signatures and distinct intrinsic regulation
+         </h3>
+         <p>We showed that expanded epithelial cells from SI and LI are enriched for intestinal
+            stem cells as evidenced by their dependence on R-Spondin 2, their expression of stem
+            cell markers (
+            <span ref-type="fig" rid="pone.0118792.g001">Fig. 1</span>) and their high colony-forming frequency (
+            <span ref-type="table" rid="pone.0118792.t001">Table 1</span>). We then used gene array analysis to determine if cells expanded from SI and LI
+            demonstrated differences in their molecular signatures (NCBI Gene Expression Omnibus:
+            GSE56525). Among the 21,238 total probes on each array, 3274 probes were significantly
+            different. After removal of probes for the same gene, 1118 transcripts had an expression
+            fold change greater than 1.5. Cells expanded from SI and LI clustered separately using
+            unsupervised hierarchical clustering methods where the distances are defined linearly
+            (left axis, 
+            <span ref-type="fig" rid="pone.0118792.g003">Fig. 3A</span>). Therefore, even though we were unable to distinguish subregions in SI tissue (ileum,
+            jejunum, etc.), we did not detect any major differences or heterogeneity among the
+            many SI samples examined. In addition, while our samples ranged in age from 20–23
+            weeks, this variable was deemed non-essential due to proper clustering of gene expression
+            among the SI and LI samples.
+         </p>
+         <div tagx="fig">
+            <div tagx="object-id">10.1371/journal.pone.0118792.g003</div>
+            <div tagx="label">Fig 3</div>
+            <caption>
+               <div tagx="title">Gene array analysis revealed differing molecular signatures between cells expanded
+                  from SI and LI.
+               </div>
+               <p>(
+                  <b>A</b>) Heat map of differentially expressed transcripts of the expanded epithelial cells
+                  from SI versus LI. Unsupervised clustering was performed on log2 gene expression values
+                  (K-means algorithm) with q&lt;0.05 (FDR = 5%) cutoff. Expression values are scaled for
+                  minimum (blue) and maximum (red) intensity values. Expanded cells formed distinct
+                  clusters based on cell origin (SI or LI). (
+                  <b>B-D</b>) Histograms depict significant (q&lt;0.05) differential expression of individual genes
+                  between cells expanded from SI and LI classified into canonical pathways using Ingenuity
+                  Pathways Analysis (see 
+                  <span ref-type="sec" rid="sec009">Methods</span>). All values are reported as mean (box) plus standard deviation (error bar) of raw
+                  intensity for each transcript. List of gene names can be found in 
+                  <span ref-type="supplementary-material" rid="pone.0118792.s007">S2 Table</span>.
+               </p>
+            </caption>
+            <div tagx="graphic"></div>
+         </div>
+         <p>We then used Ingenuity Pathway Analysis Software to predict expression changes in
+            the dataset that relate to biological processes and disease. Functional differences
+            in gene expression between SI and LI appeared frequently in known cancer and gastrointestinal
+            disease pathways. The transcripts with the highest fold changes between SI and LI
+            were related to proliferation, adhesion, migration and those that have reported functions
+            in cancer and metastasis. Tumor-related transcripts were expressed significantly higher
+            in cells expanded from the LI compared to SI (
+            <span ref-type="fig" rid="pone.0118792.g003">Fig. 3B</span>). We also found differences in Wnt and Notch pathway transcripts (
+            <span ref-type="fig" rid="pone.0118792.g003">Fig. 3C&amp;D</span>). Real-time PCR of selected genes confirmed the differential expression found with
+            the gene array analysis (
+            <span ref-type="supplementary-material" rid="pone.0118792.s002">S2 Fig.</span>). Together, expression analysis of expanded cells indicated distinct intrinsic regulation
+            between SI and LI at the stem cell level.
+         </p>
+      </div>
+      <div id="sec006">
+         <h3>Expanded cells from SI and LI demonstrated multipotentiality and responded differently
+            to exogenous cues in three-dimensional culture
+         </h3>
+         <p>Intestinal stem cells are partially defined by their multipotentiality, so we investigated
+            the ability of expanded intestinal cells to differentiate into various intestinal
+            cell lineages. We adapted a previously defined three-dimensional culture system to
+            promote cell differentiation 
+            <i>in vitro</i> [
+            <span ref-type="bibr" rid="pone.0118792.ref005">5</span>]. After expansion on the feeder layer to eliminate differentiated cells and create
+            a more homogenous cell population, single cell suspensions were embedded in Matrigel
+            and overlaid with media containing growth factors known to be important for the proliferation
+            and differentiation of intestinal stem cells [
+            <span ref-type="bibr" rid="pone.0118792.ref019">19</span>] (see 
+            <span ref-type="sec" rid="sec009">Methods</span> and 
+            <span ref-type="fig" rid="pone.0118792.g004">Fig. 4A</span>). Use of a γ-secretase inhibitor (GSI), such as N-[N-(3,5-difluorophenacetyl)-1-alanyl]-S-phenylglycine
+            t-butyl ester (DAPT), blocks the translocation of the Notch Intracellular Domain (NICD)
+            to the nucleus for downstream signaling, causing forced differentiation to goblet
+            cells [
+            <span ref-type="bibr" rid="pone.0118792.ref016">16</span>,
+            <span ref-type="bibr" rid="pone.0118792.ref019">19</span>,
+            <span ref-type="bibr" rid="pone.0118792.ref031">31</span>]. Expanded intestinal cells retained the ability to differentiate and form a layer
+            of epithelial cells around a central lumen with a cellular hierarchy and architecture
+            similar to that found 
+            <i>in vivo</i> (
+            <span ref-type="fig" rid="pone.0118792.g004">Fig. 4B</span>). Careful tracking of single cells showed growth into multicellular organoids, which
+            supports the clonal origin for at least some of the SI and LI organoids (
+            <span ref-type="supplementary-material" rid="pone.0118792.s003">S3 Fig.</span>). Furthermore, we observed morphological differences between SI and LI organoids
+            with the appearance of branching structures in the SI and spherical structures in
+            the LI (
+            <span ref-type="fig" rid="pone.0118792.g004">Fig. 4B</span>).
+         </p>
+         <div tagx="fig">
+            <div tagx="object-id">10.1371/journal.pone.0118792.g004</div>
+            <div tagx="label">Fig 4</div>
+            <caption>
+               <div tagx="title">Three-dimensional differentiation assay for cells expanded from SI and LI.</div>
+               <p>(
+                  <b>A</b>) Experimental design of three-dimensional assay. Expanded intestinal cells were embedded
+                  as single cells in Matrigel, first expanded in Stem Cell (SC) media, then treated
+                  further with SC media, Differentiation media or Differentiation media + DAPT (GSI).
+                  (
+                  <b>B</b>) 
+                  <i>In vitro</i> and H&amp;E pictures of SI (top) and LI (bottom) organoids in each of the three treatments.
+                  One paired set of SI and LI organoids is representative of three sets examined. Scale
+                  bar = 50μm.
+               </p>
+            </caption>
+            <div tagx="graphic"></div>
+         </div>
+         <p>Using immunofluorescent staining for differentiation markers, we analyzed SI and LI
+            organoids for the presence of mature intestinal cells. The expression of Mucin 2 (MUC2),
+            a marker of mature goblet cells, significantly increased upon treatment with differentiation
+            media without and with DAPT (Diff and Diff+DAPT) in both SI and LI organoids (
+            <span ref-type="fig" rid="pone.0118792.g005">Fig. 5A-C</span>). This correlated with the appearance of vacuolated cells in both differentiation
+            treatments in SI organoids (
+            <span ref-type="fig" rid="pone.0118792.g004">Fig. 4B</span>). SI organoids also showed increased expression of Chromogranin A (CHGA), a marker
+            for enteroendocrine cells, upon differentiation treatment (
+            <span ref-type="fig" rid="pone.0118792.g005">Fig. 5A&amp;C</span>). Under the same conditions, LI organoids failed to express any measurable amounts
+            of CHGA (
+            <span ref-type="fig" rid="pone.0118792.g005">Fig. 5B</span>). A similar phenomenon was also seen 
+            <i>in vivo</i> where a significantly higher number of CHGA
+            <sup>+</sup> cells was observed in SI compared to LI (
+            <span ref-type="supplementary-material" rid="pone.0118792.s004">S4 Fig.</span>). Furthermore, enterocyte expression of Villin (VIL1) in SI organoids was expressed
+            mostly in the cytoplasm but was specifically localized on the apical cell surface
+            in differentiated LI organoids (
+            <span ref-type="supplementary-material" rid="pone.0118792.s005">S5 Fig.</span>).
+         </p>
+         <div tagx="fig">
+            <div tagx="object-id">10.1371/journal.pone.0118792.g005</div>
+            <div tagx="label">Fig 5</div>
+            <caption>
+               <div tagx="title">Immunofluorescent staining of intestinal organoids confirms multipotentiality and
+                  differentiation potential.
+               </div>
+               <p>(
+                  <b>A</b>) SI and (
+                  <b>B</b>) LI organoids from one paired sample stained for epithelial marker, EPCAM (green),
+                  goblet cell marker, MUC2 (red) and enteroendocrine marker, CHGA (red) treated with
+                  SC media, Differentiation media (Diff) or Diff media + DAPT. Counterstain, Hoechst
+                  33342. White arrows indicate positive cells. Scale bar = 50μm. (
+                  <b>C</b>) Quantification of percent goblet or enteroendocrine cells of total cells counted
+                  per field of view. Not enough enteroendocrine cells were present in the organoids
+                  derived from LI for quantification. This paired set serves as a representative of
+                  two sets examined.
+               </p>
+            </caption>
+            <div tagx="graphic"></div>
+         </div>
+      </div>
+      <div id="sec007">
+         <h3>Gene expression in SI and LI organoids differed in response to differentiation stimuli</h3>
+         <p>Real-time PCR showed increased relative mRNA expression of 
+            <i>ATOH1</i> and 
+            <i>MUC2</i> in SI organoids upon differentiation treatment (
+            <span ref-type="fig" rid="pone.0118792.g006">Fig. 6A</span>). In LI organoids, 
+            <i>MUC2</i> expression increased upon exposure to differentiation cues, while 
+            <i>ATOH1</i> expression was negligible (
+            <span ref-type="fig" rid="pone.0118792.g006">Fig. 6B</span>). Additionally, while 
+            <i>CHGA</i> expression steadily increased with differentiation treatment in SI organoids, no
+            appreciable 
+            <i>CHGA</i> expression was observed in LI organoids, confirming our immunofluorescence data (
+            <span ref-type="fig" rid="pone.0118792.g006">Fig. 6B</span> and 
+            <span ref-type="fig" rid="pone.0118792.g005">Fig. 5A&amp;B</span>). Furthermore, as expected, the expression of stem cell marker and Wnt pathway participant
+            
+            <i>LGR5</i> decreased in SI organoids upon differentiation treatment. Surprisingly, however,
+            
+            <i>LGR5</i> reproducibly increased in LI organoids after the addition of Diff media, and only
+            returned to stem cell (SC) media levels after treatment with DAPT (
+            <span ref-type="fig" rid="pone.0118792.g006">Fig. 6C&amp;D</span>). We also found that EPH receptor B2 (
+            <i>EPHB2</i>), another putative intestinal stem cell marker [
+            <span ref-type="bibr" rid="pone.0118792.ref032">32</span>], consistently increased upon Diff treatment of LI organoids. In SI organoids, 
+            <i>EPHB2</i> remained unchanged in Diff media but subsequently decreased with the addition of
+            DAPT. In addition, the 
+            <i>MYC</i> oncogene, a Wnt target, also decreased after exposing SI organoids to differentiation
+            treatment, but a significant change of expression in LI organoids was not observed.
+         </p>
+         <div tagx="fig">
+            <div tagx="object-id">10.1371/journal.pone.0118792.g006</div>
+            <div tagx="label">Fig 6</div>
+            <caption>
+               <div tagx="title">Small and large intestine organoids differ in response to differentiation cues.</div>
+               <p>Real-time PCR analysis of (
+                  <b>A&amp;C</b>) SI and (
+                  <b>B&amp;D</b>) LI organoids derived from expanded cells and treated with SC media, Differentiation
+                  (Diff) or Diff media + DAPT. SC media treatment values used as control and set to
+                  1. Diff media and Diff media + DAPT expression values are relative to SC media. See
+                  media key in panel A. (
+                  <b>E</b>) Select marker expression comparison between SI and LI organoids in the three treatments.
+                  SI values used as control and set to 1. LI organoid expression values are relative
+                  to SI organoids. See text for full gene names. Expression was normalized to 
+                  <i>GAPDH</i> mRNA. Error bars represent upper and lower error limits based on replicate variability
+                  (*
+                  <i>P</i>&lt;0.05, **
+                  <i>P</i>&lt;0.01, ***
+                  <i>P</i>&lt;0.001, # no expression detected). (n = 3 wells per sample/primer pair). One paired
+                  SI and LI set serves as a representative of all paired sets examined.
+               </p>
+            </caption>
+            <div tagx="graphic"></div>
+         </div>
+         <p>We then compared SI and LI organoids directly at each of the three treatment steps
+            and again found undetectable expression of 
+            <i>ATOH1</i> in LI organoids while SI organoids displayed substantial expression of 
+            <i>ATOH1</i>. 
+            <i>LGR5</i> and 
+            <i>MYC</i> expression were significantly higher in LI organoids compared to SI organoids in
+            all matrigel conditions (
+            <span ref-type="fig" rid="pone.0118792.g006">Fig. 6E</span>). Together, the results from the differentiation assay support the gene array analysis
+            (
+            <span ref-type="fig" rid="pone.0118792.g003">Fig. 3C&amp;D</span>) and demonstrate that the cells expanded from SI and LI have the stem cell property
+            of multipotentiality but differ in their response to the same environmental cues.
+         </p>
+      </div>
+   </div>
+   <div id="sec008">
+      <h2>Discussion</h2>
+      <p>In this study, we used paired sets of human fetal SI and LI to investigate the differences
+         between the two distinct anatomic regions with potentially different stem cell populations.
+         While others have successfully cultured organoids from mouse and/or human tissue from
+         varying ages [
+         <span ref-type="bibr" rid="pone.0118792.ref005">5</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref019">19</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref027">27</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref032">32</span>], excluding 20–23 week human fetal tissue as used here, none directly compared the
+         intrinsic differences of the SI and LI. 
+         <i>In vivo</i>, a combination of intrinsic and extrinsic factors determine the structural and cellular
+         components of the SI and LI [
+         <span ref-type="bibr" rid="pone.0118792.ref033">33</span>]. Here, we have removed any differences present in the SI and LI environments by
+         providing identical growth factors and culture conditions for SI and LI cells. Therefore,
+         the differences seen in cell lineage specification 
+         <i>in vitro</i> are due to differential intrinsic regulation of stem cells present in SI and LI.
+      </p>
+      <p>We limited our investigation to human cells and by culturing bulk intestinal cells
+         on a feeder layer with exogenous Wnt factor, R-Spondin 2, we were able to characterize
+         expanded epithelial cells for stem cell properties such as self-renewal and mulitpotentiality
+         without bias of pre-selecting the cells for a particular phenotype. 
+         <i>In vivo</i> balance of proliferation and differentiation of the intestinal epithelium, including
+         the stem cell niche, depends on many Wnt factors [
+         <span ref-type="bibr" rid="pone.0118792.ref004">4</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref005">5</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref034">34</span>]. Only recently was high expression of R-Spondin 2, known to enhance intestinal epithelial
+         precursors and limit differentiation via LGR5, found in intestinal subepithelial myofibroblasts
+         [
+         <span ref-type="bibr" rid="pone.0118792.ref035">35</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref036">36</span>]. Therefore, the R-Spondin 2 dependence of the intestinal epithelial cells expanded
+         on feeder cells 
+         <i>in vitro</i> is consistent with the maintenance of intestinal stem cells 
+         <i>in vivo</i>.
+      </p>
+      <p>The expected shared expression of putative stem cell markers CD133.1, CD166 and CD24
+         on cells expanded from the two intestinal segments suggested that they were of stem
+         cell nature. However, differences emerged after analysis of the specific expression
+         patterns of CD13, CD133.1 and CD66c. A higher expression of CD13 in cells expanded
+         from SI is consistent with reports showing that it is the most abundant peptidase
+         in mammalian SI, with CD13 expression continually decreasing along the ascending and
+         descending LI [
+         <span ref-type="bibr" rid="pone.0118792.ref037">37</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref038">38</span>]. Furthermore, considering its relation to colon CSCs, the higher expression of CD133.1
+         on cells expanded from LI may indicate a predisposition of these cells to neoplastic
+         transformation compared to cells expanded from SI [
+         <span ref-type="bibr" rid="pone.0118792.ref039">39</span>]. Finally, by functionally exploiting the differential expression pattern of CD66c,
+         we identified opposing populations of cells with colony-forming ability. High CD66c
+         expression in stem cell enriched cultures from the LI confers increased self-renewal
+         and, together with high expression of CD133.1, suggests an intrinsic regulatory difference
+         for why these stem cells may be more susceptible to transformation than their SI counterparts
+         [
+         <span ref-type="bibr" rid="pone.0118792.ref040">40</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref041">41</span>].
+      </p>
+      <p>Furthermore, gene array analysis demonstrated global differences between cells expanded
+         from the SI and LI. Differential expression indicated a tendency for cells expanded
+         from the LI to be more closely related to cancer than their SI counterparts. Specifically,
+         serologically defined colon cancer antigen 1 (
+         <i>SDCCAG1</i>) and tumor-associated calcium signal transducer 2 (
+         <i>TACSTD2</i>) are defined by their presence and association with cancer. Hypoxia inducible factor
+         1 (
+         <i>HIF1A</i>) functions in angiogenesis, ready to feed any new tumor that begins to form [
+         <span ref-type="bibr" rid="pone.0118792.ref042">42</span>]. 
+         <i>Prom1</i>, also known as 
+         <i>CD133</i>, is a well-known CSC marker discussed previously [
+         <span ref-type="bibr" rid="pone.0118792.ref020">20</span>]. The higher expression of insulin-like growth factor binding protein 3 (
+         <i>IGFBP3</i>), involved in intestinal epithelium homeostasis, may indicate a more delicate balance
+         necessary in the LI compared to the SI [
+         <span ref-type="bibr" rid="pone.0118792.ref043">43</span>]. Lastly, secreted phosphoprotein 1 (
+         <i>SPP1</i>), also known as osteopontin (
+         <i>OPN</i>), was the transcript with the highest fold change between LI and SI cells (142-fold
+         higher in LI cells). Not only is SPP1 expression higher in colorectal cancer cell
+         lines than normal intestinal cell lines, but it is higher in tumor tissue in comparison
+         to normal tissue [
+         <span ref-type="bibr" rid="pone.0118792.ref044">44</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref045">45</span>]. It also correlates with lymph node metastasis, lymphatic or venous invasion and
+         TNM stage (classification of malignant tumors). Patients with a higher expression
+         of SPP1 had lower 5-year survival rates and it is thought to be an independent prognostic
+         factor. Therefore, it may play a role in CRC progression and could be a prognostic
+         marker for patients [
+         <span ref-type="bibr" rid="pone.0118792.ref045">45</span>]. The increased expression of these molecules in LI cells and their associated molecular
+         pathways not only confirm the intrinsic differences between the SI and LI, but possibly
+         a functional reason for why there is more cancer in the LI compared to the SI. Therefore,
+         differences at the stem cell level not only contribute to the separate structure and
+         function of the two tissue segments, but also to their differing response to insults
+         leading to disease.
+      </p>
+      <p>The molecular differences identified between cells expanded from the SI and LI correlated
+         well with the disparities in differentiation using a three-dimensional culture system.
+         Fordham et. al used similar culture conditions for the growth of intestinal stem cells
+         from fetal material at the gestational age of ten weeks [
+         <span ref-type="bibr" rid="pone.0118792.ref046">46</span>]. However, cells from such an early stage did not require expansion prior to high
+         efficiency formation of organoids from primary tissue, but did require additional
+         factors to sustain cells. At 20–23 weeks, as presented here, the primary tissue structure
+         is much more differentiated, mimicking adult organization and requiring selection
+         and expansion on feeder cells prior to use in organoid formation assays. In addition,
+         in the Fordham et. al study, whole epithelial units were initially embedded in their
+         cultures, whereas in our study, single cells were plated on a feeder layer in order
+         to eliminate the more differentiated cells present at 20–23 weeks gestational age.
+         The feeder layer allowed us to expand and maintain the stem cell population in an
+         undifferentiated state prior to embedding in Matrigel. This expansion allowed for
+         a more homogenous cell population for analysis in the organoid system, without the
+         presence of differentiated cells from primary tissue.
+      </p>
+      <p>The initial observation of differentiation into goblet cells confirmed the multipotentiality
+         of cells expanded from both SI and LI while demonstrating that their intrinsic differences
+         determine unique differentiation potential. The undetectable expression of 
+         <i>ATOH1</i> in LI organoids was in agreement with the gene expression profiling data, which showed
+         that cells expanded from LI express 
+         <i>ATOH1</i> at a lower level than cells expanded from SI. Interestingly, 
+         <i>ATOH1</i> is required for the efficacy of GSIs [
+         <span ref-type="bibr" rid="pone.0118792.ref047">47</span>], which may explain the limited MUC2 protein expression seen in DAPT treated LI organoids.
+         Previous studies showed that 70% of colorectal cancer patient samples have significantly
+         decreased expression of ATOH1 compared to tissue-matched normal LI samples, and revealed
+         ATOH1 as a tumor suppressor 
+         <i>in vitro</i> and 
+         <i>in vivo</i> [
+         <span ref-type="bibr" rid="pone.0118792.ref048">48</span>]. Therefore, the lack of detectable 
+         <i>ATOH1</i> in cells expanded from the LI could make them more susceptible to transformation
+         than their SI counterparts.
+      </p>
+      <p>Lastly, the disparity in expression of stem cell related genes 
+         <i>EPHB2</i>, 
+         <i>LGR5</i> and 
+         <i>MYC</i> might indicate a yet unknown molecular pathway that distinguishes LI stem cells from
+         SI stem cells. The higher expression of 
+         <i>LGR5</i> in LI organoids could mean the presence of cells with higher resistance to damage,
+         DNA repair and growth advantage that, if transformed, could confer resistance to cancer
+         cells [
+         <span ref-type="bibr" rid="pone.0118792.ref049">49</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref050">50</span>]. Even though 
+         <i>LGR5</i> expression remains high with differentiation treatment in LI cultures, LGR5 likely
+         remains a stem cell marker in both the SI and LI. 
+         <i>Lgr5</i>
+         <sup>+</sup> cells are present in cycling columnar cells of the mouse at the crypt base and can
+         generate cells of all the epithelial lineages of the intestine, suggesting stem cell
+         nature [
+         <span ref-type="bibr" rid="pone.0118792.ref004">4</span>]. In addition, as a receptor for R-Spondin 2, LGR5 can mediate the stem cell niche
+         [
+         <span ref-type="bibr" rid="pone.0118792.ref006">6</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref008">8</span>]. However, the work presented here presents a novel observation in human cells of
+         differential regulation of 
+         <i>LGR5</i> upon differentiation that may indicate a separate function of LGR5 in the LI in addition
+         to its presence as an intestinal stem cell marker.
+      </p>
+      <p>Functionally, LGR5 is both a receptor for Wnt ligands (R-spondins) and a transcriptional
+         target of the Wnt pathway [
+         <span ref-type="bibr" rid="pone.0118792.ref004">4</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref006">6</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref008">8</span>]. Here, we show that 
+         <i>LGR5</i> mRNA is expressed differently between SI and LI cells, with 
+         <i>LGR5</i> remaining high in LI cells after the removal of Wnt factors and even under γ-secretase
+         inhibition (
+         <span ref-type="fig" rid="pone.0118792.g006">Fig. 6D&amp;E</span>). This seems to be discordant with a parallel increase in goblet cells under the
+         same conditions in LI cells after differentiation treatment (
+         <span ref-type="fig" rid="pone.0118792.g005">Fig. 5A-C</span>). Wnt and Notch signaling pathways are known to function cooperatively in intestinal
+         epithelium, intestinal stem cells and tumor development [
+         <span ref-type="bibr" rid="pone.0118792.ref001">1</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref013">13</span>,
+         <span ref-type="bibr" rid="pone.0118792.ref014">14</span>]. ATOH1, a key regulator of the Notch pathway, can be marked for degradation by GSK3-β
+         in the presence of Wnt signals and is thought to be necessary for goblet cell formation
+         and response to γ-secretase inhibition [
+         <span ref-type="bibr" rid="pone.0118792.ref047">47</span>]. Here, we show that 
+         <i>ATOH1</i> was not detected in cells derived from LI, even under γ-secretase inhibition (
+         <span ref-type="fig" rid="pone.0118792.g006">Fig. 6B&amp;E</span>), suggesting an alternative pathway in the LI. The combined result of high 
+         <i>LGR5</i> coupled with the absence of 
+         <i>ATOH1</i> in the LI, may indicate a possible new pathway potentially involving LGR5/Wnt and
+         ATOH1/Notch for the regulation of differentiation in the LI.
+      </p>
+      <p>To our knowledge, this is the first comprehensive report characterizing the differences
+         between cells expanded from primary human SI and LI. The expected results observed
+         from experiments in SI samples confirm that combining the expansion of an enriched
+         stem cell population with subsequent three-dimensional differentiation assays reproducibly
+         creates an environment similar to that found 
+         <i>in vivo</i>. While there is evidence of extrinsic regulation of intestinal stem cells [
+         <span ref-type="bibr" rid="pone.0118792.ref033">33</span>] the unexpected results seen with the LI samples suggest key intrinsic differences
+         between human SI and LI stem cells. These differences may account for the increased
+         prevalence of LI cancer compared to SI cancer, as well as highlight crucial protective
+         mechanisms present in the SI that could be harnessed to improve prevention and treatment
+         of human LI cancer.
+      </p>
+   </div>
+   <div id="sec009">
+      <h2>Methods</h2>
+      <div id="sec010">
+         <h3>Ethics Statement</h3>
+         <p>Mouse experiments were performed under the guidelines of the University of Pittsburgh
+            Institutional Animal Care and Use Committee, which approved the study, and were performed
+            in accordance with the NIH guidelines for the care and use of animals (approval no.
+            1006567). Human fetal intestines were obtained through Magee Women’s Hospital and
+            the University of Pittsburgh Health Sciences Tissue Bank with approval from the University
+            of Pittsburgh Institutional Review Board (IRB approval no. PRO10090385) after written
+            consent.
+         </p>
+      </div>
+      <div id="sec011">
+         <h3>Preparation of feeder cells</h3>
+         <p>LA7 (ATCC: CRL-2283) cells were grown in DMEM/F12 (Mediatech, VA) supplemented with
+            5% FBS, 1% Pen/Strep (Mediatech, VA), 50nM hydrocortisone (Sigma-Aldrich, MO) and
+            5μg/mL Insulin (Sigma-Aldrich, MO). Cells were detached from the plate with 0.25%
+            Trypsin/0.1% Ethylenediaminetetraacetic acid (EDTA) (Mediatech, VA) and γ-irradiated
+            at 17,000 rads. Cell culture flasks were seeded at ∼300,000 cells/cm
+            <sup>2</sup> to generate a confluent monolayer of feeder cells prior to seeding human cells.
+         </p>
+      </div>
+      <div id="sec012">
+         <h3>Intestinal cell isolation and culture</h3>
+         <p>Small and large intestines were obtained from 19–23 week human fetuses. Intestines
+            were cut longitudinally in HBSS, contents rinsed, cut into 1-inch pieces, transferred
+            to EBSS/1mM EGTA/1% HEPES (Life Technologies, NY/Sigma-Aldrich, MO/Mediatech, VA)
+            and minced. Tissue was then incubated for 5 min at room temperature. After an EBSS
+            wash, the tissue was treated three times with a cocktail containing 1mg/mL collagenase
+            II (Life Technologies, NY), 1mg/mL hyaluronidase (Sigma-Aldrich, MO) and 20μg/mL DNase
+            I (Roche, IN) in HBSS/1% HEPES for 20 min. Tissue/cell suspensions were passed through
+            a 100μm cell strainer (Fisher, PA) to isolate single cells from undigested tissue.
+            Cells were plated on irradiated feeders at ∼80,000 cells/cm
+            <sup>2</sup> in DMEM/F12 supplemented with 0.5% FBS, 25μg/mL gentamicin (Sigma-Aldrich, MO), 1%
+            Insulin-Transferrin Selenium (ITS) (Mediatech, VA) and 0.1ng/mL human R-Spondin2 (R&amp;D,
+            MN). When single cells were plated, 10μM ROCK inhibitor, Y-27632 (Reagents Direct,
+            CA), was added to the media for ∼24 hours. Cultures were passaged at 2–3 weeks post-plating
+            (∼70% confluence) by incubating with EBSS/1mM EGTA/1% HEPES followed by 0.25% Trypsin/0.1%
+            EDTA.
+         </p>
+      </div>
+      <div id="sec013">
+         <h3>Fluorescence-Activated Cell Sorting and Analysis</h3>
+         <p>Single cell suspensions were stained with appropriate antibodies (
+            <span ref-type="supplementary-material" rid="pone.0118792.s008">S3 Table</span>) at 200,000 cells per tube and analyzed on the MACSQuant (Miltenyi Biotec, Germany)
+            or BD FACSAriaII (BD Biosciences, MA). Singlet discrimination was performed as described
+            by Wersto et al. [
+            <span ref-type="bibr" rid="pone.0118792.ref051">51</span>]. Post-acquisition analysis was carried out in FlowJo (
+            <div tagx="ext-link">http://www.treestar.com</div>). Staining index was calculated as D/W, where D is the distance between the positive
+            and negative populations and W is two standard deviations of the negative population.
+            LDAs were performed by sorting 1, 10, 25, 50, 100, 250, 500, 1000 cells per well into
+            respective rows of 96-well plates (Corning, NY) previously seeded with irradiated
+            feeder cells. Individual wells were scored for the presence of colonies at four weeks.
+            The number of wells with colonies was input into L-Calc (Stem Cell Technologies, Vancouver,
+            BC, Canada) to calculate CFU frequency.
+         </p>
+      </div>
+      <div id="sec014">
+         <h3>Matrigel Differentiation Assay</h3>
+         <p>The differentiation assay used in this study was modified from Sato, et al. [
+            <span ref-type="bibr" rid="pone.0118792.ref019">19</span>]. Briefly, expanded intestinal cells were suspended in 50μL Growth Factor Reduced
+            (GFR), phenol-red free Matrigel (BD Bioscience, CA) and plated in tissue culture dishes
+            at low density (∼50,000 cells/well of 48-well plate). After solidification at 37°C
+            for 30 min, the Matrigel was overlaid with Stem Cell media (SC) (
+            <span ref-type="supplementary-material" rid="pone.0118792.s009">S4 Table</span>). For the first 24 hours, the media included Y-27632 to prevent anoikis. After initial
+            plating in SC media and the formation of small organoids, two-thirds of the wells
+            were switched to Differentiation (Diff) media to allow differentiation of the organoids
+            to occur. After further growth of the organoids, DAPT (Reagents Direct, CA), a γ-secretase
+            inhibitor, was added to half the wells containing Diff media at 10μmol/mL for three
+            days. Media was changed on all wells three times a week. Resulting organoids were
+            isolated using 0.2% dispase (Life Technologies, NY), 0.1% collagenase II and 20μg/mL
+            DNase I. Organoids were then rinsed in PBS (Mediatech, VA) for downstream applications.
+         </p>
+      </div>
+      <div id="sec015">
+         <h3>mRNA Expression Assays</h3>
+         <p>Total RNA was extracted from frozen cell pellets of expanded human fetal cells from
+            SI or LI (SI; n = 6 and LI; n = 6) ranging from 2–8 passages on the feeder cells.
+            Expression data (q value&lt;0.05, 2 fold change) was imported into Ingenuity software
+            (Ingenuity Pathways Analysis, Ingenuity Systems Inc, CA) for pathway analysis. All
+            figures are plotted using unlogged data to maintain the original biological distribution
+            of expression. See 
+            <span ref-type="supplementary-material" rid="pone.0118792.s012">S1 Methods</span> for more detail.
+         </p>
+      </div>
+   </div>
+   <div id="sec016">
+      <h2>Supporting Information</h2>
+      <div tagx="supplementary-material">
+         <div tagx="label">S1 Fig</div>
+         <caption>
+            <div tagx="title">Depiction of the Notch pathway.</div>
+            <p>Notch ligand, Delta/Serrate/LAG-2 (DSL), of one cell activates a Notch receptor on
+               a neighboring cell. Notch intracellular domain (NICD) is cleaved by gamma secretase
+               (GS) and activates Hes1. Hes1 blocks Muc2 activation via blockage of ATOH1 and the
+               cell retains a progenitor state. In the cell where Notch is inactive, ATOH1 activates
+               MUC2 and the cell adopts a goblet cell fate.
+            </p>
+            <p>(TIF)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+      <div tagx="supplementary-material">
+         <div tagx="label">S2 Fig</div>
+         <caption>
+            <div tagx="title">Real-time PCR confirmation of gene array analysis.</div>
+            <p>Selected genes were assayed using real-time PCR as confirmation of gene array results.
+               RNA from cells expanded from three paired SI and LI samples (1, 2 and 3) were assayed
+               for expression of six genes identified as differentially expressed in the gene array
+               analysis. In 6/6 cases, the real-time PCR analysis confirmed the same expression pattern
+               as the gene array analysis. SI values used as control and set to 1 in each case. LI
+               expression values are relative to SI expression. SI 1 and 3 had no detectable expression
+               of 
+               <i>SPP1</i>, therefore, SI2 was used to calculate fold change in LI 1, 2 and 3. Expression was
+               normalized to 
+               <i>GAPDH</i> mRNA. Fold changes are presented above bars for clarification. Error bars represent
+               upper and lower error limits based on replicate variability. All expression comparisons
+               between SI and LI cells were significant (
+               <i>P</i>&lt;0.05). (n = 3 wells per sample/primer pair).
+            </p>
+            <p>(TIF)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+      <div tagx="supplementary-material">
+         <div tagx="label">S3 Fig</div>
+         <caption>
+            <div tagx="title">Tracking organoid growth from a single cell.</div>
+            <p>SI or LI organoids grown in SC media, Differentiation (Diff) media and Diff media
+               supplemented with DAPT for the last three days, followed from a single cell to multicellular
+               organoids. Arrows and arrowheads indicate the growth of organoids from a single cell.
+               Scale bar = 50μm.
+            </p>
+            <p>(TIF)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+      <div tagx="supplementary-material">
+         <div tagx="label">S4 Fig</div>
+         <caption>
+            <div tagx="title">Enteroendocrine cells are found more frequently in the SI compared to the LI 
+               <i>in vivo</i>.
+            </div>
+            <p>(
+               <b>A</b>) Normal human fetal SI (left) and LI (right) stained for epithelial marker, EPCAM
+               (green), and enteroendocrine marker, CHGA (red). Counterstain, Hoechst 33342. Scale
+               bar = 50μm. (
+               <b>B</b>) Cells were counted as cells per crypt and depicted in a bar graph (*
+               <i>P</i>&lt;0.05).
+            </p>
+            <p>(TIF)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+      <div tagx="supplementary-material">
+         <div tagx="label">S5 Fig</div>
+         <caption>
+            <div tagx="title">Differential expression of Villin in intestinal organoids.</div>
+            <p>SI (left) and LI (right) organoids grown in SC media, Differentiation (Diff) media
+               and Diff media supplemented with DAPT stained for enterocyte marker, Villin (VIL1)
+               (red). Counterstain, Hoechst 33342. Scale bar = 50μm.
+            </p>
+            <p>(TIF)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+      <div tagx="supplementary-material">
+         <div tagx="label">S1 Table</div>
+         <caption>
+            <div tagx="title">Expanded normal intestinal cells cultured with R-spondin 2 do not form tumors 
+               <i>in vivo</i>.
+            </div>
+            <p>(PDF)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+      <div tagx="supplementary-material">
+         <div tagx="label">S2 Table</div>
+         <caption>
+            <div tagx="title">Gene names of symbols used in 
+               <span ref-type="fig" rid="pone.0118792.g003">Fig. 3</span>.
+            </div>
+            <p>(PDF)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+      <div tagx="supplementary-material">
+         <div tagx="label">S3 Table</div>
+         <caption>
+            <div tagx="title">Comprehensive list of antibodies used for flow cytometry.</div>
+            <p>(PDF)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+      <div tagx="supplementary-material">
+         <div tagx="label">S4 Table</div>
+         <caption>
+            <div tagx="title">Comprehensive list of reagents used for organoid cultures.</div>
+            <p>(PDF)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+      <div tagx="supplementary-material">
+         <div tagx="label">S5 Table</div>
+         <caption>
+            <div tagx="title">Comprehensive list of antibodies used for immunofluorescence.</div>
+            <p>(PDF)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+      <div tagx="supplementary-material">
+         <div tagx="label">S6 Table</div>
+         <caption>
+            <div tagx="title">Comprehensive list of primers used for Real-Time PCR.</div>
+            <p>(PDF)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+      <div tagx="supplementary-material">
+         <div tagx="label">S1 Methods</div>
+         <caption>
+            <div tagx="title">A more comprehensive description of methods used.</div>
+            <p>(DOCX)</p>
+         </caption>
+         <div tagx="media">
+            <caption>
+               <p>Click here for additional data file.</p>
+            </caption>
+         </div>
+      </div>
+   </div>
+   <div tagx="back">
+      <div tagx="ack">
+         <p>We would like to thank Ms. Christin Sciulli for her technical expertise in processing
+            and running the gene arrays as well as Lynda Guzik of the McGowan Institute Flow Cytometry
+            Facility for her technical expertise in FACS.
+         </p>
+      </div>
+      <div tag="ref-list">
+         <ul>
+            <div tagx="title">References</div>
+            <li tag="ref">
+               <div tagx="label">1</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Fre</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Huyghe</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Mourikis</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Robine</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Louvard</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Artavanis-Tsakonas</span>
+                     <span tagx="given-names">S</span>
+                  </span>
+                  <span tagx="article-title">Notch signals control the fate of immature progenitor cells in the intestine</span>. 
+                  <span tagx="source">Nature</span>. 
+                  <span tagx="year">2005</span>;
+                  <span tagx="volume">435</span>: 
+                  <span tagx="fpage">964</span>–
+                  <span tagx="lpage">968</span>
+                  <div tagx="object-id">15959516</div>
+                  <div tagx="pub-id">15959516</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">2</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Pinto</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Clevers</span>
+                     <span tagx="given-names">H</span>
+                  </span>
+                  <span tagx="article-title">Wnt control of stem cells and differentiation in the intestinal epithelium</span>. 
+                  <span tagx="source">Exp Cell Res</span>. 
+                  <span tagx="year">2005</span>;
+                  <span tagx="volume">306</span>: 
+                  <span tagx="fpage">357</span>–
+                  <span tagx="lpage">363</span>
+                  <div tagx="object-id">15925592</div>
+                  <div tagx="pub-id">15925592</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">3</div>
+               <div tagx="mixed-citation">Howlader N NA, Krapcho M, Garshell J, Neyman N, Altekruse SF, Kosary CL, Yu M, Ruhl
+                  J, Tatalovich Z, Cho H, Mariotto A, Lewis DR, Chen HS, Feuer EJ, Cronin KA (eds).
+                  SEER Cancer Statistics Review, 1975–2010. National Cancer Institute Bethesda, MD.
+                  based on November 2012 SEER data submission, posted to the SEER web site, 2013.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">4</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Barker</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van Es</span>
+                     <span tagx="given-names">JH</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Kuipers</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Kujala</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van den Born</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Cozijnsen</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Identification of stem cells in small intestine and colon by marker gene Lgr5</span>. 
+                  <span tagx="source">Nature</span>. 
+                  <span tagx="year">2007</span>;
+                  <span tagx="volume">449</span>: 
+                  <span tagx="fpage">1003</span>–
+                  <span tagx="lpage">1007</span>
+                  <div tagx="object-id">17934449</div>
+                  <div tagx="pub-id">17934449</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">5</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Sato</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Vries</span>
+                     <span tagx="given-names">RG</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Snippert</span>
+                     <span tagx="given-names">HJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van de Wetering</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Barker</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Stange</span>
+                     <span tagx="given-names">DE</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Single Lgr5 stem cells build crypt-villus structures in vitro without a mesenchymal
+                     niche
+                  </span>. 
+                  <span tagx="source">Nature</span>. 
+                  <span tagx="year">2009</span>;
+                  <span tagx="volume">459</span>: 
+                  <span tagx="fpage">262</span>–
+                  <span tagx="lpage">265</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1038/nature07935</div>
+                  </div>
+                  <div tagx="object-id">19329995</div>
+                  <div tagx="pub-id">19329995</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">6</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Schuijers</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Clevers</span>
+                     <span tagx="given-names">H</span>
+                  </span>
+                  <span tagx="article-title">Adult mammalian stem cells: the role of Wnt, Lgr5 and R-spondins</span>. 
+                  <span tagx="source">EMBO J</span>. 
+                  <span tagx="year">2012</span>;
+                  <span tagx="volume">31</span>: 
+                  <span tagx="fpage">2685</span>–
+                  <span tagx="lpage">2696</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1038/emboj.2012.149</div>
+                  </div>
+                  <div tagx="object-id">22617424</div>
+                  <div tagx="pub-id">22617424</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">7</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Korinek</span>
+                     <span tagx="given-names">V</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Barker</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Moerer</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van Donselaar</span>
+                     <span tagx="given-names">E</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Huls</span>
+                     <span tagx="given-names">G</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Peters</span>
+                     <span tagx="given-names">PJ</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Depletion of epithelial stem-cell compartments in the small intestine of mice lacking
+                     Tcf-4
+                  </span>. 
+                  <span tagx="source">Nat Genet</span>. 
+                  <span tagx="year">1998</span>;
+                  <span tagx="volume">19</span>: 
+                  <span tagx="fpage">379</span>–
+                  <span tagx="lpage">383</span>
+                  <div tagx="object-id">9697701</div>
+                  <div tagx="pub-id">9697701</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">8</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">de Lau</span>
+                     <span tagx="given-names">W</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Barker</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Low</span>
+                     <span tagx="given-names">TY</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Koo</span>
+                     <span tagx="given-names">BK</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Li</span>
+                     <span tagx="given-names">VS</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Teunissen</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Lgr5 homologues associate with Wnt receptors and mediate R-spondin signalling</span>. 
+                  <span tagx="source">Nature</span>. 
+                  <span tagx="year">2011</span>;
+                  <span tagx="volume">476</span>: 
+                  <span tagx="fpage">293</span>–
+                  <span tagx="lpage">297</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1038/nature10337</div>
+                  </div>
+                  <div tagx="object-id">21727895</div>
+                  <div tagx="pub-id">21727895</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">9</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Powell</span>
+                     <span tagx="given-names">SM</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Zilz</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Beazer-Barclay</span>
+                     <span tagx="given-names">Y</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Bryan</span>
+                     <span tagx="given-names">TM</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hamilton</span>
+                     <span tagx="given-names">SR</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Thibodeau</span>
+                     <span tagx="given-names">SN</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">APC mutations occur early during colorectal tumorigenesis</span>. 
+                  <span tagx="source">Nature</span>. 
+                  <span tagx="year">1992</span>;
+                  <span tagx="volume">359</span>: 
+                  <span tagx="fpage">235</span>–
+                  <span tagx="lpage">237</span>
+                  <div tagx="object-id">1528264</div>
+                  <div tagx="pub-id">1528264</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">10</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Morin</span>
+                     <span tagx="given-names">PJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Sparks</span>
+                     <span tagx="given-names">AB</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Korinek</span>
+                     <span tagx="given-names">V</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Barker</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Clevers</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Vogelstein</span>
+                     <span tagx="given-names">B</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Activation of beta-catenin-Tcf signaling in colon cancer by mutations in beta-catenin
+                     or APC
+                  </span>. 
+                  <span tagx="source">Science</span>. 
+                  <span tagx="year">1997</span>;
+                  <span tagx="volume">275</span>: 
+                  <span tagx="fpage">1787</span>–
+                  <span tagx="lpage">1790</span>
+                  <div tagx="object-id">9065402</div>
+                  <div tagx="pub-id">9065402</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">11</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Barker</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Ridgway</span>
+                     <span tagx="given-names">RA</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van Es</span>
+                     <span tagx="given-names">JH</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van de Wetering</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Begthel</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van den Born</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Crypt stem cells as the cells-of-origin of intestinal cancer</span>. 
+                  <span tagx="source">Nature</span>. 
+                  <span tagx="year">2009</span>;
+                  <span tagx="volume">457</span>: 
+                  <span tagx="fpage">608</span>–
+                  <span tagx="lpage">611</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1038/nature07602</div>
+                  </div>
+                  <div tagx="object-id">19092804</div>
+                  <div tagx="pub-id">19092804</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">12</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Schepers</span>
+                     <span tagx="given-names">AG</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Snippert</span>
+                     <span tagx="given-names">HJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Stange</span>
+                     <span tagx="given-names">DE</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van den Born</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van Es</span>
+                     <span tagx="given-names">JH</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van de Wetering</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Lineage tracing reveals Lgr5+ stem cell activity in mouse intestinal adenomas</span>. 
+                  <span tagx="source">Science</span>. 
+                  <span tagx="year">2012</span>;
+                  <span tagx="volume">337</span>: 
+                  <span tagx="fpage">730</span>–
+                  <span tagx="lpage">735</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1126/science.1224676</div>
+                  </div>
+                  <div tagx="object-id">22855427</div>
+                  <div tagx="pub-id">22855427</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">13</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Fre</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Pallavi</span>
+                     <span tagx="given-names">SK</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Huyghe</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Lae</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Janssen</span>
+                     <span tagx="given-names">KP</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Robine</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Notch and Wnt signals cooperatively control cell proliferation and tumorigenesis in
+                     the intestine
+                  </span>. 
+                  <span tagx="source">Proc Natl Acad Sci U S A</span>. 
+                  <span tagx="year">2009</span>;
+                  <span tagx="volume">106</span>: 
+                  <span tagx="fpage">6309</span>–
+                  <span tagx="lpage">6314</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1073/pnas.0900427106</div>
+                  </div>
+                  <div tagx="object-id">19251639</div>
+                  <div tagx="pub-id">19251639</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">14</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Kazanjian</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Shroyer</span>
+                     <span tagx="given-names">NF</span>
+                  </span>
+                  <span tagx="article-title">NOTCH Signaling and ATOH1 in Colorectal Cancers</span>. 
+                  <span tagx="source">Curr Colorectal Cancer Rep</span>. 
+                  <span tagx="year">2011</span>;
+                  <span tagx="volume">7</span>: 
+                  <span tagx="fpage">121</span>–
+                  <span tagx="lpage">127</span>
+                  <div tagx="object-id">21980310</div>
+                  <div tagx="pub-id">21980310</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">15</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Sikandar</span>
+                     <span tagx="given-names">SS</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Pate</span>
+                     <span tagx="given-names">KT</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Anderson</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Dizon</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Edwards</span>
+                     <span tagx="given-names">RA</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Waterman</span>
+                     <span tagx="given-names">ML</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">NOTCH signaling is required for formation and self-renewal of tumor-initiating cells
+                     and for repression of secretory cell differentiation in colon cancer
+                  </span>. 
+                  <span tagx="source">Cancer Res</span>. 
+                  <span tagx="year">2010</span>;
+                  <span tagx="volume">70</span>: 
+                  <span tagx="fpage">1469</span>–
+                  <span tagx="lpage">1478</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1158/0008-5472.CAN-09-2557</div>
+                  </div>
+                  <div tagx="object-id">20145124</div>
+                  <div tagx="pub-id">20145124</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">16</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">van Es</span>
+                     <span tagx="given-names">JH</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van Gijn</span>
+                     <span tagx="given-names">ME</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Riccio</span>
+                     <span tagx="given-names">O</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van den Born</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Vooijs</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Begthel</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Notch/gamma-secretase inhibition turns proliferative cells in intestinal crypts and
+                     adenomas into goblet cells
+                  </span>. 
+                  <span tagx="source">Nature</span>. 
+                  <span tagx="year">2005</span>;
+                  <span tagx="volume">435</span>: 
+                  <span tagx="fpage">959</span>–
+                  <span tagx="lpage">963</span>
+                  <div tagx="object-id">15959515</div>
+                  <div tagx="pub-id">15959515</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">17</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Ehmann</span>
+                     <span tagx="given-names">UK</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Peterson</span>
+                     <span tagx="given-names">WD</span>
+                     <div tagx="suffix">Jr.</div>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Misfeldt</span>
+                     <span tagx="given-names">DS</span>
+                  </span>
+                  <span tagx="article-title">To grow mouse mammary epithelial cells in culture</span>. 
+                  <span tagx="source">J Cell Biol</span>. 
+                  <span tagx="year">1984</span>;
+                  <span tagx="volume">98</span>: 
+                  <span tagx="fpage">1026</span>–
+                  <span tagx="lpage">1032</span>
+                  <div tagx="object-id">6699079</div>
+                  <div tagx="pub-id">6699079</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">18</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Odoux</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Fohrer</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hoppo</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Guzik</span>
+                     <span tagx="given-names">L</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Stolz</span>
+                     <span tagx="given-names">DB</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Lewis</span>
+                     <span tagx="given-names">DW</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">A stochastic model for cancer stem cell origin in metastatic colon cancer</span>. 
+                  <span tagx="source">Cancer Res</span>. 
+                  <span tagx="year">2008</span>;
+                  <span tagx="volume">68</span>: 
+                  <span tagx="fpage">6932</span>–
+                  <span tagx="lpage">6941</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1158/0008-5472.CAN-07-5779</div>
+                  </div>
+                  <div tagx="object-id">18757407</div>
+                  <div tagx="pub-id">18757407</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">19</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Sato</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Stange</span>
+                     <span tagx="given-names">DE</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Ferrante</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Vries</span>
+                     <span tagx="given-names">RG</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Van Es</span>
+                     <span tagx="given-names">JH</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Van den Brink</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Long-term expansion of epithelial organoids from human colon, adenoma, adenocarcinoma,
+                     and Barrett's epithelium
+                  </span>. 
+                  <span tagx="source">Gastroenterology</span>. 
+                  <span tagx="year">2011</span>;
+                  <span tagx="volume">141</span>: 
+                  <span tagx="fpage">1762</span>–
+                  <span tagx="lpage">1772</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1053/j.gastro.2011.07.050</div>
+                  </div>
+                  <div tagx="object-id">21889923</div>
+                  <div tagx="pub-id">21889923</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">20</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Kemper</span>
+                     <span tagx="given-names">K</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Sprick</span>
+                     <span tagx="given-names">MR</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">de Bree</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Scopelliti</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Vermeulen</span>
+                     <span tagx="given-names">L</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hoek</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">The AC133 epitope, but not the CD133 protein, is lost upon cancer stem cell differentiation</span>. 
+                  <span tagx="source">Cancer Res</span>. 
+                  <span tagx="year">2010</span>;
+                  <span tagx="volume">70</span>: 
+                  <span tagx="fpage">719</span>–
+                  <span tagx="lpage">729</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1158/0008-5472.CAN-09-1820</div>
+                  </div>
+                  <div tagx="object-id">20068153</div>
+                  <div tagx="pub-id">20068153</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">21</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">O'Brien</span>
+                     <span tagx="given-names">CA</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Pollett</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Gallinger</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Dick</span>
+                     <span tagx="given-names">JE</span>
+                  </span>
+                  <span tagx="article-title">A human colon cancer cell capable of initiating tumour growth in immunodeficient mice</span>. 
+                  <span tagx="source">Nature</span>. 
+                  <span tagx="year">2007</span>;
+                  <span tagx="volume">445</span>: 
+                  <span tagx="fpage">106</span>–
+                  <span tagx="lpage">110</span>
+                  <div tagx="object-id">17122772</div>
+                  <div tagx="pub-id">17122772</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">22</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Ricci-Vitiani</span>
+                     <span tagx="given-names">L</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Lombardi</span>
+                     <span tagx="given-names">DG</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Pilozzi</span>
+                     <span tagx="given-names">E</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Biffoni</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Todaro</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Peschle</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Identification and expansion of human colon-cancer-initiating cells</span>. 
+                  <span tagx="source">Nature</span>. 
+                  <span tagx="year">2007</span>;
+                  <span tagx="volume">445</span>: 
+                  <span tagx="fpage">111</span>–
+                  <span tagx="lpage">115</span>
+                  <div tagx="object-id">17122771</div>
+                  <div tagx="pub-id">17122771</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">23</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Yin</span>
+                     <span tagx="given-names">AH</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Miraglia</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Zanjani</span>
+                     <span tagx="given-names">ED</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Almeida-Porada</span>
+                     <span tagx="given-names">G</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Ogawa</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Leary</span>
+                     <span tagx="given-names">AG</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">AC133, a novel marker for human hematopoietic stem and progenitor cells</span>. 
+                  <span tagx="source">Blood</span>. 
+                  <span tagx="year">1997</span>;
+                  <span tagx="volume">90</span>: 
+                  <span tagx="fpage">5002</span>–
+                  <span tagx="lpage">5012</span>
+                  <div tagx="object-id">9389720</div>
+                  <div tagx="pub-id">9389720</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">24</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Uchida</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Buck</span>
+                     <span tagx="given-names">DW</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">He</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Reitsma</span>
+                     <span tagx="given-names">MJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Masek</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Phan</span>
+                     <span tagx="given-names">TV</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Direct isolation of human central nervous system stem cells</span>. 
+                  <span tagx="source">Proc Natl Acad Sci U S A</span>. 
+                  <span tagx="year">2000</span>;
+                  <span tagx="volume">97</span>: 
+                  <span tagx="fpage">14720</span>–
+                  <span tagx="lpage">14725</span>
+                  <div tagx="object-id">11121071</div>
+                  <div tagx="pub-id">11121071</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">25</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Levin</span>
+                     <span tagx="given-names">TG</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Powell</span>
+                     <span tagx="given-names">AE</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Davies</span>
+                     <span tagx="given-names">PS</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Silk</span>
+                     <span tagx="given-names">AD</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Dismuke</span>
+                     <span tagx="given-names">AD</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Anderson</span>
+                     <span tagx="given-names">EC</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Characterization of the intestinal cancer stem cell marker CD166 in the human and
+                     mouse gastrointestinal tract
+                  </span>. 
+                  <span tagx="source">Gastroenterology</span>. 
+                  <span tagx="year">2010</span>;
+                  <span tagx="volume">139</span>: 
+                  <span tagx="fpage">2072</span>–
+                  <span tagx="lpage">2082</span> e2075. 
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1053/j.gastro.2010.08.053</div>
+                  </div>
+                  <div tagx="object-id">20826154</div>
+                  <div tagx="pub-id">20826154</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">26</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">von Furstenberg</span>
+                     <span tagx="given-names">RJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Gulati</span>
+                     <span tagx="given-names">AS</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Baxi</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Doherty</span>
+                     <span tagx="given-names">JM</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Stappenbeck</span>
+                     <span tagx="given-names">TS</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Gracz</span>
+                     <span tagx="given-names">AD</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Sorting mouse jejunal epithelial cells with CD24 yields a population with characteristics
+                     of intestinal stem cells
+                  </span>. 
+                  <span tagx="source">Am J Physiol Gastrointest Liver Physiol</span>. 
+                  <span tagx="year">2011</span>;
+                  <span tagx="volume">300</span>: 
+                  <span tagx="fpage">G409</span>–
+                  <span tagx="lpage">417</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1152/ajpgi.00453.2010</div>
+                  </div>
+                  <div tagx="object-id">21183658</div>
+                  <div tagx="pub-id">21183658</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">27</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Wang</span>
+                     <span tagx="given-names">F</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Scoville</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">He</span>
+                     <span tagx="given-names">XC</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Mahe</span>
+                     <span tagx="given-names">MM</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Box</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Perry</span>
+                     <span tagx="given-names">JM</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Isolation and characterization of intestinal stem cells based on surface marker combinations
+                     and colony-formation assay
+                  </span>. 
+                  <span tagx="source">Gastroenterology</span>. 
+                  <span tagx="year">2013</span>;
+                  <span tagx="volume">145</span>: 
+                  <span tagx="fpage">383</span>–
+                  <span tagx="lpage">395</span> e381–321. 
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1053/j.gastro.2013.04.050</div>
+                  </div>
+                  <div tagx="object-id">23644405</div>
+                  <div tagx="pub-id">23644405</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">28</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Mentlein</span>
+                     <span tagx="given-names">R</span>
+                  </span>
+                  <span tagx="article-title">Cell-surface peptidases</span>. 
+                  <span tagx="source">Int Rev Cytol</span>. 
+                  <span tagx="year">2004</span>;
+                  <span tagx="volume">235</span>: 
+                  <span tagx="fpage">165</span>–
+                  <span tagx="lpage">213</span>
+                  <div tagx="object-id">15219783</div>
+                  <div tagx="pub-id">15219783</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">29</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Weilbaecher</span>
+                     <span tagx="given-names">K</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Weissman</span>
+                     <span tagx="given-names">I</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Blume</span>
+                     <span tagx="given-names">K</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Heimfeld</span>
+                     <span tagx="given-names">S</span>
+                  </span>
+                  <span tagx="article-title">Culture of phenotypically defined hematopoietic stem cells and other progenitors at
+                     limiting dilution on Dexter monolayers
+                  </span>. 
+                  <span tagx="source">Blood</span>. 
+                  <span tagx="year">1991</span>;
+                  <span tagx="volume">78</span>: 
+                  <span tagx="fpage">945</span>–
+                  <span tagx="lpage">952</span>
+                  <div tagx="object-id">1678290</div>
+                  <div tagx="pub-id">1678290</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">30</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Waldmann</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Lefkovits</span>
+                     <span tagx="given-names">I</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Quintans</span>
+                     <span tagx="given-names">J</span>
+                  </span>
+                  <span tagx="article-title">Limiting dilution analysis of helper T-cell function</span>. 
+                  <span tagx="source">Immunology</span>. 
+                  <span tagx="year">1975</span>;
+                  <span tagx="volume">28</span>: 
+                  <span tagx="fpage">1135</span>–
+                  <span tagx="lpage">1148</span>
+                  <div tagx="object-id">1079511</div>
+                  <div tagx="pub-id">1079511</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">31</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Yin</span>
+                     <span tagx="given-names">X</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Farin</span>
+                     <span tagx="given-names">HF</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">van Es</span>
+                     <span tagx="given-names">JH</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Clevers</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Langer</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Karp</span>
+                     <span tagx="given-names">JM</span>
+                  </span>
+                  <span tagx="article-title">Niche-independent high-purity cultures of Lgr5+ intestinal stem cells and their progeny</span>. 
+                  <span tagx="source">Nat Methods</span>. 
+                  <span tagx="year">2014</span>;
+                  <span tagx="volume">11</span>: 
+                  <span tagx="fpage">106</span>–
+                  <span tagx="lpage">112</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1038/nmeth.2737</div>
+                  </div>
+                  <div tagx="object-id">24292484</div>
+                  <div tagx="pub-id">24292484</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">32</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Jung</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Sato</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Merlos-Suarez</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Barriga</span>
+                     <span tagx="given-names">FM</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Iglesias</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Rossell</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Isolation and in vitro expansion of human colonic stem cells</span>. 
+                  <span tagx="source">Nat Med</span>. 
+                  <span tagx="year">2011</span>;
+                  <span tagx="volume">17</span>: 
+                  <span tagx="fpage">1225</span>–
+                  <span tagx="lpage">1227</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1038/nm.2470</div>
+                  </div>
+                  <div tagx="object-id">21892181</div>
+                  <div tagx="pub-id">21892181</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">33</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Medema</span>
+                     <span tagx="given-names">JP</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Vermeulen</span>
+                     <span tagx="given-names">L</span>
+                  </span>
+                  <span tagx="article-title">Microenvironmental regulation of stem cells in intestinal homeostasis and cancer</span>. 
+                  <span tagx="source">Nature</span>. 
+                  <span tagx="year">2011</span>;
+                  <span tagx="volume">474</span>: 
+                  <span tagx="fpage">318</span>–
+                  <span tagx="lpage">326</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1038/nature10212</div>
+                  </div>
+                  <div tagx="object-id">21677748</div>
+                  <div tagx="pub-id">21677748</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">34</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Scoville</span>
+                     <span tagx="given-names">DH</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Sato</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">He</span>
+                     <span tagx="given-names">XC</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Li</span>
+                     <span tagx="given-names">L</span>
+                  </span>
+                  <span tagx="article-title">Current view: intestinal stem cells and signaling</span>. 
+                  <span tagx="source">Gastroenterology</span>. 
+                  <span tagx="year">2008</span>;
+                  <span tagx="volume">134</span>: 
+                  <span tagx="fpage">849</span>–
+                  <span tagx="lpage">864</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1053/j.gastro.2008.01.079</div>
+                  </div>
+                  <div tagx="object-id">18325394</div>
+                  <div tagx="pub-id">18325394</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">35</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Lei</span>
+                     <span tagx="given-names">NY</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Jabaji</span>
+                     <span tagx="given-names">Z</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Wang</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Joshi</span>
+                     <span tagx="given-names">VS</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Brinkley</span>
+                     <span tagx="given-names">GJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Khalil</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Intestinal subepithelial myofibroblasts support the growth of intestinal epithelial
+                     stem cells
+                  </span>. 
+                  <span tagx="source">PLoS One</span>. 
+                  <span tagx="year">2014</span>;
+                  <span tagx="volume">9</span>: 
+                  <span tagx="fpage">e84651</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1371/journal.pone.0084651</div>
+                  </div>
+                  <div tagx="object-id">24400106</div>
+                  <div tagx="pub-id">24400106</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">36</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Papapietro</span>
+                     <span tagx="given-names">O</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Teatero</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Thanabalasuriar</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Yuki</span>
+                     <span tagx="given-names">KE</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Diez</span>
+                     <span tagx="given-names">E</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Zhu</span>
+                     <span tagx="given-names">L</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">R-spondin 2 signalling mediates susceptibility to fatal infectious diarrhoea</span>. 
+                  <span tagx="source">Nat Commun</span>. 
+                  <span tagx="year">2013</span>;
+                  <span tagx="volume">4</span>: 
+                  <span tagx="fpage">1898</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1038/ncomms2816</div>
+                  </div>
+                  <div tagx="object-id">23695692</div>
+                  <div tagx="pub-id">23695692</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">37</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Riemann</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Kehlen</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Langner</span>
+                     <span tagx="given-names">J</span>
+                  </span>
+                  <span tagx="article-title">CD13—not just a marker in leukemia typing</span>. 
+                  <span tagx="source">Immunol Today</span>. 
+                  <span tagx="year">1999</span>;
+                  <span tagx="volume">20</span>: 
+                  <span tagx="fpage">83</span>–
+                  <span tagx="lpage">88</span>
+                  <div tagx="object-id">10098327</div>
+                  <div tagx="pub-id">10098327</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">38</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Glebov</span>
+                     <span tagx="given-names">OK</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Rodriguez</span>
+                     <span tagx="given-names">LM</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Nakahara</span>
+                     <span tagx="given-names">K</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Jenkins</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Cliatt</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Humbyrd</span>
+                     <span tagx="given-names">CJ</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Distinguishing right from left colon by the pattern of gene expression</span>. 
+                  <span tagx="source">Cancer Epidemiol Biomarkers Prev</span>. 
+                  <span tagx="year">2003</span>;
+                  <span tagx="volume">12</span>: 
+                  <span tagx="fpage">755</span>–
+                  <span tagx="lpage">762</span>
+                  <div tagx="object-id">12917207</div>
+                  <div tagx="pub-id">12917207</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">39</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Zhu</span>
+                     <span tagx="given-names">L</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Gibson</span>
+                     <span tagx="given-names">P</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Currle</span>
+                     <span tagx="given-names">DS</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Tong</span>
+                     <span tagx="given-names">Y</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Richardson</span>
+                     <span tagx="given-names">RJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Bayazitov</span>
+                     <span tagx="given-names">IT</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Prominin 1 marks intestinal stem cells that are susceptible to neoplastic transformation</span>. 
+                  <span tagx="source">Nature</span>. 
+                  <span tagx="year">2009</span>;
+                  <span tagx="volume">457</span>: 
+                  <span tagx="fpage">603</span>–
+                  <span tagx="lpage">607</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1038/nature07589</div>
+                  </div>
+                  <div tagx="object-id">19092805</div>
+                  <div tagx="pub-id">19092805</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">40</div>
+               <div tagx="mixed-citation">Gemei M, Mirabelli P, Di Noto R, Corbo C, Iaccarino A, Zamboli A, et al. CD66c is
+                  a novel marker for colorectal cancer stem cell isolation, and its silencing halts
+                  tumor growth in vivo. Cancer. 2012.
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">41</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Chan</span>
+                     <span tagx="given-names">CH</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Cook</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Stanners</span>
+                     <span tagx="given-names">CP</span>
+                  </span>
+                  <span tagx="article-title">Increased colon tumor susceptibility in azoxymethane treated CEABAC transgenic mice</span>. 
+                  <span tagx="source">Carcinogenesis</span>. 
+                  <span tagx="year">2006</span>;
+                  <span tagx="volume">27</span>: 
+                  <span tagx="fpage">1909</span>–
+                  <span tagx="lpage">1916</span>
+                  <div tagx="object-id">16632476</div>
+                  <div tagx="pub-id">16632476</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">42</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Quintero</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Mackenzie</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Brennan</span>
+                     <span tagx="given-names">PA</span>
+                  </span>
+                  <span tagx="article-title">Hypoxia-inducible factor 1 (HIF-1) in cancer</span>. 
+                  <span tagx="source">Eur J Surg Oncol</span>. 
+                  <span tagx="year">2004</span>;
+                  <span tagx="volume">30</span>: 
+                  <span tagx="fpage">465</span>–
+                  <span tagx="lpage">468</span>
+                  <div tagx="object-id">15135470</div>
+                  <div tagx="pub-id">15135470</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">43</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Modica</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Morgano</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Salvatore</span>
+                     <span tagx="given-names">L</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Petruzzelli</span>
+                     <span tagx="given-names">M</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Vanier</span>
+                     <span tagx="given-names">MT</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Valanzano</span>
+                     <span tagx="given-names">R</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Expression and localisation of insulin receptor substrate 2 in normal intestine and
+                     colorectal tumours. Regulation by intestine-specific transcription factor CDX2
+                  </span>. 
+                  <span tagx="source">Gut</span>. 
+                  <span tagx="year">2009</span>;
+                  <span tagx="volume">58</span>: 
+                  <span tagx="fpage">1250</span>–
+                  <span tagx="lpage">1259</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1136/gut.2008.158386</div>
+                  </div>
+                  <div tagx="object-id">19221108</div>
+                  <div tagx="pub-id">19221108</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">44</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Huang</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Pan</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hu</span>
+                     <span tagx="given-names">H</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Zheng</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Ding</span>
+                     <span tagx="given-names">L</span>
+                  </span>
+                  <span tagx="article-title">Osteopontin-enhanced hepatic metastasis of colorectal cancer cells</span>. 
+                  <span tagx="source">PLoS One</span>. 
+                  <span tagx="year">2012</span>;
+                  <span tagx="volume">7</span>: 
+                  <span tagx="fpage">e47901</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1371/journal.pone.0047901</div>
+                  </div>
+                  <div tagx="object-id">23112867</div>
+                  <div tagx="pub-id">23112867</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">45</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Likui</span>
+                     <span tagx="given-names">W</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hong</span>
+                     <span tagx="given-names">W</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Shuwen</span>
+                     <span tagx="given-names">Z</span>
+                  </span>
+                  <span tagx="article-title">Clinical significance of the upregulated osteopontin mRNA expression in human colorectal
+                     cancer
+                  </span>. 
+                  <span tagx="source">J Gastrointest Surg</span>. 
+                  <span tagx="year">2010</span>;
+                  <span tagx="volume">14</span>: 
+                  <span tagx="fpage">74</span>–
+                  <span tagx="lpage">81</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1007/s11605-009-1035-z</div>
+                  </div>
+                  <div tagx="object-id">19763701</div>
+                  <div tagx="pub-id">19763701</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">46</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Fordham</span>
+                     <span tagx="given-names">RP</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Yui</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hannan</span>
+                     <span tagx="given-names">NR</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Soendergaard</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Madgwick</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Schweiger</span>
+                     <span tagx="given-names">PJ</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Transplantation of expanded fetal intestinal progenitors contributes to colon regeneration
+                     after injury
+                  </span>. 
+                  <span tagx="source">Cell Stem Cell</span>. 
+                  <span tagx="year">2013</span>;
+                  <span tagx="volume">13</span>: 
+                  <span tagx="fpage">734</span>–
+                  <span tagx="lpage">744</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1016/j.stem.2013.09.015</div>
+                  </div>
+                  <div tagx="object-id">24139758</div>
+                  <div tagx="pub-id">24139758</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">47</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Kazanjian</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Noah</span>
+                     <span tagx="given-names">T</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Brown</span>
+                     <span tagx="given-names">D</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Burkart</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Shroyer</span>
+                     <span tagx="given-names">NF</span>
+                  </span>
+                  <span tagx="article-title">Atonal homolog 1 is required for growth and differentiation effects of notch/gamma-secretase
+                     inhibitors on normal and cancerous intestinal epithelial cells
+                  </span>. 
+                  <span tagx="source">Gastroenterology</span>. 
+                  <span tagx="year">2010</span>;
+                  <span tagx="volume">139</span>: 
+                  <span tagx="fpage">918</span>–
+                  <span tagx="lpage">928</span>, 928 e911–916. 
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1053/j.gastro.2010.05.081</div>
+                  </div>
+                  <div tagx="object-id">20621629</div>
+                  <div tagx="pub-id">20621629</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">48</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Bossuyt</span>
+                     <span tagx="given-names">W</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Kazanjian</span>
+                     <span tagx="given-names">A</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">De Geest</span>
+                     <span tagx="given-names">N</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Van Kelst</span>
+                     <span tagx="given-names">S</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">De Hertogh</span>
+                     <span tagx="given-names">G</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Geboes</span>
+                     <span tagx="given-names">K</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Atonal homolog 1 is a tumor suppressor gene</span>. 
+                  <span tagx="source">PLoS Biol</span>. 
+                  <span tagx="year">2009</span>;
+                  <span tagx="volume">7</span>: 
+                  <span tagx="fpage">e39</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1371/journal.pbio.1000039</div>
+                  </div>
+                  <div tagx="object-id">19243219</div>
+                  <div tagx="pub-id">19243219</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">49</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Francipane</span>
+                     <span tagx="given-names">MG</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Chandler</span>
+                     <span tagx="given-names">J</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Lagasse</span>
+                     <span tagx="given-names">E</span>
+                  </span>
+                  <span tagx="article-title">Cancer Stem Cells: A Moving Target</span>. 
+                  <span tagx="source">Curr Pathobiol Rep</span>. 
+                  <span tagx="year">2013</span>;
+                  <span tagx="volume">1</span>: 
+                  <span tagx="fpage">111</span>–
+                  <span tagx="lpage">118</span>
+                  <div tagx="object-id">23914341</div>
+                  <div tagx="pub-id">23914341</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">50</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Hsu</span>
+                     <span tagx="given-names">HC</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Liu</span>
+                     <span tagx="given-names">YS</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Tseng</span>
+                     <span tagx="given-names">KC</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Hsu</span>
+                     <span tagx="given-names">CL</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Liang</span>
+                     <span tagx="given-names">Y</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Yang</span>
+                     <span tagx="given-names">TS</span>
+                  </span>, 
+                  <div tagx="etal">et al</div>
+                  <span tagx="article-title">Overexpression of Lgr5 correlates with resistance to 5-FU-based chemotherapy in colorectal
+                     cancer
+                  </span>. 
+                  <span tagx="source">Int J Colorectal Dis</span>. 
+                  <span tagx="year">2013</span>;
+                  <span tagx="volume">28</span>: 
+                  <span tagx="fpage">1535</span>–
+                  <span tagx="lpage">1546</span>
+                  <div tagx="comment">doi: 
+                     <div tagx="ext-link">10.1007/s00384-013-1721-x</div>
+                  </div>
+                  <div tagx="object-id">23784051</div>
+                  <div tagx="pub-id">23784051</div>
+               </div>
+            </li>
+            <li tag="ref">
+               <div tagx="label">51</div>
+               <div tagx="mixed-citation">
+                  <span tagx="name">
+                     <span tagx="surname">Wersto</span>
+                     <span tagx="given-names">RP</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Chrest</span>
+                     <span tagx="given-names">FJ</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Leary</span>
+                     <span tagx="given-names">JF</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Morris</span>
+                     <span tagx="given-names">C</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Stetler-Stevenson</span>
+                     <span tagx="given-names">MA</span>
+                  </span>, 
+                  <span tagx="name">
+                     <span tagx="surname">Gabrielson</span>
+                     <span tagx="given-names">E</span>
+                  </span>
+                  <span tagx="article-title">Doublet discrimination in DNA cell-cycle analysis</span>. 
+                  <span tagx="source">Cytometry</span>. 
+                  <span tagx="year">2001</span>;
+                  <span tagx="volume">46</span>: 
+                  <span tagx="fpage">296</span>–
+                  <span tagx="lpage">306</span>
+                  <div tagx="object-id">11746105</div>
+                  <div tagx="pub-id">11746105</div>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>

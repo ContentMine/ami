@@ -6,13 +6,13 @@ import nu.xom.Element;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.MatcherResult;
-import org.xmlcml.files.ResultElement;
-import org.xmlcml.files.ResultsElement;
-import org.xmlcml.html.HtmlElement;
-import org.xmlcml.html.HtmlP;
+import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cmine.files.ResultsElement;
 
-public class RegexSearcher {
+public class RegexSearcher extends AMISearcher {
 
 	
 	private static final Logger LOG = Logger.getLogger(RegexSearcher.class);
@@ -21,18 +21,25 @@ public class RegexSearcher {
 	}
 	
 	List<RegexComponent> componentList;
-
 	private CompoundRegex compoundRegex;
 	Element resultElement;
 
 
-	public RegexSearcher(CompoundRegex compoundRegex) {
+	public RegexSearcher(AMIArgProcessor argProcessor) {
+		super(argProcessor);
+	}
+
+	public static RegexSearcher createSearcher(AMIArgProcessor argProcessor) {
+		return new RegexSearcher(argProcessor);
+	}
+
+	void setCompoundRegex(CompoundRegex compoundRegex) {
 		this.compoundRegex = compoundRegex;
 	}
 
 	// ====== args ========
 
-	private ResultsElement searchXomElement(Element xomElement) {
+	public ResultsElement searchXomElement(Element xomElement) {
 		List<RegexComponent> regexComponents = compoundRegex.getOrCreateRegexComponentList();
 		ResultsElement resultsElement = new ResultsElement();
 		for (RegexComponent regexComponent : regexComponents) {
@@ -52,13 +59,5 @@ public class RegexSearcher {
 		LOG.debug(compoundRegex.getTitle()+"/"+compoundRegex.getRegexValues().size());
 	}
 
-	ResultsElement search(List<HtmlP> pElements) {
-		ResultsElement resultsElement = new ResultsElement();
-		for (HtmlP pElement : pElements) {
-			ResultsElement subResultsElement = this.searchXomElement(pElement);
-			resultsElement.transferResultElements(subResultsElement);
-		}
-		return resultsElement;
-	}
 
 }

@@ -1,18 +1,20 @@
 package org.xmlcml.ami2.plugins.species;
 
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
+import nu.xom.Element;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.ami2.plugins.DefaultSearcher;
-import org.xmlcml.files.ResultElement;
-import org.xmlcml.files.ResultsElement;
+import org.xmlcml.ami2.plugins.AMISearcher;
+import org.xmlcml.ami2.plugins.NamedPattern;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.html.HtmlP;
 
-public class SpeciesSearcher extends DefaultSearcher {
+public class SpeciesSearcher extends AMISearcher {
 
 	
 	public static final Logger LOG = Logger.getLogger(SpeciesSearcher.class);
@@ -20,58 +22,55 @@ public class SpeciesSearcher extends DefaultSearcher {
 		LOG.setLevel(Level.DEBUG);
 	}
 
+	public SpeciesSearcher(AMIArgProcessor argProcessor, NamedPattern namedPattern) {
+		super(argProcessor, namedPattern);
+	}
 
-	private String speciesType;
-	
-
-	public SpeciesSearcher(AMIArgProcessor argProcessor, String speciesType, Pattern pattern) {
-		super(argProcessor, pattern);
-		this.speciesType = speciesType;
+	@Override 
+	public String getValue(Element xomElement) {
+		String xmlString = xomElement.toXML();
+		// this is ucky, but since we know the HTML is normalized it's probably OK
+		xmlString = xomElement.toXML().replaceAll(DefaultArgProcessor.WHITESPACE, " ");
+		// some markup is of form <i>Foo</i>. <i>bar</i>
+		xmlString = xmlString.replaceAll("</i>\\.\\s+<i>", ". ");
+		xmlString = xmlString.replaceAll("<span[^>]*>", "");
+		xmlString = xmlString.replaceAll("</span[^>]*>", "");
+		xmlString = xmlString.replaceAll("<b>", "");
+		xmlString = xmlString.replaceAll("</b>", "");
+		xmlString = xmlString.replaceAll("<a>", "");
+		xmlString = xmlString.replaceAll("</a>", "");
+		xmlString = xmlString.replaceAll("<p>", "");
+		xmlString = xmlString.replaceAll("</p>", "");
+		xmlString = xmlString.replaceAll("<div>", "");
+		xmlString = xmlString.replaceAll("</div>", "");
+		return xmlString;
 	}
 
 	@Override
 	public ResultsElement search(List<HtmlP> pElements) {
-		SpeciesResultsElement resultsElement = new SpeciesResultsElement("species");
+		SpeciesResultsElement resultsElement = new SpeciesResultsElement();
 		for (HtmlP pElement : pElements) {
-			// this is ucky, but since we know the HTML is normalized it's probably OK
-			String xmlString = pElement.toXML().replaceAll("\\s+", " ");
-			// some markup is of form <i>Foo</i>. <i>bar</i>
-			xmlString = xmlString.replaceAll("</i>\\.\\s+<i>", ". ");
-			xmlString = xmlString.replaceAll("<span[^>]*>", "[");
-			xmlString = xmlString.replaceAll("</span[^>]*>", "]");
-			xmlString = xmlString.replaceAll("<b>", "");
-			xmlString = xmlString.replaceAll("</b>", "");
+			String xmlString = getValue(pElement);
+			LOG.trace(xmlString);
 			List<ResultElement> resultElementList = this.search(xmlString);
 			for (ResultElement resultElement : resultElementList) {
 				resultsElement.appendChild(resultElement);
 			}
 		}
-		List<String> nameList = resultsElement.getNameList();
+		List<String> exactList = resultsElement.getExactList();
 		LinneanNamer linneanNamer = new LinneanNamer();
-		nameList = linneanNamer.expandAbbreviations(nameList);
-		resultsElement.replaceMatches(nameList);
+		List<String> matchList = linneanNamer.expandAbbreviations(exactList);
+		LOG.trace("EXACT "+exactList+"; MATCH "+matchList);
+		resultsElement.addMatchAttributes(matchList);
 		
 		return resultsElement;
 	}
 
-	@Override
-	protected String flattenTags(String s) {
-		s = s.replaceAll("<i>", "");
-		s = s.replaceAll("</i>", "");
-		s = s.replaceAll("<b[^>]*>", "");
-		s = s.replaceAll("</b[^>]*>", "");
-		return s;
+	/**
+	 *  //PLUGIN
+	 */
+	public SpeciesResultElement createResultElement() {
+		return new SpeciesResultElement();
 	}
 
-	protected SpeciesResultElement createResultElement(String value, Matcher matcher) {
-		SpeciesResultElement resultElement = new SpeciesResultElement();
-		matchAndAddPrePost(value, matcher, resultElement);
-		return resultElement;
-	}
-
-
-	public String getSpeciesType() {
-		return speciesType;
-	}
-	
 }

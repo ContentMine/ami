@@ -1,17 +1,15 @@
 package org.xmlcml.ami2.plugins.simple;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.args.ArgIterator;
-import org.xmlcml.args.ArgumentOption;
-import org.xmlcml.files.QuickscrapeNorma;
-import org.xmlcml.files.ResultElement;
-import org.xmlcml.files.ResultsElement;
+import org.xmlcml.cmine.args.ArgIterator;
+import org.xmlcml.cmine.args.ArgumentOption;
+import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cmine.files.ResultsElement;
 
 /** 
  * Processes commandline arguments.
@@ -36,6 +34,10 @@ public class SimpleArgProcessor extends AMIArgProcessor {
 		parseArgs(args);
 	}
 
+	public SimpleArgProcessor(String argString) {
+		this(argString.split(WHITESPACE));
+	}
+
 	// =============== METHODS ==============
 
 	public void parseSimple(ArgumentOption option, ArgIterator argIterator) {
@@ -43,19 +45,19 @@ public class SimpleArgProcessor extends AMIArgProcessor {
 	}
 	
 	public void countWords(ArgumentOption option) {
-		words = extractWordsFromScholarlyHtml();
+		words = currentCMDir.extractWordsFromScholarlyHtml();
 	}
 
 	public void outputWordCounts(ArgumentOption option) {
 		String outputFilename = getOutput();
-		if (!QuickscrapeNorma.isReservedFilename(outputFilename)) {
+		if (!CMDir.isReservedFilename(outputFilename)) {
 			throw new RuntimeException("Output is not a reserved file: "+outputFilename);
 		}
 		ResultsElement resultsElement = new ResultsElement();
 		ResultElement resultElement = new ResultElement();
 		resultElement.setValue("wordCount", String.valueOf(words.size()));
 		resultsElement.appendChild(resultElement);
-		currentQuickscrapeNorma.writeResults(outputFilename, resultsElement);
+		getOrCreateContentProcessor().writeResults(outputFilename, resultsElement);
 	}
 	
 	// =============================
