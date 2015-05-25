@@ -295,7 +295,7 @@ public class SVGXTree extends SVGG {
 	private int addOtu(Element otus, int otuCount, NexmlNode node,
 			List<SVGElement> elements) {
 		String otuId = T+(++otuCount);
-		node.setOtu(otuId);
+		node.setOtuRef(otuId);
 		NexmlOtu otu = new NexmlOtu();
 		otu.setId(otuId);
 		node.setLabel(elements.get(0).getValue());

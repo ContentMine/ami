@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import nu.xom.Attribute;
+import nu.xom.ParentNode;
 
 import org.apache.log4j.Logger;
+import org.xmlcml.euclid.Int2;
 import org.xmlcml.euclid.Real2;
 
 public class NexmlNode extends NexmlElement {
@@ -44,8 +46,12 @@ public class NexmlNode extends NexmlElement {
 		this.addAttribute(new Attribute(ROOT, bool));
 	}
 
-	public void setOtu(String otuId) {
+	public void setOtuRef(String otuId) {
 		this.addAttribute(new Attribute(OTU, otuId));
+	}
+
+	public String getOtuRef() {
+		return this.getAttributeValue(OTU);
 	}
 
 	public void setXY2(Real2 xy) {
@@ -117,7 +123,7 @@ public class NexmlNode extends NexmlElement {
 			}
 			sb.append(")");
 		}
-		sb.append(this.getId());
+		sb.append(this.getNewickLabel());
 		if (parentNexmlNode != null) {
 			Double distance = this.getDistance(parentNexmlNode);
 			if (distance != null) {
@@ -125,6 +131,19 @@ public class NexmlNode extends NexmlElement {
 			}
 		}
 		return sb.toString();
+	}
+
+	private String getNewickLabel() {
+		String label = null;
+		NexmlOtu otu = getOtu();
+		if (otu != null) {
+			label = otu.getValue();
+			label = label.replaceAll(".*\\(", "");
+			label = label.replaceAll("\\)", "");
+			label = label.replaceAll(" ", "");
+		}
+		label = (label == null) ? this.getId() : label;
+		return label;
 	}
 
 	private Double getDistance(NexmlNode parentNexmlNode) {
@@ -209,5 +228,44 @@ public class NexmlNode extends NexmlElement {
 
 	public void addChildNode(NexmlNode childNexmlNode) {
 		this.childNexmlNodes.add(childNexmlNode);
+	}
+
+	public Int2 getInt2() {
+		return Int2.getInt2(getXY2());
+	}
+	
+	
+
+	public void setOtuValue(String singlePhraseValue) {
+		String otuId = this.getOtuRef();
+		if (otuId != null) {
+			NexmlOtu otu = getOtuFromOtuRef(otuId);
+			if (otu != null) {
+				otu.appendChild(singlePhraseValue);
+			} else {
+				LOG.error("Cannot find OTU" +otuId);
+			}
+		}
+	}
+
+	private NexmlOtu getOtuFromOtuRef(String otuRef) {
+		NexmlOtu otu = null;
+		if (otuRef != null) {
+			NexmlNEXML nexmlNEXML = this.getNexmlNEXML();
+			NexmlOtus otus = (nexmlNEXML == null) ? null : nexmlNEXML.getSingleOtusElement();
+		    otu = (otus == null) ? null : otus.getOtuById(otuRef);
+		}
+		return otu;
+	}
+
+	private NexmlNEXML getNexmlNEXML() {
+		ParentNode parent = this.getParent();
+		parent = (parent == null) ? null : parent.getParent();
+		parent = (parent == null) ? null : parent.getParent();
+		return (NexmlNEXML) parent;
+	}
+	
+	public NexmlOtu getOtu() {
+		return getOtuFromOtuRef(this.getOtuRef());
 	}
 }

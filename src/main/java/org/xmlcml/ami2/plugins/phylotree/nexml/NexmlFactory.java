@@ -92,7 +92,7 @@ public class NexmlFactory {
 		getOrCreateNexmlNEXML();
 		NexmlTree nexmlTree = new NexmlTree();
 		nexmlTrees.appendChild(nexmlTree);
-		String treeId = TREE_ID+nexmlTrees.getTreeList().size();
+		String treeId = TREE_ID+nexmlTrees.getOrCreateTreeList().size();
 		nexmlTree.setId(treeId);
 		PixelNodeList pixelNodeList = diagramTree.getGraph().getNodeList();
 		if (rootPixelNode == null) {
@@ -207,7 +207,7 @@ public class NexmlFactory {
 		nexmlOtus.appendChild(otu);
 		String otuId = OTU+nexmlOtus.getChildCount();
 		otu.setId(otuId);
-		nexmlNode.setOtu(otuId);
+		nexmlNode.setOtuRef(otuId);
 		return nexmlNode;
 	}
 

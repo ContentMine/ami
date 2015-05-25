@@ -90,8 +90,6 @@ public class NexmlElement extends Element {
 	 */
 	public static NexmlElement readAndCreateNEXML(File file) throws Exception {
 		return readAndCreateNEXML(new FileInputStream(file));
-//		Element element = XMLUtil.parseQuietlyToDocument(file).getRootElement();
-//		return (element == null) ? null : (NexmlElement) readAndCreateNEXML(element);
 	}
 	
 	/** converts an NEXML file to NEXMLElement

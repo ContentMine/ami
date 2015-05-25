@@ -11,6 +11,7 @@ import nu.xom.Attribute;
 import nu.xom.Element;
 
 import org.apache.log4j.Logger;
+import org.xmlcml.euclid.Int2;
 import org.xmlcml.xml.XMLUtil;
 
 import com.google.common.collect.ArrayListMultimap;
@@ -25,13 +26,15 @@ public class NexmlTree extends NexmlElement {
 	private List<NexmlNode> nodeList;
 	private List<NexmlEdge> edgeList;
 	private Map<String, NexmlNode> nodeByIdMap;
-	private Multimap<String, NexmlEdge> edgeBySourceMap;
-	private Multimap<String, NexmlEdge> edgeByTargetMap;
+	private Multimap<String, NexmlEdge> edgeBySourceIdMap;
+	private Multimap<String, NexmlEdge> edgeByTargetIdMap;
 	private NexmlNode rootNexmlNode;
 	private List<NexmlNode> rootList;
 	private Set<NexmlNode> unusedNodeSet;
 	private Set<NexmlNode> tipSet;
 	private HashSet<NexmlNode> branchNodeSet;
+	private List<NexmlNode> tipNodeList;
+	private Map<Int2, NexmlNode> tipByCoordMap;
 
 	/** constructor.
 	 * 
@@ -64,13 +67,13 @@ public class NexmlTree extends NexmlElement {
 		if (edgeList == null) {
 			edgeList = new ArrayList<NexmlEdge>();
 			List<Element> edgeElements = XMLUtil.getQueryElements(this, "./*[local-name()='edge']");
-			edgeByTargetMap = ArrayListMultimap.create();
-			edgeBySourceMap = ArrayListMultimap.create();
+			edgeByTargetIdMap = ArrayListMultimap.create();
+			edgeBySourceIdMap = ArrayListMultimap.create();
 			for (Element edge : edgeElements) {
 				NexmlEdge nexmlEdge = (NexmlEdge) edge;
 				edgeList.add(nexmlEdge);
-				edgeBySourceMap.put(nexmlEdge.getSourceId(), nexmlEdge);
-				edgeByTargetMap.put(nexmlEdge.getTargetId(), nexmlEdge);
+				edgeBySourceIdMap.put(nexmlEdge.getSourceId(), nexmlEdge);
+				edgeByTargetIdMap.put(nexmlEdge.getTargetId(), nexmlEdge);
 			}
 		}
 		return edgeList;
@@ -101,13 +104,13 @@ public class NexmlTree extends NexmlElement {
 	}
 
 	List<NexmlEdge> getSourceEdges(String sourceId) {
-		List<NexmlEdge> edgeList = new ArrayList<NexmlEdge>(edgeBySourceMap.get(sourceId));
+		List<NexmlEdge> edgeList = new ArrayList<NexmlEdge>(edgeBySourceIdMap.get(sourceId));
 		LOG.trace("E> "+sourceId+"; "+edgeList);
-		return new ArrayList<NexmlEdge>(edgeBySourceMap.get(sourceId));
+		return new ArrayList<NexmlEdge>(edgeBySourceIdMap.get(sourceId));
 	}
 
 	List<NexmlEdge> getTargetEdges(String target) {
-		return new ArrayList<NexmlEdge>(edgeByTargetMap.get(target));
+		return new ArrayList<NexmlEdge>(edgeByTargetIdMap.get(target));
 	}
 
 	/** checks relationship of nodes and edges and adds parent/child to nodes.
@@ -164,7 +167,7 @@ public class NexmlTree extends NexmlElement {
 		return rootNexmlNode.getNewick();
 	}
 
-	private NexmlNode getRootNode() {
+	public NexmlNode getRootNode() {
 		if (rootNexmlNode == null) {
 			LOG.error("No root Node ... looking ");
 			getNodeListAndMap();
@@ -190,4 +193,31 @@ public class NexmlTree extends NexmlElement {
 		return rootList;
 	}
 
+	public List<NexmlNode> getTipNodeList() {
+		if (tipNodeList == null) {
+			getNodeListAndMap();
+			tipNodeList = new ArrayList<NexmlNode>();
+			for (NexmlNode nexmlNode : nodeList) {
+				if (nexmlNode.getOtuRef() != null) {
+					tipNodeList.add(nexmlNode);
+				}
+			}
+		}
+		return tipNodeList;
+	}
+
+	public Map<Int2, NexmlNode> getTipByCoordMap() {
+		if (tipByCoordMap == null) {
+			tipByCoordMap = new HashMap<Int2, NexmlNode>();
+			getTipNodeList();
+			for (NexmlNode tipNode : tipNodeList) {
+				Int2 xy2 = tipNode.getInt2();
+				if (xy2 != null) {
+					tipByCoordMap.put(xy2, tipNode);
+				}
+			}
+		}
+		return tipByCoordMap;
+	}
+	
 }

@@ -45,11 +45,11 @@ public class NexmlNEXML extends NexmlElement {
 
 	private List<NexmlTree> getTreeList() {
 		NexmlTrees nexmlTrees = getTreesElement();
-		treeList = nexmlTrees.getTreeList();
+		treeList = nexmlTrees.getOrCreateTreeList();
 		return treeList;
 	}
 
-	private NexmlTrees getTreesElement() {
+	public NexmlTrees getTreesElement() {
 		List<Element> elementList = XMLUtil.getQueryElements(this, "./*[local-name()='trees']");
 		return elementList.size() != 1 ? null : (NexmlTrees) elementList.get(0);
 	}
@@ -60,5 +60,14 @@ public class NexmlNEXML extends NexmlElement {
 			tree.buildTree();
 		}
 	}
-	
+
+	public NexmlOtus getSingleOtusElement() {
+		return (NexmlOtus) XMLUtil.getSingleElement(this, "*[local-name()='"+NexmlOtus.TAG+"']");
+	}
+
+	public NexmlTree getSingleTree() {
+		NexmlTrees nexmlTrees = getTreesElement();
+		return (nexmlTrees == null) ? null : (nexmlTrees.size() != 1 ? null : nexmlTrees.get(0)); 
+	}
+
 }
