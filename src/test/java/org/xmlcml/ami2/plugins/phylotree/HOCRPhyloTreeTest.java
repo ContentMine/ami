@@ -128,6 +128,7 @@ public class HOCRPhyloTreeTest {
 		NexmlNEXML nexmlNEXML = (NexmlNEXML) NexmlElement.readAndCreateNEXML(PHYLOTREE_364_NEXML);
 		NexmlTree nexmlTree = nexmlNEXML.getSingleTree();
 		Assert.assertNotNull(nexmlTree);
+		
 		List<NexmlNode> tipNodeList = nexmlTree.getTipNodeList();
 		Assert.assertEquals(70, allLineList.size());
 		for (NexmlNode tipNode : tipNodeList) {
@@ -139,7 +140,6 @@ public class HOCRPhyloTreeTest {
 				Real2 lineXY2 = wordLine.getChildRectBoundingBox().getMidPoint(BoxDirection.LEFT);
 				Real2 diffXY2 = lineXY2.subtract(tipXY2); 
 				if (joiningBox.includes(diffXY2)) {
-//					System.out.println(" ... "+diffXY2+"; "+wordLine.toString() +"; "+wordLine.getChildRectBoundingBox().getXMin());
 					System.out.println(" ... "+diffXY2+"; "+wordLine.getSinglePhraseValue() +"; "+wordLine.getChildRectBoundingBox().getXMin());
 					lineList.add(wordLine);
 				}
@@ -153,6 +153,40 @@ public class HOCRPhyloTreeTest {
 		nexmlNEXML.debug();
 		String newick = nexmlNEXML.createNewick();
 		LOG.debug("NEWICK "+newick);
+	}
+	
+	@Test
+	public void testMerge1() throws Exception {
+		HOCRReader hocrReader = new HOCRReader();
+		
+		hocrReader.readHOCR(new FileInputStream(HOCR_364_HTML));
+		SVGSVG svgSvg = (SVGSVG) hocrReader.getOrCreateSVG();
+		List<SVGWordLine> allLineList = svgSvg.getSingleSVGPage().getSVGLineList();
+		for (SVGWordLine wordLine : allLineList) {
+			wordLine.makePhrasesFromWords();
+		}
+		
+		NexmlNEXML nexmlNEXML = (NexmlNEXML) NexmlElement.readAndCreateNEXML(PHYLOTREE_364_NEXML);
+		NexmlTree nexmlTree = nexmlNEXML.getSingleTree();
+		
+		List<NexmlNode> tipNodeList = nexmlTree.getTipNodeList();
+		for (NexmlNode tipNode : tipNodeList) {
+			Real2 tipXY2 = tipNode.getXY2();
+			List<SVGWordLine> lineList = new ArrayList<SVGWordLine>();
+			for (SVGWordLine wordLine : allLineList) {
+				Real2 lineXY2 = wordLine.getChildRectBoundingBox().getMidPoint(BoxDirection.LEFT);
+				Real2 diffXY2 = lineXY2.subtract(tipXY2); 
+				if (joiningBox.includes(diffXY2)) {
+					lineList.add(wordLine);
+				}
+			}
+			if (lineList.size() == 1) {
+				tipNode.setOtuValue(lineList.get(0).getSinglePhraseValue());
+			} else if (lineList.size() > 1) {
+				LOG.error("competing words for tip");
+			}
+		}
+		String newick = nexmlNEXML.createNewick();
 	}
 	/**
 	 * words:
