@@ -80,7 +80,7 @@ public class DigramTest {
 		Assert.assertEquals("ngramsList", 139, ngramGeneratorList.size());
 		int i = 0;
 		for (NGramGenerator generator : ngramGeneratorList) {
-			System.out.println(generator.size());
+			//System.out.println(generator.size());
 //			Assert.assertEquals("ngram", ngramsLength[i++], generator.size());
 		}
 	}
@@ -89,12 +89,12 @@ public class DigramTest {
 	@Test
 	public void testDigrams() {
 		List<String> digrams = ngramGeneratorList.get(0).getNGrams(2);
-		System.out.println(digrams);
+		//System.out.println(digrams);
 		Multiset<String> digramSet = HashMultiset.create();
 		for (String digram : digrams) {
 			digramSet.add(digram);
 		}
-		System.out.println(digramSet);
+		//System.out.println(digramSet);
 	}
 	
 	@Test
@@ -112,7 +112,7 @@ public class DigramTest {
 					continue;
 				}
 				if (containsUnusual(digram0)) {
-					LOG.debug(digram0);
+					LOG.trace(digram0);
 				}
 				if (inBlacklist(digram0)) continue;
 				digramSet.add(digram0);
@@ -122,17 +122,17 @@ public class DigramTest {
 		for (Entry<String> entry : sortedSet) {
 			String vv = entry.getElement();
 			if (vv.contains("?")) {
-				LOG.debug(vv);
+				LOG.trace(vv);
 			}
 		}
-		System.out.println(sortedSet);
+		//System.out.println(sortedSet);
 	}
 
 	private boolean containsUnusual(String ss) {
 		for (int i = 0; i < ss.length(); i++) {
 			char ch = ss.charAt(i);
 			if (!Character.isAlphabetic(ch) && !Character.isDigit(ch) && ch != '~' && ch != ' ') {
-				LOG.debug(">"+(char)ch+">"+(int)ch);
+				LOG.trace(">"+(char)ch+">"+(int)ch);
 				return true;
 			}
 		}

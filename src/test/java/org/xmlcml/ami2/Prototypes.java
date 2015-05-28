@@ -1,18 +1,22 @@
 package org.xmlcml.ami2;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.xmlcml.ami2.plugins.word.WordPlugin;
 import org.xmlcml.norma.Norma;
 
 public class Prototypes {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 //		runHalThesis1();
 //		runHalThesis2();
-		runHalTheses();
+//		runHalTheses();
+		createPDFImages("journal.pone.0115884a");
 	}
 
 	private static void runHalThesis1() {
-//		new Norma().run("-q examples/theses/HalThesis1 -i fulltext.pdf -o fulltext.pdf.txt --xsl pdf2txt");
+//		new Norma().run("-q examples/theses/HalThesis1 -i fulltext.pdf -o fulltext.pdf.txt --transform pdf2txt");
 	}
 
 	private static void runHalThesis2() {
@@ -52,6 +56,19 @@ public class Prototypes {
 
 	private static void createPDFTXT(String name) {
 		new Norma().run("-i examples/theses/"+name+".pdf -o examples/theses/");
-		new Norma().run("-q examples/theses/"+name+" -i fulltext.pdf -o fulltext.pdf.txt --xsl pdf2txt");
+		new Norma().run("-q examples/theses/"+name+" -i fulltext.pdf -o fulltext.pdf.txt --transform pdf2txt");
+	}
+	
+
+	/** extracts images and writes to (new) images/directory.
+	 * 
+	 * @param name
+	 * @throws Exception
+	 */
+	private static void createPDFImages(String name) throws Exception {
+		String cmDirName = "../norma/src/test/resources/org/xmlcml/norma/pubstyle/plosone/"+name+"/";
+		String targetName = "../ami-plugin/target/imagetest/";
+		FileUtils.copyDirectory(new File(cmDirName), new File(targetName));
+		new Norma().run("-q "+targetName+" -i fulltext.pdf -o images/ --transform pdf2images");
 	}
 }

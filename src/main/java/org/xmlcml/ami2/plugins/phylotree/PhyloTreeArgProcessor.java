@@ -96,7 +96,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		SVGElement svgElement = SVGElement.readAndCreateSVG(inputFile);
 		SVGXTree tree1 = SVGXTree.makeTree(svgElement, 1.0, MergeMethod.TOUCHING_LINES);
 		tree = tree1;
-		LOG.debug("tree "+tree.toXML());
+		LOG.trace("tree "+tree.toXML());
 	}
 
 	private void createNexmlAndTreeFromPixels(File inputFile) throws IOException {
@@ -105,7 +105,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		DiagramTree diagramTree = phyloTreePixelAnalyzer.processImageIntoGraphsAndTree();
 		PixelNode rootPixelNode = diagramTree.getRootPixelNode();
 		PixelGraph graph = diagramTree.getGraph();
-		LOG.debug("Root pixelNode "+rootPixelNode);
+		LOG.trace("Root pixelNode "+rootPixelNode);
 		// use root node later...
 		graph.tidyNodesAndEdges(5.0);
 		diagramTree = new PhyloTreePixelAnalyzer().createFromGraph(graph, rootPixelNode);
@@ -117,7 +117,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		XMLUtil.debug(nexmlNEXML, new FileOutputStream("target/phylotree/tree.nexml"), 1);
 		String newick = nexmlNEXML.createNewick();
 		FileUtils.write(new File("target/phylotree/tree.nwk"), newick);
-		LOG.debug("NEWICK "+newick);
+		LOG.trace("NEWICK "+newick);
 	}
 
 	private PhyloTreePixelAnalyzer createAndConfigurePixelAnalyzer(BufferedImage image) {
