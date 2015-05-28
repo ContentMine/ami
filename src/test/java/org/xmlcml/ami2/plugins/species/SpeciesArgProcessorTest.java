@@ -96,7 +96,7 @@ public class SpeciesArgProcessorTest {
 //	public void testMalariaArgProcessorNorma() throws Exception {
 //		File newDir = new File("target/plosone/species/malaria");
 //		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_MALARIA_0119475, newDir);
-//		String args = "-q "+newDir+" -i fulltext.xml -o scholarly.html -x nlm2html"; 
+//		String args = "-q "+newDir+" -i fulltext.xml -o scholarly.html --transform nlm2html"; 
 //		Norma norma = new Norma();
 //		norma.run(args);
 //	}

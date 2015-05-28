@@ -79,7 +79,7 @@ public class TesseractTest {
 			for (String line : lines) {
 				Matcher matcher = SPEC_STRAIN_ACCESS.matcher(line);
 				if (matcher.matches()) {
-					LOG.debug(matcher.group(1)+"//"+matcher.group(2)+"//"+matcher.group(3));
+					LOG.trace(matcher.group(1)+"//"+matcher.group(2)+"//"+matcher.group(3));
 				}
 			}
 		}
