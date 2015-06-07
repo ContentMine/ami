@@ -1,0 +1,83 @@
+Pedobacter panaciterrae Gsoil 042T (ABZ45368)
+Pedobacter heparinus DSM 2366T (AJ438172)
+Pedobacter africanus DSM 12126T (AJ438171)
+Pedobacter caeni LMG 22862T (AJ786798)
+Pedobacter ginsengisoli Gsoil 104T (AB245371)
+Pedobacter insulae DS—39T (EF100697)
+
+100 Sphingobacterium antarcticum 6B1Y (AJ576248)
+Pedobacter piscium DSM 11725T (AJ438174)
+
+99 Pedobacter cryoconitis DSM 14825T (AJ438170)
+98 Pedobacter hima/ayensis HHS 22T (AJ583425)
+Pedobacter aquatilis AR107T (AM114396)
+Pedobacter roseus CL—GP80T (DQ1 12353)
+ELEPedobacter suwonensis 15—52T (DQOQ7274)
+68 Pedobacter sandarakinus DS—27T (DQ235228)
+Pedobacter composti TR6-06T (A8267720)
+
+Pedobacter lentus DS—40T (EF446146)
+Pedobacter terrico/a DS—45T (EF446147)
+
+    
+    
+ 
+
+0.02
+
+ 
+
+66
+
+ 
+
+ 
+
+74
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+100
+
+ 
+
+ 
+
+Pedobacter saltans DSM 12145T (AJ438173)
+83 Olivibacter sitiensis AW-6T (DQ421387)
+93 mbacmr koreensis Jip14T (D0680836)
+|—Pseudosphingobacterium domesticum DC—186T (AM407725)
+
+100 Sphingobacter/um daejeonense TR6—04T (AB249372)
+97 99 Sphingobacterium mizutaii DSM 11724T(AJ438175)
+Sphingobacterium composti 4M24T (EF122436)
+Sphingobacterium spiritivorum DSM 2582 (AJ459411)
+Sphingobacterium faecium DSM 11690T (AJ438176)
+71 @hiﬂgobacterium thalpophilum DSM 11723T (AJ438177)
+
+98 Sphingobacterium multivorum IAM 14316T (AB100738)
+
+Bacteroides fragilis DSM 2151T (A8050106)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+

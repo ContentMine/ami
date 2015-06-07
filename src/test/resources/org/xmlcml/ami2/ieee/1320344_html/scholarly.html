@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml" style="" class=" js postmessage history draganddrop borderimage borderradius boxshadow textshadow cssgradients csstransforms no-csstransforms3d csstransitions generatedcontent localstorage sessionstorage">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge" />     
+      <title>IEEE Xplore Full-Text HTML : System-on-a-package (SOP) module development for a digital,
+         RF and optical mixed signal integrated system
+      </title> 
+   </head> 
+   <body>   
+      <div id="LayoutWrapper">              <span id="recordId" style="display:none;">1320344</span>   
+         <hr /> 
+         <div id="BodyWrapper" class="ArticlePage"> 
+            <div id="Body">  
+               <div class="column-main">  
+                  <div id="article">  
+                     <div class="section" id="sec1"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION I
+                           </div> 
+                           <h2>INTRODUCTION</h2> 
+                        </div> 
+                        <p>The System-on-a-package (SOP) concept is being widely deployed as the key solution
+                           for low-cost multi-functional electronic systems. Especially, for the wired and wireless
+                           communication applications, SOP approach is more appropriate than System-on-a-Chip
+                           (SOC), because the communication modules require critical passive components that
+                           cannot be realized by IC process.<a id="note-ref_1a"></a> <a id="note-ref_2a"></a> <a id="note-ref_3a"></a> The "Intelligent Network Communicator (INC)" testbed project is the symbolic showcase
+                           of SOP concept and has been driven by NSF Packaging Research Center (PRC) in Georgia
+                           Tech since 2001 [<a href="#ref_1">1</a>] [<a href="#ref_2">2</a>] [<a href="#ref_3">3</a>]. The goals and objectives of the INC System testbed were to explore new systems
+                           architectures that can be enabled by SOP technologies. All the available technologies
+                           related to micro-system development, which includes design, material, fabrication
+                           and test, are being adopted and verified through the process of building INC system
+                           hardware. The INC is composed of three functional sub-blocks: the digital, analog
+                           and optical blocks. The function of the INC is to transmit and receive the high-speed
+                           digital signals and RF signals concurrently over the optical channel. The multi-Gbps
+                           digital signal generated at the digital block is combined with the RF signal at the
+                           analog block. The combined signal is optically modulated and transferred through the
+                           embedded optical waveguide. The light wave signal is down converted to the electrical
+                           domain again and the electrical domain mixed signal is separated to the digital and
+                           RF signal by the embedded multilayered mixed signal divider System specifications
+                           of each of the blocks has been defined to deal with their major barriers while incorporating
+                           with other blocks for single functional goal.
+                        </p> 
+                        <p>The system has been rigorously tested at the each of subsystem group, RF, digital
+                           and optical group in PRC. After verifying the system at the subsystem level, the overall
+                           system test has been performed. The test results clearly show that the measurement
+                           results meet the target specifications.
+                        </p> 
+                     </div> 
+                     <div class="section" id="sec2"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION II
+                           </div> 
+                           <h2>INC SYSTEM DESIGN</h2> 
+                        </div> 
+                        <div class="figure figure-full" id="fig_1"> 
+                           <div class="img-wrap"> <a href="/ielx5/9210/29211/1320344/html/img/1320344-fig-1-large.gif"><img src="/ielx5/9210/29211/1320344/html/img/1320344-fig-1-small.gif" width="411" height="279" alt="Figure 1" /><div class="zoom" title="View Larger Image"></div></a> 
+                           </div> 
+                           <div class="figcaption"> <b class="title">Fig. 1</b> INC System configuration
+                           </div>  
+                        </div> 
+                        <p>The proposed INC system configuration is shown in <a href="#fig_1">fig. 1</a>. At the digital block, a multigigabit pseudo random digital bit sequence is generated
+                           by using FPGA and compared with the received signal after passing the analog and optical
+                           blocks. The multi-channel signals from FPGA (Virtex 50E, Xlinx) are converted into
+                           serial data stream by the transceiver IC (TLK 2701, TI), which also includes MUX,
+                           DMUX, and are fed to the analog block. The FPGA at the receiver stage compares the
+                           known input data bit stream and the recovered data from the receiver to evaluate the
+                           system performance. An FPGA is programmed to generate sixteen parallel data channel
+                           (150Mbs/c/s) which are taken by a MUX used to convert the parallel data to a 2.488
+                           Gbs/s serial signal. This signal is the input of RF section, which is integrated into
+                           a same board. To reduce the interference from the digital part, a separated ground
+                           and power were designed. A co-planar waveguide and matching network was used for RF
+                           input and conversion of differential signal to single-ended signal.
+                        </p> 
+                        <p>At the analog block, two narrowband RF signals, which are generated by the Electronic
+                           Signal Generator for 802.1la/b wireless LAN signal and by the voltage controlled oscillator
+                           for 5?6 GHz range of single tone signal are being combined with the multi-Gbps digital
+                           data stream from the digital block. The high frequency component of the digital signal
+                           is truncated by the embedded low pass filter before combining. A mixed signal combiner
+                           for combining digital and RF signal is designed utilizing the multilayer organic packaging
+                           technology. A voltage controlled oscillator IC is specially developed in Mesfet process.
+                           The VCO is utilizing an embedded high-Q inductor built in the substrate to reduce
+                           the phase noise of the IC. The embedded inductor is optimized to get the best performance
+                           at 5GHz. The combined electrical signal is fed to the input of the optical modulator.
+                        </p> 
+                        <p>At the optical block, the RF and digital signals are modulated to the optical domain
+                           by one Mach-Zehnder modulator and a VCSEL direct modulation scheme, whose wavelengths
+                           are 1550nm and 870nm, respectively. The optical signal is initially transmitted through
+                           one multimode optical fiber channel and coupled into the embedded optical waveguide
+                           by the Butt coupling method. In order to integrate long (5 to 15 cm) polymer waveguides
+                           on flexible FR-4 boards that contain two metal layers separated by a low temperature
+                           insulating polymer layer, critical technical issues, which include board flexibility,
+                           long range board non planarity and short range roughness, and coefficient of thermal
+                           expansion (CTE) matching, have to be addressed.
+                        </p> 
+                        <p>At the receiver end, the electrical signal is obtained by the photo detector. The
+                           electrical signal is amplified using TIA and separated by an embedded mixed signal
+                           splitter, which is identical with the combiner. The recovered digital signal is differentiated
+                           to separate channels and transmitted to another FPGA for the purpose of comparing
+                           with the transmitted signal.
+                        </p> 
+                     </div> 
+                     <div class="section" id="sec3"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION III
+                           </div> 
+                           <h2>SOP TECHNOLOGY FOR INC REALIZATION</h2> 
+                        </div> 
+                        <p>The entire development flow including design, fabrication and test is shown in <a href="#fig_2">fig. 2</a>. The INC testbed was fabricated using the PRC baseline process which had been previously
+                           characterized through extensive digital and RF design and fabrication test vehicles.
+                           The substrates utilized the thin-film build-up microvia technology on high Tg organic
+                           based substrates. This photovia dielectric has a dielectric constant 3.4 and a loss
+                           of 0.015 at 1 GHz. The build-up structure consisted of three metal layers with two
+                           staggered photovia layers. The optical waveguides were fabricated on top of the dielectric
+                           layer using photoimageable polysiloxane materials for planarization, bottom cladding,
+                           waveguide core, and top cladding layers. The ground rules used for the testbed were
+                           <span class="inline-formula"><img align="bottom" src="/ielx5/9210/29211/1320344/html/img/1320344-eqin-1-small.png" width="40" height="15" alt="Formula" /><span class="html-formula"></span><span class="tex">$10\mu {\rm m}$</span></span> copper thickness, <span class="inline-formula"><img align="bottom" src="/ielx5/9210/29211/1320344/html/img/1320344-eqin-2-small.png" width="40" height="15" alt="Formula" /><span class="html-formula"></span><span class="tex">$30\mu{\rm m}$</span></span> dielectric thickness, and the optical layers were typically <span class="inline-formula"><img align="bottom" src="/ielx5/9210/29211/1320344/html/img/1320344-eqin-3-small.png" width="60" height="15" alt="Formula" /><span class="html-formula"></span><span class="tex">$3-8\mu {\rm m}$</span></span> thick. The first metal layer was subtractive etched and was limited to <span class="inline-formula"><img align="bottom" src="/ielx5/9210/29211/1320344/html/img/1320344-eqin-4-small.png" width="40" height="16" alt="Formula" /><span class="html-formula"></span><span class="tex">$75\mu {\rm m}$</span></span> lines and spaces. Fine lines and spaces of <span class="inline-formula"><img align="bottom" src="/ielx5/9210/29211/1320344/html/img/1320344-eqin-5-small.png" width="77" height="16" alt="Formula" /><span class="html-formula"></span><span class="tex">$20-25\mu {\rm m}$</span></span> were fabricated on the two build-up metal layers. The microvias were defined with
+                           UV lithography and developed to nominal diameters of <span class="inline-formula"><img align="bottom" src="/ielx5/9210/29211/1320344/html/img/1320344-eqin-6-small.png" width="85" height="16" alt="Formula" /><span class="html-formula"></span><span class="tex">$75-100\mu {\rm m}$</span></span>. The optical waveguide cores were <span class="inline-formula"><img align="bottom" src="/ielx5/9210/29211/1320344/html/img/1320344-eqin-7-small.png" width="68" height="16" alt="Formula" /><span class="html-formula"></span><span class="tex">$8-50\mu {\rm m}$</span></span> wide for single and multimode. The boards were finished with a layer of Taiyo AUS-5
+                           liquid photo imageable solder mask (<span class="inline-formula"><img align="bottom" src="/ielx5/9210/29211/1320344/html/img/1320344-eqin-8-small.png" width="40" height="16" alt="Formula" /><span class="html-formula"></span><span class="tex">$15\mu{\rm m}$</span></span> thickness) and the pad finish used was electroless nickel, immersion gold for assembly
+                           of SMT components. <a href="#fig_3">Figure 3</a> shows a typical cross-section of the three metal layer build-up microvia structure
+                           used for the INC substrate. After initial substrates were fabricated and tested, additional
+                           substrates were co-developed with Endicott Interconnect (EIT, former IBM Endicott)
+                           for reliability testing.
+                        </p> 
+                        <div class="figure figure-full" id="fig_2"> 
+                           <div class="img-wrap"> <a href="/ielx5/9210/29211/1320344/html/img/1320344-fig-2-large.gif"><img src="/ielx5/9210/29211/1320344/html/img/1320344-fig-2-small.gif" width="446" height="296" alt="Figure 2" /><div class="zoom" title="View Larger Image"></div></a> 
+                           </div> 
+                           <div class="figcaption"> <b class="title">Fig. 2</b> INC system development flow
+                           </div>  
+                        </div> 
+                        <div class="figure figure-full" id="fig_3"> 
+                           <div class="img-wrap"> <a href="/ielx5/9210/29211/1320344/html/img/1320344-fig-3-large.gif"><img src="/ielx5/9210/29211/1320344/html/img/1320344-fig-3-small.gif" width="397" height="138" alt="Figure 3" /><div class="zoom" title="View Larger Image"></div></a> 
+                           </div> 
+                           <div class="figcaption"> <b class="title">Fig. 3</b> Cross-sectional view of the multilayer board with build-up microvia structure
+                           </div>  
+                        </div> 
+                     </div> 
+                     <div class="section" id="sec4"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION IV
+                           </div> 
+                           <h2>DIGITAL BLOCK RESULTS</h2> 
+                        </div> 
+                        <p>The digital block is composed of the transmitting and the receiving parts. They work
+                           as a pre- and after-processing for the communication system. The layout had to be
+                           considered carefully to reduce the interference from each othe r. Moreover, there
+                           were several power levels and different ground reference plane requirements in both
+                           digital and RF block. In this testbed the following techniques were used: 1) <i>Embedded decoupling capacitors</i>. The embedded capacitors were supposed to have better properties than the discrete
+                           ones with low parasitic inductance and resistance. In case the fabrication of the
+                           embedded capacitors failed, forty-two discrete decoupling capacitors were designed.
+                           2) <i>Split power and ground planes</i>. There were three voltage levels: 3.3 V, 2.5 V and 1.8 V. A split power plane was
+                           used in the testbed. To minimize the coupling though a shared power supply, three
+                           ferrite beads were used. The split ground plane occupies the second and third metal
+                           layers underneath the signal layer serving digital and RF part respectively. 3) One
+                           <i>50 Ohm zigzag microstrip line</i> was designed with small delay difference between those lines for a high speed transmission.
+                        </p> 
+                        <p>Various time-domain waveforms were measured and the results are shown in <a href="#fig_4">Fig. 4</a> It is obvious that the waveform at speed of 3.2 Gbps is clear, which means the noise
+                           suppression was successful. he outputs of the FPGA verify that the impedance of the
+                           transmission line matches well.
+                        </p> 
+                        <div class="figure figure-full" id="fig_4"> 
+                           <div class="img-wrap"> <a href="/ielx5/9210/29211/1320344/html/img/1320344-fig-4-large.gif"><img src="/ielx5/9210/29211/1320344/html/img/1320344-fig-4-small.gif" width="424" height="420" alt="Figure 4" /><div class="zoom" title="View Larger Image"></div></a> 
+                           </div> 
+                           <div class="figcaption"> <b class="title">Fig. 4</b> Digital block measured results
+                           </div>  
+                        </div> 
+                     </div> 
+                     <div class="section" id="sec5"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION V
+                           </div> 
+                           <h2>ANALOG BLOCK RESULTS</h2> 
+                        </div> 
+                        <p>The analog block of the INC system focuses on the study of mixed signal architectures,
+                           which can provide enhanced bandwidth, frequency and data rates in real time. The goal
+                           is to combine high-speed broadband digital signals up to 10Gbps and RF carriers in
+                           the frequency range between 5?14 GHz. Various passive and active components for the
+                           realization of efficient RF-digital interfaces have been implemented and evaluated,
+                           and design rules are to be derived for various frequency ranges.
+                        </p> 
+                        <p>Numerous RF passives, that have been designed and developed in RF testbed, have been
+                           integrated in the INC system. A mixed signal combiner has been developed using PRC's
+                           multilayered organic package. The combiner has excellent isolation between digital
+                           and RF port and shows only ?1dB of insertion loss at 5.8GHz.<a id="note-ref_4a"></a> Linear phase low-pass filter has been developed as a part of the mixed signal combiner
+                           [<a href="#ref_4">4</a>].
+                        </p> 
+                        <p>A Voltage controlled oscillator module has been developed and successfully demonstrated
+                           for 5.8GHz operation. The customary designed cross-coupled VCO has been fabricated
+                           using commercial based MESFET process without inductors. The bare die IC is wire-bonded
+                           to the two embedded inductors which are built on the organic substrate. It is clear
+                           that the high-Q inductor is essential for a significantly reduced phase noise of the
+                           VCO.<a id="note-ref_2b"></a> The VCO module used for INC testbed shows the phase noise of ?110 dBc @ 6MHz offset
+                           frequency and ?10 dBm of output power [<a href="#ref_2">2</a>].
+                        </p> 
+                     </div> 
+                     <div class="section" id="sec6"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION VI
+                           </div> 
+                           <h2>OPTICAL BLOCK RESULTS</h2> 
+                        </div> 
+                        <p>In the optical block, the optical waveguide (WG) structure is integrated on a built-up
+                           layer printed wiring board (PWB). The waveguide material is epoxy-based Siloxane oligomer.
+                           The waveguide core cross sections are 50 <span class="inline-formula"><img align="bottom" src="/ielx5/9210/29211/1320344/html/img/1320344-eqin-9-small.png" width="80" height="16" alt="Formula" /><span class="html-formula"></span><span class="tex">$\mu{\rm m}\ {\rm x}\ 7\ \mu{\rm m}$</span></span>, contain an "S" turn at mid section, each turn having 1 cm turn radius, and are up
+                           to 14 cm in length. The ends of the waveguides are polished to improve the optical
+                           quality. Optical fiber pigtails are used to end-couple light in and out of the array.
+                        </p> 
+                        <p><a href="#fig_5">Fig. 5</a> shows a polished cross section of one waveguide in an array of eight embedded waveguides
+                           in PWB. The core is accentuated by incandescent light illumination from the opposite
+                           end of the waveguide. The power and ground planes in the built-up PWB layer are clearly
+                           seen. The indices of refraction of the cross linked waveguide polymer materials for
+                           core and cladding are <span class="inline-formula"><img align="bottom" src="/ielx5/9210/29211/1320344/html/img/1320344-eqin-10-small.png" width="176" height="17" alt="Formula" /><span class="html-formula"></span><span class="tex">${\rm n}_{{\rm co}{\rm re}}=1.55;\ {\rm n}_{\rm clad}=1.49$</span></span>, a difference of 3.82%, from which we estimate, given the cross sectional dimensions,
+                           that each waveguide can support about 8 modes.
+                        </p> 
+                        <div class="figure figure-full" id="fig_5"> 
+                           <div class="img-wrap"> <a href="/ielx5/9210/29211/1320344/html/img/1320344-fig-5-large.gif"><img src="/ielx5/9210/29211/1320344/html/img/1320344-fig-5-small.gif" width="470" height="229" alt="Figure 5" /><div class="zoom" title="View Larger Image"></div></a> 
+                           </div> 
+                           <div class="figcaption"> <b class="title">Fig. 5</b> Polished cross section of the optical waveguide
+                           </div>  
+                        </div> 
+                        <p>To test the susceptibility of bent, multimode waveguides (WG) to mode dispersion and
+                           poor eye opening, an array of waveguides having a <span class="inline-formula"><img align="bottom" src="/ielx5/9210/29211/1320344/html/img/1320344-eqin-11-small.png" width="55" height="14" alt="Formula" /><span class="html-formula"></span><span class="tex">$180^{\circ}\ ^{\prime\prime}{\rm U}$</span></span> " turn path was constructed on a PWB. The turn radius was 1 cm and the total waveguide
+                           length was 5 cm. A 10 GHz sinusoidal RF signal was used to drive the optical transmitter
+                           at wavelength 1.55 <span class="inline-formula"><img align="bottom" src="/ielx5/9210/29211/1320344/html/img/1320344-eqin-12-small.png" width="24" height="11" alt="Formula" /><span class="html-formula"></span><span class="tex">$\mu{\rm m}$</span></span>. This was followed by an Erbium-doped fiber amplifier (EDFA) with maximum amplification
+                           of about 17dBm. A wide open and clear eye diagram with extinction ratio of 11.64dB
+                           at 10Gbps was obtained, as shown in <a href="#fig_6">Figure 6</a>, indicating no measurable mode dispersion over bent, multimode waveguides that are
+                           5 cm in length.
+                        </p> 
+                        <div class="figure figure-full" id="fig_6"> 
+                           <div class="img-wrap"> <a href="/ielx5/9210/29211/1320344/html/img/1320344-fig-6-large.gif"><img src="/ielx5/9210/29211/1320344/html/img/1320344-fig-6-small.gif" width="431" height="227" alt="Figure 6" /><div class="zoom" title="View Larger Image"></div></a> 
+                           </div> 
+                           <div class="figcaption"> <b class="title">Fig. 6.</b> Measured eye diagram of optical block
+                           </div>  
+                        </div> 
+                     </div> 
+                     <div class="section" id="sec7"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION VII
+                           </div> 
+                           <h2>FULLY FUNCTIONAL INC SYSTEM TEST RESULTS</h2> 
+                        </div> 
+                        <div class="figure figure-full" id="fig_7"> 
+                           <div class="img-wrap"> <a href="/ielx5/9210/29211/1320344/html/img/1320344-fig-7-large.gif"><img src="/ielx5/9210/29211/1320344/html/img/1320344-fig-7-small.gif" width="466" height="317" alt="Figure 7" /><div class="zoom" title="View Larger Image"></div></a> 
+                           </div> 
+                           <div class="figcaption"> <b class="title">Fig. 7</b> Fabricated INC board used for the demonstration
+                           </div>  
+                        </div> 
+                        <div class="figure figure-full" id="fig_8"> 
+                           <div class="img-wrap"> <a href="/ielx5/9210/29211/1320344/html/img/1320344-fig-8-large.gif"><img src="/ielx5/9210/29211/1320344/html/img/1320344-fig-8-small.gif" width="484" height="505" alt="Figure 8" /><div class="zoom" title="View Larger Image"></div></a> 
+                           </div> 
+                           <div class="figcaption"> <b class="title">Fig. 8</b> Photo and diagram of demonstration setup
+                           </div>  
+                        </div> 
+                        <p>The fully functional INC system testbed has been fabricated and demonstrated. The
+                           final version of INC system has been shown in <a href="#fig_7">fig. 7</a>. The configuration and a photo of system test setup are shown in flg. 8. Two identical
+                           INC boards were used for the demonstration, one for showing digital-RF blocks and
+                           the other one for optical block, which requires more stable setup for the accurate
+                           aligning the embedded waveguide and optical fiber. Even though the two boards were
+                           spatially separated, they were functionally connected by RF and optical cables and
+                           connectors. The optical table has been used to minimize vibration when embedded optical
+                           waveguides are coupled to optical fibers. The EDFA has been used to compensate for
+                           the high total insertion loss of the on-board waveguides. The optical signal goes
+                           through a second EDFA before arriving at the receiving end of the system. Photo of
+                           optical measurement setup is shown in <a href="#fig_9">fig. 9</a>.
+                        </p> 
+                        <div class="figure figure-full" id="fig_9"> 
+                           <div class="img-wrap"> <a href="/ielx5/9210/29211/1320344/html/img/1320344-fig-9-large.gif"><img src="/ielx5/9210/29211/1320344/html/img/1320344-fig-9-small.gif" width="476" height="190" alt="Figure 9" /><div class="zoom" title="View Larger Image"></div></a> 
+                           </div> 
+                           <div class="figcaption"> <b class="title">Fig. 9</b> Demonstration setup for Optical block
+                           </div>  
+                        </div> 
+                        <p>The photo of the setup of the mixed Digital-Analog block is shown in <a href="#fig_10">fig. 10</a>. Two different optical paths have been demonstrated at the same time, one for using
+                           Mach-Zehnder modulator with the embedded waveguide and the other one for using multimode
+                           fiber with VCSEL modulator. <a href="#fig_11">Fig. 11</a> shows the signal characteristics at each node. At the digital domain, only eye diagram
+                           for the digital data stream is observed. On the analog block, the effect of adding
+                           RF signal to the digital signal can be clearly seen. The time-domain data shows thicker
+                           lips in the eye diagram, which means that the RF signal information is loaded on the
+                           envelope of the digital data. In contrast, frequency spectrum shows clear separation
+                           between digital and RF signal. The side lobes of the digital signal have been truncated
+                           by a low-pass filer before adding the RF signal. At the receiver side, the RF signal
+                           can be easily removed by the mixed signal divider after the photo detector.
+                        </p> 
+                        <div class="figure figure-full" id="fig_10"> 
+                           <div class="img-wrap"> <a href="/ielx5/9210/29211/1320344/html/img/1320344-fig-10-large.gif"><img src="/ielx5/9210/29211/1320344/html/img/1320344-fig-10-small.gif" width="486" height="164" alt="Figure 10" /><div class="zoom" title="View Larger Image"></div></a> 
+                           </div> 
+                           <div class="figcaption"> <b class="title">Fig. 10</b> Demonstration setup for RF and Analog blocks
+                           </div>  
+                        </div> 
+                        <div class="figure figure-full" id="fig_11"> 
+                           <div class="img-wrap"> <a href="/ielx5/9210/29211/1320344/html/img/1320344-fig-11-large.gif"><img src="/ielx5/9210/29211/1320344/html/img/1320344-fig-11-small.gif" width="459" height="317" alt="Figure 11" /><div class="zoom" title="View Larger Image"></div></a> 
+                           </div> 
+                           <div class="figcaption"> <b class="title">Fig. 11.</b> Measured signals at each node of the system
+                           </div>  
+                        </div> 
+                     </div> 
+                     <div class="section" id="sec8"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION VIII
+                           </div> 
+                           <h2>CONCLUSIONS</h2> 
+                        </div> 
+                        <p>One integrated mixed-signal system, so called INC, has been developed and its functionality
+                           has been demonstrated. The main purpose of the INC project is to demonstrate the feasibility
+                           of SOP technology for the future electronics systems. The system has been designed
+                           to deal with digital, analog and optical signal along with the various mixed signal
+                           issues. The board has been fabricated in multilayer organic process and the commercial
+                           and custom-built ICs have been assembled on the low cost multilayer organic board.
+                           The embedded optical waveguides have been fabricated on the board as well. The digital
+                           block showed 3.2 Gbps of data stream capability, and the RF block had less than ?1.5dB
+                           of insertion loss at 5.8GHHz. The optical block achieved 10Gbps throughput over the
+                           embedded optical waveguide. The full functionality of INC system has been successfully.
+                        </p> 
+                     </div> 
+                     <h3>Acknowledgments</h3> 
+                     <p>The authors would like to thanks to the EIT for providing their processes and GTRI
+                        for supporting assembly of the MMICs. This project has been supported by National
+                        Science Foundation.
+                     </p> 
+                  </div> 
+                  <div id="article-data"> 
+                     <div class="section" id="footnotes"> 
+                        <div class="header data-hdr"> 
+                           <h2>Footnotes</h2> 
+                           <div class="toggle-btn"></div>
+                        </div> 
+                        <div class="content">
+                           No Data Available
+                        </div> 
+                     </div> 
+                     <div class="section" id="references"> 
+                        <div class="header data-hdr"> 
+                           <h2>References</h2> 
+                           <div class="toggle-btn"></div>
+                        </div> 
+                        <div class="content">
+                           <div class="ref" id="ref_1"> 
+                              <div class="body"> 
+                                 <p><b>1</b>. K. Lim, M.F. Davis, M. Maeng, S. Pinel, L. Wan, L. Laskar, V. Sundaram, G. White,
+                                    M. Swaminathan and R. Tunimala
+                                 </p> 
+                                 <p><span class="title">"Intelligent network communicator: highly integrated system-on-package (SOP) testbed
+                                       for RF/digital/opto applications"</span></p> 
+                                 <p><i>Proceedings of 2003 Electronic Components and Technology Conference, pp. 27-30</i></p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span> 
+                                 <div class="snippet context" style="display: none; ">
+                                    The "Intelligent Network Communicator (INC)" testbed project is the symbolic showcase
+                                    of SOP concept and has been driven by NSF Packaging Research Center (PRC) in Georgia
+                                    Tech since 2001 [1] [2] [3].
+                                    <div><a href="#note-ref_1a">Go To Text</a></div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="ref" id="ref_2"> 
+                              <div class="body"> 
+                                 <p><b>2</b>. K. Lim, M. F. Davis, M. Maeng, S-W. Yoon, S.Pinel, L. Wan, D. Guidotti, D. Ravi,
+                                    J. Laskar, E. Tentzeris, V. Sundaram, G. White, M. Swaminathan, M. Brook, N. Jokerst
+                                    and R. Tummala
+                                 </p> 
+                                 <p><span class="title">"Delvelopement of Intellinget Network Communicator for the mixed signal communications
+                                       using the system-on-a-packaging technology"</span></p> 
+                                 <p><i>Asia-Pacific Microwave Conference Digest, pp. 1003-1006</i></p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span> 
+                                 <div class="snippet context" style="display: none; ">
+                                    The "Intelligent Network Communicator (INC)" testbed project is the symbolic showcase
+                                    of SOP concept and has been driven by NSF Packaging Research Center (PRC) in Georgia
+                                    Tech since 2001 [1] [2] [3].
+                                    <div><a href="#note-ref_2a">Go To Text</a></div> 
+                                 </div> 
+                                 <div class="snippet context" style="display: none; ">
+                                    The VCO module used for INC testbed shows the phase noise of ?110 dBc @ 6MHz offset
+                                    frequency and ?10 dBm of output power [2].
+                                    <div><a href="#note-ref_2b">Go To Text</a></div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="ref" id="ref_3"> 
+                              <div class="body"> 
+                                 <p><b>3</b>. V. Sundaram, F. Liu, S. Dalmia, J. Hobbs, E. Matoglu, M. Davis, T. Nonaka, J. Laskar,
+                                    M. Swaminathan, G. White and R. R. Tummala
+                                 </p> 
+                                 <p><span class="title">"Digital and RF integration in system-on-a-package (SOP)"</span></p> 
+                                 <p><i>Proceeding of 2002 Electronic Components and Technology Conference, pp. 28-31</i></p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span> 
+                                 <div class="snippet context" style="display: none; ">
+                                    The "Intelligent Network Communicator (INC)" testbed project is the symbolic showcase
+                                    of SOP concept and has been driven by NSF Packaging Research Center (PRC) in Georgia
+                                    Tech since 2001 [1] [2] [3].
+                                    <div><a href="#note-ref_3a">Go To Text</a></div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="ref" id="ref_4"> 
+                              <div class="body"> 
+                                 <p><b>4</b>. M. Maeng, K. Lim, Y. Hur, M. Davis, N. Lal, S.-W. Yoon and J. Laskar
+                                 </p> 
+                                 <p><span class="title">"Novel combiner for hybrid digital/rf fiber-optic application"</span></p> 
+                                 <p><i>pp. 193-196</i></p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span> 
+                                 <div class="snippet context" style="display: none; ">
+                                    Linear phase low-pass filter has been developed as a part of the mixed signal combiner
+                                    [4].
+                                    <div><a href="#note-ref_4a">Go To Text</a></div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                        </div> 
+                     </div> 
+                     <div class="section" id="authors"> 
+                        <div class="header data-hdr"> 
+                           <h2>Authors</h2> 
+                           <div class="toggle-btn"></div>
+                        </div> 
+                        <div class="content"> 
+                           <div class="author" id="author_01"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Lim,%20K..QT.&amp;newsearch=partialPref">K. Lim</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_02"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Wan,%20L..QT.&amp;newsearch=partialPref">L. Wan</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_03"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Guidotti,%20D..QT.&amp;newsearch=partialPref">D. Guidotti</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_04"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Sundaram,%20V..QT.&amp;newsearch=partialPref">V. Sundaram</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_05"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.White,%20G..QT.&amp;newsearch=partialPref">G. White</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_06"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Liu,%20F..QT.&amp;newsearch=partialPref">F. Liu</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_07"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Bhattacharya,%20S..QT.&amp;newsearch=partialPref">S. Bhattacharya</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_08"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Doraiswami,%20R..QT.&amp;newsearch=partialPref">R. Doraiswami</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_09"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Chang,%20Y.-J..QT.&amp;newsearch=partialPref">Y-J. Chang</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_10"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Yu,%20J..QT.&amp;newsearch=partialPref">J. Yu</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_11"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Sarkar,%20S..QT.&amp;newsearch=partialPref">S. Sarkar</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_12"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Pratap,%20R..QT.&amp;newsearch=partialPref">R. Pratap</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_13"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Yoon,%20S.-W..QT.&amp;newsearch=partialPref">S-W. Yoon</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_14"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Maeng,%20M..QT.&amp;newsearch=partialPref">M. Maeng</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_15"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Pinel,%20S..QT.&amp;newsearch=partialPref">S. Pinel</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_16"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Laskar,%20J..QT.&amp;newsearch=partialPref">J. Laskar</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_17"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Tentzeris,%20M..QT.&amp;newsearch=partialPref">M. Tentzeris</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_18"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Chang,%20G.%20K..QT.&amp;newsearch=partialPref">G. K. Chang</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_19"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Swaminathan,%20M..QT.&amp;newsearch=partialPref">M. Swaminathan</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_20"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Tummala,%20R..QT.&amp;newsearch=partialPref">R. Tummala</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                        </div> 
+                     </div>   
+                     <div class="section" id="corrections" style="margin-bottom: 123px; "> 
+                        <div class="header data-hdr"> 
+                           <h2>Corrections</h2> 
+                           <div class="toggle-btn"></div>
+                        </div> 
+                        <div class="content"> 
+                           <p>None</p> 
+                        </div> 
+                     </div> 
+                     <div class="section" id="media" style="display: none; "> 
+                        <div class="header data-hdr"> 
+                           <h2>Multimedia</h2> 
+                           <div class="toggle-btn"></div>
+                        </div> 
+                        <div class="content"> 
+                           <div class="item archive"> 
+                              <div class="no-content">
+                                 No Data Available
+                              </div> 
+                           </div> 
+                        </div> 
+                     </div> 
+                  </div> 
+               </div> 
+               <div class="column-side column-side-left"> 
+                  <div class="box box-style-2"> 
+                     <div class="cap-top"> </div> 
+                     <div class="section pdf"><a href="/stamp/stamp.jsp?arnumber=1320344" onclick="javascript:ntptEventTag('ev=Download_PDF');">Download PDF</a> 
+                     </div> 
+                  </div> 
+                  <div class="box box-style-2"> 
+                     <div class="cap-top"> </div> 
+                     <dl class="article-data"> 
+                        <dt>
+                           This paper appears in:
+                        </dt> 
+                        <dd class="journalTitle"><span id="dt_paper"><a href="/xpl/mostRecentIssue.jsp?punumber=9210">Electronic Components and Technology Conference, 2004. Proceedings. 54th</a></span></dd> 
+                        <dt class="dt_date">
+                           Conference Date(s):
+                        </dt> 
+                        <dd><span id="dt_conf_date" class="dt_date"><a href="/xpl/tocresult.jsp?isnumber=29211">1-4 June 2004</a></span></dd> 
+                        <dt class="dt_loc">
+                           Conference Location:
+                        </dt> 
+                        <dd><span id="dt_conf_loc" class="dt_loc">No Data Available</span></dd> 
+                        <dt class="dt_pages">
+                           On page(s):
+                        </dt> 
+                        <dd><span id="dt_pages" class="dt_pages">1693 - 1697 Vol.2</span></dd> 
+                        <dt class="dt_eisbn">
+                           E-ISBN:
+                        </dt> 
+                        <dd><span id="dt_eisbn" class="dt_eisbn">No Data Available</span></dd> 
+                        <dt class="dt_pisbn">
+                           Print ISBN:
+                        </dt> 
+                        <dd><span id="dt_pisbn" class="dt_pisbn">0-7803-8365-6</span></dd> 
+                        <dt class="dt_access">
+                           INSPEC Accession Number:
+                        </dt> 
+                        <dd><span id="dt_access" class="dt_access">8033076</span></dd> 
+                        <dt class="dt_doi">
+                           Digital Object Identifier:
+                        </dt> 
+                        <dd><span id="dt_doi" class="dt_doi"><a href="http://dx.doi.org/10.1109/ECTC.2004.1320344">10.1109/ECTC.2004.1320344</a></span></dd> 
+                        <dt class="dt_doc" style="display: none; ">
+                           Date of Current Version:
+                        </dt> 
+                        <dd><span id="dt_doc" class="dt_doc" style="display: none; ">2004-08-16</span></dd> 
+                        <dt class="dt_dop" style="display: none; ">
+                           Date of Original Publication:
+                        </dt> 
+                        <dd><span id="dt_dop" class="dt_dop" style="display: none; ">No Data Available</span></dd> 
+                     </dl> 
+                  </div>    
+               </div> 
+            </div> 
+         </div> 
+         <hr />    
+         <div class="Footer stats-footer">  
+            <div class="pure-g Footer-sections">     </div>  
+         </div> 
+         <div style="width: 1263px;" id="popup_overlay"></div>              
+      </div>      
+   </body>
+</html>

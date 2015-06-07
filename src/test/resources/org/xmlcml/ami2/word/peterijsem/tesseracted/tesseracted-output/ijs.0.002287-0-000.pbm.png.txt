@@ -1,0 +1,98 @@
+100 94 T. pedis T183 (EF061270)
+7'. pedis T354A (EF061267)
+71 — T. dent/cola ATCC 35405T (NC 002967)
+97— T. putidum ATCC 700334T (AJ543428)
+‘T. phagedenis‘ strain K5 (M57739)
+87 ‘T. refringens‘ CIP 51.64 (AF426101)
+100— ‘T. calligyrum’ CIP 64.40 (AF426100)
+100 — ‘T. vincentil" ATCC 700013 (AF033310)
+100— T. medium ATCC 700293T (D85437)
+T. pallidum Nichols strain (NC_000919)
+— T. brennaborense DSM 12168T (Y16568)
+87 T. Iecithinolyticum ATCC 700332T (AJ131282)
+100— T. maltophilum ATCC 51939T (X87140)
+
+99— T. berlinense ATCC BAA-909T (AY230217)
+40 — T. pectinovorum ATCC 33768T (AF302940)
+T. saccharophilum ATCC 43261T (M71238)
+,9 — T. bryantii ATCC 33254T (M57737)
+51— T. porcinum ATCC BAA-908T (AY518274)
+51 — T. succinifaciens ATCC 33096T (M57738)
+
+59 — T. amylovorum ATCC 700288T (Y09959)
+65_— T. parvum ATCC 700770T (AF302938)
+
+— T. socranskii subsp. socranskii ATCC 35536T
+(AF033306)
+
+0 02 T. pedis T35523T (EF061268)
+' A“ T. pedis GS19CB (EF061269)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+

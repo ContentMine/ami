@@ -50,7 +50,7 @@ public class SequenceArgProcessor extends AMIArgProcessor {
 	}
 
 	public void runExtractSequences(ArgumentOption option) {
-		searchHtmlParaElements();
+		searchSectionElements();
 	}
 
 	public void outputSequences(ArgumentOption option) {

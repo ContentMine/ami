@@ -1,7 +1,10 @@
 package org.xmlcml.ami2.plugins;
 
+import nu.xom.Element;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.xml.XMLUtil;
 
 public class XPathProcessor {
 
@@ -14,6 +17,16 @@ public class XPathProcessor {
 
 	public XPathProcessor(String xpath) {
 		this.xpath = xpath;
+		testPath();
+	}
+
+	private void testPath() {
+		Element element = new Element("xyz");
+		XMLUtil.getQueryElements(element, xpath);
+	}
+
+	public String getXPath() {
+		return xpath;
 	}
 
 }

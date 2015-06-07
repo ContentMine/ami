@@ -33,7 +33,9 @@ public class IdentifierPlugin extends AMIPlugin {
 	}
 	
 	public static void main(String[] args) {
-		new IdentifierArgProcessor().parseArgsRunAndOutput(args);
+		// FIXME
+		throw new RuntimeException("FIXME main IdentifierPlugin");
+//		new IdentifierArgProcessor().parseArgsRunAndOutput(args);
 	}
 
 

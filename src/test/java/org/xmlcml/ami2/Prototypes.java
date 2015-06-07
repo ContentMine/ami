@@ -71,4 +71,6 @@ public class Prototypes {
 		FileUtils.copyDirectory(new File(cmDirName), new File(targetName));
 		new Norma().run("-q "+targetName+" -i fulltext.pdf -o images/ --transform pdf2images");
 	}
+	
+	
 }

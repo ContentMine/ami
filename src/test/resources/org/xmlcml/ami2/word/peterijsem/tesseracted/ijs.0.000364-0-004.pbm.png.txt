@@ -1,0 +1,55 @@
+68
+
+83
+
+100
+100
+
+96
+
+100
+98
+
+77
+99
+
+100
+97
+
+71 98
+
+100
+
+99
+100
+
+0.1
+
+Pyramidobacter piscolens W5455T (DU723069)
+‘Aquifex aeolicus’ VF5 (AACO7677)
+Thermotoga maritime MSB8T (AAD36645)
+Synechocoocus elongatus PCC 6301T (BAD79413)
+Rhodopirellula baltica SH1T (CAD79269)
+Desulfovibrio desulfuricans G20 (ABB37883)
+Lactobacillus salivarius UCC118 (ABD99994)
+Streptococcus gordonii Challis (ABV1 1046)
+Bacillus subtilis 168 (CAB15547)
+Finegoldia magna ATCC 29328 (BAG08949)
+Chloroﬂexus aurantiacus J-10fl (ABY33776)
+Porphyromonas gingivalis W83 (AAQ65708)
+Bacteroides fragilis NCTC 9343T (CAH06724)
+Chlorobium tepidum TLST (AAM72469)
+Fusobacterium nucleatum ATCC 25586T (AAL93833)
+Bifidobacterium Iongum NCC2705 (AAN25218)
+Chlamydia trachomatis D/UW—3/CX (AAC68296)
+Opitutus terrae PBQO-1 (ACB74961)
+Treponema dent/cola ATCC 35405T (AAS12412)
+Caulobacter crescentus CB15 (AAK25030)
+Ochrobactrum anthropi ATCC 49188T (ABS13742)
+Ehrlichia chaffeensis ArkansasT (ABD45253)
+Bordetella pertussis Tohama | (CAE43285)
+Neisseria gonorrhoeae FA 1090 (AAW89680)
+Pseudomonas aeruginosa PA01 (AAGO7791)
+Haemophilus influenzae PittGG (ABROO457)
+Escherichia coli O157:H7 EDL933 (NP_285794)
+

@@ -36,13 +36,15 @@
 	<arg name="length"
 	    long="--sq.length"
 	    args="lengthRange"
-	    default="{1,*}"
 	    class="org.xmlcml.euclid.IntRange"
 	    parseMethod="parseLength"
 	    countRange="{1,1}"
 	    >
 	    <help>
-	    The allowed length of the sequence, described by a single org.xmlcml.euclid.IntRange (note there are no internal spaces). The default is `{1,*}` - any non-empty sequence - will be used if there is no `--sq.length` attribute. When this attribute is present, the method `parseLength` will be called which saves the value of the `IntRange`.
+	    The allowed length of the sequence, described by a single org.xmlcml.euclid.IntRange 
+	    (note there are no internal spaces). - any non-empty sequence - will be used if there is 
+	    no `--sq.length` attribute. When this attribute is present, the method `parseLength` will 
+	    be called which saves the value of the `IntRange`.
 	    </help>
     </arg>	
     

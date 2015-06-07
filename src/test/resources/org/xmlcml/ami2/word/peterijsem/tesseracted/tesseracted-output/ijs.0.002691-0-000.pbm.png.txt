@@ -1,0 +1,60 @@
+90 Planococcus citreus NCIMB 1493T (X62172)
+
+75 Planococcus rifietoensis M8T (AJ493659)
+Planococcus columbae PgEx1 1T (AJ966515)
+Planococcus maritimus TF-9T (AF500007)
+Planococcus maitriensis S1T (AJ544622)
+
+_ Planococcus antarcticus CMS 260rT(AJ314745)
+fig/anacoccus kocurii NCIMB 629T (X62173)
+
+_ Planococcus stackebrandtii K22—03T (AY437845)
+
+_ P/anomicrobium psychrophi/um CMS 53orT (AJ314746)
+
+ 
+  
+ 
+  
+ 
+
+75
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+_ Planomicrobium okeanokoites IFO 12536T (D55729)
+100 , Planomicrobium chinense DX3—12T (AJ697862)
+_ P/anomicrobium koreense JG07T(AF144750)
+54 _ P/anomicrobium mcmeekinii 823F2T (AFO41 791)
+_ P/anomicrobium alkanoc/asticum NCIMB 13489T (AF029364)
+88 _ Bhargavaea cecembensis DSE10T (AM286423)
+74
+
+Clade | [Bacillus Sp. (29 species)]
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+71
+< Clade || [Geobaci/lus sp (1 7 species)]
+
+PaenibaCi/lus polymyxa DSM 36T (AJ320493)
+Escherichia coli ATCC 1 1 775T (X80725)
+

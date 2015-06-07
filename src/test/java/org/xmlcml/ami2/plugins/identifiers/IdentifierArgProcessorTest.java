@@ -84,6 +84,7 @@ public class IdentifierArgProcessorTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testSeveralArticles() throws Exception {
 		File newDir = new File("target/plosone/identifiers");
 		FileUtils.copyDirectory(new File("examples/"), newDir);

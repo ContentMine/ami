@@ -66,7 +66,7 @@ public class DummyArgProcessor extends AMIArgProcessor {
 	}
 
 	public void runExtractDummy(ArgumentOption option) {
-		searchHtmlParaElements();
+		searchSectionElements();
 	}
 
 	public void outputDummy(ArgumentOption option) {

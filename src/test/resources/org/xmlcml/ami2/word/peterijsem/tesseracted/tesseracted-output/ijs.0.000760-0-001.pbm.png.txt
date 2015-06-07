@@ -1,0 +1,216 @@
+(a) 16S rRNA
+M. avium subsp. avium DSM 44155T (AJ536037)
+
+ 
+ 
+ 
+ 
+ 
+  
+
+M. shimoidei ATCC 27962T (X82459)
+
+M. heckeshornense S369T (AF174290)
+M. xenopi DSM 43995T (AJ536033)
+54 M. batniense E347T (AJO12756)
+
+M. celatum ATCC 51131T (L08169)
+
+M. cookii ATCC 49103T (AF480598)
+
+M. branderiATCC 51789T (AF480574)
+
+KUM 060204T (AB370111)
+M. trivia/e ATCC 23292T (X88924)
+
+M. hiberniae ATCC 49874T (X67096)
+
+99 M. nonchromogenicum ATCC 19530T (X52928)
+M. arupense AR30097T (DQ157760)
+
+M. terrae ATCC 15755T (X52925)
+
+M. kumamotonense CST 7247T (A8239925)
+
+M. doricum DSM 44339T (AF264700)
+
+Nocardia asteroides DSM 43757r (AF430019)
+
+0.01
+
+ 
+ 
+ 
+  
+ 
+  
+  
+ 
+  
+ 
+ 
+ 
+ 
+
+(c) rpoB
+
+17 M. trivia/e DSM 44153T (AY544971)
+
+M. shimoidei DSM 44152T (AY544962)
+
+M. xenopi CIP 104035T (AY544979)
+
+M. heckeshornense DSM 44428T (AY544922)
+M. botniense DSM 44537T (AY544891)
+
+M. avium subsp. avium CIP 104244T (AY544887)
+
+M. celatum CIP 106109T (AY544897)
+M. branderi CIP 104592T (AY544895)
+
+KUM 060204T (AB370178)
+
+M. kubicae CIP 106428T (AY544937)
+
+M. doricum DSM 44339T (AY544906)
+M. interjectum DSM 44064T (AY544928)
+
+M. cookii CIP 105396T (AY544904)
+M. conspicuum CIP 105165T (AY544903)
+Rhodococcus equi ATCC 10146 (AF057494)
+
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+001
+
+(b) hsp65
+M. trivia/e DSM 44153T (AF547883)
+
+M. cookii CIP 105396T (AF547824)
+M. tuberculosis CIP 105795 (AF547885)
+
+M. lacus DSM 44577T (AY438090)
+M. kansasii CIP 104589T (AF547849)
+
+M. gastri CIP 104530T (AF547836)
+M. shimoidei DSM 44152T (AF547874)
+M. botn/‘ense DSM 44537T (AF547812)
+
+M. celatum CIP 105109T (AF547817)
+M. branderi CIP 104592T (AF547815)
+
+KUM 060204' (ABS7D171)
+M. terrae CIP 104321T (AF547879)
+
+M. kumamotonense CST 7247T (A8239920)
+
+M. doricum DSM 44339T (AF547826)
+
+M. nonchromogen/‘cum DSM 44164T (AF547861)
+M. hiberniae DSM 44241T (AY438083)
+
+M. arupense CCUG 39146 (DQ168662)
+
+Nocardia asteroides ATCC 19247T (AY756513)
+
+  
+ 
+  
+  
+ 
+ 
+ 
+  
+  
+ 
+    
+
+26
+
+50
+
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+
+0,01
+(d) SOdA 39 M. cookii CIP 105396T (AY544815)
+M. branderi CIP 104592‘r (AY544810)
+10 M. xenopi CIP 104035T (AY544878)
+
+- M. heckeshornense DSM 44428T (AY544830)
+M. botm‘ense DSM 44537T (AY544806)
+M. lacus DSM 44577T (AY544841)
+
+M. tuberculosis CIP 64.31T (AY544875)
+
+10 M. ulcerans CIP 105425T (AY544876)
+
+M. marinum CIP 104528T (AY544845)
+
+M. kansasii CIP 104589T (AY544838)
+
+M. gastri CIP 104530T (AY544825)
+
+M. szu/gai CIP 104532T (AY544867)
+
+M. shimoidei DSM 44152T (AY544863)
+
+M. conspicuum CIP 105165T (AY544814)
+
+M. parascmfulaceum CIP 108112T (AY943181)
+
+M. interjectum DSM 44064T (AY544835)
+M. parmense CIP 107385T (AY943182)
+
+M. bohemicum CIP 105811T (AY544805)
+M. celatum CIP 106109T (AY544812)
+
+KUM 060204T (AB370184)
+M. saskatchewanense CIP 108114T (AY943183)
+
+Nocardia abscessus DSM 44432T (AY544981)
+
+  
+  
+ 
+  
+ 
+     
+ 
+ 
+ 
+ 
+ 
+  
+  
+   
+  
+  
+ 
+
+   
+
+97
+

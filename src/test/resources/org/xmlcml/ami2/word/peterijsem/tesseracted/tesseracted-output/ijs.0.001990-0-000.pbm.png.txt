@@ -1,0 +1,165 @@
+Enterovibrio coralii 9I2b (AM942729) (a) 163 rRNA
+Enterovibrio coralii 9I5b (AM942730)
+Enterovibrio coralii 11/2a (AM942732)
+Enterovibrio coralii 10/6 (AM942731)
+Enterovibrio coralii 9/2a (AM942728)
+Enterovibrio coralii 9/1c (AM942727)
+Enterovibrio coralii 9I1a (AM942726)
+Enterovibrio coralii 8/13 (AM942725)
+Enterovibrio coralii LMG 22228T (AJ842343)
+
+77 Enterovibrio nigricans DAI 1-1-5T (AM942722)
+100 Enterovibrio nigricans DAI 1-1-4 (AM942723)
+Enterovibrio nigricans 8/6b (AM942724)
+
+65 Enterovibrio norvegicus LMG 19839T (AJ316208)
+100 Enterovibrio norvegicus LMG19840 (AJ316207)
+Enterovibrio norvegicus LMG 19842 (AJ437193)
+Enterovibrio calviensis RE35F/12T(AF118021)
+
+Grimontia hollisae LMG 17719T (AJ514909)
+
+ 
+    
+  
+   
+  
+   
+ 
+  
+    
+  
+
+1%
+
+100
+
+Enterovibrio coralii 10l6 (AM942058) (c) rpoD
+Enterovibrio coralii 9I5b (AM942057)
+Enterovibrio coralii 9I1c (AM942054)
+
+   
+ 
+    
+   
+    
+ 
+ 
+ 
+
+ 
+
+5%
+
+99
+
+Enterovibrio coralii 9I2a (AM942055)
+
+Enterovibrio coralii 9I2b (AM942056)
+
+Enterovibrio coralii 9I1a (AM942053)
+
+100 Enterovibrio coralii 8/13 (AM942052)
+
+Enterovibrio coralii 11/23 (AM942059)
+
+Enterovibrio coralii CAIM 912T (AM942051)
+Enterovibrio nigricans 8/6b (AM942050)
+
+Enterovibrio nigricans DAI 1-1-4 (AM942049)
+
+99 Enterovibrio nigricans DAI 1-1-5T (AM942048)
+Enterovibrio norvegicus CECT 7288T (AM942062)
+Enterovibrio calviensis DSM 14347T (AM942047)
+Grimontia hollisae CECT 5069T (AM942061)
+
+Vibrio cholerae CECT 514T (AM942060)
+
+76
+
+ 
+
+Vibrio cholerae CECT 514T (X76337)
+
+Enterovibrio coralii CAIM 912T (AM942063) (b) recA
+Enterovibrio coralii 8/13 (AM942064)
+
+Enterovibrio coralii 9/1a (AM942065)
+
+Enterovibrio coralii 9/2a (AM942066)
+
+Enterovibrio coralii 9/2b (AM942068)
+
+100 Enterovibrio coralii 9I1c (AM942067)
+
+Enterovibrio coralii 9l5b (AM942069)
+
+Enterovibrio coralii 10l6 (AM942070)
+
+Enterovibrio coralii 11l2a (AM942071)
+
+63 Enterovibrio norvegicus CECT 7288T (AM942075)
+100 Enterovibrio norvegicus R-3717 (AJ842350)
+Enterovibrio norvegicus LMG 19840 (AJ842349)
+Enterovibrio calviensis DSM 14347T (AM942077)
+Enterovibrio nigricans 8/6b (AM942074)
+Enterovibrio nigricans DAI 1-1-4 (AM942073)
+
+100 Enterovibrio nigricans DAI 1-1-5T (AM942072)
+Grimontia hollisae CECT 5069T (AM942076)
+
+ 
+ 
+  
+  
+ 
+  
+ 
+ 
+   
+  
+   
+ 
+  
+
+5%
+
+Enterovibrio coralii 8/13
+
+    
+  
+  
+   
+  
+   
+  
+ 
+  
+  
+   
+
+5 % Enterovibrio coralii 9I2a
+Enterovibrio coralii 9I2b
+100 Enterovibrio coralii 10l6
+Enterovibrio coralii 9/1a
+100 Enterovibrio coralii 9/1c
+100 Enterovibrio coralii 9/5b
+Enterovibrio coralii 11l2a
+
+Enterovibrio coralii CAIM 912T
+
+100 Enterovibrio nigricans DAI 1-1-5T
+Enterovibrio nigricans DAI 1-1-4
+Enterovibrio nigricans 8/6b
+
+Enterovibrio norvegicus CECT 7288T
+Enterovibrio calviensis DSM 14347T
+
+Grimontia hollisae CECT 5069T
+
+Vibrio cholerae CECT 514T (AM942078)
+
+(d) Concatenated dataset
+
+Vibrio cholerae CECT 514T
+

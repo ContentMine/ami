@@ -1,0 +1,41 @@
+0.05
+I—l
+
+93 Antarctobacter heliathermus DSM 11445T(Y11552)
+Sagiltula stellata ATCC 700073T (US$356)
+57 Donghicola eburneus SW—277T (DQ667965)
+Donghicola xiamenensis Y-2T (DQ120728)
+99 Roseivivax halodurans JCM 10272T (D85829)
+Roseivivax halotolerans JCM 10271 F (D85831)
+79 Salipiger mucosus LMG 22090T (AY527274)
+Leisingera methylohalidivorans DSM 14336T (AY005463)
+Phaeobacter gallaeciensis B81071 (Y13244)
+100 Phaeobacter inhibens TST (AY177712)
+Marinovum algicola ATCC 51440" (X78315)
+Jannaschia helgalandensis DSM 1485 ST (AJ438 1 57)
+Ketogulonicigenium vulgare DSM 40251(AF136849)
+Oceanicola gramzlosus DSM 15982" (AY424896)
+97 Roseisalinus antarcticus EL-SST (AJ605747)
+0 Rhodobacter capsulafus ATCC 11166T (D16428)
+Marinasulfonomonas methylotropha PSCH4T (U62894)
+Nereida ignava ZSM4T (AJ748748)
+Oceanihulbus indoltfex DSM 148621(A1550939)
+Staleya guttiformis DSM11458T(Y16427)
+Sulfitobacter brevis DSM 11443T(Y16425)
+68 53 SulfitobacterpontiacusDSM10014T(Y13155)
+97 Raseobacter denitrificarzs DSM 7001T (M59063)
+100 Roseobacler liloralis ATCC 49566T (X78312)
+Octadecabacter arcticus CIP 1067321(U73725)
+90 Thalassobius gelatinovorusIAM12617T(D88523)
+61 Roseovarius crassostreae CV919-312r (AF114484)
+Roseovarius nubinhibens DSM 15170" (AF098495)
+Roseovarius tolerans DSM 11457T(Y11551)
+Ruegeria atlanticaIAM14463T(D88526)
+100 Silicibacter lacuscaeru/ensis DSM11314T(U77644)
+
+97
+
+.98
+
+60 82
+

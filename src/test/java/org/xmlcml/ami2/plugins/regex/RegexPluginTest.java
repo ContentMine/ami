@@ -3,6 +3,7 @@ package org.xmlcml.ami2.plugins.regex;
 import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -12,6 +13,7 @@ import org.xmlcml.ami2.Fixtures;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.xml.XMLUtil;
 
 public class RegexPluginTest {
 	
@@ -83,6 +85,25 @@ public class RegexPluginTest {
 				new RegexPlugin(),
 				"-q target/consort0/15_1_511_test/ -i scholarly.html --context 25 40 --r.regex regex/consort0.xml",
 				"regex/consort0/");
+	}
+	
+	@Test
+	public void testSectioning() throws IOException {
+		FileUtils.copyDirectory(Fixtures.TEST_BMC_15_1_511_CMDIR, new File("target/consort0/15_1_511_test/"));
+		String cmd = "-q target/consort0/15_1_511_test/ -i scholarly.html --r.regex regex/consort0.xml";
+		RegexArgProcessor argProcessor = new RegexArgProcessor(cmd);
+		argProcessor.runAndOutput();
+		File resultsFile = new File("target/consort0/15_1_511_test/results/regex/consort0/results.xml");
+		Assert.assertEquals("results without xpath", 8,  
+				XMLUtil.getQueryElements(XMLUtil.parseQuietlyToDocument(resultsFile).getRootElement(), 
+						"//*[local-name()='result']").size());
+		cmd = "-q target/consort0/15_1_511_test/ -i scholarly.html --xpath //*[@tagx='title']/* --r.regex regex/consort0.xml";
+		argProcessor = new RegexArgProcessor(cmd);
+		argProcessor.runAndOutput();
+		resultsFile = new File("target/consort0/15_1_511_test/results/regex/consort0/results.xml");
+		Assert.assertEquals("results with xpath", 2,  
+				XMLUtil.getQueryElements(XMLUtil.parseQuietlyToDocument(resultsFile).getRootElement(), 
+						"//*[local-name()='result']").size());
 	}
 	
 	@Test

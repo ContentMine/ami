@@ -47,10 +47,10 @@ public class GeneSearcher extends AMISearcher {
 	}
 
 	@Override
-	public ResultsElement search(List<HtmlP> pElements) {
+	public ResultsElement search(List<? extends Element> elements) {
 		ResultsElement resultsElement = new GeneResultsElement();
-		for (HtmlP pElement : pElements) {
-			String xmlString = getValue(pElement);
+		for (Element element : elements) {
+			String xmlString = getValue(element);
 			LOG.trace(xmlString);
 			List<ResultElement> resultElementList = this.search(xmlString);
 			for (ResultElement resultElement : resultElementList) {
@@ -58,11 +58,6 @@ public class GeneSearcher extends AMISearcher {
 			}
 		}
 		List<String> exactList = resultsElement.getExactList();
-//		LinneanNamer linneanNamer = new LinneanNamer();
-//		List<String> matchList = linneanNamer.expandAbbreviations(exactList);
-//		LOG.trace("EXACT "+exactList+"; MATCH "+matchList);
-//		resultsElement.addMatchAttributes(matchList);
-		
 		return resultsElement;
 	}
 

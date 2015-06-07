@@ -1,0 +1,123 @@
+52_— Micrococcus luteus Ballarat (biovar Ill) (AJ409096)
+63 — Micrococcus ﬂavus LW4T (DQ491453)
+99 Micrococcus antarcticus T2T (AJ005932)
+62 — Micrococcus Iy/ae DSM 20315T (X80750)
+-Ci(ricoccus alkalito/erans YIM 70010T (AY376164)
+52 100 — Citricoccus mural/s 4-0T (AJ344143)
+Zhihengliuella ha/oto/erans YIM 70185T (DQ372937)
+61 Anhrobacter sulfureus DSM 20167T (X83409)
+Arthrobacter protophormiae DSM 20168T (X80745)
+— 67 —Ar1hrobacter nicotianae DSM 20123T (X80739)
+0-01 78 —Arthrobacter uratoxydans DSM 20647T (X83410)
+1—1 34 —Acaricomes phytoseiuli DSM 14247T (AJ812213)
+— Hen/"bacterium salmoninarum ATCC 33209T (X51601)
+—Arthrobacter oxydans DSM 201 19T (X83408)
+99 —Arthrobacter ilicis DSM 20138T (X83407)
+98 —Arthrobacter nicotinovorans DSM 420T (X80743)
+— Sinomonas flava CW 108T (EU370704)
+100 * Sinomonas atrocyanea DSM 20127T (EU697388)
+100 # Kocuria rosea DSM 20447T (X87756)
+75 —Kocuria polaris CMS 760rT (AJ278868)
+99 —Kocuria rhizophi/a DSM 11926T (Y16264)
+91 Kocuria palustris DSM 11925T (Y16263)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+— YanieI/a ha/otolerans YIM 70085T (AY228479)
+62 —Nesterenkonia jeotgali JCS-241T (AY928901)
+Rothia aeria GTC 867T (ABO71952)
+
+ 
+
+ 
+
+ 
+
+ 
+
+Nocardia inohanensis IFM 0092T (AB092560)
+

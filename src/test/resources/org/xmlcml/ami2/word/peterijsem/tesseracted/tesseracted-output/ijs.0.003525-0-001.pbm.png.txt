@@ -1,0 +1,49 @@
+0.10
+
+100
+
+100
+
+100
+
+91 ‘Geobacter humireducens’ JW3 (AY187306)
+54 Geobacter bremensis Dfr1T (U9691 7)
+Geobacter toluenoxydans TMJ1T (EU711072)
+85 Geobacter chapel/6i 1 72T (U41561)
+61 Pelobacter propionicus Ott Bd 1T (X70954)
+Geobacter pelophilus Dfr2T (U96918)
+100 Geobacter grbiciae TACP-5T (AF3351 83)
+99 Geobacter metallireducens (ES-15T (LO7834)
+Geobacter sulfurreducens PCAT (U 1 3928)
+‘00 Desu/furornonas palm/tatis SDBY1T (U281 72)
+‘00 Pe/obacter carbinolicus Gra Bd 1T (X79413)
+
+Desu/furomonas acetoxidans DSM 684T (M26634)
+74 Desulfosporosinus sp. S10 (AFO76527)
+
+97 Desu/fosporosinus sp. T1 (AFO76525)
+96 Desu/fosporosinus hippei DSM 8344T (Y1 1571)
+94 Desu/fosporosinus lacus STP1 2T (A1582757)
+
+Desulfosporosinus orient/'5 DSM 765T (Y1 1570)
+99 Deha/obacter restrictus TEA (Y101 64)
+
+99 Syntrophobotu/us glycol/Gus SIGIym (X99706)
+92 Desu/ﬁtobacterium hafniense PCP-1 (U40078)
+71 Desu/ﬁtobacterium hafniense DOB-2T (X94975)
+63 Desu/fitobacterium chlororespirans 0023T (U68528)
+50 Desu/ﬁtobacterium deha/ogenans JW/IU-DC1T (L28946)
+76 Desulfitobacterium meta/lireducens 853—15AT (AF297871)
+Desulfitobacterium aromaticivorans UKTLT (EU711071)
+68 Desulfotomaculum kuznetsovii DSM 61 15T (Y1 1 569)
+
+97 Desu/fotomacu/um sp. 0x39 (AJ577273)
+
+100
+
+Desul/otomaculum acetoxidans DSM 771T (Y1 1566)
+Hydrogenobacter thermophi/us TK-6T (230214)
+
+Thermocrinis ruber OC 1/4T (AJ005640)
+Aquifex pyrophilus Ko|5aT (M83548)
+

@@ -1,0 +1,92 @@
+ 
+
+0.005
+
+78
+
+99 M. Chubuense ATCC 27278T (AF480597)
+51|:|: M. chlorophenolicum PCP—IT (X79094)
+61 M. poriferae ATCC 35087T (AF480589)
+
+M. psychrotolerans WA1 O1T (AJ534886)
+— M. rhodesiae DSM 44223T (AJ429047)
+M. aichiense ATCC 27280T (X55598)
+L? M. bonickei W5998T (AYO12573)
+
+ 
+
+   
+  
+ 
+
+ 
+
+ 
+
+76 M. neworleansense W6705T (AYO12575)
+M. porcinum CIP 105392T (AY457077)
+77 L— M. peregrinum CIP 105382T (AY457069)
+95 M. septicum ATCC 700731T (AY457070)
+— M. conceptionense CIP 108544T (AY859684)
+M. fortuitum CIP 104534T (AY457066)
+M. farcinogenes NCTC 10955T (AY457084)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+M. houstonense Ho1asT (AYO12579)
+M. senegalense CIP 104941T (AY457081)
+Strain FI-06250T (EU605695)
+
+ 
+  
+
+ 
+
+M. bn'sbanense W6743T (AYO12577)
+M. mucogenicum ATCC 49650T (AY457074)
+100 M. phocaicum CIP 108542T (AY859682)
+
+M. gadium CIP 105388T (DQ473310)
+
+_71|: M. barrassiae CIP 108545T (AY859685)
+M. goodiiATCC 700504T (AY457079)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+_i—— M. mageritense CIP 104973T (AY457076)
+68 M. wolinskyiATCC 700010T (AY457083)
+
+M. faIIaX ATCC 35219T (AF480600)
+M. brumae ATCC 51384T (AF480576)
+
+ 
+
+M. trivia/e ATCC 23292T (X88924)
+M. tuberculosis H37Ra (CPOOOG11)
+

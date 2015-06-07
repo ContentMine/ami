@@ -65,7 +65,7 @@ public class IdentifierArgProcessor extends AMIArgProcessor {
 	}
 
 	public void runExtractIdentifiers(ArgumentOption option) {
-		searchHtmlParaElements();
+		searchSectionElements();
 	}
 
 	public void outputIdentifiers(ArgumentOption option) {
