@@ -29,6 +29,9 @@ public class Fixtures {
 	public final static File TEST_BMC_15_1_511_CMDIR = new File(Fixtures.TEST_BMC_DIR, "15_1_511");
 	public final static File TEST_TRIALS_16_1_1 = new File(Fixtures.TEST_BMC_DIR, "http_www.trialsjournal.com_content_16_1_1");
 	
+	public final static File TEST_GRAPHCHEM_DIR    = new File(Fixtures.TEST_AMI_DIR, "graphchem");
+	public final static File TEST_GRAPHCHEM_ASPERGILLUS    = new File(Fixtures.TEST_GRAPHCHEM_DIR, "aspergillus_9");
+	
 	public final static File TEST_MIXED_DIR        = new File(Fixtures.TEST_AMI_DIR, "mixed");
 
 	public final static File TEST_PLOSONE_DIR      = new File(Fixtures.TEST_AMI_DIR, "plosone");
