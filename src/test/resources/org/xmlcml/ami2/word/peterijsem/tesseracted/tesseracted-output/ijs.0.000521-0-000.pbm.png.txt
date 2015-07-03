@@ -1,0 +1,61 @@
+0.01 53 Rhizobium undico/a LMG 11875T (Y17047)
+Rhizobium vitis LMG 8750T (X67225)
+Rhizobium giardinii H152T (U86344)
+Rhizobium daejeonense KCTC 12121T (AY341343)
+Rhizobium rubi LMG 156T (X67228)
+Rhizobium radiobacter ATCC 19358T (AJ389904)
+Rhizobium lanymoorei AF3‘ 1 0T (230542)
+Rhizobium cellulosi/yticus ALA1OBZT (DQ855276)
+Rhizobium ga/egae ATCC 43677T(D11343)
+Rhizobium huautlense 802T (AF025852)
+Rhizobium loessense CCBAU 7190BT (AF364069)
+Rhizobium alamii YA834 (AF239242)
+Rhizobium alamii GBV016T (AM931436)
+Rhizobium alamii USDA 1920 (U89823)
+Rhizobium sul/ae |S123T (Y10170)
+Rhizobium indigoferae CCBAU 71 O42T (AF364068)
+Rhizobium yang/ingense SH 22623T (AF003375)
+Rhizobium gall/Cum R6025pT (U86343)
+Rhizobium mongolense USDA 1844T(U89817)
+Rhizobium hainanense I66T (U71078)
+Rhizobium etli CFN 42T (U28916)
+Rhizobium legummosarum USDA 2370T (U29386)
+Rhizobium tropici CIAT 899T (U89832)
+Rhizobium lusitanum P1 -7T (AY738130)
+Rhizobium rhizogenes ATCC 1 1325T (AY945955)
+Ensifer kostiensis LMG 19227T (AM181748)
+Ensifer kummerowiae CCBAU 71714T (AF364067)
+Sinorhizobium americanum CFNEI 156T (AF506513)
+Ensifer fredii LMG 6217T (X67231)
+Ochrobaotrum anthropi ATCC 49188T (CP000758)
+
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+    
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+
+ 
+

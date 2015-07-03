@@ -47,10 +47,10 @@ public class SpeciesSearcher extends AMISearcher {
 	}
 
 	@Override
-	public ResultsElement search(List<HtmlP> pElements) {
+	public ResultsElement search(List<? extends Element> elements) {
 		SpeciesResultsElement resultsElement = new SpeciesResultsElement();
-		for (HtmlP pElement : pElements) {
-			String xmlString = getValue(pElement);
+		for (Element element : elements) {
+			String xmlString = getValue(element);
 			LOG.trace(xmlString);
 			List<ResultElement> resultElementList = this.search(xmlString);
 			for (ResultElement resultElement : resultElementList) {

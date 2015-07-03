@@ -1,0 +1,89 @@
+0.02
+
+Desulfuromonas acetexigens DSM 1397T (U23140)
+Desulfuromonas michiganensis’ BB1 (AF357915)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Desulfuromonas Chloroethenica TT4BT (U49748)
+Pelobacter carbinolicus Gra Bd1T (X79413)
+
+ 
+
+ 
+
+ 
+
+ 
+
+— Pelobacter acetylenicus WoAcy 1T (X70955)
+Pelobacter venetianus DSM 2394T (U41562)
+Desulfuromonas palm/tatis SDBY1T (U28172)
+Geoalkalibacter ferr/hydriticus 2-0531T (DQ309326)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Geoalkalibacter subterraneus Red1T (EU182247)
+Geobacterpelophilus Dfr2T (U96918)
+
+ 
+
+ 
+
+Geobacterpickeringii G13T (DQ145535)
+
+Geobacter sulfurreducens PCAT (U13928)
+
+Geobacter hydrogenophilus H-2T (U28173)
+
+» Geobactergrbiciae TACP-2T (AF335182)
+
+— Geobacter metal/ireducens GS-15T (L07834)
+
+Geothermobacter ehrlichii 88015T (AY155599)
+Desulfuromonas acetoxidans DSM 684T (M26634)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Desulfuromonas thiophila N227T (Y11560)
+

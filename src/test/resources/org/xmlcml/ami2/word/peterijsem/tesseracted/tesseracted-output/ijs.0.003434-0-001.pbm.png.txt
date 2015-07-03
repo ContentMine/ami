@@ -1,0 +1,140 @@
+RD 2G5 (EU541576)
+RD 282 (FJ214964)
+CMJ 13.7 (FJ214963)
+001 RD 15.11T (EU541565) V. breoganiisp. nov.
+61 05.5 (EU541575)
+99 VB 16.3 (FJ214965)
+95 c 4.15 (FJ214962)
+V superstes LMG 213st (EU541580)
+100 — V. comitans LMG 23416T (EU541577)
+V. inus/tatus LMG 23434T (EU541579)
+V. rarus LMG 23674T (EU541578)
+74 89 _| V. ezurae LMG 19970T (AJ842600)
+90 V. ezurae LMG 19979 (AJ842601)
+V. neonatus LMG 19973T (AJ842660)
+V. halioticoli LMG 19963 (AJ842619)
+99 V haliot/co/i LMG 18542T (AJ842617)
+V. neonatus LMG 19976 (AJ842661)
+
+V gall/Gus LMG 21330T (EU541581)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+99
+
+ 
+
+ 
+
+ 
+
+ 
+
+V. cholerae LMG 21698 (AJ842573)
+
+RD 15.11T (EU541585)
+CMJ 13.7 (FJ214959)
+4% 5.5 (EU541595)
+c 4-15 (FJ214958) V. breoganii sp. nov
+RD 265 (EU541596)
+RD 2B2 (FJ214960)
+98 VB 16.3 (FJ214961)
+V. comitans LMG 2341GT (EU541597)
+V. inusitatus LMG 23434T (EU541600)
+V. halioticoli LMG 18542T (EU871966)
+V. halloticoll LMG 19963 (AJ842432)
+95 V. ezurae LMG 19970T (AJ842413)
+V. ezurae LMG 19979 (AJ842414)
+V. neonatus LMG 19976 (AJ842476)
+V. neonatus LMG 19978 (AJ842477)
+V. rarus LMG 23674T (EU541599)
+V. gallicus DSM 16639T (EU541601)
+V. proteolyticus LMG 3772T (AJ842499)
+
+(b) 55
+45
+
+  
+   
+  
+  
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+
+0.02 100
+
+ 
+
+ 
+
+ 
+
+ 
+
+   
+  
+
+(c) 78 RD 15.11T (EU541550)
+68 C 5.5 (EU541552)
+79 C 4.15 (FJ214954)
+RD 265 (EU541551) V. breoganii sp. nov.
+RD 232 (FJ214956)
+VB 16.3 (FJ214957)
+CMJ 13.7 (FJ214955)
+V. superstes LMG 21323T(EF601344)
+100 V. superstes LMG 21319 (EF601348)
+V. comitans LMG 23416T (EU541553)
+50 V. inusitatus LMG 23434T (EU541555)
+V rarus LMG 23674T (EU541554)
+V. ezurae LMG 1997GT (EF601309)
+V. ezurae LMG 19979 (EF601313)
+— V haliotico/i LMG 19700 (EF601267)
+95 ﬁV. halioticol/‘LMG 18542T (EF601260)
+
+100
+
+ 
+
+ 
+
+100
+
+ 
+
+   
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+55 V. neonatus LMG 19978 (EF601312)
+93 V. neonatus LMG 19973T(EF601310)
+V. gal/icus LMG 21330T (EF601347)
+V. cholerae LMG 21698 (EF601300)
+
+ 
+
+ 
+

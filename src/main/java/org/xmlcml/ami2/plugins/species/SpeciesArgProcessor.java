@@ -51,7 +51,7 @@ public class SpeciesArgProcessor extends AMIArgProcessor {
 	}
 
 	public void runExtractSpecies(ArgumentOption option) {
-		searchHtmlParaElements();
+		searchSectionElements();
 	}
 
 	public void outputSpecies(ArgumentOption option) {

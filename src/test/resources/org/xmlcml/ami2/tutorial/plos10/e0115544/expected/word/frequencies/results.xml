@@ -61,6 +61,7 @@
  <result title="frequency" word="Equation" count="13"/>
  <result title="frequency" word="preferred" count="12"/>
  <result title="frequency" word="presented" count="12"/>
+ <result title="frequency" word="&amp;amp;" count="12"/>
  <result title="frequency" word="different" count="12"/>
  <result title="frequency" word="$,)" count="12"/>
  <result title="frequency" word="perspective" count="12"/>
@@ -223,6 +224,7 @@
  <result title="frequency" word="readily" count="4"/>
  <result title="frequency" word="(see" count="4"/>
  <result title="frequency" word="Uncertainty" count="4"/>
+ <result title="frequency" word="&amp;lt;" count="4"/>
  <result title="frequency" word="benefits" count="4"/>
  <result title="frequency" word="University" count="4"/>
  <result title="frequency" word="Analysis" count="4"/>

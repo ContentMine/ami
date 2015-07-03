@@ -24,6 +24,7 @@ import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.DefaultSearcher;
 import org.xmlcml.cmine.files.EuclidSource;
 import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.html.HtmlElement;
 import org.xmlcml.html.HtmlP;
 import org.xmlcml.xml.XMLUtil;
 
@@ -34,12 +35,14 @@ import org.xmlcml.xml.XMLUtil;
  * @author pm286
  */
 public class AMIArgProcessor extends DefaultArgProcessor {
+//
 	
 	public static final Logger LOG = Logger.getLogger(AMIArgProcessor.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
+	private static final String AMI = "ami";
 	private static final String ARG_PROCESSOR = "ArgProcessor";
 	public static final String RESULTS = "results";
 	protected static String RESOURCE_NAME_TOP = "/org/xmlcml/ami2";
@@ -55,6 +58,8 @@ public class AMIArgProcessor extends DefaultArgProcessor {
     Map<String,AbstractLookup> lookupInstanceByName;
 	protected CompoundRegexList compoundRegexList;
 	protected List<Element> regexElementList;
+//	protected List<? extends Element> sectionElementList;
+	protected List<? extends Element> sectionElements;
 	
 	public AMIArgProcessor() {
 		super();
@@ -73,10 +78,21 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		parseArgs(args);
 	}
 	
+	public AMIArgProcessor(String cmd) {
+		this(cmd.split("\\s+"));
+	}
+
 	protected String createPluginArgsResourceName() {
 		String clazz = this.getClass().getSimpleName();
 		plugin = clazz.replace(ARG_PROCESSOR, "").toLowerCase();
-		return AMIArgProcessor.PLUGIN_RESOURCE + "/"+plugin+"/"+ARGS_XML;
+		String resourceName = null;
+		if (plugin.equals(AMI)) {
+			// no ami/ subdirectory
+			resourceName = AMIArgProcessor.PLUGIN_RESOURCE + "/"+ARGS_XML;
+		} else {
+			resourceName = AMIArgProcessor.PLUGIN_RESOURCE + "/"+plugin+"/"+ARGS_XML;
+		}
+		return resourceName;
 	}
 
 	// ============= METHODS =============
@@ -138,7 +154,15 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	}
 
 
-	// =============transformations=============
+	// =============run=============
+	@Override
+	/** In AMI we can split the document by Xpath string which allows per-section searching.
+	 * 
+	 */
+	public void runRunMethodsOnChosenArgOptions() {
+		ensureSectionElements();
+		super.runRunMethodsOnChosenArgOptions();
+	}
 
 	// ============output options==============
 
@@ -157,20 +181,21 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		return contextCount;
 	}
 
-//	@Override
-//	/** parse args and resolve their dependencies.
-//	 * 
-//	 * (don't run any argument actions)
-//	 * 
-//	 */
-//	public void parseArgs(String[] args) {
-//		super.parseArgs(args);
+	protected List<? extends Element> ensureSectionElements() {
+		if (xPathProcessor != null) {
+			sectionElements = currentCMDir.extractSectionsFromScholarlyHtml(xPathProcessor.getXPath());
+		} else {
+			sectionElements = extractPSectionElements(currentCMDir);
+		}
+		return sectionElements;
+	}
+
+//	public List<? extends Element> extractSectionElements(CMDir cmDir) {
+//		cmDir.ensureScholarlyHtmlElement();
+//		sectionElements = HtmlP.extractSelfAndDescendantIs(cmDir.htmlElement);
+//		return sectionElements;
 //	}
 
-	public void parseArgsRunAndOutput(String[] args) {
-		this.parseArgs(args);
-		this.runAndOutput();
-	}
 
 	public String getPlugin() {
 		return plugin;
@@ -245,16 +270,16 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		}
 	}
 
-	protected void searchHtmlParaElements() {
-		List<HtmlP> pElements = currentCMDir.extractPElements();
-//		resultsBySearcherNameMap = new HashMap<String, ResultsElement>();
+	protected void searchSectionElements() {
+		ensureSectionElements();
 		for (DefaultSearcher searcher : searcherList) {
 			String name = searcher.getName();
-			ResultsElement resultsElement = searcher.search(pElements);
+			ResultsElement resultsElement = searcher.search(sectionElements);
 			resultsElement.setAllResultElementNames(name);
 			currentCMDir.putInContentProcessor(name, resultsElement);
 		}
 	}
+	
 
 	protected void createAndStoreNamedSearchers(ArgumentOption option) {
 		List<Element> values = option.getOrCreateValues();
@@ -376,5 +401,14 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	protected ContentProcessor getOrCreateContentProcessor() {
 		return (currentCMDir == null) ? null : currentCMDir.getOrCreateContentProcessor();
 	}
+
+//	public List<? extends Element> getSectionElementList() {
+//		return sectionElementList;
+//	}
+
+//	protected void ensureSectionElements() {
+//		sectionElements = extractSectionElements(currentCMDir);
+//	}
+
 
 }

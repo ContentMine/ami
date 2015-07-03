@@ -1,0 +1,65 @@
+002
+
+47
+
+59 — A, cryaerophi/us CCUG 17801T (L14624)
+75 — A. cryaerophilus CCUG 17802 (AY314755)
+99 — A. skirrowiiCCUG 10374T (L14625)
+_{ A. cibarius LMG 21996T (AJ607391)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+100
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+100 A. ciban'us LMG 21997 (AJ607392)
+I— A. butzleri CCUG 34397 (DQ464343)
+100 L A. butzleri ATCC 4961 ST (AY621 1 1 6)
+— A. nitmﬁgilis CCUG 15893.r (L14627)
+
+ 
+
+ 
+
+ 
+
+72
+
+ 
+
+100 — A. nitroﬁgilis F2173 (EU106661)
+A. halophilus LA31BT (AF513455)
+A. mytili T234 (FJ156092)
+
+ 
+
+ 
+
+100 A. mytili F2075Y (eusegsm)
+58 A. mytili F2026 (EU669906)
+
+ 
+
+Campy/abacter fetus subsp fetus ATCC 27374T (L04314)
+

@@ -1,0 +1,78 @@
+Mesorhizobium chacoense PR5T (AJ278249)
+0 10 Pseudaminobacter salicylatoxidans BN12T (AF072542)
+' Mesorhizobium mediterraneum DSM 11555T (L38825) Rhizobiales
+
+ 
+
+PhyI/obacterium Ieguminum ORS 1419T (AY785323)
+Ensifer terangae LMG 7834T (X68388)
+
+Roseobacter litora/is ATCC 49566T (X78312)
+Ruegeria gelatinovorans IAM 12617T (D88523)
+Roseovarius Iolerans DSM 11457T (Y11551)
+
+Silicibacterlacuscaerulensis DSM 11314T (U77644)
+Roseivivax ha/odurans OCh 239T (D85829)
+Paracoccus denitriﬁcans ATCC 17741T (Y16927)
+. Rhodobacter sphaeroides DSM 158T (X53855)
+Pseudovibrio ascidiaceicola NRBC 100514T (AB175663)
+Pseudovibrio denitriﬁcans DN34T (AY486423)
+Nesiotobacter exalbescens LA33BT (AF513441)
+Stappia aggregate IAM 12614T (D88520)
+Stappia stellulata IAM 12621T (D88525)
+Kordiimonas gwangyangensis GW14-5T (AY682384)
+Parvularcula bermudensis HTCC2503T (AF544015)
+Asticcacaulis excentricus ATCC 15261T (ABO16610)
+Caulobacter vibrioides DSM 9893T (AJ227754)
+Brevundimonas diminuta ATCC 11568T (M59064)
+Sphingomonas paucimobilis ATCC 29837T (U37337)
+Zymomonas mobilis ATCC 10988T (AF281031) Sphingomonada/es
+Blastamonas ursinco/a KR-99T (Y10677)
+Craurococcus roseus NS13OT (D85828)
+Paracraurococcus ruber N889T (D85827)
+Roseomonas aquatica TR53T (AM231587)
+Raseococcus thiosulfatophilus RB-3T (X72908)
+. Acetobacler orienta/is 21 F-2T (A3052706)
+Kozakia baliensis Yo-3T (A8056321)
+Gluconobacter oxydans NRBC 14819T (AB178433)
+Tistrella mobilis IAM 14872.r (ABO71665)
+Rhodovibrio sodomensis DS1T (M59072)
+Azospin'llum Iipoferum ATCC 29707T (M59061)
+Magnetospirillum gryphiswaldense DSM 6361T (Y10109)
+Rhodospira trueperi ATCC 700224T (AJ001276)
+Roseospira goensis .JA135T (AM283537)
+Rhodaspiril/urn rubrum ATCC 11170T (CP000230)
+. Thalassospira xiamensis M-5T (AY189753)
+Thalessospira Iucentensis DSM 14000T (AM294944)
+Thalassospira profundimaris WP021 1T (AY186195)
+Terasak/e/la pusiI/a IFO 13613T (AB006768) _
+Strain KOPRI 13522 (DQ167245)
+Kiloniella Iaminariae LD81T (AM749667)
+Orientia tsutsugamushi KarpT (AFO62074)
+Rickettsia prowazekii Breian (M21789) Rickettsia/es
+Wo/bachia pipientis (U23709)
+Hyphomicrobium indicum NBRC 14233T (AB159513)
+Vibrio chagasii R-3712T (AJ316199)
+Escherichia coli W31 10 (AP009048)
+Pseudoalteromonas maricaloris KMM 636T (AF144036) _
+
+Rhodobacterales
+
+Kordiimonada/es
+‘Parvu/arculales’
+
+I
+Caulobactera/es
+
+I III”
+
+I I
+
+Rhodospirillales
+
+I l
+
+Outgroup
+
+ 
+

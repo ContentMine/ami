@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml" style="" class=" js postmessage history draganddrop borderimage borderradius boxshadow textshadow cssgradients csstransforms no-csstransforms3d csstransitions generatedcontent localstorage sessionstorage">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge" />     
+      <title>IEEE Xplore Full-Text HTML : Dynamic spectrum management - applying optical networking
+         techniques to wireless DSA networks
+      </title> 
+   </head> 
+   <body>   
+      <div id="LayoutWrapper">              <span id="recordId" style="display:none;">1542681</span>   
+         <hr /> 
+         <div id="BodyWrapper" class="ArticlePage"> 
+            <div id="Body">  
+               <div class="column-main">  
+                  <div id="article">  
+                     <div class="section" id="sec1"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION I
+                           </div> 
+                           <h2>INTRODUCTION</h2> 
+                        </div> 
+                        <p><a id="note-ref_1a"></a>Wireless dynamic spectrum access (DSA) networks require: (1) knowledge of available
+                           spectrum through wide-band spectrum sensing, policies, etc. [<a href="#ref_1">1</a>]; (2) real-time spectrum management?viz., provisioning and release of RF bandwidth;
+                           and (3) a network infrastructure and/or endpoints that support these technologies.
+                           <b>The focus of this paper is requirement 2</b>.
+                        </p> 
+                        <p><a id="note-ref_2a"></a>Wireless DSA networks may require "<i>new</i> architectures and associated signaling and control protocols" for their real-time
+                           spectrum management component [<a href="#ref_2">2</a>]. However, wireless DSA networks, and optical networks that support real-time dynamic
+                           provisioning of wavelengths, have very similar spectrum management requirements. Hence,
+                           we believe: <b>(1)</b> <i>existing</i> optical control plane architectures and protocols that support real time spectrum
+                           management can be <b>adapted</b> to manage wireless spectrum; and <b>(2)</b> methods used to improve the performance of dynamically provisioned optical networks
+                           can also be applied to commercial-sector wireless DSA networks.
+                        </p> 
+                        <p>We review basic spectrum management requirements for commercial-sector DSA networks
+                           in <a href="#sec2">Section II</a>, briefly describe a candidate control plane architecture, protocols, and performance
+                           issues in <a href="#sec3">Sections III</a> and <a href="#sec4">IV</a>, describe usage scenarios in <a href="#sec5">Section V</a>, and our conclusions in <a href="#sec6">Section VI</a>.
+                        </p> 
+                     </div> 
+                     <div class="section" id="sec2"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION II
+                           </div> 
+                           <h2>BASIC REQUIREMENTS</h2> 
+                        </div> 
+                        <p>Wireless DSA networks deployed in the commercial sector will require a number of real-time
+                           spectrum management functions; several are especially challenging:
+                        </p> 
+                        <ul>
+                           <li>Ultra fast provisioning and release of RF bandwidth to make efficient use of limited
+                              spectrum, to operate in environments that may change many times per second, and to
+                              take advantage of short-lived RF micro-environments;
+                           </li> 
+                           <li>Support for endpoints separated by multiple hops, and by multiple administrative domains;</li> 
+                           <li>Support for unicast, multicast, and broadcast;</li> 
+                           <li>Support for a broad range of wireless DSA usage models; e.g., where users may hold
+                              exclusive rights to their assigned spectrum; where users may ?lease? spectrum in (near)
+                              real time and hold it for seconds to days; where users may preempt and seize spectrum
+                              in real time and hold it for seconds to days (e.g., emergency services); where users
+                              may share licensed spectrum by varying their usage in space or time; where users may
+                              operate over blocks of pre-provisioned but unassigned spectrum; where users may operate
+                              over shared unlicensed spectrum; and where ?private commons? licensees may sublease
+                              spectrum to users that do not fit within traditional dynamic spectrum leasing arrangements
+                              (e.g., peer-to-peer devices that do not use the licensee's network infrastructure).
+                           </li>
+                        </ul> 
+                     </div> 
+                     <div class="section" id="sec3"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION III
+                           </div> 
+                           <h2>CANDIDATE ARCHITECTURE AND PROTOCOLS</h2> 
+                        </div> 
+                        <p>A number of optical networks use wavelength division multiplexing technologies. A
+                           wavelength is a band of optical spectrum that may be assigned?statically or dynamically?to
+                           a single user or source, or used to carry aggregate traffic that has been multiplexed
+                           in some way. And it may be provisioned in (near) real time, and held for milliseconds
+                           to months.
+                        </p> 
+                        <div class="section_2" id="sec3a"> 
+                           <h3>A. "Just in Time"</h3> 
+                           <p><a id="note-ref_3a"></a>JIT ("Just in Time") is a family of simple, fast, out-of-band signaling and control
+                              protocols used to dynamically provision and manage wavelengths in optical networks
+                              [<a href="#ref_3">3</a>]. JIT is independent of media type, and thus can also be used as a broker of wireless
+                              spectrum. JIT is an open, published architecture, and its protocols have been implemented
+                              in hardware. Software-based implementations are also available.
+                           </p> 
+                           <p><a id="note-ref_4a"></a> <a id="note-ref_5a"></a> JIT has been deployed and tested in the Advanced Technology Demonstration Network
+                              testbed in Washington DC [<a href="#ref_4">4</a>], which is part of the us Defense Department's Global Information Grid Evaluation
+                              Facility, and which serves a number of science, technology, and engineering programs
+                              [<a href="#ref_5">5</a>].
+                           </p> 
+                        </div> 
+                        <div class="section_2" id="sec3b"> 
+                           <h3>B. Reference Architecture</h3> 
+                           <p>A reference architecture for wireless DSA networks assumes that a large number of
+                              communications devices compete for various parts of the RF spectrum. Devices have
+                              varying power and signal sensing and transmission characteristics.
+                           </p> 
+                           <p>Devices can use the JIT protocol to create requests for spectrum allocations by sharing
+                              a low bandwidth common signaling channel. Devices may use other components of the
+                              JIT control plane (e.g., intra- and inter-domain routing), to support additional DSA
+                              functions?spectrum brokering, preemption, policy management, etc. We briefly describe
+                              some of JIT's features in the remainder of this Section.
+                           </p> 
+                           <div class="section_3" id="sec3b1"> 
+                              <h4>1) Signaling Channel</h4> 
+                              <p><a id="note-ref_6a"></a> <a id="note-ref_7a"></a> Out-of-band signaling is technology-neutral; i.e., the signaling and data planes
+                                 are orthogonal, so JIT signaling can be used to support a wide range of DSA usage
+                                 models, and to dynamically assign wireless spectrum in a number of ways?based on frequency,
+                                 time, space (location or direction), signal characteristics (power, coding) or combinations
+                                 of these [<a href="#ref_6">6</a>], [<a href="#ref_7">7</a>]. Most have direct counterparts in optical networks.
+                              </p> 
+                              <p>A likely implementation for wireless DSA networks is to use an ultra-wideband (UWB)
+                                 common signaling channel that does not interfere with other communications, and that
+                                 may have a relatively low bit rate. Spreading codes can be used over the UWB common
+                                 channel to emulate point-to-point signaling paths between node pairs if required.
+                              </p> 
+                           </div> 
+                           <div class="section_3" id="sec3b2"> 
+                              <h4>2) Message Structure</h4> 
+                              <p>JIT control messages (i.e., signaling, routing, network management, etc.) have hardware-parsable
+                                 components with hop-by-hop significance, and software-parsable components with end-to-end
+                                 significance. The same message format is used by all of the JIT management protocols,
+                                 which greatly simplifies their implementation in hardware. The structure allows hardware
+                                 and software to parse their respective segments in parallel.
+                              </p> 
+                           </div> 
+                           <div class="section_3" id="sec3b3"> 
+                              <h4>3) Provisioning Schemes</h4> 
+                              <p>JIT can dynamically provision spectrum in real time. Spectrum requests may vary in
+                                 capability (e.g. SNR, interference footprint, path reliability) and holding time,
+                                 and may be spread over multiple administrative domain(s).
+                              </p> 
+                              <p>JIT can suggest an alternate spectrum band if a request cannot be met, and can deterministically
+                                 delay a request if a specific band is scheduled to become available shortly.
+                              </p> 
+                              <p>Spectrum may be released in two ways. Implicit releases are timed, and require the
+                                 holding time to be conveyed with the allocation request. Explicit releases issue a
+                                 control message.
+                              </p> 
+                           </div> 
+                           <div class="section_3" id="sec3b4"> 
+                              <h4>4) Signaling Speed</h4> 
+                              <p><a id="note-ref_1b"></a>DARPA XG spectrum sensors obtain knowledge of available spectrum in tens of microseconds
+                                 (for a 25?50 MHz sub-band) [<a href="#ref_1">1</a>], which suggests that provisioning must be equally fast. JIT hardware is able to
+                                 generate signaling requests in 13 microseconds (using a 400,000-gate field programmable
+                                 gate array), and in 1.3 microseconds (using a million-gate FPGA). Signaling request
+                                 times can be reduced to 725 nanoseconds with higher speed FPGAs, and to about 200
+                                 nanoseconds with pipeline processing and parallelization of control message functions.
+                                 A software implementation using a 1 GHz processor issues requests in about 1 millisecond.
+                              </p> 
+                              <p>This has two important implications. First, traffic in RF environments is inherently
+                                 bursty. Coupling fast DARPA XG-class spectrum sensing with ultra fast JIT signaling
+                                 means that spectrum utilization can be significantly increased by reserving spectrum
+                                 <i>only</i> for the duration of the burst.
+                              </p> 
+                              <p>Second, ultra fast signaling means that application- and network protocol-initiated
+                                 provisioning and release of wireless spectrum is technically feasible. E.g., spectrum
+                                 can be provisioned and released on demand by applications like HTTP and by transport
+                                 protocols like TCP, rather than being provisioned and held for an entire session.
+                              </p> 
+                           </div> 
+                           <div class="section_3" id="sec3b5"> 
+                              <h4>5) Policy Distribution</h4> 
+                              <p>Dynamic spectrum management usually requires devices to monitor utilization, and to
+                                 request unused or underutilized spectrum as needed. Devices in close proximity tend
+                                 to have similar spectrum profiles and may make similar choices with respect to channel
+                                 selection. Using JIT to share information about spectrum availability and to make
+                                 explicit reservations for spectrum segments can increase spectrum efficiency and support
+                                 a higher density of devices in the same area.
+                              </p> 
+                              <p>Endpoint radios may have policy rules that apply at their locations. If so, JIT can
+                                 be used to distribute policy rules. Multicast is an effective way to distribute policy.<a id="note-ref_8a"></a> JIT supports several different types of multicast joins (source-managed, leaf-initiated)
+                                 and scope limits [<a href="#ref_8">8</a>].
+                              </p> 
+                           </div> 
+                           <div class="section_3" id="sec3b6"> 
+                              <h4>6) Security</h4> 
+                              <p>JIT's out-of-band signaling protects network functions from unauthorized use by functionally
+                                 isolating the control channel from the data channels. JIT supports encryption and
+                                 strong authentication of users prior to joining the network.
+                              </p> 
+                           </div> 
+                        </div> 
+                     </div> 
+                     <div class="section" id="sec4"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION IV
+                           </div> 
+                           <h2>PERFORMANCE ISSUES</h2> 
+                        </div> 
+                        <div class="section_2" id="sec4a"> 
+                           <h3>A. Blocked Requests</h3> 
+                           <p><a id="note-ref_9a"></a>Estimates of how much <i>allocated</i> spectrum is in use at any given moment (on average) range from 2% (overall) to 13%
+                              in the heavily used 30?3000 MHz band [<a href="#ref_9">9</a>]. If an endpoint has potential access to multiple 5?20 MHz spectrum channels, then
+                              the approximate probability of having no spectrum available when a request is made
+                              (i.e., the request is blocked) is a function of the number of candidate channels and
+                              offered load (<a href="#fig_1">Figure 1</a>). The approximate blocking probability is well below 10?<sup>4</sup> for any combination of four or more channels and for offered loads up to 50%. Note
+                              that even a few channels can support loads up to 30% at blocking probabilities below
+                              10?<sup>2</sup>.
+                           </p> 
+                           <div class="figure figure-full" id="fig_1"> 
+                              <div class="img-wrap"> <a href="/ielx5/10350/32916/1542681/html/img/1542681-fig-1-large.gif"><img src="/ielx5/10350/32916/1542681/html/img/1542681-fig-1-small.gif" width="550" height="480" alt="Figure 1" /><div class="zoom" title="View Larger Image"></div></a> 
+                              </div> 
+                              <div class="figcaption"> <b class="title">Figure 1.</b> Approximate blocking probability as a function of the number of candidate channels
+                                 and offered load.
+                              </div>  
+                           </div> 
+                           <p><a href="#fig_1">Figure 1</a>. Approximate blocking probability as a function of the number of candidate channels
+                              and offered load.
+                           </p> 
+                        </div> 
+                        <div class="section_2" id="sec4b"> 
+                           <h3>B. Provisioning Schemes</h3> 
+                           <p>JIT uses "tell-and-go" (TAG) provisioning in optical networks to greatly reduce the
+                              time required to allocate spectrum. TAG does not wait for acknowledgments from endpoints
+                              or intermediate devices (e.g., wireless routers) before transmitting. JIT also supports
+                              "tell-and-wait" (TAW) provisioning with reliable signaling in which DSA requests are
+                              acknowledged prior to use and which incur a full round-trip delay plus processing
+                              time. TAG provisioning is most effective when the blocking probability is low (<a href="#fig_1">Figure 1</a>), and may be appropriate for some wireless DSA networks.
+                           </p> 
+                           <p><a href="#fig_2">Figure 2</a> shows the differences between TAG and TAW signaling for transmissions that transit
+                              multiple hops or multiple administrative domains.
+                           </p> 
+                           <p>A TAG transmission is preceded by a JIT <code>SETUP</code> message sent over the out-of-band signaling channel. The source does not await confirmation
+                              that an end-to-end path has been established; instead, it begins transmitting after
+                              receiving a <code>SETUP ACK</code> from the <i>first</i> device in the multiple-hop path. The <code>SETUP</code> message informs each device along the path of the impending data transmission so
+                              that spectrum can be allocated prior to the transmission's arrival. Spectrum may be
+                              implicitly released if the holding time is known and conveyed with <code>SETUP</code>, or explicitly <code>RELEASEd</code> as in <a href="#fig_2">Figure 2</a>. JIT supports preemption, so a transmission may be allowed to preempt a lower priority
+                              spectrum allocation.
+                           </p> 
+                           <div class="figure figure-full" id="fig_2"> 
+                              <div class="img-wrap"> <a href="/ielx5/10350/32916/1542681/html/img/1542681-fig-2-large.gif"><img src="/ielx5/10350/32916/1542681/html/img/1542681-fig-2-small.gif" width="508" height="550" alt="Figure 2" /><div class="zoom" title="View Larger Image"></div></a> 
+                              </div> 
+                              <div class="figcaption"> <b class="title">Figure 2.</b> TAW spectrum provisioning, transmission, and explicit release over a multiple-hop
+                                 path. Times are not to scale
+                              </div>  
+                           </div> 
+                           <p><a href="#fig_2">Figure 2</a>. TAW spectrum provisioning, transmission, and explicit release over a multiple-hop
+                              path. Times are not to scale.
+                           </p> 
+                           <p>A TAW transmission is also preceded by an out-of-band JIT <code>SETUP</code> message (<a href="#fig_2">Figure 2</a>). However, the source does not begin transmitting until it receives confirmation
+                              that an end-to-end path has been established. Spectrum may be either implicitly or
+                              explicitly <code>RELEASEd</code>, and lower priority assignments may also be preempted.
+                           </p> 
+                           <p>TAG provisioning is important in optical networks where error rates are negligible,
+                              and where blocking probabilities are relatively low at offered loads up to 50%. TAW
+                              provisioning adds unacceptable delay overhead in these networks?e.g., a 5 MByte burst
+                              that can be transmitted in a millisecond over a 40 Gbit/second optical channel may
+                              incur several seconds of TAW signaling overhead.
+                           </p> 
+                           <p>TAG provisioning is less important in wireless networks where signaling channel error
+                              rates are relatively high and data channel bit rates are relatively low. TAG's advantage
+                              in wireless spectrum efficiency?i.e., transmission time ? total holding time<a href="#fnote_1"><sup>1</sup></a>, may be negligible at holding times above 10 seconds <i>if</i> fast provisioning is available. Confirmation of end-to-end paths provided by TAW
+                              signaling is also important in lossy wireless environments. As noted, JIT can support
+                              both TAG and TAW provisioning in the same network, so the choice may be left to the
+                              application.
+                           </p> 
+                        </div> 
+                     </div> 
+                     <div class="section" id="sec5"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION V
+                           </div> 
+                           <h2>USAGE SCENARIOS</h2> 
+                        </div> 
+                        <p><a id="note-ref_10a"></a> <a id="note-ref_11a"></a> JIT signaling can operate transparently with <i>all</i> of the regulatory and market-based models proposed for commercialsector wireless
+                           DSA networks?exclusive use, dynamically assigned rights, licensed use with block sub-assignments,
+                           secondary leasing, commons ("sense and adapt"), etc. [<a href="#ref_10">10</a>], [<a href="#ref_11">11</a>].
+                        </p> 
+                        <p>JIT can also operate transparently with DARPA XG-class "sense and go" opportunistic
+                           adaptive cognitive radio architectures in which endpoints (e.g., software-defined
+                           radios) use (near) real-time sensing and JIT signaling to match transmissions with
+                           idle spectrum. Transmissions in this usage scenario are typically short-lived "bursts",
+                           and may be well-suited for JIT's TAG provisioning<a href="#fnote_2"><sup>2</sup></a>, Opportunistic adaptive systems may also use JIT protocols to share information about
+                           spectrum usage with other devices (endpoints, brokers).
+                        </p> 
+                        <p><a id="note-ref_2b"></a>JIT signaling is an excellent match for so-called "coordinated DSA networks" in which
+                           access to the spectrum in a region or administrative domain is managed by a spectrum
+                           broker [<a href="#ref_2">2</a>]. Wireless spectrum is ?leased? to endpoints, and the lease lifetime may be very
+                           short<a href="#fnote_3"><sup>3</sup></a>. This may be a more realistic way of implementing commercial-sector wireless DSA
+                           networks.<a id="note-ref_12a"></a> JIT signaling can be coupled with other JIT architectural features (e.g., intra-
+                           and inter-domain routing) to effectively manage spectrum in these scenarios [<a href="#ref_12">12</a>].
+                        </p> 
+                        <p>As noted, JIT is sufficiently nimble to support dynamic spectrum provisioning requests
+                           from a number of sources?network operators, spectrum brokers, users, applications,
+                           and network protocols.
+                        </p> 
+                     </div> 
+                     <div class="section" id="sec6"> 
+                        <div class="header article-hdr"> 
+                           <div class="kicker">
+                              SECTION VI
+                           </div> 
+                           <h2>CONCLUSIONS</h2> 
+                        </div> 
+                        <p><a id="note-ref_13a"></a> <a id="note-ref_14a"></a> Optical control plane architectures and protocols that support real time spectrum
+                           management?provisioning and release of optical bandwidth?can almost certainly be adapted
+                           to manage RF spectrum in general, and commercial-sector wireless DSA networks in particular
+                           [<a href="#ref_13">13</a>], [<a href="#ref_14">14</a>].
+                        </p> 
+                        <p>JIT is an enabling technology for spectrum management in these networks. Its open
+                           architecture and protocols are well-suited for managing devices and entities that
+                           compete for wireless spectrum.
+                        </p> 
+                        <p>JIT supports dynamic spectrum provisioning and release, distribution of policy to
+                           devices and endpoints, and operates in environments that may change many times per
+                           second. Unlike some architectures, JIT also supports multicast, endpoints separated
+                           by multiple hops and/or multiple administrative domains, and a broad range of usage
+                           scenarios.
+                        </p> 
+                        <p>Optical testbed trials have confirmed that a hardware-based JIT implementation can
+                           provision spectrum with signaling times on the order of a microsecond, and can manage
+                           spectrum with holding times ranging from a few milliseconds to months.
+                        </p> 
+                     </div> 
+                     <h3>Acknowledgment</h3> 
+                     <p>The authors acknowledge the valuable comments and suggestions of Ed Thomas (Chief,
+                        Office of Engineering and Technology, US Federal Communications Commission), Bob Lucky
+                        (Chair, Technological Advisory Council, US Federal Communications Commission), Bob
+                        Schneider (Joint Spectrum Center, US Defense Information Systems Agency), and Hank
+                        Dardy (Chief Scientist, Center for Computational Science, US Naval Research Laboratory).
+                     </p> 
+                  </div> 
+                  <div id="article-data"> 
+                     <div class="section" id="footnotes"> 
+                        <div class="header data-hdr"> 
+                           <h2>Footnotes</h2> 
+                           <div class="toggle-btn"></div>
+                        </div> 
+                        <div class="content"> 
+                           <div id="afnote_1"> 
+                              <div class="body"> 
+                                 <p>This work was supported by the US Intelligence Community under ARDA contracts MDA
+                                    904-00-C-2133 and MDA 904-02-C-0482, and by NASA under award NAG2-1467.
+                                 </p> 
+                              </div>
+                           </div> 
+                           <div id="fnote_1"> 
+                              <div class="body"> 
+                                 <p><sup>1</sup>Transmission time plus signaling overhead.
+                                 </p> 
+                              </div>
+                           </div> 
+                           <div id="fnote_2"> 
+                              <div class="body"> 
+                                 <p><a id="note-ref_3b"></a> <a id="note-ref_4b"></a><sup>2</sup>JIT was originally developed to support optical <i>burst</i> switching [<a href="#ref_3">3</a>], [<a href="#ref_4">4</a>]
+                                 </p> 
+                              </div>
+                           </div> 
+                           <div id="fnote_3"> 
+                              <div class="body"> 
+                                 <p><a id="note-ref_4c"></a><sup>3</sup>This is conceptually similar to dynamic lightpath provisioning in optical networks,
+                                    in which resource management is less opportunistic than in burst switching [<a href="#ref_4">4</a>].
+                                 </p> 
+                              </div>
+                           </div> 
+                        </div> 
+                     </div> 
+                     <div class="section" id="references"> 
+                        <div class="header data-hdr"> 
+                           <h2>References</h2> 
+                           <div class="toggle-btn"></div>
+                        </div> 
+                        <div class="content">
+                           <div class="ref" id="ref_1"> 
+                              <div class="body"> 
+                                 <p> <b>1</b>. DARPA XG Program, http://www.darpa.mil/ato/programs/xg/index.htm
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span><div class="snippet context" style="display: none; ">
+                                    Wireless dynamic spectrum access (DSA) networks require: (1) knowledge of available
+                                    spectrum through wide-band spectrum sensing, policies, etc. [1]; (2) real-time spectrum
+                                    management ? viz.
+                                    <div><a href="#note-ref_1a">Go To Text</a></div> 
+                                 </div> 
+                                 <div class="snippet context" style="display: none; ">
+                                    DARPA XG spectrum sensors obtain knowledge of available spectrum in tens of microseconds
+                                    (for a 25?50 MHz sub-band) [1], which suggests that provisioning must be equally fast.
+                                    <div><a href="#note-ref_1b">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_2"> 
+                              <div class="body"> 
+                                 <p> <b>2</b>. Buddhikot M. et al., "DIMSUMnet: new directions in wireless networking using coordinated
+                                    dynamic spectrum access," Proc. IEEE Intl. Symp. World of Wireless, Mobile &amp;amp; Multimedia
+                                    Networks (WoWMoM), June 2005.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link abstract">Quick Abstract</span> | <span class="link context">Show Context</span> | <a href="/stamp/stamp.jsp?arnumber=1443488">Full Text: PDF</a> 
+                                 <div class="snippet abstract" style="display: none; ">
+                                    The new paradigm of dynamic spectrum access (DSA) networks aims to provide opportunistic
+                                    access to large parts of the underutilized spectrum. The majority of research in this
+                                    area has focused on free-for-all, uncoordinated access methods common in ad-hoc military
+                                    applications (Horne, W. 2003; Leaves, P. et al., 2002; Lehr, W. et al., 2002; Schafer,
+                                    D.J.; T?njes, R., 2002). We argue that a simpler pragmatic approach that offers coordinated,
+                                    spatially aggregated spectrum access via a regional spectrum broker is more attractive
+                                    in the immediate future. We first introduce two new concepts, coordinated access band
+                                    (CAB) and statistically multiplexed access (SMA), to the spectrum. We describe their
+                                    implementation in the new DIMSUMnet (dynamic intelligent management of spectrum for
+                                    ubiquitous mobile-access network) architecture consisting of four elements: base stations;
+                                    clients; a radio access network manager (RAN-MAN) that obtains spectrum leases; a
+                                    per-domain spectrum broker that controls spectrum access. We also discuss in detail
+                                    various issues in the design of spectrum brokers and spectrum allocation policies
+                                    and algorithms.
+                                    <div> <a href="/xpl/articleDetails.jsp?arnumber=1443488&amp;contentType=Conference+Publications">Full Abstract</a> 
+                                    </div> 
+                                 </div>
+                                 <div class="snippet context" style="display: none; ">
+                                    Wireless DSA networks may require "new architectures and associated signaling and
+                                    control protocols" for their real-time spectrum management component [2].
+                                    <div><a href="#note-ref_2a">Go To Text</a></div> 
+                                 </div> 
+                                 <div class="snippet context" style="display: none; ">
+                                    JIT signaling is an excellent match for so-called "coordinated DSA networks" in which
+                                    access to the spectrum in a region or administrative domain is managed by a spectrum
+                                    broker [2].
+                                    <div><a href="#note-ref_2b">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_3"> 
+                              <div class="body"> 
+                                 <p> <b>3</b>. Baldine I., G. Rouskas, H. Perros, D. Stevenson, "JumpStart: a Just-in-Time signaling
+                                    architecture for WDM burst-switched networks," IEEE Communications, 40(2), 82-89,
+                                    2002.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link abstract">Quick Abstract</span> | <span class="link context">Show Context</span> | <a href="/stamp/stamp.jsp?arnumber=983912">Full Text: PDF</a> 
+                                 <div class="snippet abstract" style="display: none; ">
+                                    We present an architecture for a core dWDM network which utilizes the concept of optical
+                                    burst switching coupled with a just-in-time signaling scheme. It is a reservation-based
+                                    architecture whose distinguishing characteristics are its relative simplicity, its
+                                    amenability to hardware implementation, and the ability to support multicast natively.
+                                    Another important feature is data transparency-the network infrastructure is independent
+                                    of the format of the data being transmitted on individual wavelengths. We present
+                                    the signaling protocol designed for this architecture, as well as an unified signaling
+                                    message structure to be used in conjunction with the protocol. We also present the
+                                    future directions of this research
+                                    <div> <a href="/xpl/articleDetails.jsp?arnumber=983912&amp;contentType=Journals+%26+Magazines">Full Abstract</a> 
+                                    </div> 
+                                 </div>
+                                 <div class="snippet context" style="display: none; ">
+                                    JIT ("Just in Time") is a family of simple, fast, out-of-band signaling and control
+                                    protocols used to dynamically provision and manage wavelengths in optical networks
+                                    [3].
+                                    <div><a href="#note-ref_3a">Go To Text</a></div> 
+                                 </div> 
+                                 <div class="snippet context" style="display: none; ">
+                                    JIT was originally developed to support optical burst switching [3], [4].
+                                    <div><a href="#note-ref_3b">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_4"> 
+                              <div class="body"> 
+                                 <p> <b>4</b>. Baldine I., M. Cassada, A. Bragg, G. Karmous-Edwards, D. Stevenson, "Just-in-Time
+                                    optical burst switching implementation in the ATDnet all-optical networking testbed,"
+                                    Proc. IEEE Globecom 2003, December 2003.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link abstract">Quick Abstract</span> | <span class="link context">Show Context</span> | <a href="/stamp/stamp.jsp?arnumber=1258741">Full Text: PDF</a> 
+                                 <div class="snippet abstract" style="display: none; ">
+                                    We describe: (i) the architecture of an optical burst switched (OBS) demonstration
+                                    network overlaying the ATDnet transparent all-optical testbed, and (ii) experiments
+                                    underway in the testbed. The OBS overlay uses a simple hardware-based protocol embedded
+                                    in OBS network controllers to manage commercial off-the-shelf DWDM switches. Data
+                                    paths are all-optical and completely transparent, and can carry analog or digital
+                                    traffic in any format, data rate, and modulation scheme. Experiments with latency-
+                                    and jitter-sensitive HDTV transmission, petabyte file transfers, and immersive real
+                                    time visualization of satellite imagery over the OBS network are ongoing. Parallel
+                                    research on transport protocols, QoS-aware routing protocols, adaptors for an OBS
+                                    LAN, and network management architecture are applied as completed. This is the first
+                                    just-in-time (JIT) OBS field trial known to the authors.
+                                    <div> <a href="/xpl/articleDetails.jsp?arnumber=1258741&amp;contentType=Conference+Publications">Full Abstract</a> 
+                                    </div> 
+                                 </div>
+                                 <div class="snippet context" style="display: none; ">
+                                    JIT has been deployed and tested in the Advanced Technology Demonstration Network
+                                    testbed in Washington DC [4], which is part of the us Defense Department's Global
+                                    Information Grid Evaluation Facility, and which serves a number of science, technology,
+                                    and engineering programs [5].
+                                    <div><a href="#note-ref_4a">Go To Text</a></div> 
+                                 </div> 
+                                 <div class="snippet context" style="display: none; ">
+                                    JIT was originally developed to support optical burst switching [3], [4].
+                                    <div><a href="#note-ref_4b">Go To Text</a></div> 
+                                 </div> 
+                                 <div class="snippet context" style="display: none; ">
+                                    This is conceptually similar to dynamic lightpath provisioning in optical networks,
+                                    in which resource management is less opportunistic than in burst switching [4].
+                                    <div><a href="#note-ref_4c">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_5"> 
+                              <div class="body"> 
+                                 <p> <b>5</b>. Decina B., "GigEF: Global Information Grid Evaluation Facilities," Proc. PEO/SYSCOMConf.,
+                                    November 2004.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span><div class="snippet context" style="display: none; ">
+                                    JIT has been deployed and tested in the Advanced Technology Demonstration Network
+                                    testbed in Washington DC [4], which is part of the us Defense Department's Global
+                                    Information Grid Evaluation Facility, and which serves a number of science, technology,
+                                    and engineering programs [5].
+                                    <div><a href="#note-ref_5a">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_6"> 
+                              <div class="body"> 
+                                 <p> <b>6</b>. Horne W., "Adaptive spectrum access: using the full spectrum space," Proc. 31st
+                                    Annual Telecommunications Policy Research Conference (TPRC'03), October 2003.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span><div class="snippet context" style="display: none; ">
+                                    Out-of-band signaling is technology-neutral; i.e., the signaling and data planes are
+                                    orthogonal, so JIT signaling can be used to support a wide range of DSA usage models,
+                                    and to dynamically assign wireless spectrum in a number of ways ? based on frequency,
+                                    time, space (location or direction), signal characteristics (power, coding) or combinations
+                                    of these [6], [7].
+                                    <div><a href="#note-ref_6a">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_7"> 
+                              <div class="body"> 
+                                 <p> <b>7</b>. Tonmukayakul A. and M. Weiss, "Secondary use of radio spectrum: a feasibility analysis,"
+                                    Proc. 32nd Annual Telecomm. Policy and Research Conf, Arlington VA, October 2004.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span><div class="snippet context" style="display: none; ">
+                                    Out-of-band signaling is technology-neutral; i.e., the signaling and data planes are
+                                    orthogonal, so JIT signaling can be used to support a wide range of DSA usage models,
+                                    and to dynamically assign wireless spectrum in a number of ways ? based on frequency,
+                                    time, space (location or direction), signal characteristics (power, coding) or combinations
+                                    of these [6], [7].
+                                    <div><a href="#note-ref_7a">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_8"> 
+                              <div class="body"> 
+                                 <p> <b>8</b>. Baldine I., G. Rouskas, H. Perros, D. Stevenson, "Signaling support for multicast
+                                    and QoS within the JumpStart WDM burst switching architecture," Optical Networks,
+                                    4(6), 68-80, 2003.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span><div class="snippet context" style="display: none; ">
+                                    JIT supports several different types of multicast joins (source-managed, leaf-initiated)
+                                    and scope limits [8].
+                                    <div><a href="#note-ref_8a">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_9"> 
+                              <div class="body"> 
+                                 <p> <b>9</b>. Adams C., "Policy controlled radio: making room in the spectrum," Avionics, March
+                                    2005.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span><div class="snippet context" style="display: none; ">
+                                    Estimates of how much allocated spectrum is in use at any given moment (on average)
+                                    range from 2% (overall) to 13% in the heavily used 30?3000 MHz band [9].
+                                    <div><a href="#note-ref_9a">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_10"> 
+                              <div class="body"> 
+                                 <p> <b>10</b>. Berggren F. et al, Dynamic Spectrum Access, Phase 1: Scenarios and Research Challenges,
+                                    DSA Phase 1 Report, Version 1.0, Sweden, September 2004.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span><div class="snippet context" style="display: none; ">
+                                    JIT signaling can operate transparently with all of the regulatory and market-based
+                                    models proposed for commercialsector wireless DSA networks ? exclusive use, dynamically
+                                    assigned rights, licensed use with block sub-assignments, secondary leasing, commons
+                                    ("sense and adapt"), etc. [10], [11].
+                                    <div><a href="#note-ref_10a">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_11"> 
+                              <div class="body"> 
+                                 <p> <b>11</b>. Grandblaise, D. et al., Dynamic spectrum allocation (DSA) and reconfigurability,
+                                    Proc SDR Forum Software Defined Radio Technical Conference, San Diego, USA, November
+                                    2002.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link abstract">Quick Abstract</span> | <span class="link context">Show Context</span> | <a href="/stamp/stamp.jsp?arnumber=1249076">Full Text: PDF</a> 
+                                 <div class="snippet abstract" style="display: none; ">
+                                    The paper presents current research into the area of dynamic spectrum allocation (DSA)
+                                    in the context of a reconfigurable multi-radio environment. First, the DSA concept
+                                    is introduced. Then, some possible deployment scenarios for DSA are presented. Based
+                                    on these scenarios, some high level DSA requirements on reconfigurability are outlined
+                                    from different perspectives (technical, economic and regulatory) investigating different
+                                    areas (system, equipment). Two extreme architecture approaches, combining both DSA
+                                    and reconfigurability, are illustrated. Finally, we review some of the current technologies
+                                    (with emphasis on SDR) enabling the support of DSA. This activity is ongoing and some
+                                    more mature results are expected regarding the identification of future research needs
+                                    in reconfigurability.
+                                    <div> <a href="/xpl/articleDetails.jsp?arnumber=1249076&amp;contentType=Conference+Publications">Full Abstract</a> 
+                                    </div> 
+                                 </div>
+                                 <div class="snippet context" style="display: none; ">
+                                    JIT signaling can operate transparently with all of the regulatory and market-based
+                                    models proposed for commercialsector wireless DSA networks ? exclusive use, dynamically
+                                    assigned rights, licensed use with block sub-assignments, secondary leasing, commons
+                                    ("sense and adapt"), etc. [10], [11].
+                                    <div><a href="#note-ref_11a">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_12"> 
+                              <div class="body"> 
+                                 <p> <b>12</b>. Baldine I., P. Mehrotra, G. Rouskas, A. Bragg, D. Stevenson, "An intra- and inter-domain
+                                    routing architecture for optical burst switched (OBS) networks," Proc. IEEE BroadNets
+                                    2005 (WOBS), October 2005.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link abstract">Quick Abstract</span> | <span class="link context">Show Context</span> | <a href="/stamp/stamp.jsp?arnumber=1589726">Full Text: PDF</a> 
+                                 <div class="snippet abstract" style="display: none; ">
+                                    We describe an intra- and inter-domain routing architecture for just-in-time (JIT)
+                                    optical burst switched (OBS) networks. The architecture addresses the problem of routing
+                                    optical signals of varying types across an all-optical burst-switched backbone network
+                                    while maintaining the optical signal quality required by each application. The architecture
+                                    distinguishes between routing for bursts and ancillary signaling messages ("data plane
+                                    routing"), and routing for other management and control messages ("control plane routing")
+                                    <div> <a href="/xpl/articleDetails.jsp?arnumber=1589726&amp;contentType=Conference+Publications">Full Abstract</a> 
+                                    </div> 
+                                 </div>
+                                 <div class="snippet context" style="display: none; ">
+                                    JIT signaling can be coupled with other JIT architectural features (e.g., intra- and
+                                    inter-domain routing) to effectively manage spectrum in these scenarios [12].
+                                    <div><a href="#note-ref_12a">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_13"> 
+                              <div class="body"> 
+                                 <p> <b>13</b>. Mackie K., "FCC investigates JIT protocol for broadband wireless," Broadband Wireless
+                                    Business Mag., May 11, 2004.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span><div class="snippet context" style="display: none; ">
+                                    Optical control plane architectures and protocols that support real time spectrum
+                                    management ? provisioning and release of optical bandwidth ? can almost certainly
+                                    be adapted to manage RF spectrum in general, and commercial-sector wireless DSA networks
+                                    in particular [13], [14].
+                                    <div><a href="#note-ref_13a">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div>
+                           <div class="ref" id="ref_14"> 
+                              <div class="body"> 
+                                 <p> <b>14</b>. Stevenson D., "Just in Time network research, progress and implications," FCC Technl.
+                                    Advisory Council III, July 28, 2004.
+                                 </p> 
+                              </div> 
+                              <div class="footer"> <span class="link context">Show Context</span><div class="snippet context" style="display: none; ">
+                                    Optical control plane architectures and protocols that support real time spectrum
+                                    management ? provisioning and release of optical bandwidth ? can almost certainly
+                                    be adapted to manage RF spectrum in general, and commercial-sector wireless DSA networks
+                                    in particular [13], [14].
+                                    <div><a href="#note-ref_14a">Go To Text</a></div> 
+                                 </div>
+                              </div> 
+                           </div> 
+                        </div> 
+                     </div> 
+                     <div class="section" id="authors"> 
+                        <div class="header data-hdr"> 
+                           <h2>Authors</h2> 
+                           <div class="toggle-btn"></div>
+                        </div> 
+                        <div class="content"> 
+                           <div class="author" id="author_01"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Baldine,%20I..QT.&amp;newsearch=partialPref">Ilia Baldine</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_02"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Bragg,%20A..QT.&amp;newsearch=partialPref">Arnold Bragg</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_03"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Evans,%20G..QT.&amp;newsearch=partialPref">Greg Evans</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                           <div class="author" id="author_04"> 
+                              <div class="img-wrap"> <img src="/assets/icp/assets/img/no-photo.gif" width="80" height="95" alt="No Photo Available" /> 
+                              </div> 
+                              <div class="copy"> 
+                                 <h3><a href="/search/searchresult.jsp?searchWithin=p_Authors:.QT.Stevenson,%20D..QT.&amp;newsearch=partialPref">Dan Stevenson</a></h3> 
+                                 <div class="bio"> 
+                                    <div class="message">
+                                       No Bio Available
+                                    </div> 
+                                 </div> 
+                              </div> 
+                           </div> 
+                        </div> 
+                     </div>   
+                     <div class="section" id="corrections" style="margin-bottom: 123px; "> 
+                        <div class="header data-hdr"> 
+                           <h2>Corrections</h2> 
+                           <div class="toggle-btn"></div>
+                        </div> 
+                        <div class="content"> 
+                           <p>None</p> 
+                        </div> 
+                     </div> 
+                     <div class="section" id="media" style="display: none; "> 
+                        <div class="header data-hdr"> 
+                           <h2>Multimedia</h2> 
+                           <div class="toggle-btn"></div>
+                        </div> 
+                        <div class="content"> 
+                           <div class="item archive"> 
+                              <div class="no-content">
+                                 No Data Available
+                              </div> 
+                           </div> 
+                        </div> 
+                     </div> 
+                  </div> 
+               </div> 
+               <div class="column-side column-side-left"> 
+                  <div class="box box-style-2"> 
+                     <div class="cap-top"> </div> 
+                     <div class="section pdf"><a href="/stamp/stamp.jsp?arnumber=1542681" onclick="javascript:ntptEventTag('ev=Download_PDF');">Download PDF</a> 
+                     </div> 
+                  </div> 
+                  <div class="box box-style-2"> 
+                     <div class="cap-top"> </div> 
+                     <dl class="article-data"> 
+                        <dt>
+                           This paper appears in:
+                        </dt> 
+                        <dd class="journalTitle"><span id="dt_paper"><a href="/xpl/mostRecentIssue.jsp?punumber=10350">New Frontiers in Dynamic Spectrum Access Networks, 2005. DySPAN 2005. 2005 First IEEE
+                                 International Symposium on</a></span></dd> 
+                        <dt class="dt_date">
+                           Conference Date(s):
+                        </dt> 
+                        <dd><span id="dt_conf_date" class="dt_date"><a href="/xpl/tocresult.jsp?isnumber=32916">8-11 Nov. 2005</a></span></dd> 
+                        <dt class="dt_loc">
+                           Conference Location:
+                        </dt> 
+                        <dd><span id="dt_conf_loc" class="dt_loc">Baltimore, MD, USA</span></dd> 
+                        <dt class="dt_pages">
+                           On page(s):
+                        </dt> 
+                        <dd><span id="dt_pages" class="dt_pages">615 - 618</span></dd> 
+                        <dt class="dt_eisbn">
+                           E-ISBN:
+                        </dt> 
+                        <dd><span id="dt_eisbn" class="dt_eisbn">No Data Available</span></dd> 
+                        <dt class="dt_pisbn">
+                           Print ISBN:
+                        </dt> 
+                        <dd><span id="dt_pisbn" class="dt_pisbn">1-4244-0013-9</span></dd> 
+                        <dt class="dt_access">
+                           INSPEC Accession Number:
+                        </dt> 
+                        <dd><span id="dt_access" class="dt_access">8774755</span></dd> 
+                        <dt class="dt_doi">
+                           Digital Object Identifier:
+                        </dt> 
+                        <dd><span id="dt_doi" class="dt_doi"><a href="http://dx.doi.org/10.1109/DYSPAN.2005.1542681">10.1109/DYSPAN.2005.1542681</a></span></dd> 
+                        <dt class="dt_doc" style="display: none; ">
+                           Date of Current Version:
+                        </dt> 
+                        <dd><span id="dt_doc" class="dt_doc" style="display: none; ">2005-12-05</span></dd> 
+                        <dt class="dt_dop" style="display: none; ">
+                           Date of Original Publication:
+                        </dt> 
+                        <dd><span id="dt_dop" class="dt_dop" style="display: none; ">No Data Available</span></dd> 
+                     </dl> 
+                  </div>    
+               </div> 
+            </div> 
+         </div> 
+         <hr />    
+         <div class="Footer stats-footer">  
+            <div class="pure-g Footer-sections">     </div>  
+         </div> 
+         <div style="width: 1263px;" id="popup_overlay"></div>              
+      </div>      
+   </body>
+</html>

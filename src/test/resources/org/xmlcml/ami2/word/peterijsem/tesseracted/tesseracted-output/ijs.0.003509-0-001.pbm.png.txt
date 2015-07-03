@@ -1,0 +1,139 @@
+ 
+
+96 * Chromohalobacter beijerinckii ATCC 19372T (AB021386)
+Chromohalobacterjaponicus 43T (AB105159)
+52 ‘ Chromohalobacter sarecensis LV4T (AY373448)
+
+ 
+
+ 
+
+0.01
+
+ 
+
+ 
+
+ 
+
+Chromohalobacter nigrandesensis LTS-4NT (AJ277205)
+Chromohalobacter canadensis ATCC 43984T (AJ295143)
+— Chromohalobacter marismortui ATCC 17056T (X87219)
+[ Chromohalobacter israelensis ATCC 43985T (AJ295144)
+Chromohalobacter salexigens DSM 3043T (AJ295146)
+* Halomonas euriha/ina ATCC 49336T (X87218)
+*Halomonas elongate ATCC 33173T (X67023)
+— Halomonas ha/ophila DSM 4770T (M93353)
+Halomonas paciﬁca DSM 4742T (L42616)
+— Halomonas ventosae A|12T (AY268080)
+98 ¥ Halomonas halodenitriﬁcans ATCC 13511T (L04942)
+55 -Halomonas alimentaria YKJ-16T (AF211860)
+— Halomonas cupida DSM 4740T (L42615)
+Halomonas kenyensis AIR-2T (AY962237)
+Halomonas campisa/is ATCC 700597T (AF054286)
+— Halomonas campaniensis SAGT (AJ515365)
+57 — Halomonas muralis LMG 20969T (AJ320530)
+95 — SP8T (EU218533)
+—— Halomonas pantelleriensis AAPT (X93493)
+87 —Halomonas kribbensis BH843T (DQ280368)
+93 — Halomonas anticariensis FP35T (AY489405)
+Halomonas desiderata FB2T (X92417)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+89
+
+ 
+
+ 
+
+ 
+
+77
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+— Halomonas marisflavi SW32T (AF251 143)
+* Halomonas indalinina CG2.1T (AJ427627)
+
+—Ha/omonas av/cenniae MW2aT (D0888315)
+Z ymobacter palmae IAM 14233T (D14555)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+

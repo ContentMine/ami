@@ -1,0 +1,47 @@
+  
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+
+75 Thiobacillus denitriﬁcans ATCC 25259 (CPOOO116)
+Thiobacillus denitrificans ME16 (EU546130)
+Thiobacillus thioparus DSM 505T (M79426)
+Thiobacillus thioparus LV43 (AF005628)
+
+Thiobacillus denitriﬁcans NCIMB 9548 (AJ243144)
+Thiobacillus thiophilus D24TNT (EU685841)
+
+Thiobacillus aquaesu/is (U58019)
+
+“Thiobacillus p/umbophi/us' DSM 6690 (AJ316618)
+Methyloversatilis universal/s (AY436796)
+Denitratisoma oestradiolicum AcBE2—1T (AY879297)
+‘Dech/oromonas aromat/ca' RCB (AY032610)
+Rhodocyc/us purpureus (M34132)
+Thiomonas delicate NBRC 14566T (ABZ45481)
+Halothiobacillus h ydrothermalis R3T (M90662)
+
+Halothiobaci/Ius halophilus (U58020)
+Halothiobacillus neapolitanus DSM 581 (AF173169)
+Acidithiobacillus albertensis DSM 14366T (AJ459804)
+Acidithiobaci/lus ferrooxidans (A3039820)
+
+AcidithiobaciI/us caldus DSM 8584T(Z29975)
+
+67
+
+Outgroup
+
+0.10
+

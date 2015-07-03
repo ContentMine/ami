@@ -46,7 +46,7 @@ public class GeneArgProcessor extends AMIArgProcessor {
 	}
 
 	public void runExtractGene(ArgumentOption option) {
-		searchHtmlParaElements();
+		searchSectionElements();
 	}
 
 	public void outputGene(ArgumentOption option) {

@@ -1,0 +1,68 @@
+56
+
+002
+
+99
+
+84
+
+100
+
+100
+
+100
+
+74
+
+100
+
+100
+
+96
+
+100
+
+100
+
+50
+
+100
+
+100
+
+Haliea salexigens DSM 19537T (AY576769)
+
+Strain CM41_15aT DSM19751T(EU161717)
+
+Melitea salexigens DSM 19753T (AY576729)
+
+Microbulbifer salipa/udis SM—‘l T (AF479688)
+
+Microbulbifer hydrolyticus DSM 1 1525T (AJ608704)
+
+Microbulb/fer elongatus DSM 6810T (AF500006)
+
+Microbulbifer maritimus TF—1 7T (AY377986)
+
+Cellvibrio japonicus NCIMB 10462T (AF452103)
+
+CeI/vibrio mixtus ACM 2603 (AJ289160)
+
+Pseudomonas pseudoalcaligenes LMG 1225T (276666)
+
+Pseudomonas stutzeri DSM 7136 (AF063219)
+
+Pseudomonas balearica LS401 (U26417)
+
+Pseudomonas rhodesiae DSM 14020T (AF064459)
+
+Pseudomonas grimontii CFML 97—514T (AF268029)
+
+Acinetobacter bouvetii DSM 14964T (AF509827)
+
+Moraxella equi ATCC 25576T (AF005184)
+
+Psychrobacter aquaticus CMS 56T (AJ584833)
+
+Alcanivorax venustensis DSM 13974T (AF328766)
+

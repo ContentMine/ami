@@ -1,0 +1,77 @@
+91
+
+100
+
+81
+
+A. radioresistens CCM 3588T (EU477112)
+
+A. baylyi ADP1 (EU477155)
+
+100
+
+100
+
+100
+
+100
+
+2%
+
+A. ursingii NIPH 137T (EU477105)
+A. towneri CCM 7201T (EU477154)
+A. tandoii CCM 7199T (EU477152)
+A. gerneri CCM 7197T (EU477151)
+Genomic sp. 10 LMG 1003 (= ATCC 17924) (EU477116)
+Genomic sp. 11 LMG 988 (= ATCC 11171) (EU477117)
+Genomic sp. 15TU LUH 1090 (EU477119)
+A. lwoffii CCM 5581T (EU477111)
+A. bouvetii CCM 7196T (EU477150)
+A. schind/eri NIPH 1034T (EU477128)
+A. junii CCM 2376T (EU477110)
+Genomic sp, 6 LMG 1026 (= ATCC 17979) (EU477115)
+A. haemolyticus CCM 2358T (EU477109)
+100 A. ca/coaceticus ATCC 23055T (EU477149)
+Genomic sp. ‘Between 1 and 3’ LUH 1469 (EU477122)
+Genomic sp. 3 LMG 1035 (= ATCC 19004) (EU477114)
+97 A. baumannii ATCC 19606T (EU477108)
+Genomic sp. ‘Close to 13TU’ LUH 1472 (EU477126)
+80 Genomic sp. 13TU LMG 993 (= ATCC 17903) (EU477118)
+A. tjernbergiae CCM 7200T (EU477153)
+Genomic sp. 16 ATCC 17988 (EU477135)
+Genomic sp. 1SBJ LUH 1729 (EU477133)
+‘A, venetianus‘ ATCC 31012 (EU477136)
+Genomic sp. 17 LUH 1736 (EU477134)
+gyllenbergii LUH 1737 (EU477121)
+gyllenbergii LUH 5809 (EU477131)
+gyllenbergii NIPH 2150T (EU477148)
+gyllenbergii LUH 1740 (EU477127)
+gyllenbergii LUH 6541 (EU477144)
+gyllenbergii NIPH 230 (EU477106)
+gyllenbergii LUH 1741 (EU477158)
+gyllenbergii RUH 3064 (EU477145)
+.gyllenbergii NIPH 2353 (EU477156)
+A. parvus NIPH 384T (EU477107)
+Genomic sp. 14BJ LUH 1726 (EU477147)
+Genomic sp. 13BJ/14TU ATCC 17905 (EU477132)
+A. johnsoni/ LMG 999T (EU477113)
+beijerinckii RUH 2762 (EU477139)
+beijerinckii NIPH 838T (EU477124)
+. beijerinckii LUH 9424 (EU477157)
+beijerinckii LUH 5692 (EU477146)
+beijerinckii LUH 4561 (EU477120)
+. beijerinckii RUH 2879 (EU477140)
+. beijerinckii LUH 4738 (EU477123)
+. beijerinckii LUH 4771 (EU477125)
+. beijerinckii LUH 3340 (EU477129)
+. beijerinckii LUH 6214 (EU477130)
+beijerinckii RUH 2371 (EU477137)
+beijerinckii RUH 2560 (EU477138)
+beijerinckii LUH 3146 (EU477141)
+beijerinckii LUH 7834 (EU477142)
+. beijerinckii LUH 8896 (EU477142)
+
+>>>>>>>>>
+
+>>>>>>>>>>>>>>>
+

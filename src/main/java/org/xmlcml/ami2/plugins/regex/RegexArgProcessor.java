@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import nu.xom.Element;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
@@ -12,7 +14,6 @@ import org.xmlcml.cmine.args.ArgumentOption;
 import org.xmlcml.cmine.files.CMDir;
 import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.html.HtmlP;
 
 /** 
  * Processes commandline arguments.
@@ -87,6 +88,10 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	private void outputResultElementsx(ArgumentOption option) {
 		ContentProcessor currentContentProcessor = currentCMDir.getOrCreateContentProcessor();
 		currentContentProcessor.clearResultsElementList();
+		if (resultsByCompoundRegex == null) {
+			LOG.warn("have not run regex (runRegex)");
+			return;
+		}
 		for (CompoundRegex compoundRegex : compoundRegexList) {
 			String regexTitle = compoundRegex.getTitle();
 			ResultsElement resultsElement = resultsByCompoundRegex.get(regexTitle);
@@ -97,11 +102,11 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	}
 
 	private void runRegex() {
-		List<HtmlP> pElements = currentCMDir.extractPElements();
+		ensureSectionElements();
 		resultsByCompoundRegex = new HashMap<String, ResultsElement>();
 		for (CompoundRegex compoundRegex : compoundRegexList) {
 			RegexSearcher regexSearcher = createSearcher(this, compoundRegex);
-			ResultsElement resultsElement = regexSearcher.search(pElements);
+			ResultsElement resultsElement = regexSearcher.search(sectionElements);
 			resultsByCompoundRegex.put(compoundRegex.getTitle(), resultsElement);
 		}
 	}
