@@ -2,5 +2,7 @@
 .settings/
 .project
 .hg/*
+docs/
+examplesOld/
 examplestemp/
 /target/
