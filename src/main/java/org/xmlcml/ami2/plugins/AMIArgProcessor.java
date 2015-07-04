@@ -24,8 +24,6 @@ import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.DefaultSearcher;
 import org.xmlcml.cmine.files.EuclidSource;
 import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.html.HtmlElement;
-import org.xmlcml.html.HtmlP;
 import org.xmlcml.xml.XMLUtil;
 
 /** 
@@ -35,7 +33,6 @@ import org.xmlcml.xml.XMLUtil;
  * @author pm286
  */
 public class AMIArgProcessor extends DefaultArgProcessor {
-//
 	
 	public static final Logger LOG = Logger.getLogger(AMIArgProcessor.class);
 	static {
@@ -58,7 +55,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
     Map<String,AbstractLookup> lookupInstanceByName;
 	protected CompoundRegexList compoundRegexList;
 	protected List<Element> regexElementList;
-//	protected List<? extends Element> sectionElementList;
 	protected List<? extends Element> sectionElements;
 	
 	public AMIArgProcessor() {
