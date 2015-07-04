@@ -14,6 +14,8 @@ import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
+/** will skip Tesseract if not installed
+*/
 public class TesseractTest {
 
 	
