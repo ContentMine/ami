@@ -46,7 +46,7 @@ public class Fixtures {
 
 	public final static File TEST_PHYLO_DIR          = new File(Fixtures.TEST_AMI_DIR, "phylo");
 
-	public static final File EXAMPLES              = new File("examples");
+	public static final File TEST_WORD_EXAMPLES      = new File(TEST_AMI_DIR, "word/examples");
 	public static final File EXAMPLES_TEMP_16_1_1  = new File("target/examples_16_1_1");
 
 	public static final String RESULTS_XML = "results.xml";
