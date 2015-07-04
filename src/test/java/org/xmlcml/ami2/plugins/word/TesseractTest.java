@@ -22,7 +22,7 @@ public class TesseractTest {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	private static final File TESSERACTED_DIR = new File("src/text/resources/org/xmlcml/ami2/word/peterijsem/tesseracted/");
+	private static final File TESSERACTED_DIR = new File("src/test/resources/org/xmlcml/ami2/word/peterijsem/tesseracted/");
 	private static final File TESS_CLEAN_DIR = new File("examples/peterijsem/tessclean/");
 //	private static final Pattern SPEC_STRAIN_ACCESS = Pattern.compile("([A-Z](?:\\.|[a-z]+)\\s*(.*)\\s*\\(([A-Z]{1,2}\\d{1,6})\\)\\s*");
 	private static final Pattern SPEC_STRAIN_ACCESS = Pattern.compile("([A-Z](?:\\.|[a-z]+)\\s+[a-z]+)\\s*(.*)\\s+\\(([A-Z]{1,2}\\d{5,6})\\)\\s*");
@@ -33,6 +33,7 @@ public class TesseractTest {
 	@Before
 	public void setup() throws IOException {
 		if (linesList == null) {
+			
 			txtFiles = new ArrayList<File>(FileUtils.listFiles(TESSERACTED_DIR, new String[]{"txt"}, false));
 			linesList = new ArrayList<List<String>>();
 			for (File txtFile : txtFiles) {
