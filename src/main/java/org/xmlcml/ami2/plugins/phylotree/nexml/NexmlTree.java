@@ -82,7 +82,7 @@ public class NexmlTree extends NexmlElement {
 	private void addChildEdges(NexmlNode node) {
 		if (!tipSet.contains(node) && !branchNodeSet.contains(node)) {
 			String nodeId = node.getId();
-			LOG.debug("adding id "+nodeId);
+			LOG.trace("adding id "+nodeId);
 			List<NexmlEdge> childEdges = getSourceEdges(nodeId);
 			if (childEdges.size() == 0) {
 				tipSet.add(node);
@@ -129,8 +129,8 @@ public class NexmlTree extends NexmlElement {
 				addChildEdges(nextNode);
 			}
 		}
-		LOG.debug(tipSet);
-		LOG.debug(branchNodeSet);
+		LOG.trace(tipSet);
+		LOG.trace(branchNodeSet);
 		List<NexmlNode> rootNodes = getRootList();
 		if (rootNodes.size() == 0) {
 			LOG.error("NO Root nodes");

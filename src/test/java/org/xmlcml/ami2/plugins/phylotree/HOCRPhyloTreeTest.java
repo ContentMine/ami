@@ -56,7 +56,7 @@ public class HOCRPhyloTreeTest {
 		HOCRReader hocrReader = new HOCRReader();
 		hocrReader.readHOCR(new FileInputStream(HOCR_364_HTML));
 		SVGSVG svgSvg = (SVGSVG) hocrReader.getOrCreateSVG();
-		svgSvg.debug("svg");
+		//svgSvg.debug("svg");
 		SVGSVG.wrapAndWriteAsSVG(svgSvg, new File("target/hocr/merge0.svg"));
 		SVGWordPage svgPage = svgSvg.getSingleSVGPage();
 		Assert.assertNotNull(svgPage);
@@ -80,10 +80,10 @@ public class HOCRPhyloTreeTest {
 		for (SVGWordLine wordLine : allLineList) {
 			wordLine.makePhrasesFromWords();
 //			System.out.println(Int2.getInt2(wordLine.getBoundingBox().getMidPoint(BoxDirection.LEFT)));
-			System.out.println((i++)+" "+wordLine.toString());
+//			System.out.println((i++)+" "+wordLine.toString());
 		}
 		SVGWordLine line2 = allLineList.get(2);
-		LOG.debug(line2.getValue());
+		LOG.trace(line2.getValue());
 		line2.makePhrasesFromWords();
 		
 	}
@@ -108,7 +108,7 @@ public class HOCRPhyloTreeTest {
 		List<NexmlNode> tipNodeList = nexmlTree.getTipNodeList();
 		Assert.assertEquals("nodes",  31, tipNodeList.size());
 		for (NexmlNode tipNode : tipNodeList) {
-			System.out.println(Int2.getInt2(tipNode.getXY2()));
+//			System.out.println(Int2.getInt2(tipNode.getXY2()));
 		}
 		Map<Int2, NexmlNode> tipByCoordMap = nexmlTree.getTipByCoordMap();
 		Assert.assertEquals("tip map",  31, tipByCoordMap.size());
@@ -133,14 +133,14 @@ public class HOCRPhyloTreeTest {
 		Assert.assertEquals(70, allLineList.size());
 		for (NexmlNode tipNode : tipNodeList) {
 			Real2 tipXY2 = tipNode.getXY2();
-			System.out.println(""+tipXY2);
+			//System.out.println(""+tipXY2);
 			List<SVGWordLine> lineList = new ArrayList<SVGWordLine>();
 			for (SVGWordLine wordLine : allLineList) {
 				String tipValue = null;
 				Real2 lineXY2 = wordLine.getChildRectBoundingBox().getMidPoint(BoxDirection.LEFT);
 				Real2 diffXY2 = lineXY2.subtract(tipXY2); 
 				if (joiningBox.includes(diffXY2)) {
-					System.out.println(" ... "+diffXY2+"; "+wordLine.getSinglePhraseValue() +"; "+wordLine.getChildRectBoundingBox().getXMin());
+					//System.out.println(" ... "+diffXY2+"; "+wordLine.getSinglePhraseValue() +"; "+wordLine.getChildRectBoundingBox().getXMin());
 					lineList.add(wordLine);
 				}
 			}
@@ -150,9 +150,9 @@ public class HOCRPhyloTreeTest {
 				LOG.error("competing words for tip");
 			}
 		}
-		nexmlNEXML.debug();
+//		nexmlNEXML.debug();
 		String newick = nexmlNEXML.createNewick();
-		LOG.debug("NEWICK "+newick);
+		LOG.trace("NEWICK "+newick);
 	}
 	
 	@Test

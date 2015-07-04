@@ -48,8 +48,8 @@ public class DigramTest {
 			};
 	@Before
 	public void setup() throws IOException {
-//		setup1();
-		setup2();
+		setup1();
+//		setup2();
 	}
 
 	private void setup1() throws IOException {
@@ -77,7 +77,7 @@ public class DigramTest {
 	
 	@Test
 	public void testRead() {
-		Assert.assertEquals("ngramsList", 139, ngramGeneratorList.size());
+		Assert.assertEquals("ngramsList", 10, ngramGeneratorList.size());
 		int i = 0;
 		for (NGramGenerator generator : ngramGeneratorList) {
 			//System.out.println(generator.size());

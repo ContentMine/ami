@@ -10,6 +10,7 @@
 <!--
 	<parent>
 		<groupId>uk.ac.cam.ch.wwmm</groupId>
+
 		<artifactId>wwmm-parent</artifactId>
 		<version>5-SNAPSHOT</version>
 	</parent>
