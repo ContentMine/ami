@@ -16,7 +16,6 @@ import org.xmlcml.html.HtmlP;
 
 public class SpeciesSearcher extends AMISearcher {
 
-	
 	public static final Logger LOG = Logger.getLogger(SpeciesSearcher.class);
 	static {
 		LOG.setLevel(Level.DEBUG);

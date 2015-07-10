@@ -12,7 +12,6 @@ import nu.xom.Element;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.lookups.AbstractLookup;
 import org.xmlcml.ami2.plugins.regex.CompoundRegex;
 import org.xmlcml.ami2.plugins.regex.CompoundRegexList;
 import org.xmlcml.ami2.plugins.regex.RegexComponent;
@@ -24,6 +23,7 @@ import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.DefaultSearcher;
 import org.xmlcml.cmine.files.EuclidSource;
 import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cmine.lookup.AbstractLookup;
 import org.xmlcml.xml.XMLUtil;
 
 /** 
@@ -56,6 +56,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	protected CompoundRegexList compoundRegexList;
 	protected List<Element> regexElementList;
 	protected List<? extends Element> sectionElements;
+	protected List<String> lookupNames;
 	
 	public AMIArgProcessor() {
 		super();
@@ -141,12 +142,12 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	}
 
 	public void parseLookup(ArgumentOption option, ArgIterator argIterator) {
-		List<String> lookupNames = argIterator.getStrings(option);
+		lookupNames = argIterator.getStrings(option);
 		loadLookupClassesFromArgValues(option);
 	}
 
 	public void finalLookup(ArgumentOption option) {
-		LOG.debug("final lookup");
+		LOG.debug("final lookup NYI; please add code or override: names are: "+lookupNames+"; override");
 	}
 
 
@@ -214,14 +215,15 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 				LOG.error("Cannot find class, skipping: "+className);
 				continue;
 			}
-			AbstractLookup lookup;
+			AbstractLookup lookupInstance;
 			try {
-				lookup = (AbstractLookup) lookupClass.newInstance();
+				lookupInstance = (AbstractLookup) lookupClass.newInstance();
+				LOG.debug("lookup "+lookupInstance);
 			} catch (Exception e) {
 				LOG.error("Cannot instantiate, skipping: "+lookupClass+"; "+e.getMessage());
 				continue;
 			}
-			lookupInstanceByName.put(name, lookup);
+			lookupInstanceByName.put(name, lookupInstance);
 		}
 	}
 
@@ -270,7 +272,10 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		ensureSectionElements();
 		for (DefaultSearcher searcher : searcherList) {
 			String name = searcher.getName();
+			LOG.trace("search "+name);
 			ResultsElement resultsElement = searcher.search(sectionElements);
+			resultsElement.lookup(lookupInstanceByName, lookupNames);
+			LOG.debug("exactList "+resultsElement.getExactList());
 			resultsElement.setAllResultElementNames(name);
 			currentCMDir.putInContentProcessor(name, resultsElement);
 		}

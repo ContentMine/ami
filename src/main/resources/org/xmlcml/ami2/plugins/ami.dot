@@ -1,0 +1,45 @@
+digraph amiplugins {
+
+"s.html" [label="scholarly.html", style="filled", color="yellow"];
+"txt" [label="text", style="filled", color="yellow"];
+"png" [label="image", style="filled", color="yellow"];
+"svg" [label="svg", style="filled", color="yellow"];
+
+"png" -> "svg" [label="diagramAnalyzer"];
+
+"bow" [label="bagOfWords"]
+"txt" -> "bow";
+"s.html" -> "bow";
+
+"ids" [label="identifiers"]
+"txt" -> "ids";
+"s.html" -> "ids";
+"svg" -> "ids";
+
+"regex" [label="regex"]
+"txt" -> "regex";
+"s.html" -> "regex";
+
+"chemstruct" [label="chem structure"]
+"svg" -> "chemstruct";
+
+"species" [label="species"]
+"s.html" -> "species";
+"txt" -> "species" [label="partial"];
+
+"sequence" [label="sequence"]
+"s.html" -> "sequence";
+
+"compounds" [label="compounds"]
+"s.html" -> "compounds";
+"txt" -> "compounds" [label="partial"];
+
+"reactions" [label="reactions"]
+"s.html" -> "reactions";
+"svg" -> "reactions" ;
+
+"phylo" [label="phylogenetic trees"]
+"svg" -> "phylo";
+
+}
+

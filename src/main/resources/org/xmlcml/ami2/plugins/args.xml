@@ -1,4 +1,4 @@
-<argList name="ami">
+<argList name="ami" version="0.1.1">
 	<arg name="context" 
 		long="--context"
 		args="characterExtent [characterExtent2]"

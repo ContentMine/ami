@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.cmine.lookup.AbstractLookup;
 
 public class GenbankLookup extends AbstractLookup {
 

@@ -1,14 +1,18 @@
 package org.xmlcml.ami2.lookups;
 
+import java.io.File;
 import java.net.URL;
 
 import nu.xom.Element;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
 import org.xmlcml.euclid.IntArray;
 import org.xmlcml.xml.XMLUtil;
 
@@ -65,5 +69,18 @@ public class WikipediaLookupTest {
 //				element.toXML().substring(0, 100));
 //	}
 	
+	@Test
+	public void testLookup() throws Exception {
+		File target = new File("target/lookup/pone_0115884");
+		FileUtils.copyDirectory(new File(Fixtures.TEST_PLOSONE_DIR, "journal.pone.0115884/"), target);
+		String cmd = "--sp.species --context 35 --sp.type binomial binomialsp "
+				+ "-q "+target+" -i scholarly.html "
+				+ "--lookup wikipedia";
+		LOG.debug(cmd);
+		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor();
+		argProcessor.parseArgs(cmd);
+		argProcessor.runAndOutput();
+	}
+
 	
 }

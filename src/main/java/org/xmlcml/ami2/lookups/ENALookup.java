@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.cmine.lookup.AbstractLookup;
 
 public class ENALookup extends AbstractLookup {
 

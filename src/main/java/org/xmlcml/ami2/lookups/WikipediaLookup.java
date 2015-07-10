@@ -6,6 +6,7 @@ import java.net.URL;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.cmine.lookup.AbstractLookup;
 import org.xmlcml.euclid.IntArray;
 
 import com.google.gson.JsonElement;
@@ -30,14 +31,14 @@ Hi Peter,
 
 here are some links related to Wikipedia and Wikidata search.
 
-To find a Wikidata item by the Latin species name (here “Mus musculus”):
+To find a Wikidata item by the Latin species name (here ���Mus musculus���):
 http://wdq.wmflabs.org/api?q=string[225:%22Mus%20musculus%22]
 
 This returns a JSON structure with an item list, containing one item:
 {"status":{"error":"OK","items":1,"querytime":"226ms","parsed_query":"STRING[225:'Mus musculus']"},"items":[83310]}
 
 
-The item number (83310) refers to the Wikidata item; prepend a “Q” for that:
+The item number (83310) refers to the Wikidata item; prepend a ���Q��� for that:
 https://www.wikidata.org/wiki/Q83310
 
 To get the XML for that item, use this format:

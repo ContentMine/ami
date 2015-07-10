@@ -9,10 +9,9 @@ import nu.xom.Attribute;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.lookups.AbstractLookup;
-import org.xmlcml.ami2.plugins.gene.GeneResultElement;
 import org.xmlcml.cmine.files.DefaultSearcher;
 import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cmine.lookup.AbstractLookup;
 
 public class AMISearcher extends DefaultSearcher {
 

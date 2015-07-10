@@ -62,7 +62,13 @@ public class SpeciesArgProcessor extends AMIArgProcessor {
 //		summaryMethods = argIterator.getStrings(option);
 		LOG.debug("summary methods not yet written");
 	}
-	
+
+	@Override
+	public void finalLookup(ArgumentOption option) {
+		LOG.debug("final species lookup NYI; please add code: names are: "+lookupNames+"; override");
+	}
+
+
 	public void finalSummary(ArgumentOption option) {
 		LOG.debug("final summary not yet written");
 	}
