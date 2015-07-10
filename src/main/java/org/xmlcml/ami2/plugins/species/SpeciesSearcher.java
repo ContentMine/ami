@@ -48,19 +48,21 @@ public class SpeciesSearcher extends AMISearcher {
 	@Override
 	public ResultsElement search(List<? extends Element> elements) {
 		SpeciesResultsElement resultsElement = new SpeciesResultsElement();
-		for (Element element : elements) {
-			String xmlString = getValue(element);
-			LOG.trace(xmlString);
-			List<ResultElement> resultElementList = this.search(xmlString);
-			for (ResultElement resultElement : resultElementList) {
-				resultsElement.appendChild(resultElement);
+		if (elements != null) {
+			for (Element element : elements) {
+				String xmlString = getValue(element);
+				LOG.trace(xmlString);
+				List<ResultElement> resultElementList = this.search(xmlString);
+				for (ResultElement resultElement : resultElementList) {
+					resultsElement.appendChild(resultElement);
+				}
 			}
+			List<String> exactList = resultsElement.getExactList();
+			LinneanNamer linneanNamer = new LinneanNamer();
+			List<String> matchList = linneanNamer.expandAbbreviations(exactList);
+			LOG.trace("EXACT "+exactList+"; MATCH "+matchList);
+			resultsElement.addMatchAttributes(matchList);
 		}
-		List<String> exactList = resultsElement.getExactList();
-		LinneanNamer linneanNamer = new LinneanNamer();
-		List<String> matchList = linneanNamer.expandAbbreviations(exactList);
-		LOG.trace("EXACT "+exactList+"; MATCH "+matchList);
-		resultsElement.addMatchAttributes(matchList);
 		
 		return resultsElement;
 	}

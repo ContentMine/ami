@@ -411,7 +411,9 @@ public class WordArgProcessor extends AMIArgProcessor {
 	}
 
 	public void addResultsElement(ResultsElement resultsElement) {
-		getOrCreateContentProcessor().addResultsElement(resultsElement);
+		if (resultsElement != null) {
+			getOrCreateContentProcessor().addResultsElement(resultsElement);
+		}
 	}
 
 }

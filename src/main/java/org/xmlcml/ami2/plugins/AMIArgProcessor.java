@@ -269,15 +269,17 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	}
 
 	protected void searchSectionElements() {
-		ensureSectionElements();
-		for (DefaultSearcher searcher : searcherList) {
-			String name = searcher.getName();
-			LOG.trace("search "+name);
-			ResultsElement resultsElement = searcher.search(sectionElements);
-			resultsElement.lookup(lookupInstanceByName, lookupNames);
-			LOG.debug("exactList "+resultsElement.getExactList());
-			resultsElement.setAllResultElementNames(name);
-			currentCMDir.putInContentProcessor(name, resultsElement);
+		if (currentCMDir != null) {
+			ensureSectionElements();
+			for (DefaultSearcher searcher : searcherList) {
+				String name = searcher.getName();
+				LOG.trace("search "+name);
+				ResultsElement resultsElement = searcher.search(sectionElements);
+				resultsElement.lookup(lookupInstanceByName, lookupNames);
+				LOG.debug("exactList "+resultsElement.getExactList());
+				resultsElement.setAllResultElementNames(name);
+				currentCMDir.putInContentProcessor(name, resultsElement);
+			}
 		}
 	}
 	
