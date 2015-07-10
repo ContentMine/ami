@@ -34,10 +34,10 @@ public class SpeciesResultsElement extends ResultsElement {
 				SpeciesResultElement speciesResultElement = (SpeciesResultElement)resultElement;
 				String match = speciesResultElement.getExact();
 				matchList.add(match);
-				LOG.debug("match "+match);
+				LOG.trace("match "+match);
 			}
 		}
-		LOG.debug("matchList "+matchList);
+		LOG.trace("matchList "+matchList);
 		return matchList;
 	}
 
