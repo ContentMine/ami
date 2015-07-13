@@ -88,6 +88,10 @@
 							<id>ami2-identifier</id>
 						</program>
  						<program>
+							<mainClass>org.xmlcml.ami2.plugins.phylotree.PhyloTreePlugin</mainClass>
+							<id>ami2-phylotree</id>
+						</program>
+ 						<program>
 							<mainClass>org.xmlcml.ami2.plugins.regex.RegexPlugin</mainClass>
 							<id>ami2-regex</id>
 						</program>
@@ -169,6 +173,12 @@
 							<symlink>true</symlink>
 							<linkName>/usr/bin/ami2-identifier</linkName>
 							<linkTarget>/usr/share/ami-repo/bin/ami2-identifier</linkTarget>
+						</data>
+ 						<data>
+							<type>link</type>
+							<symlink>true</symlink>
+							<linkName>/usr/bin/ami2-phylotree</linkName>
+							<linkTarget>/usr/share/ami-repo/bin/ami2-phylotree</linkTarget>
 						</data>
  						<data>
 							<type>link</type>

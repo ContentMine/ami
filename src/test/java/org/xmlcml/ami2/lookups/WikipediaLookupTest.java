@@ -70,6 +70,7 @@ public class WikipediaLookupTest {
 //	}
 	
 	@Test
+	@Ignore // takes too long
 	public void testLookup() throws Exception {
 		File target = new File("target/lookup/pone_0115884");
 		FileUtils.copyDirectory(new File(Fixtures.TEST_PLOSONE_DIR, "journal.pone.0115884/"), target);

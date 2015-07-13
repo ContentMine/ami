@@ -9,6 +9,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.Fixtures;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
@@ -44,7 +45,7 @@ public class SpeciesArgProcessorTest {
 	}
 	
 	@Test
-//	@Ignore // accesses net
+	@Ignore // accesses net
 	public void testSpeciesArgProcessorLookup() throws Exception {
 		File newDir = new File("target/plosone/species");
 		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);

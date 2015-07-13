@@ -18,12 +18,15 @@ import org.xmlcml.ami2.plugins.regex.RegexComponent;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.args.ValueElement;
+import org.xmlcml.cmine.args.VersionManager;
 import org.xmlcml.cmine.files.CMDir;
 import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.DefaultSearcher;
 import org.xmlcml.cmine.files.EuclidSource;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.cmine.lookup.AbstractLookup;
+import org.xmlcml.norma.NormaArgProcessor;
 import org.xmlcml.xml.XMLUtil;
 
 /** 
@@ -45,6 +48,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	protected static String RESOURCE_NAME_TOP = "/org/xmlcml/ami2";
 	protected static String PLUGIN_RESOURCE = RESOURCE_NAME_TOP+"/plugins";
 	private static String ARGS_RESOURCE = PLUGIN_RESOURCE+"/"+"args.xml";
+	public static final VersionManager AMI_PLUGIN_VERSION_MANAGER = new VersionManager();
 
 	protected static final String NAME = "name";
 	private Integer[] contextCount = new Integer[] {98, 98};
@@ -61,6 +65,10 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	public AMIArgProcessor() {
 		super();
 		readArgsResourcesIntoOptions();
+	}
+
+	protected static VersionManager getVersionManager() {
+		return AMI_PLUGIN_VERSION_MANAGER;
 	}
 
 	private void readArgsResourcesIntoOptions() {
@@ -165,7 +173,11 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 
 	// ==========================
 
-	
+	protected  void printVersion() {
+		getVersionManager().printVersion();
+		NormaArgProcessor.getVersionManager().printVersion();
+	}
+
 	public List<String> getParams() {
 		return params;
 	}
@@ -200,12 +212,12 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 
 	private void loadLookupClassesFromArgValues(ArgumentOption option) {
 		getOrCreateLookupInstanceByName();
-		List<Element> values = option.getOrCreateValues();
-		for (Element value : values) {
-			String name = value.getAttributeValue(ArgumentOption.NAME);
-			String className = value.getAttributeValue(ArgumentOption.CLASSNAME);
+		List<ValueElement> valueElements = option.getOrCreateValueElements();
+		for (ValueElement valueElement : valueElements) {
+			String name = valueElement.getName();
+			String className = valueElement.getClassName();
 			if (name == null || className == null) {
-				LOG.error("Missing name or class: "+value.toXML());
+				LOG.error("Missing name or class: "+valueElement.toXML());
 				continue;
 			}
 			Class<? extends AbstractLookup> lookupClass;
@@ -285,12 +297,12 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	
 
 	protected void createAndStoreNamedSearchers(ArgumentOption option) {
-		List<Element> values = option.getOrCreateValues();
+		List<ValueElement> values = option.getOrCreateValueElements();
 		createNamedSearchers(values);
 	}
 
-	protected void createNamedSearchers(List<Element> values) {
-		for (Element valueElement : values) {
+	protected void createNamedSearchers(List<ValueElement> values) {
+		for (ValueElement valueElement : values) {
 			try {
 				if (RegexComponent.REGEX.equals(valueElement.getLocalName())) {
 					NamedPattern namedPattern = NamedPattern.createFromRegexElement(valueElement);
