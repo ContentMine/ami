@@ -116,7 +116,6 @@ public class ClinicalTrialsDemo {
     "trialstemp/http_www.trialsjournal.com_content_16_1_9/",
 	"--w.words", WordArgProcessor.WORD_FREQUENCIES,
 	"--w.stopwords", STOPWORDS_TXT,
-	"--w.wordlengths", "2", "12",
 	"--w.wordtypes", "acronym",
 		};
 		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
