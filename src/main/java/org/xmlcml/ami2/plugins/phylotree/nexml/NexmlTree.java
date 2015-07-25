@@ -12,6 +12,8 @@ import nu.xom.Element;
 
 import org.apache.log4j.Logger;
 import org.xmlcml.euclid.Int2;
+import org.xmlcml.graphics.svg.SVGElement;
+import org.xmlcml.graphics.svg.SVGG;
 import org.xmlcml.xml.XMLUtil;
 
 import com.google.common.collect.ArrayListMultimap;
@@ -164,7 +166,7 @@ public class NexmlTree extends NexmlElement {
 
 	public String getNewick() {
 		getRootNode();
-		return rootNexmlNode.getNewick();
+		return rootNexmlNode == null ? null : rootNexmlNode.getNewick();
 	}
 
 	public NexmlNode getRootNode() {
@@ -218,6 +220,19 @@ public class NexmlTree extends NexmlElement {
 			}
 		}
 		return tipByCoordMap;
+	}
+
+	public SVGElement createSVG() {
+		SVGG g = new SVGG();
+		getNodeListAndMap();
+		for (NexmlNode node : nodeList) {
+			g.appendChild(node.createSVG());
+		}
+		getEdgeListAndMaps();
+		for (NexmlEdge edge : edgeList) {
+			g.appendChild(edge.createSVG());
+		}
+		return g;
 	}
 	
 }

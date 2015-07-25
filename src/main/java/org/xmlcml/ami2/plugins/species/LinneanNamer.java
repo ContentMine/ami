@@ -29,6 +29,8 @@ public class LinneanNamer {
 	private Multiset<LinneanName> linneanNameSet;
 
 	private Map<String, String> genusByAbbreviationMap;
+
+	private NameMultimap nameMultimap;
 	
 	public LinneanNamer() {
 		
@@ -160,6 +162,36 @@ public class LinneanNamer {
 			newNameList.add(name);
 		}
 		return newNameList;
+	}
+	
+	/** looks up species by latin or common name or abbreviation.
+	 * 
+	 * Based on Casey Bergman's list of species (2008) with many thanks
+	 * 
+	 * @param name
+	 * @return
+	 */
+	public List<String> lookupByName(String name) {
+		ensureNameMultimap();
+		List<String> idList = nameMultimap.searchByNameValue(name);
+		return (idList == null ) ? new ArrayList<String>() : idList;
+	}
+
+	/** looks up species by NCBI id.
+	 * 
+	 * Based on Casey Bergman's list of species (2008) with many thanks
+	 * 
+	 * @param name
+	 * @return
+	 */
+	public List<String> lookupByNCBIId(String id) {
+		ensureNameMultimap();
+		List<String> nameList = nameMultimap.searchByKey(id);
+		return (nameList == null) ? null : nameList;
+	}
+
+	private void ensureNameMultimap() {
+		nameMultimap = new NameMultimap();
 	}
 
 }

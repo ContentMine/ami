@@ -3,6 +3,8 @@ package org.xmlcml.ami2.plugins.phylotree.nexml;
 import nu.xom.Attribute;
 
 import org.apache.log4j.Logger;
+import org.xmlcml.euclid.Real2;
+import org.xmlcml.graphics.svg.SVGLine;
 
 public class NexmlEdge extends NexmlElement {
 
@@ -70,6 +72,23 @@ public class NexmlEdge extends NexmlElement {
 			// null
 		}
 		return otherNode;
+	}
+	
+	/**
+	 * 
+	 * @return null if some or all nodes are null or have no coordinates
+	 */
+	public SVGLine createSVG() {
+		SVGLine line = null;
+		if (node != null && node.length == 2) {
+			Real2 xy0 = node[0] == null ? null : node[0].getXY2(); 
+			Real2 xy1 = node[1] == null ? null : node[1].getXY2(); 
+			if (xy0 != null && xy1 != null) {
+				line = new SVGLine(xy0, xy1);
+				line.setStrokeWidth(0.5);
+			}
+		}
+		return line;
 	}
 	
 	

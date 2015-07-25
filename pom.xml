@@ -373,6 +373,14 @@
 			<!-- Prevents jar bloat in final package -->
 			<scope>provided</scope>
 		</dependency>
+				<!-- https://github.com/jayway/JsonPath/blob/master/README.md -->
+				<!--  shouldn't be needed as it's in Norma -->
+		<dependency>
+		    <groupId>com.jayway.jsonpath</groupId>
+		    <artifactId>json-path</artifactId>
+		    <version>2.0.0</version>
+		</dependency>
+		
 	</dependencies>
 
 </project>

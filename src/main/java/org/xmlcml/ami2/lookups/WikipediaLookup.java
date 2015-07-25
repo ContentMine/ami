@@ -118,7 +118,7 @@ Mar 14 (9 days ago)
     
 	private JsonElement getWikidataSpeciesJSONElement(String speciesName) throws IOException {
 		URL url = createWikidataSpeciesLookupURL(speciesName);
-		String json = this.getString(url);
+		String json = this.getResponse(url);
 	    JsonParser parser = new JsonParser();
 	    return parser.parse(json);
 	}

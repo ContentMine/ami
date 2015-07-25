@@ -2,7 +2,6 @@ package org.xmlcml.ami2.plugins.phylotree;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -20,12 +19,9 @@ import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtus;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlTree;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlTrees;
 import org.xmlcml.euclid.Int2;
-import org.xmlcml.euclid.Real2;
-import org.xmlcml.euclid.Real2Range;
-import org.xmlcml.euclid.Real2Range.BoxDirection;
-import org.xmlcml.euclid.RealRange;
 import org.xmlcml.graphics.svg.SVGSVG;
 import org.xmlcml.graphics.svg.SVGText;
+import org.xmlcml.graphics.svg.text.SVGPhrase;
 import org.xmlcml.graphics.svg.text.SVGWord;
 import org.xmlcml.graphics.svg.text.SVGWordBlock;
 import org.xmlcml.graphics.svg.text.SVGWordLine;
@@ -41,15 +37,13 @@ import org.xmlcml.norma.image.ocr.HOCRReader;
 public class HOCRPhyloTreeTest {
 
 	
-	private static final Logger LOG = Logger.getLogger(HOCRPhyloTreeTest.class);
+	public static final Logger LOG = Logger.getLogger(HOCRPhyloTreeTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	private final static File HOCR_364_HTML = new File(Fixtures.TEST_PHYLO_DIR, "ijs_0_000364_0/image/003.pbm.png.hocr.html");
+	public final static File HOCR_364_HTML = new File(Fixtures.TEST_PHYLO_DIR, "ijs_0_000364_0/image/003.pbm.png.hocr.html");
 	private final static File PHYLOTREE_364_NEXML = new File(Fixtures.TEST_PHYLO_DIR, "ijs_0_000364_0/image/003.pbm.png.phylotree.nexml");
-	private double maxDeltaY = 5.0;
-	private Real2Range joiningBox = new Real2Range(new RealRange(0.0, 20.0), new RealRange(-5.0, 5.0));
 		
 	@Test
 	public void testReadHOCRSVG() throws Exception {
@@ -116,78 +110,36 @@ public class HOCRPhyloTreeTest {
 	
 	@Test
 	public void testMerge() throws Exception {
-		HOCRReader hocrReader = new HOCRReader();
-		hocrReader.readHOCR(new FileInputStream(HOCR_364_HTML));
-		SVGSVG svgSvg = (SVGSVG) hocrReader.getOrCreateSVG();
-		List<SVGWordLine> allLineList = svgSvg.getSingleSVGPage().getSVGLineList();
-		for (SVGWordLine wordLine : allLineList) {
-			wordLine.makePhrasesFromWords();
-		}
-		Assert.assertEquals(70, allLineList.size());
+		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
+		HOCRReader hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
+		List<SVGPhrase> phraseList = hocrReader.createPhraseList(HOCRPhyloTreeTest.HOCR_364_HTML);
+		Assert.assertEquals(73, phraseList.size());
 		
 		NexmlNEXML nexmlNEXML = (NexmlNEXML) NexmlElement.readAndCreateNEXML(PHYLOTREE_364_NEXML);
 		NexmlTree nexmlTree = nexmlNEXML.getSingleTree();
 		Assert.assertNotNull(nexmlTree);
 		
-		List<NexmlNode> tipNodeList = nexmlTree.getTipNodeList();
-		Assert.assertEquals(70, allLineList.size());
-		for (NexmlNode tipNode : tipNodeList) {
-			Real2 tipXY2 = tipNode.getXY2();
-			//System.out.println(""+tipXY2);
-			List<SVGWordLine> lineList = new ArrayList<SVGWordLine>();
-			for (SVGWordLine wordLine : allLineList) {
-				String tipValue = null;
-				Real2 lineXY2 = wordLine.getChildRectBoundingBox().getMidPoint(BoxDirection.LEFT);
-				Real2 diffXY2 = lineXY2.subtract(tipXY2); 
-				if (joiningBox.includes(diffXY2)) {
-					//System.out.println(" ... "+diffXY2+"; "+wordLine.getSinglePhraseValue() +"; "+wordLine.getChildRectBoundingBox().getXMin());
-					lineList.add(wordLine);
-				}
-			}
-			if (lineList.size() == 1) {
-				tipNode.setOtuValue(lineList.get(0).getSinglePhraseValue());
-			} else if (lineList.size() > 1) {
-				LOG.error("competing words for tip");
-			}
-		}
-//		nexmlNEXML.debug();
+		phyloTreeArgProcessor.addTipAndBranchLabelsToTree(phraseList, nexmlTree);
 		String newick = nexmlNEXML.createNewick();
-		LOG.trace("NEWICK "+newick);
+		Assert.assertEquals("NEWICK", 
+				"(((((:195.0,:135.0)NT1.25:86.0,:301.0)NT1.17:131.0,(:251.0,:364.0)NT1.15:106.0)"
+				+ "NT1.5:12.0,(:223.0,:333.0)NT1.19:158.0)NT1.2:10.0,((:441.0,(((:295.0,((((:140.0,:164.0)"
+				+ "NT1.28:63.0,:165.0)NT1.22:24.0,(:183.0,:185.0)NT1.26:55.0)NT1.21:78.0,(:186.0,:194.0)"
+				+ "NT1.23:105.0)NT1.14:56.0)NT1.10:21.0,(:279.0,:302.0)NT1.16:107.0)NT1.8:8.0,((:189.0,:191.0)"
+				+ "NT1.27:187.0,:343.0)NT1.12:55.0)NT1.6:11.0,:497.0)NT1.3:6.0,((:348.0,(:124.0,:167.0)"
+				+ "NT1.24:205.0)NT1.7:12.0,(:484.0,((:260.0,:320.0)NT1.13:33.0,((:157.0,:181.0)NT1.20:21.0,:152.0)"
+				+ "NT1.18:91.0)NT1.11:22.0)NT1.9:32.0)NT1.4:11.0)NT1.1:9.0)NT1.60;", newick);
 	}
+
 	
 	@Test
 	public void testMerge1() throws Exception {
-		HOCRReader hocrReader = new HOCRReader();
-		
-		hocrReader.readHOCR(new FileInputStream(HOCR_364_HTML));
-		SVGSVG svgSvg = (SVGSVG) hocrReader.getOrCreateSVG();
-		List<SVGWordLine> allLineList = svgSvg.getSingleSVGPage().getSVGLineList();
-		for (SVGWordLine wordLine : allLineList) {
-			wordLine.makePhrasesFromWords();
-		}
-		
-		NexmlNEXML nexmlNEXML = (NexmlNEXML) NexmlElement.readAndCreateNEXML(PHYLOTREE_364_NEXML);
-		NexmlTree nexmlTree = nexmlNEXML.getSingleTree();
-		
-		List<NexmlNode> tipNodeList = nexmlTree.getTipNodeList();
-		for (NexmlNode tipNode : tipNodeList) {
-			Real2 tipXY2 = tipNode.getXY2();
-			List<SVGWordLine> lineList = new ArrayList<SVGWordLine>();
-			for (SVGWordLine wordLine : allLineList) {
-				Real2 lineXY2 = wordLine.getChildRectBoundingBox().getMidPoint(BoxDirection.LEFT);
-				Real2 diffXY2 = lineXY2.subtract(tipXY2); 
-				if (joiningBox.includes(diffXY2)) {
-					lineList.add(wordLine);
-				}
-			}
-			if (lineList.size() == 1) {
-				tipNode.setOtuValue(lineList.get(0).getSinglePhraseValue());
-			} else if (lineList.size() > 1) {
-				LOG.error("competing words for tip");
-			}
-		}
-		String newick = nexmlNEXML.createNewick();
+		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
+		HOCRReader hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
+//		List<SVGWordLine> allLineList = hocrReader.createWordLineList(HOCRPhyloTreeTest.HOCR_364_HTML);
+		phyloTreeArgProcessor.mergeFiles(HOCRPhyloTreeTest.HOCR_364_HTML, PHYLOTREE_364_NEXML);
 	}
+
 	/**
 	 * words:
 words:

@@ -37,7 +37,7 @@ public class WikipediaLookupTest {
 	public void getWikidataXMLForID() throws Exception {
 		WikipediaLookup defaultLookup = new WikipediaLookup();
 		URL url = defaultLookup.createWikidataXMLURL("Q83310");
-		Element element = defaultLookup.getXML(url);
+		Element element = defaultLookup.getResponseXML(url);
 		XMLUtil.debug(element, "Mus");
 		// details (e.g. lastrevid change)
 //		Assert.assertEquals("Q83310", 

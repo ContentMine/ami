@@ -3,6 +3,8 @@ package org.xmlcml.ami2;
 import java.io.File;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.Test;
+import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.ami2.plugins.word.WordPlugin;
 import org.xmlcml.norma.Norma;
 
@@ -81,7 +83,7 @@ public class Prototypes {
 		wordPlugin.runAndOutput();
 		
 	}
-
+	
 	private static void createPDFTXT(String name) {
 		new Norma().run("-i examples/theses/"+name+".pdf -o examples/theses/");
 		new Norma().run("-q examples/theses/"+name+" -i fulltext.pdf -o fulltext.pdf.txt --transform pdf2txt");

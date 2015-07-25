@@ -24,6 +24,7 @@ public class Fixtures {
 	
 	public final static File TEST_RESOURCES_DIR    = new File("src/test/resources/");
 	public final static File TEST_AMI_DIR          = new File(Fixtures.TEST_RESOURCES_DIR, "org/xmlcml/ami2");
+	public final static String TEST_AMI_RESOURCES    = "/org/xmlcml/ami2";
 	
 	public final static File TEST_BMC_DIR          = new File(Fixtures.TEST_AMI_DIR, "bmc");
 	public final static File TEST_BMC_15_1_511_CMDIR = new File(Fixtures.TEST_BMC_DIR, "15_1_511");
@@ -52,6 +53,7 @@ public class Fixtures {
 	public static final String RESULTS_XML = "results.xml";
 	private static final String RESULTS_DIR = "results/";
 	private static final String EXPECTED_DIR = "expected/";
+
 
 	/** runs tests and compares expected and actual output.
 	 * 

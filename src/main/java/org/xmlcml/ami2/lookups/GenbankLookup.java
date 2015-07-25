@@ -1,6 +1,7 @@
 package org.xmlcml.ami2.lookups;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 
 import org.apache.log4j.Level;
@@ -23,8 +24,8 @@ http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=34577062,
 http://www.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term="+genbank_id+"GENBANK_ID	 */
 	
 	public String lookup(String genbankId) throws IOException {
-//		LOG.error(" Genbank lookup NYI");
-		return null;
+		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id="+genbankId+"&retmode=xml");
+		return getResponse(url);
 	}
 
 /**
@@ -32,7 +33,10 @@ http://www.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term="+genbank_id
 */
 	
 	public String lookupTaxonomy(String genus) throws IOException {
-		return null;
+//		http://www.ebi.ac.uk/ena/data/view/Taxon:Gorilla&display=xml
+//		URL url = new URL("http://www.ebi.ac.uk/ena/data/view/Taxon:"+genus+"&retmode=xml");
+		URL url = new URL("http://www.ebi.ac.uk/ena/data/view/Taxon:"+genus+"");
+		return getResponse(url);
 	}
 
 	public String lookupTaxonomy(List<String> queryList) throws IOException {

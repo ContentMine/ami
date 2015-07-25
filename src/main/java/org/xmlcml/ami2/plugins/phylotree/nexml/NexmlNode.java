@@ -6,15 +6,26 @@ import java.util.List;
 import nu.xom.Attribute;
 import nu.xom.ParentNode;
 
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.euclid.Int2;
 import org.xmlcml.euclid.Real2;
+import org.xmlcml.graphics.svg.SVGCircle;
+import org.xmlcml.graphics.svg.SVGG;
+import org.xmlcml.graphics.svg.SVGText;
 
 public class NexmlNode extends NexmlElement {
 
+	private static final double FONTSIZE = 20.0;
+
 	private final static Logger LOG = Logger.getLogger(NexmlNode.class);
+	static {
+		LOG.setLevel(Level.DEBUG);
+	}
+
 	public final static String TAG = "node";
 	
+	private static final String LABEL = "label";
 	private static final String ROOT = "root";
 	private static final String OTU = "otu";
 	private static final String X = "x";
@@ -27,6 +38,7 @@ public class NexmlNode extends NexmlElement {
 	List<NexmlEdge> nexmlEdges;
 	private NexmlTree nexmlTree;
 	private NexmlNode parentNexmlNode;
+	private double radius = 1.0;
 
 	public NexmlNode() {
 		super(TAG);
@@ -267,5 +279,42 @@ public class NexmlNode extends NexmlElement {
 	
 	public NexmlOtu getOtu() {
 		return getOtuFromOtuRef(this.getOtuRef());
+	}
+	
+	public SVGG createSVG() {
+		SVGG g = null;
+		if (this.getXY2() != null) {
+			g = new SVGG();
+			SVGCircle circle = new SVGCircle(this.getXY2(), radius);
+			g.appendChild(circle);
+			String label = getLabelString();
+			if (label != null) {
+				double fontSize = (label.startsWith("NT")) ? FONTSIZE / 2.0 : FONTSIZE;
+				SVGText text = new SVGText(this.getXY2(), label);
+				text.setFontSize(fontSize);
+				text.setFontFamily("helvetica");
+				g.appendChild(text);
+			}
+		}
+		return g;
+	}
+
+	/** a label for the node.
+	 * 
+	 * tries, otu, then label, then id
+	 * 
+	 * @return
+	 */
+	public String getLabelString() {
+		String label = null;
+		NexmlOtu otu = getOtu();
+		if (otu != null) {
+			label = otu.getValue();
+			label = (label == null) ? otu.getId() : label;
+		} else {
+			label = this.getAttributeValue(LABEL);
+			label = label == null ? this.getId() : label;
+		}
+		return label;
 	}
 }
