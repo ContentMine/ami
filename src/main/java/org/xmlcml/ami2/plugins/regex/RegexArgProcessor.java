@@ -9,6 +9,7 @@ import nu.xom.Element;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
 import org.xmlcml.cmine.files.CMDir;
@@ -74,7 +75,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	 * @param compoundRegex
 	 * @return subclassed Plugin
 	 */
-	public RegexSearcher createSearcher(AMIArgProcessor argProcessor, CompoundRegex compoundRegex) {
+	public AMISearcher createSearcher(AMIArgProcessor argProcessor, CompoundRegex compoundRegex) {
 		RegexSearcher regexSearcher = RegexSearcher.createSearcher(argProcessor);
 		regexSearcher.setCompoundRegex(compoundRegex);
 		return regexSearcher;
@@ -105,7 +106,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 		ensureSectionElements();
 		resultsByCompoundRegex = new HashMap<String, ResultsElement>();
 		for (CompoundRegex compoundRegex : compoundRegexList) {
-			RegexSearcher regexSearcher = createSearcher(this, compoundRegex);
+			AMISearcher regexSearcher = createSearcher(this, compoundRegex);
 			ResultsElement resultsElement = regexSearcher.search(sectionElements);
 			resultsByCompoundRegex.put(compoundRegex.getTitle(), resultsElement);
 		}

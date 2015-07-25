@@ -45,12 +45,13 @@ public class RegexSearcher extends AMISearcher {
 		for (RegexComponent regexComponent : regexComponents) {
 			MatcherResult matcherResult = regexComponent.searchWithPattern(xomElement.getValue()); // crude to start with
 			List<ResultElement> resultElementList = matcherResult.createResultElementList();
-			for (ResultElement resultElement : resultElementList) {
-				resultsElement.appendChild(resultElement);
-			}
+			
+			addXpathAndAddtoResultsElement(xomElement, resultsElement, resultElementList);
 		}
 		return resultsElement;
 	}
+
+	
 
 
 	// ===============

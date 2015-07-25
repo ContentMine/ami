@@ -37,9 +37,7 @@ public class DummySearcher extends AMISearcher {
 			String xmlString = getValue(element);
 			LOG.trace(xmlString);
 			List<ResultElement> resultElementList = this.search(xmlString);
-			for (ResultElement resultElement : resultElementList) {
-				resultsElement.appendChild(resultElement);
-			}
+			addXpathAndAddtoResultsElement(element, resultsElement, resultElementList);
 		}
 		return resultsElement;
 	}

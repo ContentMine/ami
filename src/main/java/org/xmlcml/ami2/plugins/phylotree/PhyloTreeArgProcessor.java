@@ -1,6 +1,7 @@
 package org.xmlcml.ami2.plugins.phylotree;
 
 import java.awt.image.BufferedImage;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -33,7 +34,6 @@ import org.xmlcml.graphics.svg.SVGElement;
 import org.xmlcml.graphics.svg.SVGSVG;
 import org.xmlcml.graphics.svg.linestuff.LineMerger.MergeMethod;
 import org.xmlcml.graphics.svg.text.SVGPhrase;
-import org.xmlcml.graphics.svg.text.SVGWordLine;
 import org.xmlcml.html.HtmlSpan;
 import org.xmlcml.image.pixel.PixelGraph;
 import org.xmlcml.image.pixel.PixelNode;
@@ -118,7 +118,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 			}
 			if (output != null) {
 				File outputFile = new File(output);
-				outputFile.mkdirs();
+				outputFile.getParentFile().mkdirs();
 				XMLUtil.debug(svgxTree, new FileOutputStream(outputFile), 1);
 			}
 		} catch (Exception e) {
@@ -210,7 +210,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 				LOG.trace("match tip:" +tipNode.getLabelString()+"("+tipNode.getXY2()+")");
 				matchedPhraseList.add(phrases.get(0));
 			} else if (phrases.size() > 1) {
-				HOCRPhyloTreeTest.LOG.error("competing words for tip");
+				LOG.error("competing words for tip");
 			} else if (phrases.size() == 0) {
 				LOG.warn("failed to find phrases to match tip:" +tipNode.getLabelString()+"("+tipNode.getXY2()+")");
 				unmatchedTipList.add(tipNode);

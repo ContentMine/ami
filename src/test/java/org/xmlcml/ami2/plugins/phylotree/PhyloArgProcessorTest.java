@@ -43,11 +43,12 @@ public class PhyloArgProcessorTest {
 	 * 
 	 * @throws Exception
 	 */
+	@Ignore("requires tesseract")
 	public void testPhyloHarness() throws Exception {
 		CMDir cmDir = new CMDir(new File(Fixtures.TEST_PHYLO_DIR, "ijs_0_000174_0"));
 		File normaTemp = new File("target/phylo/ijs_0_000174_0");
 		cmDir.copyTo(normaTemp, true);
-		String cmd = "--ph.phylo -q target/phylo/ijs_0_000174_0 -i image/000.pbm.png -o target/phylotest/ijs_0_000174_0.xml"; 
+		String cmd = "--ph.phylo -q target/phylo/ijs_0_000174_0 -i image/000.pbm.png -o target/phylo/junk.xml"; 
 		PhyloTreePlugin phyloPlugin = new PhyloTreePlugin(cmd);
 		phyloPlugin.runAndOutput();
 	}
@@ -57,6 +58,7 @@ public class PhyloArgProcessorTest {
 	 * 
 	 * @throws Exception
 	 */
+	@Ignore("requires tesseract")
 	public void testPhyloName() throws Exception {
 //		String name = "ijs_0_000265_0"; String img = "000";
 		String name = "ijs_0_000364_0"; String img = "003";

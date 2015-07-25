@@ -1,17 +1,21 @@
 package org.xmlcml.ami2.plugins;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import nu.xom.Attribute;
+import nu.xom.Element;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cmine.files.DefaultSearcher;
 import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.cmine.lookup.AbstractLookup;
+import org.xmlcml.xml.XPathGenerator;
 
 public class AMISearcher extends DefaultSearcher {
 
@@ -102,5 +106,14 @@ public class AMISearcher extends DefaultSearcher {
 	@Override
 	protected Pattern getPattern() {
 		return pattern;
+	}
+
+	protected void addXpathAndAddtoResultsElement(Element elementToSearch, ResultsElement resultsElement,
+			List<ResultElement> resultElementList) {
+		for (ResultElement resultElement : resultElementList) {
+			String xpath = new XPathGenerator(elementToSearch).getXPath();
+			resultsElement.setXPath(xpath);
+			resultsElement.appendChild(resultElement);
+		}
 	}
 }

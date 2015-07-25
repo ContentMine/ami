@@ -53,9 +53,7 @@ public class GeneSearcher extends AMISearcher {
 			String xmlString = getValue(element);
 			LOG.trace(xmlString);
 			List<ResultElement> resultElementList = this.search(xmlString);
-			for (ResultElement resultElement : resultElementList) {
-				resultsElement.appendChild(resultElement);
-			}
+			addXpathAndAddtoResultsElement(element, resultsElement, resultElementList);
 		}
 		List<String> exactList = resultsElement.getExactList();
 		return resultsElement;
