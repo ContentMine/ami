@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.phylotree.PhyloTreePlugin;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.CMDir;
@@ -45,7 +45,7 @@ public class PhyloArgProcessorTest {
 	 */
 	@Ignore("requires tesseract")
 	public void testPhyloHarness() throws Exception {
-		CMDir cmDir = new CMDir(new File(Fixtures.TEST_PHYLO_DIR, "ijs_0_000174_0"));
+		CMDir cmDir = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000174_0"));
 		File normaTemp = new File("target/phylo/ijs_0_000174_0");
 		cmDir.copyTo(normaTemp, true);
 		String cmd = "--ph.phylo -q target/phylo/ijs_0_000174_0 -i image/000.pbm.png -o target/phylo/junk.xml"; 
@@ -62,7 +62,7 @@ public class PhyloArgProcessorTest {
 	public void testPhyloName() throws Exception {
 //		String name = "ijs_0_000265_0"; String img = "000";
 		String name = "ijs_0_000364_0"; String img = "003";
-		CMDir cmDir = new CMDir(new File(Fixtures.TEST_PHYLO_DIR, name));
+		CMDir cmDir = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
 		File normaTemp = new File("target/phylo/"+name);
 		cmDir.copyTo(normaTemp, true);
 		String cmd = "--ph.phylo -q target/phylo/"+name+" -i image/"+img+".pbm.png -o target/phylotest/"+name; 

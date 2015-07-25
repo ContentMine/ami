@@ -55,10 +55,10 @@ public class NameMultimapTest {
 			if (Pattern.compile("[A-Z][a-z]?\\..*").matcher(name).matches()) continue;
 			List<String> idList = nameMultimap.searchByNameValue(name);
 			if (idList.size() > 1) {
-				System.out.println("----------------"+name+": "+idList);
+//				System.out.println("----------------"+name+": "+idList);
 				for (String id : idList) {
 					List<String> nameList = nameMultimap.searchByKey(id);
-					System.out.println(id+": "+nameList);
+//					System.out.println(id+": "+nameList);
 				}
 			}
 		}

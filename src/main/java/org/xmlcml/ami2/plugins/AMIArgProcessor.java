@@ -288,7 +288,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 				LOG.trace("search "+name);
 				ResultsElement resultsElement = searcher.search(sectionElements);
 				resultsElement.lookup(lookupInstanceByName, lookupNames);
-				LOG.debug("exactList "+resultsElement.getExactList());
+				LOG.trace("exactList "+resultsElement.getExactList());
 				resultsElement.setAllResultElementNames(name);
 				currentCMDir.putInContentProcessor(name, resultsElement);
 			}

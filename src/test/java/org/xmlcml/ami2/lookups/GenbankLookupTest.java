@@ -17,7 +17,7 @@ public class GenbankLookupTest {
 	public void getGenbankForId() throws Exception {
 		GenbankLookup genbankLookup = new GenbankLookup();
 		String result = genbankLookup.lookupTaxonomy("Mus");
-		LOG.debug("result: "+result);
+		LOG.trace("result: "+result);
 //		Assert.assertEquals("mouse", "(83310)", intArray.toString());
 	}
 	

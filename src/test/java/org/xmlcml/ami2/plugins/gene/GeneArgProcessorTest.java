@@ -10,7 +10,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public class GeneArgProcessorTest {
@@ -47,7 +47,7 @@ public class GeneArgProcessorTest {
 	@Ignore // accesses net
 	public void testGeneArgProcessorLookup() throws Exception {
 		File newDir = new File("target/plosone/species");
-		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
+		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--sp.species --context 35 50 --sp.type binomial binomialsp -q "+newDir+" -i scholarly.html --lookup wikipedia"; 
 		DefaultArgProcessor speciesArgProcessor = new GeneArgProcessor(args);
 		speciesArgProcessor.runAndOutput();
@@ -82,7 +82,7 @@ public class GeneArgProcessorTest {
 		// SHOWCASE
 		String cmd = "--g.gene --context 35 50 --g.type human -q target/plosone/gene/ -i scholarly.html"; 
  
-		Fixtures.runStandardTestHarness(
+		AMIFixtures.runStandardTestHarness(
 				new File("./src/test/resources/org/xmlcml/ami2/plosone/journal.pone.0008887/"), 
 				new File("target/plosone/gene/"), 
 				new GenePlugin(),

@@ -10,7 +10,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.euclid.Real2;
 import org.xmlcml.euclid.Real2Range;
 import org.xmlcml.graphics.svg.SVGCircle;
@@ -67,7 +67,7 @@ public class HEPTest {
 	
 	@Test
 	public void testGraph() {
-		File svgFile = new File(Fixtures.TEST_AMI_DIR, "hep/33.1.svg");
+		File svgFile = new File(AMIFixtures.TEST_AMI_DIR, "hep/33.1.svg");
 		SVGElement svgElement = SVGElement.readAndCreateSVG(svgFile);
 		List<SVGPath> pathList = SVGPath.extractPaths(svgElement);
 		List<SVGText> textList = SVGText.extractTexts(
@@ -80,7 +80,7 @@ public class HEPTest {
 
 	@Test
 	public void testGraphInBox() {
-		File svgFile = new File(Fixtures.TEST_AMI_DIR, "hep/fulltext-page17.svg");
+		File svgFile = new File(AMIFixtures.TEST_AMI_DIR, "hep/fulltext-page17.svg");
 		SVGElement svgElement = SVGElement.readAndCreateSVG(svgFile);
 		List<SVGPath> pathList = SVGPath.extractPaths(svgElement);
 		List<SVGText> textList = SVGText.extractTexts(

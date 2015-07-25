@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
 import org.xmlcml.euclid.IntArray;
 import org.xmlcml.xml.XMLUtil;
@@ -73,7 +73,7 @@ public class WikipediaLookupTest {
 	@Ignore // takes too long
 	public void testLookup() throws Exception {
 		File target = new File("target/lookup/pone_0115884");
-		FileUtils.copyDirectory(new File(Fixtures.TEST_PLOSONE_DIR, "journal.pone.0115884/"), target);
+		FileUtils.copyDirectory(new File(AMIFixtures.TEST_PLOSONE_DIR, "journal.pone.0115884/"), target);
 		String cmd = "--sp.species --context 35 --sp.type binomial binomialsp "
 				+ "-q "+target+" -i scholarly.html "
 				+ "--lookup wikipedia";

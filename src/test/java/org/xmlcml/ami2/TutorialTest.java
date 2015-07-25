@@ -18,12 +18,12 @@ public class TutorialTest {
 
 	@Test
 	public void testSpecies() throws Exception {
-		FileUtils.copyDirectory(new File(Fixtures.TEST_AMI_DIR, "tutorial/plos10"), new File("target/species10"));
+		FileUtils.copyDirectory(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10"), new File("target/species10"));
 		String args = "-q target/species10 -i scholarly.html --sp.species --context 35 50 --sp.type binomial genus genussp";
 		SpeciesPlugin speciesPlugin = new SpeciesPlugin(args);
 		speciesPlugin.runAndOutput();
-		Fixtures.compareExpectedAndResults(new File(Fixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
-				new File("target/species10/e0115544"), "species/binomial", Fixtures.RESULTS_XML);
+		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
+				new File("target/species10/e0115544"), "species/binomial", AMIFixtures.RESULTS_XML);
 	}
 	
 	@Test
@@ -55,8 +55,8 @@ public class TutorialTest {
 		String args = "-q target/ident10/ -i scholarly.html --context 35 50 --id.identifier --id.regex regex/identifiers.xml --id.type bio.ena";
 		IdentifierPlugin identifierPlugin = new IdentifierPlugin(args);
 		identifierPlugin.runAndOutput();
-		Fixtures.compareExpectedAndResults(new File(Fixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
-				new File("target/ident10/e0115544"), "identifier/bio.ena", Fixtures.RESULTS_XML);
+		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
+				new File("target/ident10/e0115544"), "identifier/bio.ena", AMIFixtures.RESULTS_XML);
 		
 	}
 	
@@ -66,8 +66,8 @@ public class TutorialTest {
 		String args = "-q target/clin10/ -i scholarly.html --context 35 50 --id.identifier --id.regex regex/identifiers.xml --id.type clin.nct clin.isrctn";
 		IdentifierPlugin identifierPlugin = new IdentifierPlugin(args);
 		identifierPlugin.runAndOutput();
-		Fixtures.compareExpectedAndResults(new File(Fixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
-				new File("target/clin10/e0115544"), "identifier/clin.nct", Fixtures.RESULTS_XML);
+		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
+				new File("target/clin10/e0115544"), "identifier/clin.nct", AMIFixtures.RESULTS_XML);
 	}
 		
 	@Test
@@ -82,8 +82,8 @@ public class TutorialTest {
 				+ " --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
 		WordPlugin wordPlugin = new WordPlugin(args);
 		wordPlugin.runAndOutput();
-		Fixtures.compareExpectedAndResults(new File(Fixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
-				new File("target/word10/e0115544"), "word/frequencies", Fixtures.RESULTS_XML);
+		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
+				new File("target/word10/e0115544"), "word/frequencies", AMIFixtures.RESULTS_XML);
 	}
 
 	@Test
@@ -107,8 +107,8 @@ public class TutorialTest {
 		String args = "-q target/gene10/ -i scholarly.html --context 35 50 --g.gene --g.type human mouse";
 		GenePlugin genePlugin = new GenePlugin(args);
 		genePlugin.runAndOutput();
-		Fixtures.compareExpectedAndResults(new File(Fixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
-				new File("target/gene10/e0115544"), "gene/human", Fixtures.RESULTS_XML);
+		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
+				new File("target/gene10/e0115544"), "gene/human", AMIFixtures.RESULTS_XML);
 		
 	}
 	

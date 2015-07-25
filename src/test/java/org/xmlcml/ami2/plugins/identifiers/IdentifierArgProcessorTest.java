@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.identifier.IdentifierArgProcessor;
 import org.xmlcml.ami2.plugins.identifier.IdentifierPlugin;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
@@ -29,7 +29,7 @@ public class IdentifierArgProcessorTest {
 	@Ignore // mend th
 	public void testIdentifierArgProcessor() throws Exception {
 		File newDir = new File("target/plosone/identifier");
-		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
+		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--id.identifier --context 35 50 --id.type ena pdb orcid -q "+newDir+" -i scholarly.html"; 
 		DefaultArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
@@ -50,8 +50,8 @@ public class IdentifierArgProcessorTest {
 		// SHOWCASE
 		String cmd = "-q target/examples_16_1_1/ -i scholarly.html --context 25 40 "
 				+ "--id.identifier --id.regex regex/identifiers.xml --id.type clin.nct clin.isrctn";
-		Fixtures.runStandardTestHarness(
-				Fixtures.TEST_TRIALS_16_1_1, 
+		AMIFixtures.runStandardTestHarness(
+				AMIFixtures.TEST_TRIALS_16_1_1, 
 				new File("target/examples_16_1_1/"), 
 				new IdentifierPlugin(),
 				cmd,
@@ -64,7 +64,7 @@ public class IdentifierArgProcessorTest {
 	@Ignore // accesses net
 	public void testIdentifierArgProcessorLookup() throws Exception {
 		File newDir = new File("target/plosone/identifier");
-		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
+		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--id.identifier --context 35 50 --id.type ena -q "+newDir+" -i scholarly.html --lookup wikipedia"; 
 		DefaultArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
@@ -75,7 +75,7 @@ public class IdentifierArgProcessorTest {
 	@Test
 	public void testNewIdentifier() throws Exception {
 		File newDir = new File("target/plosone/identifier");
-		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
+		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--id.identifier --context 35 50 --id.regex regex/identifiers.xml --id.type bio.ena -q "+newDir+" -i scholarly.html"; 
 		DefaultArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();

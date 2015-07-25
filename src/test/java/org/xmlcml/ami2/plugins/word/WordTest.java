@@ -8,7 +8,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public class WordTest {
@@ -22,9 +22,9 @@ public class WordTest {
 	}
 	
 	private static final String DATA_16_1_1 = 
-			new File(Fixtures.TEST_BMC_DIR, "http_www.trialsjournal.com_content_16_1_1").toString();
+			new File(AMIFixtures.TEST_BMC_DIR, "http_www.trialsjournal.com_content_16_1_1").toString();
 	private static final String DATA_16_1_1A = 
-			new File(Fixtures.TEST_BMC_DIR, "http_www.trialsjournal.com_content_16_1_1a").toString();
+			new File(AMIFixtures.TEST_BMC_DIR, "http_www.trialsjournal.com_content_16_1_1a").toString();
 	private static final String TEMP_16_1_1 = 
 			"target/http_www.trialsjournal.com_content_16_1_1";
 
@@ -41,7 +41,7 @@ public class WordTest {
 	@Test
 	public void testWords() {
 		String args = 
-			"-q "+Fixtures.TEST_PLOSONE_0115884.toString()+
+			"-q "+AMIFixtures.TEST_PLOSONE_0115884.toString()+
 			" --w.words "+WordArgProcessor.WORD_LENGTHS+" "+WordArgProcessor.WORD_FREQUENCIES+
 			" --w.stopwords "+STOPWORDS_TXT+" --w.wordlengths {2,12} --w.wordtypes acronym ";
 		new WordArgProcessor(args);
@@ -50,7 +50,7 @@ public class WordTest {
 	@Test
 	public void testWordsRun() {
 		String args = 
-			"-q "+Fixtures.TEST_PLOSONE_0115884.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES + " --w.stopwords "+STOPWORDS_TXT + " --w.wordlengths {2,12} --w.wordtypes abbreviation";
+			"-q "+AMIFixtures.TEST_PLOSONE_0115884.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES + " --w.stopwords "+STOPWORDS_TXT + " --w.wordlengths {2,12} --w.wordtypes abbreviation";
 		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 	}
@@ -59,7 +59,7 @@ public class WordTest {
 	public void testSingleFile() throws IOException {
 		// SHOWCASE
 		String cmd = "-q target/word/16_1_1_test/ -i scholarly.html --context 25 40 --w.words wordLengths wordFrequencies --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
-		Fixtures.runStandardTestHarness(
+		AMIFixtures.runStandardTestHarness(
 				new File(DATA_16_1_1), 
 				new File("target/word/16_1_1_test/"), 
 				new WordPlugin(),
@@ -73,7 +73,7 @@ public class WordTest {
 		
 		String cmd = "-q target/examplestemp1/ --w.words wordFrequencies "
 				+ "--w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt /org/xmlcml/ami2/plugins/word/clinicaltrials200.txt";		
-		Fixtures.runStandardTestHarness(
+		AMIFixtures.runStandardTestHarness(
 				new File(DATA_16_1_1A), 
 				new File("target/examplestemp1/"), 
 				new WordPlugin(),
@@ -105,10 +105,10 @@ public class WordTest {
 
 	@Test
 	public void testSummarize() throws IOException {
-		if (Fixtures.EXAMPLES_TEMP_16_1_1.exists()) FileUtils.forceDelete(Fixtures.EXAMPLES_TEMP_16_1_1);
-		FileUtils.copyDirectory(Fixtures.TEST_WORD_EXAMPLES, Fixtures.EXAMPLES_TEMP_16_1_1);
+		if (AMIFixtures.EXAMPLES_TEMP_16_1_1.exists()) FileUtils.forceDelete(AMIFixtures.EXAMPLES_TEMP_16_1_1);
+		FileUtils.copyDirectory(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.EXAMPLES_TEMP_16_1_1);
 		String args = 
-			"-q  "+Fixtures.EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" --w.case ignore --w.summary aggregate --summaryfile target/examples/";
+			"-q  "+AMIFixtures.EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" --w.case ignore --w.summary aggregate --summaryfile target/examples/";
 		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 	}
@@ -116,10 +116,10 @@ public class WordTest {
 
 	@Test
 	public void testSummarizeDocumentFrequencies() throws IOException {
-		if (Fixtures.EXAMPLES_TEMP_16_1_1.exists()) FileUtils.forceDelete(Fixtures.EXAMPLES_TEMP_16_1_1);
-		FileUtils.copyDirectory(Fixtures.TEST_WORD_EXAMPLES, Fixtures.EXAMPLES_TEMP_16_1_1);
+		if (AMIFixtures.EXAMPLES_TEMP_16_1_1.exists()) FileUtils.forceDelete(AMIFixtures.EXAMPLES_TEMP_16_1_1);
+		FileUtils.copyDirectory(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.EXAMPLES_TEMP_16_1_1);
 		String args = 
-			"-q "+Fixtures.EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" "+CLINICAL_STOPWORDS_TXT+" --w.case ignore --w.summary booleanFrequency --summaryfile target/examples/	--w.wordcount {3,*}";
+			"-q "+AMIFixtures.EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" "+CLINICAL_STOPWORDS_TXT+" --w.case ignore --w.summary booleanFrequency --summaryfile target/examples/	--w.wordcount {3,*}";
 		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 	}

@@ -1,7 +1,6 @@
 package org.xmlcml.ami2.plugins.phylotree;
 
 import java.awt.image.BufferedImage;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -191,11 +190,11 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		unmatchedTipList = new ArrayList<NexmlNode>();
 		matchTipNodes(tipNodeList);
 		if (unusedPhraseList.size() > 0) {
-			LOG.debug("unmatched phrases");
-			for (SVGPhrase phrase : unusedPhraseList) {
-				System.out.print("   "+"<"+phrase.toString()+">");
-			}
-			System.out.println();
+			LOG.trace("unmatched phrases");
+//			for (SVGPhrase phrase : unusedPhraseList) {
+//				System.out.print("   "+"<"+phrase.toString()+">");
+//			}
+//			System.out.println();
 		}
 		
 	}
@@ -212,13 +211,13 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 			} else if (phrases.size() > 1) {
 				LOG.error("competing words for tip");
 			} else if (phrases.size() == 0) {
-				LOG.warn("failed to find phrases to match tip:" +tipNode.getLabelString()+"("+tipNode.getXY2()+")");
+				LOG.trace("failed to find phrases to match tip:" +tipNode.getLabelString()+"("+tipNode.getXY2()+")");
 				unmatchedTipList.add(tipNode);
 			}
 		}
 		unusedPhraseList.removeAll(matchedPhraseList);
 		if (unmatchedTipList.size() > 0) {
-			LOG.debug("unmatched tips: \n"+unmatchedTipList);
+			LOG.trace("unmatched tips: \n"+unmatchedTipList);
 		}
 	}
 	
@@ -271,10 +270,12 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		return nexml;
 	}
 
-	public void readAndCombineTreeAndTips(File imageFile) throws IOException, InterruptedException {
+	public boolean readAndCombineTreeAndTips(File imageFile) throws IOException, InterruptedException {
 		hocrReader = createHOCRReaderAndProcess(imageFile);
+		if (hocrReader == null) return false;
 		NexmlNEXML nexml = this.createNexmlAndTreeFromPixels(imageFile);
 		mergeOCRAndPixelTree(hocrReader, nexml);
+		return true;
 	}
 
 	/**
@@ -295,8 +296,9 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		File hocrOutfile = createHocrOutputFileDescriptor();
 		getOrCreateImageToHOCRConverter();
 		File htmlFile = imageToHOCRConverter.convertImageToHOCR(imageFile, hocrOutfile);
-		if (!htmlFile.exists()) {
+		if (htmlFile == null || !htmlFile.exists()) {
 			LOG.error("cannot run tesseract");
+			return null;
 		} else {
 			getOrCreateHOCRReader();
 			hocrReader.readHOCR(new FileInputStream(htmlFile));

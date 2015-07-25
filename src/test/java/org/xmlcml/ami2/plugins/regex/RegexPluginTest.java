@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.CMDir;
@@ -68,7 +68,7 @@ public class RegexPluginTest {
 	@Test
 	// BMC has unusual XML
 	public void testRegexPlugins() throws IOException {
-		CMDir cmDir = new CMDir(Fixtures.TEST_BMC_15_1_511_CMDIR);
+		CMDir cmDir = new CMDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR);
 		File normaTemp = new File("target/bmc/regex/15_1_511_test");
 		cmDir.copyTo(normaTemp, true);
 		String[] args = {
@@ -90,8 +90,8 @@ public class RegexPluginTest {
 	@Test
 	public void testCONSORTRegex() throws IOException {
 		File target = new File("target/consort0/15_1_511_test/");
-		Fixtures.runStandardTestHarness(
-				Fixtures.TEST_BMC_15_1_511_CMDIR, 
+		AMIFixtures.runStandardTestHarness(
+				AMIFixtures.TEST_BMC_15_1_511_CMDIR, 
 				target, 
 				new RegexPlugin(),
 				"-q "+target+" -i scholarly.html --context 25 40 --r.regex regex/consort0.xml",
@@ -141,7 +141,7 @@ public class RegexPluginTest {
 
 	@Test
 	public void testSectioning() throws IOException {
-		FileUtils.copyDirectory(Fixtures.TEST_BMC_15_1_511_CMDIR, new File("target/consort0/15_1_511_test/"));
+		FileUtils.copyDirectory(AMIFixtures.TEST_BMC_15_1_511_CMDIR, new File("target/consort0/15_1_511_test/"));
 		String cmd = "-q target/consort0/15_1_511_test/ -i scholarly.html --r.regex regex/consort0.xml";
 		RegexArgProcessor argProcessor = new RegexArgProcessor(cmd);
 		argProcessor.runAndOutput();

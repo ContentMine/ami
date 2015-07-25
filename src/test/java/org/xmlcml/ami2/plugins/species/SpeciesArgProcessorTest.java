@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public class SpeciesArgProcessorTest {
@@ -26,7 +26,7 @@ public class SpeciesArgProcessorTest {
 	@Test
 	public void testSpeciesArgProcessor() throws Exception {
 		File newDir = new File("target/plosone/species");
-		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
+		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
 		DefaultArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
 		speciesArgProcessor.runAndOutput();
@@ -48,7 +48,7 @@ public class SpeciesArgProcessorTest {
 	@Ignore // accesses net
 	public void testSpeciesArgProcessorLookup() throws Exception {
 		File newDir = new File("target/plosone/species");
-		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
+		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--sp.species --context 35 50 --sp.type binomial binomialsp -q "+newDir+" -i scholarly.html --lookup wikipedia"; 
 		DefaultArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
 		speciesArgProcessor.runAndOutput();
@@ -83,8 +83,8 @@ public class SpeciesArgProcessorTest {
 		// SHOWCASE
 		String cmd = "--sp.species --context 35 50 --sp.type binomial genus genussp -q target/plosone/species/malaria -i scholarly.html"; 
  
-		Fixtures.runStandardTestHarness(
-				Fixtures.TEST_PLOSONE_MALARIA_0119475, 
+		AMIFixtures.runStandardTestHarness(
+				AMIFixtures.TEST_PLOSONE_MALARIA_0119475, 
 				new File("target/plosone/species/malaria"), 
 				new SpeciesPlugin(),
 				cmd,

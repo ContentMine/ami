@@ -9,7 +9,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
-import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlEdge;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlElement;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
@@ -42,8 +42,8 @@ public class HOCRPhyloTreeTest {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	public final static File HOCR_364_HTML = new File(Fixtures.TEST_PHYLO_DIR, "ijs_0_000364_0/image/003.pbm.png.hocr.html");
-	private final static File PHYLOTREE_364_NEXML = new File(Fixtures.TEST_PHYLO_DIR, "ijs_0_000364_0/image/003.pbm.png.phylotree.nexml");
+	public final static File HOCR_364_HTML = new File(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000364_0/image/003.pbm.png.hocr.html");
+	private final static File PHYLOTREE_364_NEXML = new File(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000364_0/image/003.pbm.png.phylotree.nexml");
 		
 	@Test
 	public void testReadHOCRSVG() throws Exception {
