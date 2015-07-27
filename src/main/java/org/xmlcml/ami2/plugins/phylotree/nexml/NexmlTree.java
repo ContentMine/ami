@@ -195,7 +195,7 @@ public class NexmlTree extends NexmlElement {
 		return rootList;
 	}
 
-	public List<NexmlNode> getTipNodeList() {
+	public List<NexmlNode> getOrCreateTipNodeList() {
 		if (tipNodeList == null) {
 			getNodeListAndMap();
 			tipNodeList = new ArrayList<NexmlNode>();
@@ -207,11 +207,18 @@ public class NexmlTree extends NexmlElement {
 		}
 		return tipNodeList;
 	}
+	
+	public List<NexmlNode> getOrCreateNonTipNodeList() {
+		getOrCreateTipNodeList();
+		List<NexmlNode> nodeListCopy = new ArrayList<NexmlNode>(this.getNodeListAndMap());
+		nodeListCopy.removeAll(tipNodeList);
+		return nodeListCopy;
+	}
 
 	public Map<Int2, NexmlNode> getTipByCoordMap() {
 		if (tipByCoordMap == null) {
 			tipByCoordMap = new HashMap<Int2, NexmlNode>();
-			getTipNodeList();
+			getOrCreateTipNodeList();
 			for (NexmlNode tipNode : tipNodeList) {
 				Int2 xy2 = tipNode.getInt2();
 				if (xy2 != null) {

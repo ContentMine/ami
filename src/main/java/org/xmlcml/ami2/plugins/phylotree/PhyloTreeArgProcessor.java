@@ -68,8 +68,8 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	private DiagramTree diagramTree;
 	private PhyloTreePixelAnalyzer phyloTreePixelAnalyzer;
 	private NexmlNEXML nexml;
-	private List<NexmlNode> unmatchedTipList;
-	private List<SVGPhrase> unusedPhraseList;
+	private Double joiningRadius = 40.0;
+	private int maxPhraseLength = 4;
 
 	public PhyloTreeArgProcessor() {
 		super();
@@ -173,11 +173,6 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		return hocrReader;
 	}
 
-	public void addTipAndBranchLabelsToTree(List<SVGPhrase> unusedPhraseList, NexmlTree nexmlTree) {
-		this.unusedPhraseList = unusedPhraseList;
-		addTipAndBranchLabelsToTree(nexmlTree);
-	}
-
 	/** matches tips to labels.
 	 * 
 	 * creates lists of failed tips (failedTipList) and failed labels (failedLabels).
@@ -185,39 +180,51 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	 * @param wordLineList
 	 * @param nexmlTree
 	 */
-	public void addTipAndBranchLabelsToTree(NexmlTree nexmlTree) {
-		List<NexmlNode> tipNodeList = nexmlTree.getTipNodeList();
-		unmatchedTipList = new ArrayList<NexmlNode>();
-		matchTipNodes(tipNodeList);
-		if (unusedPhraseList.size() > 0) {
-			LOG.trace("unmatched phrases");
-//			for (SVGPhrase phrase : unusedPhraseList) {
-//				System.out.print("   "+"<"+phrase.toString()+">");
-//			}
-//			System.out.println();
-		}
+	public void matchPhrasesToNodes(List<SVGPhrase> unusedPhraseList, NexmlTree nexmlTree) {
+		List<NexmlNode> tipNodeList = nexmlTree.getOrCreateTipNodeList();
+		annotateMatchedNodesAndDecrementUnmatchedLists(tipNodeList, unusedPhraseList, hocrReader.getWordJoiningBox(), null);
+		List<NexmlNode> branchNodeList = nexmlTree.getOrCreateNonTipNodeList();
+		annotateMatchedNodesAndDecrementUnmatchedLists(branchNodeList, unusedPhraseList, null, getJoiningRadius());
 		
 	}
 
-	private void matchTipNodes(List<NexmlNode> tipNodeList) {
+	/** matches nodes against phrases.
+	 * 
+	 * Brute force algorithm - replace with Hungarian later
+	 * 
+	 * @param unmatchedNodeList decremented for each match
+	 * @param unusedPhraseList decremented for each match
+	 */
+	private void annotateMatchedNodesAndDecrementUnmatchedLists(
+			List<NexmlNode> unmatchedNodeList, List<SVGPhrase> unusedPhraseList, Real2Range joiningBox, Double joiningRadius) {
 		List<SVGPhrase> matchedPhraseList = new ArrayList<SVGPhrase>();
-		for (NexmlNode tipNode : tipNodeList) {
-			Real2 tipXY2 = tipNode.getXY2();
-			List<SVGPhrase> phrases = this.mergeTipsCreateMatchedPhrases(unusedPhraseList, tipXY2);
+		List<NexmlNode> matchedNodeList = new ArrayList<NexmlNode>();
+		for (NexmlNode unmatchedNode : unmatchedNodeList) {
+			Real2 tipXY2 = unmatchedNode.getXY2();
+			List<SVGPhrase> phrases = this.annotateNodesWithMatchedPhrases(unusedPhraseList, tipXY2, joiningBox, joiningRadius);
 			if (phrases.size() == 1) {
-				tipNode.setOtuValue(phrases.get(0).toString());
-				LOG.trace("match tip:" +tipNode.getLabelString()+"("+tipNode.getXY2()+")");
+				String label = phrases.get(0).toString();
+				if (joiningRadius != null) {
+					unmatchedNode.setLabel(label);
+				} else {
+					unmatchedNode.setOtuValue(label);
+				}
 				matchedPhraseList.add(phrases.get(0));
 			} else if (phrases.size() > 1) {
 				LOG.error("competing words for tip");
 			} else if (phrases.size() == 0) {
-				LOG.trace("failed to find phrases to match tip:" +tipNode.getLabelString()+"("+tipNode.getXY2()+")");
-				unmatchedTipList.add(tipNode);
+				LOG.trace("failed to find phrases to match node:" +unmatchedNode.getLabelString()+"("+unmatchedNode.getXY2()+")");
+//				unmatchedTipList.add(unmatchedNode);
 			}
 		}
 		unusedPhraseList.removeAll(matchedPhraseList);
-		if (unmatchedTipList.size() > 0) {
-			LOG.trace("unmatched tips: \n"+unmatchedTipList);
+		unmatchedNodeList.removeAll(matchedNodeList);
+		
+		if (unusedPhraseList.size() > 0) {
+			LOG.trace("unmatched phrases: \n"+unusedPhraseList);
+		}
+		if (unmatchedNodeList.size() > 0) {
+			LOG.trace("unmatched tips: \n"+unmatchedNodeList);
 		}
 	}
 	
@@ -226,27 +233,32 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	 * Ideally wordLineList should be size==1
 	 * 
 	 * @param phraseList
-	 * @param tipXY2
+	 * @param xy2
+	 * @param joiningBox if not-null joins horizontally to node
+	 * @param joiningRadius if not null joins radially (for short words)
 	 * @return
 	 */
-	private List<SVGPhrase> mergeTipsCreateMatchedPhrases(List<SVGPhrase> phraseList, Real2 tipXY2) {
+	private List<SVGPhrase> annotateNodesWithMatchedPhrases(List<SVGPhrase> phraseList, Real2 xy2, Real2Range joiningBox, Double joiningRadius) {
 		getOrCreateHOCRReader();
 		List<SVGPhrase> matchedPhraseList = new ArrayList<SVGPhrase>();
-		if (phraseList == null) {
-			LOG.warn("null phraseList");
-		} else {
-			LOG.trace(tipXY2+"; "+phraseList.size());
+		if (phraseList != null) {
 			for (SVGPhrase phrase : phraseList) {
 				Real2Range phraseBox = phrase == null ? null : phrase.getBoundingBox();
 				if (phraseBox != null) {
-					Real2 phraseXY2 = phraseBox.getMidPoint(BoxDirection.LEFT);
-					Real2 diffXY2 = phraseXY2.subtract(tipXY2); 
-					LOG.trace(phraseXY2+"; "+diffXY2);
-//					if (Math.abs(diffXY2.getY()) < 5) {
-//						LOG.debug("NEAR Y"+phraseXY2+"; "+diffXY2);
-//					}
-					if (hocrReader.getWordJoiningBox().includes(diffXY2)) {
-						matchedPhraseList.add(phrase);
+					if (joiningBox != null) {
+						Real2 phraseXY2 = phraseBox.getMidPoint(BoxDirection.LEFT);
+						Real2 diffXY2 = phraseXY2.subtract(xy2); 
+						if (joiningBox.includes(diffXY2)) {
+							matchedPhraseList.add(phrase);
+						}
+					} else if (joiningRadius != null && phrase.toString().length() < maxPhraseLength) {
+						double dist = xy2.getDistance(phrase.getBoundingBox().getCentroid());
+						if (dist < 50) {
+							LOG.trace(dist);
+						}
+						if (dist < joiningRadius) {
+							matchedPhraseList.add(phrase);
+						}
 					}
 				}
 			}
@@ -270,7 +282,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		return nexml;
 	}
 
-	public boolean readAndCombineTreeAndTips(File imageFile) throws IOException, InterruptedException {
+	public boolean mergeOCRAndPixelTree(File imageFile) throws IOException, InterruptedException {
 		hocrReader = createHOCRReaderAndProcess(imageFile);
 		if (hocrReader == null) return false;
 		NexmlNEXML nexml = this.createNexmlAndTreeFromPixels(imageFile);
@@ -285,8 +297,8 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	 */
 	public void mergeOCRAndPixelTree(HOCRReader hocrReader, NexmlNEXML nexml) {
 		NexmlTree nexmlTree = nexml.getSingleTree();
-		unusedPhraseList = new ArrayList<SVGPhrase>(hocrReader.getOrCreatePhraseList());
-		this.addTipAndBranchLabelsToTree(unusedPhraseList, nexmlTree);
+		List<SVGPhrase> unusedPhraseList = new ArrayList<SVGPhrase>(hocrReader.getOrCreatePhraseList());
+		this.matchPhrasesToNodes(unusedPhraseList, nexmlTree);
 	}
 
 	private HOCRReader createHOCRReaderAndProcess(File imageFile) throws IOException,
@@ -361,6 +373,22 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 
 	public void setOutputDir(File outdir) {
 		this.outputDir = outdir;
+	}
+
+	public Double getJoiningRadius() {
+		return joiningRadius;
+	}
+
+	public void setJoiningRadius(Double joiningRadius) {
+		this.joiningRadius = joiningRadius;
+	}
+
+	public int getMaxPhraseLength() {
+		return maxPhraseLength;
+	}
+
+	public void setMaxPhraseLength(int maxPhraseLength) {
+		this.maxPhraseLength = maxPhraseLength;
 	}
 	
 

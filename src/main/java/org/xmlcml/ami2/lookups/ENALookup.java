@@ -1,6 +1,8 @@
 package org.xmlcml.ami2.lookups;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -24,6 +26,20 @@ http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&term="Goril
 	
 	public String lookupTaxonomy(String genbankId) throws IOException {
 		return null;
+	}
+
+//	http://www.ebi.ac.uk/Tools/dbfetch/dbfetch?db=livelists&id=JN556047&style=raw
+// ERROR 1 Unknown database [livelists].
+	public String lookupGenbankIds(List<String> genbankId) throws IOException {
+		StringBuilder sb = new StringBuilder();
+		sb.append("http://www.ebi.ac.uk/Tools/dbfetch/dbfetch?id=");
+		for (int i = 0; i < genbankId.size(); i++) {
+			if (i > 0) sb.append(",");
+			sb.append(genbankId.get(i));
+		}
+		sb.append("&retmode=xml");
+		URL url = new URL(sb.toString());
+		return getResponse(url);
 	}
 
 	@Override

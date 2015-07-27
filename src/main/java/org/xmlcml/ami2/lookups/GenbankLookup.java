@@ -28,6 +28,18 @@ http://www.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term="+genbank_id
 		return getResponse(url);
 	}
 
+	public String lookupGenbankIds(List<String> genbankId) throws IOException {
+		StringBuilder sb = new StringBuilder();
+		sb.append("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=");
+		for (int i = 0; i < genbankId.size(); i++) {
+			if (i > 0) sb.append(",");
+			sb.append(genbankId.get(i));
+		}
+		sb.append("&retmode=xml");
+		URL url = new URL(sb.toString());
+		return getResponse(url);
+	}
+
 /**
 	http://www.ebi.ac.uk/ena/data/view/Taxon:Gorilla%20gorilla,Taxon:Erithacus&display=xml
 */
