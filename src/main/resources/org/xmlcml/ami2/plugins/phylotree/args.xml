@@ -4,7 +4,7 @@
 		args=""
 		countRange="{1,*}"
 		runMethod="runPhylo"
-		outputMethod="outputResultElements"
+		outputMethod="outputResultsElement"
 		>
 		<help>
 		</help>

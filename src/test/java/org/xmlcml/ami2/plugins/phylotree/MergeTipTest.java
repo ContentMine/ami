@@ -25,6 +25,10 @@ import org.xmlcml.xml.XMLUtil;
 
 public class MergeTipTest {
 
+	private static final String PNG = ".png";
+
+	private static final String PBM_PNG = ".pbm.png";
+
 	private static final String X15GOODTREE = "target/phylo/combined/15goodtree/";
 
 	public static final Logger LOG = Logger.getLogger(HOCRPhyloTreeTest.class);
@@ -69,18 +73,18 @@ public class MergeTipTest {
 
 
 	@Test
-	@Ignore("too many")
+//	@Ignore("too many")
 	public void testConvertLabelsAndTreeAndMerge() throws Exception {
 		
 		for (String root : ROOTS) {
 			LOG.debug(root);
-			File infile = new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree/"+root+".pbm.png");
-			org.apache.commons.io.FileUtils.copyFile(infile, new File(X15GOODTREE+root+".png"));
+			File infile = new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree/"+root+PBM_PNG);
+			org.apache.commons.io.FileUtils.copyFile(infile, new File(X15GOODTREE+root+PNG));
 			PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
 			phyloTreeArgProcessor.setSpeciesPattern(IJSEM);
 			phyloTreeArgProcessor.setOutputRoot(root);
 			phyloTreeArgProcessor.setOutputDir(new File("target/phylo/combined/15goodtree/"));
-			if (!phyloTreeArgProcessor.mergeOCRAndPixelTree(infile)) return; // tesseract failure
+			if (!phyloTreeArgProcessor.mergeOCRAndPixelTree(infile)) continue; // tesseract failure
 			NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
 			new File(X15GOODTREE).mkdirs();
 			XMLUtil.debug(nexml, new FileOutputStream(X15GOODTREE+root+".nexml.xml"), 1);
@@ -92,6 +96,13 @@ public class MergeTipTest {
 		}
 	}
 	
+	@Test
+	public void testConvertPngToSemanticFiles() throws Exception {
+		PhyloTreeArgProcessor.convertPngToHTML_SVG_NEXML_NWK(
+			new File("src/test/resources/org/xmlcml/ami2/phylo/15goodtree/ijs.0.000174-0-000.pbm.png"),
+			new File("target/phylo/misc"));
+	}
+
 	@Test
 	@Ignore
 	public void testNearlyCorrect1420() throws Exception {
@@ -117,7 +128,7 @@ public class MergeTipTest {
 	}
 	
 	@Test
-	@Ignore("uses tesseract")
+//	@Ignore("uses tesseract") // change debug to trace for committal
 	public void testLookup() throws IOException, InterruptedException {
 		File imageFile = new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree/ijs.0.000364-0-004.pbm.png");
 		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
@@ -133,19 +144,24 @@ public class MergeTipTest {
 				String genus = matcher.group(1);
 				String species = matcher.group(2);
 				String id = matcher.group(3);
-				LOG.trace(genus+" + "+species+" + "+id);
+				LOG.debug(genus+" + "+species+" + "+id);
 				ids.add(id);
 			}
 		}
 		String s = new ENALookup().lookupGenbankIds(ids);
-		LOG.trace(">"+s);
+		LOG.debug(">"+s);
+	}
+	
+	@Test
+	public void testCommandLine() {
+		
 	}
 	
 
 	// =========================================
 	private boolean readAndCombineTopsAndLabels(String root, File outputDir) throws IOException,
 	InterruptedException, FileNotFoundException {
-		File infile = new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree/"+root+".pbm.png");
+		File infile = new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree/"+root+PBM_PNG);
 		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
 		phyloTreeArgProcessor.setOutputRoot(root);
 		phyloTreeArgProcessor.setOutputDir(outputDir);

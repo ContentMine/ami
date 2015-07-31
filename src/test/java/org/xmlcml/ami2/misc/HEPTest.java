@@ -3,6 +3,7 @@ package org.xmlcml.ami2.misc;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
@@ -14,6 +15,7 @@ import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.euclid.Real2;
 import org.xmlcml.euclid.Real2Range;
 import org.xmlcml.graphics.svg.SVGCircle;
+import org.xmlcml.graphics.svg.SVGClipPath;
 import org.xmlcml.graphics.svg.SVGElement;
 import org.xmlcml.graphics.svg.SVGG;
 import org.xmlcml.graphics.svg.SVGLine;
@@ -26,6 +28,9 @@ import org.xmlcml.graphics.svg.SVGUtil;
 import org.xmlcml.norma.Norma;
 import org.xmlcml.pdf2svg.PDF2SVGConverter;
 
+import com.google.common.collect.Multimap;
+
+@Ignore("still under development")
 public class HEPTest {
 	
 	private static final Logger LOG = Logger.getLogger(HEPTest.class);
@@ -62,20 +67,84 @@ public class HEPTest {
 		Assert.assertTrue(file.exists());
 		PDF2SVGConverter converter = new PDF2SVGConverter();
 		converter.openPDFFile(file);
-//		converter.
+	}
+	
+	@Test
+//	@Ignore // too long
+	// PDF uses zillions (10000) of small pngs to create shaded background ARRGHH.
+	public void testHEP1() throws Exception {
+		File file = new File(AMIFixtures.TEST_AMI_DIR, "hep/hep1/hep1.pdf");
+		Assert.assertTrue(file.exists());
+		PDF2SVGConverter converter = new PDF2SVGConverter();
+//		converter.openPDFFile(file);
+		for (int i = 1; i < 24; i++) {
+			exploreClipPaths("hep/hep1/hep1-page"+i+".");
+		}
+		
+	}
+
+	private void exploreClipPaths(String root) {
+		File svgFile = new File(AMIFixtures.TEST_AMI_DIR, root+"svg");
+		SVGElement svgElement = SVGElement.readAndCreateSVG(svgFile);
+		List<SVGClipPath> clipPathList = SVGClipPath.extractUsedClipPaths(svgElement);
+		SVGClipPath.detachUnusedClipPathElements(svgElement, clipPathList);
+		List<SVGPath> pathList = SVGPath.extractPaths(svgElement);
+		List<SVGText> textList = SVGText.extractTexts(
+				SVGUtil.getQuerySVGElements(svgElement, "//*[local-name()='text']"));
+		SVGClipPath largestClipPath = SVGClipPath.getLargestClipPath(clipPathList);
+		LOG.debug(largestClipPath);
+		drawContentsByClipPathId(root, svgElement);
+		drawGeometricalContentsOfClipPath(root, svgElement);
+	}
+
+	private void drawContentsByClipPathId(String root, SVGElement svgElement) {
+		Multimap<String, SVGElement> elementsByClipPath = SVGClipPath.getElementsByClipPath(svgElement);
+		for (String clipPathId : elementsByClipPath.keySet()) {
+			SVGG g = new SVGG();
+			List<SVGElement> elements = new ArrayList<SVGElement>(elementsByClipPath.get(clipPathId));
+			for (SVGElement element : elements) {
+				g.appendChild(element.copy());
+			}
+			SVGSVG.wrapAndWriteAsSVG(g, new File("target/"+root+clipPathId+".id.svg"));
+		}
+	}
+
+	private void drawGeometricalContentsOfClipPath(String root, SVGElement svgElement) {
+		Map<String, SVGClipPath> clipPathById = SVGClipPath.getClipPathById(svgElement);
+		List<SVGElement> elements = SVGUtil.getQuerySVGElements(svgElement, "//*");
+		for (String id : clipPathById.keySet()) {
+			SVGG g = new SVGG();
+			SVGClipPath clipPath = clipPathById.get(id);
+			Real2Range bbox = clipPath.getBoundingBox();
+			for (SVGElement element : elements) {
+				if (bbox.includes(element.getBoundingBox())) {
+					g.appendChild(element.copy());
+				}
+			}
+			SVGSVG.wrapAndWriteAsSVG(g, new File("target/"+root+id+".contents.svg"));
+		}
+	}
+	
+	private void extractPoints(File svgFile, File outfile, Real2Range bbox) {
+		SVGElement svgElement = SVGElement.readAndCreateSVG(svgFile);
+		List<SVGClipPath> clipList = SVGClipPath.extractClipPaths(svgElement);
+		List<SVGPath> pathList = SVGPath.extractPaths(svgElement);
+		List<SVGText> textList = SVGText.extractTexts(
+				SVGUtil.getQuerySVGElements(svgElement, "//*[local-name()='text']"));
+		removeElementsOutside(new SVGRect(bbox), pathList, textList);
+		SVGG gg = createSVGObjects(pathList, textList);
+		SVGSVG.wrapAndWriteAsSVG(gg, outfile);
 	}
 	
 	@Test
 	public void testGraph() {
-		File svgFile = new File(AMIFixtures.TEST_AMI_DIR, "hep/33.1.svg");
-		SVGElement svgElement = SVGElement.readAndCreateSVG(svgFile);
+		SVGElement svgElement = SVGElement.readAndCreateSVG(new File(AMIFixtures.TEST_AMI_DIR, "hep/33.1.svg"));
 		List<SVGPath> pathList = SVGPath.extractPaths(svgElement);
 		List<SVGText> textList = SVGText.extractTexts(
 				SVGUtil.getQuerySVGElements(svgElement, "//*[local-name()='text']"));
-		LOG.debug(">>"+textList);
-		Assert.assertEquals("path", 401, pathList.size());
 		SVGG gg = createSVGObjects(pathList, textList);
-		SVGSVG.wrapAndWriteAsSVG(gg, new File("target/hep/points.svg"));
+//		Assert.assertEquals(123, gg.)
+		SVGSVG.wrapAndWriteAsSVG(gg, new File("target/hep/hep0.svg"));
 	}
 
 	@Test
@@ -102,6 +171,8 @@ public class HEPTest {
 		SVGSVG.wrapAndWriteAsSVG(gg, new File("target/hep/points.svg"));
 	}
 
+	// ========================================================
+	
 	private void removeElementsInside(SVGRect box, List<SVGPath> pathList, List<SVGText> textList) {
 		removeElements(box, pathList, true);
 		removeElements(box, textList, true);
@@ -136,7 +207,7 @@ public class HEPTest {
 				pathMLLLZList.add(path);
 			} else {
 				pathOtherList.add(path);
-				LOG.debug(">>"+sig);
+				LOG.trace(">>"+sig);
 			}
 		}
 		List<SVGLine> lineList = makeLines(pathMLList);

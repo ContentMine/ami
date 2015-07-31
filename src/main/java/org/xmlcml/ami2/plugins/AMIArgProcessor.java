@@ -417,13 +417,10 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		return (currentCMDir == null) ? null : currentCMDir.getOrCreateContentProcessor();
 	}
 
-//	public List<? extends Element> getSectionElementList() {
-//		return sectionElementList;
-//	}
-
-//	protected void ensureSectionElements() {
-//		sectionElements = extractSectionElements(currentCMDir);
-//	}
-
+	public void addResultsElement(ResultsElement resultsElement) {
+		if (resultsElement != null) {
+			getOrCreateContentProcessor().addResultsElement(resultsElement);
+		}
+	}
 
 }

@@ -30,6 +30,14 @@ http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&term="Goril
 
 //	http://www.ebi.ac.uk/Tools/dbfetch/dbfetch?db=livelists&id=JN556047&style=raw
 // ERROR 1 Unknown database [livelists].
+	/** lookup Genbank/ENAIds.
+	 * 
+	 * seems to work at EBI. retrieves whole entry
+	 * 
+	 * @param genbankId
+	 * @return
+	 * @throws IOException
+	 */
 	public String lookupGenbankIds(List<String> genbankId) throws IOException {
 		StringBuilder sb = new StringBuilder();
 		sb.append("http://www.ebi.ac.uk/Tools/dbfetch/dbfetch?id=");

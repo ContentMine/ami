@@ -12,9 +12,10 @@ import java.util.regex.Pattern;
 
 import javax.imageio.ImageIO;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.vafer.jdeb.shaded.compress.io.FilenameUtils;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlElement;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlFactory;
@@ -23,6 +24,7 @@ import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNode;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlTree;
 import org.xmlcml.cmine.args.ArgumentOption;
 import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.diagrams.DiagramTree;
 import org.xmlcml.diagrams.phylo.PhyloTreePixelAnalyzer;
 import org.xmlcml.euclid.Real2;
@@ -48,6 +50,7 @@ import org.xmlcml.xml.XMLUtil;
 public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	
 
+	private static final String TREES = "trees";
 	private static final String HOCR_SVG_SUFFIX = ".pbm.png.hocr.svg";
 	public static final Logger LOG = Logger.getLogger(PhyloTreeArgProcessor.class);
 	static {
@@ -57,7 +60,8 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	private static Real2Range DEFAULT_HOCR_WORD_JOINING_BOX = new Real2Range(new RealRange(0.0, 20.0), new RealRange(-5.0, 5.0));
 	private static final String HOCR_SUFFIX = ".pbm.png.hocr";
 	private static final String HOCR_HTML_SUFFIX = ".pbm.png.hocr.html";
-	private static final int DEFAULT_RETRIES_FOR_TESSERACT_EXIT = 30;
+	private static final int DEFAULT_RETRIES_FOR_TESSERACT_EXIT = 60;
+	private static final String PNG = ".png";
 
 	private SVGXTree svgxTree;
 	private HOCRReader hocrReader;
@@ -87,8 +91,8 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	// =============== METHODS ==============
 
 	public void runPhylo(ArgumentOption option) {
-		for (String tree : inputList) {
-			File inputFile = new File(currentCMDir.getDirectory(), tree);
+		for (String input : inputList) {
+			File inputFile = new File(currentCMDir.getDirectory(), input);
 			createTree(inputFile);
 		}
 	}
@@ -98,7 +102,8 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	}
 
 
-	public void outputResultElements(ArgumentOption option) {
+	public void outputResultsElement(ArgumentOption option) {
+		ResultsElement resultsElement = new ResultsElement(TREES);
 		LOG.debug("outputResultElement NYI "+output+"; need to add tree");
 	}
 	
@@ -120,9 +125,14 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 				outputFile.getParentFile().mkdirs();
 				XMLUtil.debug(svgxTree, new FileOutputStream(outputFile), 1);
 			}
+			PhyloResultsElement resultsElement = new PhyloResultsElement(getTitle());
 		} catch (Exception e) {
 			throw new RuntimeException("Cannot read/interpret tree: "+inputFile, e);
 		}
+	}
+
+	private String getTitle() {
+		return "dummyTitle";
 	}
 
 	public void createNexmlAndTreeFromSVG(File svgInputFile) {
@@ -389,6 +399,43 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 
 	public void setMaxPhraseLength(int maxPhraseLength) {
 		this.maxPhraseLength = maxPhraseLength;
+	}
+
+	public static void convertPngToHTML_SVG_NEXML_NWK(File infile, File outdir) 
+			throws IOException, InterruptedException, FileNotFoundException {
+		if (infile == null || outdir == null) {
+			throw new RuntimeException("files must not be null");
+		}
+		if (infile.isDirectory()) {
+			List<File> pngFiles = new ArrayList<File>(FileUtils.listFiles(infile, new String[]{"png"}, false));
+			for (File pngFile : pngFiles) {
+				String basename = FilenameUtils.getBaseName(pngFile.getAbsolutePath());
+				File outputSubDir = new File(outdir, basename);
+				outputSubDir.mkdirs();
+				convertPng(pngFile, outputSubDir);
+			}
+		} else {
+			convertPng(infile, outdir);
+		}
+	}
+
+	private static void convertPng(File pngfile, File outdir)
+			throws IOException, InterruptedException, FileNotFoundException {
+		String name = pngfile.getName();
+		String root = name.substring(0, name.length() - PNG.length());
+		org.apache.commons.io.FileUtils.copyFile(pngfile, new File(outdir, root+PNG));
+		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
+		phyloTreeArgProcessor.setOutputRoot(root);
+		phyloTreeArgProcessor.setOutputDir(outdir);
+		if (phyloTreeArgProcessor.mergeOCRAndPixelTree(pngfile)) {
+			NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
+			outdir.mkdirs();
+			XMLUtil.debug(nexml, new FileOutputStream(new File(outdir, root+".nexml.xml")), 1);
+			FileUtils.write(new File(outdir, root+".nwk"), nexml.createNewick());
+			XMLUtil.debug(nexml.createSVG(), new FileOutputStream(new File(outdir, root+".svg")), 1);
+			HOCRReader hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
+			SVGSVG.wrapAndWriteAsSVG(hocrReader.getOrCreateSVG(), new File(outdir, root+".words.svg"));
+		}
 	}
 	
 
