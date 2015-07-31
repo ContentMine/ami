@@ -30,7 +30,7 @@ import org.xmlcml.pdf2svg.PDF2SVGConverter;
 
 import com.google.common.collect.Multimap;
 
-@Ignore("still under development")
+//@Ignore("still under development")
 public class HEPTest {
 	
 	private static final Logger LOG = Logger.getLogger(HEPTest.class);
