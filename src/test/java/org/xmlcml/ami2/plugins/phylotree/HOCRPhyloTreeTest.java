@@ -43,8 +43,6 @@ public class HOCRPhyloTreeTest {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	// make this true for running on Jenkins
-	private static boolean cannotRunTesseract = false;
 	
 	public final static File HOCR_364_HTML = new File(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000364_0/image/003.pbm.png.hocr.html");
 	private final static File PHYLOTREE_364_NEXML = new File(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000364_0/image/003.pbm.png.phylotree.nexml");
