@@ -23,7 +23,7 @@ import org.xmlcml.graphics.svg.SVGSVG;
 import org.xmlcml.norma.image.ocr.HOCRReader;
 import org.xmlcml.xml.XMLUtil;
 
-@Ignore("problematic in Jenkins; uncomment for testing")
+//@Ignore("problematic in Jenkins; uncomment for testing")
 public class MergeTipTest {
 
 	private static final String PNG = ".png";
@@ -78,21 +78,26 @@ public class MergeTipTest {
 	public void testConvertLabelsAndTreeAndMerge() throws Exception {
 		
 		for (String root : ROOTS) {
-			LOG.debug(root);
-			File infile = new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree/"+root+PBM_PNG);
-			org.apache.commons.io.FileUtils.copyFile(infile, new File(X15GOODTREE+root+PNG));
-			PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
-			phyloTreeArgProcessor.setSpeciesPattern(IJSEM);
-			phyloTreeArgProcessor.setOutputRoot(root);
-			phyloTreeArgProcessor.setOutputDir(new File("target/phylo/combined/15goodtree/"));
-			if (!phyloTreeArgProcessor.mergeOCRAndPixelTree(infile)) continue; // tesseract failure
-			NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
-			new File(X15GOODTREE).mkdirs();
-			XMLUtil.debug(nexml, new FileOutputStream(X15GOODTREE+root+".nexml.xml"), 1);
-			FileUtils.write(new File(X15GOODTREE+root+".nwk"), nexml.createNewick());
-			XMLUtil.debug(nexml.createSVG(), new FileOutputStream(X15GOODTREE+root+".svg"), 1);
-			HOCRReader hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
-			SVGSVG.wrapAndWriteAsSVG(hocrReader.getOrCreateSVG(), new File(X15GOODTREE+root+".words.svg"));
+			try {
+				LOG.debug(root);
+				File infile = new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree/"+root+PBM_PNG);
+				org.apache.commons.io.FileUtils.copyFile(infile, new File(X15GOODTREE+root+PNG));
+				PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
+				phyloTreeArgProcessor.setSpeciesPattern(IJSEM);
+				phyloTreeArgProcessor.setOutputRoot(root);
+				phyloTreeArgProcessor.setOutputDir(new File("target/phylo/combined/15goodtree/"));
+				if (!phyloTreeArgProcessor.mergeOCRAndPixelTree(infile)) continue; // tesseract failure
+				NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
+				new File(X15GOODTREE).mkdirs();
+				XMLUtil.debug(nexml, new FileOutputStream(X15GOODTREE+root+".nexml.xml"), 1);
+				FileUtils.write(new File(X15GOODTREE+root+".nwk"), nexml.createNewick());
+				XMLUtil.debug(nexml.createSVG(), new FileOutputStream(X15GOODTREE+root+".svg"), 1);
+				HOCRReader hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
+				SVGSVG.wrapAndWriteAsSVG(hocrReader.getOrCreateSVG(), new File(X15GOODTREE+root+".words.svg"));
+			} catch (Exception e) {
+				LOG.debug("error in conversion");
+				e.printStackTrace();
+			}
 			
 		}
 	}
@@ -129,7 +134,8 @@ public class MergeTipTest {
 	}
 	
 	@Test
-//	@Ignore("uses tesseract") // change debug to trace for committal
+	@Ignore("uses tesseract") // change debug to trace for committal
+	// FIXME deal with spaces in IDs
 	public void testLookup() throws IOException, InterruptedException {
 		File imageFile = new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree/ijs.0.000364-0-004.pbm.png");
 		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
@@ -157,7 +163,34 @@ public class MergeTipTest {
 	public void testCommandLine() {
 		
 	}
-	
+
+	@Test
+	public void testProblem2() throws Exception {
+		testProblem0("ijs.0.65219-0-002");
+	}
+
+	private void testProblem0(String root) throws IOException, InterruptedException {
+		File imageFile = new File(AMIFixtures.TEST_PHYLO_DIR, "problems/"+root+".pbm.png");
+		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
+		if (phyloTreeArgProcessor.mergeOCRAndPixelTree(imageFile)) {
+			NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
+			File problemDir = new File("target/phylo/problems/");
+			problemDir.mkdirs();
+			XMLUtil.debug(nexml, new File(problemDir, root+".xml"), 1);
+		} else {
+			LOG.error("failed to create tree");
+		}
+	}
+
+	@Test
+	public void testProblem() throws Exception {
+		File imageFile = new File(AMIFixtures.TEST_PHYLO_DIR, "problems/ijs.0.65219-0-001.pbm.png");
+		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
+		if (phyloTreeArgProcessor.mergeOCRAndPixelTree(imageFile)) {
+			NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
+			XMLUtil.debug(nexml, new File("target/phylo/ijs.0.65219-0-001.xml"), 1);
+		}
+	}
 
 	// =========================================
 	private boolean readAndCombineTopsAndLabels(String root, File outputDir) throws IOException,

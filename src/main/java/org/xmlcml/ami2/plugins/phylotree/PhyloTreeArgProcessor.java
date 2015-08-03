@@ -147,6 +147,9 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 			BufferedImage image = ImageIO.read(inputImageFile);
 			phyloTreePixelAnalyzer = createAndConfigurePixelAnalyzer(image);
 			diagramTree = phyloTreePixelAnalyzer.processImageIntoGraphsAndTree();
+			if (diagramTree == null) {
+				return null;
+			}
 			PixelNode rootPixelNode = diagramTree.getRootPixelNode();
 			PixelGraph graph = diagramTree.getGraph();
 			// use root node later...
@@ -306,9 +309,13 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	 * @param nexml modified by the process
 	 */
 	public void mergeOCRAndPixelTree(HOCRReader hocrReader, NexmlNEXML nexml) {
-		NexmlTree nexmlTree = nexml.getSingleTree();
-		List<SVGPhrase> unusedPhraseList = new ArrayList<SVGPhrase>(hocrReader.getOrCreatePhraseList());
-		this.matchPhrasesToNodes(unusedPhraseList, nexmlTree);
+		if (nexml == null) {
+			LOG.error("Cannot create tree");
+		} else {
+			NexmlTree nexmlTree = nexml.getSingleTree();
+			List<SVGPhrase> unusedPhraseList = new ArrayList<SVGPhrase>(hocrReader.getOrCreatePhraseList());
+			this.matchPhrasesToNodes(unusedPhraseList, nexmlTree);
+		}
 	}
 
 	private HOCRReader createHOCRReaderAndProcess(File imageFile) throws IOException,
