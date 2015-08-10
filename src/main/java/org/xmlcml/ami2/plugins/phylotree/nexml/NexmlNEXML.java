@@ -1,6 +1,7 @@
 package org.xmlcml.ami2.plugins.phylotree.nexml;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 import nu.xom.Element;
 

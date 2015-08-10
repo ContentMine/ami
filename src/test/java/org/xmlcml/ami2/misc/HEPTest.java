@@ -70,7 +70,7 @@ public class HEPTest {
 	}
 		
 	@Test
-//	@Ignore // too long
+	@Ignore // too long
 // PDF uses zillions (10000) of small pngs to create shaded background ARRGHH.
 	public void testHEP1() throws Exception {
 		File file = new File(AMIFixtures.TEST_AMI_DIR, "hep/hep1/hep1.pdf");
@@ -85,6 +85,8 @@ public class HEPTest {
 		
 	}
 
+	//=========================================
+	
 	private void drawWithoutClipPath(String root) {
 		File svgFile = new File(AMIFixtures.TEST_AMI_DIR, root+"svg");
 		SVGElement svgElement = SVGElement.readAndCreateSVG(svgFile);

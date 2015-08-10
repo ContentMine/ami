@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.imageio.ImageIO;
@@ -23,6 +24,7 @@ import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlElement;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlFactory;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNode;
+import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtu;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlTree;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
@@ -448,8 +450,28 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		if (hocrReader == null) return false;
 		NexmlNEXML nexml = this.createNexmlAndTreeFromPixels(imageFile);
 		mergeOCRAndPixelTree(hocrReader, nexml);
+		if (speciesPattern != null) {
+			checkOTUsAgainstSpeciesPattern(nexml, speciesPattern);
+		}
 		return true;
 	}
+	
+	public void checkOTUsAgainstSpeciesPattern(NexmlNEXML nexml, Pattern speciesPattern) {
+		speciesPattern = Pattern.compile("\\s*\\u2018?([A-Z](?:[a-z]{2,}|[a-z]?\\.))\\s*([a-z]+)\\u2019?\\s+(.*)\\s+\\(([_A-Z0-9]+)\\).*");
+		List<NexmlOtu> nexmlOtuList = nexml.getSingleOtusElement().getNexmlOtuList();
+		LOG.debug(speciesPattern);
+		for (NexmlOtu otu : nexmlOtuList) {
+			String tipLabel = otu.getValue();
+			Matcher matcher = speciesPattern.matcher(tipLabel);
+			if (matcher.matches()) {
+				LOG.debug("["+matcher.group(1)+"_"+matcher.group(2)+"] "+matcher.group(4));
+			} else {
+				LOG.debug("failed match: "+tipLabel);
+			}
+		}
+	}
+
+
 
 	/**
 	 * 

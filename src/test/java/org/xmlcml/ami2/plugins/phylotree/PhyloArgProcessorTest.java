@@ -78,11 +78,11 @@ public class PhyloArgProcessorTest {
 	 */
 //	@Ignore("requires tesseract")
 	public void testFullCommandLine() throws Exception {
-		String name = "ijs_0_000364_0"; String img = "003";
+		String name = "ijs_0_000364_0"; 
+		String img = "003";
 		CMDir cmDir = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
 		File normaTemp = new File("target/phylo/"+name);
 		cmDir.copyTo(normaTemp, true);
-//		String cmd = "--ph.phylo -q target/phylo/"+name+" -i image/"+img+".pbm.png -o target/phylotest/"+name; 
 		String cmd = "--ph.phylo -q target/phylo/"+name+
 				" -i image/"+img+".pbm.png"+
 				" --log"+
