@@ -55,6 +55,16 @@ public class MergeTipTest {
 			"ijs.0.003723-0-000",
 	};
 	
+	private static String[] BAD_ROOTS = {
+		"ijs.0.64938-0-000",
+		"ijs.0.64950-0-000",
+		"ijs.0.64952-0-000",
+		"ijs.0.64969-0-000",
+		"ijs.0.64970-0-001",
+		"ijs.0.64980-0-001",
+		"ijs.0.65003-0-000",
+	};
+	
 	public final static Pattern IJSEM = Pattern.compile(""
 			// probably leading garbage due to lines
 //			+ "(?:([0-9]+[^~]*)~)*"
@@ -101,6 +111,7 @@ public class MergeTipTest {
 			
 		}
 	}
+
 	
 	@Test
 	public void testConvertPngToSemanticFiles() throws Exception {
@@ -117,7 +128,7 @@ public class MergeTipTest {
 	}
 
 	@Test
-	@Ignore
+//	@Ignore
 	public void testSplitPhrases364() throws Exception {
 		String root = "ijs.0.000364-0-004";
 		readAndCombineTopsAndLabels(root, new File("target/phylo/combined/15goodtree/"));
@@ -160,8 +171,21 @@ public class MergeTipTest {
 	}
 	
 	@Test
-	public void testCommandLine() {
-		
+	public void testUnrootedEdge() throws Exception {
+		File inputDir = new File(AMIFixtures.TEST_PHYLO_DIR, "problems1");
+		testProblem00(inputDir, new File("target/phylo/problems1/"), "ijs.0.64938-0-000");
+	}
+
+	@Test
+	public void testUnrootedEdges() {
+		File inputDir = new File(AMIFixtures.TEST_PHYLO_DIR, "problems1");
+		for (String root :BAD_ROOTS) {
+			try {
+				testProblem00(inputDir, new File("target/phylo/problems1/"), root);
+			} catch (Exception e) {
+				LOG.debug("ERROR: "+e);
+			}
+		}
 	}
 
 	@Test
@@ -169,14 +193,22 @@ public class MergeTipTest {
 		testProblem0("ijs.0.65219-0-002");
 	}
 
-	private void testProblem0(String root) throws IOException, InterruptedException {
-		File imageFile = new File(AMIFixtures.TEST_PHYLO_DIR, "problems/"+root+".pbm.png");
+
+	private void testProblem0(String root) throws Exception {
+		File inputDir = new File(AMIFixtures.TEST_PHYLO_DIR, "problems/");
+		File outputDir = new File("target/phylo/problems/");
+		testProblem00(inputDir, outputDir, root);
+	}
+
+	private void testProblem00(File dir, File outputDir, String root) throws Exception {
+		File imageFile = new File(dir, root+".pbm.png");
 		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
 		if (phyloTreeArgProcessor.mergeOCRAndPixelTree(imageFile)) {
 			NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
-			File problemDir = new File("target/phylo/problems/");
-			problemDir.mkdirs();
-			XMLUtil.debug(nexml, new File(problemDir, root+".xml"), 1);
+			outputDir.mkdirs();
+//			FileUtils.write(new File(outputDir, root+".nwk"), nexml.createNewick());
+			XMLUtil.debug(nexml.createSVG(), new File(outputDir, root+".svg"), 1);
+			XMLUtil.debug(nexml, new File(outputDir, root+".xml"), 1);
 		} else {
 			LOG.error("failed to create tree");
 		}

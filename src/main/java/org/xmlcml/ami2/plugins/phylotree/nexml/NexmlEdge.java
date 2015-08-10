@@ -33,6 +33,7 @@ public class NexmlEdge extends NexmlElement {
 	private void addNodes(NexmlNode nexmlNode0, NexmlNode nexmlNode1) {
 		this.node[0] = nexmlNode0;
 		this.node[1] = nexmlNode1;
+		LOG.trace("edge: "+node[0]+"; "+node[1]);
 	}
 
 	public void setTarget(String target) {

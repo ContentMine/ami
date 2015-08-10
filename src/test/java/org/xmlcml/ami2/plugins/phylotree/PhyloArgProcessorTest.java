@@ -54,18 +54,45 @@ public class PhyloArgProcessorTest {
 	}
 
 	@Test
-	/** a few edge ends not joined to nodes, probably due to bad nodes.
+	/** well behaved tree a few edge ends not joined to nodes, probably due to bad nodes.
 	 * 
 	 * @throws Exception
 	 */
 //	@Ignore("requires tesseract")
-	public void testPhyloName() throws Exception {
+	public void testCommandLine() throws Exception {
 		String name = "ijs_0_000364_0"; String img = "003";
 		CMDir cmDir = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
 		File normaTemp = new File("target/phylo/"+name);
 		cmDir.copyTo(normaTemp, true);
 //		String cmd = "--ph.phylo -q target/phylo/"+name+" -i image/"+img+".pbm.png -o target/phylotest/"+name; 
 		String cmd = "--ph.phylo -q target/phylo/"+name+" -i image/"+img+".pbm.png"; 
+		PhyloTreePlugin phyloPlugin = new PhyloTreePlugin(cmd);
+		phyloPlugin.runAndOutput();
+	}
+
+	@Test
+	/** 
+	 * development of new options in ami-phylo
+	 * 
+	 * @throws Exception
+	 */
+//	@Ignore("requires tesseract")
+	public void testFullCommandLine() throws Exception {
+		String name = "ijs_0_000364_0"; String img = "003";
+		CMDir cmDir = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
+		File normaTemp = new File("target/phylo/"+name);
+		cmDir.copyTo(normaTemp, true);
+//		String cmd = "--ph.phylo -q target/phylo/"+name+" -i image/"+img+".pbm.png -o target/phylotest/"+name; 
+		String cmd = "--ph.phylo -q target/phylo/"+name+
+				" -i image/"+img+".pbm.png"+
+				" --log"+
+				" --ph.specpattern ijsem.xml"+
+				" --ph.hocr.html image/"+img+".hocr.html"+
+				" --ph.hocr.svg image/"+img+".hocr.svg"+
+				" --ph.svg image/"+img+".svg"+
+				" --ph.newick image/"+img+".nwk"+
+				" --ph.nexml image/"+img+".nexml.xml"+
+				"";
 		PhyloTreePlugin phyloPlugin = new PhyloTreePlugin(cmd);
 		phyloPlugin.runAndOutput();
 	}

@@ -12,6 +12,8 @@ import java.util.regex.Pattern;
 
 import javax.imageio.ImageIO;
 
+import nu.xom.Document;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
@@ -22,6 +24,7 @@ import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlFactory;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNode;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlTree;
+import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
 import org.xmlcml.cmine.files.CMDir;
 import org.xmlcml.cmine.files.ResultsElement;
@@ -35,6 +38,7 @@ import org.xmlcml.graphics.svg.SVGElement;
 import org.xmlcml.graphics.svg.SVGSVG;
 import org.xmlcml.graphics.svg.linestuff.LineMerger.MergeMethod;
 import org.xmlcml.graphics.svg.text.SVGPhrase;
+import org.xmlcml.html.HtmlElement;
 import org.xmlcml.html.HtmlSpan;
 import org.xmlcml.image.pixel.PixelGraph;
 import org.xmlcml.image.pixel.PixelNode;
@@ -50,6 +54,7 @@ import org.xmlcml.xml.XMLUtil;
 public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	
 
+	private static final String PHYLOTREE_RESOURCE = "/org/xmlcml/ami2/plugins/phylotree/";
 	private static final String TREES = "trees";
 	private static final String HOCR_SVG_SUFFIX = ".pbm.png.hocr.svg";
 	public static final Logger LOG = Logger.getLogger(PhyloTreeArgProcessor.class);
@@ -74,6 +79,11 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	private NexmlNEXML nexml;
 	private Double joiningRadius = 40.0;
 	private int maxPhraseLength = 4;
+	private String nexmlFilename;
+	private String svgFilename;
+	private String hocrSvgFilename;
+	private String hocrHtmlFilename;
+	private String newickFilename;
 
 	public PhyloTreeArgProcessor() {
 		super();
@@ -90,6 +100,40 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 
 	// =============== METHODS ==============
 
+	public void parseNewickFile(ArgumentOption option, ArgIterator argIterator) {
+		newickFilename = argIterator.getString(option);
+		initLog.info("newick file");
+	}
+	
+	public void parseNexmlFile(ArgumentOption option, ArgIterator argIterator) {
+		nexmlFilename = argIterator.getString(option);
+		
+	}
+	
+	public void parseSVGFile(ArgumentOption option, ArgIterator argIterator) {
+		svgFilename = argIterator.getString(option);
+	}
+	
+	public void parseHOCRSVGFile(ArgumentOption option, ArgIterator argIterator) {
+		hocrSvgFilename = argIterator.getString(option);
+	}
+	
+	public void parseHOCRHTMLFile(ArgumentOption option, ArgIterator argIterator) {
+		hocrHtmlFilename = argIterator.getString(option);
+	}
+	
+	public void parseSpeciesPattern(ArgumentOption option, ArgIterator argIterator) {
+		String speciesPatternString = argIterator.getString(option);
+		String resource = PHYLOTREE_RESOURCE+speciesPatternString;
+		LOG.trace("res "+resource);
+		Document doc = XMLUtil.parseQuietlyToDocument( this.getClass().getResourceAsStream(resource));
+		if (doc != null) {
+			String patternString = doc.getRootElement().getValue().trim();
+			speciesPattern = Pattern.compile(patternString);
+			LOG.trace("sp "+speciesPattern);
+		}
+	}
+	
 	public void runPhylo(ArgumentOption option) {
 		for (String input : inputList) {
 			File inputFile = new File(currentCMDir.getDirectory(), input);
@@ -97,10 +141,10 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		}
 	}
 	
-	public void outputMethod(ArgumentOption option) {
-		LOG.error("outputMethod NYI");
+	public void output(ArgumentOption option) {
+		outputResults();
+		outputResultsElement(option);
 	}
-
 
 	public void outputResultsElement(ArgumentOption option) {
 		ResultsElement resultsElement = new ResultsElement(TREES);
@@ -109,12 +153,116 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	
 	// =============================
 
+	private void outputResults() {
+		LOG.debug("cTreeLog: "+cTreeLog);
+		/**
+	private String newickFile;
+	private String nexmlFile;
+	private String svgFile;
+	private String hocrSvgFile;
+	private String hocrHtmlFile;
+	XMLUtil.debug(nexml, new FileOutputStream(X15GOODTREE+root+".nexml.xml"), 1);
+	FileUtils.write(new File(X15GOODTREE+root+".nwk"), nexml.createNewick());
+	XMLUtil.debug(nexml.createSVG(), new FileOutputStream(X15GOODTREE+root+".svg"), 1);
+	HOCRReader hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
+	SVGSVG.wrapAndWriteAsSVG(hocrReader.getOrCreateSVG(), new File(X15GOODTREE+root+".words.svg"));
+
+		 */
+		/**
+		./results/phylotree/<serial>.nwk
+		./results/phylotree/<serial>.nexml
+		./results/phylotree/<serial>.hocr.html
+		./results/phylotree/<serial>.hocr.svg
+		./results/phylotree/<serial>.svg
+		*/
+		File resultsDir = new File(currentCMDir.getDirectory(), "results");
+		File phyloTreeDir = new File(resultsDir, "phylotree");
+		
+		if (nexmlFilename != null && nexml != null) {
+			outputNexml(phyloTreeDir);
+		}
+		if (newickFilename != null && nexml != null) {
+			outputNewick(phyloTreeDir);
+		}
+		if (hocrHtmlFilename != null && nexml != null) {
+			outputHocrHtml(phyloTreeDir);
+		}
+		if (hocrSvgFilename != null && nexml != null) {
+			outputHocrSvg(phyloTreeDir);
+		}
+		if (svgFilename != null && nexml != null) {
+			outputSvg(phyloTreeDir);
+		}
+	}
+
+	private void outputNexml(File phyloTreeDir) {
+		File nexmlFile = new File(phyloTreeDir, getSerial()+".nexml.xml");
+		try {
+			XMLUtil.debug(nexml, nexmlFile, 1);
+			cTreeLog.info("wrote NEXML: "+nexmlFile);
+		} catch (IOException e) {
+			cTreeLog.error("Cannot create nexmlFile: "+nexmlFile+": "+ e);
+		}
+	}
+
+	private void outputNewick(File phyloTreeDir) {
+		File newickFile = new File(phyloTreeDir, getSerial()+".nwk");
+		try {
+			FileUtils.write(newickFile, nexml.createNewick());
+			cTreeLog.info("wrote Newick: "+newickFile);
+		} catch (IOException e) {
+			cTreeLog.error("Cannot create newickFile: "+newickFile+": "+e);
+		}
+	}
+
+	private void outputHocrHtml(File phyloTreeDir) {
+		File hocrHtmlFile = new File(phyloTreeDir, getSerial()+".hocr.html");
+		HOCRReader hocrReader = this.getOrCreateHOCRReader();
+		try {
+			HtmlElement htmlBody = hocrReader.getOrCreateHtmlBody();
+			if (htmlBody != null) {
+				FileUtils.write(hocrHtmlFile, htmlBody.toXML());
+			} else {
+				cTreeLog.error("null HOCR");
+			}
+		} catch (IOException e) {
+			cTreeLog.error("Cannot create hocrHtmlFile: "+hocrHtmlFile+": "+ e);
+		}
+	}
+
+	private void outputHocrSvg(File phyloTreeDir) {
+		File hocrSvgFile = new File(phyloTreeDir, getSerial()+".hocr.svg");
+		HOCRReader hocrReader = this.getOrCreateHOCRReader();
+		cTreeLog.info("wrote HOCSVG: "+hocrSvgFile);
+		SVGElement svg = hocrReader.getOrCreateSVG();
+		if (svg == null) {
+			cTreeLog.error("null svg");
+		} else {
+			SVGSVG.wrapAndWriteAsSVG(svg, hocrSvgFile);
+		}
+	}
+
+	private void outputSvg(File phyloTreeDir) {
+		File svgFile = new File(phyloTreeDir, getSerial()+".svg");
+		cTreeLog.info("wrote HOCSVG: "+svgFile);
+		SVGSVG.wrapAndWriteAsSVG(nexml.createSVG(), svgFile);
+	}
+
+	private String getSerial() {
+		return "001"; // must change
+	}
+
 	private void createTree(File inputFile) {
 		String suffix = FilenameUtils.getExtension(inputFile.toString());
 		svgxTree = null;
 		try {
 			if (CMDir.isImageSuffix(suffix)) {
-				createNexmlAndTreeFromPixels(inputFile);
+				if (this.mergeOCRAndPixelTree(inputFile)) {
+					cTreeLog.info("Analyzed pixels for tree successfully");
+				} else {
+					cTreeLog.warn("failed to analyze pixels for tree successfully");
+				}
+//				createNexmlAndTreeFromPixels(inputFile);
 			} else if (CMDir.isSVG(suffix)) {
 				createNexmlAndTreeFromSVG(inputFile);
 			} else {
@@ -336,6 +484,8 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	}
 
 	/** can check species from HOCR.
+	 * 
+	 * this may need to go elsewhere
 	 * 
 	 * @param svgSvg
 	 * @throws Exception

@@ -97,12 +97,19 @@ public class NexmlFactory {
 		PixelNodeList pixelNodeList = diagramTree.getGraph().getNodeList();
 		if (rootPixelNode == null) {
 			rootPixelNode = diagramTree.getGraph().getRootPixelNode();
+			if (rootPixelNode == null) {
+				LOG.debug("NO ROOT NODE");
+			}
 		}
 		addNodes(nexmlTree, pixelNodeList, rootPixelNode);
 		PixelEdgeList pixelEdgeList = diagramTree.getGraph().getEdgeList();
 		addEdges(nexmlTree, pixelEdgeList);
 		addEdgesToNodes();
-		addChildrenAndDirectionality(rootNexmlNode);
+		if (rootNexmlNode == null) {
+			LOG.debug("NULL ROOT NODE");
+		} else {
+			addChildrenAndDirectionality(rootNexmlNode);
+		}
 		return nexmlTree;
 	}
 
@@ -139,10 +146,12 @@ public class NexmlFactory {
 				Int2 xy0 = rootPixelNode.getInt2();
 				Int2 xy1 = pixelNode.getInt2();
 				LOG.trace("coords "+xy0+"; "+xy1);
-				if (Int2.isEqual(xy0, xy1)) {
+				if (Int2.isEqual(xy0, xy1) || kludgeRoot()) {
 					nexmlNode.setRoot(TRUE);
-					LOG.trace("ROOT TRUE "+nexmlNode);
+					LOG.debug("ROOT TRUE "+nexmlNode);
 					this.rootNexmlNode = nexmlNode;
+				} else {
+					LOG.trace("failed to create ROOT: "+xy0+"//"+xy1);
 				}
 			}
 		}
@@ -150,8 +159,20 @@ public class NexmlFactory {
 //		pixelNodeList.sort();
 	}
 
+	// this seems to work partially but we can't afford the tie to check it
+	private boolean kludgeRoot() {
+//		LOG.debug("KLUDGED TREE ROOT, check");
+//		return true;
+		return false;
+	}
+
 	private void addEdges(NexmlTree nexmlTree, PixelEdgeList pixelEdgeList) {
+		LOG.debug("addEdges");
 		for (PixelEdge pixelEdge : pixelEdgeList) {
+			LOG.trace("edge: "+pixelEdge.toString());
+			if (pixelEdge.getNodes().get(0) == null || pixelEdge.getNodes().get(1) == null) {
+				LOG.debug("null node in edge: "+pixelEdge );
+			}
 			NexmlEdge nexmlEdge = createAndAddNexmlEdge(nexmlTree, pixelEdge);
 			nexmlEdgeList.add(nexmlEdge);
 		}
@@ -168,7 +189,7 @@ public class NexmlFactory {
 
 	private void addChildrenAndDirectionality(NexmlNode parentNexmlNode) {
 		if (parentNexmlNode == null) {
-			LOG.debug("cannot use NULL NexmlNode");
+			LOG.debug("cannot find rootNexmlNode");
 			return;
 		}
 		String parentId = parentNexmlNode.getId();

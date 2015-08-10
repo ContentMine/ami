@@ -68,12 +68,7 @@ public class HEPTest {
 		PDF2SVGConverter converter = new PDF2SVGConverter();
 		converter.openPDFFile(file);
 	}
-	
-	@Test
-	public void testXAxis() {
 		
-	}
-	
 	@Test
 //	@Ignore // too long
 // PDF uses zillions (10000) of small pngs to create shaded background ARRGHH.

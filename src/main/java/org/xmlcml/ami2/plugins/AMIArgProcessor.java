@@ -44,7 +44,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	
 	private static final String AMI = "ami";
 	private static final String ARG_PROCESSOR = "ArgProcessor";
-	public static final String RESULTS = "results";
+//	public static final String RESULTS = "results";
 	protected static String RESOURCE_NAME_TOP = "/org/xmlcml/ami2";
 	protected static String PLUGIN_RESOURCE = RESOURCE_NAME_TOP+"/plugins";
 	private static String ARGS_RESOURCE = PLUGIN_RESOURCE+"/"+"args.xml";
