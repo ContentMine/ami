@@ -58,7 +58,7 @@ public class PhyloArgProcessorTest {
 	 * 
 	 * @throws Exception
 	 */
-//	@Ignore("requires tesseract")
+	@Ignore("requires tesseract") // uncomment later
 	public void testCommandLine() throws Exception {
 		String name = "ijs_0_000364_0"; String img = "003";
 		CMDir cmDir = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
