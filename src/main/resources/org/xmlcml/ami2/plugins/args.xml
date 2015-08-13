@@ -1,4 +1,4 @@
-<argList name="ami" version="0.1.10">
+<argList name="ami" version="0.1.11">
   <!-- 201508 extensive ami-phylo stuff, not yet finished -->
 	<arg name="context" 
 		long="--context"

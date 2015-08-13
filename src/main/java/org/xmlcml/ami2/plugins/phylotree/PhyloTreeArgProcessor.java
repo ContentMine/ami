@@ -55,14 +55,14 @@ import org.xmlcml.xml.XMLUtil;
  */
 public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	
+	private static final Logger LOG = Logger.getLogger(PhyloTreeArgProcessor.class);
+	static {
+		LOG.setLevel(Level.DEBUG);
+	}
 
 	private static final String PHYLOTREE_RESOURCE = "/org/xmlcml/ami2/plugins/phylotree/";
 	private static final String TREES = "trees";
 	private static final String HOCR_SVG_SUFFIX = ".pbm.png.hocr.svg";
-	public static final Logger LOG = Logger.getLogger(PhyloTreeArgProcessor.class);
-	static {
-		LOG.setLevel(Level.DEBUG);
-	}
 
 	private static Real2Range DEFAULT_HOCR_WORD_JOINING_BOX = new Real2Range(new RealRange(0.0, 20.0), new RealRange(-5.0, 5.0));
 	private static final String HOCR_SUFFIX = ".pbm.png.hocr";
@@ -457,7 +457,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	}
 	
 	public void checkOTUsAgainstSpeciesPattern(NexmlNEXML nexml, Pattern speciesPattern) {
-		speciesPattern = Pattern.compile("\\s*\\u2018?([A-Z](?:[a-z]{2,}|[a-z]?\\.))\\s*([a-z]+)\\u2019?\\s+(.*)\\s+\\(([_A-Z0-9]+)\\).*");
+//		speciesPattern = Pattern.compile("\\s*\\u2018?([A-Z](?:[a-z]{2,}|[a-z]?\\.))\\s*([a-z]+)\\u2019?\\s+(.*)\\s+\\(([_A-Z0-9]+)\\).*");
 		List<NexmlOtu> nexmlOtuList = nexml.getSingleOtusElement().getNexmlOtuList();
 		LOG.debug(speciesPattern);
 		for (NexmlOtu otu : nexmlOtuList) {
