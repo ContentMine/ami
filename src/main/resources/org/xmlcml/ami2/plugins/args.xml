@@ -1,5 +1,6 @@
-<argList name="ami" version="0.1.11">
-  <!-- 201508 extensive ami-phylo stuff, not yet finished -->
+<argList name="ami" version="0.1.12">
+  <!-- 20150816 extensive ami-phylo stuff, coupled with revised norma -->
+  <!-- 20150808 extensive ami-phylo stuff, not yet finished -->
 	<arg name="context" 
 		long="--context"
 		args="characterExtent [characterExtent2]"

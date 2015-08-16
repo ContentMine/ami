@@ -1,7 +1,7 @@
 package org.xmlcml.ami2.plugins.phylotree.nexml;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
 
 import nu.xom.Element;
 
@@ -86,6 +86,117 @@ public class NexmlNEXML extends NexmlElement {
 			return svg;
 		}
 		return null;
+	}
+
+	public void addOtus(NexmlOtus otus) {
+		if (this.getSingleOtusElement() == null) {
+			this.appendChild(otus);
+		} else {
+			LOG.debug("already has a otus");
+		}
+	}
+
+	public void addTrees(NexmlTrees trees) {
+		if (this.getTreesElement() == null) {
+			this.appendChild(trees);
+		} else {
+			LOG.error("Cannot add 2 treesElement");
+		}
+	}
+
+	public NexmlNode getNodeById(String id) {
+		List<Element> nodes = XMLUtil.getQueryElements(this, ".//*[local-name()='node' and @id='"+id+"']");
+		return (nodes == null || nodes.size() != 1) ? null : (NexmlNode) nodes.get(0);
+	}
+
+	public void deleteTipAndElideIfParentHasSingletonChild(NexmlNode node) {
+		if (node != null) {
+			NexmlNode parent = node.getParentNexmlNode();
+			deleteTip(node);
+			elideIfHasSingletonChild(parent);
+		}
+	}
+	
+	private void elideIfHasSingletonChild(NexmlNode node) {
+		List<NexmlNode> childNodes = node.getNexmlChildNodes();
+		if (childNodes.size() == 1) {
+			NexmlNode child = childNodes.get(0);
+			NexmlNode parent = node.getParentNexmlNode();
+			if (parent != null) { // not root node
+				NexmlEdge parentEdge = getEdge(parent, node);
+				NexmlEdge childEdge = getEdge(node, child);
+				parentEdge.detach();
+				parent.removeNexmlChild(node);
+				parent.addChildNode(child);
+				child.setParentNexmlNode(parent);
+				childEdge.setSource(parent.getId());
+				node.detach();
+			}
+		}
+	}
+
+
+	private void deleteTip(NexmlNode node) {
+		List<NexmlNode> childNodes = node.getNexmlChildNodes();
+		if (childNodes.size() != 0) {
+			LOG.error("Not a child node: "+node);
+		} else {
+			NexmlNode parent = node.getParentNexmlNode();
+			NexmlEdge edge = this.getEdge(parent, node);
+			edge.detach();
+			parent.removeNexmlChild(node);
+			node.detach();
+		}
+	}
+
+	/** assumes edges have source and target.
+	 * 
+	 * @param parent
+	 * @param node
+	 * @return
+	 */
+	private NexmlEdge getEdge(NexmlNode parent, NexmlNode node) {
+		String sourceId = parent.getId();
+		String targetId = node.getId();
+		List<NexmlEdge> edgeList = this.getNexmlEdgeList();
+		for (NexmlEdge edge : edgeList) {
+			if (sourceId.equals(edge.getSourceId()) && targetId.equals(edge.getTargetId())) {
+				return edge;
+			}
+		}
+		return null;
+	}
+
+	private List<NexmlEdge> getNexmlEdgeList() {
+		List<Element> elements = XMLUtil.getQueryElements(this, ".//*[local-name()='edge']");
+		List<NexmlEdge> edgeList = new ArrayList<NexmlEdge>();
+		for (Element element : elements) {
+			edgeList.add((NexmlEdge)element);
+		}
+		return edgeList;
+	}
+
+	public List<NexmlNode> findTipsWithEmptyOtus() {
+		List<NexmlNode> tips = findOtuRefTips();
+		List<NexmlNode> otuRefsWithEmptyTips = new ArrayList<NexmlNode>();
+		for (NexmlNode node : tips) {
+			NexmlOtu otu = node.getOtuWithXPath();
+			if (otu == null) {
+			} else if (otu.getValue() == null || otu.getValue().trim().length() == 0) {
+				otuRefsWithEmptyTips.add(node);
+			} else {
+			}
+		}
+		return otuRefsWithEmptyTips;
+	}
+
+	private List<NexmlNode> findOtuRefTips() {
+		List<Element> elements = XMLUtil.getQueryElements(this, ".//*[local-name()='node' and @otu]");
+		List<NexmlNode> nexmlNodeList = new ArrayList<NexmlNode>();
+		for (Element element : elements) {
+			nexmlNodeList.add((NexmlNode) element);
+		}
+		return nexmlNodeList;
 	}
 
 

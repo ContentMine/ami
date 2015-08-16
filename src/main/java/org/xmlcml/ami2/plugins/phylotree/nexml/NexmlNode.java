@@ -33,7 +33,6 @@ public class NexmlNode extends NexmlElement {
 	
 	public static int DECIMAL_PLACES = 0;
 	
-//	private List<NexmlEdge> nexmlChildEdges;
 	private List<NexmlNode> childNexmlNodes;
 	List<NexmlEdge> nexmlEdges;
 	private NexmlTree nexmlTree;
@@ -52,6 +51,11 @@ public class NexmlNode extends NexmlElement {
 	public NexmlNode(NexmlTree nexmlTree) {
 		this();
 		this.nexmlTree = nexmlTree;
+	}
+
+	public NexmlNode(String id) {
+		this();
+		this.setId(id);
 	}
 
 	public void setRoot(String bool) {
@@ -88,16 +92,6 @@ public class NexmlNode extends NexmlElement {
 		return getAttributeValue(ROOT) != null;
 	}
 
-//	public void addChildEdge(NexmlEdge childEdge) {
-//		ensureChildEdgesAndNodes();
-//		this.nexmlChildEdges.add(childEdge);
-//		NexmlNode childNode = nexmlTree.getNode(childEdge.getTargetId());
-//		if (childNode != null) {
-//			childNode.setParentNexmlNode(this);
-//			this.addChildNexmlNode(childNode);
-//		}
-//	}
-
 	void addChildNexmlNode(NexmlNode childNode) {
 		ensureChildEdgesAndNodes();
 		childNexmlNodes.add(childNode);
@@ -116,7 +110,6 @@ public class NexmlNode extends NexmlElement {
 	 */
 	private void ensureChildEdgesAndNodes() {
 		if (this.childNexmlNodes == null) {
-//			this.nexmlChildEdges = new ArrayList<NexmlEdge>();
 			this.childNexmlNodes = new ArrayList<NexmlNode>();
 		}
 	}
@@ -187,18 +180,6 @@ public class NexmlNode extends NexmlElement {
 		return parentNexmlNode == null ? null : parentNexmlNode.getId(); 
 	}
 
-//	public List<NexmlNode> createDescendantNodes() {
-//		List<NexmlNode> nodes = new ArrayList<NexmlNode>();
-//		addNodes(this, nodes);
-//		return nodes;
-//	}
-//
-//	public List<NexmlEdge> createDescendantEdges() {
-//		List<NexmlEdge> edges = new ArrayList<NexmlEdge>();
-//		addEdges(this, edges);
-//		return edges;
-//	}
-//
 	private void addNodes(NexmlNode node, List<NexmlNode> nodes) {
 		List<NexmlNode> childNodes = node.getNexmlChildNodes();
 		for (NexmlNode childNode : childNodes) {
@@ -207,27 +188,11 @@ public class NexmlNode extends NexmlElement {
 		}
 	}
 
-//	private void addEdges(NexmlNode node, List<NexmlEdge> edges) {
-//		List<NexmlEdge> childEdges = node.getNexmlChildEdges();
-//		for (NexmlEdge childEdge : childEdges) {
-//			edges.add(childEdge);
-//		}
-//		List<NexmlNode> childNodes = node.getNexmlChildNodes();
-//		for (NexmlNode childNode : childNodes) {
-//			addEdges(childNode, edges);
-//		}
-//	}
-
-	private List<NexmlNode> getNexmlChildNodes() {
+	List<NexmlNode> getNexmlChildNodes() {
 		ensureChildEdgesAndNodes();
 		return childNexmlNodes;
 	}
 	
-//	private List<NexmlEdge> getNexmlChildEdges() {
-//		ensureChildEdgesAndNodes();
-//		return nexmlChildEdges;
-//	}
-
 	public String getRootValue() {
 		return this.getAttributeValue(ROOT);
 	}
@@ -270,6 +235,16 @@ public class NexmlNode extends NexmlElement {
 		return otu;
 	}
 
+	private NexmlOtu getOtuFromOtuRefWithXPath(String otuRef) {
+		NexmlOtu otu = null;
+		if (otuRef != null) {
+			NexmlNEXML nexmlNEXML = this.getNexmlNEXML();
+			NexmlOtus otus = (nexmlNEXML == null) ? null : nexmlNEXML.getSingleOtusElement();
+		    otu = (otus == null) ? null : otus.getOtuByIdWithXPath(otuRef);
+		}
+		return otu;
+	}
+
 	private NexmlNEXML getNexmlNEXML() {
 		ParentNode parent = this.getParent();
 		parent = (parent == null) ? null : parent.getParent();
@@ -278,7 +253,13 @@ public class NexmlNode extends NexmlElement {
 	}
 	
 	public NexmlOtu getOtu() {
-		return getOtuFromOtuRef(this.getOtuRef());
+		String otuRef = this.getOtuRef();
+		return getOtuFromOtuRef(otuRef);
+	}
+	
+	public NexmlOtu getOtuWithXPath() {
+		String otuRef = this.getOtuRef();
+		return getOtuFromOtuRefWithXPath(otuRef);
 	}
 	
 	public SVGG createSVG() {
@@ -317,4 +298,20 @@ public class NexmlNode extends NexmlElement {
 		}
 		return label;
 	}
+
+	public void addSetOtuRef(NexmlOtu otu) {
+		this.setOtuRef(otu.getId());
+	}
+
+	public void removeNexmlChild(NexmlNode node) {
+		List<NexmlNode> nexmlChildNodes = getNexmlChildNodes();
+		if (nexmlChildNodes == null || nexmlChildNodes.size() == 0) {
+			LOG.error(this+" has no child nodes");
+		} else {
+			if (!nexmlChildNodes.remove(node)) {
+				LOG.error(this+" did not have child: "+node);
+			}
+		}
+	}
+
 }

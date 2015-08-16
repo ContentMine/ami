@@ -25,14 +25,35 @@ public class NexmlEdge extends NexmlElement {
 		node = new NexmlNode[2];
 	}
 
-	public NexmlEdge(NexmlTree nexmlTree, NexmlNode nexmlNode0, NexmlNode nexmlNode1) {
+	public NexmlEdge(NexmlNode nexmlNode0, NexmlNode nexmlNode1) {
 		this();
 		addNodes(nexmlNode0, nexmlNode1);
 	}
 
+	/** NOTE this requires node0 to be parent and node1 to be child
+	 * 
+	 * @param id
+	 * @param node0
+	 * @param node1
+	 */
+	public NexmlEdge(String id, NexmlNode node0, NexmlNode node1) {
+		this(node0, node1);
+		this.setId(id);
+		node1.setParentNexmlNode(node0);
+		node0.addChildNode(node1);
+	}
+
+	/**
+	 * 
+	 * @param nexmlNode0 is source
+	 * @param nexmlNode1 is target
+	 */
 	private void addNodes(NexmlNode nexmlNode0, NexmlNode nexmlNode1) {
 		this.node[0] = nexmlNode0;
+		this.setSource(node[0].getId());
 		this.node[1] = nexmlNode1;
+		this.setTarget(node[1].getId());
+		
 		LOG.trace("edge: "+node[0]+"; "+node[1]);
 	}
 
@@ -54,7 +75,7 @@ public class NexmlEdge extends NexmlElement {
 
 	@Override
 	public String toString() {
-		return getSourceId()+"->"+getTargetId();
+		return getSourceId()+"=>"+getTargetId();
 	}
 
 	public NexmlNode getNexmlNode(int i) {

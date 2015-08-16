@@ -1,4 +1,5 @@
-<argList name="phylo">
+<argList name="phylo" version="0.1.1">
+    <!-- major enhancements to tipe editing -->
 	<arg name="phylo" 
 		long="--ph.phylo"
 		args=""

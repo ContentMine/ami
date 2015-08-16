@@ -91,17 +91,22 @@ public class NexmlTree extends NexmlElement {
 			} else {
 				branchNodeSet.add(node);
 			}
-			for (NexmlEdge childEdge : childEdges) {
-				String childId = childEdge.getTargetId();
-				NexmlNode childNode = getNode(childId);
-				childNode.setParentNexmlNode(node);
-				node.addChildNexmlNode(childNode);
-				this.addChildEdges(childNode);
-			}
+			addChildEdges(node, childEdges);
+		}
+	}
+
+	private void addChildEdges(NexmlNode node, List<NexmlEdge> childEdges) {
+		for (NexmlEdge childEdge : childEdges) {
+			String childId = childEdge.getTargetId();
+			NexmlNode childNode = getNode(childId);
+			childNode.setParentNexmlNode(node);
+			node.addChildNexmlNode(childNode);
+			this.addChildEdges(childNode);
 		}
 	}
 
 	NexmlNode getNode(String id) {
+		getNodeListAndMap();
 		return nodeByIdMap.get(id);
 	}
 
@@ -140,30 +145,9 @@ public class NexmlTree extends NexmlElement {
 			this.rootNexmlNode = rootNodes.get(0);
 		} else {
 			LOG.debug("Cannot process multiple roots ");
-//			this.rootNexmlNode = rootNodes.get(0);
-////			rootNodes.remove(rootNode);
-//			for (int i = 1; i < rootNodes.size(); i++) {
-//				NexmlTree newTree = new NexmlTree();
-//				newTree.rootNexmlNode = rootNodes.get(i);
-//				newTree.transferNodeAndDescendants(newTree.rootNexmlNode, nodeList);
-//			}
 		}
 	}
 	
-
-//	private void transferNodeAndDescendants(NexmlNode rootNode,	List<NexmlNode> nodeList) {
-//		this.nodeList = new ArrayList<NexmlNode>();
-//		this.edgeList = new ArrayList<NexmlEdge>();
-//		List<NexmlNode> descendantNodeList = rootNode.createDescendantNodes();
-//		for (NexmlNode node : descendantNodeList) {
-//			this.nodeList.add(node);
-//		}
-//		List<NexmlEdge> descendantEdgeList = rootNode.createDescendantEdges();
-//		for (NexmlEdge edge : descendantEdgeList) {
-//			this.edgeList.add(edge);
-//		}
-//	}
-
 	public String getNewick() {
 		getRootNode();
 		return rootNexmlNode == null ? null : rootNexmlNode.getNewick();
@@ -180,6 +164,10 @@ public class NexmlTree extends NexmlElement {
 			}
 		}
 		return rootNexmlNode;
+	}
+	
+	public void setRootNode(NexmlNode rootNode) {
+		this.rootNexmlNode = rootNode;
 	}
 
 	public List<NexmlNode> getRootList() {
@@ -240,6 +228,25 @@ public class NexmlTree extends NexmlElement {
 			g.appendChild(edge.createSVG());
 		}
 		return g;
+	}
+
+	public void addNode(NexmlNode node) {
+		if (node != null) {
+			String id = node.getId();
+			if (id != null) {
+				if (getNode(id) == null) {
+					this.appendChild(node);
+				} else {
+					LOG.error("Already a node with id: "+id);
+				}
+			}
+		}
+	}
+
+	public void addEdge(NexmlEdge edge12) {
+		getEdgeListAndMaps();
+		this.appendChild(edge12);
+		
 	}
 	
 }

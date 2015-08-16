@@ -14,7 +14,7 @@ import org.xmlcml.image.pixel.PixelEdgeList;
 import org.xmlcml.image.pixel.PixelNode;
 import org.xmlcml.image.pixel.PixelNodeList;
 
-/** creates NexmlTrees.
+/** creates NexmlTrees initially from diagram trees
  * 
  * @author pm286
  *
@@ -39,6 +39,7 @@ public class NexmlFactory {
 	private PixelNode rootPixelNode;
 	private NexmlNode rootNexmlNode;
 	private List<NexmlEdge> nexmlEdgeList;
+	private NexmlTree nexmlTree;
 
 	public NexmlFactory() {
 		pixelNodeToNexmlNodeMap = new HashMap<PixelNode, NexmlNode>();
@@ -90,7 +91,7 @@ public class NexmlFactory {
 	
 	public NexmlTree createAndAddNexmlTree(DiagramTree diagramTree) {
 		getOrCreateNexmlNEXML();
-		NexmlTree nexmlTree = new NexmlTree();
+		nexmlTree = new NexmlTree();
 		nexmlTrees.appendChild(nexmlTree);
 		String treeId = TREE_ID+nexmlTrees.getOrCreateTreeList().size();
 		nexmlTree.setId(treeId);
@@ -101,7 +102,7 @@ public class NexmlFactory {
 				LOG.debug("NO ROOT NODE");
 			}
 		}
-		addNodes(nexmlTree, pixelNodeList, rootPixelNode);
+		addNodes(pixelNodeList, rootPixelNode);
 		PixelEdgeList pixelEdgeList = diagramTree.getGraph().getEdgeList();
 		addEdges(nexmlTree, pixelEdgeList);
 		addEdgesToNodes();
@@ -113,20 +114,20 @@ public class NexmlFactory {
 		return nexmlTree;
 	}
 
-	private void addNodes(NexmlTree nexmlTree, PixelNodeList pixelNodeList,
+	private void addNodes(PixelNodeList pixelNodeList,
 			PixelNode rootNode) {
 		for (PixelNode pixelNode : pixelNodeList) {
 			NexmlNode nexmlNode = null;
 			PixelEdgeList edgeList = pixelNode.getEdges();
 			if (edgeList.size() == 1) {
-				nexmlNode = addTerminalNodeAsOtu(nexmlTree, pixelNode);
+				nexmlNode = addTerminalNodeAsOtu(pixelNode);
 			} else if (edgeList.size() == 2) {
 				LOG.trace("node2 remove me??: "+pixelNode.toString()+"; "+pixelNode.getEdges().size());
 			} else if (edgeList.size() == 3) {
-				nexmlNode = createAndAddNexmlNode(nexmlTree, pixelNode);
+				nexmlNode = createAndAddNexmlNode(pixelNode);
 				LOG.trace("node3: "+pixelNode.toString()+"; "+pixelNode.getEdges().size());
 			} else if (edgeList.size() >= 4) {
-				nexmlNode = createAndAddNexmlNode(nexmlTree, pixelNode);
+				nexmlNode = createAndAddNexmlNode(pixelNode);
 				LOG.trace("node >= 4 connections: "+pixelNode.toString()+"; "+pixelNode.getEdges().size());
 			} else {
 				// ???
@@ -159,7 +160,7 @@ public class NexmlFactory {
 //		pixelNodeList.sort();
 	}
 
-	// this seems to work partially but we can't afford the tie to check it
+	// this seems to work partially but we can't afford the time to check it
 	private boolean kludgeRoot() {
 //		LOG.debug("KLUDGED TREE ROOT, check");
 //		return true;
@@ -180,11 +181,15 @@ public class NexmlFactory {
 	
 	private void addEdgesToNodes() {
 		for (NexmlEdge nexmlEdge : nexmlEdgeList) {
-			NexmlNode node0 = nexmlEdge.getNexmlNode(0);
-			node0.addNexmlEdge(nexmlEdge);
-			NexmlNode node1 = nexmlEdge.getNexmlNode(1);
-			node1.addNexmlEdge(nexmlEdge);
+			addEdgeToEndsNodes(nexmlEdge);
 		}
+	}
+
+	private void addEdgeToEndsNodes(NexmlEdge nexmlEdge) {
+		NexmlNode node0 = nexmlEdge.getNexmlNode(0);
+		node0.addNexmlEdge(nexmlEdge);
+		NexmlNode node1 = nexmlEdge.getNexmlNode(1);
+		node1.addNexmlEdge(nexmlEdge);
 	}
 
 	private void addChildrenAndDirectionality(NexmlNode parentNexmlNode) {
@@ -217,13 +222,13 @@ public class NexmlFactory {
 	private NexmlEdge createAndAddNexmlEdge(NexmlTree nexmlTree, PixelEdge pixelEdge) {
 		NexmlNode nexmlNode0 = pixelNodeToNexmlNodeMap.get(pixelEdge.getNodes().get(0));
 		NexmlNode nexmlNode1 = pixelNodeToNexmlNodeMap.get(pixelEdge.getNodes().get(1));
-		NexmlEdge nexmlEdge = new NexmlEdge(nexmlTree, nexmlNode0, nexmlNode1);
+		NexmlEdge nexmlEdge = new NexmlEdge(nexmlNode0, nexmlNode1);
 		nexmlTree.appendChild(nexmlEdge);
 		return nexmlEdge;
 	}
 
-	private NexmlNode addTerminalNodeAsOtu(NexmlTree nexmlTree, PixelNode pixelNode) {
-		NexmlNode nexmlNode = createAndAddNexmlNode(nexmlTree, pixelNode);
+	private NexmlNode addTerminalNodeAsOtu(PixelNode pixelNode) {
+		NexmlNode nexmlNode = createAndAddNexmlNode(pixelNode);
 		NexmlOtu otu = new NexmlOtu();
 		nexmlOtus.appendChild(otu);
 		String otuId = OTU+nexmlOtus.getChildCount();
@@ -232,7 +237,7 @@ public class NexmlFactory {
 		return nexmlNode;
 	}
 
-	private NexmlNode createAndAddNexmlNode(NexmlTree nexmlTree, PixelNode pixelNode) {
+	private NexmlNode createAndAddNexmlNode(PixelNode pixelNode) {
 		NexmlNode nexmlNode = new NexmlNode(nexmlTree);
 		nexmlTree.appendChild(nexmlNode);
 		String nodeId = "N"+nexmlTree.getId()+"."+nexmlTree.getChildCount();

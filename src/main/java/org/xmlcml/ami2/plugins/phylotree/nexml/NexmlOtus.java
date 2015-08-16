@@ -51,5 +51,18 @@ public class NexmlOtus extends NexmlElement {
 		}
 	}
 
+	public void addOtu(NexmlOtu otu) {
+		if (getOtuById(otu.getId()) == null) {
+			this.appendChild(otu);
+		} else {
+			LOG.error("already has OTU with that id");
+		}
+	}
+
+	public NexmlOtu getOtuByIdWithXPath(String otuRef) {
+		List<Element> elements = XMLUtil.getQueryElements(this, "./*[local-name()='otu' and @id='"+otuRef+"']");
+		return (elements.size() != 1) ? null : (NexmlOtu) elements.get(0);
+	}
+
 	
 }

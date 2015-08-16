@@ -1,6 +1,7 @@
 package org.xmlcml.ami2.plugins.phylotree;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -20,6 +21,8 @@ import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.lookups.ENALookup;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.graphics.svg.SVGSVG;
+import org.xmlcml.norma.editor.EditList;
+import org.xmlcml.norma.editor.SubstitutionEditor;
 import org.xmlcml.norma.image.ocr.HOCRReader;
 import org.xmlcml.xml.XMLUtil;
 
@@ -194,6 +197,9 @@ public class MergeTipTest {
 		testProblem0("ijs.0.65219-0-002");
 	}
 
+	// ===========================
+	
+	
 
 	private void testProblem0(String root) throws Exception {
 		File inputDir = new File(AMIFixtures.TEST_PHYLO_DIR, "problems/");

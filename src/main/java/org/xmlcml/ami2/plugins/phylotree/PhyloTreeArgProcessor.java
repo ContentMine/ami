@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -13,7 +14,8 @@ import java.util.regex.Pattern;
 
 import javax.imageio.ImageIO;
 
-import nu.xom.Document;
+import nu.xom.Attribute;
+import nu.xom.Element;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
@@ -44,6 +46,8 @@ import org.xmlcml.html.HtmlElement;
 import org.xmlcml.html.HtmlSpan;
 import org.xmlcml.image.pixel.PixelGraph;
 import org.xmlcml.image.pixel.PixelNode;
+import org.xmlcml.norma.editor.EditList;
+import org.xmlcml.norma.editor.Extraction;
 import org.xmlcml.norma.image.ocr.HOCRReader;
 import org.xmlcml.norma.image.ocr.ImageToHOCRConverter;
 import org.xmlcml.xml.XMLUtil;
@@ -86,6 +90,8 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	private String hocrSvgFilename;
 	private String hocrHtmlFilename;
 	private String newickFilename;
+//	private Element speciesPatternXML;
+	private InputStream speciesPatternInputStream;
 
 	public PhyloTreeArgProcessor() {
 		super();
@@ -126,14 +132,8 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	
 	public void parseSpeciesPattern(ArgumentOption option, ArgIterator argIterator) {
 		String speciesPatternString = argIterator.getString(option);
-		String resource = PHYLOTREE_RESOURCE+speciesPatternString;
-		LOG.trace("res "+resource);
-		Document doc = XMLUtil.parseQuietlyToDocument( this.getClass().getResourceAsStream(resource));
-		if (doc != null) {
-			String patternString = doc.getRootElement().getValue().trim();
-			speciesPattern = Pattern.compile(patternString);
-			LOG.trace("sp "+speciesPattern);
-		}
+		speciesPatternInputStream = this.getClass().getResourceAsStream(PHYLOTREE_RESOURCE+speciesPatternString);
+//		speciesPatternXML = XMLUtil.parseQuietlyToDocument(speciesPatternInputStream).getRootElement();
 	}
 	
 	public void runPhylo(ArgumentOption option) {
@@ -296,7 +296,9 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		if (inputImageFile != null && inputImageFile.exists()) {
 			BufferedImage image = ImageIO.read(inputImageFile);
 			phyloTreePixelAnalyzer = createAndConfigurePixelAnalyzer(image);
+			LOG.trace("processImageIntoGraphsAndTree started");
 			diagramTree = phyloTreePixelAnalyzer.processImageIntoGraphsAndTree();
+			LOG.trace("processImageIntoGraphsAndTree finished");
 			if (diagramTree == null) {
 				return null;
 			}
@@ -449,24 +451,31 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		hocrReader = createHOCRReaderAndProcess(imageFile);
 		if (hocrReader == null) return false;
 		NexmlNEXML nexml = this.createNexmlAndTreeFromPixels(imageFile);
+		LOG.debug("created nexml");
 		mergeOCRAndPixelTree(hocrReader, nexml);
+		LOG.debug("mergedOCR and tree");
 		if (speciesPattern != null) {
+			LOG.debug("old species pattern: "+speciesPattern);
 			checkOTUsAgainstSpeciesPattern(nexml, speciesPattern);
 		}
 		return true;
 	}
 	
+	/** does this do anything?
+	 * 
+	 * @param nexml
+	 * @param speciesPattern
+	 */
 	public void checkOTUsAgainstSpeciesPattern(NexmlNEXML nexml, Pattern speciesPattern) {
-//		speciesPattern = Pattern.compile("\\s*\\u2018?([A-Z](?:[a-z]{2,}|[a-z]?\\.))\\s*([a-z]+)\\u2019?\\s+(.*)\\s+\\(([_A-Z0-9]+)\\).*");
 		List<NexmlOtu> nexmlOtuList = nexml.getSingleOtusElement().getNexmlOtuList();
-		LOG.debug(speciesPattern);
+		LOG.trace("sp pattern: ["+speciesPattern+"]");
 		for (NexmlOtu otu : nexmlOtuList) {
 			String tipLabel = otu.getValue();
 			Matcher matcher = speciesPattern.matcher(tipLabel);
 			if (matcher.matches()) {
-				LOG.debug("["+matcher.group(1)+"_"+matcher.group(2)+"] "+matcher.group(4));
+				LOG.trace(">"+matcher);
 			} else {
-				LOG.debug("failed match: "+tipLabel);
+				LOG.trace("failed match: "+tipLabel);
 			}
 		}
 	}
@@ -580,6 +589,10 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		this.maxPhraseLength = maxPhraseLength;
 	}
 
+	public InputStream getSpeciesPatternInputStream() {
+		return speciesPatternInputStream;
+	}
+
 	public static void convertPngToHTML_SVG_NEXML_NWK(File infile, File outdir) 
 			throws IOException, InterruptedException, FileNotFoundException {
 		if (infile == null || outdir == null) {
@@ -614,6 +627,19 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 			XMLUtil.debug(nexml.createSVG(), new FileOutputStream(new File(outdir, root+".svg")), 1);
 			HOCRReader hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
 			SVGSVG.wrapAndWriteAsSVG(hocrReader.getOrCreateSVG(), new File(outdir, root+".words.svg"));
+		}
+	}
+
+	public void annotateOtuWithExtractions(NexmlOtu otu, List<Extraction> extractionList) {
+		for (Extraction extraction : extractionList) {
+			otu.addAttribute(new Attribute(PhyloConstants.CM_PHYLO_PREFIX+":"+extraction.getName(), PhyloConstants.CM_PHYLO_NS, extraction.getValue()));
+		}
+	}
+
+	public void annotateOtuWithEditRecord(NexmlOtu otu, EditList editRecord) {
+		if (editRecord.size() > 0) {
+			String edit = editRecord.toString();
+			otu.addAttribute(new Attribute(PhyloConstants.CM_PHYLO_PREFIX+":edit", PhyloConstants.CM_PHYLO_NS, edit));
 		}
 	}
 	

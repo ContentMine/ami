@@ -1,20 +1,22 @@
 package org.xmlcml.ami2.plugins.phylotree;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
-import nu.xom.Builder;
-import nu.xom.Element;
+import nu.xom.Attribute;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.ami2.plugins.phylotree.PhyloTreePlugin;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
+import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtu;
 import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.norma.editor.EditList;
+import org.xmlcml.norma.editor.Extraction;
+import org.xmlcml.norma.editor.SubstitutionEditor;
 
 public class PhyloArgProcessorTest {
 
@@ -97,7 +99,52 @@ public class PhyloArgProcessorTest {
 		phyloPlugin.runAndOutput();
 	}
 
+	@Test
+	public void testEditLabels() throws IOException {
+		String name = "ijs_0_000364_0"; 
+		String img = "003";
+		CMDir cmDir = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
+		File normaTemp = new File("target/phylo/"+name);
+		cmDir.copyTo(normaTemp, true);
+		String cmd = "--ph.phylo -q target/phylo/"+name+
+				" -i image/"+img+".pbm.png"+
+				" --log"+
+				" --ph.specpattern ijsemSpeciesEditor.xml"+
+				" --ph.hocr.html image/"+img+".hocr.html"+
+				" --ph.hocr.svg image/"+img+".hocr.svg"+
+				" --ph.nexml image/"+img+".nexml.xml"+
+				"";
+		PhyloTreePlugin phyloPlugin = new PhyloTreePlugin(cmd);
+		PhyloTreeArgProcessor phyloTreeArgProcessor = (PhyloTreeArgProcessor)phyloPlugin.getArgProcessor();
+		phyloPlugin.runAndOutput();
+		NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
+
+		SubstitutionEditor substitutionEditor = new SubstitutionEditor();
+		substitutionEditor.addEditor(phyloTreeArgProcessor.getSpeciesPatternInputStream());
+		List<NexmlOtu> otuList = nexml.getSingleOtusElement().getNexmlOtuList();
+		nexml.getSingleOtusElement().addNamespaceDeclaration(PhyloConstants.CM_PHYLO_PREFIX, PhyloConstants.CM_PHYLO_NS);
+		for (NexmlOtu otu : otuList) {
+			String value = otu.getValue();
+			String editedValue = substitutionEditor.createEditedValueAndRecord(value);
+			List<Extraction> extractionList = substitutionEditor.getExtractionList();
+			phyloTreeArgProcessor.annotateOtuWithEditRecord(otu, substitutionEditor.getEditRecord());
+			phyloTreeArgProcessor.annotateOtuWithExtractions(otu, extractionList);
+			LOG.debug(">otu>"+otu.toXML());
+//			if (substitutionEditor.validate(extractionList)) {
+			if (substitutionEditor.validate(editedValue)) {
+				EditList editRecord = substitutionEditor.getEditRecord();
+				otu.setEditRecord(editRecord.toString());
+				LOG.debug("validated: "+value+" => "+editedValue+((editRecord == null || editRecord.size() == 0) ? "" :"; "+editRecord));
+			} else {
+				LOG.debug("failed validate: "+editedValue);
+			}
+		}
+		LOG.debug(nexml.getSingleOtusElement().toXML());
+
+	}
+
 	
+
 
 	
 }

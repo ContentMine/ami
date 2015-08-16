@@ -62,5 +62,9 @@ public class NexmlTrees extends NexmlElement {
 		}
 		return g;
 	}
+
+	public void addTree(NexmlTree tree) {
+		this.appendChild(tree);
+	}
 	
 }
