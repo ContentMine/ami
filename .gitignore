@@ -5,4 +5,5 @@
 docs/
 examplesOld/
 examplestemp/
+src/main/resources/org/xmlcml/ami2/plugins/phylotree/taxdump/
 /target/

@@ -60,7 +60,6 @@ public class ScientificNameList {
 			roleSet.add(parts[3]);
 			if (parts[1].contains("virus")) continue;
 			parts[1] = parts[1]+" ";
-			parts[3] = parts[3]+" ";
 			if (SCIENTIFIC_NAME.equals(parts[3])) {
 				Matcher matcher = BINOMIAL.matcher(parts[1]);
 				if (matcher.matches()) {
