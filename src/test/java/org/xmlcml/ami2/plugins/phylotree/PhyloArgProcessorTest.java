@@ -3,18 +3,21 @@ package org.xmlcml.ami2.plugins.phylotree;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.io.InputStream;
 import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
+import org.xmlcml.ami2.lookups.TaxdumpLookup;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtu;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtus;
 import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.misc.CMineUtil;
 import org.xmlcml.norma.editor.EditList;
 import org.xmlcml.norma.editor.Extraction;
 import org.xmlcml.norma.editor.SubstitutionEditor;
@@ -122,33 +125,36 @@ public class PhyloArgProcessorTest {
 		NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
 
 		SubstitutionEditor substitutionEditor = new SubstitutionEditor();
-		substitutionEditor.addEditor(phyloTreeArgProcessor.getSpeciesPatternInputStream());
+		InputStream speciesPatternInputStream = phyloTreeArgProcessor.getSpeciesPatternInputStream();
+		Assert.assertNotNull("input pattern stream",speciesPatternInputStream);
+		substitutionEditor.addEditor(speciesPatternInputStream);
 		NexmlOtus nexmlOtus = nexml.getSingleOtusElement();
-		if (nexmlOtus != null) {
-			List<NexmlOtu> otuList = nexmlOtus.getNexmlOtuList();
-			nexml.getSingleOtusElement().addNamespaceDeclaration(PhyloConstants.CM_PHYLO_PREFIX, PhyloConstants.CM_PHYLO_NS);
-			for (NexmlOtu otu : otuList) {
-				String value = otu.getValue();
-				String editedValue = substitutionEditor.createEditedValueAndRecord(value);
-				List<Extraction> extractionList = substitutionEditor.getExtractionList();
-				phyloTreeArgProcessor.annotateOtuWithEditRecord(otu, substitutionEditor.getEditRecord());
-				phyloTreeArgProcessor.annotateOtuWithExtractions(otu, extractionList);
-				LOG.trace(">otu>"+otu.toXML());
-	//			if (substitutionEditor.validate(extractionList)) {
-				if (substitutionEditor.validate(editedValue)) {
-					EditList editRecord = substitutionEditor.getEditRecord();
-					otu.setEditRecord(editRecord.toString());
-					LOG.debug("validated: "+value+" => "+editedValue+((editRecord == null || editRecord.size() == 0) ? "" :"; "+editRecord));
-				} else {
-					LOG.debug("failed validate: "+editedValue);
-				}
+		List<NexmlOtu> otuList = nexmlOtus.getNexmlOtuList();
+		TaxdumpLookup taxdumpLookup = new TaxdumpLookup();
+		nexml.getSingleOtusElement().addNamespaceDeclaration(PhyloConstants.CM_PHYLO_PREFIX, PhyloConstants.CM_PHYLO_NS);
+		for (NexmlOtu otu : otuList) {
+			String value = otu.getValue();
+			String editedValue = substitutionEditor.createEditedValueAndRecord(value);
+			List<Extraction> extractionList = substitutionEditor.getExtractionList();
+			phyloTreeArgProcessor.annotateOtuWithEditRecord(otu, substitutionEditor.getEditRecord());
+			phyloTreeArgProcessor.annotateOtuWithExtractions(otu, extractionList);
+			LOG.trace(">otu>"+otu.toXML());
+//			if (substitutionEditor.validate(extractionList)) {
+			if (substitutionEditor.validate(editedValue)) {
+				EditList editRecord = substitutionEditor.getEditRecord();
+				otu.setEditRecord(editRecord.toString());
+				LOG.debug("validated: "+value+" => "+editedValue+((editRecord == null || editRecord.size() == 0) ? "" :"; "+editRecord));
+				String genus = otu.getAttributeValue("genus", PhyloConstants.CM_PHYLO_NS);
+				String species = otu.getAttributeValue("species", PhyloConstants.CM_PHYLO_NS);
+				LOG.debug("genus>"+genus+": "+taxdumpLookup.isValidGenus(genus));
+				LOG.debug("binomial>"+genus+" "+species+": "+taxdumpLookup.isValidBinomial(genus, species));
+			} else {
+				LOG.debug("failed validate: "+editedValue);
 			}
-			LOG.trace(nexml.toXML());
-			new File("target/phylo").mkdirs();
-			XMLUtil.debug(nexml, new FileOutputStream("target/phylo/000364.edited.nexml.xml"), 1);
-		} else {
-			throw new RuntimeException("Null nexmlOtus");
 		}
+		LOG.trace(nexml.toXML());
+		new File("target/phylo").mkdirs();
+		XMLUtil.debug(nexml, new FileOutputStream("target/phylo/000364.edited.nexml.xml"), 1);
 
 	}
 
