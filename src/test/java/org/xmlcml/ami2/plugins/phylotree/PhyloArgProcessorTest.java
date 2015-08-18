@@ -1,10 +1,9 @@
 package org.xmlcml.ami2.plugins.phylotree;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
-
-import nu.xom.Attribute;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -17,6 +16,7 @@ import org.xmlcml.cmine.files.CMDir;
 import org.xmlcml.norma.editor.EditList;
 import org.xmlcml.norma.editor.Extraction;
 import org.xmlcml.norma.editor.SubstitutionEditor;
+import org.xmlcml.xml.XMLUtil;
 
 public class PhyloArgProcessorTest {
 
@@ -139,7 +139,9 @@ public class PhyloArgProcessorTest {
 				LOG.debug("failed validate: "+editedValue);
 			}
 		}
-		LOG.debug(nexml.getSingleOtusElement().toXML());
+		LOG.debug(nexml.toXML());
+		new File("target/phylo").mkdirs();
+		XMLUtil.debug(nexml, new FileOutputStream("target/phylo/000364.edited.nexml.xml"), 1);
 
 	}
 

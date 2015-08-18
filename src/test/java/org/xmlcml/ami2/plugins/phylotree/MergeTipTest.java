@@ -20,27 +20,25 @@ import org.vafer.jdeb.shaded.compress.io.FileUtils;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.lookups.ENALookup;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
-import org.xmlcml.graphics.svg.SVGSVG;
 import org.xmlcml.norma.editor.EditList;
 import org.xmlcml.norma.editor.SubstitutionEditor;
-import org.xmlcml.norma.image.ocr.HOCRReader;
 import org.xmlcml.xml.XMLUtil;
 
 //@Ignore("problematic in Jenkins; uncomment for testing")
 public class MergeTipTest {
 
-	private static final String PNG = ".png";
+	static final String PNG = ".png";
 
-	private static final String PBM_PNG = ".pbm.png";
+	static final String PBM_PNG = ".pbm.png";
 
-	private static final String X15GOODTREE = "target/phylo/combined/15goodtree/";
+	static final String X15GOODTREE = "target/phylo/combined/15goodtree/";
 
 	public static final Logger LOG = Logger.getLogger(HOCRPhyloTreeTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	private static String[] ROOTS = {
+	static String[] ROOTS = {
 			"ijs.0.000174-0-000",
 			"ijs.0.000364-0-004",
 			"ijs.0.000406-0-000",
@@ -86,36 +84,6 @@ public class MergeTipTest {
 
 
 
-	@Test
-//	@Ignore("too many")
-	public void testConvertLabelsAndTreeAndMerge() throws Exception {
-		
-		for (String root : ROOTS) {
-			try {
-				LOG.debug(root);
-				File infile = new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree/"+root+PBM_PNG);
-				org.apache.commons.io.FileUtils.copyFile(infile, new File(X15GOODTREE+root+PNG));
-				PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
-				phyloTreeArgProcessor.setSpeciesPattern(IJSEM);
-				phyloTreeArgProcessor.setOutputRoot(root);
-				phyloTreeArgProcessor.setOutputDir(new File("target/phylo/combined/15goodtree/"));
-				if (!phyloTreeArgProcessor.mergeOCRAndPixelTree(infile)) continue; // tesseract failure
-				NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
-				new File(X15GOODTREE).mkdirs();
-				XMLUtil.debug(nexml, new FileOutputStream(X15GOODTREE+root+".nexml.xml"), 1);
-				FileUtils.write(new File(X15GOODTREE+root+".nwk"), nexml.createNewick());
-				XMLUtil.debug(nexml.createSVG(), new FileOutputStream(X15GOODTREE+root+".svg"), 1);
-				HOCRReader hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
-				SVGSVG.wrapAndWriteAsSVG(hocrReader.getOrCreateSVG(), new File(X15GOODTREE+root+".words.svg"));
-			} catch (Exception e) {
-				LOG.debug("error in conversion");
-				e.printStackTrace();
-			}
-			
-		}
-	}
-
-	
 	@Test
 	public void testConvertPngToSemanticFiles() throws Exception {
 		PhyloTreeArgProcessor.convertPngToHTML_SVG_NEXML_NWK(

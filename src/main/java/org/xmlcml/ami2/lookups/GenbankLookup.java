@@ -45,9 +45,21 @@ http://www.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term="+genbank_id
 */
 	
 	public String lookupTaxonomy(String genus) throws IOException {
-//		http://www.ebi.ac.uk/ena/data/view/Taxon:Gorilla&display=xml
-//		URL url = new URL("http://www.ebi.ac.uk/ena/data/view/Taxon:"+genus+"&retmode=xml");
-		URL url = new URL("http://www.ebi.ac.uk/ena/data/view/Taxon:"+genus+"");
+//		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&term="+genus); // fails
+//		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science[journal]+AND+breast+cancer+AND+2008[pdat]"); // works
+//		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science[journal]"); // works
+		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi?term="+genus+"[orgn]"); // works
+		
+		return getResponse(url);
+	}
+
+	public String lookupTaxonomyNucleotide(String genus) throws IOException {
+//		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&term="+genus); // fails
+//		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science[journal]+AND+breast+cancer+AND+2008[pdat]"); // works
+//		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science[journal]"); // works
+//		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi?db=gss&term=mouse[orgn]"); // works
+		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi?db=nucleotide&term="+genus+"[orgn]"); // works
+		
 		return getResponse(url);
 	}
 
@@ -55,8 +67,27 @@ http://www.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term="+genbank_id
 		return null;
 	}
 
-	public String lookupTaxonomy(String genus, String specific) throws IOException {
-		return null;
+	public String lookupTaxonomyWithEsearch(String genus, String specific) throws IOException {
+//		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?term="+genus+"%20"+specific+"&retmode=xml");
+//		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi?term="+genus+"+"+specific+"[orgn]"); 
+		
+//		URL url = new URL("https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?name="+genus+"+"+specific+"&retmode=xml");
+//		URL url = new URL("https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?name="+genus+"+"+specific+"&lvl=1");
+		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=taxonomy&term="+genus+"+"+specific+"&retmode=xml");		
+		return getResponse(url);
+	}
+
+
+	public String lookupTaxonomyInDatabase(String database, String genus) throws IOException {
+//		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?term="+genus+"%20"+specific+"&retmode=xml");
+		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi?db="+database+"&term="+genus); 
+		return getResponse(url);
+	}
+
+	public String lookupTaxonomyInDatabase(String database, String genus, String specific) throws IOException {
+//		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?term="+genus+"%20"+specific+"&retmode=xml");
+		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi?db="+database+"&term="+genus+"+"+specific+"[orgn]"); 
+		return getResponse(url);
 	}
 
 		
