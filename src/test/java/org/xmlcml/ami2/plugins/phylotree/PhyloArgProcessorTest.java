@@ -129,7 +129,7 @@ public class PhyloArgProcessorTest {
 			List<Extraction> extractionList = substitutionEditor.getExtractionList();
 			phyloTreeArgProcessor.annotateOtuWithEditRecord(otu, substitutionEditor.getEditRecord());
 			phyloTreeArgProcessor.annotateOtuWithExtractions(otu, extractionList);
-			LOG.debug(">otu>"+otu.toXML());
+			LOG.trace(">otu>"+otu.toXML());
 //			if (substitutionEditor.validate(extractionList)) {
 			if (substitutionEditor.validate(editedValue)) {
 				EditList editRecord = substitutionEditor.getEditRecord();
@@ -139,7 +139,7 @@ public class PhyloArgProcessorTest {
 				LOG.debug("failed validate: "+editedValue);
 			}
 		}
-		LOG.debug(nexml.toXML());
+		LOG.trace(nexml.toXML());
 		new File("target/phylo").mkdirs();
 		XMLUtil.debug(nexml, new FileOutputStream("target/phylo/000364.edited.nexml.xml"), 1);
 
