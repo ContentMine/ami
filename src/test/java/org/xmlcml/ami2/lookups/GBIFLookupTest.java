@@ -21,7 +21,7 @@ public class GBIFLookupTest {
 	}
 
 	@Test
-//	@Ignore // LOOKUP // comment out if running offline or on Jenkins
+	@Ignore // LOOKUP // comment out if running offline or on Jenkins
 	public void testLookupCommonName() throws Exception {
 		AbstractLookup gbifLookup = new GBIFLookup();
 		String json = gbifLookup.lookup("Blue+whale");
