@@ -30,7 +30,7 @@ public class GBIFLookupTest {
 		IOUtils.write(json, new FileOutputStream("target/gbif/whale.json"));
 		String canonicalName = gbifLookup.getStringForJsonPath(json, CANONICAL_NAME_PATH);
 		// this test seems unstable - sometimes the subspecies is given
-		Assert.assertTrue("name", canonicalName.startsWith("Balaenoptera musculus"), canonicalName);
+		Assert.assertTrue("name", canonicalName.startsWith("Balaenoptera musculus"));
 	}
 	
 
