@@ -106,6 +106,7 @@ public class PhyloArgProcessorTest {
 	}
 
 	@Test
+	@Ignore("tesseract")
 	public void testEditLabels() throws IOException {
 		File dir = AMIFixtures.TEST_PHYLO_DIR;
 		String name = "ijs_0_000364_0"; 
@@ -114,6 +115,7 @@ public class PhyloArgProcessorTest {
 	}
 
 	@Test
+	@Ignore("tesseract")
 	public void testEditLabels1() throws IOException {
 		runExtraction(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000174_0", "000");
 		runExtraction(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000265_0", "000");
