@@ -1,6 +1,7 @@
 package org.xmlcml.ami2.plugins.phylotree;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,11 +14,11 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.lookups.TaxdumpLookup;
+import org.xmlcml.ami2.lookups.TaxdumpLookup.TaxonType;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtu;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtus;
 import org.xmlcml.cmine.files.CMDir;
-import org.xmlcml.cmine.misc.CMineUtil;
 import org.xmlcml.norma.editor.EditList;
 import org.xmlcml.norma.editor.Extraction;
 import org.xmlcml.norma.editor.SubstitutionEditor;
@@ -106,11 +107,26 @@ public class PhyloArgProcessorTest {
 
 	@Test
 	public void testEditLabels() throws IOException {
+		File dir = AMIFixtures.TEST_PHYLO_DIR;
 		String name = "ijs_0_000364_0"; 
-		String img = "003";
-		CMDir cmDir = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
+		runExtraction(dir, name, "003");
+
+	}
+
+	@Test
+	public void testEditLabels1() throws IOException {
+		runExtraction(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000174_0", "000");
+		runExtraction(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000265_0", "000");
+	}
+
+	private void runExtraction(File dir, String name, String img) throws IOException,
+			FileNotFoundException {
+		File cmDirDir = new File(dir, name);
+		Assert.assertTrue("file exists: "+cmDirDir, cmDirDir.exists());
+		CMDir cmDir = new CMDir(cmDirDir);
 		File normaTemp = new File("target/phylo/"+name);
 		cmDir.copyTo(normaTemp, true);
+		Assert.assertTrue("file exists: "+normaTemp, normaTemp.exists());
 		String cmd = "--ph.phylo -q target/phylo/"+name+
 				" -i image/"+img+".pbm.png"+
 				" --log"+
@@ -140,22 +156,52 @@ public class PhyloArgProcessorTest {
 			phyloTreeArgProcessor.annotateOtuWithExtractions(otu, extractionList);
 			LOG.trace(">otu>"+otu.toXML());
 //			if (substitutionEditor.validate(extractionList)) {
-			if (substitutionEditor.validate(editedValue)) {
+			int maxDelta = 4;
+			if (editedValue == null) {
+				LOG.debug("incorrect syntax: "+value);
+			} else if (substitutionEditor.validate(editedValue)) {
 				EditList editRecord = substitutionEditor.getEditRecord();
 				otu.setEditRecord(editRecord.toString());
-				LOG.debug("validated: "+value+" => "+editedValue+((editRecord == null || editRecord.size() == 0) ? "" :"; "+editRecord));
+				LOG.debug("syntax OK: "+value+" => "+editedValue+((editRecord == null || editRecord.size() == 0) ? "" :"; "+editRecord));
 				String genus = otu.getAttributeValue("genus", PhyloConstants.CM_PHYLO_NS);
 				String species = otu.getAttributeValue("species", PhyloConstants.CM_PHYLO_NS);
-				LOG.debug("genus>"+genus+": "+taxdumpLookup.isValidGenus(genus));
-				LOG.debug("binomial>"+genus+" "+species+": "+taxdumpLookup.isValidBinomial(genus, species));
+				boolean changed = false;
+				boolean matched = false;
+				if (taxdumpLookup.isValidBinomial(genus, species)) {
+					LOG.trace("Valid organism: "+genus+" "+species);
+					matched = true;
+				} else if (!taxdumpLookup.isValidGenus(genus)) {
+					LOG.trace("invalid genus, looking for closest match: "+genus);
+					List<String> closestGenusList = taxdumpLookup.getClosest(taxdumpLookup.getGenusSet(), genus, maxDelta);
+					if (closestGenusList.size() > 0) {
+						LOG.trace("Could this be :"+closestGenusList);
+						if (closestGenusList.size() == 1) {
+							genus = closestGenusList.get(0);
+							changed = true;
+						}
+					}
+				}
+				if (!matched) {
+					// optimize later 
+					List<String> speciesList = taxdumpLookup.lookupSpeciesList(genus);
+					List<String> bestSpecies = taxdumpLookup.getClosest(speciesList, species, maxDelta);
+					if (bestSpecies.size() == 1) {
+						species = bestSpecies.get(0);
+						changed = true;
+					}
+				}
+				LOG.trace("genus>"+genus+": "+taxdumpLookup.isValidGenus(genus));
+				LOG.trace("binomial>"+genus+" "+species+": "+taxdumpLookup.isValidBinomial(genus, species));
+				if (changed) {
+					LOG.debug("corrected to: "+TaxdumpLookup.getBinomial(genus, species));
+				}
 			} else {
-				LOG.debug("failed validate: "+editedValue);
+				LOG.debug("bad syntax "+editedValue);
 			}
 		}
 		LOG.trace(nexml.toXML());
 		new File("target/phylo").mkdirs();
 		XMLUtil.debug(nexml, new FileOutputStream("target/phylo/000364.edited.nexml.xml"), 1);
-
 	}
 
 	

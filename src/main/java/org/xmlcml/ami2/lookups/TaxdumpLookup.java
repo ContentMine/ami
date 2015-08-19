@@ -3,6 +3,7 @@ package org.xmlcml.ami2.lookups;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -12,6 +13,8 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.vafer.jdeb.shaded.compress.io.FileUtils;
 import org.xmlcml.cmine.lookup.AbstractLookup;
+
+import blogspot.software_and_algorithms.stern_library.string.DamerauLevenshteinAlgorithm;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
@@ -29,9 +32,15 @@ public class TaxdumpLookup extends AbstractLookup {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	private final static File TAXDUMP = new File("src/main/resources/org/xmlcml/ami2/plugins/phylotree/taxdump");
-	private final static File GENUS = new File(TAXDUMP, "genus.txt");
-	private final static File BINOMIAL = new File(TAXDUMP, "binomial.txt");
+	public enum TaxonType {
+		GENUS,
+		BINOMIAL,
+	}
+	
+	private final static File TAXDUMP_DIR = new File("src/main/resources/org/xmlcml/ami2/plugins/phylotree/taxdump");
+	private final static File GENUS_FILE = new File(TAXDUMP_DIR, "genus.txt");
+	private final static File BINOMIAL_FILE = new File(TAXDUMP_DIR, "binomial.txt");
+	public static final Set<String> GENUS = null;
 	private Set<String> genusSet;
 	private Set<String> binomialSet;
 	private Multimap<String, String> speciesByGenusSet;
@@ -42,8 +51,8 @@ public class TaxdumpLookup extends AbstractLookup {
 	
 	private void setup() {
 		LOG.trace("start setup");
-		genusSet = readSet(GENUS);
-		binomialSet = readSet(BINOMIAL);
+		genusSet = readSet(GENUS_FILE);
+		binomialSet = readSet(BINOMIAL_FILE);
 		createSpeciesForGenusSet(binomialSet);
 		LOG.trace("end setup");
 	}
@@ -88,6 +97,43 @@ public class TaxdumpLookup extends AbstractLookup {
 	// no-op (for compatibility)
 	public String lookup(String key) throws IOException {
 		return null;
+	}
+
+	public List<String> getClosest(Collection<String> existingSet, String target, int maxDelta) {
+		DamerauLevenshteinAlgorithm dl = new DamerauLevenshteinAlgorithm(1, 1, 1, 1);
+		List<String> bestFits = new ArrayList<String>();
+		int lowestD = maxDelta + 1;
+		for (String existing : existingSet) {
+			if (Math.abs(existing.length() - target.length()) <= maxDelta) {
+				int d = dl.execute(existing, target);
+				if (d <= lowestD) {
+					if (d < lowestD) {
+						bestFits = new ArrayList<String>();
+						lowestD = d;
+					}
+					if (!bestFits.contains(existing)) {
+						bestFits.add(existing);
+					}
+				}
+			}
+		}
+		return bestFits;
+	}
+
+	public Set<String> getGenusSet() {
+		return genusSet;
+	}
+
+	public Set<String> getBinomialSet() {
+		return binomialSet;
+	}
+
+	public Multimap<String, String> getSpeciesByGenusSet() {
+		return speciesByGenusSet;
+	}
+
+	public static String getBinomial(String genus, String species) {
+		return genus+" "+species;
 	}
 
 

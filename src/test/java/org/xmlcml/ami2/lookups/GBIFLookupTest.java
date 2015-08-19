@@ -29,7 +29,7 @@ public class GBIFLookupTest {
 		new File("target/gbif/").mkdirs();
 		IOUtils.write(json, new FileOutputStream("target/gbif/whale.json"));
 		String canonicalName = gbifLookup.getStringForJsonPath(json, CANONICAL_NAME_PATH);
-		Assert.assertEquals("name", canonicalName, "Balaenoptera musculus");
+		Assert.assertEquals("name", "Balaenoptera musculus brevicauda", canonicalName);
 	}
 	
 
