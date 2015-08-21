@@ -31,6 +31,7 @@ import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtus;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlTree;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
+import org.xmlcml.cmine.args.log.CMineLog;
 import org.xmlcml.cmine.files.CMDir;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.diagrams.DiagramTree;
@@ -137,9 +138,10 @@ private String speciesPatternString;
 
 	public void parseNewickFile(ArgumentOption option, ArgIterator argIterator) {
 		newickFilename = argIterator.getString(option);
-		initLog.info("newick file");
+		ensureInitLog().info("newick file");
 	}
 	
+
 	public void parseNexmlFile(ArgumentOption option, ArgIterator argIterator) {
 		nexmlFilename = argIterator.getString(option);
 		
@@ -203,7 +205,7 @@ private String speciesPatternString;
 	// =============================
 
 	private void outputResults() {
-		LOG.debug("cTreeLog: "+cTreeLog);
+		LOG.debug("cTreeLog: "+ensureCTreeLog());
 		/**
 	private String newickFile;
 	private String nexmlFile;
@@ -248,9 +250,9 @@ private String speciesPatternString;
 		File nexmlFile = new File(phyloTreeDir, getSerial()+".nexml.xml");
 		try {
 			XMLUtil.debug(nexml, nexmlFile, 1);
-			cTreeLog.info("wrote NEXML: "+nexmlFile);
+			ensureCTreeLog().info("wrote NEXML: "+nexmlFile);
 		} catch (IOException e) {
-			cTreeLog.error("Cannot create nexmlFile: "+nexmlFile+": "+ e);
+			ensureCTreeLog().error("Cannot create nexmlFile: "+nexmlFile+": "+ e);
 		}
 	}
 
@@ -258,9 +260,9 @@ private String speciesPatternString;
 		File newickFile = new File(phyloTreeDir, getSerial()+".nwk");
 		try {
 			FileUtils.write(newickFile, nexml.createNewick());
-			cTreeLog.info("wrote Newick: "+newickFile);
+			ensureCTreeLog().info("wrote Newick: "+newickFile);
 		} catch (IOException e) {
-			cTreeLog.error("Cannot create newickFile: "+newickFile+": "+e);
+			ensureCTreeLog().error("Cannot create newickFile: "+newickFile+": "+e);
 		}
 	}
 
@@ -272,20 +274,20 @@ private String speciesPatternString;
 			if (htmlBody != null) {
 				FileUtils.write(hocrHtmlFile, htmlBody.toXML());
 			} else {
-				cTreeLog.error("null HOCR");
+				ensureCTreeLog().error("null HOCR");
 			}
 		} catch (IOException e) {
-			cTreeLog.error("Cannot create hocrHtmlFile: "+hocrHtmlFile+": "+ e);
+			ensureCTreeLog().error("Cannot create hocrHtmlFile: "+hocrHtmlFile+": "+ e);
 		}
 	}
 
 	private void outputHocrSvg(File phyloTreeDir) {
 		File hocrSvgFile = new File(phyloTreeDir, getSerial()+".hocr.svg");
 		HOCRReader hocrReader = this.getOrCreateHOCRReader();
-		cTreeLog.info("wrote HOCSVG: "+hocrSvgFile);
+		ensureCTreeLog().info("wrote HOCSVG: "+hocrSvgFile);
 		SVGElement svg = hocrReader.getOrCreateSVG();
 		if (svg == null) {
-			cTreeLog.error("null svg");
+			ensureCTreeLog().error("null svg");
 		} else {
 			SVGSVG.wrapAndWriteAsSVG(svg, hocrSvgFile);
 		}
@@ -293,7 +295,7 @@ private String speciesPatternString;
 
 	private void outputSvg(File phyloTreeDir) {
 		File svgFile = new File(phyloTreeDir, getSerial()+".svg");
-		cTreeLog.info("wrote HOCSVG: "+svgFile);
+		ensureCTreeLog().info("wrote HOCSVG: "+svgFile);
 		SVGSVG.wrapAndWriteAsSVG(nexml.createSVG(), svgFile);
 	}
 
@@ -307,9 +309,9 @@ private String speciesPatternString;
 		try {
 			if (CMDir.isImageSuffix(suffix)) {
 				if (this.mergeOCRAndPixelTree(inputFile)) {
-					cTreeLog.info("Analyzed pixels for tree successfully");
+					ensureCTreeLog().info("Analyzed pixels for tree successfully");
 				} else {
-					cTreeLog.warn("failed to analyze pixels for tree successfully");
+					ensureCTreeLog().warn("failed to analyze pixels for tree successfully");
 				}
 //				createNexmlAndTreeFromPixels(inputFile);
 			} else if (CMDir.isSVG(suffix)) {
@@ -754,7 +756,7 @@ private String speciesPatternString;
 	//			if (substitutionEditor.validate(extractionList)) {
 		int maxDelta = 4;
 		if (editedValue == null) {
-			cTreeLog.error(Message.ERR_BAD_SYNTAX.toString());
+			ensureCTreeLog().error(Message.ERR_BAD_SYNTAX.toString());
 		} else if (substitutionEditor.validate(editedValue)) {
 			EditList editRecord = substitutionEditor.getEditRecord();
 			nexmlOtu.setEditRecord(editRecord.toString());
@@ -764,10 +766,10 @@ private String speciesPatternString;
 			boolean changed = false;
 			boolean matched = false;
 			if (taxdumpLookup.isValidBinomial(genus, species)) {
-				cTreeLog.debug("Valid organism: "+genus+" "+species);
+				ensureCTreeLog().debug("Valid organism: "+genus+" "+species);
 				matched = true;
 			} else if (!taxdumpLookup.isValidGenus(genus)) {
-				cTreeLog.warn("invalid genus, looking for closest match: "+genus);
+				ensureCTreeLog().warn("invalid genus, looking for closest match: "+genus);
 				List<String> closestGenusList = taxdumpLookup.getClosest(taxdumpLookup.getGenusSet(), genus, maxDelta);
 				if (closestGenusList.size() > 0) {
 					LOG.trace("Could this be :"+closestGenusList);
@@ -786,10 +788,10 @@ private String speciesPatternString;
 					changed = true;
 				}
 			}
-			cTreeLog.debug("genus>"+genus+": "+taxdumpLookup.isValidGenus(genus));
-			cTreeLog.debug("binomial>"+genus+" "+species+": "+taxdumpLookup.isValidBinomial(genus, species));
+			ensureCTreeLog().debug("genus>"+genus+": "+taxdumpLookup.isValidGenus(genus));
+			ensureCTreeLog().debug("binomial>"+genus+" "+species+": "+taxdumpLookup.isValidBinomial(genus, species));
 			if (changed) {
-				cTreeLog.warn("corrected to: "+TaxdumpLookup.getBinomial(genus, species));
+				ensureCTreeLog().warn("corrected to: "+TaxdumpLookup.getBinomial(genus, species));
 			}
 		} else {
 			LOG.error(Message.ERR_BAD_SYNTAX.toString()+editedValue);
