@@ -21,12 +21,15 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.junit.Assert;
+import org.xmlcml.ami2.lookups.TaxdumpLookup;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlElement;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlFactory;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNode;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtu;
+import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtus;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlTree;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
@@ -48,6 +51,7 @@ import org.xmlcml.image.pixel.PixelGraph;
 import org.xmlcml.image.pixel.PixelNode;
 import org.xmlcml.norma.editor.EditList;
 import org.xmlcml.norma.editor.Extraction;
+import org.xmlcml.norma.editor.SubstitutionEditor;
 import org.xmlcml.norma.image.ocr.HOCRReader;
 import org.xmlcml.norma.image.ocr.ImageToHOCRConverter;
 import org.xmlcml.xml.XMLUtil;
@@ -58,8 +62,31 @@ import org.xmlcml.xml.XMLUtil;
  * @author pm286
  */
 public class PhyloTreeArgProcessor extends AMIArgProcessor {
-	
-	private static final Logger LOG = Logger.getLogger(PhyloTreeArgProcessor.class);
+
+	public enum Message {
+		ERR_BAD_SYNTAX("syntax of the field did not fit regex"),
+		ERR_PHYLO_BAD_INPUT("input does not exist or is not an image"),
+		ERR_PHYLO_NO_COMPLETE("the analysis process fails to terminate"),
+		ERR_PIXEL_TREE_CYCLE("the tree contains a cycle"),
+		WARN_SPECIES_LOOKUP_FAIL("the species cannot be looked up in the online resource"),
+		WARN_EGID_LOOKUP_FAIL("the EGID cannot be looked up in the online resource"),
+		WARN_NEWICK_NULL("there is only null;' in the output newick file"),
+		WARN_EMPTY_TIP_LABEL("empty tip label"),
+		WARN_GARBLED_TIP_LABEL("garbeld tip label"),
+		WARN_MISSING_TIP("tip/s are missing from the tree");
+		
+		private String msg;
+
+		private Message(String msg) {
+			this.msg = msg;
+		}
+		
+		public String getMsg() {
+			return msg;
+		}
+
+	}
+	public static final Logger LOG = Logger.getLogger(PhyloTreeArgProcessor.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -92,18 +119,19 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	private String newickFilename;
 //	private Element speciesPatternXML;
 	private InputStream speciesPatternInputStream;
+public SubstitutionEditor substitutionEditor;
+public TaxdumpLookup taxdumpLookup;
 
 	public PhyloTreeArgProcessor() {
 		super();
 	}
 
 	public PhyloTreeArgProcessor(String[] args) {
-		this();
-		parseArgs(args);
+		super.parseArgs(args);
 	}
 
 	public PhyloTreeArgProcessor(String argString) {
-		this(argString.split(WHITESPACE));
+		super.parseArgs(argString);
 	}
 
 	// =============== METHODS ==============
@@ -136,7 +164,13 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 //		speciesPatternXML = XMLUtil.parseQuietlyToDocument(speciesPatternInputStream).getRootElement();
 	}
 	
+	/** this looks WRONG.
+	 * we shouldn't iterate over input here.
+	 * 
+	 * @param option
+	 */
 	public void runPhylo(ArgumentOption option) {
+		LOG.debug("runPhylo on: "+inputList);
 		for (String input : inputList) {
 			File inputFile = new File(currentCMDir.getDirectory(), input);
 			createTree(inputFile);
@@ -458,6 +492,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 			LOG.debug("old species pattern: "+speciesPattern);
 			checkOTUsAgainstSpeciesPattern(nexml, speciesPattern);
 		}
+		processNexml();
 		return true;
 	}
 	
@@ -636,10 +671,107 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		}
 	}
 
-	public void annotateOtuWithEditRecord(NexmlOtu otu, EditList editRecord) {
-		if (editRecord.size() > 0) {
-			String edit = editRecord.toString();
-			otu.addAttribute(new Attribute(PhyloConstants.CM_PHYLO_PREFIX+":edit", PhyloConstants.CM_PHYLO_NS, edit));
+//	// FIXME
+//	public void processImage() throws IOException {
+//		runAndOutput();
+//		// PUT this *inside* runAndOutput and dependent on args
+//		processNexml();
+//	}
+
+	private void processNexml() throws IOException, FileNotFoundException {
+//		FIXME
+		LOG.debug("processing Nexml");
+		NexmlNEXML nexml = getNexml();
+		ensureSubstitutionEditor();
+		InputStream speciesPatternInputStream = getSpeciesPatternInputStream();
+		substitutionEditor.addEditor(speciesPatternInputStream);
+		NexmlOtus nexmlOtus = nexml.getSingleOtusElement();
+		List<NexmlOtu> otuList = nexmlOtus.getNexmlOtuList();
+		nexml.getSingleOtusElement().addNamespaceDeclaration(PhyloConstants.CM_PHYLO_PREFIX, PhyloConstants.CM_PHYLO_NS);
+		for (NexmlOtu otu : otuList) {
+			processOtu(otu);
+		}
+		LOG.trace(nexml.toXML());
+		String filename = (getInputList().size() == 0) ? null : getInputList().get(0);
+		if (filename != null) {
+			File outputFile = new File("target/phylo", filename+"/");
+			outputFile.mkdirs();
+			XMLUtil.debug(nexml, new FileOutputStream(new File(outputFile, "edited.nexml.xml")), 1);
+		}
+	}
+
+	public TaxdumpLookup ensureTaxdumpLookup() {
+		if (taxdumpLookup == null) {
+			taxdumpLookup = new TaxdumpLookup();
+		}
+		return taxdumpLookup;
+	}
+
+	public void ensureSubstitutionEditor() {
+		if (substitutionEditor == null) {
+			substitutionEditor = new SubstitutionEditor();
+		}
+	}
+
+	public String getSpecies(NexmlOtu otu) {
+		return otu.getAttributeValue("species", PhyloConstants.CM_PHYLO_NS);
+	}
+
+	public String getGenus(NexmlOtu otu) {
+		return otu.getAttributeValue("genus", PhyloConstants.CM_PHYLO_NS);
+	}
+
+	public void processOtu(NexmlOtu nexmlOtu) {
+		ensureTaxdumpLookup();
+		ensureSubstitutionEditor();
+		String value = nexmlOtu.getValue();
+		String editedValue = substitutionEditor.createEditedValueAndRecord(value);
+		List<Extraction> extractionList = substitutionEditor.getExtractionList();
+		nexmlOtu.annotateOtuWithEditRecord(substitutionEditor.getEditRecord());
+		annotateOtuWithExtractions(nexmlOtu, extractionList);
+		LOG.trace(">otu>"+nexmlOtu.toXML());
+	//			if (substitutionEditor.validate(extractionList)) {
+		int maxDelta = 4;
+		if (editedValue == null) {
+			cTreeLog.error(Message.ERR_BAD_SYNTAX.toString());
+		} else if (substitutionEditor.validate(editedValue)) {
+			EditList editRecord = substitutionEditor.getEditRecord();
+			nexmlOtu.setEditRecord(editRecord.toString());
+			LOG.trace("syntax OK: "+value+" => "+editedValue+((editRecord == null || editRecord.size() == 0) ? "" :"; "+editRecord));
+			String genus = getGenus(nexmlOtu);
+			String species = getSpecies(nexmlOtu);
+			boolean changed = false;
+			boolean matched = false;
+			if (taxdumpLookup.isValidBinomial(genus, species)) {
+				cTreeLog.debug("Valid organism: "+genus+" "+species);
+				matched = true;
+			} else if (!taxdumpLookup.isValidGenus(genus)) {
+				cTreeLog.warn("invalid genus, looking for closest match: "+genus);
+				List<String> closestGenusList = taxdumpLookup.getClosest(taxdumpLookup.getGenusSet(), genus, maxDelta);
+				if (closestGenusList.size() > 0) {
+					LOG.trace("Could this be :"+closestGenusList);
+					if (closestGenusList.size() == 1) {
+						genus = closestGenusList.get(0);
+						changed = true;
+					}
+				}
+			}
+			if (!matched) {
+				// optimize later 
+				List<String> speciesList = taxdumpLookup.lookupSpeciesList(genus);
+				List<String> bestSpecies = taxdumpLookup.getClosest(speciesList, species, maxDelta);
+				if (bestSpecies.size() == 1) {
+					species = bestSpecies.get(0);
+					changed = true;
+				}
+			}
+			cTreeLog.debug("genus>"+genus+": "+taxdumpLookup.isValidGenus(genus));
+			cTreeLog.debug("binomial>"+genus+" "+species+": "+taxdumpLookup.isValidBinomial(genus, species));
+			if (changed) {
+				cTreeLog.warn("corrected to: "+TaxdumpLookup.getBinomial(genus, species));
+			}
+		} else {
+			LOG.error(Message.ERR_BAD_SYNTAX.toString()+editedValue);
 		}
 	}
 	

@@ -19,8 +19,8 @@ public class PhyloTreePlugin extends AMIPlugin {
 		LOG.setLevel(Level.DEBUG);
 	}
 
-//	private TreeArgProcessor argProcessor;
 	
+	@Deprecated // 
 	public PhyloTreePlugin(String[] args) {
 		super();
 		this.argProcessor = new PhyloTreeArgProcessor(args);
@@ -31,6 +31,7 @@ public class PhyloTreePlugin extends AMIPlugin {
 		argProcessor.runAndOutput();
 	}
 
+	@Deprecated
 	public PhyloTreePlugin(String args) {
 		super();
 		this.argProcessor = new PhyloTreeArgProcessor(args);

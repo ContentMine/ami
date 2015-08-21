@@ -60,9 +60,8 @@ public class LongRunningTests {
 				" --ph.hocr.svg image/"+name+".hocr.svg"+
 				" --ph.nexml image/"+name+".nexml.xml"+
 				"";
-		PhyloTreePlugin phyloPlugin = new PhyloTreePlugin(cmd);
-		PhyloTreeArgProcessor phyloTreeArgProcessor = (PhyloTreeArgProcessor)phyloPlugin.getArgProcessor();
-		phyloPlugin.runAndOutput();
+		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor(cmd);
+		phyloTreeArgProcessor.runAndOutput();
 		NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
 
 		SubstitutionEditor substitutionEditor = new SubstitutionEditor();
@@ -73,7 +72,7 @@ public class LongRunningTests {
 			String value = otu.getValue();
 			String editedValue = substitutionEditor.createEditedValueAndRecord(value);
 			List<Extraction> extractionList = substitutionEditor.getExtractionList();
-			phyloTreeArgProcessor.annotateOtuWithEditRecord(otu, substitutionEditor.getEditRecord());
+			otu.annotateOtuWithEditRecord(substitutionEditor.getEditRecord());
 			phyloTreeArgProcessor.annotateOtuWithExtractions(otu, extractionList);
 			LOG.trace(">otu>"+otu.toXML());
 //			if (substitutionEditor.validate(extractionList)) {
