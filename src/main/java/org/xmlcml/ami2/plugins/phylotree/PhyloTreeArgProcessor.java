@@ -31,7 +31,7 @@ import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtus;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlTree;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.args.log.CMineLog;
+import org.xmlcml.cmine.args.log.AbstractLogElement.LogLevel;
 import org.xmlcml.cmine.files.CMDir;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.diagrams.DiagramTree;
@@ -694,7 +694,6 @@ private String speciesPatternString;
 //	}
 
 	private void processNexml() throws IOException, FileNotFoundException {
-//		FIXME
 		LOG.debug("processing Nexml");
 		NexmlNEXML nexml = getNexml();
 		if (nexml == null) {
@@ -745,6 +744,8 @@ private String speciesPatternString;
 	}
 
 	public void processOtu(NexmlOtu nexmlOtu) {
+		LogLevel currentLevel = ensureCTreeLog().getCurrentLevel();
+		ensureCTreeLog().setLevel(LogLevel.INFO);
 		ensureTaxdumpLookup();
 		ensureSubstitutionEditor();
 		String value = nexmlOtu.getValue();
@@ -753,10 +754,9 @@ private String speciesPatternString;
 		nexmlOtu.annotateOtuWithEditRecord(substitutionEditor.getEditRecord());
 		annotateOtuWithExtractions(nexmlOtu, extractionList);
 		LOG.trace(">otu>"+nexmlOtu.toXML());
-	//			if (substitutionEditor.validate(extractionList)) {
 		int maxDelta = 4;
 		if (editedValue == null) {
-			ensureCTreeLog().error(Message.ERR_BAD_SYNTAX.toString());
+			ensureCTreeLog().error(""+Message.ERR_BAD_SYNTAX+" ["+value+"]");
 		} else if (substitutionEditor.validate(editedValue)) {
 			EditList editRecord = substitutionEditor.getEditRecord();
 			nexmlOtu.setEditRecord(editRecord.toString());
@@ -788,14 +788,15 @@ private String speciesPatternString;
 					changed = true;
 				}
 			}
-			ensureCTreeLog().debug("genus>"+genus+": "+taxdumpLookup.isValidGenus(genus));
-			ensureCTreeLog().debug("binomial>"+genus+" "+species+": "+taxdumpLookup.isValidBinomial(genus, species));
+			ensureCTreeLog().debug("genus: "+genus+": "+taxdumpLookup.isValidGenus(genus));
+			ensureCTreeLog().debug("binomial: "+genus+" "+species+": "+taxdumpLookup.isValidBinomial(genus, species));
 			if (changed) {
 				ensureCTreeLog().warn("corrected to: "+TaxdumpLookup.getBinomial(genus, species));
 			}
 		} else {
-			LOG.error(Message.ERR_BAD_SYNTAX.toString()+editedValue);
+			ensureCTreeLog().error(Message.ERR_BAD_SYNTAX.toString()+editedValue);
 		}
+		ensureCTreeLog().setLevel(currentLevel);
 	}
 
 	public void setSpeciesPatternInputString(String patternString) {
