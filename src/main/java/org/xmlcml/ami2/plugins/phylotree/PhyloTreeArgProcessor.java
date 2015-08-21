@@ -15,13 +15,11 @@ import java.util.regex.Pattern;
 import javax.imageio.ImageIO;
 
 import nu.xom.Attribute;
-import nu.xom.Element;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.junit.Assert;
 import org.xmlcml.ami2.lookups.TaxdumpLookup;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlElement;
