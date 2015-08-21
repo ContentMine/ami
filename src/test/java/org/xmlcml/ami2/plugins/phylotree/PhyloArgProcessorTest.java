@@ -81,7 +81,7 @@ public class PhyloArgProcessorTest {
 		String cmd = "--ph.phylo -q target/phylo/"+name+
 				" -i image/"+img+".pbm.png"+
 				" --log"+
-				" --ph.specpattern ijsem.xml"+
+				" --ph.specpattern ijsemSpeciesEditor.xml"+
 				" --ph.hocr.html image/"+img+".hocr.html"+
 				" --ph.hocr.svg image/"+img+".hocr.svg"+
 				" --ph.svg image/"+img+".svg"+

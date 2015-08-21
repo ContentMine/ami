@@ -16,6 +16,7 @@ import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtu;
+import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.graphics.svg.SVGSVG;
 import org.xmlcml.norma.editor.EditList;
 import org.xmlcml.norma.editor.Extraction;
@@ -32,6 +33,15 @@ public class LongRunningTests {
 	}
 
 	public final static String SUFFIX = ".pbm.png";
+	private static String[] BAD_ROOTS = {
+		"ijs.0.64938-0-000",
+		"ijs.0.64950-0-000",
+		"ijs.0.64952-0-000",
+		"ijs.0.64969-0-000",
+		"ijs.0.64970-0-001",
+		"ijs.0.64980-0-001",
+		"ijs.0.65003-0-000",
+	};
 	@Test
 	public void testImage2Nexml() throws IOException {
 		File phyloDir = new File("src/test/resources/org/xmlcml/ami2/phylo/50images/");
@@ -43,7 +53,17 @@ public class LongRunningTests {
 			name = name.substring(0,  name.length() - SUFFIX.length());
 			runPhyloEditing2Nexml(phyloDir, name);
 		}
-}
+	}
+
+	@Test
+	public void testSpanishRegex() {
+		RegexPlugin regexPlugin = new RegexPlugin("-q "
+				+ "     examples/theses/tesis_alexv6.5"
+				+ " -i scholarly.html --xpath //* --r.regex regex/spanish.xml");
+		regexPlugin.runAndOutput();
+		
+	}
+
 
 	private void runPhyloEditing2Nexml(File phyloDir, String name) throws IOException,
 			FileNotFoundException {
@@ -65,7 +85,7 @@ public class LongRunningTests {
 		NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
 
 		SubstitutionEditor substitutionEditor = new SubstitutionEditor();
-		substitutionEditor.addEditor(phyloTreeArgProcessor.getSpeciesPatternInputStream());
+		substitutionEditor.addEditor(phyloTreeArgProcessor.getOrCreateSpeciesPatternInputStream());
 		List<NexmlOtu> otuList = nexml.getSingleOtusElement().getNexmlOtuList();
 		nexml.getSingleOtusElement().addNamespaceDeclaration(PhyloConstants.CM_PHYLO_PREFIX, PhyloConstants.CM_PHYLO_NS);
 		for (NexmlOtu otu : otuList) {
@@ -117,4 +137,16 @@ public class LongRunningTests {
 				
 			}
 		}
+
+	@Test
+	public void testUnrootedEdges() {
+		File inputDir = new File(AMIFixtures.TEST_PHYLO_DIR, "problems1");
+		for (String root :BAD_ROOTS) {
+			try {
+				MergeTipTest.testProblem00(inputDir, new File("target/phylo/problems1/"), root);
+			} catch (Exception e) {
+				LOG.debug("ERROR: "+e);
+			}
+		}
+	}
 }

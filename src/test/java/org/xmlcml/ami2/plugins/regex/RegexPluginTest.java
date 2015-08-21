@@ -158,15 +158,6 @@ public class RegexPluginTest {
 						"//*[local-name()='result']").size());
 	}
 
-	@Test
-	public void testSpanishRegex() {
-		RegexPlugin regexPlugin = new RegexPlugin("-q "
-				+ "     examples/theses/tesis_alexv6.5"
-				+ " -i scholarly.html --xpath //* --r.regex regex/spanish.xml");
-		regexPlugin.runAndOutput();
-		
-	}
-
 
 	@Test
 	@Ignore // not yet implemented

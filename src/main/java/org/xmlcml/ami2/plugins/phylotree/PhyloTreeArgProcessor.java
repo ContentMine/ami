@@ -119,6 +119,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	private InputStream speciesPatternInputStream;
 public SubstitutionEditor substitutionEditor;
 public TaxdumpLookup taxdumpLookup;
+private String speciesPatternString;
 
 	public PhyloTreeArgProcessor() {
 		super();
@@ -157,9 +158,23 @@ public TaxdumpLookup taxdumpLookup;
 	}
 	
 	public void parseSpeciesPattern(ArgumentOption option, ArgIterator argIterator) {
-		String speciesPatternString = argIterator.getString(option);
-		speciesPatternInputStream = this.getClass().getResourceAsStream(PHYLOTREE_RESOURCE+speciesPatternString);
+		speciesPatternString = argIterator.getString(option);
+		getOrCreateSpeciesPatternInputStream();
 //		speciesPatternXML = XMLUtil.parseQuietlyToDocument(speciesPatternInputStream).getRootElement();
+	}
+
+	InputStream getOrCreateSpeciesPatternInputStream() {
+		if (speciesPatternInputStream == null) {
+			if (speciesPatternString != null) {
+				speciesPatternInputStream = this.getClass().getResourceAsStream(PHYLOTREE_RESOURCE+speciesPatternString);
+				if (speciesPatternInputStream == null) {
+					LOG.warn("Cannot read/create speciesPatternInputStream: "+PHYLOTREE_RESOURCE+speciesPatternString);
+				}
+			} else {
+				LOG.warn("should give speciesPatternString in arguments");
+			}
+		}
+		return speciesPatternInputStream;
 	}
 	
 	/** this looks WRONG.
@@ -622,9 +637,9 @@ public TaxdumpLookup taxdumpLookup;
 		this.maxPhraseLength = maxPhraseLength;
 	}
 
-	public InputStream getSpeciesPatternInputStream() {
-		return speciesPatternInputStream;
-	}
+//	public InputStream getSpeciesPatternInputStream() {
+//		return speciesPatternInputStream;
+//	}
 
 	public static void convertPngToHTML_SVG_NEXML_NWK(File infile, File outdir) 
 			throws IOException, InterruptedException, FileNotFoundException {
@@ -680,8 +695,16 @@ public TaxdumpLookup taxdumpLookup;
 //		FIXME
 		LOG.debug("processing Nexml");
 		NexmlNEXML nexml = getNexml();
+		if (nexml == null) {
+			LOG.warn("null nexml");
+			return;
+		}
 		ensureSubstitutionEditor();
-		InputStream speciesPatternInputStream = getSpeciesPatternInputStream();
+		InputStream speciesPatternInputStream = getOrCreateSpeciesPatternInputStream();
+		if (speciesPatternInputStream == null) {
+			LOG.warn("cannot create speciesPatternInputStream (?missing file)");
+			return;
+		}
 		substitutionEditor.addEditor(speciesPatternInputStream);
 		NexmlOtus nexmlOtus = nexml.getSingleOtusElement();
 		List<NexmlOtu> otuList = nexmlOtus.getNexmlOtuList();
@@ -771,6 +794,10 @@ public TaxdumpLookup taxdumpLookup;
 		} else {
 			LOG.error(Message.ERR_BAD_SYNTAX.toString()+editedValue);
 		}
+	}
+
+	public void setSpeciesPatternInputString(String patternString) {
+		this.speciesPatternString = patternString;
 	}
 	
 

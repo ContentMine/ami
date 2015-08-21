@@ -1,4 +1,5 @@
-<argList name="ami" version="0.1.13">
+<argList name="ami" version="0.1.14">
+  <!-- 20150821 refactoring of nexml processing (not yet finished) -->
   <!-- 20150818 more debugging of ami-phylo; added genbank species files -->
   <!-- 20150816 extensive ami-phylo stuff, coupled with revised norma -->
   <!-- 20150808 extensive ami-phylo stuff, not yet finished -->
