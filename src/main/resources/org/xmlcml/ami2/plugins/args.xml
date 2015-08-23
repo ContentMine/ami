@@ -1,4 +1,5 @@
-<argList name="ami" version="0.1.14">
+<argList name="ami" version="0.1.15">
+  <!_- added and tested tip deletion for corrupted nodes -->
   <!-- 20150821 refactoring of nexml processing (not yet finished) -->
   <!-- 20150818 more debugging of ami-phylo; added genbank species files -->
   <!-- 20150816 extensive ami-phylo stuff, coupled with revised norma -->
