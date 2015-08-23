@@ -131,6 +131,7 @@ public class MergeTipTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testUnrootedEdge() throws Exception {
 		File inputDir = new File(AMIFixtures.TEST_PHYLO_DIR, "problems1");
 		Assert.assertTrue("problems1", inputDir.exists());
