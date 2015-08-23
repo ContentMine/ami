@@ -12,6 +12,8 @@ public class NexmlOtu extends NexmlElement {
 	public final static String TAG = "otu";
 
 	private static final String EDIT_RECORD = "editRecord";
+	private static final String GENUS = "genus";
+	private static final String SPECIES = "species";
 
 	/** constructor.
 	 * 
@@ -34,5 +36,34 @@ public class NexmlOtu extends NexmlElement {
 			String edit = editRecord.toString();
 			addAttribute(new Attribute(PhyloConstants.CM_PHYLO_PREFIX+":edit", PhyloConstants.CM_PHYLO_NS, edit));
 		}
+	}
+	
+	public void setGenus(String value) {
+		setCMPhyloAttribute(GENUS, value);
+	}
+
+	public String getGenus() {
+		return getCMPhyloAttributeValue(GENUS);
+	}
+
+	public void setSpecies(String value) {
+		setCMPhyloAttribute(SPECIES, value);
+	}
+
+	public String getSpecies() {
+		return getCMPhyloAttributeValue(SPECIES);
+	}
+
+	private void setCMPhyloAttribute(String name, String value) {
+		try {
+			addAttribute(new Attribute(PhyloConstants.CM_PHYLO_PREFIX+":"+name, PhyloConstants.CM_PHYLO_NS, value));
+		} catch (Exception e) {
+			LOG.error("BAD attribute name: "+name);
+		}
+	}
+
+	private String getCMPhyloAttributeValue(String name) {
+//		return getAttributeValue(PhyloConstants.CM_PHYLO_PREFIX+":"+name, PhyloConstants.CM_PHYLO_NS);
+		return getAttributeValue(name, PhyloConstants.CM_PHYLO_NS);
 	}
 }

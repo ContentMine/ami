@@ -2,8 +2,10 @@ package org.xmlcml.ami2.plugins.phylotree.nexml;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -40,6 +42,8 @@ public class NexmlFactory {
 	private NexmlNode rootNexmlNode;
 	private List<NexmlEdge> nexmlEdgeList;
 	private NexmlTree nexmlTree;
+	private int recursionCounter;
+	private Set<NexmlEdge> processedEdges;
 
 	public NexmlFactory() {
 		pixelNodeToNexmlNodeMap = new HashMap<PixelNode, NexmlNode>();
@@ -105,13 +109,42 @@ public class NexmlFactory {
 		addNodes(pixelNodeList, rootPixelNode);
 		PixelEdgeList pixelEdgeList = diagramTree.getGraph().getEdgeList();
 		addEdges(nexmlTree, pixelEdgeList);
+		checkEdges();
 		addEdgesToNodes();
 		if (rootNexmlNode == null) {
 			LOG.debug("NULL ROOT NODE");
 		} else {
+			recursionCounter = nexmlEdgeList.size()+50;
+			processedEdges = new HashSet<NexmlEdge>();
 			addChildrenAndDirectionality(rootNexmlNode);
 		}
 		return nexmlTree;
+	}
+
+	private void checkEdges() {
+		Set<String> targetSourceSet = new HashSet<String>();
+		for (int i = 0; i < nexmlEdgeList.size(); i++) {
+			NexmlEdge edge = nexmlEdgeList.get(i);
+			if (edge.getId() == null) {
+				edge.setId("e."+i);
+			}
+			String targetId = edge.getTargetId();
+			String sourceId = edge.getSourceId();
+			int compare = targetId.compareTo(sourceId);
+			if (compare == 0) {
+				throw new RuntimeException("edge target == source");
+			} else if (compare < 0) {
+				targetId = edge.getSourceId();
+				sourceId = edge.getTargetId();
+			}
+			String targetSourceIds = targetId+"=>"+sourceId;
+			LOG.trace("ts "+targetSourceIds);
+			if(targetSourceSet.contains(targetSourceIds)) {
+				throw new RuntimeException("duplicate edge: "+edge);
+			} else {
+				targetSourceSet.add(targetSourceIds);
+			}
+		}
 	}
 
 	private void addNodes(PixelNodeList pixelNodeList,
@@ -168,7 +201,7 @@ public class NexmlFactory {
 	}
 
 	private void addEdges(NexmlTree nexmlTree, PixelEdgeList pixelEdgeList) {
-		LOG.debug("addEdges");
+		LOG.debug("add pixelEdges: "+pixelEdgeList.size());
 		for (PixelEdge pixelEdge : pixelEdgeList) {
 			LOG.trace("edge: "+pixelEdge.toString());
 			if (pixelEdge.getNodes().get(0) == null || pixelEdge.getNodes().get(1) == null) {
@@ -192,33 +225,101 @@ public class NexmlFactory {
 		node1.addNexmlEdge(nexmlEdge);
 	}
 
-	private void addChildrenAndDirectionality(NexmlNode parentNexmlNode) {
+	private void addChildrenAndDirectionality1(NexmlNode parentNexmlNode) {
 		if (parentNexmlNode == null) {
 			LOG.debug("cannot find rootNexmlNode");
 			return;
 		}
 		String parentId = parentNexmlNode.getId();
+		if (parentId == null) {
+			throw new RuntimeException("No id for parentNode");
+		}
+		LOG.debug("parent "+parentId);
+		LOG.debug("edges FIXME "+parentNexmlNode.nexmlEdges.size());
 		for (NexmlEdge nexmlEdge : parentNexmlNode.nexmlEdges) {
 			String edgeSourceId = nexmlEdge.getSourceId();
 			String edgeTargetId = nexmlEdge.getTargetId();
-			if (edgeSourceId != null) {
-				if (parentId != null && parentId.equals(edgeTargetId)) {
-					parentNexmlNode.setParentNexmlNode(idToNexmlNodeMap.get(edgeSourceId));
-				}
+			if (edgeSourceId == null || edgeTargetId == null) {
+				LOG.error("edge with null Ids");
 				continue;
 			}
-			NexmlNode childNexmlNode = nexmlEdge.getOtherNode(parentNexmlNode);
-			if (childNexmlNode == null) {
-				LOG.debug("null node in edge? "+parentNexmlNode);
-			} else {
-				nexmlEdge.setSource(parentId);
-				nexmlEdge.setTarget(childNexmlNode.getId());
-				addChildrenAndDirectionality(childNexmlNode);
+			// wrong directionality
+			if (parentId.equals(edgeSourceId)) {
+				nexmlEdge.setTarget(edgeSourceId);
+				nexmlEdge.setSource(edgeTargetId);
+				edgeTargetId = nexmlEdge.getTargetId();
+				edgeSourceId = nexmlEdge.getSourceId();
 			}
-			parentNexmlNode.addChildNode(childNexmlNode);
+			LOG.debug("edge S "+edgeSourceId+"; T  "+edgeTargetId);
+			if (parentId.equals(edgeTargetId)) {
+				parentNexmlNode.setParentNexmlNode(idToNexmlNodeMap.get(edgeSourceId));
+				NexmlNode childNexmlNode = nexmlEdge.getOtherNode(parentNexmlNode);
+				if (childNexmlNode == null) {
+					LOG.debug("null node in edge? "+parentNexmlNode);
+				} else {
+					nexmlEdge.setSource(parentId);
+					nexmlEdge.setTarget(childNexmlNode.getId());
+					addChildrenAndDirectionality1(childNexmlNode);
+					parentNexmlNode.addChildNode(childNexmlNode);
+				}
+			}
 		}
 	}
 
+	private void addChildrenAndDirectionality(NexmlNode parentNexmlNode) {
+		if (recursionCounter-- <= 0) {
+			throw new RuntimeException("Too much recursion");
+		}
+		LOG.trace("recursionCounter: "+recursionCounter);
+		if (parentNexmlNode == null) {
+			LOG.error("cannot find rootNexmlNode");
+			return;
+		}
+		NexmlNode grandParentNode = parentNexmlNode.getParentNexmlNode();
+		if (grandParentNode != null) {
+			LOG.debug(parentNexmlNode.getId()+" parent already has parent: "+grandParentNode);
+			return;
+		}
+		String parentId = parentNexmlNode.getId();
+		if (parentId == null) {
+			LOG.error("parent has no Id");
+			return;
+		}
+		for (NexmlEdge nexmlEdge : parentNexmlNode.nexmlEdges) {
+			if (processedEdges.contains(nexmlEdge)) {
+				LOG.trace("skipping processed "+nexmlEdge);
+				continue;
+			} else {
+				processedEdges.add(nexmlEdge);
+			}
+			String edgeSourceId = nexmlEdge.getSourceId();
+			String edgeTargetId = nexmlEdge.getTargetId();
+			LOG.trace(edgeSourceId+"=>"+edgeTargetId+": "+nexmlEdge.getId()+" :: "+parentNexmlNode.getId());
+			if (parentId.equals(edgeTargetId)) {
+				grandParentNode = idToNexmlNodeMap.get(edgeSourceId);
+			} else if (parentId.equals(edgeSourceId)) {
+				grandParentNode = idToNexmlNodeMap.get(edgeTargetId);
+				LOG.trace("swapped source/target");
+			} else {
+				throw new RuntimeException("bad edge");
+			}
+			if (grandParentNode == null) {
+				LOG.warn("null grandParent");
+			} else {
+				parentNexmlNode.setParentNexmlNode(grandParentNode);
+				NexmlNode childNexmlNode = nexmlEdge.getOtherNode(parentNexmlNode);
+				if (childNexmlNode != null) {
+					nexmlEdge.setSource(parentId);
+					nexmlEdge.setTarget(childNexmlNode.getId());
+					addChildrenAndDirectionality(childNexmlNode);
+					parentNexmlNode.addChildNode(childNexmlNode);
+					childNexmlNode.setParentNexmlNode(parentNexmlNode);
+				} else {
+					throw new RuntimeException("null child node");
+				}
+			}
+		}
+	}
 	private NexmlEdge createAndAddNexmlEdge(NexmlTree nexmlTree, PixelEdge pixelEdge) {
 		NexmlNode nexmlNode0 = pixelNodeToNexmlNodeMap.get(pixelEdge.getNodes().get(0));
 		NexmlNode nexmlNode1 = pixelNodeToNexmlNodeMap.get(pixelEdge.getNodes().get(1));

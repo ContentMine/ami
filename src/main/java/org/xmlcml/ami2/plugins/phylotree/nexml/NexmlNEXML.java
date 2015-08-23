@@ -112,8 +112,12 @@ public class NexmlNEXML extends NexmlElement {
 	public void deleteTipAndElideIfParentHasSingletonChild(NexmlNode node) {
 		if (node != null) {
 			NexmlNode parent = node.getParentNexmlNode();
-			deleteTip(node);
-			elideIfHasSingletonChild(parent);
+			if (parent != null) {
+				deleteTip(node);
+				elideIfHasSingletonChild(parent);
+			} else {
+				LOG.error("NULL parent node for: "+node.getOtuRef()+"; not deleted");
+			}
 		}
 	}
 	
@@ -142,10 +146,14 @@ public class NexmlNEXML extends NexmlElement {
 			LOG.error("Not a child node: "+node);
 		} else {
 			NexmlNode parent = node.getParentNexmlNode();
-			NexmlEdge edge = this.getEdge(parent, node);
-			edge.detach();
-			parent.removeNexmlChild(node);
-			node.detach();
+			if (parent != null) {
+				NexmlEdge edge = this.getEdge(parent, node);
+				edge.detach();
+				parent.removeNexmlChild(node);
+				node.detach();
+			} else {
+				LOG.error("Null parent");
+			}
 		}
 	}
 

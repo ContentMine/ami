@@ -22,6 +22,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.lookups.TaxdumpLookup;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlEditor;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlElement;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlFactory;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
@@ -118,9 +119,13 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	private String newickFilename;
 //	private Element speciesPatternXML;
 	private InputStream speciesPatternInputStream;
-public SubstitutionEditor substitutionEditor;
-public TaxdumpLookup taxdumpLookup;
-private String speciesPatternString;
+	public SubstitutionEditor substitutionEditor;
+	public TaxdumpLookup taxdumpLookup;
+	private String speciesPatternString;
+	private boolean pruneBadTips = true;
+	private NexmlOtus nexmlOtus;
+	private NexmlTree singleTree;
+	private List<NexmlNode> tipNodeList;
 
 	public PhyloTreeArgProcessor() {
 		super();
@@ -205,7 +210,7 @@ private String speciesPatternString;
 	// =============================
 
 	private void outputResults() {
-		LOG.debug("cTreeLog: "+ensureCTreeLog());
+		LOG.debug("cTreeLog: "+TREE_LOG());
 		/**
 	private String newickFile;
 	private String nexmlFile;
@@ -250,9 +255,9 @@ private String speciesPatternString;
 		File nexmlFile = new File(phyloTreeDir, getSerial()+".nexml.xml");
 		try {
 			XMLUtil.debug(nexml, nexmlFile, 1);
-			ensureCTreeLog().info("wrote NEXML: "+nexmlFile);
+			TREE_LOG().info("wrote NEXML: "+nexmlFile);
 		} catch (IOException e) {
-			ensureCTreeLog().error("Cannot create nexmlFile: "+nexmlFile+": "+ e);
+			TREE_LOG().error("Cannot create nexmlFile: "+nexmlFile+": "+ e);
 		}
 	}
 
@@ -260,9 +265,9 @@ private String speciesPatternString;
 		File newickFile = new File(phyloTreeDir, getSerial()+".nwk");
 		try {
 			FileUtils.write(newickFile, nexml.createNewick());
-			ensureCTreeLog().info("wrote Newick: "+newickFile);
+			TREE_LOG().info("wrote Newick: "+newickFile);
 		} catch (IOException e) {
-			ensureCTreeLog().error("Cannot create newickFile: "+newickFile+": "+e);
+			TREE_LOG().error("Cannot create newickFile: "+newickFile+": "+e);
 		}
 	}
 
@@ -274,20 +279,20 @@ private String speciesPatternString;
 			if (htmlBody != null) {
 				FileUtils.write(hocrHtmlFile, htmlBody.toXML());
 			} else {
-				ensureCTreeLog().error("null HOCR");
+				TREE_LOG().error("null HOCR");
 			}
 		} catch (IOException e) {
-			ensureCTreeLog().error("Cannot create hocrHtmlFile: "+hocrHtmlFile+": "+ e);
+			TREE_LOG().error("Cannot create hocrHtmlFile: "+hocrHtmlFile+": "+ e);
 		}
 	}
 
 	private void outputHocrSvg(File phyloTreeDir) {
 		File hocrSvgFile = new File(phyloTreeDir, getSerial()+".hocr.svg");
 		HOCRReader hocrReader = this.getOrCreateHOCRReader();
-		ensureCTreeLog().info("wrote HOCSVG: "+hocrSvgFile);
+		TREE_LOG().info("wrote HOCSVG: "+hocrSvgFile);
 		SVGElement svg = hocrReader.getOrCreateSVG();
 		if (svg == null) {
-			ensureCTreeLog().error("null svg");
+			TREE_LOG().error("null svg");
 		} else {
 			SVGSVG.wrapAndWriteAsSVG(svg, hocrSvgFile);
 		}
@@ -295,7 +300,7 @@ private String speciesPatternString;
 
 	private void outputSvg(File phyloTreeDir) {
 		File svgFile = new File(phyloTreeDir, getSerial()+".svg");
-		ensureCTreeLog().info("wrote HOCSVG: "+svgFile);
+		TREE_LOG().info("wrote HOCSVG: "+svgFile);
 		SVGSVG.wrapAndWriteAsSVG(nexml.createSVG(), svgFile);
 	}
 
@@ -309,9 +314,9 @@ private String speciesPatternString;
 		try {
 			if (CMDir.isImageSuffix(suffix)) {
 				if (this.mergeOCRAndPixelTree(inputFile)) {
-					ensureCTreeLog().info("Analyzed pixels for tree successfully");
+					TREE_LOG().info("Analyzed pixels for tree successfully");
 				} else {
-					ensureCTreeLog().warn("failed to analyze pixels for tree successfully");
+					TREE_LOG().warn("failed to analyze pixels for tree successfully");
 				}
 //				createNexmlAndTreeFromPixels(inputFile);
 			} else if (CMDir.isSVG(suffix)) {
@@ -500,6 +505,7 @@ private String speciesPatternString;
 		hocrReader = createHOCRReaderAndProcess(imageFile);
 		if (hocrReader == null) return false;
 		NexmlNEXML nexml = this.createNexmlAndTreeFromPixels(imageFile);
+//		LOG.debug("nexml: "+new NexmlEditor(nexml).getNodesWithChildren());
 		LOG.debug("created nexml");
 		mergeOCRAndPixelTree(hocrReader, nexml);
 		LOG.debug("mergedOCR and tree");
@@ -686,20 +692,15 @@ private String speciesPatternString;
 		}
 	}
 
-//	// FIXME
-//	public void processImage() throws IOException {
-//		runAndOutput();
-//		// PUT this *inside* runAndOutput and dependent on args
-//		processNexml();
-//	}
-
 	private void processNexml() throws IOException, FileNotFoundException {
 		LOG.debug("processing Nexml");
-		NexmlNEXML nexml = getNexml();
 		if (nexml == null) {
 			LOG.warn("null nexml");
 			return;
 		}
+		NexmlEditor nexmlEditor = new NexmlEditor(nexml);
+		LOG.trace("nodesWithChildren: "+nexmlEditor.getNodesWithChildren());
+		LOG.trace("nodesWithParents: "+nexmlEditor.getNodesWithParents());
 		ensureSubstitutionEditor();
 		InputStream speciesPatternInputStream = getOrCreateSpeciesPatternInputStream();
 		if (speciesPatternInputStream == null) {
@@ -707,19 +708,64 @@ private String speciesPatternString;
 			return;
 		}
 		substitutionEditor.addEditor(speciesPatternInputStream);
-		NexmlOtus nexmlOtus = nexml.getSingleOtusElement();
+		nexmlOtus = nexml.getSingleOtusElement();
+		singleTree = nexml.getTreesElement().get(0);
+		tipNodeList = singleTree.getOrCreateTipNodeList();
 		List<NexmlOtu> otuList = nexmlOtus.getNexmlOtuList();
 		nexml.getSingleOtusElement().addNamespaceDeclaration(PhyloConstants.CM_PHYLO_PREFIX, PhyloConstants.CM_PHYLO_NS);
 		for (NexmlOtu otu : otuList) {
 			processOtu(otu);
 		}
-		LOG.trace(nexml.toXML());
-		String filename = (getInputList().size() == 0) ? null : getInputList().get(0);
-		if (filename != null) {
-			File outputFile = new File("target/phylo", filename+"/");
-			outputFile.mkdirs();
-			XMLUtil.debug(nexml, new FileOutputStream(new File(outputFile, "edited.nexml.xml")), 1);
+		if (pruneBadTips) {
+			pruneBadTips();
 		}
+		LOG.trace(nexml.toXML());
+		String newick = nexml.createNewick();
+		LOG.trace("nwk "+newick);
+		
+		String filename = (getInputList().size() == 0) ? null : getInputList().get(0);
+		LOG.debug("dir "+filename);
+		if (filename != null) {
+			File outputDir = new File("target/phylo", filename+"/");
+			outputDir.mkdirs();
+			XMLUtil.debug(nexml, new FileOutputStream(new File(outputDir, "edited.nexml.xml")), 1);
+			FileUtils.write(new File(outputDir, "edited.nwk"), nexml.createNewick());
+		}
+	}
+
+	private void pruneBadTips() {
+		List<NexmlNode> badNodes = getBadNodes();
+		LOG.trace("bad nodes "+badNodes.size());
+		for (NexmlNode badNode : badNodes) {
+			LOG.trace("try to delete "+badNode+"; "+badNode.getNexmlChildNodes());
+			nexml.deleteTipAndElideIfParentHasSingletonChild(badNode);
+			TREE_LOG().info("deleted node "+badNode);
+
+		}
+	}
+
+	private List<NexmlNode> getBadNodes() {
+		List<NexmlOtu> otuList = nexmlOtus.getNexmlOtuList();
+		List<NexmlNode> badNodeList = new ArrayList<NexmlNode>();
+		for (NexmlOtu otu : otuList) {
+			if (isBadOtu(otu)) {
+				LOG.trace("bad otu: "+otu);
+				String otuId = otu.getId();
+				for (NexmlNode node : tipNodeList) {
+					if (node.getOtuRef().equals(otuId)) {
+						LOG.debug("will delete: "+otuId);
+						badNodeList.add(node);
+						break;
+					}
+				}
+			}
+		}
+		LOG.trace(badNodeList);
+		return badNodeList;
+	}
+
+	private boolean isBadOtu(NexmlOtu otu) {
+		return otu.getGenus() == null;
 	}
 
 	public TaxdumpLookup ensureTaxdumpLookup() {
@@ -744,8 +790,8 @@ private String speciesPatternString;
 	}
 
 	public void processOtu(NexmlOtu nexmlOtu) {
-		LogLevel currentLevel = ensureCTreeLog().getCurrentLevel();
-		ensureCTreeLog().setLevel(LogLevel.INFO);
+		LogLevel currentLevel = TREE_LOG().getCurrentLevel();
+		TREE_LOG().setLevel(LogLevel.INFO);
 		ensureTaxdumpLookup();
 		ensureSubstitutionEditor();
 		String value = nexmlOtu.getValue();
@@ -756,7 +802,7 @@ private String speciesPatternString;
 		LOG.trace(">otu>"+nexmlOtu.toXML());
 		int maxDelta = 4;
 		if (editedValue == null) {
-			ensureCTreeLog().error(""+Message.ERR_BAD_SYNTAX+" ["+value+"]");
+			TREE_LOG().error(""+Message.ERR_BAD_SYNTAX+" ["+value+"]");
 		} else if (substitutionEditor.validate(editedValue)) {
 			EditList editRecord = substitutionEditor.getEditRecord();
 			nexmlOtu.setEditRecord(editRecord.toString());
@@ -766,10 +812,10 @@ private String speciesPatternString;
 			boolean changed = false;
 			boolean matched = false;
 			if (taxdumpLookup.isValidBinomial(genus, species)) {
-				ensureCTreeLog().debug("Valid organism: "+genus+" "+species);
+				TREE_LOG().debug("Valid organism: "+genus+" "+species);
 				matched = true;
 			} else if (!taxdumpLookup.isValidGenus(genus)) {
-				ensureCTreeLog().warn("invalid genus, looking for closest match: "+genus);
+				TREE_LOG().warn("invalid genus, looking for closest match: "+genus);
 				List<String> closestGenusList = taxdumpLookup.getClosest(taxdumpLookup.getGenusSet(), genus, maxDelta);
 				if (closestGenusList.size() > 0) {
 					LOG.trace("Could this be :"+closestGenusList);
@@ -788,20 +834,29 @@ private String speciesPatternString;
 					changed = true;
 				}
 			}
-			ensureCTreeLog().debug("genus: "+genus+": "+taxdumpLookup.isValidGenus(genus));
-			ensureCTreeLog().debug("binomial: "+genus+" "+species+": "+taxdumpLookup.isValidBinomial(genus, species));
+			TREE_LOG().debug("genus: "+genus+": "+taxdumpLookup.isValidGenus(genus));
+			TREE_LOG().debug("binomial: "+genus+" "+species+": "+taxdumpLookup.isValidBinomial(genus, species));
 			if (changed) {
-				ensureCTreeLog().warn("corrected to: "+TaxdumpLookup.getBinomial(genus, species));
+				TREE_LOG().warn("corrected to: "+TaxdumpLookup.getBinomial(genus, species));
 			}
 		} else {
-			ensureCTreeLog().error(Message.ERR_BAD_SYNTAX.toString()+editedValue);
+			TREE_LOG().error(Message.ERR_BAD_SYNTAX.toString()+editedValue);
 		}
-		ensureCTreeLog().setLevel(currentLevel);
+		TREE_LOG().setLevel(currentLevel);
 	}
 
 	public void setSpeciesPatternInputString(String patternString) {
 		this.speciesPatternString = patternString;
 	}
+
+	public boolean isPruneBadTips() {
+		return pruneBadTips;
+	}
+
+	public void setPruneBadTips(boolean pruneBadTips) {
+		this.pruneBadTips = pruneBadTips;
+	}
+	
 	
 
 	

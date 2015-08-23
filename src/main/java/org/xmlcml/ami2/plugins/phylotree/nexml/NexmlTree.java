@@ -248,5 +248,9 @@ public class NexmlTree extends NexmlElement {
 		this.appendChild(edge12);
 		
 	}
+
+	public List<NexmlNode> getNodeList() {
+		return nodeList;
+	}
 	
 }

@@ -122,6 +122,46 @@ public class NexmlNode extends NexmlElement {
 			for (int i = 0; i < childNexmlNodes.size(); i++) {
 				NexmlNode childNode = childNexmlNodes.get(i);
 				sb.append(childNode.getNewick());
+				Double distance = this.getDistance(childNode);
+				if (distance != null) {
+					int iDistance = (int)Math.abs(distance);
+					sb.append(":"+iDistance);
+				}
+				if (i < childNexmlNodes.size() - 1) {
+					sb.append(",");
+				}
+			}
+			sb.append(")");
+		}
+		// Trex fails on this.  does not like dots
+		String label = this.getNewickLabel();
+		label = label.replaceAll("\\.","_");
+		if (label.trim().equals("")) {
+			label = "UNKNOWN";
+		}
+		// branch labels foul up Treeview
+		if (!label.startsWith("NT")) {
+			sb.append(label);
+		}
+
+//		if (parentNexmlNode != null) {
+//			Double distance = this.getDistance(parentNexmlNode);
+//			if (distance != null) {
+//				int iDistance = (int)Math.abs(distance);
+//				sb.append(":"+iDistance);
+//			}
+//		}
+		return sb.toString();
+	}
+
+	public String getNewickOld() {
+		StringBuilder sb = new StringBuilder();
+		getNexmlChildNodes();
+		if (childNexmlNodes.size() > 0) {
+			sb.append("(");
+			for (int i = 0; i < childNexmlNodes.size(); i++) {
+				NexmlNode childNode = childNexmlNodes.get(i);
+				sb.append(childNode.getNewick());
 				if (i < childNexmlNodes.size() - 1) {
 					sb.append(",");
 				}
@@ -132,7 +172,8 @@ public class NexmlNode extends NexmlElement {
 		if (parentNexmlNode != null) {
 			Double distance = this.getDistance(parentNexmlNode);
 			if (distance != null) {
-				sb.append(":"+distance);
+				// truncate before decimal point
+				sb.append(":"+Integer.parseInt(String.valueOf(distance)));
 			}
 		}
 		return sb.toString();
@@ -142,10 +183,18 @@ public class NexmlNode extends NexmlElement {
 		String label = null;
 		NexmlOtu otu = getOtu();
 		if (otu != null) {
-			label = otu.getValue();
-			label = label.replaceAll(".*\\(", "");
-			label = label.replaceAll("\\)", "");
-			label = label.replaceAll(" ", "");
+			if (otu.getGenus() != null) {
+				label = otu.getGenus();
+				String species = otu.getSpecies();
+				if (species != null) {
+					label += "_"+species;
+				}
+			} else {
+				label = otu.getValue();
+				label = label.replaceAll(".*\\(", "");
+				label = label.replaceAll("\\)", "");
+				label = label.replaceAll(" ", "");
+			}
 		}
 		label = (label == null) ? this.getId() : label;
 		return label;
@@ -188,7 +237,7 @@ public class NexmlNode extends NexmlElement {
 		}
 	}
 
-	List<NexmlNode> getNexmlChildNodes() {
+	public List<NexmlNode> getNexmlChildNodes() {
 		ensureChildEdgesAndNodes();
 		return childNexmlNodes;
 	}

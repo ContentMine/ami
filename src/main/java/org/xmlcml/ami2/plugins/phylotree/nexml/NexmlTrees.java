@@ -21,6 +21,7 @@ public class NexmlTrees extends NexmlElement {
 
 	public final static String TAG = "trees";
 	private List<NexmlTree> treeList;
+	private NexmlTree firstTree;
 
 	/** constructor.
 	 * 
@@ -65,6 +66,12 @@ public class NexmlTrees extends NexmlElement {
 
 	public void addTree(NexmlTree tree) {
 		this.appendChild(tree);
+	}
+
+	public NexmlTree getFirstTree() {
+		getOrCreateTreeList();
+		firstTree = (treeList == null || treeList.size() == 0) ? null : treeList.get(0);
+		return firstTree;
 	}
 	
 }
