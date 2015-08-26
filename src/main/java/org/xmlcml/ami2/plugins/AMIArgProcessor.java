@@ -190,7 +190,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		return contextCount;
 	}
 
-	protected List<? extends Element> ensureSectionElements() {
+	public List<? extends Element> ensureSectionElements() {
 		if (xPathProcessor != null) {
 			sectionElements = currentCMDir.extractSectionsFromScholarlyHtml(xPathProcessor.getXPath());
 		} else {

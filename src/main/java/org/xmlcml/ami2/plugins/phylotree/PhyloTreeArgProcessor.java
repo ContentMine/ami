@@ -350,9 +350,9 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		if (inputImageFile != null && inputImageFile.exists()) {
 			BufferedImage image = ImageIO.read(inputImageFile);
 			phyloTreePixelAnalyzer = createAndConfigurePixelAnalyzer(image);
-			LOG.trace("processImageIntoGraphsAndTree started");
+			LOG.debug("processImageIntoGraphsAndTree started");
 			diagramTree = phyloTreePixelAnalyzer.processImageIntoGraphsAndTree();
-			LOG.trace("processImageIntoGraphsAndTree finished");
+			LOG.debug("processImageIntoGraphsAndTree finished");
 			if (diagramTree == null) {
 				return null;
 			}
@@ -401,7 +401,9 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	 */
 	public void matchPhrasesToNodes(List<SVGPhrase> unusedPhraseList, NexmlTree nexmlTree) {
 		List<NexmlNode> tipNodeList = nexmlTree.getOrCreateTipNodeList();
-		annotateMatchedNodesAndDecrementUnmatchedLists(tipNodeList, unusedPhraseList, hocrReader.getWordJoiningBox(), null);
+		Real2Range joiningBox = hocrReader.getWordJoiningBox();
+		joiningBox = new Real2Range(new RealRange(0, 50), new RealRange(-10, 10));
+		annotateMatchedNodesAndDecrementUnmatchedLists(tipNodeList, unusedPhraseList, joiningBox, null);
 		List<NexmlNode> branchNodeList = nexmlTree.getOrCreateNonTipNodeList();
 		annotateMatchedNodesAndDecrementUnmatchedLists(branchNodeList, unusedPhraseList, null, getJoiningRadius());
 		
@@ -504,6 +506,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	public boolean mergeOCRAndPixelTree(File imageFile) throws IOException, InterruptedException {
 		hocrReader = createHOCRReaderAndProcess(imageFile);
 		if (hocrReader == null) return false;
+		LOG.debug("start tree");
 		NexmlNEXML nexml = this.createNexmlAndTreeFromPixels(imageFile);
 //		LOG.debug("nexml: "+new NexmlEditor(nexml).getNodesWithChildren());
 		LOG.debug("created nexml");

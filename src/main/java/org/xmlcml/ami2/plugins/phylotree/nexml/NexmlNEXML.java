@@ -128,7 +128,15 @@ public class NexmlNEXML extends NexmlElement {
 			NexmlNode parent = node.getParentNexmlNode();
 			if (parent != null) { // not root node
 				NexmlEdge parentEdge = getEdge(parent, node);
+				if (parentEdge == null) {
+					LOG.error("null parentEdge in elideIfHasSingletonChild");
+					return;
+				}
 				NexmlEdge childEdge = getEdge(node, child);
+				if (childEdge == null) {
+					LOG.error("null childEdge in elideIfHasSingletonChild");
+					return;
+				}
 				parentEdge.detach();
 				parent.removeNexmlChild(node);
 				parent.addChildNode(child);
