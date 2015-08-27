@@ -9,6 +9,7 @@ import java.util.Set;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.diagrams.DiagramTree;
 import org.xmlcml.euclid.Int2;
 import org.xmlcml.image.pixel.PixelEdge;
@@ -44,11 +45,17 @@ public class NexmlFactory {
 	private NexmlTree nexmlTree;
 	private int recursionCounter;
 	private Set<NexmlEdge> processedEdges;
+	private DefaultArgProcessor argProcessor;
 
 	public NexmlFactory() {
+		this(new DefaultArgProcessor());
+	}
+	
+	public NexmlFactory(DefaultArgProcessor argProcessor) {
 		pixelNodeToNexmlNodeMap = new HashMap<PixelNode, NexmlNode>();
 		idToNexmlNodeMap = new HashMap<String, NexmlNode>();
 		nexmlEdgeList = new ArrayList<NexmlEdge>();
+		this.argProcessor = argProcessor;
 	}
 	
 	/**
@@ -132,7 +139,8 @@ public class NexmlFactory {
 			String sourceId = edge.getSourceId();
 			int compare = targetId.compareTo(sourceId);
 			if (compare == 0) {
-				throw new RuntimeException("edge target == source");
+				argProcessor.TREE_LOG().error("edge target "+targetId+" == source "+sourceId);
+				continue;
 			} else if (compare < 0) {
 				targetId = edge.getSourceId();
 				sourceId = edge.getTargetId();
@@ -140,7 +148,7 @@ public class NexmlFactory {
 			String targetSourceIds = targetId+"=>"+sourceId;
 			LOG.trace("ts "+targetSourceIds);
 			if(targetSourceSet.contains(targetSourceIds)) {
-				throw new RuntimeException("duplicate edge: "+edge);
+				argProcessor.TREE_LOG().error("duplicate edge: "+edge);
 			} else {
 				targetSourceSet.add(targetSourceIds);
 			}
@@ -182,7 +190,7 @@ public class NexmlFactory {
 				LOG.trace("coords "+xy0+"; "+xy1);
 				if (Int2.isEqual(xy0, xy1) || kludgeRoot()) {
 					nexmlNode.setRoot(TRUE);
-					LOG.debug("ROOT TRUE "+nexmlNode);
+					LOG.trace("ROOT TRUE "+nexmlNode);
 					this.rootNexmlNode = nexmlNode;
 				} else {
 					LOG.trace("failed to create ROOT: "+xy0+"//"+xy1);
@@ -201,11 +209,11 @@ public class NexmlFactory {
 	}
 
 	private void addEdges(NexmlTree nexmlTree, PixelEdgeList pixelEdgeList) {
-		LOG.debug("add pixelEdges: "+pixelEdgeList.size());
+		LOG.trace("add pixelEdges: "+pixelEdgeList.size());
 		for (PixelEdge pixelEdge : pixelEdgeList) {
 			LOG.trace("edge: "+pixelEdge.toString());
 			if (pixelEdge.getNodes().get(0) == null || pixelEdge.getNodes().get(1) == null) {
-				LOG.debug("null node in edge: "+pixelEdge );
+				argProcessor.TREE_LOG().warn("null node in edge: "+pixelEdge );
 			}
 			NexmlEdge nexmlEdge = createAndAddNexmlEdge(nexmlTree, pixelEdge);
 			nexmlEdgeList.add(nexmlEdge);
@@ -350,6 +358,6 @@ public class NexmlFactory {
 
 	public void setRootPixelNode(PixelNode rootPixelNode) {
 		this.rootPixelNode = rootPixelNode;
-		LOG.debug("set rootPixelNode: "+rootPixelNode);
+		LOG.trace("set rootPixelNode: "+rootPixelNode);
 	}
 }

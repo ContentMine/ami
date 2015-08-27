@@ -116,7 +116,7 @@ public class NexmlNEXML extends NexmlElement {
 				deleteTip(node);
 				elideIfHasSingletonChild(parent);
 			} else {
-				LOG.error("NULL parent node for: "+node.getOtuRef()+"; not deleted");
+				throw new RuntimeException("NULL parent node for: "+node.getOtuRef()+"; not deleted");
 			}
 		}
 	}
@@ -129,13 +129,11 @@ public class NexmlNEXML extends NexmlElement {
 			if (parent != null) { // not root node
 				NexmlEdge parentEdge = getEdge(parent, node);
 				if (parentEdge == null) {
-					LOG.error("null parentEdge in elideIfHasSingletonChild");
-					return;
+					throw new RuntimeException("null parentEdge in elideIfHasSingletonChild");
 				}
 				NexmlEdge childEdge = getEdge(node, child);
 				if (childEdge == null) {
-					LOG.error("null childEdge in elideIfHasSingletonChild");
-					return;
+					throw new RuntimeException("null childEdge in elideIfHasSingletonChild");
 				}
 				parentEdge.detach();
 				parent.removeNexmlChild(node);
@@ -151,7 +149,7 @@ public class NexmlNEXML extends NexmlElement {
 	private void deleteTip(NexmlNode node) {
 		List<NexmlNode> childNodes = node.getNexmlChildNodes();
 		if (childNodes.size() != 0) {
-			LOG.error("Not a child node: "+node);
+			throw new RuntimeException("Not a tip (has childNodes "+childNodes.size()+"): "+node);
 		} else {
 			NexmlNode parent = node.getParentNexmlNode();
 			if (parent != null) {
@@ -160,7 +158,7 @@ public class NexmlNEXML extends NexmlElement {
 				parent.removeNexmlChild(node);
 				node.detach();
 			} else {
-				LOG.error("Null parent");
+				throw new RuntimeException("Null parent: "+node);
 			}
 		}
 	}

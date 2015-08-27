@@ -100,12 +100,50 @@ public class PhyloArgProcessorTest {
 	 * 
 	 * @throws Exception
 	 */
+	// LONG
 //	@Ignore("requires tesseract")
-	public void testProcessPngList() throws Exception {
-//		String name = "ijs_0_000364_0_003.png";
+	public void testProcess15PngList() throws Exception {
 		List<File> pngList = new ArrayList<File>(FileUtils.listFiles(new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree"), new String[]{"png"}, false));
 		for (File pngFile : pngList) {
 			extractTreeNewickNexml(pngFile);
+		}
+	}
+
+	/** 
+	 * development of new options in ami-phylo
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	// LONG
+//	@Ignore("requires tesseract")
+	public void testProcess50PngList() throws Exception {
+		File pngDir = new File(AMIFixtures.TEST_PHYLO_DIR, "50images/");
+		List<File> pngList = new ArrayList<File>(FileUtils.listFiles(pngDir, new String[]{"png"}, false));
+		for (File pngFile : pngList) {
+			extractTreeNewickNexml(pngFile);
+		}
+	}
+
+	/** 
+	 * development of new options in ami-phylo
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	// LONG also bridges to norma
+//	@Ignore("requires tesseract")
+	public void testProcess140PngList() throws Exception {
+		File pngDir = new File("../norma/peterijsem/sourceimages");
+		Assert.assertTrue(""+pngDir, pngDir.exists());
+		List<File> pngList = new ArrayList<File>(FileUtils.listFiles(pngDir, new String[]{"png"}, false));
+		for (File pngFile : pngList) {
+			try {
+				extractTreeNewickNexml(pngFile);
+			} catch (Exception e) {
+				e.printStackTrace();
+				continue;
+			}
 		}
 	}
 
@@ -127,8 +165,10 @@ public class PhyloArgProcessorTest {
 				" --ph.svg image/"+baseName+".svg"+
 				" --ph.newick image/"+baseName+".nwk"+
 				" --ph.nexml image/"+baseName+".nexml.xml"+
+				" --ph.summarize"+
 				"";
-		new PhyloTreeArgProcessor(cmd).runAndOutput();
+		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor(cmd);
+		phyloTreeArgProcessor.runAndOutput();
 	}
 
 	@Test

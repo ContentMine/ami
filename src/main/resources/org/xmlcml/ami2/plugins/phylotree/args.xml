@@ -93,5 +93,17 @@
 		</help>
 	</arg>	
 	
+	<arg name="summarize" 
+		long="--ph.summarize"
+		args=" "
+		countRange="{0,0}"
+		finalMethod="summarize"
+		>
+		<help>
+		<p>Summarizes the output</p>
+		<p>Uses initLog as the record of what files to summarize</p>
+		</help>
+	</arg>	
+	
 </argList>
 			

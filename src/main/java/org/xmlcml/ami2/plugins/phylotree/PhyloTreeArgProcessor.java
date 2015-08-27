@@ -143,7 +143,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 
 	public void parseNewickFile(ArgumentOption option, ArgIterator argIterator) {
 		newickFilename = argIterator.getString(option);
-		ensureInitLog().info("newick file");
+		CORE_LOG().info("newick file");
 	}
 	
 
@@ -205,6 +205,10 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	public void outputResultsElement(ArgumentOption option) {
 		ResultsElement resultsElement = new ResultsElement(TREES);
 		LOG.debug("outputResultElement NYI "+output+"; need to add tree");
+	}
+	
+	public void summarize(ArgumentOption option) {
+		LOG.debug(CORE_LOG().toXML());
 	}
 	
 	// =============================
@@ -350,9 +354,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		if (inputImageFile != null && inputImageFile.exists()) {
 			BufferedImage image = ImageIO.read(inputImageFile);
 			phyloTreePixelAnalyzer = createAndConfigurePixelAnalyzer(image);
-			LOG.debug("processImageIntoGraphsAndTree started");
 			diagramTree = phyloTreePixelAnalyzer.processImageIntoGraphsAndTree();
-			LOG.debug("processImageIntoGraphsAndTree finished");
 			if (diagramTree == null) {
 				return null;
 			}
@@ -361,7 +363,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 			// use root node later...
 			graph.tidyNodesAndEdges(5.0);
 			diagramTree = new PhyloTreePixelAnalyzer().createFromGraph(graph, rootPixelNode);
-			NexmlFactory nexmlFactory = new NexmlFactory();
+			NexmlFactory nexmlFactory = new NexmlFactory(this);
 			nexmlFactory.setRootPixelNode(rootPixelNode);
 			nexmlFactory.createAndAddNexmlTree(diagramTree);
 			nexml = nexmlFactory.getOrCreateNexmlNEXML();
@@ -506,14 +508,14 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	public boolean mergeOCRAndPixelTree(File imageFile) throws IOException, InterruptedException {
 		hocrReader = createHOCRReaderAndProcess(imageFile);
 		if (hocrReader == null) return false;
-		LOG.debug("start tree");
+		LOG.trace("start tree");
 		NexmlNEXML nexml = this.createNexmlAndTreeFromPixels(imageFile);
 //		LOG.debug("nexml: "+new NexmlEditor(nexml).getNodesWithChildren());
-		LOG.debug("created nexml");
+		LOG.trace("created nexml");
 		mergeOCRAndPixelTree(hocrReader, nexml);
-		LOG.debug("mergedOCR and tree");
+		LOG.trace("mergedOCR and tree");
 		if (speciesPattern != null) {
-			LOG.debug("old species pattern: "+speciesPattern);
+			LOG.warn("old species pattern: "+speciesPattern);
 			checkOTUsAgainstSpeciesPattern(nexml, speciesPattern);
 		}
 		processNexml();
@@ -548,7 +550,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	 */
 	public void mergeOCRAndPixelTree(HOCRReader hocrReader, NexmlNEXML nexml) {
 		if (nexml == null) {
-			LOG.error("Cannot create tree");
+			TREE_LOG().error("Cannot create tree");
 		} else {
 			NexmlTree nexmlTree = nexml.getSingleTree();
 			List<SVGPhrase> unusedPhraseList = new ArrayList<SVGPhrase>(hocrReader.getOrCreatePhraseList());
@@ -591,7 +593,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	private void ensureOutputDirectory() {
 		if (outputDir == null) {
 			outputDir = new File("target/junk/"+System.currentTimeMillis()+"/");
-			LOG.debug("PhyloTree output to: "+outputDir+"; suggest you setOutputDir()");
+			TREE_LOG().info("PhyloTree output to: "+outputDir+"; suggest you setOutputDir()");
 		}
 	}
 
@@ -696,9 +698,9 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	}
 
 	private void processNexml() throws IOException, FileNotFoundException {
-		LOG.debug("processing Nexml");
+		LOG.trace("processing Nexml");
 		if (nexml == null) {
-			LOG.warn("null nexml");
+			TREE_LOG().warn("null nexml");
 			return;
 		}
 		NexmlEditor nexmlEditor = new NexmlEditor(nexml);
@@ -727,7 +729,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		LOG.trace("nwk "+newick);
 		
 		String filename = (getInputList().size() == 0) ? null : getInputList().get(0);
-		LOG.debug("dir "+filename);
+		LOG.trace("dir "+filename);
 		if (filename != null) {
 			File outputDir = new File("target/phylo", filename+"/");
 			outputDir.mkdirs();
@@ -741,9 +743,12 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		LOG.trace("bad nodes "+badNodes.size());
 		for (NexmlNode badNode : badNodes) {
 			LOG.trace("try to delete "+badNode+"; "+badNode.getNexmlChildNodes());
-			nexml.deleteTipAndElideIfParentHasSingletonChild(badNode);
-			TREE_LOG().info("deleted node "+badNode);
-
+			try {
+				nexml.deleteTipAndElideIfParentHasSingletonChild(badNode);
+				TREE_LOG().info("deleted node "+badNode);
+			} catch (RuntimeException e) {
+				TREE_LOG().error("cannot delete tip "+e);
+			}
 		}
 	}
 
@@ -756,7 +761,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 				String otuId = otu.getId();
 				for (NexmlNode node : tipNodeList) {
 					if (node.getOtuRef().equals(otuId)) {
-						LOG.debug("will delete: "+otuId);
+						LOG.trace("will delete: "+otuId);
 						badNodeList.add(node);
 						break;
 					}
@@ -806,44 +811,50 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		int maxDelta = 4;
 		if (editedValue == null) {
 			TREE_LOG().error(""+Message.ERR_BAD_SYNTAX+" ["+value+"]");
-		} else if (substitutionEditor.validate(editedValue)) {
-			EditList editRecord = substitutionEditor.getEditRecord();
-			nexmlOtu.setEditRecord(editRecord.toString());
-			LOG.trace("syntax OK: "+value+" => "+editedValue+((editRecord == null || editRecord.size() == 0) ? "" :"; "+editRecord));
-			String genus = getGenus(nexmlOtu);
-			String species = getSpecies(nexmlOtu);
-			boolean changed = false;
-			boolean matched = false;
-			if (taxdumpLookup.isValidBinomial(genus, species)) {
-				TREE_LOG().debug("Valid organism: "+genus+" "+species);
-				matched = true;
-			} else if (!taxdumpLookup.isValidGenus(genus)) {
-				TREE_LOG().warn("invalid genus, looking for closest match: "+genus);
-				List<String> closestGenusList = taxdumpLookup.getClosest(taxdumpLookup.getGenusSet(), genus, maxDelta);
-				if (closestGenusList.size() > 0) {
-					LOG.trace("Could this be :"+closestGenusList);
-					if (closestGenusList.size() == 1) {
-						genus = closestGenusList.get(0);
+		} else {
+			boolean validated = false;
+			try {
+				validated = substitutionEditor.validate(editedValue);
+			} catch (Exception e) {
+				TREE_LOG().error("failed to validate ["+value+"]");
+			}
+			if (validated) {
+				EditList editRecord = substitutionEditor.getEditRecord();
+				nexmlOtu.setEditRecord(editRecord.toString());
+				LOG.trace("syntax OK: "+value+" => "+editedValue+((editRecord == null || editRecord.size() == 0) ? "" :"; "+editRecord));
+				String genus = getGenus(nexmlOtu);
+				String species = getSpecies(nexmlOtu);
+				boolean changed = false;
+				boolean matched = false;
+				if (taxdumpLookup.isValidBinomial(genus, species)) {
+					TREE_LOG().debug("Valid organism: "+genus+" "+species);
+					matched = true;
+				} else if (!taxdumpLookup.isValidGenus(genus)) {
+					TREE_LOG().warn("invalid genus, looking for closest match: "+genus);
+					List<String> closestGenusList = taxdumpLookup.getClosest(taxdumpLookup.getGenusSet(), genus, maxDelta);
+					if (closestGenusList.size() > 0) {
+						LOG.trace("Could this be :"+closestGenusList);
+						if (closestGenusList.size() == 1) {
+							genus = closestGenusList.get(0);
+							changed = true;
+						}
+					}
+				}
+				if (!matched) {
+					// optimize later 
+					List<String> speciesList = taxdumpLookup.lookupSpeciesList(genus);
+					List<String> bestSpecies = taxdumpLookup.getClosest(speciesList, species, maxDelta);
+					if (bestSpecies.size() == 1) {
+						species = bestSpecies.get(0);
 						changed = true;
 					}
 				}
-			}
-			if (!matched) {
-				// optimize later 
-				List<String> speciesList = taxdumpLookup.lookupSpeciesList(genus);
-				List<String> bestSpecies = taxdumpLookup.getClosest(speciesList, species, maxDelta);
-				if (bestSpecies.size() == 1) {
-					species = bestSpecies.get(0);
-					changed = true;
+				TREE_LOG().debug("genus: "+genus+": "+taxdumpLookup.isValidGenus(genus));
+				TREE_LOG().debug("binomial: "+genus+" "+species+": "+taxdumpLookup.isValidBinomial(genus, species));
+				if (changed) {
+					TREE_LOG().warn("corrected to: "+TaxdumpLookup.getBinomial(genus, species));
 				}
 			}
-			TREE_LOG().debug("genus: "+genus+": "+taxdumpLookup.isValidGenus(genus));
-			TREE_LOG().debug("binomial: "+genus+" "+species+": "+taxdumpLookup.isValidBinomial(genus, species));
-			if (changed) {
-				TREE_LOG().warn("corrected to: "+TaxdumpLookup.getBinomial(genus, species));
-			}
-		} else {
-			TREE_LOG().error(Message.ERR_BAD_SYNTAX.toString()+editedValue);
 		}
 		TREE_LOG().setLevel(currentLevel);
 	}
