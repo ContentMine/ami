@@ -190,7 +190,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	 * @param option
 	 */
 	public void runPhylo(ArgumentOption option) {
-		LOG.debug("runPhylo on: "+inputList);
+		LOG.trace("runPhylo on: "+inputList);
 		for (String input : inputList) {
 			File inputFile = new File(currentCMDir.getDirectory(), input);
 			createTree(inputFile);
@@ -204,11 +204,11 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 
 	public void outputResultsElement(ArgumentOption option) {
 		ResultsElement resultsElement = new ResultsElement(TREES);
-		LOG.debug("outputResultElement NYI "+output+"; need to add tree");
+		LOG.trace("outputResultElement NYI "+output+"; need to add tree");
 	}
 	
 	public void summarize(ArgumentOption option) {
-		LOG.debug(CORE_LOG().toXML());
+		LOG.trace(CORE_LOG().toXML());
 	}
 	
 	// =============================

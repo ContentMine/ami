@@ -13,6 +13,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.vafer.jdeb.shaded.compress.io.FilenameUtils;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtu;
@@ -149,4 +150,106 @@ public class LongRunningTests {
 			}
 		}
 	}
+
+	private void extractTreeNewickNexml(String baseFile, File pngFile) throws IOException {
+		String baseName = FilenameUtils.getBaseName(pngFile.toString());
+		String name = FilenameUtils.getName(pngFile.toString());
+		File normaTempCTree = new File(baseFile+baseName+"/");
+		File normaImageDir = new File(normaTempCTree, "image/");
+		normaImageDir.mkdirs();
+		File normaImage = new File(normaImageDir, name);
+		FileUtils.copyFile(pngFile, normaImage);
+		
+		String cmd = "--ph.phylo -q "+normaTempCTree+
+				" -i image/"+name+
+				" --log"+
+				" --ph.specpattern ijsemSpeciesEditor.xml"+
+				" --ph.hocr.html image/"+baseName+".hocr.html"+
+				" --ph.hocr.svg image/"+baseName+".hocr.svg"+
+				" --ph.svg image/"+baseName+".svg"+
+				" --ph.newick image/"+baseName+".nwk"+
+				" --ph.nexml image/"+baseName+".nexml.xml"+
+				" --ph.summarize"+
+				"";
+		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor(cmd);
+		phyloTreeArgProcessor.runAndOutput();
+	}
+
+	/** 
+	 * development of new options in ami-phylo
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	// LONG also bridges to norma
+//	@Ignore("requires tesseract")
+	public void testProcess140PngList() throws Exception {
+		File pngDir = new File("../norma/peterijsem/sourceimages");
+		Assert.assertTrue(""+pngDir, pngDir.exists());
+		List<File> pngList = new ArrayList<File>(FileUtils.listFiles(pngDir, new String[]{"png"}, false));
+		for (File pngFile : pngList) {
+			try {
+				extractTreeNewickNexml("target/phylo", pngFile);
+			} catch (Exception e) {
+				e.printStackTrace();
+				continue;
+			}
+		}
+	}
+	/** 
+	 * development of new options in ami-phylo
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void testProcess500AList() throws Exception {
+//		runBatch("../ijsem/500A/");
+		runBatch("../ijsem/500B/");
+	}
+
+	private void runBatch(String dirName) {
+		File pngDir = new File(dirName);
+		pngDir.mkdirs();
+		Assert.assertTrue(""+pngDir, pngDir.exists());
+		List<File> pngList = new ArrayList<File>(FileUtils.listFiles(pngDir, new String[]{"png"}, false));
+		for (File pngFile : pngList) {
+			try {
+				extractTreeNewickNexml(dirName, pngFile);
+			} catch (Exception e) {
+				e.printStackTrace();
+				continue;
+			}
+		}
+	}
+
+	@Test
+		/** 
+		 * development of new options in ami-phylo
+		 * 
+		 * @throws Exception
+		 */
+		// LONG
+	//	@Ignore("requires tesseract")
+		public void testProcess15PngList() throws Exception {
+			List<File> pngList = new ArrayList<File>(FileUtils.listFiles(new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree"), new String[]{"png"}, false));
+			for (File pngFile : pngList) {
+				extractTreeNewickNexml("target/phylo", pngFile);
+			}
+		}
+
+	/** 
+		 * development of new options in ami-phylo
+		 * 
+		 * @throws Exception
+		 */
+		@Test
+		// LONG
+	//	@Ignore("requires tesseract")
+		public void testProcess50PngList() throws Exception {
+			File pngDir = new File(AMIFixtures.TEST_PHYLO_DIR, "50images/");
+			List<File> pngList = new ArrayList<File>(FileUtils.listFiles(pngDir, new String[]{"png"}, false));
+			for (File pngFile : pngList) {
+				extractTreeNewickNexml("target/phylo", pngFile);
+			}
+		}
 }

@@ -233,46 +233,46 @@ public class NexmlFactory {
 		node1.addNexmlEdge(nexmlEdge);
 	}
 
-	private void addChildrenAndDirectionality1(NexmlNode parentNexmlNode) {
-		if (parentNexmlNode == null) {
-			LOG.debug("cannot find rootNexmlNode");
-			return;
-		}
-		String parentId = parentNexmlNode.getId();
-		if (parentId == null) {
-			throw new RuntimeException("No id for parentNode");
-		}
-		LOG.debug("parent "+parentId);
-		LOG.debug("edges FIXME "+parentNexmlNode.nexmlEdges.size());
-		for (NexmlEdge nexmlEdge : parentNexmlNode.nexmlEdges) {
-			String edgeSourceId = nexmlEdge.getSourceId();
-			String edgeTargetId = nexmlEdge.getTargetId();
-			if (edgeSourceId == null || edgeTargetId == null) {
-				LOG.error("edge with null Ids");
-				continue;
-			}
-			// wrong directionality
-			if (parentId.equals(edgeSourceId)) {
-				nexmlEdge.setTarget(edgeSourceId);
-				nexmlEdge.setSource(edgeTargetId);
-				edgeTargetId = nexmlEdge.getTargetId();
-				edgeSourceId = nexmlEdge.getSourceId();
-			}
-			LOG.debug("edge S "+edgeSourceId+"; T  "+edgeTargetId);
-			if (parentId.equals(edgeTargetId)) {
-				parentNexmlNode.setParentNexmlNode(idToNexmlNodeMap.get(edgeSourceId));
-				NexmlNode childNexmlNode = nexmlEdge.getOtherNode(parentNexmlNode);
-				if (childNexmlNode == null) {
-					LOG.debug("null node in edge? "+parentNexmlNode);
-				} else {
-					nexmlEdge.setSource(parentId);
-					nexmlEdge.setTarget(childNexmlNode.getId());
-					addChildrenAndDirectionality1(childNexmlNode);
-					parentNexmlNode.addChildNode(childNexmlNode);
-				}
-			}
-		}
-	}
+//	private void addChildrenAndDirectionality1(NexmlNode parentNexmlNode) {
+//		if (parentNexmlNode == null) {
+//			LOG.debug("cannot find rootNexmlNode");
+//			return;
+//		}
+//		String parentId = parentNexmlNode.getId();
+//		if (parentId == null) {
+//			throw new RuntimeException("No id for parentNode");
+//		}
+//		LOG.debug("parent "+parentId);
+//		LOG.debug("edges FIXME "+parentNexmlNode.nexmlEdges.size());
+//		for (NexmlEdge nexmlEdge : parentNexmlNode.nexmlEdges) {
+//			String edgeSourceId = nexmlEdge.getSourceId();
+//			String edgeTargetId = nexmlEdge.getTargetId();
+//			if (edgeSourceId == null || edgeTargetId == null) {
+//				LOG.error("edge with null Ids");
+//				continue;
+//			}
+//			// wrong directionality
+//			if (parentId.equals(edgeSourceId)) {
+//				nexmlEdge.setTarget(edgeSourceId);
+//				nexmlEdge.setSource(edgeTargetId);
+//				edgeTargetId = nexmlEdge.getTargetId();
+//				edgeSourceId = nexmlEdge.getSourceId();
+//			}
+//			LOG.debug("edge S "+edgeSourceId+"; T  "+edgeTargetId);
+//			if (parentId.equals(edgeTargetId)) {
+//				parentNexmlNode.setParentNexmlNode(idToNexmlNodeMap.get(edgeSourceId));
+//				NexmlNode childNexmlNode = nexmlEdge.getOtherNode(parentNexmlNode);
+//				if (childNexmlNode == null) {
+//					LOG.debug("null node in edge? "+parentNexmlNode);
+//				} else {
+//					nexmlEdge.setSource(parentId);
+//					nexmlEdge.setTarget(childNexmlNode.getId());
+//					addChildrenAndDirectionality1(childNexmlNode);
+//					parentNexmlNode.addChildNode(childNexmlNode);
+//				}
+//			}
+//		}
+//	}
 
 	private void addChildrenAndDirectionality(NexmlNode parentNexmlNode) {
 		if (recursionCounter-- <= 0) {

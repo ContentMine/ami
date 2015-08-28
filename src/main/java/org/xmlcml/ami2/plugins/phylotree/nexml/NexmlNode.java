@@ -144,13 +144,6 @@ public class NexmlNode extends NexmlElement {
 			sb.append(label);
 		}
 
-//		if (parentNexmlNode != null) {
-//			Double distance = this.getDistance(parentNexmlNode);
-//			if (distance != null) {
-//				int iDistance = (int)Math.abs(distance);
-//				sb.append(":"+iDistance);
-//			}
-//		}
 		return sb.toString();
 	}
 
