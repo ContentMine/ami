@@ -19,7 +19,7 @@ import org.xmlcml.cmine.args.log.CMineLog;
  * @author pm286
  *
  */
-//@Ignore("very long")
+@Ignore("long and uses foreign directories")
 public class CTreeLogAnalysisTest {
 
 	private static final Logger LOG = Logger.getLogger(CTreeLogAnalysisTest.class);
