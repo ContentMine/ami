@@ -147,30 +147,30 @@ public class NexmlNode extends NexmlElement {
 		return sb.toString();
 	}
 
-	public String getNewickOld() {
-		StringBuilder sb = new StringBuilder();
-		getNexmlChildNodes();
-		if (childNexmlNodes.size() > 0) {
-			sb.append("(");
-			for (int i = 0; i < childNexmlNodes.size(); i++) {
-				NexmlNode childNode = childNexmlNodes.get(i);
-				sb.append(childNode.getNewick());
-				if (i < childNexmlNodes.size() - 1) {
-					sb.append(",");
-				}
-			}
-			sb.append(")");
-		}
-		sb.append(this.getNewickLabel());
-		if (parentNexmlNode != null) {
-			Double distance = this.getDistance(parentNexmlNode);
-			if (distance != null) {
-				// truncate before decimal point
-				sb.append(":"+Integer.parseInt(String.valueOf(distance)));
-			}
-		}
-		return sb.toString();
-	}
+//	private String getNewickOld() {
+//		StringBuilder sb = new StringBuilder();
+//		getNexmlChildNodes();
+//		if (childNexmlNodes.size() > 0) {
+//			sb.append("(");
+//			for (int i = 0; i < childNexmlNodes.size(); i++) {
+//				NexmlNode childNode = childNexmlNodes.get(i);
+//				sb.append(childNode.getNewick());
+//				if (i < childNexmlNodes.size() - 1) {
+//					sb.append(",");
+//				}
+//			}
+//			sb.append(")");
+//		}
+//		sb.append(this.getNewickLabel());
+//		if (parentNexmlNode != null) {
+//			Double distance = this.getDistance(parentNexmlNode);
+//			if (distance != null) {
+//				// truncate before decimal point
+//				sb.append(":"+Integer.parseInt(String.valueOf(distance)));
+//			}
+//		}
+//		return sb.toString();
+//	}
 
 	private String getNewickLabel() {
 		String label = null;

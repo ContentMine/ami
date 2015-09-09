@@ -1,19 +1,15 @@
 package org.xmlcml.ami2.plugins.phylotree;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.Map;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlElement;
-import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.cmine.args.log.CMineLog;
 
 /** analysis of CTreeLog output which might later go in argProcessor.summary actions.
@@ -24,13 +20,13 @@ import org.xmlcml.cmine.args.log.CMineLog;
 @Ignore("long and uses foreign directories")
 public class CTreeLogAnalysisTest {
 
-	private static final Logger LOG = Logger.getLogger(CTreeLogAnalysisTest.class);
+	public static final Logger LOG = Logger.getLogger(CTreeLogAnalysisTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 
 	public final static File BATCH1 = new File(AMIFixtures.TEST_PHYLO_DIR, "batch1/");
-	public final static File IJSEM = new File("../ijsem/");
+	public final static File IJSEM = new File(AMIFixtures.TEST_PHYLO_DIR, "phylotree");
 	
 	@Test
 	public void testReadLog() {
@@ -44,30 +40,37 @@ public class CTreeLogAnalysisTest {
 	public void testReadLogAB500() {
 		summarizeInLog(new File(IJSEM, "500A"), 502);
 		summarizeInLog(new File(IJSEM, "500B"), 502);
+		summarizeInLog(new File(IJSEM, "500C"), 502);
+		summarizeInLog(new File(IJSEM, "500D"), 502);
+		summarizeInLog(new File(IJSEM, "500E"), 502);
+		summarizeInLog(new File(IJSEM, "500F"), 502);
+		summarizeInLog(new File(IJSEM, "500G"), 502);
+		summarizeInLog(new File(IJSEM, "500H"), 502);
+		summarizeInLog(new File(IJSEM, "500J"), 502);
 	}
 	
 	@Test
-	public void testExtractSpecies() {
-		extractSpecies(new File(IJSEM, "500A"), 397);
-//		summarizeInLog(new File(IJSEM, "500B"), 502);
+	public void testExtractSpecies() throws IOException {
+		SpeciesAnalyzer speciesAnalyzer = new SpeciesAnalyzer();
+		speciesAnalyzer.extractAndAddSpeciesFromDirectory(new File(IJSEM, "500A"));
+		speciesAnalyzer.extractAndAddSpeciesFromDirectory(new File(IJSEM, "500B"));
+		speciesAnalyzer.extractAndAddSpeciesFromDirectory(new File(IJSEM, "500C"));
+		speciesAnalyzer.extractAndAddSpeciesFromDirectory(new File(IJSEM, "500D"));
+		speciesAnalyzer.extractAndAddSpeciesFromDirectory(new File(IJSEM, "500E"));
+		speciesAnalyzer.extractAndAddSpeciesFromDirectory(new File(IJSEM, "500F"));
+		speciesAnalyzer.extractAndAddSpeciesFromDirectory(new File(IJSEM, "500G"));
+		speciesAnalyzer.extractAndAddSpeciesFromDirectory(new File(IJSEM, "500H"));
+		speciesAnalyzer.extractAndAddSpeciesFromDirectory(new File(IJSEM, "336J"));
+		speciesAnalyzer.analyzeTrees();
+		speciesAnalyzer.writeGenusByValues(new File(IJSEM, "genusByValue.txt"));
+		speciesAnalyzer.writeGenusByCount(new File(IJSEM, "genusByCount.txt"));
+		speciesAnalyzer.writeSpeciesByValues(new File(IJSEM, "speciesByValue.txt"));
+		speciesAnalyzer.lookupWikidataSpeciesByCount(new File(IJSEM, "wikidata.txt"));
+		Map<String, String> wikiBySpecies = speciesAnalyzer.getWikidataBySpecies();
 	}
-	
+
 	// ===========================================
 	
-
-	private void extractSpecies(File dir, int count) {
-		List<File> nexmlFiles = new ArrayList<File>(FileUtils.listFiles(dir, new String[]{"nexml.xml"}, true));
-		Assert.assertEquals(count, nexmlFiles.size());
-		for (File nexmlFile : nexmlFiles) {
-			LOG.debug(""+nexmlFile);
-			NexmlNEXML nexml = null;
-			try {
-				nexml = (NexmlNEXML) NexmlElement.readAndCreateNEXML(nexmlFile);
-			} catch (Exception e) {
-				LOG.error("could not read: "+nexmlFile+"; "+e);
-			}
-		}
-	}
 
 	private void summarizeInLog(File dir0, int count) {
 		File logFile = new File(dir0, CMineLog.CMINE_LOG);

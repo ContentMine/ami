@@ -53,6 +53,10 @@ public class NexmlOtu extends NexmlElement {
 	public String getSpecies() {
 		return getCMPhyloAttributeValue(SPECIES);
 	}
+	
+	public String getBinomial() {
+		return (getGenus() != null && getSpecies() != null) ? getGenus()+"_"+getSpecies() : null;
+	}
 
 	private void setCMPhyloAttribute(String name, String value) {
 		try {

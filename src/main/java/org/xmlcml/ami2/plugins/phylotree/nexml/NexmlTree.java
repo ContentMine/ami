@@ -136,6 +136,7 @@ public class NexmlTree extends NexmlElement {
 				addChildEdges(nextNode);
 			}
 		}
+//		checkNodeParents();
 		LOG.trace(tipSet);
 		LOG.trace(branchNodeSet);
 		List<NexmlNode> rootNodes = getRootList();
@@ -144,7 +145,7 @@ public class NexmlTree extends NexmlElement {
 		} else if (rootNodes.size() == 1) {
 			this.rootNexmlNode = rootNodes.get(0);
 		} else {
-			LOG.debug("Cannot process multiple roots ");
+			LOG.debug("Cannot process multiple roots: "+rootNodes.size());
 		}
 	}
 	
@@ -170,17 +171,39 @@ public class NexmlTree extends NexmlElement {
 		this.rootNexmlNode = rootNode;
 	}
 
+	// FIXME
 	public List<NexmlNode> getRootList() {
 		if (rootList == null) {
 			rootList = new ArrayList<NexmlNode>();
 			for (NexmlNode node : nodeList) {
 				if (node.getParentNexmlNode() == null) {
-					rootList.add(node);
+					NexmlNode parentNode = addParent(node);
+					if (parentNode == null /*|| true*/) {
+//						LOG.debug(node);
+						rootList.add(node);
+					}
 				}
 			}
 			LOG.debug("rootList "+rootList.size());
 		}
 		return rootList;
+	}
+
+	/** doesn't seem to find anything */
+	private NexmlNode addParent(NexmlNode node) {
+		String nodeId = node.getId();
+		LOG.trace("addParent..."+nodeId);
+		for (NexmlEdge edge : edgeList) {
+			String sourceId = edge.getSourceId();
+			String targetId = edge.getTargetId();
+			if (nodeId.equals(targetId)) {
+				NexmlNode parentNode = getNode(sourceId);
+//				LOG.debug("found parent"+parentNode);
+				node.setParentNexmlNode(parentNode);
+				return parentNode;
+			}
+		}
+		return null;
 	}
 
 	public List<NexmlNode> getOrCreateTipNodeList() {
@@ -225,7 +248,12 @@ public class NexmlTree extends NexmlElement {
 		}
 		getEdgeListAndMaps();
 		for (NexmlEdge edge : edgeList) {
-			g.appendChild(edge.createSVG());
+			if (edge != null) {
+				SVGElement svg = edge.createSVG();
+				if (svg != null) {
+					g.appendChild(svg);
+				}
+			}
 		}
 		return g;
 	}

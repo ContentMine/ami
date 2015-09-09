@@ -52,7 +52,9 @@ public class NexmlEdge extends NexmlElement {
 		this.node[0] = nexmlNode0;
 		this.setSource(node[0].getId());
 		this.node[1] = nexmlNode1;
-		this.setTarget(node[1].getId());
+		if (node[1] != null) {
+			this.setTarget(node[1].getId());
+		}
 		
 		LOG.trace("edge: "+node[0]+"; "+node[1]);
 	}

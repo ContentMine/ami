@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.diagrams.DiagramTree;
 import org.xmlcml.euclid.Int2;
+import org.xmlcml.euclid.Util;
 import org.xmlcml.image.pixel.PixelEdge;
 import org.xmlcml.image.pixel.PixelEdgeList;
 import org.xmlcml.image.pixel.PixelNode;
@@ -137,6 +138,7 @@ public class NexmlFactory {
 			}
 			String targetId = edge.getTargetId();
 			String sourceId = edge.getSourceId();
+			if (targetId == null || sourceId == null) continue;
 			int compare = targetId.compareTo(sourceId);
 			if (compare == 0) {
 				argProcessor.TREE_LOG().error("edge target "+targetId+" == source "+sourceId);
@@ -230,7 +232,9 @@ public class NexmlFactory {
 		NexmlNode node0 = nexmlEdge.getNexmlNode(0);
 		node0.addNexmlEdge(nexmlEdge);
 		NexmlNode node1 = nexmlEdge.getNexmlNode(1);
-		node1.addNexmlEdge(nexmlEdge);
+		if (node1 != null) {
+			node1.addNexmlEdge(nexmlEdge);
+		}
 	}
 
 //	private void addChildrenAndDirectionality1(NexmlNode parentNexmlNode) {

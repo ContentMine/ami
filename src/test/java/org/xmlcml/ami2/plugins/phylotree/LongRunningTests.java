@@ -5,13 +5,13 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.vafer.jdeb.shaded.compress.io.FilenameUtils;
 import org.xmlcml.ami2.AMIFixtures;
@@ -25,13 +25,15 @@ import org.xmlcml.norma.editor.SubstitutionEditor;
 import org.xmlcml.norma.image.ocr.HOCRReader;
 import org.xmlcml.xml.XMLUtil;
 
-@Ignore("remove exception for development")
+//@Ignore("remove exception for development")
 public class LongRunningTests {
 
 	public static final Logger LOG = Logger.getLogger(LongRunningTests.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+	
+	public final static String PHYLO = "./target/appassembler/bin/ami2-phylotree";
 
 	public final static String SUFFIX = ".pbm.png";
 	private static String[] BAD_ROOTS = {
@@ -151,11 +153,17 @@ public class LongRunningTests {
 		}
 	}
 
-	private void extractTreeNewickNexml(String baseFile, File pngFile) throws IOException {
+	private void extractTreeNewickNexml(String baseFile, File pngFile) throws IOException, InterruptedException {
+//		long millis = 30000; // 30 secs
 		String baseName = FilenameUtils.getBaseName(pngFile.toString());
 		String name = FilenameUtils.getName(pngFile.toString());
 		File normaTempCTree = new File(baseFile+baseName+"/");
 		File normaImageDir = new File(normaTempCTree, "image/");
+		if (normaImageDir.exists() && new File(normaTempCTree, "log.xml").exists()) {
+			LOG.debug(normaImageDir+" already exists");
+			return;
+		}
+		LOG.debug("processing: "+normaImageDir);
 		normaImageDir.mkdirs();
 		File normaImage = new File(normaImageDir, name);
 		FileUtils.copyFile(pngFile, normaImage);
@@ -171,8 +179,41 @@ public class LongRunningTests {
 				" --ph.nexml image/"+baseName+".nexml.xml"+
 				" --ph.summarize"+
 				"";
-		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor(cmd);
-		phyloTreeArgProcessor.runAndOutput();
+//		DefaultArgProcessor argProcessor = new PhyloTreeArgProcessor(cmd);
+//		argProcessor.runAndOutput();
+//		String cmd1 = PHYLO;
+		String cmd1 = PHYLO+" "+cmd;
+		String[] commands = cmd1.split("\\s+");
+		runCommand(commands, 300, 100);  
+	}
+
+	private void runCommand(String[] commands, int maxTries, int deltaTime) throws IOException,
+			InterruptedException {
+		ProcessBuilder processBuilder = new ProcessBuilder(commands);
+	    Process process = processBuilder.start();
+        int exitValue = -1;
+	    for (int i = 0; i < maxTries; i++) {
+	        // test it every deltaTime milliseconds
+	        Thread.sleep(deltaTime);
+	        exitValue = -1;
+	        try {
+	            exitValue = process.exitValue();
+	        } catch (IllegalThreadStateException e) {
+	            // this is thrown if the process has not yet terminated
+//	            System.out.println("step: "+i);
+	            continue;
+	        }
+	        // process has exited
+	        if (exitValue == 0) {
+//	            System.out.println("final steps: "+i);
+	            break;
+	        }
+	    }
+	    if (exitValue != 1) {
+	    	LOG.debug("failed to exit after "+(deltaTime+maxTries)+ " millis; terminated: ");
+	    }
+	    // destroy() process in all cases
+	    process.destroy();
 	}
 
 	/** 
@@ -202,15 +243,22 @@ public class LongRunningTests {
 	 * @throws Exception
 	 */
 	@Test
-	public void testProcess500AList() throws Exception {
+	public void testProcess500List() throws Exception {
 //		runBatch("../ijsem/500A/");
-		runBatch("../ijsem/500B/");
+//		runBatch("../ijsem/500B/");
+//		runBatch("../ijsem/500C/");
+//		runBatch("../ijsem/500D/");
+//		runBatch("../ijsem/500E/");
+//		runBatch("../ijsem/500F/");
+//		runBatch("../ijsem/500G/");
+//		runBatch("../ijsem/500H/");
+		runBatch("../ijsem/336J/");
 	}
 
 	private void runBatch(String dirName) {
-		File pngDir = new File(dirName);
-		pngDir.mkdirs();
+		File pngDir = new File(dirName, "pngs/");
 		Assert.assertTrue(""+pngDir, pngDir.exists());
+		LOG.debug("pngDir "+pngDir.getAbsolutePath());
 		List<File> pngList = new ArrayList<File>(FileUtils.listFiles(pngDir, new String[]{"png"}, false));
 		for (File pngFile : pngList) {
 			try {
@@ -223,33 +271,54 @@ public class LongRunningTests {
 	}
 
 	@Test
-		/** 
-		 * development of new options in ami-phylo
-		 * 
-		 * @throws Exception
-		 */
-		// LONG
-	//	@Ignore("requires tesseract")
-		public void testProcess15PngList() throws Exception {
-			List<File> pngList = new ArrayList<File>(FileUtils.listFiles(new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree"), new String[]{"png"}, false));
-			for (File pngFile : pngList) {
-				extractTreeNewickNexml("target/phylo", pngFile);
-			}
+	/** 
+	 * development of new options in ami-phylo
+	 * 
+	 * @throws Exception
+	 */
+	// LONG
+//	@Ignore("requires tesseract")
+	public void testProcess15PngList() throws Exception {
+		List<File> pngList = new ArrayList<File>(FileUtils.listFiles(new File(AMIFixtures.TEST_PHYLO_DIR, "15goodtree"), new String[]{"png"}, false));
+		for (File pngFile : pngList) {
+			extractTreeNewickNexml("target/phylo", pngFile);
 		}
+	}
 
 	/** 
-		 * development of new options in ami-phylo
-		 * 
-		 * @throws Exception
-		 */
-		@Test
-		// LONG
-	//	@Ignore("requires tesseract")
-		public void testProcess50PngList() throws Exception {
-			File pngDir = new File(AMIFixtures.TEST_PHYLO_DIR, "50images/");
-			List<File> pngList = new ArrayList<File>(FileUtils.listFiles(pngDir, new String[]{"png"}, false));
-			for (File pngFile : pngList) {
-				extractTreeNewickNexml("target/phylo", pngFile);
-			}
+	 * development of new options in ami-phylo
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	// LONG
+//	@Ignore("requires tesseract")
+	public void testProcess50PngList() throws Exception {
+		File pngDir = new File(AMIFixtures.TEST_PHYLO_DIR, "50images/");
+		List<File> pngList = new ArrayList<File>(FileUtils.listFiles(pngDir, new String[]{"png"}, false));
+		for (File pngFile : pngList) {
+			extractTreeNewickNexml("target/phylo", pngFile);
 		}
+	}
+	
+	@Test
+	public void testProcess() throws IOException, InterruptedException {
+		ProcessBuilder processBuilder = new ProcessBuilder("sleep", "1");
+		Process process = processBuilder.start();
+		for (int i = 0; i < 3000; i++) {
+		    Thread.sleep(100); // 100 sec
+			int exitValue = -1;
+			try {
+				exitValue = process.exitValue();
+			} catch (IllegalThreadStateException e) {
+				System.out.println("step: "+i);
+				continue;
+			}
+		    if (exitValue == 0) {
+		    	System.out.println("final steps: "+i);
+		    	break;
+		    }
+		}
+		process.destroy();	
+	}
 }
