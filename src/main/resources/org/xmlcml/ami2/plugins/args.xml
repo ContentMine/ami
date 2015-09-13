@@ -1,4 +1,5 @@
-<argList name="ami" version="0.1.16">
+<argList name="ami" version="0.1.17">
+  <!-- 20150912 added RRID -->
   <!-- added log file -->
   <!-- added and tested tip deletion for corrupted nodes -->
   <!-- 20150821 refactoring of nexml processing (not yet finished) -->

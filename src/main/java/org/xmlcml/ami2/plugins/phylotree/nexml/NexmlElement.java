@@ -61,7 +61,7 @@ public class NexmlElement extends Element {
 		} else if (tag.equals(NexmlTrees.TAG)) {
 			newElement = new NexmlTrees();
 		} else {
-			LOG.debug("unsupported NexML element: "+tag);
+			LOG.error("unsupported NexML element: "+tag);
 		}
 		copyAttributesAndProcessDescendants(element, newElement);
         return newElement;

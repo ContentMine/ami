@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.apache.xml.serialize.OutputFormat;
 import org.xmlcml.cmine.lookup.AbstractLookup;
 
 public class GenbankLookup extends AbstractLookup {
@@ -24,7 +25,9 @@ http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=34577062,
 http://www.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term="+genbank_id+"GENBANK_ID	 */
 	
 	public String lookup(String genbankId) throws IOException {
-		URL url = new URL("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id="+genbankId+"&retmode=xml");
+		urlString = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id="+genbankId;
+		setOutputFormat("&retmode=xml");
+		url = createUrl();
 		return getResponse(url);
 	}
 
@@ -35,8 +38,8 @@ http://www.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term="+genbank_id
 			if (i > 0) sb.append(",");
 			sb.append(genbankId.get(i));
 		}
-		sb.append("&retmode=xml");
-		URL url = new URL(sb.toString());
+		setOutputFormat("&retmode=xml");
+		url = createUrl();
 		return getResponse(url);
 	}
 

@@ -111,7 +111,7 @@ public class NexmlFactory {
 		if (rootPixelNode == null) {
 			rootPixelNode = diagramTree.getGraph().getRootPixelNode();
 			if (rootPixelNode == null) {
-				LOG.debug("NO ROOT NODE");
+				LOG.error("NO ROOT NODE");
 			}
 		}
 		addNodes(pixelNodeList, rootPixelNode);
@@ -120,7 +120,7 @@ public class NexmlFactory {
 		checkEdges();
 		addEdgesToNodes();
 		if (rootNexmlNode == null) {
-			LOG.debug("NULL ROOT NODE");
+			LOG.error("NULL ROOT NODE");
 		} else {
 			recursionCounter = nexmlEdgeList.size()+50;
 			processedEdges = new HashSet<NexmlEdge>();
@@ -289,7 +289,7 @@ public class NexmlFactory {
 		}
 		NexmlNode grandParentNode = parentNexmlNode.getParentNexmlNode();
 		if (grandParentNode != null) {
-			LOG.debug(parentNexmlNode.getId()+" parent already has parent: "+grandParentNode);
+			LOG.error(parentNexmlNode.getId()+" parent already has parent: "+grandParentNode);
 			return;
 		}
 		String parentId = parentNexmlNode.getId();

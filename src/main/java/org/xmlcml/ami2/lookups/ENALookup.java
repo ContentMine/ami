@@ -45,8 +45,8 @@ http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&term="Goril
 			if (i > 0) sb.append(",");
 			sb.append(genbankId.get(i));
 		}
-		sb.append("&retmode=xml");
-		URL url = new URL(sb.toString());
+		setOutputFormat("&retmode=xml");
+		urlString = sb.toString();
 		return getResponse(url);
 	}
 

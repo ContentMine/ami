@@ -47,6 +47,7 @@ public class AMIFixtures {
 	public final static File TEST_IJSEM_MALARIA_0119475  = new File(AMIFixtures.TEST_IJSEM_DIR, "journal.pone.0119475");
 
 	public final static File TEST_PHYLO_DIR          = new File(AMIFixtures.TEST_AMI_DIR, "phylo");
+	public final static File TEST_RRID_DIR           = new File(AMIFixtures.TEST_AMI_DIR, "rrid/");
 
 	public static final File TEST_WORD_EXAMPLES      = new File(TEST_AMI_DIR, "word/examples");
 	public static final File EXAMPLES_TEMP_16_1_1  = new File("target/examples_16_1_1");

@@ -188,7 +188,7 @@ public class NWKTree {
 					Element child = childElements.get(i);
 					width += getWidth(child);
 				}
-				LOG.debug(size+"/"+width);
+				LOG.trace(size+"/"+width);
 			}
 			width = Math.max(1,  width);
 			addWidth(next, width);

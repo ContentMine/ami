@@ -17,6 +17,8 @@
 		<value fields="meta.orcid" url="http://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier">http://orcid\.org/(\d{4}-){3}\d{3}[\dX]</value>
 		<value fields="clin.nct">NCT\d{8}</value>
 		<value fields="clin.isrctn">ISRCTN.{0,20}\d{8}</value>
+		<!-- example AB_1004986 -->
+		<value fields="rrid.ab" lookup="https://scicrunch.org/resources/Antibodies/search?q=${match}">RRID:(AB_\d+)</value>
 	</arg>	
 	
     <arg name="type"
@@ -27,7 +29,8 @@
 	    countRange="{1,*}"
 	    >
 	    <help>
-	    The types/codes of the identifier to use at runtime. This argument should come AFTER id.regexfile (sorry, we'll correct this later)
+	    The types/codes of the identifier to use at runtime. This argument should come AFTER id.regexfile 
+	    (sorry, we'll correct this later)
 	    </help>
 	</arg>
     

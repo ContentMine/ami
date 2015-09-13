@@ -111,7 +111,7 @@ public class GBIFLookup extends AbstractLookup {
 http://api.gbif.org/v1/species/search?q=Puma&rank=GENUS
 */	
 	public String lookup(String commonName) throws IOException {
-		URL url = new URL("http://api.gbif.org/v1/species/search?q="+commonName+"");
+		urlString = "http://api.gbif.org/v1/species/search?q="+commonName;
 		return getResponse(url);
 	}
 

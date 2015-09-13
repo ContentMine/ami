@@ -22,7 +22,7 @@ public class NWKLength {
 	private Double length;
 
 	public NWKLength(String s) {
-		LOG.debug("length: "+s);
+		LOG.trace("length: "+s);
 		this.length = Double.parseDouble(s);
 	}
 

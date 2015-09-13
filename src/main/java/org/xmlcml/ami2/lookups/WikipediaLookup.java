@@ -228,7 +228,7 @@ Mar 14 (9 days ago)
 			urlString += property+":"+ESC_QUOTE+name+ESC_QUOTE;
 		}
 		urlString += "]&props="+property;
-		LOG.debug("URL: "+urlString);
+		LOG.trace("URL: "+urlString);
 		URL url = null;
 		try {
 			url = new URL(urlString);

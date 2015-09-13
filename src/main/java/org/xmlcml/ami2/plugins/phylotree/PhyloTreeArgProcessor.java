@@ -214,7 +214,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	// =============================
 
 	private void outputResults() {
-		LOG.debug("cTreeLog: "+TREE_LOG());
+		LOG.trace("cTreeLog: "+TREE_LOG());
 		/**
 	private String newickFile;
 	private String nexmlFile;

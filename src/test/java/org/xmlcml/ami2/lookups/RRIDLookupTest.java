@@ -12,9 +12,9 @@ import org.junit.Test;
 import org.xmlcml.cmine.lookup.AbstractLookup;
 import org.xmlcml.xml.XMLUtil;
 
-public class GenbankLookupTest {
+public class RRIDLookupTest {
 
-	private static final Logger LOG = Logger.getLogger(GenbankLookupTest.class);
+	private static final Logger LOG = Logger.getLogger(RRIDLookupTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}

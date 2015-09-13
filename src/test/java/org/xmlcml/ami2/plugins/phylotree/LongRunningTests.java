@@ -5,13 +5,13 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.vafer.jdeb.shaded.compress.io.FilenameUtils;
 import org.xmlcml.ami2.AMIFixtures;
@@ -25,7 +25,7 @@ import org.xmlcml.norma.editor.SubstitutionEditor;
 import org.xmlcml.norma.image.ocr.HOCRReader;
 import org.xmlcml.xml.XMLUtil;
 
-//@Ignore("remove exception for development")
+@Ignore("remove exception for development")
 public class LongRunningTests {
 
 	public static final Logger LOG = Logger.getLogger(LongRunningTests.class);

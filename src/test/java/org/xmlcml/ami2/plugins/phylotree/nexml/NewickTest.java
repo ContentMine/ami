@@ -47,33 +47,33 @@ public class NewickTest {
 	public void testReadNewick00() {
 		NewickFactory factory = new NewickFactory();
 		NWKTree tree = factory.readNewick(NEWICK00);
-		LOG.debug("newick: "+tree.createNewick());
+		LOG.trace("newick: "+tree.createNewick());
 	}
 	
 	@Test
 	public void testReadNewick0() {
 		NewickFactory factory = new NewickFactory();
 		NWKTree tree = factory.readNewick(NEWICK0);
-		LOG.debug("newick: "+tree.createNewick());
+		LOG.trace("newick: "+tree.createNewick());
 	}
 	
 	@Test
 	public void testReadNewick2() {
 		NewickFactory factory = new NewickFactory();
 		NWKTree tree = factory.readNewick(NEWICK2);
-		LOG.debug("newick: "+tree.createNewick());
+		LOG.trace("newick: "+tree.createNewick());
 	}
 	
 	@Test
 	public void testReadNewick() throws IOException {
 		NewickFactory factory = new NewickFactory();
 		NWKTree tree = factory.readNewick(NEWICK);
-		LOG.debug("newick: "+tree.toString());
-		LOG.debug("newick: "+tree.createNewick());
+		LOG.trace("newick: "+tree.toString());
+		LOG.trace("newick: "+tree.createNewick());
 		Element xml = tree.createXML();
 		XMLUtil.debug(xml, new File("target/phylo/testxml.xml"), 1);
 		SVGG g = tree.createSVG();
-		LOG.debug("newick: "+g.toXML());
+		LOG.trace("newick: "+g.toXML());
 		SVGSVG.wrapAndWriteAsSVG(g, new File("target/phylo/testsvg.svg"));
 	}
 	
@@ -81,7 +81,7 @@ public class NewickTest {
 	public void testReadLargeTree() throws IOException {
 		NewickFactory factory = new NewickFactory();
 		NWKTree tree = factory.readNewick(new File(AMIFixtures.TEST_PHYLO_DIR, "supertree-analysis/strict1.tre"));
-		LOG.debug("newick: "+tree.createNewick());
+		LOG.trace("newick: "+tree.createNewick());
 		Element xml = tree.createXML();
 		XMLUtil.debug(xml, new File("target/phylo/strict1.xml"), 1);
 		SVGG g = tree.createSVG();

@@ -145,7 +145,7 @@ public class NexmlTree extends NexmlElement {
 		} else if (rootNodes.size() == 1) {
 			this.rootNexmlNode = rootNodes.get(0);
 		} else {
-			LOG.debug("Cannot process multiple roots: "+rootNodes.size());
+			LOG.warn("Cannot process multiple roots: "+rootNodes.size());
 		}
 	}
 	

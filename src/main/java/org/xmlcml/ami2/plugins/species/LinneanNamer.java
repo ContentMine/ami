@@ -154,7 +154,7 @@ public class LinneanNamer {
 					if (fullGenus == null) {
 						genusByAbbreviationMap.put(genusAbbreviation, linneanGenus);
 					} else if (!fullGenus.equals(linneanGenus)) {
-						LOG.error("Possible duplicate Genera for abbreviation ("+genusAbbreviation+") : "+fullGenus+", "+linneanGenus);
+						LOG.trace("Possible duplicate Genera for abbreviation ("+genusAbbreviation+") : "+fullGenus+", "+linneanGenus);
 					}
 				}
 				name = linneanName.getName();

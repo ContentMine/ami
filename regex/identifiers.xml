@@ -6,4 +6,6 @@
 	<regex fields="meta.orcid" url="http://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier">http://orcid\.org/(\d{4}-){3}\d{3}[\dX]</regex>
 	<regex fields="clin.nct">NCT\d{8}</regex>
 	<regex fields="clin.isrctn">ISRCTN.{0,20}\d{8}</regex>
+	<!-- example AB_1004986 -->
+	<regex fields="rrid.ab" lookup="https://scicrunch.org/resources/Antibodies/search?q=${match}">RRID:(AB_\d+)</regex>
 </compoundRegex>

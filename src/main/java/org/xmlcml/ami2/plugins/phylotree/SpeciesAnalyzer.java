@@ -62,7 +62,7 @@ public class SpeciesAnalyzer {
 		ensureBinomialSet();
 		List<File> nexmlFiles = new ArrayList<File>(FileUtils.listFiles(dir, new String[]{"nexml.xml"}, true));
 		for (File nexmlFile : nexmlFiles) {
-			LOG.debug(""+nexmlFile);
+			LOG.trace(""+nexmlFile);
 			NexmlNEXML nexml = null;
 			try {
 				nexml = (NexmlNEXML) NexmlElement.readAndCreateNEXML(nexmlFile);
