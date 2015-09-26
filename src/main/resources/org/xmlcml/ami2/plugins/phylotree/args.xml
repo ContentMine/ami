@@ -104,6 +104,20 @@
 		<p>Uses initLog as the record of what files to summarize</p>
 		</help>
 	</arg>	
-	
+
+<!-- 	still working on this
+	<arg name="delete" 
+		long="- -ph.delete" // change to minusminus later
+		args=" filename" 
+		countRange="{1,1}"
+		parseMethod="delete"
+		runMethod="delete"
+		>
+		<help>
+		<p>Deletes species from tips</p>
+		<p>removes tips with species listed in filename. Does not remove from OTUs</p>
+		</help>
+	</arg>	
+	-->
 </argList>
 			

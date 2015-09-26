@@ -59,31 +59,31 @@ public class AMIFixtures {
 
 	/** runs tests and compares expected and actual output.
 	 * 
-	 * @param cmDirectory contentMine directory
-	 * @param temp directory (will create)
+	 * @param cTreeDirectory contentMine directory
+	 * @param newDir directory (will create)
 	 * @param plugin plugin to use
 	 * @param pluginAndOptions directories for output (e.g. species/binomial/)
 	 * @throws IOException
 	 */
-	public static void runStandardTestHarness(File cmDirectory, File temp, AMIPlugin plugin, String args, String ... pluginAndOptions)
+	public static void runStandardTestHarness(File cTreeDirectory, File newDir, AMIPlugin plugin, String args, String ... pluginAndOptions)
 			throws IOException {
 		LOG.trace("++++++++++++++++++++++   harness   +++++++++++++++++++++++");
-		LOG.trace("temp exists: "+temp+"; e: "+temp.exists()+"; d "+temp.isDirectory());
-		CMDir cmDir = new CMDir(cmDirectory);
-		FileUtils.deleteDirectory(temp);
-		cmDir.copyTo(temp, true);
+		LOG.trace("newDir exists: "+newDir+"; e: "+newDir.exists()+"; d "+newDir.isDirectory());
+		CMDir cTree = new CMDir(cTreeDirectory);
+		if (newDir.exists()) FileUtils.deleteDirectory(newDir);
+		cTree.copyTo(newDir, true);
 		
-		Assert.assertFalse("exists? "+RESULTS_XML, cmDir.hasResultsDir());
+		Assert.assertFalse("exists? "+RESULTS_XML, cTree.hasResultsDir());
 		DefaultArgProcessor argProcessor = (DefaultArgProcessor) plugin.getArgProcessor();
 		argProcessor.parseArgs(args);
 		argProcessor.runAndOutput();
-		List<File> files = new ArrayList<File>(FileUtils.listFiles(temp, null, true));
+		List<File> files = new ArrayList<File>(FileUtils.listFiles(newDir, null, true));
 		LOG.trace("FILES after: "+files);
 		LOG.trace("==========================="+argProcessor+"=============================");
-		LOG.trace("results exists? "+new File(temp,"results").exists());
+		LOG.trace("results exists? "+new File(newDir,"results").exists());
 		
 		for (String pluginAndOption : pluginAndOptions) {
-			AMIFixtures.compareExpectedAndResults(cmDir.getDirectory(), temp, pluginAndOption, RESULTS_XML);
+			AMIFixtures.compareExpectedAndResults(cTree.getDirectory(), newDir, pluginAndOption, RESULTS_XML);
 		}
 	}
 

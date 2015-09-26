@@ -50,8 +50,8 @@ public class NameMultimap {
 		} catch (IOException e) {
 			throw new RuntimeException("Cannot read species list: "+SPECIES_LIST);
 		}
-		LOG.debug(nameByKeyMap.keySet().size());
-		LOG.debug(keyByNameMap.keySet().size());
+		LOG.trace(nameByKeyMap.keySet().size());
+		LOG.trace(keyByNameMap.keySet().size());
 	}
 
 	private void addLine(String line) {

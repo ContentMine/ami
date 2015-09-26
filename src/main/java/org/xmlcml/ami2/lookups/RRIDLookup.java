@@ -13,6 +13,8 @@ import org.xmlcml.cmine.lookup.AbstractLookup;
 public class RRIDLookup extends AbstractLookup {
 
 	
+	private static final String HTTPS_SCICRUNCH_ORG_RESOURCES_ANTIBODIES_SEARCH_Q = "https://scicrunch.org/resources/Antibodies/search?q=";
+	private static final String HTTPS_SCICRUNCH_ORG_RESOLVER = "https://scicrunch.org/resolver/";
 	private static final Logger LOG = Logger.getLogger(RRIDLookup.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -26,13 +28,13 @@ public class RRIDLookup extends AbstractLookup {
 	*/
 
 	public String lookup(String rrid) throws IOException {
-		urlString = "https://scicrunch.org/resolver/"+rrid;
-//		if (outputFormat == null) {
-//			urlString = "https://scicrunch.org/resources/Any/search?q="+rrid;
-//		} else if (outputFormat.equals(".xml")) {
-//			urlString = "https://scicrunch.org/resolver/"+rrid;
-//		}
+		urlString = getHtmlUrl(rrid);
 		return getResponse();
+	}
+
+	public String getHtmlUrl(String rrid) {
+		String urlS = HTTPS_SCICRUNCH_ORG_RESOLVER+rrid;
+		return urlS;
 	}
 	
 	/**
@@ -44,9 +46,13 @@ public class RRIDLookup extends AbstractLookup {
 	 */
 		
 	public String lookupAntibody(String rrid) throws IOException {
-		urlString = "https://scicrunch.org/resources/Antibodies/search?q="+rrid;
+		urlString = getAntibodyUrl(rrid);
 		return getResponse(url);
 	}
 
+	public String getAntibodyUrl(String rrid) {
+		String urlS = HTTPS_SCICRUNCH_ORG_RESOURCES_ANTIBODIES_SEARCH_Q+rrid;
+		return urlS;
+	}
 		
 }

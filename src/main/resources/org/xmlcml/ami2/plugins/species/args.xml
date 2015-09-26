@@ -12,10 +12,10 @@
     This runs the search - there are no argument values. 
 		</help>
 		<!-- NEVER search HTML with regexes, but here it's safe -->
-		<!--  Foo bar or F. Bar -->
-		<value name="binomial">&lt;i>\s*(([A-Z][a-z]?\.|[A-Z][a-z]+)\s+[a-z]+)\s*&lt;/i></value> 
-		<!--  genus without following sp, etc -->
-		<value name="genus">&lt;i>\s*([A-Z][a-z]+)\s*&lt;/i>(?=\s+[^s])</value> 
+		<!--  Fooo bar or F. Bar ; assme at least 4 characters (misses some short ones Pan, Aa, etc.)-->
+		<value name="binomial">&lt;i>\s*(([A-Z][a-z]?\.|[A-Z][a-z]{3,})\s+[a-z]+)\s*&lt;/i></value> 
+		<!--  genus without following sp, etc. Assume at least Aaaa -->
+		<value name="genus">&lt;i>\s*([A-Z][a-z]{3,})\s*&lt;/i>(?=\s+[^s])</value> 
 		<!-- Foo sp , Foo spp or Foo species -->
 		<value name="genussp">&lt;i>\s*([A-Z][a-z]+)\s*&lt;/i>\s*spp?(?=\p{Punct}|\s)</value> 
 	</arg>	

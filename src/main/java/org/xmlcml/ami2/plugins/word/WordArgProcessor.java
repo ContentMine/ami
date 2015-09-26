@@ -247,12 +247,12 @@ public class WordArgProcessor extends AMIArgProcessor {
 
 	public WordResultsElementList aggregateOverCMDirList(String pluginName, String methodName) {
 		WordResultsElementList resultsElementList = new WordResultsElementList();
-		for (CMDir cmDir : cmDirList) {
-			ResultsElement resultsElement = cmDir.getResultsElement(pluginName, methodName);
+		for (CMDir cTree : cTreeList) {
+			ResultsElement resultsElement = cTree.getResultsElement(pluginName, methodName);
 			if (resultsElement == null) {
-				LOG.error("Null results element, skipped "+cmDir.getDirectory());
+				LOG.error("Null results element, skipped "+cTree.getDirectory());
 			} else {
-				WordResultsElement wordResultsElement = new WordResultsElement(cmDir.getResultsElement(pluginName, methodName));
+				WordResultsElement wordResultsElement = new WordResultsElement(cTree.getResultsElement(pluginName, methodName));
 				resultsElementList.add(wordResultsElement);
 			}
 		}

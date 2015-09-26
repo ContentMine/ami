@@ -39,9 +39,9 @@ public class PhyloArgProcessorTest {
 	 */
 	@Ignore("requires tesseract")
 	public void testPhyloHarness() throws Exception {
-		CMDir cmDir = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000174_0"));
+		CMDir cTree = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000174_0"));
 		File normaTemp = new File("target/phylo/ijs_0_000174_0");
-		cmDir.copyTo(normaTemp, true);
+		cTree.copyTo(normaTemp, true);
 		String cmd = "--ph.phylo -q target/phylo/ijs_0_000174_0 -i image/000.pbm.png -o target/phylo/junk.xml"; 
 		new PhyloTreeArgProcessor(cmd).runAndOutput();
 	}
@@ -54,9 +54,9 @@ public class PhyloArgProcessorTest {
 	@Ignore("requires tesseract") // uncomment later
 	public void testCommandLine() throws Exception {
 		String name = "ijs_0_000364_0"; String img = "003";
-		CMDir cmDir = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
+		CMDir cTree = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
 		File normaTemp = new File("target/phylo/"+name);
-		cmDir.copyTo(normaTemp, true);
+		cTree.copyTo(normaTemp, true);
 //		String cmd = "--ph.phylo -q target/phylo/"+name+" -i image/"+img+".pbm.png -o target/phylotest/"+name; 
 		String cmd = "--ph.phylo -q target/phylo/"+name+" -i image/"+img+".pbm.png"; 
 		new PhyloTreeArgProcessor(cmd).runAndOutput();
@@ -72,9 +72,9 @@ public class PhyloArgProcessorTest {
 	public void testFullCommandLine() throws Exception {
 		String name = "ijs_0_000364_0"; 
 		String img = "003";
-		CMDir cmDir = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
+		CMDir cTree = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
 		File normaTemp = new File("target/phylo/"+name);
-		cmDir.copyTo(normaTemp, true);
+		cTree.copyTo(normaTemp, true);
 		String cmd = "--ph.phylo -q target/phylo/"+name+
 				" -i image/"+img+".pbm.png"+
 				" --log"+
@@ -106,11 +106,11 @@ public class PhyloArgProcessorTest {
 
 	private void runExtraction(File dir, String name, String img) throws IOException,
 			FileNotFoundException {
-		File cmDirDir = new File(dir, name);
-		Assert.assertTrue("file exists: "+cmDirDir, cmDirDir.exists());
-		CMDir cmDir = new CMDir(cmDirDir);
+		File cTreeDir = new File(dir, name);
+		Assert.assertTrue("file exists: "+cTreeDir, cTreeDir.exists());
+		CMDir cTree = new CMDir(cTreeDir);
 		File normaTemp = new File("target/phylo/"+name);
-		cmDir.copyTo(normaTemp, true);
+		cTree.copyTo(normaTemp, true);
 		Assert.assertTrue("file exists: "+normaTemp, normaTemp.exists());
 		String cmd = "--ph.phylo -q target/phylo/"+name+
 				" -i image/"+img+".pbm.png"+

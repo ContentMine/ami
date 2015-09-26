@@ -87,7 +87,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	 * @param option
 	 */
 	private void outputResultElementsx(ArgumentOption option) {
-		ContentProcessor currentContentProcessor = currentCMDir.getOrCreateContentProcessor();
+		ContentProcessor currentContentProcessor = currentCTree.getOrCreateContentProcessor();
 		currentContentProcessor.clearResultsElementList();
 		if (resultsByCompoundRegex == null) {
 			LOG.warn("have not run regex (runRegex)");

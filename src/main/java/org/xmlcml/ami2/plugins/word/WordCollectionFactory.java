@@ -80,15 +80,15 @@ public class WordCollectionFactory {
 	}
 
 	private void createWordSets() {
-		CMDir currentCMDir = wordArgProcessor.getCurrentCMDir();
+		CMDir currentCTree = wordArgProcessor.getCurrentCMDir();
 		List<String> rawWords = null;
-		if (currentCMDir != null) {
-			if (currentCMDir.hasScholarlyHTML()) {
-				rawWords = currentCMDir.extractWordsFromScholarlyHtml();
-			} else if (currentCMDir.hasFulltextPDFTXT()) {
-				rawWords = currentCMDir.extractWordsFromPDFTXT();
+		if (currentCTree != null) {
+			if (currentCTree.hasScholarlyHTML()) {
+				rawWords = currentCTree.extractWordsFromScholarlyHtml();
+			} else if (currentCTree.hasFulltextPDFTXT()) {
+				rawWords = currentCTree.extractWordsFromPDFTXT();
 			} else {
-				LOG.warn("No scholarlyHtml or PDFTXT: "+currentCMDir.getDirectory());
+				LOG.warn("No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory());
 			}
 		}
 		createCurrentWords(rawWords);

@@ -75,13 +75,13 @@ public class RegressionDemoTest {
 	@Test
 	public void testSequenceHarness() throws Exception {
 		// SHOWCASE
-		String cmd = "--sq.sequence --context 35 50 --sq.type dna prot -q target/plosone/sequences/ -i scholarly.html"; 
+		String cmd = "--sq.sequence --context 35 50 --sq.type dnaprimer prot1 -q target/plosone/sequences/ -i scholarly.html"; 
 		AMIFixtures.runStandardTestHarness(
 				new File("src/test/resources/org/xmlcml/ami2/regressiondemos/journal.pone.0121780/"), 
 				new File("target/plosone/sequences/"), 
 				new SequencePlugin(),
 				cmd,
-				"sequence/dna/", "sequence/prot/");
+				"sequence/dnaprimer/", "sequence/prot1/");
 	}
 
 	

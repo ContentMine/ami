@@ -136,7 +136,7 @@ public class ClinicalTrialsDemo {
 	private static void runRegex() throws IOException {
 //		FileUtils.copyDirectory(new File("trialsdata/"), new File("trialstemp/"));
 		String[] args = {
-				"-q", "trialstemp/", // contains 86 CMDir files
+				"-q", "trialstemp/", // contains 86 CTree files
 				"-i", "scholarly.html",
 				"-o", "results.xml",
 				"--context", "40", "40",

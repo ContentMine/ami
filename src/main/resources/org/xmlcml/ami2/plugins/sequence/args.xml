@@ -10,25 +10,44 @@
 		<help>
     This runs the search - there are no argument values. 
 		</help>
+		<!--  DNA -->
+		<!-- back compatibility for dnaprimer only, obsolete this -->
+		<value name="dna">5['\u2019]\-?[ACGT]{6,}\-?3['\u2019]</value> 
+		<!--  raw dna -->
+		<value name="dnaraw">\b[ACGT]{6,}\b</value> 
 		<!-- 5’-CCTACGGGAGGCAGCAG-3’ --> 
-		<value name="dna">5['’]\-?[ACGTRYNWSKBHDV]{6,}\-?3['’]</value> <!-- allow for 5' and 3' ends.   -->
-		<value name="rna">[ACGU]{6,}</value>
-		<value name="prot">[ACDEFGHIKLMNPQRSTVWY]{10,}[\s\.]</value> <!-- many false positives from abbreviations -->
+		<!-- primers with weak matches, etc.-->
+		<value name="dnaprimer">5['\u2019]\-?[ACGTRYNWSKBHDV]{6,}\-?3['\u2019]</value> 
+		
+		<!--  RNA -->
+		<!--  obsolete this -->
+		<value name="rna">\b[ACGU]{6,}\b</value>
+		<!--  raw RNA -->
+		<value name="rnaraw">\b[ACGU]{6,}\b</value>
+		
+		<!--  proteins -->
+		<!-- obsolete this -->
+		<value name="prot">\b[ACDEFGHIKLMNPQRSTVWY]{10,}\b</value> 
+		<!-- 1-letter codes many false positives from abbreviations AND Nucleic -->
+		<value name="prot1">\b[ACDEFGHIKLMNPQRSTVWY]{10,}\b</value> 
+		<!-- 3-letter codes -->
 		<value name="prot3">(Ala\-?|Cys\-?|Asp\-?|Glu\-?|Phe\-?|Gly\-?|His\-?|Ile\-?|Lys\-?|Leu\-?|Met\-?|Asn\-?|Pro\-?|Gln\-?|Arg\-?|Ser\-?|Thr\-?|Val\-?|Trp\-?|Tyr\-?){2,}</value>
-		<value name="carb3">(Glc\-?|Man\-?|Gal\-?|Rib\-?|Xyl\-?){2,}</value> <!-- a placeholder; no stereochemistry or branches-->
+		
+		<!-- carbohydrates -->
+		<!-- a placeholder; no stereochemistry or branches-->
+		<value name="carb3">(Glc\-?|Man\-?|Gal\-?|Rib\-?|Xyl\-?){2,}</value> 
 	</arg>	
 	
 	<arg name="type"
 	    long="--sq.type"
 	    args="type"
 	    class="java.lang.String"
-	    pattern="(dna|rna|prot|prot3|carb3)"
+	    pattern="(dna|dnaraw|dnaprimer|rna|rnaraw|prot|prot1|prot3|carb3)"
 	    parseMethod="parseTypes"
 	    countRange="{1,*}"
 	    >
 	    <help>
-	    The type of the sequence. All sequences are 1-letter unless they have a trailing digit (prot3 = "Gly", etc.).
-	    This list will almost certainly increase
+	    The type of the sequence. see above.
 	    </help>
 	</arg>
 

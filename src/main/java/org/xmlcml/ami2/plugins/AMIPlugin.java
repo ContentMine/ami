@@ -15,7 +15,7 @@ public class AMIPlugin {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-	public final static String VERSION = "2.0.1"; // arbitrary
+//	public final static String VERSION = "2.0.1"; // arbitrary
 	public static final String ORG_XMLCML_AMI_PLUGIN = "/org/xmlcml/ami2/plugins/";
 	public static final String ORG_XMLCML_AMI_CLASSNAME = "org.xmlcml.ami2.plugins";
 
@@ -35,14 +35,14 @@ public class AMIPlugin {
 	}
 	
 	public AMIPlugin() {
-		writeVersion();
+		new AMIArgProcessor().printVersion();
 		// default - should be overridden
 		this.argProcessor = null;
 	}
 
-	private void writeVersion() {
-		System.err.println(VERSION);
-	}
+//	private void writeVersion() {
+//		new AMIArgProcessor().printVersion();
+//	}
 
 	protected DefaultArgProcessor argProcessor;
 
@@ -58,7 +58,7 @@ public class AMIPlugin {
 				throw new RuntimeException("Cannot find class for plugin: "+plugin);
 			}
 			LOG.trace("argProcessor: "+argProcessorName);
-			Class argProcessorClass = null;
+			Class<?> argProcessorClass = null;
 			try {
 				argProcessorClass = Class.forName(argProcessorName);
 			} catch (ClassNotFoundException e) {

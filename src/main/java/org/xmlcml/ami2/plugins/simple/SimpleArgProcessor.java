@@ -45,7 +45,7 @@ public class SimpleArgProcessor extends AMIArgProcessor {
 	}
 	
 	public void countWords(ArgumentOption option) {
-		words = currentCMDir.extractWordsFromScholarlyHtml();
+		words = currentCTree.extractWordsFromScholarlyHtml();
 	}
 
 	public void outputWordCounts(ArgumentOption option) {

@@ -192,7 +192,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	public void runPhylo(ArgumentOption option) {
 		LOG.trace("runPhylo on: "+inputList);
 		for (String input : inputList) {
-			File inputFile = new File(currentCMDir.getDirectory(), input);
+			File inputFile = new File(currentCTree.getDirectory(), input);
 			createTree(inputFile);
 		}
 	}
@@ -235,7 +235,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		./results/phylotree/<serial>.hocr.svg
 		./results/phylotree/<serial>.svg
 		*/
-		File resultsDir = new File(currentCMDir.getDirectory(), "results");
+		File resultsDir = new File(currentCTree.getDirectory(), "results");
 		File phyloTreeDir = new File(resultsDir, "phylotree");
 		
 		if (nexmlFilename != null && nexml != null) {

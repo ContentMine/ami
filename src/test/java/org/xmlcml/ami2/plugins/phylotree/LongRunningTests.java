@@ -71,10 +71,8 @@ public class LongRunningTests {
 	private void runPhyloEditing2Nexml(File phyloDir, String name) throws IOException,
 			FileNotFoundException {
 		LOG.debug("============="+name+"=============");
-//		CMDir cmDir = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
 		File normaTemp = new File("target/phylo/"+name+"/");
 		FileUtils.copyFile(new File(phyloDir, name+SUFFIX), new File(normaTemp, "image/"+name+SUFFIX));
-//		cmDir.copyTo(normaTemp, true);
 		String cmd = "--ph.phylo -q target/phylo/"+name+
 				" -i image/"+name+".pbm.png"+
 				" --log"+

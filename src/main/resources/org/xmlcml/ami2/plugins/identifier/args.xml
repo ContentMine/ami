@@ -43,6 +43,7 @@
 	    <help>
 	    Mandatory argument.
 	    Definition of the identifiers. The file should be the same format as for regex definitions.
+	    Uses heuristic to locate inputStream (classpth, then URL, then local filename)
 	    This argument should come BEFORE id.types (sorry, we'll correct this later)
 	    </help>
 	    <!-- these should be here at a later date 

@@ -18,6 +18,7 @@ import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
 import org.xmlcml.euclid.IntArray;
 import org.xmlcml.xml.XMLUtil;
 
+@Ignore // unless testing Lookup
 public class WikipediaLookupTest {
 
 	

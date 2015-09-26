@@ -71,11 +71,11 @@ public class LinneanNamer {
 			for (String speciesName : speciesNameList) {
 				LinneanName binomial = LinneanNamer.createBinomial(speciesName);
 				if (binomial == null) {
-					LOG.debug("null binomial: "+speciesName);
+					LOG.warn("null binomial: "+speciesName);
 				} else if (binomial.isSingleCharacterGenus()) {
 					
 					String genus = binomial.getGenus();
-					LOG.debug("genus: "+genus);
+					LOG.trace("genus: "+genus);
 					Collection<LinneanName> linneanNames = linneanNameByAbbreviationMap == null ? null :
 						linneanNameByAbbreviationMap.get(genus);
 					LinneanName fullLinnean = linneanNames == null || linneanNames.size() == 0 ? null :

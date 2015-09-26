@@ -101,9 +101,9 @@ public class Prototypes {
 	 * @throws Exception
 	 */
 	private static void createPDFImages(String name) throws Exception {
-		String cmDirName = "../norma/src/test/resources/org/xmlcml/norma/pubstyle/plosone/"+name+"/";
+		String cTreeName = "../norma/src/test/resources/org/xmlcml/norma/pubstyle/plosone/"+name+"/";
 		String targetName = "../ami-plugin/target/imagetest/";
-		FileUtils.copyDirectory(new File(cmDirName), new File(targetName));
+		FileUtils.copyDirectory(new File(cTreeName), new File(targetName));
 		new Norma().run("-q "+targetName+" -i fulltext.pdf -o images/ --transform pdf2images");
 	}
 	

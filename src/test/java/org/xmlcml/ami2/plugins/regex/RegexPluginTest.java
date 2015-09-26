@@ -68,9 +68,9 @@ public class RegexPluginTest {
 	@Test
 	// BMC has unusual XML
 	public void testRegexPlugins() throws IOException {
-		CMDir cmDir = new CMDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR);
+		CMDir cTree = new CMDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR);
 		File normaTemp = new File("target/bmc/regex/15_1_511_test");
-		cmDir.copyTo(normaTemp, true);
+		cTree.copyTo(normaTemp, true);
 		String[] args = {
 				"-q", normaTemp.toString(),
 				"-i", "scholarly.html",
@@ -96,9 +96,9 @@ public class RegexPluginTest {
 				new RegexPlugin(),
 				"-q "+target+" -i scholarly.html --context 25 40 --r.regex regex/consort0.xml",
 				"regex/consort0/");
-		CMDir cmDir = new CMDir(target);
+		CMDir cTree = new CMDir(target);
 		// this may alter it by reparsing
-		HtmlElement scholarlyHtml = cmDir.ensureScholarlyHtmlElement();
+		HtmlElement scholarlyHtml = cTree.ensureScholarlyHtmlElement();
 //		FileUtils.write(new File("target/consort0/text.html"), );
 		File resultsXml = new File(target, "results/regex/consort0/results.xml");
 		annotate(scholarlyHtml, resultsXml);

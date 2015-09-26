@@ -192,19 +192,12 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 
 	public List<? extends Element> ensureSectionElements() {
 		if (xPathProcessor != null) {
-			sectionElements = currentCMDir.extractSectionsFromScholarlyHtml(xPathProcessor.getXPath());
+			sectionElements = currentCTree.extractSectionsFromScholarlyHtml(xPathProcessor.getXPath());
 		} else {
-			sectionElements = extractPSectionElements(currentCMDir);
+			sectionElements = extractPSectionElements(currentCTree);
 		}
 		return sectionElements;
 	}
-
-//	public List<? extends Element> extractSectionElements(CMDir cmDir) {
-//		cmDir.ensureScholarlyHtmlElement();
-//		sectionElements = HtmlP.extractSelfAndDescendantIs(cmDir.htmlElement);
-//		return sectionElements;
-//	}
-
 
 	public String getPlugin() {
 		return plugin;
@@ -267,7 +260,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		for (String name : names) {
 			DefaultSearcher optionSearcher = (DefaultSearcher) searcherByNameMap.get(name);
 			if (optionSearcher == null) {
-				LOG.error("unknown optionType: "+name+"; skipped");
+				LOG.error("unknown optionType: "+name+"; allowed: "+searcherByNameMap);
 			} else {
 				searcherList.add(optionSearcher);
 			}
@@ -281,7 +274,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	}
 
 	protected void searchSectionElements() {
-		if (currentCMDir != null) {
+		if (currentCTree != null) {
 			ensureSectionElements();
 			for (DefaultSearcher searcher : searcherList) {
 				String name = searcher.getName();
@@ -290,7 +283,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 				resultsElement.lookup(lookupInstanceByName, lookupNames);
 				LOG.trace("exactList "+resultsElement.getExactList());
 				resultsElement.setAllResultElementNames(name);
-				currentCMDir.putInContentProcessor(name, resultsElement);
+				currentCTree.putInContentProcessor(name, resultsElement);
 			}
 		}
 	}
@@ -410,11 +403,11 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	}
 
 	public CMDir getCurrentCMDir() {
-		return currentCMDir;
+		return currentCTree;
 	}
 
 	protected ContentProcessor getOrCreateContentProcessor() {
-		return (currentCMDir == null) ? null : currentCMDir.getOrCreateContentProcessor();
+		return (currentCTree == null) ? null : currentCTree.getOrCreateContentProcessor();
 	}
 
 	public void addResultsElement(ResultsElement resultsElement) {
