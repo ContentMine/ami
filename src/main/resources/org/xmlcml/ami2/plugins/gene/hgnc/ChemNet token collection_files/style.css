@@ -1,0 +1,17 @@
+.identifier {
+        border: 1px solid #000;
+        padding: 0.5em;
+        font: 125%/2.5em Monaco, monospace;
+}
+
+.identifier .c0 {
+        /* padding: 0 1px; */
+        background: #fff;
+        color: #900;
+}
+
+.identifier .c1 {
+        /* padding: 0 1px; */
+        background: #fff;
+        color: #009;
+}

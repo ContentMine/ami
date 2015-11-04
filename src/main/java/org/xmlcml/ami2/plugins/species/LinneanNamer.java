@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.HashMultimap;
@@ -28,6 +29,8 @@ public class LinneanNamer {
 	private Multiset<LinneanName> linneanNameSet;
 
 	private Map<String, String> genusByAbbreviationMap;
+
+	private NameMultimap nameMultimap;
 	
 	public LinneanNamer() {
 		
@@ -43,7 +46,7 @@ public class LinneanNamer {
 	public static LinneanName createBinomial(String gs) {
 		LinneanName binomial = null;
 		if (gs != null) {
-			gs = gs.replaceAll("\\s+", " ");
+			gs = gs.replaceAll(DefaultArgProcessor.WHITESPACE, " ");
 			String[] ss = gs.split(" ");
 			if (ss.length == 2) {
 				binomial = new LinneanName(ss[0], ss[1]);
@@ -68,11 +71,11 @@ public class LinneanNamer {
 			for (String speciesName : speciesNameList) {
 				LinneanName binomial = LinneanNamer.createBinomial(speciesName);
 				if (binomial == null) {
-					LOG.debug("null binomial: "+speciesName);
+					LOG.warn("null binomial: "+speciesName);
 				} else if (binomial.isSingleCharacterGenus()) {
 					
 					String genus = binomial.getGenus();
-					LOG.debug("genus: "+genus);
+					LOG.trace("genus: "+genus);
 					Collection<LinneanName> linneanNames = linneanNameByAbbreviationMap == null ? null :
 						linneanNameByAbbreviationMap.get(genus);
 					LinneanName fullLinnean = linneanNames == null || linneanNames.size() == 0 ? null :
@@ -129,9 +132,14 @@ public class LinneanNamer {
 		List<String> newNameList = new ArrayList<String>();
 		genusByAbbreviationMap = new HashMap<String, String>();
 		for (String name : nameList) {
+			name = name.trim().replace("\\s*", "\\s");
+//			if (name.indexOf("\\.") == -1) {
+//				LOG.debug("non dot: "+name);
+//				continue;
+//			}
 			LinneanName linneanName = LinneanNamer.createBinomial(name);
 			if (linneanName == null) {
-				LOG.debug("Not a binomial");
+				LOG.trace("Not a binomial: "+name);
 			} else {
 				String genusAbbreviation = linneanName.getGenusAbbreviation();
 				String fullGenus = genusByAbbreviationMap.get(genusAbbreviation);
@@ -146,15 +154,44 @@ public class LinneanNamer {
 					if (fullGenus == null) {
 						genusByAbbreviationMap.put(genusAbbreviation, linneanGenus);
 					} else if (!fullGenus.equals(linneanGenus)) {
-						LOG.error("Possible duplicate Genera for abbreviation ("+genusAbbreviation+") : "+fullGenus+", "+linneanGenus);
+						LOG.trace("Possible duplicate Genera for abbreviation ("+genusAbbreviation+") : "+fullGenus+", "+linneanGenus);
 					}
 				}
 				name = linneanName.getName();
 			}
-//			LOG.debug(name);
 			newNameList.add(name);
 		}
 		return newNameList;
+	}
+	
+	/** looks up species by latin or common name or abbreviation.
+	 * 
+	 * Based on Casey Bergman's list of species (2008) with many thanks
+	 * 
+	 * @param name
+	 * @return
+	 */
+	public List<String> lookupByName(String name) {
+		ensureNameMultimap();
+		List<String> idList = nameMultimap.searchByNameValue(name);
+		return (idList == null ) ? new ArrayList<String>() : idList;
+	}
+
+	/** looks up species by NCBI id.
+	 * 
+	 * Based on Casey Bergman's list of species (2008) with many thanks
+	 * 
+	 * @param name
+	 * @return
+	 */
+	public List<String> lookupByNCBIId(String id) {
+		ensureNameMultimap();
+		List<String> nameList = nameMultimap.searchByKey(id);
+		return (nameList == null) ? null : nameList;
+	}
+
+	private void ensureNameMultimap() {
+		nameMultimap = new NameMultimap();
 	}
 
 }

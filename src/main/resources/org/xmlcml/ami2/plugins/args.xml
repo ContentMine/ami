@@ -1,4 +1,13 @@
-<argList name="ami">
+<argList name="ami" version="0.1.18">
+  <!-- 20150926 fixed RRID; fixed sequence and species; tidied debug -->
+  <!-- 20150913 added rrid to lookup -->
+  <!-- 20150912 added RRID -->
+  <!-- added log file -->
+  <!-- added and tested tip deletion for corrupted nodes -->
+  <!-- 20150821 refactoring of nexml processing (not yet finished) -->
+  <!-- 20150818 more debugging of ami-phylo; added genbank species files -->
+  <!-- 20150816 extensive ami-phylo stuff, coupled with revised norma -->
+  <!-- 20150808 extensive ami-phylo stuff, not yet finished -->
 	<arg name="context" 
 		long="--context"
 		args="characterExtent [characterExtent2]"
@@ -78,6 +87,7 @@
 		<help>
 		Looks up results in online sites. This can be overridden for specialist plugins. may be called at ResultElement creation or might be deferred to final.
 		</help>
+		<value name="rrid" className="org.xmlcml.ami2.lookups.RRIDLookup"/>
 		<value name="wikipedia" className="org.xmlcml.ami2.lookups.WikipediaLookup"/>
 		<value name="genbank" className="org.xmlcml.ami2.lookups.GenbankLookup"/>
 		<value name="pubmed" className="org.xmlcml.ami2.lookups.PubmedLookup"/>

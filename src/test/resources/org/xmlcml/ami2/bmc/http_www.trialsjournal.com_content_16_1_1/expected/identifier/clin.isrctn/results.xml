@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="clin.isrctn">
+ <result pre="Controlled Trial Number (" exact="ISRCTN): 13837944" post=", UK Clinical Research Network (UKCRN) S" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][8]/*[local-name()='p'][4]" name="clin.isrctn"/>
+</results>

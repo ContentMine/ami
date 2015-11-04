@@ -1,0 +1,1433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="EN">
+<front>
+<journal-meta><journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><!--===== Grouping journal title elements =====--><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta>
+<article-meta><article-id pub-id-type="publisher-id">09-PONE-RA-12983R1</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0008887</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline"><subject>Computational Biology/Genomics</subject><subject>Computational Biology/Transcriptional Regulation</subject><subject>Developmental Biology/Stem Cells</subject><subject>Genetics and Genomics/Epigenetics</subject><subject>Molecular Biology/Bioinformatics</subject><subject>Molecular Biology/DNA Methylation</subject><subject>Nutrition/Deficiencies</subject><subject>Obstetrics/Growth Retardation</subject></subj-group></article-categories><title-group><article-title>Cytosine Methylation Dysregulation in Neonates Following Intrauterine Growth Restriction</article-title><alt-title alt-title-type="running-head">Epigenetic Regulation in IUGR</alt-title></title-group><contrib-group>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple"><name name-style="western"><surname>Einstein</surname><given-names>Francine</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple"><name name-style="western"><surname>Thompson</surname><given-names>Reid F.</given-names></name><xref ref-type="aff" rid="aff2"><sup>2</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Bhagat</surname><given-names>Tushar D.</given-names></name><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Fazzari</surname><given-names>Melissa J.</given-names></name><xref ref-type="aff" rid="aff4"><sup>4</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Verma</surname><given-names>Amit</given-names></name><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Barzilai</surname><given-names>Nir</given-names></name><xref ref-type="aff" rid="aff5"><sup>5</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Greally</surname><given-names>John M.</given-names></name><xref ref-type="aff" rid="aff2"><sup>2</sup></xref><xref ref-type="aff" rid="aff5"><sup>5</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+</contrib-group><aff id="aff1"><label>1</label><addr-line>Department of Obstetrics, Gynecology and Women's Health, Albert Einstein College of Medicine, Bronx, New York, United States of America</addr-line>       </aff><aff id="aff2"><label>2</label><addr-line>Department of Genetics (Computational Genetics), Albert Einstein College of Medicine, Bronx, New York, United States of America</addr-line>       </aff><aff id="aff3"><label>3</label><addr-line>Department of Developmental and Molecular Biology, Albert Einstein College of Medicine, Bronx, New York, United States of America</addr-line>       </aff><aff id="aff4"><label>4</label><addr-line>Department of Epidemiology and Population Health, Albert Einstein College of Medicine, Bronx, New York, United States of America</addr-line>       </aff><aff id="aff5"><label>5</label><addr-line>Department of Medicine, and Center for Epigenomics, Albert Einstein College of Medicine, Bronx, New York, United States of America</addr-line>       </aff><contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Suter</surname><given-names>Catherine M.</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group><aff id="edit1">Victor Chang Cardiac Research Institute, Australia</aff><author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">nir.barzilai@einstein.yu.edu</email> (NB); <email xlink:type="simple">john.greally@einstein.yu.edu</email> (JMG)</corresp>
+<fn fn-type="con"><p>Conceived and designed the experiments: FE NB JMG. Performed the experiments: RFT TDB. Analyzed the data: RFT MF JMG. Contributed reagents/materials/analysis tools: FE RFT TDB AV. Wrote the paper: FE RFT MF NB JMG.</p></fn>
+<fn fn-type="conflict"><p>The authors have declared that no competing interests exist.</p></fn></author-notes><pub-date pub-type="collection"><year>2010</year></pub-date><pub-date pub-type="epub"><day>26</day><month>1</month><year>2010</year></pub-date><volume>5</volume><issue>1</issue><elocation-id>e8887</elocation-id><history>
+<date date-type="received"><day>18</day><month>9</month><year>2009</year></date>
+<date date-type="accepted"><day>4</day><month>1</month><year>2010</year></date>
+</history><!--===== Grouping copyright info into permissions =====--><permissions><copyright-year>2010</copyright-year><copyright-holder>Einstein et al</copyright-holder><license><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions><abstract><sec>
+<title>Background</title>
+<p>Perturbations of the intrauterine environment can affect fetal development during critical periods of plasticity, and can increase susceptibility to a number of age-related diseases (<italic>e.g.,</italic> type 2 diabetes mellitus; T2DM), manifesting as late as decades later. We hypothesized that this biological memory is mediated by permanent alterations of the epigenome in stem cell populations, and focused our studies specifically on DNA methylation in CD34+ hematopoietic stem and progenitor cells from cord blood from neonates with intrauterine growth restriction (IUGR) and control subjects.</p>
+</sec><sec>
+<title>Methods and Findings</title>
+<p>Our epigenomic assays utilized a two-stage design involving genome-wide discovery followed by quantitative, single-locus validation. We found that changes in cytosine methylation occur in response to IUGR of moderate degree and involving a restricted number of loci. We also identify specific loci that are targeted for dysregulation of DNA methylation, in particular the hepatocyte nuclear factor 4α (<italic>HNF4A</italic>) gene, a well-known diabetes candidate gene not previously associated with growth restriction <italic>in utero</italic>, and other loci encoding <italic>HNF4A</italic>-interacting proteins.</p>
+</sec><sec>
+<title>Conclusions</title>
+<p>Our results give insights into the potential contribution of epigenomic dysregulation in mediating the long-term consequences of IUGR, and demonstrate the value of this approach to studies of the fetal origin of adult disease.</p>
+</sec></abstract><funding-group><funding-statement>This work is supported by a research training scholarship from American Association of Obstetricians &amp; Gynecologists Foundation with the Society for Maternal-Fetal Medicine to F.E., grants from the National Institutes of Health to J.M.G. (HG004401, HD044078) and N.B. (AG21654 and AG18381) and by the Core laboratories of the Albert Einstein Diabetes Research and Training Center (DK 20541). R.F.T. was supported by a NIA T32 training grant, and by National Institutes of Health (NIH) MSTP Training Grant GM007288. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="11"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>The concept of fetal origin of adult disease suggests that early life conditions can “program” the fetus for a spectrum of adverse health outcomes as an adult <xref ref-type="bibr" rid="pone.0008887-Barker1">[1]</xref>. The link between intrauterine growth restriction (IUGR) and adult diseases such as type 2 diabetes and cardiovascular disease has been extensively supported by epidemiological <xref ref-type="bibr" rid="pone.0008887-Barker2">[2]</xref>, <xref ref-type="bibr" rid="pone.0008887-Egeland1">[3]</xref>, <xref ref-type="bibr" rid="pone.0008887-Jaquet1">[4]</xref>, <xref ref-type="bibr" rid="pone.0008887-Ravelli1">[5]</xref>, <xref ref-type="bibr" rid="pone.0008887-Ravelli2">[6]</xref>, <xref ref-type="bibr" rid="pone.0008887-RichEdwards1">[7]</xref> and animal <xref ref-type="bibr" rid="pone.0008887-Bertram1">[8]</xref>, <xref ref-type="bibr" rid="pone.0008887-Boloker1">[9]</xref>, <xref ref-type="bibr" rid="pone.0008887-Ozanne1">[10]</xref>, <xref ref-type="bibr" rid="pone.0008887-Simmons1">[11]</xref> studies. To date, reports have focused on characterizing the pathophysiological consequences of an adverse intrauterine environment, and have revealed dysregulation of gene expression and a variety of functional impairments in individual tissues (including liver <xref ref-type="bibr" rid="pone.0008887-Ozanne2">[12]</xref>, <xref ref-type="bibr" rid="pone.0008887-Vuguin1">[13]</xref>, skeletal muscle <xref ref-type="bibr" rid="pone.0008887-Jaquet1">[4]</xref>, <xref ref-type="bibr" rid="pone.0008887-Ozanne3">[14]</xref>, pancreas <xref ref-type="bibr" rid="pone.0008887-Dahri1">[15]</xref>, <xref ref-type="bibr" rid="pone.0008887-Stoffers1">[16]</xref>, kidney <xref ref-type="bibr" rid="pone.0008887-Baserga1">[17]</xref>, and bone <xref ref-type="bibr" rid="pone.0008887-Dennison1">[18]</xref>) that precede and are potentially contributory to a range of later adult diseases. Taken together, these studies define a precocious aging phenotype, culminating in an increased risk of premature death <xref ref-type="bibr" rid="pone.0008887-Ozanne1">[10]</xref>, <xref ref-type="bibr" rid="pone.0008887-Baker1">[19]</xref>.</p>
+<p>Permanent and sometimes progressive changes in gene expression have been observed in multiple tissues as a consequence of IUGR <xref ref-type="bibr" rid="pone.0008887-Stoffers1">[16]</xref>, <xref ref-type="bibr" rid="pone.0008887-Baserga1">[17]</xref>, <xref ref-type="bibr" rid="pone.0008887-Magee1">[20]</xref>, <xref ref-type="bibr" rid="pone.0008887-Nyirenda1">[21]</xref>. Dysregulation of the epigenome may explain changes that are propagated from parent to daughter cells in IUGR offspring throughout life. For instance, offspring of rats fed a restricted protein diet throughout pregnancy showed changes in DNA methylation at multiple genes, with corresponding changes in gene expression, both of which were prevented by maternal supplementation of folic acid (an important methyl donor), further implicating an epigenetic mechanism <xref ref-type="bibr" rid="pone.0008887-Lillycrop1">[22]</xref>, <xref ref-type="bibr" rid="pone.0008887-Lillycrop2">[23]</xref>, <xref ref-type="bibr" rid="pone.0008887-Lillycrop3">[24]</xref>. Additionally, human studies also demonstrated epigenetic differences in response to an adverse intrauterine environment, as periconceptional exposure to famine was associated with altered DNA methylation at multiple sites within the known <italic>IGF2</italic> differentially methylated region (DMR) <xref ref-type="bibr" rid="pone.0008887-Heijmans1">[25]</xref>. Similar epigenetic dysregulation has been observed in a variety of tissues <xref ref-type="bibr" rid="pone.0008887-Lillycrop2">[23]</xref>, <xref ref-type="bibr" rid="pone.0008887-Lillycrop3">[24]</xref>, <xref ref-type="bibr" rid="pone.0008887-Pham1">[26]</xref>, <xref ref-type="bibr" rid="pone.0008887-Ke1">[27]</xref>, consistent with IUGR-induced susceptibility to age-related diseases affecting multiple organ systems.</p>
+<p>As the life-long progenitors of many differentiated lineages, stem cells must act as custodians of epigenomic regulatory patterns in order that these changes persist in most tissues throughout the lifetime of an organism. Hematopoietic stem (CD34+) cells are one of the best-characterized stem cell types, and represent a neonatally accessible population, present as ∼1% of mononucleated umbilical cord blood cells <xref ref-type="bibr" rid="pone.0008887-Pranke1">[28]</xref>. Following tissue injury, this stem cell population is able to mobilize, proliferate, and home to target microenvironments at the site of damage <xref ref-type="bibr" rid="pone.0008887-Gangenahalli1">[29]</xref>, and may coordinate injury repair by stimulating tissue-specific progenitors <xref ref-type="bibr" rid="pone.0008887-Couri1">[30]</xref>, <xref ref-type="bibr" rid="pone.0008887-HombachKlonisch1">[31]</xref>. Moreover, these stem cells are multipotent progenitors of the immune system, which itself is likely to mediate inflammation, development, and progression of T2DM and cardiovascular disease <xref ref-type="bibr" rid="pone.0008887-Hotamisligil1">[32]</xref>.</p>
+<p>To determine whether an adverse intrauterine environment leads to epigenetic changes that have functional pathological consequences, we studied DNA methylation in multipotent hematopoietic (CD34+) stem cells of IUGR neonates and matched controls. We employed our new, high-resolution version of the microarray-based HELP assay <xref ref-type="bibr" rid="pone.0008887-Oda1">[33]</xref> to study ∼1.32 million loci throughout the human genome. Rather than focus on known candidate loci, we expanded the search genome-wide to identify novel loci involved and also tested for global, non-specific effects of IUGR on cytosine methylation. We followed this screening approach with a second stage of analysis, validating methylation status using quantitative, nucleotide-resolution bisulphite MassArray <xref ref-type="bibr" rid="pone.0008887-Ehrich1">[34]</xref> to define the dysregulatory effects of IUGR on the epigenome.</p>
+</sec><sec id="s2" sec-type="methods">
+<title>Methods</title>
+<p>This study was approved by the institutional review board (IRB) of the Montefiore Medical Center and the Committee on Clinical Investigation at the Albert Einstein College of Medicine and is in accordance with Health Insurance Portability and Accountability Act (HIPAA) regulations. Written informed consent was obtained from all subjects prior to participation.</p>
+<sec id="s2a">
+<title>Clinical Data Collection and Identification of Cases and Controls</title>
+<p>Biological samples and clinical information were collected from consenting women who delivered IUGR or infants with appropriate growth (matched for gestational age at delivery, ethnicity and gender). Both birth weight and ponderal index (a measurement of neonatal weight relative to length) were used to identify cases and controls. IUGR had birth weight and ponderal index &lt;10th percentile for gestational age and gender and controls had normal percentiles (&gt;10th and &lt;90th) for both parameters. Pertinent data on maternal medical history, pregnancy complications and neonatal hospital stay were recorded.</p>
+</sec><sec id="s2b">
+<title>Isolation of CD34+ Cells</title>
+<p>CD34+ cells, which constitute approximately 1% of nucleated blood cells in umbilical cord blood <xref ref-type="bibr" rid="pone.0008887-Pranke1">[28]</xref>, were isolated from the cord blood specimen using an immunomagnetic separation technique, as previously described <xref ref-type="bibr" rid="pone.0008887-Verma1">[35]</xref>. Mononuclear cells are separated by Ficoll-Paque density gradient, following which CD34+ cells are obtained by positive immunomagnetic bead selection, using Macs columns (Miltenyi Biotech). The isolated cells having &gt;95% purity <xref ref-type="bibr" rid="pone.0008887-Navas1">[36]</xref>, <xref ref-type="bibr" rid="pone.0008887-Zhou1">[37]</xref> are cryopreserved in 10% DMSO by controlled rate freezing.</p>
+</sec><sec id="s2c">
+<title>HELP Assay</title>
+<p>High-resolution HELP assays were performed according to recent advances in the technology <xref ref-type="bibr" rid="pone.0008887-Oda1">[33]</xref>. Genomic DNA was isolated, digested to completion by either HpaII or MspI separately, and then ligated to a mixture of two oligonucleotide pair adapters, each complementary to the cohesive ends generated by the restriction digest. The adapters then served as a priming site for a PCR reaction (ligation-mediated PCR, LM-PCR) that we have described to generate a product predominantly in the 50–2,000 bp size range <xref ref-type="bibr" rid="pone.0008887-Oda1">[33]</xref>. Following PCR, the HpaII and MspI representations were labeled with different fluorophores using random priming and were then cohybridized on a customized genomic microarray representing ∼1.32 million HpaII/MspI fragments of 50–2,000 bp in unique sequence <xref ref-type="bibr" rid="pone.0008887-Oda1">[33]</xref>.</p>
+</sec><sec id="s2d">
+<title>Data Analysis</title>
+<p>Microarray data were pre-processed and subject to quality control and quantile normalization as previously described <xref ref-type="bibr" rid="pone.0008887-Thompson1">[38]</xref>. HpaII/MspI ratio values were compared between groups for all loci throughout the genome using a paired t-test with cases (n = 5) and controls (n = 5) matched by gender and gestational age, as well as ethnicity where possible (see <bold><xref ref-type="supplementary-material" rid="pone.0008887.s006">Table S1</xref></bold>). Changes in methylation state were defined using a HpaII/MspI ratio threshold of zero, where methylated loci and hypomethylated loci had ratio values less than zero and greater than zero, respectively. Ordered lists of differences were generated, the first relying purely on paired t-test computed p-values. Our alternative approach identified differential methylation, ranked according to the formula: <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0008887.e001" xlink:type="simple"/></inline-formula> This method, similar to the modified T test <xref ref-type="bibr" rid="pone.0008887-Tusher1">[39]</xref>, places more weight on the fold-change relative to the within group variability. However, unlike p-values based on the modified T test, computed values are not interpreted in these studies as a probabilistic quantity, and instead are used exclusively to rank and isolate important loci.</p>
+</sec><sec id="s2e">
+<title>Bisulphite MassArray Validation</title>
+<p>Target regions were amplified by PCR using the primers and cycling conditions described in <bold><xref ref-type="supplementary-material" rid="pone.0008887.s007">Table S2</xref></bold>. Primers were selected with MethPrimer (<ext-link ext-link-type="uri" xlink:href="http://www.urogene.org/methprimer/" xlink:type="simple">http://www.urogene.org/methprimer/</ext-link>) using parameters as follows: 200–400 bp amplicon size, 56–60°C Tm, 24–30 bp length, and ≥1 CG in product. 50 µl PCR reactions were performed using the Roche FastStart High Fidelity Kit. In cases where products showed primer-dimer or other contaminants, bands of appropriate size were excised from 2% agarose gels, purified by Qiagen Gel Extraction Kit, and eluted with 1X Roche FastStart High Fidelity Reaction Buffer (+MgCl<sub>2</sub>). All PCR products (5 µl) were aliquotted onto 384-well microtiter plates and were treated with 2 µl of Shrimp Alkaline Phosphatase (SAP) mix for 20 minutes at 37°C to dephosphorylate unincorporated dNTPs. Microtiter plates were processed by the MassArray Matrix Liquid Handler. A 2 µl volume of each SAP-treated sample was then heat-inactivated at 85°C for 5 minutes and subsequently incubated for 3 hours at 37°C with 5 µl of Transcleave mix (T or C Cleavage Mix) for concurrent <italic>in vitro</italic> transcription and base-specific cleavage. Samples were transferred onto the spectroCHIP array by nanodispensation calibrated to ambient temperature and humidity, and analysis with the Sequenom MALDI-TOF MS Compact Unit following 4-point calibration with oligonuculeotides of different mass provided in the Sequenom kit. Matched peak data was exported using EpiTYPER software and analyzed for quality and single nucleotide polymorphisms according to analytical tools that we have recently developed <xref ref-type="bibr" rid="pone.0008887-Thompson2">[40]</xref>.</p>
+</sec><sec id="s2f">
+<title>Ingenuity Pathway Analysis</title>
+<p>The most significantly differentially methylated loci were mapped to RefSeq gene identifiers by chromosomal position within 10 kb upstream of the transcription start site or overlapping the gene body. The list of RefSeq identifiers was then uploaded to the Ingenuity Pathway Analysis program (Redwood City, CA), enabling exploration of ontology and molecular interaction networks. Each uploaded gene identifier was mapped to its corresponding gene object (focus genes) in the Ingenuity Pathways Knowledge Base. Core networks were constructed for both direct and indirect interactions using default parameters, and the focus genes with the highest connectivity to other focus genes were selected as seed elements for network generation. New focus genes with high specific connectivity (overlap between the initialized network and gene's immediate connections) were added to the growing network until the network reached a default size of 35 nodes. Non-focus genes (those that were not among our differentially methylated input list) that contained a maximum number of links to the growing network were also incorporated.</p>
+<p>The ranking score for each network was then computed by a right-tailed Fisher's exact test as the negative log of the probability that the number of focus genes in the network is not due to random chance. Similarly, significances for functional enrichment of specific genes were also determined by the right-tailed Fisher's exact test, using all input genes as a reference set.</p>
+</sec></sec><sec id="s3">
+<title>Results</title>
+<sec id="s3a">
+<title>Gestational and Neonatal Clinical Parameters in IUGR and Controls</title>
+<p>Umbilical cord blood samples were collected from 10 well-matched, consenting individuals: IUGR (n = 5), and appropriate for gestational age controls (n = 5), matched for gestational age at delivery, gender, and ethnicity). We controlled for variable cellular composition of mixed leukocyte populations in the cord blood by purifying for hematopoietic stem (CD34+) cells, which served as a reference cell type for comparison in all subjects, thus reducing this potential source of variability which could have otherwise influenced our subsequent methylation assays <xref ref-type="bibr" rid="pone.0008887-Reik1">[41]</xref>. We also note that while CD34+ cells are functionally heterogeneous themselves <xref ref-type="bibr" rid="pone.0008887-Gothot1">[42]</xref>, purification reduces cell-specific variability in cytosine methylation that could otherwise mask (or artificially create) IUGR-related changes.</p>
+<p>By design, IUGR weighed less and had a lower ponderal index than their matched controls, which were required to have normal percentiles for birth weight and ponderal index (<xref ref-type="table" rid="pone-0008887-t001"><bold>Table 1</bold></xref>). Both groups had similar gestational age at delivery and proportions of each sex and ethnic composition, and comparable maternal age, BMI, pregnancy weight gain, and 1-hour maternal plasma glucose screen values after a 50 g glucose load (<xref ref-type="table" rid="pone-0008887-t001"><bold>Table 1</bold></xref>). All of the women and their infants were healthy. None of the mothers had chronic hypertension, pre-eclampsia or gestational hypertension, pre-gestational or gestational diabetes, renal or autoimmune disease. The neonates had similar 1-minute and 5-minute Apgar scores in both groups (data not shown). One infant in the IUGR group had unilateral mild pyelectasis, which did not require treatment. There were no other neonatal complications.</p>
+<table-wrap id="pone-0008887-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0008887.t001</object-id><label>Table 1</label><caption>
+<title>Neonatal and Maternal Characteristics for IUGR and Controls.</title>
+</caption><!--===== Grouping alternate versions of objects =====--><alternatives><graphic id="pone-0008887-t001-1" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.t001" xlink:type="simple"/><table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" colspan="1" rowspan="1">Neonatal and Maternal Characteristics</td>
+<td align="left" colspan="1" rowspan="1">IUGR</td>
+<td align="left" colspan="1" rowspan="1">Controls</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">(n = 5)</td>
+<td align="left" colspan="1" rowspan="1">(n = 5)</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" colspan="1" rowspan="1">Gestational age, weeks (mean ±SD)</td>
+<td align="left" colspan="1" rowspan="1">39.9±0.2</td>
+<td align="left" colspan="1" rowspan="1">40.2±0.6</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Birthweight, g (mean±SD)</td>
+<td align="left" colspan="1" rowspan="1">2493±270</td>
+<td align="left" colspan="1" rowspan="1">3240±276<xref ref-type="table-fn" rid="nt101">*</xref></td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Ponderal index, g/cm<sup>3</sup> (mean±SD)</td>
+<td align="left" colspan="1" rowspan="1">2.3±0.08</td>
+<td align="left" colspan="1" rowspan="1">2.81±0.1<xref ref-type="table-fn" rid="nt101">*</xref></td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">% Male</td>
+<td align="left" colspan="1" rowspan="1">40</td>
+<td align="left" colspan="1" rowspan="1">40</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Maternal age, years (mean ±SD)</td>
+<td align="left" colspan="1" rowspan="1">23.6±5.7</td>
+<td align="left" colspan="1" rowspan="1">22.8±4.7</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Pre-pregnancy BMI, kg/m<sup>2</sup> (mean±SD)</td>
+<td align="left" colspan="1" rowspan="1">24.5±3.2</td>
+<td align="left" colspan="1" rowspan="1">25.1±7.5</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Weight gain, pounds (mean±SD)</td>
+<td align="left" colspan="1" rowspan="1">32±14</td>
+<td align="left" colspan="1" rowspan="1">26±7</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">1-hour glucose screen, mg/dL (mean±SD)</td>
+<td align="left" colspan="1" rowspan="1">93.8±25</td>
+<td align="left" colspan="1" rowspan="1">74.3±26</td>
+</tr>
+</tbody>
+</table></alternatives><table-wrap-foot><fn id="nt101"><label>*</label><p>p&lt;0.05 compared to matched cases.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s3b">
+<title>Distinct Patterns of DNA Methylation in IUGR and Control Subjects</title>
+<p>To detect global patterns of epigenetic changes that could distinguish between IUGR and controls, we performed the HELP assay on the CD34+ cells. These genome-wide cytosine methylation profiles are available as a public resource through <ext-link ext-link-type="uri" xlink:href="http://greallylab.aecom.yu.edu/~greally/humanIUGR/" xlink:type="simple">http://greallylab.aecom.yu.edu/~greally/humanIUGR/</ext-link> and through the GEO repository (accession number GSE17727). We compared the full dataset of HELP data from IUGR and normal birthweight subjects using unsupervised clustering. We observed consistent patterns of methylation across all samples, without any apparent global changes in methylation status (<italic>e.g.</italic> the hypomethylation commonly seen in cancer <xref ref-type="bibr" rid="pone.0008887-Issa1">[43]</xref>) between IUGR and control groups (<bold><xref ref-type="supplementary-material" rid="pone.0008887.s001">Figure S1</xref></bold>). Global Pearson correlation coefficients were calculated for the methylation patterns for each pair of samples, confirming a high degree of inter-sample consistency (R = 0.90−0.95).</p>
+<p>We tested to see whether cytosine methylation changes were present but undetected in global comparisons because they occur at only a subset of loci and/or to a limited degree at each locus. Paired T tests were applied to detect group differences for all individual loci represented on our arrays. This analysis yielded a subset of potentially informative loci with statistically significant differences in methylation. <xref ref-type="fig" rid="pone-0008887-g001"><bold>Figure 1A</bold></xref> shows the distribution of p-values observed for IUGR compared to controls. <xref ref-type="fig" rid="pone-0008887-g001"><bold>Figure 1B</bold></xref> shows the distribution of p-values when class labels are randomly permuted once across all loci and are representative of what we would see under the null distribution of no group effect. This illustrates how the observed p-values for the IUGR/control comparison are associated with a distribution consistent with lower than expected p-values for a small subset of loci, with 56 candidate loci (<xref ref-type="table" rid="pone-0008887-t002"><bold>Table 2</bold></xref>) having significant group differences (p&lt;0.00001, chosen because no test statistics derived under any other permutation obtained a p-value below 0.000015), and an additional 646 loci with moderate group differences (p&lt;0.0001).</p>
+<fig id="pone-0008887-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0008887.g001</object-id><label>Figure 1</label><caption>
+<title>Supervised group comparisons reveal significant differences in HELP data results between IUGR and controls.</title>
+<p>Panel (A) shows a histogram distribution of p-values calculated from an unpaired T test of IUGR (n = 5) in one group and controls (n = 5) in another. The x axis represents p values, with lower values being the more significant, while the y axis shows the frequency of occurrence of different p values. The peak observed represents a subset of loci with low p values and thus significant differences between IUGR and control subjects. For comparison, panel (B) shows the results of a random distribution of subjects into two groups, mixing IUGR and controls, demonstrating the absence of a subset of loci with significant p values.</p>
+</caption><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.g001" xlink:type="simple"/></fig><table-wrap id="pone-0008887-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0008887.t002</object-id><label>Table 2</label><caption>
+<title>Characteristics of top 56 candidate loci identified by HELP.</title>
+</caption><!--===== Grouping alternate versions of objects =====--><alternatives><graphic id="pone-0008887-t002-2" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.t002" xlink:type="simple"/><table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" colspan="1" rowspan="1">Position</td>
+<td align="left" colspan="1" rowspan="1">IUGR</td>
+<td align="left" colspan="1" rowspan="1">Control</td>
+<td align="left" colspan="1" rowspan="1">Difference</td>
+<td align="left" colspan="1" rowspan="1">P</td>
+<td align="left" colspan="1" rowspan="1">CpG</td>
+<td align="left" colspan="1" rowspan="1">CGc</td>
+<td align="left" colspan="1" rowspan="1">phC</td>
+<td align="left" colspan="1" rowspan="1">Rep</td>
+<td align="left" colspan="1" rowspan="1">Loc</td>
+<td align="left" colspan="1" rowspan="1">Gene(s)</td>
+<td align="left" colspan="1" rowspan="1">RefSeq</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr2:235526053-235526128</td>
+<td align="left" colspan="1" rowspan="1">2.06</td>
+<td align="left" colspan="1" rowspan="1">2.66</td>
+<td align="left" colspan="1" rowspan="1">−0.61</td>
+<td align="left" colspan="1" rowspan="1">0.4</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">SH3BP4</td>
+<td align="left" colspan="1" rowspan="1">NM_014521</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chrX:66138356-66139206</td>
+<td align="left" colspan="1" rowspan="1">−0.78</td>
+<td align="left" colspan="1" rowspan="1">−1.29</td>
+<td align="left" colspan="1" rowspan="1">0.51</td>
+<td align="left" colspan="1" rowspan="1">0.8</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">RT</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr15:45018938-45019873</td>
+<td align="left" colspan="1" rowspan="1">−0.62</td>
+<td align="left" colspan="1" rowspan="1">−1.11</td>
+<td align="left" colspan="1" rowspan="1">0.48</td>
+<td align="left" colspan="1" rowspan="1">0.9</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr6:106879977-106880120</td>
+<td align="left" colspan="1" rowspan="1">2.56</td>
+<td align="left" colspan="1" rowspan="1">3.34</td>
+<td align="left" colspan="1" rowspan="1">−0.78</td>
+<td align="left" colspan="1" rowspan="1">1.1</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">ATG5</td>
+<td align="left" colspan="1" rowspan="1">NM_004849</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr18:18624869-18626554</td>
+<td align="left" colspan="1" rowspan="1">−0.72</td>
+<td align="left" colspan="1" rowspan="1">−1.28</td>
+<td align="left" colspan="1" rowspan="1">0.55</td>
+<td align="left" colspan="1" rowspan="1">1.3</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr2:176841167-176842343</td>
+<td align="left" colspan="1" rowspan="1">−0.16</td>
+<td align="left" colspan="1" rowspan="1">−0.48</td>
+<td align="left" colspan="1" rowspan="1">0.33</td>
+<td align="left" colspan="1" rowspan="1">1.5</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">LT</td>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">MTX2</td>
+<td align="left" colspan="1" rowspan="1">NM_006554</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr6:113687585-113688546</td>
+<td align="left" colspan="1" rowspan="1">−1.81</td>
+<td align="left" colspan="1" rowspan="1">−2.61</td>
+<td align="left" colspan="1" rowspan="1">0.80</td>
+<td align="left" colspan="1" rowspan="1">1.5</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr11:77123865-77124724</td>
+<td align="left" colspan="1" rowspan="1">−0.60</td>
+<td align="left" colspan="1" rowspan="1">−1.33</td>
+<td align="left" colspan="1" rowspan="1">0.73</td>
+<td align="left" colspan="1" rowspan="1">1.8</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">GB</td>
+<td align="left" colspan="1" rowspan="1">RSF1</td>
+<td align="left" colspan="1" rowspan="1">NM_016578</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chrX:70857596-70857847</td>
+<td align="left" colspan="1" rowspan="1">0.51</td>
+<td align="left" colspan="1" rowspan="1">1.28</td>
+<td align="left" colspan="1" rowspan="1">−0.77</td>
+<td align="left" colspan="1" rowspan="1">2.0</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr19:2616301-2616955</td>
+<td align="left" colspan="1" rowspan="1">−0.86</td>
+<td align="left" colspan="1" rowspan="1">−1.18</td>
+<td align="left" colspan="1" rowspan="1">0.32</td>
+<td align="left" colspan="1" rowspan="1">2.2</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">RT</td>
+<td align="left" colspan="1" rowspan="1">GB</td>
+<td align="left" colspan="1" rowspan="1">GNG7</td>
+<td align="left" colspan="1" rowspan="1">NM_052847</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr12:123573299-123573372</td>
+<td align="left" colspan="1" rowspan="1">1.80</td>
+<td align="left" colspan="1" rowspan="1">2.79</td>
+<td align="left" colspan="1" rowspan="1">−1.00</td>
+<td align="left" colspan="1" rowspan="1">2.2</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">NCOR2</td>
+<td align="left" colspan="1" rowspan="1">NM_006312</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr4:102487593-102487694</td>
+<td align="left" colspan="1" rowspan="1">1.59</td>
+<td align="left" colspan="1" rowspan="1">2.55</td>
+<td align="left" colspan="1" rowspan="1">−0.97</td>
+<td align="left" colspan="1" rowspan="1">2.4</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">PPP3CA</td>
+<td align="left" colspan="1" rowspan="1">NM_000944</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr11:13612440-13613698</td>
+<td align="left" colspan="1" rowspan="1">−1.01</td>
+<td align="left" colspan="1" rowspan="1">−1.79</td>
+<td align="left" colspan="1" rowspan="1">0.78</td>
+<td align="left" colspan="1" rowspan="1">2.5</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr20:39422191-39423123</td>
+<td align="left" colspan="1" rowspan="1">−0.42</td>
+<td align="left" colspan="1" rowspan="1">−0.94</td>
+<td align="left" colspan="1" rowspan="1">0.52</td>
+<td align="left" colspan="1" rowspan="1">2.7</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">GB</td>
+<td align="left" colspan="1" rowspan="1">LPIN3 EMILIN3</td>
+<td align="left" colspan="1" rowspan="1">NM_022896 NM_052846</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chrX:48943071-48943319</td>
+<td align="left" colspan="1" rowspan="1">1.94</td>
+<td align="left" colspan="1" rowspan="1">2.72</td>
+<td align="left" colspan="1" rowspan="1">−0.78</td>
+<td align="left" colspan="1" rowspan="1">3.0</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">SYP</td>
+<td align="left" colspan="1" rowspan="1">NM_003179</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr12:105961981-105963288</td>
+<td align="left" colspan="1" rowspan="1">−1.44</td>
+<td align="left" colspan="1" rowspan="1">−2.49</td>
+<td align="left" colspan="1" rowspan="1">1.06</td>
+<td align="left" colspan="1" rowspan="1">3.1</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">RT</td>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">CRY1</td>
+<td align="left" colspan="1" rowspan="1">NM_004075</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr11:76172201-76172653</td>
+<td align="left" colspan="1" rowspan="1">2.48</td>
+<td align="left" colspan="1" rowspan="1">3.16</td>
+<td align="left" colspan="1" rowspan="1">−0.68</td>
+<td align="left" colspan="1" rowspan="1">3.2</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">TSKU</td>
+<td align="left" colspan="1" rowspan="1">NM_015516</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr8:318760-319070</td>
+<td align="left" colspan="1" rowspan="1">−1.07</td>
+<td align="left" colspan="1" rowspan="1">−0.60</td>
+<td align="left" colspan="1" rowspan="1">−0.47</td>
+<td align="left" colspan="1" rowspan="1">3.4</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr8:25575968-25577680</td>
+<td align="left" colspan="1" rowspan="1">−1.53</td>
+<td align="left" colspan="1" rowspan="1">−2.41</td>
+<td align="left" colspan="1" rowspan="1">0.88</td>
+<td align="left" colspan="1" rowspan="1">3.4</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chrX:99552722-99552801</td>
+<td align="left" colspan="1" rowspan="1">3.09</td>
+<td align="left" colspan="1" rowspan="1">3.62</td>
+<td align="left" colspan="1" rowspan="1">−0.52</td>
+<td align="left" colspan="1" rowspan="1">3.7</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">PCDH19</td>
+<td align="left" colspan="1" rowspan="1">NM_020766</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr22:45949018-45950112</td>
+<td align="left" colspan="1" rowspan="1">−1.23</td>
+<td align="left" colspan="1" rowspan="1">−1.87</td>
+<td align="left" colspan="1" rowspan="1">0.65</td>
+<td align="left" colspan="1" rowspan="1">3.7</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr11:99814353-99814807</td>
+<td align="left" colspan="1" rowspan="1">−0.48</td>
+<td align="left" colspan="1" rowspan="1">0.36</td>
+<td align="left" colspan="1" rowspan="1">−0.83</td>
+<td align="left" colspan="1" rowspan="1">3.8</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr15:91226882-91227081</td>
+<td align="left" colspan="1" rowspan="1">2.40</td>
+<td align="left" colspan="1" rowspan="1">3.34</td>
+<td align="left" colspan="1" rowspan="1">−0.93</td>
+<td align="left" colspan="1" rowspan="1">3.8</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr3:9809841-9809915</td>
+<td align="left" colspan="1" rowspan="1">1.49</td>
+<td align="left" colspan="1" rowspan="1">2.24</td>
+<td align="left" colspan="1" rowspan="1">−0.74</td>
+<td align="left" colspan="1" rowspan="1">3.8</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO2</td>
+<td align="left" colspan="1" rowspan="1">TADA3L ARPC4</td>
+<td align="left" colspan="1" rowspan="1">NM_006354 NM_005718</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr12:1774845-1774939</td>
+<td align="left" colspan="1" rowspan="1">1.72</td>
+<td align="left" colspan="1" rowspan="1">2.45</td>
+<td align="left" colspan="1" rowspan="1">−0.73</td>
+<td align="left" colspan="1" rowspan="1">4.2</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">GB</td>
+<td align="left" colspan="1" rowspan="1">CACNA2D4</td>
+<td align="left" colspan="1" rowspan="1">NM_172364</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr15:88120371-88120587</td>
+<td align="left" colspan="1" rowspan="1">1.28</td>
+<td align="left" colspan="1" rowspan="1">2.08</td>
+<td align="left" colspan="1" rowspan="1">−0.79</td>
+<td align="left" colspan="1" rowspan="1">4.4</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">MESP2</td>
+<td align="left" colspan="1" rowspan="1">NM_001039958</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr9:78132928-78133704</td>
+<td align="left" colspan="1" rowspan="1">−0.91</td>
+<td align="left" colspan="1" rowspan="1">−1.56</td>
+<td align="left" colspan="1" rowspan="1">0.65</td>
+<td align="left" colspan="1" rowspan="1">5.2</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr9:33740402-33740551</td>
+<td align="left" colspan="1" rowspan="1">1.61</td>
+<td align="left" colspan="1" rowspan="1">2.41</td>
+<td align="left" colspan="1" rowspan="1">−0.80</td>
+<td align="left" colspan="1" rowspan="1">5.2</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">PRSS3</td>
+<td align="left" colspan="1" rowspan="1">NM_007343</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr16:4746813-4747596</td>
+<td align="left" colspan="1" rowspan="1">−1.50</td>
+<td align="left" colspan="1" rowspan="1">−1.85</td>
+<td align="left" colspan="1" rowspan="1">0.35</td>
+<td align="left" colspan="1" rowspan="1">5.2</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">RT</td>
+<td align="left" colspan="1" rowspan="1">GB</td>
+<td align="left" colspan="1" rowspan="1">ZNF500</td>
+<td align="left" colspan="1" rowspan="1">NM_021646</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr3:129693359-129693420</td>
+<td align="left" colspan="1" rowspan="1">1.66</td>
+<td align="left" colspan="1" rowspan="1">2.31</td>
+<td align="left" colspan="1" rowspan="1">−0.65</td>
+<td align="left" colspan="1" rowspan="1">5.2</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">GATA2</td>
+<td align="left" colspan="1" rowspan="1">NM_032638</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr2:206657793-206657892</td>
+<td align="left" colspan="1" rowspan="1">2.47</td>
+<td align="left" colspan="1" rowspan="1">3.43</td>
+<td align="left" colspan="1" rowspan="1">−0.96</td>
+<td align="left" colspan="1" rowspan="1">5.4</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">INO80D</td>
+<td align="left" colspan="1" rowspan="1">NM_017759</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr6:21543836-21545402</td>
+<td align="left" colspan="1" rowspan="1">−1.61</td>
+<td align="left" colspan="1" rowspan="1">−2.10</td>
+<td align="left" colspan="1" rowspan="1">0.49</td>
+<td align="left" colspan="1" rowspan="1">5.6</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">RT</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr22:16347210-16348259</td>
+<td align="left" colspan="1" rowspan="1">−1.26</td>
+<td align="left" colspan="1" rowspan="1">−1.62</td>
+<td align="left" colspan="1" rowspan="1">0.36</td>
+<td align="left" colspan="1" rowspan="1">5.9</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">RT</td>
+<td align="left" colspan="1" rowspan="1">GB</td>
+<td align="left" colspan="1" rowspan="1">CECR2</td>
+<td align="left" colspan="1" rowspan="1">NM_031413</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr8:94370466-94372334</td>
+<td align="left" colspan="1" rowspan="1">−1.26</td>
+<td align="left" colspan="1" rowspan="1">−2.09</td>
+<td align="left" colspan="1" rowspan="1">0.84</td>
+<td align="left" colspan="1" rowspan="1">6.1</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr20:22581679-22582432</td>
+<td align="left" colspan="1" rowspan="1">−1.09</td>
+<td align="left" colspan="1" rowspan="1">−1.76</td>
+<td align="left" colspan="1" rowspan="1">0.67</td>
+<td align="left" colspan="1" rowspan="1">6.1</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr21:25927844-25929694</td>
+<td align="left" colspan="1" rowspan="1">−1.13</td>
+<td align="left" colspan="1" rowspan="1">−1.77</td>
+<td align="left" colspan="1" rowspan="1">0.64</td>
+<td align="left" colspan="1" rowspan="1">6.3</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">RT/LT</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr12:105841213-105843079</td>
+<td align="left" colspan="1" rowspan="1">−1.42</td>
+<td align="left" colspan="1" rowspan="1">−1.71</td>
+<td align="left" colspan="1" rowspan="1">0.29</td>
+<td align="left" colspan="1" rowspan="1">6.4</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">RT</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chrX:39752669-39752723</td>
+<td align="left" colspan="1" rowspan="1">1.04</td>
+<td align="left" colspan="1" rowspan="1">1.99</td>
+<td align="left" colspan="1" rowspan="1">−0.95</td>
+<td align="left" colspan="1" rowspan="1">6.5</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr16:87294955-87295022</td>
+<td align="left" colspan="1" rowspan="1">1.03</td>
+<td align="left" colspan="1" rowspan="1">1.63</td>
+<td align="left" colspan="1" rowspan="1">−0.60</td>
+<td align="left" colspan="1" rowspan="1">6.7</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">GB</td>
+<td align="left" colspan="1" rowspan="1">RNF166</td>
+<td align="left" colspan="1" rowspan="1">NM_178841</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr22:17514809-17516325</td>
+<td align="left" colspan="1" rowspan="1">2.52</td>
+<td align="left" colspan="1" rowspan="1">3.26</td>
+<td align="left" colspan="1" rowspan="1">−0.74</td>
+<td align="left" colspan="1" rowspan="1">7.0</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">GSC2</td>
+<td align="left" colspan="1" rowspan="1">NM_005315</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr15:78244066-78244975</td>
+<td align="left" colspan="1" rowspan="1">−1.04</td>
+<td align="left" colspan="1" rowspan="1">−1.49</td>
+<td align="left" colspan="1" rowspan="1">0.45</td>
+<td align="left" colspan="1" rowspan="1">7.1</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">GB</td>
+<td align="left" colspan="1" rowspan="1">FAH</td>
+<td align="left" colspan="1" rowspan="1">NM_000137</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr10:101825755-101826964</td>
+<td align="left" colspan="1" rowspan="1">−1.72</td>
+<td align="left" colspan="1" rowspan="1">−2.11</td>
+<td align="left" colspan="1" rowspan="1">0.39</td>
+<td align="left" colspan="1" rowspan="1">7.2</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">CPN1</td>
+<td align="left" colspan="1" rowspan="1">NM_001308</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr16:29563652-29563719</td>
+<td align="left" colspan="1" rowspan="1">2.38</td>
+<td align="left" colspan="1" rowspan="1">3.22</td>
+<td align="left" colspan="1" rowspan="1">−0.83</td>
+<td align="left" colspan="1" rowspan="1">7.3</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">RT</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr5:132564040-132565611</td>
+<td align="left" colspan="1" rowspan="1">−1.89</td>
+<td align="left" colspan="1" rowspan="1">−2.55</td>
+<td align="left" colspan="1" rowspan="1">0.66</td>
+<td align="left" colspan="1" rowspan="1">7.5</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">FSTL4</td>
+<td align="left" colspan="1" rowspan="1">NM_015082</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr18:40597598-40598729</td>
+<td align="left" colspan="1" rowspan="1">−2.17</td>
+<td align="left" colspan="1" rowspan="1">−2.86</td>
+<td align="left" colspan="1" rowspan="1">0.69</td>
+<td align="left" colspan="1" rowspan="1">7.6</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">GB</td>
+<td align="left" colspan="1" rowspan="1">SETBP1</td>
+<td align="left" colspan="1" rowspan="1">NM_015559</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr17:17019265-17021036</td>
+<td align="left" colspan="1" rowspan="1">−1.34</td>
+<td align="left" colspan="1" rowspan="1">−1.94</td>
+<td align="left" colspan="1" rowspan="1">0.60</td>
+<td align="left" colspan="1" rowspan="1">7.9</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">GB</td>
+<td align="left" colspan="1" rowspan="1">MPRIP</td>
+<td align="left" colspan="1" rowspan="1">NM_015134</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr4:101159747-101160275</td>
+<td align="left" colspan="1" rowspan="1">−1.72</td>
+<td align="left" colspan="1" rowspan="1">−2.38</td>
+<td align="left" colspan="1" rowspan="1">0.66</td>
+<td align="left" colspan="1" rowspan="1">8.0</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">RT</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr11:120258272-120258456</td>
+<td align="left" colspan="1" rowspan="1">2.13</td>
+<td align="left" colspan="1" rowspan="1">2.91</td>
+<td align="left" colspan="1" rowspan="1">−0.78</td>
+<td align="left" colspan="1" rowspan="1">8.1</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">GRIK4</td>
+<td align="left" colspan="1" rowspan="1">NM_014619</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr9:19033554-19034579</td>
+<td align="left" colspan="1" rowspan="1">−0.19</td>
+<td align="left" colspan="1" rowspan="1">−0.84</td>
+<td align="left" colspan="1" rowspan="1">0.65</td>
+<td align="left" colspan="1" rowspan="1">8.5</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">RT</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr8:59144552-59145204</td>
+<td align="left" colspan="1" rowspan="1">−1.10</td>
+<td align="left" colspan="1" rowspan="1">−1.61</td>
+<td align="left" colspan="1" rowspan="1">0.52</td>
+<td align="left" colspan="1" rowspan="1">8.6</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">GB</td>
+<td align="left" colspan="1" rowspan="1">FAM110B</td>
+<td align="left" colspan="1" rowspan="1">NM_147189</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr6:41861921-41862019</td>
+<td align="left" colspan="1" rowspan="1">0.99</td>
+<td align="left" colspan="1" rowspan="1">1.56</td>
+<td align="left" colspan="1" rowspan="1">−0.57</td>
+<td align="left" colspan="1" rowspan="1">8.7</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">GB</td>
+<td align="left" colspan="1" rowspan="1">PRICKLE4</td>
+<td align="left" colspan="1" rowspan="1">NM_013397</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr15:61088671-61090467</td>
+<td align="left" colspan="1" rowspan="1">−0.44</td>
+<td align="left" colspan="1" rowspan="1">−1.03</td>
+<td align="left" colspan="1" rowspan="1">0.59</td>
+<td align="left" colspan="1" rowspan="1">8.8</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr10:71811777-71811840</td>
+<td align="left" colspan="1" rowspan="1">1.86</td>
+<td align="left" colspan="1" rowspan="1">2.76</td>
+<td align="left" colspan="1" rowspan="1">−0.90</td>
+<td align="left" colspan="1" rowspan="1">8.8</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">LRRC20</td>
+<td align="left" colspan="1" rowspan="1">NM_018205</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr12:109990645-109990725</td>
+<td align="left" colspan="1" rowspan="1">1.32</td>
+<td align="left" colspan="1" rowspan="1">2.32</td>
+<td align="left" colspan="1" rowspan="1">−1.00</td>
+<td align="left" colspan="1" rowspan="1">9.1</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">CUX2</td>
+<td align="left" colspan="1" rowspan="1">NM_015267</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr3:124611357-124611643</td>
+<td align="left" colspan="1" rowspan="1">3.63</td>
+<td align="left" colspan="1" rowspan="1">4.23</td>
+<td align="left" colspan="1" rowspan="1">−0.61</td>
+<td align="left" colspan="1" rowspan="1">9.4</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">YES</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">PRO</td>
+<td align="left" colspan="1" rowspan="1">ADCY5</td>
+<td align="left" colspan="1" rowspan="1">NM_183357</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">chr10:92344854-92345619</td>
+<td align="left" colspan="1" rowspan="1">−1.70</td>
+<td align="left" colspan="1" rowspan="1">−2.71</td>
+<td align="left" colspan="1" rowspan="1">1.01</td>
+<td align="left" colspan="1" rowspan="1">9.7</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1">no</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+</tbody>
+</table></alternatives><table-wrap-foot><fn id="nt102"><label/><p>All positions correspond to coordinates in the human genome, hg18 March 2006 UCSC Genome Browser; IUGR and Control data given as group averages of log<sub>2</sub>(HpaII/MspI); difference is IUGR minus Control; P-values are all x10<sup>−6</sup>; <bold>CpG</bold>, overlap with CpG islands; <bold>CGc</bold> overlap CG clusters; <bold>phC</bold> overlap with mammalian or vertebrate phastCons conserved elements; <bold>Rep</bold> overlap with repetitive elements (<bold>RT</bold> for retrotransposable elements including LINEs and SINEs, <bold>LT</bold> for long terminal repeats); <bold>Loc</bold> overlap with promoters (<bold>PRO</bold>), bidirectional promoters (<bold>PRO<sup>2</sup></bold>), or gene bodies (<bold>GB</bold>) of RefSeq genes; Gene names and corresponding RefSeq identifiers are also shown.</p></fn></table-wrap-foot></table-wrap>
+<p>For comparison, p-value distributions calculated for grouping by gender and ethnicity are shown in <bold><xref ref-type="supplementary-material" rid="pone.0008887.s002">Figures S2A and S2B</xref></bold>, respectively. Gender comparison shows ∼2,500 significant loci (p&lt;0.00001 threshold), an expected outcome due to the vast majority of these discriminatory loci (99.4%) being located on the X and Y chromosomes. We found no evidence for ethnicity (Latino versus non-Latino) influencing cytosine methylation (<bold><xref ref-type="supplementary-material" rid="pone.0008887.s002">Figure S2B</xref></bold>).</p>
+<p>When we looked in detail at the 56 differentially-methylated loci, we found that the magnitude of DNA methylation changes observed in IUGR compared to controls is markedly less than many tissue-specific differences in methylation that we have previously observed (<xref ref-type="bibr" rid="pone.0008887-Khulan1">[44]</xref>; and data not shown). Furthermore, we analyzed methylation status at four known imprinted regions on chromosome 11, some of which have been shown to harbor small changes in methylation in subjects with IUGR (the <italic>IGF2</italic> differentially-methylated region (DMR), the <italic>H19</italic> DMR and promoter region, and the <italic>KCNQ1</italic> DMR) <xref ref-type="bibr" rid="pone.0008887-Heijmans1">[25]</xref>, <xref ref-type="bibr" rid="pone.0008887-Guo1">[45]</xref> but found no detectable differences in the IUGR group compared to controls in this particular cell type (data not shown).</p>
+</sec><sec id="s3c">
+<title>Validation Studies on Selected Candidate Loci</title>
+<p>The next component of our two-stage experimental design was to validate the HELP data with single-locus, nucleotide-resolution quantitative studies, for which we used bisulphite MassArray <xref ref-type="bibr" rid="pone.0008887-Ehrich1">[34]</xref>. To choose the loci for validation, we assessed the candidacy of the top 56 loci in terms of related biological function, reasoning that epigenetic dysregulation of the small degrees we were observing would have to affect multiple components of a biological pathway to cause functionally-significant changes. We used an Ingenuity Pathway Analysis (IPA) for 33 of the top 56 candidate loci, chosen because of physical proximity to 35 RefSeq-annotated genes (22 promoters and 13 gene bodies). While the remaining 23/56 loci in intergenic regions could not be linked to genes using these proximity criteria, almost half of these loci occur at CG clusters <xref ref-type="bibr" rid="pone.0008887-Glass1">[46]</xref> or phastCons conserved DNA elements <xref ref-type="bibr" rid="pone.0008887-Siepel1">[47]</xref>, both characteristics having potential relevance as <italic>cis</italic>-regulatory sites <xref ref-type="bibr" rid="pone.0008887-King1">[48]</xref> and therefore may have unrecognized roles regulating transcription.</p>
+<p>Of the two highest-scoring molecular interaction networks generated from IPA analysis, one was associated with cell signaling, nucleic acid metabolism, and molecular transport (<bold><xref ref-type="supplementary-material" rid="pone.0008887.s003">Figure S3</xref></bold>), while the other network contained 12 out of 35 input nodes and was functionally associated with the cell cycle, cellular maintenance, and connective tissue development (<xref ref-type="fig" rid="pone-0008887-g002"><bold>Figure 2</bold></xref>). Moreover, this network was centered primarily on the hepatic nuclear factor 4α (<italic>HNF4A</italic>), a transcription factor that has been strongly implicated in an early-onset form of type II diabetes, maturity onset diabetes of the young <xref ref-type="bibr" rid="pone.0008887-Yamagata1">[49]</xref>. Although HNF4A did not meet our strict threshold for significance in the primary analysis, it was ranked first in our secondary analysis using a test statistic that was more heavily weighted towards the mean shift between groups (see <xref ref-type="sec" rid="s2"><bold>Methods</bold></xref>).</p>
+<fig id="pone-0008887-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0008887.g002</object-id><label>Figure 2</label><caption>
+<title>A second molecular interaction network suggested by Ingenuity Pathway Analysis (IPA), with HNF4A as a central node, consists of 12 genes among the top 56 differentially methylated loci.</title>
+<p>RefSeq IDs for 33 of the top 56 sites that mapped to genes were uploaded onto the “Core Analysis” tool of IPA. The second-highest scoring molecular interaction network was constructed by 35 nodes, 12 of which were located on the input list (shaded nodes), and is associated with the cell cycle, cellular function and maintenance, and connective tissue development and function. The nodal relationships are indicated by solid lines (direct interaction) and dashed lines (indirect interactions), with or without filled arrows indicating functional interaction or merely physical association, respectively. Additionally, filled arrows that are preceded by a terminal bar indicate inhibition as well as functional interaction. The shape of each node indicates the class of molecule: horizontal ovals are transcription factors, squares are growth factors, vertical rectangles are ion channels while horizontal rectangles are nuclear receptors, inverted triangles are kinases, vertical diamonds are enzymes while horizontal diamonds are peptidases, trapezoids are transporters, and circles correspond to “other” molecules. In alphabetical order, this network consists of BUD31, CECR1, Collagen(s), CPN1, CRY1, DHX8, FAM110B, FGF2, GIN1, GRIK4, HNF4A, INO80D, KNG1, LPIN3, MAP3K3, MPRIP, MRTO4, NOC3L, PPARA, PRICKLE4, PRSS3, RSF1, RUVBL2, SLC31A1, SLC35A1, SLC35A5, SLC39A1, SMARCA5, SPAST, TGFB1, TSKU, UXT, WRNIP1, XPNPEP2, and ZNHIT6.</p>
+</caption><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.g002" xlink:type="simple"/></fig>
+<p>An additional IPA that was applied specifically to candidate loci overlapping RefSeq gene promoters revealed a third molecular interaction network including 17 of 23 input nodes. This network is functionally associated with cancer, cellular development, cellular growth and proliferation (<bold><xref ref-type="supplementary-material" rid="pone.0008887.s004">Figure S4</xref></bold>), and is centered on a number of transcription factors and growth hormones (e.g. <italic>NCOR2</italic>, <italic>GH1</italic>, <italic>TGFβ1</italic>, <italic>HNF4A</italic>), and <italic>TP53</italic> which shows altered DNA methylation in renal tissue of IUGR rats in adult life <xref ref-type="bibr" rid="pone.0008887-Pham1">[26]</xref>.</p>
+<p>We therefore proceeded to bisulphite MassArray experiments <xref ref-type="bibr" rid="pone.0008887-Ehrich1">[34]</xref>, initially testing the technical performance of the HELP assays by choosing four loci, two each representing constitutively hypomethylated and constitutively methylated sites identified by the HELP assay. <bold><xref ref-type="supplementary-material" rid="pone.0008887.s005">Figure S5</xref></bold> demonstrates the agreement between methylation values determined independently for these loci by HELP and MassArray (with a between-assay correlation in this case of R = −0.96353).</p>
+<p>The technical validation results confirmed that the HELP data were accurate and allowed us to proceed to the analysis of the specific loci at which dysregulation of cytosine methylation was suspected. We focused on the <italic>HNF4A</italic> locus, where HELP data showed evidence for changes in cytosine methylation at an internal promoter of this complex gene (<xref ref-type="fig" rid="pone-0008887-g003"><bold>Figure 3</bold></xref>). Furthermore, the identified locus represents highly conserved sequence and contains multiple known transcription factor binding sites for HNF1α and β, SP1, HNF6, and GATA6 <xref ref-type="bibr" rid="pone.0008887-Hatzis1">[50]</xref>. Differences in DNA methylation at the <italic>HNF4A</italic> promoter were confirmed by MassArray, with the informative HpaII site showing hypermethylation in IUGR compared to controls (65.7% and 59.6% methylation, respectively; p&lt;0.01), consistent with the HELP data (log<sub>2</sub>(HpaII/MspI) = 1.89±0.42 and 3.46±0.60, respectively; p = 0.00006). This increased methylation level is of a magnitude comparable with that observed in samples from the Dutch famine cohort <xref ref-type="bibr" rid="pone.0008887-Heijmans1">[25]</xref>. Functionally, the acquisition of cytosine methylation at this promoter may reduce <italic>HNF4A</italic> expression in IUGR offspring, consistent with the inherited loss-of-function mutations in HNF4A that lead to an autosomal dominant form of maturity onset diabetes of the young (MODY) <xref ref-type="bibr" rid="pone.0008887-Yamagata1">[49]</xref>.</p>
+<fig id="pone-0008887-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0008887.g003</object-id><label>Figure 3</label><caption>
+<title>Differential methylation at the <italic>HNF4A</italic> locus proximal promoter region.</title>
+<p>HELP data are shown in (a) as normalized, centered log<sub>2</sub>(HpaII/MspI) ratios. A locus with a change in methylation is marked with an asterisk. A more detailed view of this region is shown in (b), showing conservation of DNA sequences at this alternative promoter of <italic>HNF4A</italic>. In (c) the degree of difference in cytosine methylation as measured by bisulphite MassArray is shown with the locus changing to a significant degree shown with its associated p value. This CG dinucleotide is within one of the HpaII sites of the informative gragment in (a) and is located immediately beside the conserved transcription factor binding sites shown in (b). These images were derived from the UCSC Genome Browser <xref ref-type="bibr" rid="pone.0008887-Kent1">[60]</xref>.</p>
+</caption><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.g003" xlink:type="simple"/></fig></sec><sec id="s3d">
+<title>Effect Size and Power Computations</title>
+<p>One of our goals was to use our data <italic>post hoc</italic> to define how best to design this kind of study to test the dysregulation of cytosine methylation in a human disease. We therefore calculated an estimation of effect size for the top 1,000 loci with differences in methylation between IUGR and controls. Similar to the distribution of methylation differences noted for the top 56 loci, the 1,000 most informative loci had a mean difference of 0.60 with a standard deviation of 0.20 log<sub>2</sub> units. The difference in average methylation between control and IUGR at all loci measured tended to be subtle (between 0.20 and 1.00) and less likely to represent broad methylation state changes (going from a completely methylated state to a hypomethylated state and <italic>vice versa</italic>). We simulated informative genes with this information as a guide for true group differences in this population (<xref ref-type="table" rid="pone-0008887-t003"><bold>Table 3</bold></xref>).</p>
+<table-wrap id="pone-0008887-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0008887.t003</object-id><label>Table 3</label><caption>
+<title>Estimation of power for different study sample sizes.</title>
+</caption><!--===== Grouping alternate versions of objects =====--><alternatives><graphic id="pone-0008887-t003-3" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.t003" xlink:type="simple"/><table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" colspan="1" rowspan="1">Sample size per group</td>
+<td align="left" colspan="1" rowspan="1">Power at alpha = 0.05</td>
+<td align="left" colspan="1" rowspan="1">Power at alpha = 1e−5</td>
+<td align="left" colspan="1" rowspan="1">Power at alpha = 1e−10</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" colspan="1" rowspan="1">5</td>
+<td align="left" colspan="1" rowspan="1">0.74</td>
+<td align="left" colspan="1" rowspan="1">0.003</td>
+<td align="left" colspan="1" rowspan="1">&lt;0.0001</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">10</td>
+<td align="left" colspan="1" rowspan="1">0.98</td>
+<td align="left" colspan="1" rowspan="1">0.11</td>
+<td align="left" colspan="1" rowspan="1">0.0002</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">15</td>
+<td align="left" colspan="1" rowspan="1">1.00</td>
+<td align="left" colspan="1" rowspan="1">0.45</td>
+<td align="left" colspan="1" rowspan="1">0.00</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">25</td>
+<td align="left" colspan="1" rowspan="1">1.00</td>
+<td align="left" colspan="1" rowspan="1">0.94</td>
+<td align="left" colspan="1" rowspan="1">0.12</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">35</td>
+<td align="left" colspan="1" rowspan="1">1.00</td>
+<td align="left" colspan="1" rowspan="1">1.00</td>
+<td align="left" colspan="1" rowspan="1">0.57</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">50</td>
+<td align="left" colspan="1" rowspan="1">1.00</td>
+<td align="left" colspan="1" rowspan="1">1.00</td>
+<td align="left" colspan="1" rowspan="1">0.97</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">100</td>
+<td align="left" colspan="1" rowspan="1">1.00</td>
+<td align="left" colspan="1" rowspan="1">1.00</td>
+<td align="left" colspan="1" rowspan="1">1.00</td>
+</tr>
+</tbody>
+</table></alternatives><table-wrap-foot><fn id="nt103"><label/><p>cases: N(0.60, 0.32).</p></fn><fn id="nt104"><label/><p>controls: N(0.00, 0.32).</p></fn></table-wrap-foot></table-wrap></sec></sec><sec id="s4">
+<title>Discussion</title>
+<p>We present preliminary evidence for a unifying new hypothesis in which epigenetic modification induced in early development may contribute to an increased susceptibility to age-related diseases by prematurely advancing the normal aging process. Using a genome-wide, high-resolution cytosine methylation assay (testing ∼1.32 million loci throughout the genome), we avoid the necessity for any <italic>a priori</italic> assumptions about candidate loci and reveal potential new candidates in mediating the fetal origin of adult disease. We identified dysregulation of DNA methylation in purified populations of cord blood-derived CD34+ stem cells from IUGR neonates compared with matched controls, and find that these changes occur throughout the genome, although they are of a more modest degree and relatively limited extent compared with the epigenomic dysregulation observed in conditions such as cancer. As our study was based on a limited number of subjects, such subtle differences in cytosine methylation challenge the ability of genome-wide approaches to identify genuinely significant loci even at standard significance levels (0.05–0.001) which do not reflect multiple testing. In large-scale studies, when thousands to millions of loci are measured, the threshold to declare any locus significant is typically based on a more stringent level of significance (<italic>e.g.</italic> Bonferroni correction or similar) in order to minimize the possibility of false positives, therefore we have displayed the power at two such thresholds. Based on these simulations, a more expansive approach, with sample size of at least 25 subjects per group is recommended for studies of methylation changes in conditions where such subtle effects are expected.</p>
+<p>Nonetheless, we found that the IUGR subjects were distinctive for having a number of consistent differences in methylation near genes involved in processes critical for stem cell function, including cell cycle and cellular maintenance. Quantitative bisulphite validation studies confirmed our ability to discriminate differences in methylation in these samples, and the biological coherence of results in terms of functional pathway relatedness is suggestive of underlying changes in epigenetic regulation as a response to IUGR.</p>
+<p>A locus that emerged consistently in this pathway analysis was the <italic>HNF4A</italic> gene, already implicated in T2DM <xref ref-type="bibr" rid="pone.0008887-Yamagata1">[49]</xref>, but not previously demonstrated to undergo epigenetic dysregulation as a response to IUGR. Best known for its implications as a monogenic, autosomal dominant form of maturity onset diabetes of the young (MODY) <xref ref-type="bibr" rid="pone.0008887-Yamagata1">[49]</xref>, HNF4A is involved in development and function of both the liver and the pancreas <xref ref-type="bibr" rid="pone.0008887-Duncan1">[51]</xref> and actively coordinates gene expression of many important metabolic pathways in both tissues <xref ref-type="bibr" rid="pone.0008887-Odom1">[52]</xref>, <xref ref-type="bibr" rid="pone.0008887-Rhee1">[53]</xref>, <xref ref-type="bibr" rid="pone.0008887-Miura1">[54]</xref>. We find differences in DNA methylation targeted to only one of the <italic>HNF4A</italic> promoters, supporting a model of isoform variation of the gene being related to susceptibility to T2DM, a major age-related disease.</p>
+<p>Other loci identified in this study were found to be related functionally to <italic>HNF4A</italic> and also include <italic>ATG5</italic> and <italic>TADA3L</italic>, which may have roles in mediating susceptibility to later disease. <italic>ATG5</italic> is an essential component of autophagy that, when depleted, renders cells more susceptible to starvation and starvation-induced cell death <xref ref-type="bibr" rid="pone.0008887-Yousefi1">[55]</xref>. We found that <italic>ATG5</italic> is relatively methylated in IUGR at a CpG island-containing site just downstream of the transcription start site, potentially reducing expression in IUGR compared with controls, in parallel with increased sensitivity to starvation-induced cell death. Transcriptional adaptor 3 (<italic>TADA3L</italic>) is associated with and is required for full p53 activity, causing growth arrest, senescence, and p53-mediated apoptosis <xref ref-type="bibr" rid="pone.0008887-Sekaric1">[56]</xref>. <italic>TADA3L</italic> isoforms are highly expressed in CD34+ stem cells <xref ref-type="bibr" rid="pone.0008887-Su1">[57]</xref>, but we find that <italic>TADA3L</italic> is relatively methylated in IUGR at a CpG island-containing bidirectional promoter, potentially downregulating its expression and altering CD34+ stem cell population dynamics.</p>
+<p>However, the modest level of differences in methylation that we and others have observed <xref ref-type="bibr" rid="pone.0008887-Heijmans1">[25]</xref> raises an important question: what is the biological significance of changes in methylation on the order of ∼6%? We note that such a change must represent a difference in a proportion of cells and/or alleles undergoing methylation within the broader population of CD34+ cells. Because CD34+ stem cells are multipotent progenitors, the presence of an epigenetically dysregulated subpopulation may go on to mediate susceptibility to chronic disease, with potentially greater effects over time should this subpopulation expand. Alternatively, this stem cell population may serve to define loci susceptible to constitutive “epimutations” <xref ref-type="bibr" rid="pone.0008887-Suter1">[58]</xref> that are likely to exist in descendent cell types or unrelated lineages (<italic>e.g.</italic> liver or pancreatic progenitors) where they may have the chance to induce functional changes in critical cell types or tissues. Adding further information about epigenetic and transcriptional regulators other than cytosine methylation plus transcriptional profiling studies will be very valuable in gaining a greater understanding of the epigenetic dysregulation and its functional consequences in IUGR.</p>
+<p>We hypothesize that the changes we observe by focused studies of hematopoietic (CD34+) stem cells are representative of the influence of the intrauterine environment on epigenetic regulation and independent cellular programs throughout the developing fetus. While all cells are believed to accumulate epimutations over time <xref ref-type="bibr" rid="pone.0008887-Fraga1">[59]</xref>, periods of rapid cell division (<italic>e.g.</italic> during fetal development) represent the most vulnerable windows for cellular injury and potential dysregulation of the epigenome, with associated decreases in cellular fitness, function, and, of particular note for multipotent stem cells, replicative capacity. We therefore propose that adverse intrauterine conditions are more likely to contribute to replicative senescence and early exhaustion of regenerative pools of stem cell precursors throughout the body, increasing susceptibility to and speeding onset of age-related diseases like T2DM.</p>
+<p>Although the exact mechanism remains unclear, the results of this study are indicative of epigenetic dysregulation associated with intrauterine growth restriction. Moreover, these findings suggest that epigenetic changes serve as a steward of cellular memory of aberrant intrauterine environments, and that site-specific changes in DNA methylation may mediate the increased susceptibility to age-related diseases observed later in life.</p>
+<sec id="s4a">
+<title>Accession Numbers</title>
+<p>GEO database, accession number GSE17727.</p>
+</sec></sec><sec id="s5">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0008887.s001" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.s001" xlink:type="simple"><label>Figure S1</label><caption>
+<p>Global correlation using the entire dataset demonstrates a high degree of epigenetic correlation among all samples, with no apparent global difference between IUGR and controls. A tree-pair plot was generated using a visualization tool that we have developed as part of an R package (Thompson, 2008). Pairwise correlations, calculated from &gt;1.32 million independent loci, are shown in the upper right portion of the figure, where R values indicate the Pearson correlation for each pair of samples (labeled along the diagonal) and blue dotplots show a visual representation of the similarity between samples. Thin red lines within each of these sub-panels correspond to a lowess-fit of the pairwise data. In the lower left portion of the figure, a tree determined by Ward's minimum variance clustering shows an alternative unsupervised clustering approach. Branching order is shown in solid lines, colored by group. The diagonal dotted lines are numbered and indicate the Euclidean distance scale. The dotted red line indicates the Euclidean distance cutoff used to separate the individual groups of samples. Thompson, R.F., Reimers, M., Khulan, B., Gissot, M., Richmond, T.A., Chen, Q., Zheng, X., Kim, K. and Greally, J.M. (2008) An analytical pipeline for genomic representations used for cytosine methylation studies, Bioinformatics, 24, 1161–1167.</p>
+<p>(0.70 MB TIF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0008887.s002" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.s002" xlink:type="simple"><label>Figure S2</label><caption>
+<p>Supervised group comparisons reveal differences in methylation based on gender but not ethnicity. Panel (A) shows a histogram distribution of p-values calculated from an unpaired T test of males (n = 4) in one group and females (n = 6) in another. Along the x-axis, leftmost data represent low p-values (i.e. highly significant differences in methylation between groups), while data towards the right represent high p-values and, thus, loci that are uniform across groups. P-value frequency is shown along the y-axis, with larger values indicating increasing numbers of differentially methylated loci corresponding to the indicated p-value level. Note that the y-axis in this panel is adjusted to a different scale in order to account for the higher frequency of highly significant p-values. Panel (B) shows an analogous histogram with data obtained from samples grouped by ethnicity (Latin, n = 7, compared to non-Latin, n = 3).</p>
+<p>(0.04 MB TIF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0008887.s003" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.s003" xlink:type="simple"><label>Figure S3</label><caption>
+<p>The top-scoring molecular interaction network suggested by Ingenuity Pathway Analysis (IPA) consists of 13 genes among the top 56 differentially methylated loci. RefSeq IDs for 33 of the top 56 sites that mapped to genes were uploaded onto the “Core Analysis” tool of IPA. The top-scoring molecular interaction network was constructed by 35 nodes, 13 of which were located on the input list (shaded nodes), and is associated with cell signaling, nucleic acid metabolism, and molecular transport. The nodal relationships are indicated by solid lines (direct interaction) and dashed lines (indirect interactions), with or without filled arrows indicating functional interaction or merely physical association, respectively. The shape of each node indicates the class of molecule: horizontal ovals are transcription factors, squares are cytokines, vertical rectangles are G-protein coupled receptors, triangles are phosphatases, diamonds are enzymes, trapezoids are transporters, small ovals are chemicals, and circles correspond to “other” molecules. In alphabetical order, this network consists of ADCY, ADCY5, ADCY9, ARPC4, ATG5, β-estradiol, CAP2, CRYM, CUX2, EMILIN3, FSH, GALR1, GALR3, GH1, GJA1, GNAI2, GNAL, GNG7, GSTM3, HTR1F, LPAR4, MAMLD1, 5-methoxytryptamine, MllRN181C, NCOR2, noladin ether, PALM, PCDH19, PPP3CA, RXFP4, SH3BP4, SYP, TADA3L, and TP53.</p>
+<p>(0.32 MB TIF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0008887.s004" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.s004" xlink:type="simple"><label>Figure S4</label><caption>
+<p>A molecular interaction network suggested by Ingenuity Pathway Analysis (IPA) “Core Analysis”, with HNF4A as a central node among other transcription and growth factors. This network, associated with cancer, cellular development, cellular growth and proliferation, consists of 17 of 23 input nodes, each corresponding to the promoter of a RefSeq gene showing differential methylation by HELP. Nodes are shaded in green for relative hypermethylation in IUGR compared to controls, while red-shaded nodes are hypomethylated in IUGR. The nodal relationships are indicated by solid lines (direct interaction) and dashed lines (indirect interactions), with or without filled arrows indicating functional interaction or physical association, respectively. The shape of each node indicates the class of molecule: horizontal ovals are transcription factors, squares are growth factors, vertical rectangles are ion channels, triangles are phosphatases, diamonds are enzymes, trapezoids are transporters, and circles correspond to “other” molecules with concentric circles indicated complexes. In alphabetical order, this network consists of ADCY5, ARPC4, ATG5, β-estradiol, BUD31, C11ORF10, C9ORF5, Ca2+, CDKN2A, CHCHD8, CPA2, CPN1, CRY1, CTNNBL1, CUX2, FSH, GATA2, GH1, GINS3, GRIK4, HNF4A, INO80D, NCOR2, PPP3CA, PRSS3, RUVBL2, SH3BP4, SLC35A1, SLC35A5, SPP1, SYP, TADA3L, TGFB1, TP53, and TSKU.</p>
+<p>(0.46 MB TIF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0008887.s005" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.s005" xlink:type="simple"><label>Figure S5</label><caption>
+<p>Technical validation studies using MassArray confirm HELP data. Four loci were identified, two each representing constitutively hypo- and hyper-methylated sites. The hypomethylated sites were located at chr12:63986847-63987489 and chr20:45414330-45414885, with hypermethylated sites at chr4:188493650-188494271 and chr7:69549255-69549831 (hg18, human genome, March 2006, UCSC Genome Browser). HELP data as log2(HpaII/MspI) ratios are shown along the x-axis, with methylation towards the left and hypomethylation towards the right. MassArray data for the same loci are plotted along the y-axis, from 0% (hypomethylated) to 100% (methylated).</p>
+<p>(0.03 MB TIF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0008887.s006" mimetype="application/msword" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.s006" xlink:type="simple"><label>Table S1</label><caption>
+<p>Neonatal and Maternal Characteristics for IUGR and Controls</p>
+<p>(0.03 MB DOC)</p>
+</caption></supplementary-material><supplementary-material id="pone.0008887.s007" mimetype="application/msword" position="float" xlink:href="info:doi/10.1371/journal.pone.0008887.s007" xlink:type="simple"><label>Table S2</label><caption>
+<p>Characteristics of top 56 candidate loci identified by HELP. All positions correspond to coordinates in the human genome, hg18 March 2006 UCSC Genome Browser; IUGR and Control data given as group averages of log<sub>2</sub>(HpaII/MspI); difference is IUGR minus Control; P-values are all x10<sup>−6</sup>; CpG, overlap with CpG islands; CGc overlap CG clusters; phC overlap with mammalian or vertebrate phastCons conserved elements; Rep overlap with repetitive elements (RT for retrotransposable elements including LINEs and SINEs, LT for long terminal repeats); Loc overlap with promoters (PRO), bidirectional promoters (PRO<sup>2</sup>), or gene bodies (GB) of RefSeq genes; Gene names and corresponding RefSeq identifiers are also shown.</p>
+<p>(0.04 MB DOC)</p>
+</caption></supplementary-material></sec></body>
+<back>
+<ack>
+<p>The authors acknowledge the support of Einstein's Center for Epigenomics.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0008887-Barker1"><label>1</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Barker</surname><given-names>DJ</given-names></name>
+</person-group>             <year>2007</year>             <article-title>The origins of the developmental origins theory.</article-title>             <source>J Intern Med</source>             <volume>261</volume>             <fpage>412</fpage>             <lpage>417</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Barker2"><label>2</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Barker</surname><given-names>DJ</given-names></name>
+</person-group>             <year>2004</year>             <article-title>The developmental origins of adult disease.</article-title>             <source>J Am Coll Nutr</source>             <volume>23</volume>             <fpage>588S</fpage>             <lpage>595S</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Egeland1"><label>3</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Egeland</surname><given-names>GM</given-names></name>
+<name name-style="western"><surname>Skjaerven</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Irgens</surname><given-names>LM</given-names></name>
+</person-group>             <year>2000</year>             <article-title>Birth characteristics of women who develop gestational diabetes: population based study.</article-title>             <source>BMJ</source>             <volume>321</volume>             <fpage>546</fpage>             <lpage>547</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Jaquet1"><label>4</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Jaquet</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Gaboriau</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Czernichow</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Levy-Marchal</surname><given-names>C</given-names></name>
+</person-group>             <year>2000</year>             <article-title>Insulin resistance early in adulthood in subjects born with intrauterine growth retardation.</article-title>             <source>J Clin Endocrinol Metab</source>             <volume>85</volume>             <fpage>1401</fpage>             <lpage>1406</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Ravelli1"><label>5</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Ravelli</surname><given-names>AC</given-names></name>
+<name name-style="western"><surname>van der Meulen</surname><given-names>JH</given-names></name>
+<name name-style="western"><surname>Michels</surname><given-names>RP</given-names></name>
+<name name-style="western"><surname>Osmond</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Barker</surname><given-names>DJ</given-names></name>
+<etal/></person-group>             <year>1998</year>             <article-title>Glucose tolerance in adults after prenatal exposure to famine.</article-title>             <source>Lancet</source>             <volume>351</volume>             <fpage>173</fpage>             <lpage>177</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Ravelli2"><label>6</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Ravelli</surname><given-names>GP</given-names></name>
+<name name-style="western"><surname>Stein</surname><given-names>ZA</given-names></name>
+<name name-style="western"><surname>Susser</surname><given-names>MW</given-names></name>
+</person-group>             <year>1976</year>             <article-title>Obesity in young men after famine exposure in utero and early infancy.</article-title>             <source>N Engl J Med</source>             <volume>295</volume>             <fpage>349</fpage>             <lpage>353</lpage>          </element-citation></ref>
+<ref id="pone.0008887-RichEdwards1"><label>7</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Rich-Edwards</surname><given-names>JW</given-names></name>
+<name name-style="western"><surname>Colditz</surname><given-names>GA</given-names></name>
+<name name-style="western"><surname>Stampfer</surname><given-names>MJ</given-names></name>
+<name name-style="western"><surname>Willett</surname><given-names>WC</given-names></name>
+<name name-style="western"><surname>Gillman</surname><given-names>MW</given-names></name>
+<etal/></person-group>             <year>1999</year>             <article-title>Birthweight and the risk for type 2 diabetes mellitus in adult women.</article-title>             <source>Ann Intern Med</source>             <volume>130</volume>             <fpage>278</fpage>             <lpage>284</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Bertram1"><label>8</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Bertram</surname><given-names>CE</given-names></name>
+<name name-style="western"><surname>Hanson</surname><given-names>MA</given-names></name>
+</person-group>             <year>2001</year>             <article-title>Animal models and programming of the metabolic syndrome.</article-title>             <source>Br Med Bull</source>             <volume>60</volume>             <fpage>103</fpage>             <lpage>121</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Boloker1"><label>9</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Boloker</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Gertz</surname><given-names>SJ</given-names></name>
+<name name-style="western"><surname>Simmons</surname><given-names>RA</given-names></name>
+</person-group>             <year>2002</year>             <article-title>Gestational diabetes leads to the development of diabetes in adulthood in the rat.</article-title>             <source>Diabetes</source>             <volume>51</volume>             <fpage>1499</fpage>             <lpage>1506</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Ozanne1"><label>10</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Ozanne</surname><given-names>SE</given-names></name>
+<name name-style="western"><surname>Nicholas Hales</surname><given-names>C</given-names></name>
+</person-group>             <year>2005</year>             <article-title>Poor fetal growth followed by rapid postnatal catch-up growth leads to premature death.</article-title>             <source>Mech Ageing Dev</source>             <volume>126</volume>             <fpage>852</fpage>             <lpage>854</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Simmons1"><label>11</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Simmons</surname><given-names>RA</given-names></name>
+<name name-style="western"><surname>Templeton</surname><given-names>LJ</given-names></name>
+<name name-style="western"><surname>Gertz</surname><given-names>SJ</given-names></name>
+</person-group>             <year>2001</year>             <article-title>Intrauterine growth retardation leads to the development of type 2 diabetes in the rat.</article-title>             <source>Diabetes</source>             <volume>50</volume>             <fpage>2279</fpage>             <lpage>2286</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Ozanne2"><label>12</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Ozanne</surname><given-names>SE</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>CL</given-names></name>
+<name name-style="western"><surname>Coleman</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Smith</surname><given-names>GD</given-names></name>
+</person-group>             <year>1996</year>             <article-title>Altered muscle insulin sensitivity in the male offspring of protein-malnourished rats.</article-title>             <source>Am J Physiol</source>             <volume>271</volume>             <fpage>E1128</fpage>             <lpage>1134</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Vuguin1"><label>13</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Vuguin</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Raab</surname><given-names>E</given-names></name>
+<name name-style="western"><surname>Liu</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Barzilai</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Simmons</surname><given-names>R</given-names></name>
+</person-group>             <year>2004</year>             <article-title>Hepatic insulin resistance precedes the development of diabetes in a model of intrauterine growth retardation.</article-title>             <source>Diabetes</source>             <volume>53</volume>             <fpage>2617</fpage>             <lpage>2622</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Ozanne3"><label>14</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Ozanne</surname><given-names>SE</given-names></name>
+<name name-style="western"><surname>Olsen</surname><given-names>GS</given-names></name>
+<name name-style="western"><surname>Hansen</surname><given-names>LL</given-names></name>
+<name name-style="western"><surname>Tingey</surname><given-names>KJ</given-names></name>
+<name name-style="western"><surname>Nave</surname><given-names>BT</given-names></name>
+<etal/></person-group>             <year>2003</year>             <article-title>Early growth restriction leads to down regulation of protein kinase C zeta and insulin resistance in skeletal muscle.</article-title>             <source>J Endocrinol</source>             <volume>177</volume>             <fpage>235</fpage>             <lpage>241</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Dahri1"><label>15</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Dahri</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Snoeck</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Reusens-Billen</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Remacle</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Hoet</surname><given-names>JJ</given-names></name>
+</person-group>             <year>1991</year>             <article-title>Islet function in offspring of mothers on low-protein diet during gestation.</article-title>             <source>Diabetes</source>             <volume>40</volume>             <supplement>Suppl 2</supplement>             <fpage>115</fpage>             <lpage>120</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Stoffers1"><label>16</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Stoffers</surname><given-names>DA</given-names></name>
+<name name-style="western"><surname>Desai</surname><given-names>BM</given-names></name>
+<name name-style="western"><surname>DeLeon</surname><given-names>DD</given-names></name>
+<name name-style="western"><surname>Simmons</surname><given-names>RA</given-names></name>
+</person-group>             <year>2003</year>             <article-title>Neonatal exendin-4 prevents the development of diabetes in the intrauterine growth retarded rat.</article-title>             <source>Diabetes</source>             <volume>52</volume>             <fpage>734</fpage>             <lpage>740</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Baserga1"><label>17</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Baserga</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Hale</surname><given-names>MA</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>ZM</given-names></name>
+<name name-style="western"><surname>Yu</surname><given-names>X</given-names></name>
+<name name-style="western"><surname>Callaway</surname><given-names>CW</given-names></name>
+<etal/></person-group>             <year>2007</year>             <article-title>Uteroplacental insufficiency alters nephrogenesis and downregulates cyclooxygenase-2 expression in a model of IUGR with adult-onset hypertension.</article-title>             <source>Am J Physiol Regul Integr Comp Physiol</source>             <volume>292</volume>             <fpage>R1943</fpage>             <lpage>1955</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Dennison1"><label>18</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Dennison</surname><given-names>EM</given-names></name>
+<name name-style="western"><surname>Arden</surname><given-names>NK</given-names></name>
+<name name-style="western"><surname>Keen</surname><given-names>RW</given-names></name>
+<name name-style="western"><surname>Syddall</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Day</surname><given-names>IN</given-names></name>
+<etal/></person-group>             <year>2001</year>             <article-title>Birthweight, vitamin D receptor genotype and the programming of osteoporosis.</article-title>             <source>Paediatr Perinat Epidemiol</source>             <volume>15</volume>             <fpage>211</fpage>             <lpage>219</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Baker1"><label>19</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Baker</surname><given-names>JL</given-names></name>
+<name name-style="western"><surname>Olsen</surname><given-names>LW</given-names></name>
+<name name-style="western"><surname>Sorensen</surname><given-names>TI</given-names></name>
+</person-group>             <year>2008</year>             <article-title>Weight at birth and all-cause mortality in adulthood.</article-title>             <source>Epidemiology</source>             <volume>19</volume>             <fpage>197</fpage>             <lpage>203</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Magee1"><label>20</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Magee</surname><given-names>TR</given-names></name>
+<name name-style="western"><surname>Han</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Cherian</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Khorram</surname><given-names>O</given-names></name>
+<name name-style="western"><surname>Ross</surname><given-names>MG</given-names></name>
+<etal/></person-group>             <year>2008</year>             <article-title>Down-regulation of transcription factor peroxisome proliferator-activated receptor in programmed hepatic lipid dysregulation and inflammation in intrauterine growth-restricted offspring.</article-title>             <source>Am J Obstet Gynecol</source>             <volume>199</volume>             <fpage>271 e271</fpage>             <lpage>275</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Nyirenda1"><label>21</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Nyirenda</surname><given-names>MJ</given-names></name>
+<name name-style="western"><surname>Dean</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Lyons</surname><given-names>V</given-names></name>
+<name name-style="western"><surname>Chapman</surname><given-names>KE</given-names></name>
+<name name-style="western"><surname>Seckl</surname><given-names>JR</given-names></name>
+</person-group>             <year>2006</year>             <article-title>Prenatal programming of hepatocyte nuclear factor 4alpha in the rat: A key mechanism in the ‘foetal origins of hyperglycaemia’?</article-title>             <source>Diabetologia</source>             <volume>49</volume>             <fpage>1412</fpage>             <lpage>1420</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Lillycrop1"><label>22</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Lillycrop</surname><given-names>KA</given-names></name>
+<name name-style="western"><surname>Phillips</surname><given-names>ES</given-names></name>
+<name name-style="western"><surname>Jackson</surname><given-names>AA</given-names></name>
+<name name-style="western"><surname>Hanson</surname><given-names>MA</given-names></name>
+<name name-style="western"><surname>Burdge</surname><given-names>GC</given-names></name>
+</person-group>             <year>2005</year>             <article-title>Dietary protein restriction of pregnant rats induces and folic acid supplementation prevents epigenetic modification of hepatic gene expression in the offspring.</article-title>             <source>J Nutr</source>             <volume>135</volume>             <fpage>1382</fpage>             <lpage>1386</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Lillycrop2"><label>23</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Lillycrop</surname><given-names>KA</given-names></name>
+<name name-style="western"><surname>Phillips</surname><given-names>ES</given-names></name>
+<name name-style="western"><surname>Torrens</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Hanson</surname><given-names>MA</given-names></name>
+<name name-style="western"><surname>Jackson</surname><given-names>AA</given-names></name>
+<etal/></person-group>             <year>2008</year>             <article-title>Feeding pregnant rats a protein-restricted diet persistently alters the methylation of specific cytosines in the hepatic PPAR alpha promoter of the offspring.</article-title>             <source>Br J Nutr</source>             <volume>100</volume>             <fpage>278</fpage>             <lpage>282</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Lillycrop3"><label>24</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Lillycrop</surname><given-names>KA</given-names></name>
+<name name-style="western"><surname>Slater-Jefferies</surname><given-names>JL</given-names></name>
+<name name-style="western"><surname>Hanson</surname><given-names>MA</given-names></name>
+<name name-style="western"><surname>Godfrey</surname><given-names>KM</given-names></name>
+<name name-style="western"><surname>Jackson</surname><given-names>AA</given-names></name>
+<etal/></person-group>             <year>2007</year>             <article-title>Induction of altered epigenetic regulation of the hepatic glucocorticoid receptor in the offspring of rats fed a protein-restricted diet during pregnancy suggests that reduced DNA methyltransferase-1 expression is involved in impaired DNA methylation and changes in histone modifications.</article-title>             <source>Br J Nutr</source>             <volume>97</volume>             <fpage>1064</fpage>             <lpage>1073</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Heijmans1"><label>25</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Heijmans</surname><given-names>BT</given-names></name>
+<name name-style="western"><surname>Tobi</surname><given-names>EW</given-names></name>
+<name name-style="western"><surname>Stein</surname><given-names>AD</given-names></name>
+<name name-style="western"><surname>Putter</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Blauw</surname><given-names>GJ</given-names></name>
+<etal/></person-group>             <year>2008</year>             <article-title>Persistent epigenetic differences associated with prenatal exposure to famine in humans.</article-title>             <source>Proc Natl Acad Sci U S A</source>             <volume>105</volume>             <fpage>17046</fpage>             <lpage>17049</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Pham1"><label>26</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Pham</surname><given-names>TD</given-names></name>
+<name name-style="western"><surname>MacLennan</surname><given-names>NK</given-names></name>
+<name name-style="western"><surname>Chiu</surname><given-names>CT</given-names></name>
+<name name-style="western"><surname>Laksana</surname><given-names>GS</given-names></name>
+<name name-style="western"><surname>Hsu</surname><given-names>JL</given-names></name>
+<etal/></person-group>             <year>2003</year>             <article-title>Uteroplacental insufficiency increases apoptosis and alters p53 gene methylation in the full-term IUGR rat kidney.</article-title>             <source>Am J Physiol Regul Integr Comp Physiol</source>             <volume>285</volume>             <fpage>R962</fpage>             <lpage>970</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Ke1"><label>27</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Ke</surname><given-names>X</given-names></name>
+<name name-style="western"><surname>Lei</surname><given-names>Q</given-names></name>
+<name name-style="western"><surname>James</surname><given-names>SJ</given-names></name>
+<name name-style="western"><surname>Kelleher</surname><given-names>SL</given-names></name>
+<name name-style="western"><surname>Melnyk</surname><given-names>S</given-names></name>
+<etal/></person-group>             <year>2006</year>             <article-title>Uteroplacental insufficiency affects epigenetic determinants of chromatin structure in brains of neonatal and juvenile IUGR rats.</article-title>             <source>Physiol Genomics</source>             <volume>25</volume>             <fpage>16</fpage>             <lpage>28</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Pranke1"><label>28</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Pranke</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Failace</surname><given-names>RR</given-names></name>
+<name name-style="western"><surname>Allebrandt</surname><given-names>WF</given-names></name>
+<name name-style="western"><surname>Steibel</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Schmidt</surname><given-names>F</given-names></name>
+<etal/></person-group>             <year>2001</year>             <article-title>Hematologic and immunophenotypic characterization of human umbilical cord blood.</article-title>             <source>Acta Haematol</source>             <volume>105</volume>             <fpage>71</fpage>             <lpage>76</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Gangenahalli1"><label>29</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Gangenahalli</surname><given-names>GU</given-names></name>
+<name name-style="western"><surname>Singh</surname><given-names>VK</given-names></name>
+<name name-style="western"><surname>Verma</surname><given-names>YK</given-names></name>
+<name name-style="western"><surname>Gupta</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Sharma</surname><given-names>RK</given-names></name>
+<etal/></person-group>             <year>2006</year>             <article-title>Hematopoietic stem cell antigen CD34: role in adhesion or homing.</article-title>             <source>Stem Cells Dev</source>             <volume>15</volume>             <fpage>305</fpage>             <lpage>313</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Couri1"><label>30</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Couri</surname><given-names>CE</given-names></name>
+<name name-style="western"><surname>Oliveira</surname><given-names>MC</given-names></name>
+<name name-style="western"><surname>Stracieri</surname><given-names>AB</given-names></name>
+<name name-style="western"><surname>Moraes</surname><given-names>DA</given-names></name>
+<name name-style="western"><surname>Pieroni</surname><given-names>F</given-names></name>
+<etal/></person-group>             <year>2009</year>             <article-title>C-peptide levels and insulin independence following autologous nonmyeloablative hematopoietic stem cell transplantation in newly diagnosed type 1 diabetes mellitus.</article-title>             <source>JAMA</source>             <volume>301</volume>             <fpage>1573</fpage>             <lpage>1579</lpage>          </element-citation></ref>
+<ref id="pone.0008887-HombachKlonisch1"><label>31</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Hombach-Klonisch</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Panigrahi</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Rashedi</surname><given-names>I</given-names></name>
+<name name-style="western"><surname>Seifert</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Alberti</surname><given-names>E</given-names></name>
+<etal/></person-group>             <year>2008</year>             <article-title>Adult stem cells and their trans-differentiation potential–perspectives and therapeutic applications.</article-title>             <source>J Mol Med</source>             <volume>86</volume>             <fpage>1301</fpage>             <lpage>1314</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Hotamisligil1"><label>32</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Hotamisligil</surname><given-names>GS</given-names></name>
+</person-group>             <year>2006</year>             <article-title>Inflammation and metabolic disorders.</article-title>             <source>Nature</source>             <volume>444</volume>             <fpage>860</fpage>             <lpage>867</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Oda1"><label>33</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Oda</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Glass</surname><given-names>JL</given-names></name>
+<name name-style="western"><surname>Thompson</surname><given-names>RF</given-names></name>
+<name name-style="western"><surname>Mo</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Olivier</surname><given-names>EN</given-names></name>
+<etal/></person-group>             <year>2009</year>             <article-title>High-resolution genome-wide cytosine methylation profiling with simultaneous copy number analysis and optimization for limited cell numbers.</article-title>             <source>Nucleic Acids Res</source>          </element-citation></ref>
+<ref id="pone.0008887-Ehrich1"><label>34</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Ehrich</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Nelson</surname><given-names>MR</given-names></name>
+<name name-style="western"><surname>Stanssens</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Zabeau</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Liloglou</surname><given-names>T</given-names></name>
+<etal/></person-group>             <year>2005</year>             <article-title>Quantitative high-throughput analysis of DNA methylation patterns by base-specific cleavage and mass spectrometry.</article-title>             <source>Proc Natl Acad Sci U S A</source>             <volume>102</volume>             <fpage>15785</fpage>             <lpage>15790</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Verma1"><label>35</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Verma</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Deb</surname><given-names>DK</given-names></name>
+<name name-style="western"><surname>Sassano</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Uddin</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Varga</surname><given-names>J</given-names></name>
+<etal/></person-group>             <year>2002</year>             <article-title>Activation of the p38 mitogen-activated protein kinase mediates the suppressive effects of type I interferons and transforming growth factor-beta on normal hematopoiesis.</article-title>             <source>J Biol Chem</source>             <volume>277</volume>             <fpage>7726</fpage>             <lpage>7735</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Navas1"><label>36</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Navas</surname><given-names>TA</given-names></name>
+<name name-style="western"><surname>Mohindru</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Estes</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Ma</surname><given-names>JY</given-names></name>
+<name name-style="western"><surname>Sokol</surname><given-names>L</given-names></name>
+<etal/></person-group>             <year>2006</year>             <article-title>Inhibition of overactivated p38 MAPK can restore hematopoiesis in myelodysplastic syndrome progenitors.</article-title>             <source>Blood</source>             <volume>108</volume>             <fpage>4170</fpage>             <lpage>4177</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Zhou1"><label>37</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Zhou</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Nguyen</surname><given-names>AN</given-names></name>
+<name name-style="western"><surname>Sohal</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Ying Ma</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Pahanish</surname><given-names>P</given-names></name>
+<etal/></person-group>             <year>2008</year>             <article-title>Inhibition of the TGF-beta receptor I kinase promotes hematopoiesis in MDS.</article-title>             <source>Blood</source>             <volume>112</volume>             <fpage>3434</fpage>             <lpage>3443</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Thompson1"><label>38</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Thompson</surname><given-names>RF</given-names></name>
+<name name-style="western"><surname>Reimers</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Khulan</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Gissot</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Richmond</surname><given-names>TA</given-names></name>
+<etal/></person-group>             <year>2008</year>             <article-title>An analytical pipeline for genomic representations used for cytosine methylation studies.</article-title>             <source>Bioinformatics</source>             <volume>24</volume>             <fpage>1161</fpage>             <lpage>1167</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Tusher1"><label>39</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Tusher</surname><given-names>VG</given-names></name>
+<name name-style="western"><surname>Tibshirani</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Chu</surname><given-names>G</given-names></name>
+</person-group>             <year>2001</year>             <article-title>Significance analysis of microarrays applied to the ionizing radiation response.</article-title>             <source>Proc Natl Acad Sci U S A</source>             <volume>98</volume>             <fpage>5116</fpage>             <lpage>5121</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Thompson2"><label>40</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Thompson</surname><given-names>RF</given-names></name>
+<name name-style="western"><surname>Suzuki</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Lau</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Greally</surname><given-names>JM</given-names></name>
+</person-group>             <year>2009</year>             <article-title>A pipeline for the quantitative analysis of CG dinucleotide methylation using mass spectrometry.</article-title>             <source>Bioinformatics Sep</source>             <volume>1;25(17)</volume>             <fpage>2164</fpage>             <lpage>70</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Reik1"><label>41</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Reik</surname><given-names>W</given-names></name>
+</person-group>             <year>2007</year>             <article-title>Stability and flexibility of epigenetic gene regulation in mammalian development.</article-title>             <source>Nature</source>             <volume>447</volume>             <fpage>425</fpage>             <lpage>432</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Gothot1"><label>42</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Gothot</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Pyatt</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>McMahel</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Rice</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Srour</surname><given-names>EF</given-names></name>
+</person-group>             <year>1997</year>             <article-title>Functional heterogeneity of human CD34(+) cells isolated in subcompartments of the G0/G1 phase of the cell cycle.</article-title>             <source>Blood</source>             <volume>90</volume>             <fpage>4384</fpage>             <lpage>4393</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Issa1"><label>43</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Issa</surname><given-names>JP</given-names></name>
+</person-group>             <year>2004</year>             <article-title>CpG island methylator phenotype in cancer.</article-title>             <source>Nat Rev Cancer</source>             <volume>4</volume>             <fpage>988</fpage>             <lpage>993</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Khulan1"><label>44</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Khulan</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Thompson</surname><given-names>RF</given-names></name>
+<name name-style="western"><surname>Ye</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Fazzari</surname><given-names>MJ</given-names></name>
+<name name-style="western"><surname>Suzuki</surname><given-names>M</given-names></name>
+<etal/></person-group>             <year>2006</year>             <article-title>Comparative isoschizomer profiling of cytosine methylation: The HELP assay.</article-title>             <source>Genome Res</source>             <volume>16</volume>             <fpage>1046</fpage>             <lpage>1055</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Guo1"><label>45</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Guo</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Choufani</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Ferreira</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Smith</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Chitayat</surname><given-names>D</given-names></name>
+<etal/></person-group>             <year>2008</year>             <article-title>Altered gene expression and methylation of the human chromosome 11 imprinted region in small for gestational age (SGA) placentae.</article-title>             <source>Dev Biol</source>             <volume>320</volume>             <fpage>79</fpage>             <lpage>91</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Glass1"><label>46</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Glass</surname><given-names>JL</given-names></name>
+<name name-style="western"><surname>Thompson</surname><given-names>RF</given-names></name>
+<name name-style="western"><surname>Khulan</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Figueroa</surname><given-names>ME</given-names></name>
+<name name-style="western"><surname>Olivier</surname><given-names>EN</given-names></name>
+<etal/></person-group>             <year>2007</year>             <article-title>CG dinucleotide clustering is a species-specific property of the genome.</article-title>             <source>Nucleic Acids Res</source>             <volume>35</volume>             <fpage>6798</fpage>             <lpage>6807</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Siepel1"><label>47</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Siepel</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Bejerano</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Pedersen</surname><given-names>JS</given-names></name>
+<name name-style="western"><surname>Hinrichs</surname><given-names>AS</given-names></name>
+<name name-style="western"><surname>Hou</surname><given-names>M</given-names></name>
+<etal/></person-group>             <year>2005</year>             <article-title>Evolutionarily conserved elements in vertebrate, insect, worm, and yeast genomes.</article-title>             <source>Genome Res</source>             <volume>15</volume>             <fpage>1034</fpage>             <lpage>1050</lpage>          </element-citation></ref>
+<ref id="pone.0008887-King1"><label>48</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>King</surname><given-names>DC</given-names></name>
+<name name-style="western"><surname>Taylor</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Elnitski</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Chiaromonte</surname><given-names>F</given-names></name>
+<name name-style="western"><surname>Miller</surname><given-names>W</given-names></name>
+<etal/></person-group>             <year>2005</year>             <article-title>Evaluation of regulatory potential and conservation scores for detecting cis-regulatory modules in aligned mammalian genome sequences.</article-title>             <source>Genome Res</source>             <volume>15</volume>             <fpage>1051</fpage>             <lpage>1060</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Yamagata1"><label>49</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Yamagata</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Furuta</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Oda</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Kaisaki</surname><given-names>PJ</given-names></name>
+<name name-style="western"><surname>Menzel</surname><given-names>S</given-names></name>
+<etal/></person-group>             <year>1996</year>             <article-title>Mutations in the hepatocyte nuclear factor-4alpha gene in maturity-onset diabetes of the young (MODY1).</article-title>             <source>Nature</source>             <volume>384</volume>             <fpage>458</fpage>             <lpage>460</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Hatzis1"><label>50</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Hatzis</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Talianidis</surname><given-names>I</given-names></name>
+</person-group>             <year>2001</year>             <article-title>Regulatory mechanisms controlling human hepatocyte nuclear factor 4alpha gene expression.</article-title>             <source>Mol Cell Biol</source>             <volume>21</volume>             <fpage>7320</fpage>             <lpage>7330</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Duncan1"><label>51</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Duncan</surname><given-names>SA</given-names></name>
+<name name-style="western"><surname>Manova</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>WS</given-names></name>
+<name name-style="western"><surname>Hoodless</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Weinstein</surname><given-names>DC</given-names></name>
+<etal/></person-group>             <year>1994</year>             <article-title>Expression of transcription factor HNF-4 in the extraembryonic endoderm, gut, and nephrogenic tissue of the developing mouse embryo: HNF-4 is a marker for primary endoderm in the implanting blastocyst.</article-title>             <source>Proc Natl Acad Sci U S A</source>             <volume>91</volume>             <fpage>7598</fpage>             <lpage>7602</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Odom1"><label>52</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Odom</surname><given-names>DT</given-names></name>
+<name name-style="western"><surname>Zizlsperger</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Gordon</surname><given-names>DB</given-names></name>
+<name name-style="western"><surname>Bell</surname><given-names>GW</given-names></name>
+<name name-style="western"><surname>Rinaldi</surname><given-names>NJ</given-names></name>
+<etal/></person-group>             <year>2004</year>             <article-title>Control of pancreas and liver gene expression by HNF transcription factors.</article-title>             <source>Science</source>             <volume>303</volume>             <fpage>1378</fpage>             <lpage>1381</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Rhee1"><label>53</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Rhee</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Ge</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Yang</surname><given-names>W</given-names></name>
+<name name-style="western"><surname>Fan</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Handschin</surname><given-names>C</given-names></name>
+<etal/></person-group>             <year>2006</year>             <article-title>Partnership of PGC-1alpha and HNF4alpha in the regulation of lipoprotein metabolism.</article-title>             <source>J Biol Chem</source>             <volume>281</volume>             <fpage>14683</fpage>             <lpage>14690</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Miura1"><label>54</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Miura</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Yamagata</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Kakei</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Hatakeyama</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Takahashi</surname><given-names>N</given-names></name>
+<etal/></person-group>             <year>2006</year>             <article-title>Hepatocyte nuclear factor-4alpha is essential for glucose-stimulated insulin secretion by pancreatic beta-cells.</article-title>             <source>J Biol Chem</source>             <volume>281</volume>             <fpage>5246</fpage>             <lpage>5257</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Yousefi1"><label>55</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Yousefi</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Perozzo</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Schmid</surname><given-names>I</given-names></name>
+<name name-style="western"><surname>Ziemiecki</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Schaffner</surname><given-names>T</given-names></name>
+<etal/></person-group>             <year>2006</year>             <article-title>Calpain-mediated cleavage of Atg5 switches autophagy to apoptosis.</article-title>             <source>Nat Cell Biol</source>             <volume>8</volume>             <fpage>1124</fpage>             <lpage>1132</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Sekaric1"><label>56</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Sekaric</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Shamanin</surname><given-names>VA</given-names></name>
+<name name-style="western"><surname>Luo</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Androphy</surname><given-names>EJ</given-names></name>
+</person-group>             <year>2007</year>             <article-title>hAda3 regulates p14ARF-induced p53 acetylation and senescence.</article-title>             <source>Oncogene</source>             <volume>26</volume>             <fpage>6261</fpage>             <lpage>6268</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Su1"><label>57</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Su</surname><given-names>AI</given-names></name>
+<name name-style="western"><surname>Wiltshire</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Batalov</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Lapp</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Ching</surname><given-names>KA</given-names></name>
+<etal/></person-group>             <year>2004</year>             <article-title>A gene atlas of the mouse and human protein-encoding transcriptomes.</article-title>             <source>Proc Natl Acad Sci U S A</source>             <volume>101</volume>             <fpage>6062</fpage>             <lpage>6067</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Suter1"><label>58</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Suter</surname><given-names>CM</given-names></name>
+<name name-style="western"><surname>Martin</surname><given-names>DI</given-names></name>
+<name name-style="western"><surname>Ward</surname><given-names>RL</given-names></name>
+</person-group>             <year>2004</year>             <article-title>Germline epimutation of MLH1 in individuals with multiple cancers.</article-title>             <source>Nat Genet</source>             <volume>36</volume>             <fpage>497</fpage>             <lpage>501</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Fraga1"><label>59</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Fraga</surname><given-names>MF</given-names></name>
+<name name-style="western"><surname>Ballestar</surname><given-names>E</given-names></name>
+<name name-style="western"><surname>Paz</surname><given-names>MF</given-names></name>
+<name name-style="western"><surname>Ropero</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Setien</surname><given-names>F</given-names></name>
+<etal/></person-group>             <year>2005</year>             <article-title>Epigenetic differences arise during the lifetime of monozygotic twins.</article-title>             <source>Proc Natl Acad Sci U S A</source>             <volume>102</volume>             <fpage>10604</fpage>             <lpage>10609</lpage>          </element-citation></ref>
+<ref id="pone.0008887-Kent1"><label>60</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Kent</surname><given-names>WJ</given-names></name>
+<name name-style="western"><surname>Sugnet</surname><given-names>CW</given-names></name>
+<name name-style="western"><surname>Furey</surname><given-names>TS</given-names></name>
+<name name-style="western"><surname>Roskin</surname><given-names>KM</given-names></name>
+<name name-style="western"><surname>Pringle</surname><given-names>TH</given-names></name>
+<etal/></person-group>             <year>2002</year>             <article-title>The human genome browser at UCSC.</article-title>             <source>Genome Res</source>             <volume>12</volume>             <fpage>996</fpage>             <lpage>1006</lpage>          </element-citation></ref>
+</ref-list>
+
+</back>
+</article>

@@ -2,7 +2,7 @@ package org.xmlcml.ami2.plugins.species;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.files.ResultElement;
+import org.xmlcml.cmine.files.ResultElement;
 
 public class SpeciesResultElement extends ResultElement {
 
@@ -11,17 +11,9 @@ public class SpeciesResultElement extends ResultElement {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	public static final String COUNT_ATT  = "count";
-	public static final String LENGTH_ATT = "length";
-	public static final String WORD_ATT   = "word";
-
 	public SpeciesResultElement() {
 		super();
 	}
-	
-//	public SpeciesResultElement(ResultElement resultElement) {
-//		XMLUtil.copyAttributes(resultElement, this);
-//	}
 	
 	public SpeciesResultElement(String title) {
 		super(title);

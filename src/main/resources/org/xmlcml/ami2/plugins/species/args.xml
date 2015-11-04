@@ -12,15 +12,19 @@
     This runs the search - there are no argument values. 
 		</help>
 		<!-- NEVER search HTML with regexes, but here it's safe -->
-		<value name="binomial">&lt;i>\s*(([A-Z]\.|[A-Z][a-z]+)\s+[a-z]+)\s*&lt;/i></value> 
-		<value name="binomialsp">(([A-Z]\.|[A-Z][a-z]+)\s+[a-z]+\s+sp\.)</value> 
+		<!--  Fooo bar or F. Bar ; assme at least 4 characters (misses some short ones Pan, Aa, etc.)-->
+		<value name="binomial">&lt;i>\s*(([A-Z][a-z]?\.|[A-Z][a-z]{3,})\s+[a-z]+)\s*&lt;/i></value> 
+		<!--  genus without following sp, etc. Assume at least Aaaa -->
+		<value name="genus">&lt;i>\s*([A-Z][a-z]{3,})\s*&lt;/i>(?=\s+[^s])</value> 
+		<!-- Foo sp , Foo spp or Foo species -->
+		<value name="genussp">&lt;i>\s*([A-Z][a-z]+)\s*&lt;/i>\s*spp?(?=\p{Punct}|\s)</value> 
 	</arg>	
 	
 	<arg name="type"
 	    long="--sp.type"
 	    args="type"
 	    class="java.lang.String"
-	    pattern="(binomial|binomialsp)"
+	    pattern="(binomial|genus|genussp)"
 	    parseMethod="parseTypes"
 	    countRange="{1,*}"
 	    >
@@ -37,7 +41,7 @@
 	    countRange="{1,1}"
 	    >
 	    <help>
-	    if true, expand abbreviations.
+	    if true, expand genera abbreviations.
 	    </help>
 	</arg>
 

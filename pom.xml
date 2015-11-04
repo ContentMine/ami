@@ -7,11 +7,19 @@
 	<version>0.1-SNAPSHOT</version>
 	<description>Plugin architecture for converting Normalized science to Semantic science</description>
     <name>AMI</name>
+<!--
 	<parent>
 		<groupId>uk.ac.cam.ch.wwmm</groupId>
+
 		<artifactId>wwmm-parent</artifactId>
 		<version>5-SNAPSHOT</version>
 	</parent>
+-->
+<!-- this should not be necessary -->
+<properties>
+	<guava.version>18.0</guava.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
 
 	<!--Remove <repositories> for releases to Maven central -->
 	<repositories>
@@ -72,21 +80,22 @@
 				<configuration>
 
 					<programs>
-					<!-- 
-						<program>
-							<mainClass>org.xmlcml.ami2.plugins.chem.ChemPlugin</mainClass>
-							<id>ami2-chem</id>
+ 						<program>
+							<mainClass>org.xmlcml.ami2.plugins.gene.GenePlugin</mainClass>
+							<id>ami2-gene</id>
 						</program>
-						<program>
-							<mainClass>org.xmlcml.ami2.plugins.chem.oscar.OSCARPlugin</mainClass>
-							<id>ami2-oscar</id>
+ 						<program>
+							<mainClass>org.xmlcml.ami2.plugins.identifier.IdentifierPlugin</mainClass>
+							<id>ami2-identifier</id>
 						</program>
- -->
+ 						<program>
+							<mainClass>org.xmlcml.ami2.plugins.phylotree.PhyloTreePlugin</mainClass>
+							<id>ami2-phylotree</id>
+						</program>
  						<program>
 							<mainClass>org.xmlcml.ami2.plugins.regex.RegexPlugin</mainClass>
 							<id>ami2-regex</id>
 						</program>
-						<!-- 
 						<program>
 							<mainClass>org.xmlcml.ami2.plugins.sequence.SequencePlugin</mainClass>
 							<id>ami2-sequence</id>
@@ -95,16 +104,9 @@
 							<mainClass>org.xmlcml.ami2.plugins.species.SpeciesPlugin</mainClass>
 							<id>ami2-species</id>
 						</program>
- -->
- 						<!-- 
 						<program>
-							<mainClass>org.xmlcml.ami2.plugins.tree.TreePlugin</mainClass>
-							<id>ami2-tree</id>
-						</program>
- -->
-						<program>
-							<mainClass>org.xmlcml.ami2.plugins.words.WordPlugin</mainClass>
-							<id>ami2-words</id>
+							<mainClass>org.xmlcml.ami2.plugins.word.WordPlugin</mainClass>
+							<id>ami2-word</id>
 						</program>
 					</programs>
 
@@ -161,21 +163,30 @@
 							</mapper>
 						</data>
 -->
-<!-- 
-						<data>
+ 						<data>
 							<type>link</type>
 							<symlink>true</symlink>
-							<linkName>/usr/bin/ami2-chem</linkName>
-							<linkTarget>/usr/share/ami-repo/bin/ami2-chem</linkTarget>
+							<linkName>/usr/bin/ami2-gene</linkName>
+							<linkTarget>/usr/share/ami-repo/bin/ami2-gene</linkTarget>
 						</data>
- -->
+ 						<data>
+							<type>link</type>
+							<symlink>true</symlink>
+							<linkName>/usr/bin/ami2-identifier</linkName>
+							<linkTarget>/usr/share/ami-repo/bin/ami2-identifier</linkTarget>
+						</data>
+ 						<data>
+							<type>link</type>
+							<symlink>true</symlink>
+							<linkName>/usr/bin/ami2-phylotree</linkName>
+							<linkTarget>/usr/share/ami-repo/bin/ami2-phylotree</linkTarget>
+						</data>
  						<data>
 							<type>link</type>
 							<symlink>true</symlink>
 							<linkName>/usr/bin/ami2-regex</linkName>
 							<linkTarget>/usr/share/ami-repo/bin/ami2-regex</linkTarget>
 						</data>
-						<!-- 
 						<data>
 							<type>link</type>
 							<symlink>true</symlink>
@@ -191,15 +202,8 @@
 						<data>
 							<type>link</type>
 							<symlink>true</symlink>
-							<linkName>/usr/bin/ami2-tree</linkName>
-							<linkTarget>/usr/share/ami-repo/bin/ami2-tree</linkTarget>
-						</data>
-						-->
-						<data>
-							<type>link</type>
-							<symlink>true</symlink>
-							<linkName>/usr/bin/ami2-words</linkName>
-							<linkTarget>/usr/share/ami-repo/bin/ami2-words</linkTarget>
+							<linkName>/usr/bin/ami2-word</linkName>
+							<linkTarget>/usr/share/ami-repo/bin/ami2-word</linkTarget>
 						</data>
 
 					</dataSet>
@@ -231,33 +235,14 @@
 	</build>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.apache.directory.studio</groupId>
-			<artifactId>org.apache.commons.io</artifactId>
-			<version>2.4</version>
-		</dependency>
 		<!-- removed until the functionality is added
 		<dependency>
 			<groupId>org.xml-cml</groupId>
 			<artifactId>javaocrnew</artifactId>
 			<version>0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>org.xml-cml</groupId>
-			<artifactId>svg2xml</artifactId>
-			<version>0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.xml-cml</groupId>
-			<artifactId>svgbuilder</artifactId>
-			<version>0.1-SNAPSHOT</version>
-		</dependency>
-		-->
-		<dependency>
-			<groupId>org.xml-cml</groupId>
-			<artifactId>html</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
+-->
+
 		<dependency>
 			<groupId>org.xml-cml</groupId>
 			<artifactId>norma</artifactId>
@@ -269,11 +254,13 @@
 			<artifactId>jumbo</artifactId>
 			<version>6.1-SNAPSHOT</version>
 		</dependency>
+-->
 		<dependency>
 			<groupId>org.xml-cml</groupId>
 			<artifactId>diagramanalyzer</artifactId>
 			<version>0.1-SNAPSHOT</version>
 		</dependency>
+<!-- removed until functionality os added
 		<dependency>
 			<groupId>uk.ac.cam.ch.wwmm.oscar</groupId>
 			<artifactId>oscar4-api</artifactId>
@@ -295,6 +282,16 @@
 			<artifactId>lucene-analyzers-common</artifactId>
 			<version>4.10.3</version>
 		</dependency>
+		<!--  this should not be necessary 
+		There seems to be a rougue version of guava somewhere
+		(http://stackoverflow.com/questions/28978277/guava-multisets-copyhighestcountfirst-method-suddenly-not-working)
+		 -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+ 			<version>${guava.version}</version>
+		</dependency>
+
 
 		<!-- tests -->
 		<dependency>
@@ -303,6 +300,7 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+<!--
 		<dependency>
 			<groupId>com.google.caliper</groupId>
 			<artifactId>caliper</artifactId>
@@ -315,6 +313,7 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.3.2</version>
 		</dependency>
+-->
 		<!-- removed until the functionality is added
 		<dependency>
 			<groupId>cml</groupId>
@@ -375,6 +374,14 @@
 			<!-- Prevents jar bloat in final package -->
 			<scope>provided</scope>
 		</dependency>
+				<!-- https://github.com/jayway/JsonPath/blob/master/README.md -->
+				<!--  shouldn't be needed as it's in Norma -->
+		<dependency>
+		    <groupId>com.jayway.jsonpath</groupId>
+		    <artifactId>json-path</artifactId>
+		    <version>2.0.0</version>
+		</dependency>
+		
 	</dependencies>
 
 </project>

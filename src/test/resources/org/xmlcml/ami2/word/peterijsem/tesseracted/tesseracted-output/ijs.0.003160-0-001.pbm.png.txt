@@ -1,0 +1,21 @@
+Mass spectral similarity (% matches)
+0 10 20 30 4O 50 60
+
+|—l—l—l—l—l—L
+
+binotii CIP 101303T
+
+binotii CIP 102116
+aerolatum CIP 107636T
+thalassium CIP 105728T
+testaceum CIP 104324T
+aurum CIP 103994T
+resistens CIP 107265T
+keratano/yticum CIP 103815T
+ﬂavescens CIP 102401T
+laevaniformans CIP 100934T
+foliorum CIP 107137T
+halotolerans CIP 108071T
+
+::::::::::::
+

@@ -1,0 +1,47 @@
+mcp '/home/ross/workspace/clean/ijsem/*/*/*/*/001.nwk' '/home/ross/workspace/clean/newick/#1_#2.nwk'
+cd ../newick
+rm batch*
+ls | wc -l #3405
+#count tree files with 4 or more named nodes
+grep -l '[A-Za-z]:.*[A-Za-z]:.*[A-Za-z]:.*[A-Za-z]:.*' *.nwk | wc -l #1476
+#delete files that don't match 4 or more named nodes
+grep -L '[A-Za-z]:.*[A-Za-z]:.*[A-Za-z]:.*[A-Za-z]:.*' *.nwk | xargs rm
+# 84 3 taxon trees
+grep -l 'UNKNOWN' *.nwk | wc -l #552
+grep -L 'UNKNOWN *.nwk | wc -l #924
+#get rid of trees with UNKNOWN in them
+grep -l 'UNKNOWN' *.nwk | xargs rm
+#count number of taxa across all trees
+grep -o -n '[A-Za-z]:' *.nwk | wc -l #11409
+#create concatenated tree file of all source trees one per line
+for i in *.nwk ; do cat $i >> testree.tre ; sed -i -e '$a\' testree.tre ; done
+#run mrpmatrix tool to create MRP matrix
+java -jar mrp.jar testree.tre mrp.nex NEXUS
+#analyze matrix in TNT. This step is SLOOOOOOW
+ tnt ; mxram 500 ; p mrp.nex ; log supertree.log ; xinact ; mu1 =ho1 ; taxname= ; tsave *alltrees.tre ; save. ; tsave/ ; nelsen* ; tsave  *strict.tre ; save/ ; tsave/ ; log\/ ; quit ;
+#modify tree style
+cp strict.tre paup-supertree.tre
+sed -i -e '/tree(s)/d' -e '/proc-;/d' -e 's/\*/;/g' -e 's/\s/,/g' -e 's/\s/,/g' -e 's/)(/),(/g' -e 's/,)/)/g' paup-supertree.tre 
+#visualize with iTOL online
+
+#might want to optimize matrix for TNT e.g. first line nstates nogaps; nstates 3;
+
+#convert Nexus into TNT format
+cp mrp.nex mrp.tnt
+sed -i 's/end;/p\/;/g' mrp.tnt
+#delete first 5 lines
+sed -i -e 1,5d mrp.tnt
+#count 'uncultured' taxa
+grep -i 'uncultured' mrp.tnt | wc -l
+#remove 'uncultured' taxa
+sed -i '/[Uu]ncultured/d' mrp.tnt
+#add first line, characters, taxa
+sed -i -e '1i9498 5733\' mrp.tnt
+sed -i -e '1ixread\' mrp.tnt
+sed -i -e '1instates 3; nstates nogaps;\' mrp.tnt
+#print taxa in file
+cat mrp.tnt | cut -d' ' -f 1 > taxa.txt
+
+#run TNT matrix
+tnt ; mxram 500 ; p mrp.tnt ; log tntsupertree.log ; xinact ; mu1 =ho1 ; taxname= ; tsave *tntalltrees.tre ; save. ; tsave/ ; nelsen* ; tsave  *tntstrict.tre ; save/ ; tsave/ ; log\/ ; quit ;
+

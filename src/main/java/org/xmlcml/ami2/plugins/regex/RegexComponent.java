@@ -14,6 +14,8 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.MatcherResult;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.args.VariableProcessor;
 
 /** a component of a regular expression
  * 
@@ -29,10 +31,10 @@ public class RegexComponent {
 		LOG.setLevel(Level.DEBUG);
 	}
 
-	private static final String FIELDS = "fields";
+	public static final String FIELDS = "fields";
 	private static final String WEIGHT = "weight";
 	private static final String PATTERN = "pattern";
-	private static final String REGEX = "regex";
+	public static final String REGEX = "regex";
 	private static final String CASE = "case";
 	public static final String INSENSITIVE = "insensitive";
 	public static final String REQUIRED = "required";
@@ -48,7 +50,9 @@ public class RegexComponent {
 	private static final String START_CONTEXT = "(.{0,";
 	private static final String END_CONTEXT = "})";
 
-	// ((.{1,50})( ... )\s+(.{1,50}))
+	// ((.{1,50})( ... )\p{Punct}?\s+(.{1,50}))
+//	private static String PRE_POST = "\\(\\.\\{\\d+,\\d+\\}\\)(.*)\\p{Punct}?\\\\s\\+\\(\\.\\{\\d+,\\d+\\}\\)";
+	// works most of the time but may eat spaces 
 	private static String PRE_POST = "\\(\\.\\{\\d+,\\d+\\}\\)(.*)\\\\s\\+\\(\\.\\{\\d+,\\d+\\}\\)";
 	private static final Pattern PRE_POST_PATTERN = Pattern.compile(PRE_POST);
 	// (...)
@@ -131,21 +135,45 @@ public class RegexComponent {
 	private String addPrePost(String value) {
 		Integer[] contextCounts = regexArgProcessor.getContextCount();
 //		return "("+START_CONTEXT+contextCounts[0]+END_CONTEXT+value+"\\s+"+START_CONTEXT+contextCounts[1]+END_CONTEXT+")";
-		return START_CONTEXT+contextCounts[0]+END_CONTEXT+value+"\\s+"+START_CONTEXT+contextCounts[1]+END_CONTEXT;
+		return START_CONTEXT+contextCounts[0]+END_CONTEXT+value+DefaultArgProcessor.WHITESPACE+START_CONTEXT+contextCounts[1]+END_CONTEXT;
 	}
 
 	private String addSingle(String value) {
 		return "("+value+")";
 	}
 
-	void setElement(Element regexElement) {
+	void setRegexElement(Element regexElement) {
 		this.regexElement = regexElement;
+	}
+	
+	public Element getRegexElement() {
+		return regexElement;
 	}
 
 	public String getOrCreateValue() {
 		if (value == null) {
 			value = regexElement.getValue();
 		}
+		String newValue = substituteVariables(value);
+		if (newValue == null) {
+			LOG.error("Cannot expand variables in :"+value);
+		} else {
+			value = newValue;
+		}
+		return value;
+	}
+
+	private String substituteVariables(String value) {
+		// crude
+		value = value.replaceAll(RegexArgProcessor.TILDE, RegexArgProcessor.TILDE_SUFFIX);
+//		if (value.startsWith(RegexArgProcessor.TILDE)) {
+//			value = RegexArgProcessor.TILDE_PREFIX + value;
+//		}
+//		if (value.endsWith(RegexArgProcessor.TILDE)) {
+//			value = value+RegexArgProcessor.TILDE_SUFFIX;
+//		}
+		VariableProcessor variableProcessor = regexArgProcessor.ensureVariableProcessor();
+		value = variableProcessor.substituteVariables(value);
 		return value;
 	}
 
@@ -174,7 +202,7 @@ public class RegexComponent {
 			String fields = regexElement.getAttributeValue(FIELDS);
 			boolean hasWord = true;
 			if (fields != null) {
-				fieldList = new ArrayList<String>(Arrays.asList(fields.split("\\s+")));
+				fieldList = new ArrayList<String>(Arrays.asList(fields.split(DefaultArgProcessor.WHITESPACE)));
 				if (fieldList.size() == 4) {
 					if (!FIELD_NAMES[1].equals(fieldList.get(1)) ||
 						!FIELD_NAMES[3].equals(fieldList.get(3))) {

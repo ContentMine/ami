@@ -11,9 +11,9 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.Fixtures;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.files.QuickscrapeNorma;
+import org.xmlcml.ami2.AMIFixtures;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.files.CMDir;
 import org.xmlcml.xml.XMLUtil;
 
 public class SimplePluginTest {
@@ -25,22 +25,21 @@ public class SimplePluginTest {
 	}
 	
 	@Test
-	public void testReadQSNorma() {
-		QuickscrapeNorma qsNorma = new QuickscrapeNorma(Fixtures.TEST_BMC_15_1_511_QSN);
-		Assert.assertTrue("fulltext.xml", qsNorma.hasFulltextXML());
-		Assert.assertTrue("fulltext.html", qsNorma.hasFulltextHTML());
-		Assert.assertTrue("fulltext.pdf", qsNorma.hasFulltextPDF());
-		Assert.assertTrue("results.json", qsNorma.hasResultsJSON());
-		Assert.assertTrue("scholarly.html", qsNorma.hasScholarlyHTML());
+	public void testReadCMDir() {
+		CMDir cTree = new CMDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR);
+		Assert.assertTrue("fulltext.xml", cTree.hasExistingFulltextXML());
+		Assert.assertTrue("fulltext.html", cTree.hasFulltextHTML());
+		Assert.assertTrue("fulltext.pdf", cTree.hasFulltextPDF());
+		Assert.assertTrue("results.json", cTree.hasResultsJSON());
+		Assert.assertTrue("scholarly.html", cTree.hasScholarlyHTML());
 	}
 	
 	@Test
 	@Ignore // plugin argprocessor not yet working
 	public void testSimplePlugin() throws IOException {
-		QuickscrapeNorma qsNorma = new QuickscrapeNorma(Fixtures.TEST_BMC_15_1_511_QSN);
+		CMDir cTree = new CMDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR);
 		File normaTemp = new File("target/bmc/15_1_511_test");
-		qsNorma.copyTo(normaTemp, true);
-		Assert.assertFalse("results.xml", qsNorma.hasResultsXML());
+		cTree.copyTo(normaTemp, true);
 		String[] args = {
 				"-q", normaTemp.toString(),
 				"-i", "scholarly.html",
@@ -48,12 +47,12 @@ public class SimplePluginTest {
 				"--s.simple", "foo", "bar"
 		};
 		SimplePlugin simplePlugin = new SimplePlugin(args);
-		AMIArgProcessor argProcessor = (AMIArgProcessor) simplePlugin.getArgProcessor();
+		DefaultArgProcessor argProcessor = (DefaultArgProcessor) simplePlugin.getArgProcessor();
 		Assert.assertNotNull(argProcessor);
 		LOG.debug(argProcessor.getInputList());
 		argProcessor.runAndOutput();
-		QuickscrapeNorma qsNormaTemp = new QuickscrapeNorma(normaTemp);
-		Assert.assertTrue("results.xml", qsNormaTemp.hasResultsXML());
+		CMDir cTreeTemp = new CMDir(normaTemp);
+		Assert.assertTrue("results.xml", cTreeTemp.hasResultsDir());
 	}
 	
 	/** process multiple Norma outputs.
@@ -63,17 +62,17 @@ public class SimplePluginTest {
 	@Test
 	@Ignore // Simple Plugin with loaded argProcessor not yet working
 	public void testMultipleSimplePlugin() throws IOException {
-		// this simply generates 7 temporary copies of the qsNormas
-		int nfiles = Fixtures.TEST_MIXED_DIR.listFiles().length;
+		// this simply generates 7 temporary copies of the cmDirs
+		int nfiles = AMIFixtures.TEST_MIXED_DIR.listFiles().length;
 		File[] normaTemp = new File[nfiles];
 		File test = new File("target/simple/multiple");
 		if (test.exists()) FileUtils.deleteQuietly(test);
 		for (int i = 0; i < nfiles; i++) {
-			QuickscrapeNorma qsNorma = new QuickscrapeNorma(new File(Fixtures.TEST_MIXED_DIR, "file"+i));
+			CMDir cTree = new CMDir(new File(AMIFixtures.TEST_MIXED_DIR, "file"+i));
 			normaTemp[i] = new File(test, "file"+i);
-			qsNorma.copyTo(normaTemp[i], true);
+			cTree.copyTo(normaTemp[i], true);
 		}
-		// this is the command line with multiple QSNorma directory names
+		// this is the command line with multiple CMDir directory names
 		String[] args = {
 				"-q", 
 				normaTemp[0].toString(),
@@ -88,7 +87,7 @@ public class SimplePluginTest {
 				"--s.simple", "foo", "bar"
 		};
 		SimplePlugin simplePlugin = new SimplePlugin(args);
-		AMIArgProcessor argProcessor = (AMIArgProcessor) simplePlugin.getArgProcessor();
+		DefaultArgProcessor argProcessor = (DefaultArgProcessor) simplePlugin.getArgProcessor();
 		argProcessor.runAndOutput();
 		int[] size = {17624,4447,0, 4839,4311,4779,5288}; // file2 has smart quotes; fix HTMLFactory()
 		for (int i = 0; i < nfiles; i++) {

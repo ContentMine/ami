@@ -1,0 +1,63 @@
+64.8
+
+o I
+o\
+
+72.
+
+84.6
+
+85.8
+51.8
+
+95.6 99.9
+
+74.9
+
+71.7
+
+100.0
+
+99.6
+
+100.0
+
+100.0 Porphyromonas gu/ae ATCC 51 700T (AF208290)
+
+Porphyromonas gingiva/is ATCC 33277T (L1 6492)
+Porphyromonas crevioricanis ATCC 55563T (D0677836)
+Porphyromonas cansu/ciVPB 4875T (X76260)
+Porphyromonas catoniae ATCC 51 270T (X82823)
+Porphyromonas macacae ATCC 331 41 T (L16494)
+Porphyromonas somerae ATCC BAA-1 230T (AY968205)
+Porphyromonas leI/I'i ATCC 29147T (L16493)
+Porphyromonas bennonis WAL 19266T (EU414673)
+Porphyromonas cangingiva/fs VPB 4874T (X76259)
+Porphyromonas canoris VPB 4882 (X76261)
+100.0 ‘Porphyromonas can/3’ JCM 10100 (ABOS4799)
+100'0 Porphyromonas gingivicanis ATCC 55562T (D0677835)
+Porphyromonas circumdentaria NCTC 1 2469T (L26102)
+Porphyromonas endodonta/r's ATCC 35406T (AY253728)
+100.0 Porphyromonas uenonis ATCC BAA—906T (AY57051 4)
+Porphyromonas asaccharo/ytica ATCC 25260T (L16490)
+Tannere/la forsythia ATCC 43037T (A8035460)
+Tannerella forsythia RMA 8464 (D034491 7)
+Parabacteroides distasonis JCM 5825T (EU136681)
+Bacteroides fragi/is DSM 2151T (AB050106)
+Bacteroides theta/otaomicron ATCC 291 48T (L1 6489)
+100.0 Bacteroides pyogenes JCM 6294T (EU136683)
+Bacteroides tectus JCM 10003T (EU136689)
+Prevote/la me/aninogenica ATCC 25845T (AY323525)
+Alist/pes finegoldiiANH 2437T (AJ518874)
+Alistipes putredinis ATCC 29800T (L1 649 7)
+
+100.0
+
+100.0
+
+100.0
+
+100.0
+
+100.0
+

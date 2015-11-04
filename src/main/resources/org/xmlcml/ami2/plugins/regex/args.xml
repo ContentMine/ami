@@ -19,7 +19,11 @@
 			each regex independently annotates/indexes the document.
 			
 		</help>
+		<!--  replace leading and trailing tildes  -->
+		<value name="trailing_tilde">(?:[^\s\p{Punct}]*)</value>
+		<value name="leading_tilde">(?:\s+)</value>
 	</arg>	
+	
 	
 </argList>
 			

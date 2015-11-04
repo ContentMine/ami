@@ -1,0 +1,18 @@
+1048 uninformative characters are inactive 
+Repl. Algor.     Tree        Score       Best Score   Time       Rearrangs.
+1     TBR        0 of 1      ------      10206        4:41:11    170,184,028,422 
+Completed 1 random addition sequences.
+Total rearrangements examined: 170,184,028,422. 
+Best score hit 1 times out of 1 (some replications overflowed).
+Best score (TBR): 10206.  1 trees retained. 
+Taxon names is ON 
+Tree file: alltrees.tre 
+1 trees saved to alltrees.tre           
+Closing alltrees.tre (with 1 trees saved)
+ 
+Note: for consensus calculation, trees will be 
+temporarily collapsed (when min. branch length = 0) 
+Strict consensus of 1 trees (0 taxa excluded) calculated, as tree 1 
+Tree file: strict.tre 
+1 trees saved to strict.tre           
+Closing strict.tre (with 1 trees saved)

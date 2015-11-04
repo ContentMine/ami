@@ -1,0 +1,225 @@
+100
+
+ 
+
+ 
+
+ 
+
+78
+
+100
+
+Cel/u/omonas flavigena NCIMB 8073T (X79463)
+Ce/lu/omonas ce/Iasea DSM 20118T (X83804)
+
+100
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+SB
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+79
+
+ 
+
+99
+
+96
+
+ 
+
+ 
+
+ 
+
+ 
+
+99
+
+ 
+
+100
+
+98
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+— Microbacterium sch/eiferi DSM 20489T (Y17237)
+— Microbacterium lacticum DSM 20427T (X77441)
+Microbacterium quuefaciens DSM 20638T (X77444)
+
+Plantibacter flavus DSM 14012T (AJ310417)
+Okibacterium friti/Iariae VKM Ac—ZOSQT (ABO42094)
+Agrococcus jenensis DSM 9580T (X92492)
+
+Leffson/a poae VKM Ac—1401T(AF116342)
+
+Leifsonia aquatica DSM 20146T (X77450)
+
+ 
+
+ 
+
+Leucobacter komagatae IFO 15245T (AJ746337)
+
+Subtercola boreus K300T (AF224722)
+
+—1_
+
+100 Leifsonia rubra CMS 76rT (AJ438585)
+Pseudoc/avibacter he/volus DSM 20419T (X77440)
+
+ 
+
+ 
+
+0.01
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+97
+
+ 
+
+ 
+
+100
+
+ 
+
+100
+
+ 
+
+ 
+
+ 
+
+— Agreia bico/orata VKM Ac—1804T (AF159363)
+Salinibacterium amurskyense KMM 3673T (AF539697)
+Rhodoglobus vesta/ii LV3T (AJ459101)
+
+— Rathayibacter tritici DSM 7486T (X77438)
+— Rathayibacter rathayi DSM 7485T (X77439)
+
+Rathayibacter toxicus JCM 9669T (D84127)
+Curtobacterium citreum DSM 20528T (X77436)
+
+- Mycetoco/a tolaasinivorans CM—05T (ABO12646)
+— Mycetoco/a lacteus CM-10T (AB012648)
+— Mycetocola saprophi/us CM-01T (ABO12647)
+
+Clavibacter michiganensis P 250/01 (AJ310416)
+Subterco/a frigoramans K265T (AF224723)
+Frigoribacterium faeni 801 T (Y18807)
+
+100
+
+ 
+
+ 
+
+ 
+
+— Mlcroce/la putealis CV2T (AJ717388)
+— Microcella alkaliphila AC4rT (AJ717385)
+Yonghaparkia alkaliphi/a KSL-113T (D0256087)
+
+Labede/Ia gwakjiensis KSW2-17T (D0533552)
+Cryobacterium psyohrophi/um DSM 4854T (AJ544063)
+
+ 
+
+100
+
+ 
+
+69
+
+ 
+
+89
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+— ‘Candidatus Planktoluna difficilis’ MWH-7Well8 (AM939566)
+
+‘Candidatus Aquiluna rubra’ MWH-Dar4 (AJ565416)
+‘Candidatus Limnoluna rubra’ MWH-EgelM2-3 (AM943659)
+‘Candidatus Flaviluna lacus’ MWH-Creno3D3 (AM939567)
+‘Candidatus Rhodoluna lacicola‘ MWH-Ta8 (AM182889)
+
+ 
+
+87
+
+ 
+
+— ‘Candidatus Rhodoluna limnophila’ MWH-VicMua1 (AJ565417)
+‘Candidatus Rhodoluna planktonica’ MWH-Dar1 (AJ565415)
+
+ 
+
+ 
+

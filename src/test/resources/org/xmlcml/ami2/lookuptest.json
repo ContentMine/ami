@@ -1,0 +1,1 @@
+{"status":{"error":"OK","items":3,"querytime":"739ms","parsed_query":"STRING[225:'Mus musculus',225:'Gorilla gorilla',225:'Panthera leo']"},"items":[140,83310,737838],"props":{"225":[[737838,"string","Gorilla gorilla"],[83310,"string","Mus musculus"],[140,"string","Panthera leo"]]}}

@@ -1,0 +1,121 @@
+0,02
+
+ 
+
+as
+
+Clostridium sulfatireducens 38-1 (AY943861)
+
+     
+  
+ 
+   
+   
+ 
+  
+  
+
+Clostridium amygdaI/‘num DSM12857T (AY353957)
+Clostridium boliviensis E-1 (AY943862)
+
+se
+
+Clostridium indolis DSM 755T (Y18184)
+
+Clostridium methoxybenzovorans DSM 12182T (AF067965)
+Clostridium saccharolyticum DSM 2544T (Y18185)
+
+Clostridium sphenoides ATCC 19403T (ABO75772)
+
+m Clostridium celerecrescens DSM 5628T(X71848)
+
+9E Clostridium algidixylanolyticum DSM 12273T(AF092549)
+
+Clostridium xylanolyticum DSM 6555T(X76739)
+
+ 
+
+mu
+
+Clostridium aerato/erans DSM 5434T (X76163)
+Closm'dium hathewayi DSM 13479T (AJ311620)
+Clostridium aldenense CCUG 52204T (DQ279736)
+w Clostridium bolteae WAL16351T (AJ508452)
+
+{ Clostridium closm'dioforme ATCC 25537T (M59089)
+Clostridium Citroniae CCUG 52203T (DQZ79737)
+
+ 
+
+ 
+
+— Clostridium asparagiforme DSM 15981T (AJ582080)
+
+ 
+
+1_E,OICIostridium IavalenseCCRl-9842T(EF564277)
+Clcstridium IavalenseCCRl -9929 (EF564278)
+
+ 
+
+ 
+
+54
+
+Clostridium symbiosum ATCC 14940T(M59112)
+Clostridium aminophilum FT (L04165)
+
+Clostridium pmteoc/asticum ATCC 51982T (U37378)
+Clostridium coccoides DSM 2088T (M59090)
+Clostridium glycyrrhizini/yticum ZM35T (AB233029)
+
+ 
+  
+
+ 
+
+ 
+
+ 
+
+   
+  
+  
+
+Clostridium orotioum ATCC 13619T (M59109)
+
+Clostridium nexile DSM 1787T (X73443)
+
+Clostridium hy/emonae DSM 15053T(A8023972)
+
+Clostridium fusiformis CM973 (AF028349)
+
+Clostridium scindens DSM 5676T (Y18186)
+m Clostridium jejuense DSM 15929T (AY494606)
+
+—|:Clostridium xylanovorans DSM 12503T(AF116920)
+
+57 Clostridium aminova/erfcum DSM 1283T (X73436)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ma
+
+Clostridium phytofermenlans ATCC 700394T (AF020431)
+Clostridium populeti ATCC 35295T (X71853)
+
+ 
+
+93 Clostridium polysaccharolyticum DSM 1801T (X77839)
+Clostridium herbivorans DSM 14428T (L34418)
+Clostridium fimetarium DSM 9179T (AF126687)
+Propionigenium modestum Gra Succ 2T (X54275)
+
+Fusobacterium nucleatum ATCC 25586T (AJ133496)
+

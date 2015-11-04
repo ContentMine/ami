@@ -1,7 +1,5 @@
 package org.xmlcml.ami2.plugins.species;
 
-import java.util.Collection;
-import java.util.regex.Pattern;
 
 /** a species of form "Genus species" or "G. species"
  * 
@@ -10,10 +8,10 @@ import java.util.regex.Pattern;
  */
 public class LinneanName {
 
-	public static final String GENUS_REGEX_S = "[A-Z]([a-z]+|\\.)\\s*";
-	public final static Pattern GENUS_PATTERN = Pattern.compile(GENUS_REGEX_S);
-	public static final String BINOMIAL_REGEX_S = "[A-Z]([a-z]+|\\.)\\s+[a-z][a-z]+";
-	public final static Pattern BINOMIAL_PATTERN = Pattern.compile(BINOMIAL_REGEX_S);
+//	private static final String GENUS_REGEX_S = "[A-Z]([a-z]+|\\.)\\s*";
+//	private final static Pattern GENUS_PATTERN = Pattern.compile(GENUS_REGEX_S);
+//	private static final String BINOMIAL_REGEX_S = "[A-Z]([a-z]+|\\.)\\s+[a-z][a-z]+";
+//	public final static Pattern BINOMIAL_PATTERN = Pattern.compile(BINOMIAL_REGEX_S);
 
 
 	private String genus;

@@ -1,30 +1,14 @@
 <compoundRegex title="consort0">
-  <regex>[Rr]andomi[zs]ation</regex>
-  <regex>one to one</regex>
-  <regex>block of size</regex>
-  <regex>SAS procedure plan</regex>
-  <regex>[Rr]andomi[sz]ation list</regex>
-  <regex>[Bb]linding</regex>
-  <regex>follow-up</regex>
-  <regex fields="count">(\d+)\s+participants</regex>
-  <regex>excluded</regex>
-  <regex>withdrew</regex>
-  <regex>diagnosed</regex>
-  <regex>attrition</regex>
-  <regex>sample size of</regex>
-  <regex>prespecified outcomes?</regex>
-  <regex>[Ii]ndependent</regex>
-  <regex>placebo</regex>
-  <regex>[Cc]omputer generated</regex>
-  <regex>allocation of the participants</regex>
-  <regex>random numbers?</regex>
-  <regex>Stata</regex>
-  <regex>stratified by</regex>
-  <regex>allocat[^\s]*</regex>
-  <regex>random block sizes?</regex>
-  <regex>treatment groups?</regex>
-  <regex>consecutive[^\s]* number[^\s]*</regex>
-  <regex>order number</regex>
-  <regex>conceal[^\s]*</regex>
-  <regex>assign[^\s]*</regex>
+  <regex fields="random">([Rr]andom~)</regex>
+  <regex fields="blind">[Bb]lind~</regex>
+  <regex fields="followup">follow\-?up</regex>
+  <regex fields="exclude">exclud~</regex>
+  <regex fields="withdraw">withdr[ae]w~</regex>
+  <regex fields="diagnose">(diagnos~)</regex>
+  <regex fields="attrition">attrition~</regex>
+  <regex fields="samplesize">sample size</regex>==
+  <regex fields="placebo">placebo~</regex>
+  <regex fields="stata">Stata</regex>
+  <regex fields="stratify">stratif~</regex>
+  <regex fields="allocate">allocat~</regex>
 </compoundRegex>

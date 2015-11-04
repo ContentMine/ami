@@ -6,27 +6,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.args.ArgIterator;
-import org.xmlcml.args.ArgumentOption;
-import org.xmlcml.args.DefaultArgProcessor;
-import org.xmlcml.euclid.IntArray;
+import org.xmlcml.cmine.args.ArgIterator;
+import org.xmlcml.cmine.args.ArgumentOption;
+import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.ContentProcessor;
+import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cmine.files.ResultsElementList;
 import org.xmlcml.euclid.IntRange;
-import org.xmlcml.euclid.RealArray;
-import org.xmlcml.euclid.RealRange;
-import org.xmlcml.files.QuickscrapeNorma;
-import org.xmlcml.files.ResultElement;
-import org.xmlcml.files.ResultsElement;
-import org.xmlcml.html.HtmlBody;
-import org.xmlcml.html.HtmlElement;
-import org.xmlcml.html.HtmlHtml;
-import org.xmlcml.html.HtmlP;
-import org.xmlcml.html.HtmlSpan;
-import org.xmlcml.html.HtmlStyle;
 import org.xmlcml.xml.XMLUtil;
 
 /** 
@@ -50,11 +40,13 @@ public class WordArgProcessor extends AMIArgProcessor {
 				WORD_LENGTHS
 		});
 	
-	public final static String ABBREVIATIONS = "abbreviation";
+	public final static String ABBREVIATION = "abbreviation";
+	public final static String ACRONYM = "acronym";
 	public final static String CAPITALIZED = "capitalized";
 	public final static List<String> WORD_TYPES = Arrays.asList(
 		new String[]{
-				ABBREVIATIONS,
+				ABBREVIATION,
+				ACRONYM,
 				CAPITALIZED
 		});
 	
@@ -63,7 +55,7 @@ public class WordArgProcessor extends AMIArgProcessor {
 	public final static List<String> CASE_TYPES = Arrays.asList(
 		new String[]{
 				IGNORE,
-				ABBREVIATIONS,
+				ABBREVIATION,
 				PRESERVE
 		});
 
@@ -81,8 +73,8 @@ public class WordArgProcessor extends AMIArgProcessor {
 	private static final String TFIDF_FREQUENCY = "tfidfFrequency";
 	private static final String TFIDF_FREQUENCY_XML = "tfidfFrequency.xml";
 	private static final String TFIDF_FREQUENCY_HTML = "tfidfFrequency.html";
-	private static final double MIN_FONT = 10;
-	private static final double MAX_FONT = 30;
+	static final double MIN_FONT = 10;
+	static final double MAX_FONT = 30;
 	
 	private List<WordSetWrapper> stopwordSetList;
 	private List<String> chosenMethods = new ArrayList<String>();
@@ -96,7 +88,6 @@ public class WordArgProcessor extends AMIArgProcessor {
 	WordResultsElement aggregatedFrequenciesElement;
 	private IntRange wordCount;
 	private WordResultsElement booleanFrequencyElement;
-
 	public WordArgProcessor() {
 		super();
 	}
@@ -189,13 +180,16 @@ public class WordArgProcessor extends AMIArgProcessor {
 	 * 
 	 * @param option
 	 */
+//	@Deprecated 
+	// this 
 	public void outputWords(ArgumentOption option) {
-		List<File> outputDirectories = currentQuickscrapeNorma.createResultsDirectoriesAndOutputResultsElement(
-				option, resultsElementList, QuickscrapeNorma.RESULTS_XML);
-		for (int i = 0; i < outputDirectories.size(); i++) {
-			File outputDirectory = outputDirectories.get(i);
-			File htmlFile = new File(outputDirectory, QuickscrapeNorma.RESULTS_HTML);
-			writeResultsElementAsHTML(htmlFile, (WordResultsElement)resultsElementList.get(i));
+		ContentProcessor currentContentProcessor = getOrCreateContentProcessor();
+		ResultsElementList resultsElementList = currentContentProcessor.getOrCreateResultsElementList();
+		for (int i = 0; i < resultsElementList.size(); i++) {
+			File outputDirectory = currentContentProcessor.createResultsDirectoryAndOutputResultsElement(
+					option, resultsElementList.get(i), CMDir.RESULTS_XML);
+			File htmlFile = new File(outputDirectory, CMDir.RESULTS_HTML);
+			((WordResultsElement) resultsElementList.get(i)).writeResultsElementAsHTML(htmlFile, this);
 		}
 	}
 	
@@ -209,7 +203,7 @@ public class WordArgProcessor extends AMIArgProcessor {
 	}
 	
 	public void finalSummary(ArgumentOption option) {
-		WordResultsElementList frequenciesElementList = this.aggregateOverQSNormaList(getPlugin(), WordArgProcessor.FREQUENCIES);
+		WordResultsElementList frequenciesElementList = this.aggregateOverCMDirList(getPlugin(), WordArgProcessor.FREQUENCIES);
 		WordCollectionFactory wordCollectionFactory = new WordCollectionFactory(this);
 		for (String method : summaryMethods) {
 			runSummaryMethod(frequenciesElementList, wordCollectionFactory, method);
@@ -221,15 +215,15 @@ public class WordArgProcessor extends AMIArgProcessor {
 		if (AGGREGATE_FREQUENCY.equals(method) && summaryFileName != null) {
 			aggregatedFrequenciesElement = wordCollectionFactory.createAggregatedFrequenciesElement(frequenciesElementList);
 			writeResultsElement(new File(summaryFileName, AGGREGATE_XML), aggregatedFrequenciesElement);
-			writeResultsElementAsHTML(new File(summaryFileName, AGGREGATE_HTML), aggregatedFrequenciesElement);
+			aggregatedFrequenciesElement.writeResultsElementAsHTML(new File(summaryFileName, AGGREGATE_HTML), this);
 		} else if (BOOLEAN_FREQUENCY.equals(method) && summaryFileName != null) {
 			booleanFrequencyElement = wordCollectionFactory.createBooleanFrequencies(this, frequenciesElementList);
 			writeResultsElement(new File(summaryFileName, BOOLEAN_FREQUENCY_XML), booleanFrequencyElement);
-			writeResultsElementAsHTML(new File(summaryFileName, BOOLEAN_FREQUENCY_HTML), booleanFrequencyElement);
+			booleanFrequencyElement.writeResultsElementAsHTML(new File(summaryFileName, BOOLEAN_FREQUENCY_HTML), this);
 		} else if (TFIDF_FREQUENCY.equals(method) && summaryFileName != null) {
 			WordResultsElement tfidfFrequencyElement = wordCollectionFactory.createTFIDFFrequencies(this, frequenciesElementList);
 			writeResultsElement(new File(summaryFileName, TFIDF_XML), tfidfFrequencyElement);
-			writeResultsElementAsHTML(new File(summaryFileName, TFIDF_HTML), tfidfFrequencyElement);
+			tfidfFrequencyElement.writeResultsElementAsHTML(new File(summaryFileName, TFIDF_HTML), this);
 		}
 	}
 
@@ -251,84 +245,18 @@ public class WordArgProcessor extends AMIArgProcessor {
 		}
 	}
 
-	public WordResultsElementList aggregateOverQSNormaList(String pluginName, String methodName) {
+	public WordResultsElementList aggregateOverCMDirList(String pluginName, String methodName) {
 		WordResultsElementList resultsElementList = new WordResultsElementList();
-		for (QuickscrapeNorma qsn : quickscrapeNormaList) {
-			ResultsElement resultsElement = qsn.getResultsElement(pluginName, methodName);
+		for (CMDir cTree : cTreeList) {
+			ResultsElement resultsElement = cTree.getResultsElement(pluginName, methodName);
 			if (resultsElement == null) {
-				LOG.error("Null results element, skipped "+qsn.getDirectory());
+				LOG.error("Null results element, skipped "+cTree.getDirectory());
 			} else {
-				WordResultsElement wordResultsElement = new WordResultsElement(qsn.getResultsElement(pluginName, methodName));
+				WordResultsElement wordResultsElement = new WordResultsElement(cTree.getResultsElement(pluginName, methodName));
 				resultsElementList.add(wordResultsElement);
 			}
 		}
 		return resultsElementList;
-	}
-
-	private void writeResultsElementAsHTML(File outputFile, WordResultsElement wordResultsElement) {
-		IntArray fontSizeIntArray = createOrderedFontSizeArray(wordResultsElement);
-		if (fontSizeIntArray != null) {
-			Set<Integer> fontSizeSet = fontSizeIntArray.createIntegerSet();
-			HtmlElement html = createHtmlElement(wordResultsElement, fontSizeIntArray, fontSizeSet);
-			try {
-				outputFile.getParentFile().mkdirs();
-				XMLUtil.debug(html, new FileOutputStream(outputFile), 1);
-			} catch (IOException e) {
-				throw new RuntimeException("Cannot write file "+outputFile, e);
-			}
-		}
-	}
-
-	private IntArray createOrderedFontSizeArray(WordResultsElement wordResultsElement) {
-		IntArray fontSizeIntArray = null;
-		IntArray countArray = wordResultsElement.getCountArray();
-		try {
-			IntRange countRange = countArray.getRange();
-			RealRange realCountRange = new RealRange(countRange);
-			RealRange fontRange = new RealRange(MIN_FONT, MAX_FONT);
-			double countToFont = realCountRange.getScaleTo(fontRange);
-			RealArray fontSizeArray = new RealArray(countArray);
-			fontSizeArray = fontSizeArray.multiplyBy(countToFont);
-			fontSizeArray = fontSizeArray.addScalar(MIN_FONT);
-			fontSizeIntArray = fontSizeArray.createIntArray();
-		} catch (ArrayIndexOutOfBoundsException e) {
-			// return null
-		}
-		return fontSizeIntArray;
-	}
-
-	private HtmlElement createHtmlElement(WordResultsElement wordResultsElement,
-			IntArray fontSizeIntArray, Set<Integer> fontSizeSet) {
-		HtmlElement html = new HtmlHtml();
-		HtmlStyle style = new HtmlStyle();
-		html.appendChild(style);
-		style.addCss("* { font-family : helvetica;}");
-		for (Integer fontSize : fontSizeSet) {
-			String cssStyle = ".font"+fontSize+" { font-size : "+fontSize+"; }";
-			style.addCss(cssStyle);
-		}
-		HtmlBody body = new HtmlBody();
-		html.appendChild(body);
-		HtmlP p = new HtmlP();
-		body.appendChild(p);
-		addWordsWithFontSizesInSpans(wordResultsElement, fontSizeIntArray, p);
-		return html;
-	}
-
-	private void addWordsWithFontSizesInSpans(WordResultsElement wordResultsElement,
-			IntArray fontSizeIntArray, HtmlP p) {
-		int i = 0;
-		for (ResultElement resultElement : wordResultsElement) {
-			WordResultElement wordResultElement = (WordResultElement) resultElement;
-			String word = wordResultElement.getWord();
-			int count = wordResultElement.getCount();
-			int fontSize = fontSizeIntArray.elementAt(i);
-			HtmlSpan span = new HtmlSpan();
-			span.setClassAttribute("font"+fontSize);
-			span.appendChild(word+" ");
-			p.appendChild(span);
-			i++;
-		}
 	}
 
 	private void helpMethods() {
@@ -404,4 +332,5 @@ public class WordArgProcessor extends AMIArgProcessor {
 			chosenWordTypes = new ArrayList<String>();
 		}
 	}
+
 }
