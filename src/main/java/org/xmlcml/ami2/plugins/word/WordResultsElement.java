@@ -23,7 +23,7 @@ import org.xmlcml.html.HtmlSpan;
 import org.xmlcml.html.HtmlStyle;
 import org.xmlcml.xml.XMLUtil;
 
-/** not sure this is used?
+/** contains results for bag of words
  * 
  * @author pm286
  *

@@ -1,7 +1,10 @@
 package org.xmlcml.ami2.plugins.word;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import nu.xom.Attribute;
 import nu.xom.IllegalCharacterDataException;
@@ -236,6 +239,7 @@ public class WordCollectionFactory {
 					wordSet.add(rawWord);
 				}
 			}		
+			// these are not completely sorted because several words may have same frequency
 			entriesSortedByCount = getEntriesSortedByCount(wordSet);
 			entriesSortedByValue = getEntriesSortedByValue(wordSet);
 			Iterable<Multiset.Entry<String>> sortedEntries = getSortedEntries();
@@ -248,6 +252,7 @@ public class WordCollectionFactory {
 	private WordResultsElement createFrequenciesElement(
 			Iterable<Multiset.Entry<String>> sortedEntries) {
 		frequenciesElement = new WordResultsElement(FREQUENCIES_ATT);
+		List<WordResultElement> frequenciesElementList = new ArrayList<WordResultElement>();
 		for (Entry<String> entry : sortedEntries) {
 			int count = +entry.getCount();
 			if (count < minCountInSet) continue;
@@ -259,9 +264,59 @@ public class WordCollectionFactory {
 				continue;
 			}
 			frequencyElement.addAttribute(new Attribute(WordResultElement.COUNT_ATT, String.valueOf(count)));
+			frequenciesElementList.add(frequencyElement);
+		}
+		if (COUNT2.equals(sortControl)) {
+			frequenciesElementList = sortByValue(frequenciesElementList);
+		}
+		for (WordResultElement frequencyElement : frequenciesElementList) {
+//			LOG.debug(frequencyElement.toXML());
 			frequenciesElement.appendChild(frequencyElement);
 		}
 		return frequenciesElement;
+	}
+
+	private List<WordResultElement> sortByValue(List<WordResultElement> frequenciesElementList) {
+		// assume already sorted by count
+		List<WordResultElement> newList = new ArrayList<WordResultElement>();
+		int lastCount = -1;
+		List<List<WordResultElement>> sameCountListList = new ArrayList<List<WordResultElement>>();
+		List<WordResultElement> sameCountList = null;
+		for (WordResultElement wordResultElement : frequenciesElementList) {
+			int count = wordResultElement.getCount();
+			if (count != lastCount) {
+				sameCountList = new ArrayList<WordResultElement>();
+				sameCountListList.add(sameCountList);
+				lastCount = count;
+			} 
+			sameCountList.add(wordResultElement);
+		}
+		for (List<WordResultElement> sameCountList0 : sameCountListList) {
+			sameCountList0 = sortByValue0(sameCountList0);
+//			LOG.debug("count: "+sameCountList0.size()+": freq "+sameCountList0.get(0).getCount());
+			for (WordResultElement resultElement : sameCountList0) {
+//				LOG.debug(">adding> "+resultElement.toXML());
+				newList.add(resultElement);
+			}
+		}
+		return newList;
+	}
+
+	private List<WordResultElement> sortByValue0(List<WordResultElement> sameCountList0) {
+		List<WordResultElement> newList = new ArrayList<WordResultElement>();
+		Map<String, WordResultElement> sameCountElementByValue = new HashMap<String, WordResultElement>();
+		List<String> words = new ArrayList<String>();
+		for (WordResultElement sameCountElement : sameCountList0) {
+			String word = sameCountElement.getWord();
+			words.add(word);
+			sameCountElementByValue.put(word, sameCountElement);
+		}
+		Collections.sort(words);
+		for (String word : words) {
+			WordResultElement resultElement = sameCountElementByValue.get(word);
+			newList.add(resultElement);
+		}
+		return newList;
 	}
 
 	/** convenience method (for my memory!) */
@@ -275,6 +330,10 @@ public class WordCollectionFactory {
 		return Multisets.copyHighestCountFirst(wordSet).entrySet();
 	}
 
+	/** sort by count or value, depends on sortControl
+	 * 
+	 * @return
+	 */
 	private Iterable<Multiset.Entry<String>> getSortedEntries() {
 		Iterable<Multiset.Entry<String>> sortedEntries = null;
 		if (sortControl.equals(COUNT2)) {
@@ -282,7 +341,6 @@ public class WordCollectionFactory {
 		} else if (sortControl.equals(VALUE)) {
 			sortedEntries = entriesSortedByValue;
 		}
-//		Iterable<Multiset.Entry<String>> sortedEntries = entriesSortedByValue;
 		return sortedEntries;
 	}
 

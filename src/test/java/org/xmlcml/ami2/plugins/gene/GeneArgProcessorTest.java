@@ -83,11 +83,11 @@ public class GeneArgProcessorTest {
 		String cmd = "--g.gene --context 35 50 --g.type human -q target/plosone/gene/ -i scholarly.html"; 
  
 		AMIFixtures.runStandardTestHarness(
-				new File("./src/test/resources/org/xmlcml/ami2/plosone/journal.pone.0008887/"), 
-				new File("target/plosone/gene/"), 
-				new GenePlugin(),
-				cmd,
-				"gene/human/");
+			new File("./src/test/resources/org/xmlcml/ami2/plosone/journal.pone.0008887/"), 
+			new File("target/plosone/gene/"), 
+			new GenePlugin(),
+			cmd,
+			"gene/human/");
 	}
 
 

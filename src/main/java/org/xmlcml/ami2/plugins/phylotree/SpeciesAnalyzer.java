@@ -44,6 +44,10 @@ public class SpeciesAnalyzer {
 	private Iterable<Entry<String>> speciesByCount;
 	private Map<String, String> wikidataBySpecies;
 
+	public SpeciesAnalyzer() {
+		
+	}
+	
 	public void analyzeTrees() throws IOException {
 		genusSet = this.createGenusSetFromBinomialSet();
 		genusByValues = CMineUtil.getEntriesSortedByValue(genusSet);

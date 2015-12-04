@@ -88,6 +88,7 @@ public class RegexPluginTest {
 	}
 	
 	@Test
+	// FAILS?
 	public void testCONSORTRegex() throws IOException {
 		File target = new File("target/consort0/15_1_511_test/");
 		AMIFixtures.runStandardTestHarness(
@@ -140,6 +141,7 @@ public class RegexPluginTest {
 	}
 
 	@Test
+	// FAILS
 	public void testSectioning() throws IOException {
 		FileUtils.copyDirectory(AMIFixtures.TEST_BMC_15_1_511_CMDIR, new File("target/consort0/15_1_511_test/"));
 		String cmd = "-q target/consort0/15_1_511_test/ -i scholarly.html --r.regex regex/consort0.xml";

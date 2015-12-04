@@ -73,6 +73,7 @@ public class WordTest {
 		
 		String cmd = "-q target/examplestemp1/ --w.words wordFrequencies "
 				+ "--w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt /org/xmlcml/ami2/plugins/word/clinicaltrials200.txt";		
+		
 		AMIFixtures.runStandardTestHarness(
 				new File(DATA_16_1_1A), 
 				new File("target/examplestemp1/"), 

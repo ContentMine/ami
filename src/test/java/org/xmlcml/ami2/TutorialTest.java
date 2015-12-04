@@ -82,8 +82,10 @@ public class TutorialTest {
 				+ " --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
 		WordPlugin wordPlugin = new WordPlugin(args);
 		wordPlugin.runAndOutput();
+		// can't compare these directly as output needs sorting
+		File targetE0115544 = new File("target/word10/e0115544");
 		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
-				new File("target/word10/e0115544"), "word/frequencies", AMIFixtures.RESULTS_XML);
+				targetE0115544, "word/frequencies", AMIFixtures.RESULTS_XML);
 	}
 
 	@Test

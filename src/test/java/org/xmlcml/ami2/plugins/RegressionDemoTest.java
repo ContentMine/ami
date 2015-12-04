@@ -3,11 +3,13 @@ package org.xmlcml.ami2.plugins;
 import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.identifier.IdentifierPlugin;
+import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
 import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.ami2.plugins.sequence.SequencePlugin;
 import org.xmlcml.ami2.plugins.species.SpeciesPlugin;
@@ -59,6 +61,23 @@ public class RegressionDemoTest {
 	ami-word -q temp -i scholarly.html --context 25 40 --w.words wordLengths wordFrequencies --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt
 */
 
+	@Test
+	public void testRegex00() throws IOException {
+		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/regex/"), new File("target/regex00/"));
+		String cmd = "-q target/regex00/ -i scholarly.html --context 25 40 --r.regex src/test/resources/org/xmlcml/ami2/regex/consort00.xml";
+		RegexArgProcessor regexArgProcessor = new RegexArgProcessor(cmd);
+		regexArgProcessor.runAndOutput();
+	}
+	
+
+	@Test
+	public void testRegex0() throws IOException {
+		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/regressiondemos/bmc_trials_15_1_511/"), new File("target/consort0/15_1_511_test/"));
+		String cmd = "-q target/consort0/15_1_511_test/ -i scholarly.html --context 25 40 --r.regex regex/consort0.xml";
+		RegexArgProcessor regexArgProcessor = new RegexArgProcessor(cmd);
+		regexArgProcessor.runAndOutput();
+	}
+	
 	@Test
 	public void testRegexHarness() throws IOException {
 		// SHOWCASE

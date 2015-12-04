@@ -15,7 +15,9 @@ public class Prototypes {
 //		runHalThesis2();
 //		runHalTheses();
 //		runSpanishThesis();
-		runSpanishThesis1();
+//		runSpanishThesis1();
+		runItalianThesis();
+//		runAstro();
 //		createPDFImages("journal.pone.0115884a");
 	}
 
@@ -23,6 +25,19 @@ public class Prototypes {
 //		new Norma().run("-q examples/theses/HalThesis1 -i fulltext.pdf -o fulltext.pdf.txt --transform pdf2txt");
 	}
 
+	private static void runAstro() {
+		createPDFTXT("examples/misc/", "0004-637X_778_1_1");
+		WordPlugin wordPlugin = new WordPlugin("-q "
+				+ "     examples/misc/0004-637X_778_1_1"
+				+ " -i fulltext.pdf.txt --w.words wordFrequencies "
+				+ " --w.stopwords "
+				+ "     /org/xmlcml/ami2/plugins/word/stopwords.txt "
+				+ "     /org/xmlcml/ami2/plugins/word/stopwords.pub.txt "
+//				+ "     /org/xmlcml/ami2/plugins/word/stopwords.fr.txt"
+				+ "");
+		wordPlugin.runAndOutput();
+	}
+	
 	private static void runHalThesis2() {
 		WordPlugin wordPlugin = new WordPlugin("-q examples/theses/HalThesis2 -i fulltext.pdf.txt --w.words wordFrequencies "
 				+ "--w.stopwords "
@@ -58,6 +73,37 @@ public class Prototypes {
 	}
 
 	
+	private static void runItalianThesis() {
+		String dir = "examples/theses/italian/";
+		createPDFTXT(dir,"mbarontini_tesid");
+		createPDFTXT(dir,"Erriquez_Daniela_tesi");
+		createPDFTXT(dir,"Fiorentina_Elena_tesi");
+		createPDFTXT(dir,"Gou_Qian_Tesi");
+		createPDFTXT(dir,"terracciano_maria_tesi");
+		createPDFTXT(dir,"Trasporti_Europeo");
+		
+		WordPlugin wordPlugin = new WordPlugin("-q "
+				+ "     "+dir+"/mbarontini_tesid"
+				+ "     "+dir+"/Erriquez_Daniela_tesi"
+				+ "     "+dir+"/Fiorentina_Elena_tesi"
+				+ "     "+dir+"/Gou_Qian_Tesi"
+				+ "     "+dir+"/terracciano_maria_tesi"
+				+ "     "+dir+"/Trasporti_Europeo"
+				+ " -i fulltext.pdf.txt --w.words wordFrequencies "
+				+ " --w.stopwords "
+				+ "     /org/xmlcml/ami2/plugins/word/stopwords.txt "
+				+ "     /org/xmlcml/ami2/plugins/word/stopwords.pub.txt "
+				+ "     /org/xmlcml/ami2/plugins/word/stop-words_italian_it.txt");
+		wordPlugin.runAndOutput();
+		
+	}
+	
+	WordPlugin wordPlugin = new WordPlugin("-q examples/theses/HalThesis2 -i fulltext.pdf.txt --w.words wordFrequencies "
+			+ "--w.stopwords "
+			+ "     /org/xmlcml/ami2/plugins/word/stopwords.txt "
+			+ "     /org/xmlcml/ami2/plugins/word/stopwords.pub.txt "
+			+ "     /org/xmlcml/ami2/plugins/word/stopwords.fr.txt");
+	
 	private static void runSpanishThesis() {
 		createPDFTXT("tesis_alexv6.5");
 		WordPlugin wordPlugin = new WordPlugin("-q "
@@ -87,6 +133,11 @@ public class Prototypes {
 	private static void createPDFTXT(String name) {
 		new Norma().run("-i examples/theses/"+name+".pdf -o examples/theses/");
 		new Norma().run("-q examples/theses/"+name+" -i fulltext.pdf -o fulltext.pdf.txt --transform pdf2txt");
+	}
+	private static void createPDFTXT(String dir, String name) {
+		String dir1 = dir.endsWith("/") ? dir : dir+"/";
+		new Norma().run("-i "+dir1+name+".pdf -o "+dir1);
+		new Norma().run("-q "+dir1+name+" -i fulltext.pdf -o fulltext.pdf.txt --transform pdf2txt");
 	}
 
 	private static void createPDFHTML(String name) {

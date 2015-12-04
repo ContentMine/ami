@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.ami2.plugins.sequence.SequenceArgProcessor;
 
-/** test plugin.
+/** only for external calling
  * 
  * Very simple tasks for testing and tutorials.
  * 

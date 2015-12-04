@@ -42,12 +42,13 @@ public class RegexSearcher extends AMISearcher {
 	public ResultsElement searchXomElement(Element xomElement) {
 		List<RegexComponent> regexComponents = compoundRegex.getOrCreateRegexComponentList();
 		ResultsElement resultsElement = new ResultsElement();
+		String xomValue = xomElement.getValue();
 		for (RegexComponent regexComponent : regexComponents) {
-			MatcherResult matcherResult = regexComponent.searchWithPattern(xomElement.getValue()); // crude to start with
+			MatcherResult matcherResult = regexComponent.searchWithPattern(xomValue); // crude to start with
 			List<ResultElement> resultElementList = matcherResult.createResultElementList();
-			
 			addXpathAndAddtoResultsElement(xomElement, resultsElement, resultElementList);
 		}
+		LOG.trace("resultsElement "+resultsElement.toXML());
 		return resultsElement;
 	}
 
