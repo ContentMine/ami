@@ -14,7 +14,7 @@ import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.ami2.plugins.sequence.SequencePlugin;
 import org.xmlcml.ami2.plugins.species.SpeciesPlugin;
 import org.xmlcml.ami2.plugins.word.WordPlugin;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 
 /** collection of archetypal tests from each plugin.
  * 
@@ -162,7 +162,7 @@ public class RegressionDemoTest {
 				throw new RuntimeException("testFile is not a directory: "+testFile);
 			}
 			try {
-				new CMDir(testFile);
+				new CTree(testFile);
 			} catch (Exception e) {
 				throw new RuntimeException(testFile + " is not a ContentMine directory");
 			}

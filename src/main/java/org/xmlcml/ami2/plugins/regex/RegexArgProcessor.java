@@ -12,7 +12,7 @@ import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.ResultsElement;
 
@@ -99,7 +99,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 			resultsElement.setTitle(regexTitle);
 			currentContentProcessor.addResultsElement(resultsElement);
 		}
-		currentContentProcessor.createResultsDirectoriesAndOutputResultsElement(option, CMDir.RESULTS_XML);
+		currentContentProcessor.createResultsDirectoriesAndOutputResultsElement(option, CTree.RESULTS_XML);
 	}
 
 	private void runRegex() {

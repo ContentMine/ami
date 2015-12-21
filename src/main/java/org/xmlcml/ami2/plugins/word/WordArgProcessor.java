@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.cmine.files.ResultsElementList;
@@ -187,8 +187,8 @@ public class WordArgProcessor extends AMIArgProcessor {
 		ResultsElementList resultsElementList = currentContentProcessor.getOrCreateResultsElementList();
 		for (int i = 0; i < resultsElementList.size(); i++) {
 			File outputDirectory = currentContentProcessor.createResultsDirectoryAndOutputResultsElement(
-					option, resultsElementList.get(i), CMDir.RESULTS_XML);
-			File htmlFile = new File(outputDirectory, CMDir.RESULTS_HTML);
+					option, resultsElementList.get(i), CTree.RESULTS_XML);
+			File htmlFile = new File(outputDirectory, CTree.RESULTS_HTML);
 			((WordResultsElement) resultsElementList.get(i)).writeResultsElementAsHTML(htmlFile, this);
 		}
 	}
@@ -247,7 +247,7 @@ public class WordArgProcessor extends AMIArgProcessor {
 
 	public WordResultsElementList aggregateOverCMDirList(String pluginName, String methodName) {
 		WordResultsElementList resultsElementList = new WordResultsElementList();
-		for (CMDir cTree : cTreeList) {
+		for (CTree cTree : cTreeList) {
 			ResultsElement resultsElement = cTree.getResultsElement(pluginName, methodName);
 			if (resultsElement == null) {
 				LOG.error("Null results element, skipped "+cTree.getDirectory());

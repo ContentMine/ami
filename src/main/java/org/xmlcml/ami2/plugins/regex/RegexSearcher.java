@@ -48,7 +48,7 @@ public class RegexSearcher extends AMISearcher {
 			List<ResultElement> resultElementList = matcherResult.createResultElementList();
 			addXpathAndAddtoResultsElement(xomElement, resultsElement, resultElementList);
 		}
-		LOG.trace("resultsElement "+resultsElement.toXML());
+		LOG.debug("resultsElement "+resultsElement.toXML());
 		return resultsElement;
 	}
 

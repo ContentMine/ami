@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.xml.XMLUtil;
 
 public class AMIFixtures {
@@ -69,7 +69,7 @@ public class AMIFixtures {
 			throws IOException {
 		LOG.trace("++++++++++++++++++++++   harness   +++++++++++++++++++++++");
 		LOG.trace("newDir exists: "+newDir+"; e: "+newDir.exists()+"; d "+newDir.isDirectory());
-		CMDir cTree = new CMDir(cTreeDirectory);
+		CTree cTree = new CTree(cTreeDirectory);
 		if (newDir.exists()) FileUtils.deleteDirectory(newDir);
 		cTree.copyTo(newDir, true);
 		

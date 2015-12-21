@@ -18,7 +18,7 @@ import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlElement;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNode;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlTree;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.diagrams.phylo.PhyloTreePixelAnalyzer;
 import org.xmlcml.euclid.Real2Range;
 import org.xmlcml.euclid.RealRange;
@@ -270,14 +270,14 @@ public class PhyloCore {
 			String suffix = FilenameUtils.getExtension(inputFile.toString());
 			svgxTree = null;
 			try {
-				if (CMDir.isImageSuffix(suffix)) {
+				if (CTree.isImageSuffix(suffix)) {
 					if (this.mergeOCRAndPixelTree(inputFile)) {
 						argProcessor.TREE_LOG().info("Analyzed pixels for tree successfully");
 					} else {
 						argProcessor.TREE_LOG().warn("failed to analyze pixels for tree successfully");
 					}
 	//				createNexmlAndTreeFromPixels(inputFile);
-				} else if (CMDir.isSVG(suffix)) {
+				} else if (CTree.isSVG(suffix)) {
 					createNexmlAndTreeFromSVG(inputFile);
 				} else {
 					throw new RuntimeException("Cannot process as phylotree: "+inputFile);

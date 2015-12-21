@@ -20,7 +20,7 @@ import org.xmlcml.cmine.args.ArgumentOption;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.args.ValueElement;
 import org.xmlcml.cmine.args.VersionManager;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.DefaultSearcher;
 import org.xmlcml.cmine.files.EuclidSource;
@@ -402,7 +402,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		return new CompoundRegex(this, rootElement);
 	}
 
-	public CMDir getCurrentCMDir() {
+	public CTree getCurrentCMDir() {
 		return currentCTree;
 	}
 

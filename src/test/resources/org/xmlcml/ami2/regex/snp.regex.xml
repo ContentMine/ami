@@ -1,0 +1,3 @@
+<compoundRegex title="snp">
+    <regex weight="1.0" fields="snp">(SNPs?)</regex>
+</compoundRegex>

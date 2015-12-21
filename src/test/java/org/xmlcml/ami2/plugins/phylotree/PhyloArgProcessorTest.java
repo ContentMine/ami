@@ -10,7 +10,7 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 
 public class PhyloArgProcessorTest {
 	
@@ -39,7 +39,7 @@ public class PhyloArgProcessorTest {
 	 */
 	@Ignore("requires tesseract")
 	public void testPhyloHarness() throws Exception {
-		CMDir cTree = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000174_0"));
+		CTree cTree = new CTree(new File(AMIFixtures.TEST_PHYLO_DIR, "ijs_0_000174_0"));
 		File normaTemp = new File("target/phylo/ijs_0_000174_0");
 		cTree.copyTo(normaTemp, true);
 		String cmd = "--ph.phylo -q target/phylo/ijs_0_000174_0 -i image/000.pbm.png -o target/phylo/junk.xml"; 
@@ -54,7 +54,7 @@ public class PhyloArgProcessorTest {
 	@Ignore("requires tesseract") // uncomment later
 	public void testCommandLine() throws Exception {
 		String name = "ijs_0_000364_0"; String img = "003";
-		CMDir cTree = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
+		CTree cTree = new CTree(new File(AMIFixtures.TEST_PHYLO_DIR, name));
 		File normaTemp = new File("target/phylo/"+name);
 		cTree.copyTo(normaTemp, true);
 //		String cmd = "--ph.phylo -q target/phylo/"+name+" -i image/"+img+".pbm.png -o target/phylotest/"+name; 
@@ -72,7 +72,7 @@ public class PhyloArgProcessorTest {
 	public void testFullCommandLine() throws Exception {
 		String name = "ijs_0_000364_0"; 
 		String img = "003";
-		CMDir cTree = new CMDir(new File(AMIFixtures.TEST_PHYLO_DIR, name));
+		CTree cTree = new CTree(new File(AMIFixtures.TEST_PHYLO_DIR, name));
 		File normaTemp = new File("target/phylo/"+name);
 		cTree.copyTo(normaTemp, true);
 		String cmd = "--ph.phylo -q target/phylo/"+name+
@@ -108,7 +108,7 @@ public class PhyloArgProcessorTest {
 			FileNotFoundException {
 		File cTreeDir = new File(dir, name);
 		Assert.assertTrue("file exists: "+cTreeDir, cTreeDir.exists());
-		CMDir cTree = new CMDir(cTreeDir);
+		CTree cTree = new CTree(cTreeDir);
 		File normaTemp = new File("target/phylo/"+name);
 		cTree.copyTo(normaTemp, true);
 		Assert.assertTrue("file exists: "+normaTemp, normaTemp.exists());

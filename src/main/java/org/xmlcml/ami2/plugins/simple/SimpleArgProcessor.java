@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ResultElement;
 import org.xmlcml.cmine.files.ResultsElement;
 
@@ -50,7 +50,7 @@ public class SimpleArgProcessor extends AMIArgProcessor {
 
 	public void outputWordCounts(ArgumentOption option) {
 		String outputFilename = getOutput();
-		if (!CMDir.isReservedFilename(outputFilename)) {
+		if (!CTree.isReservedFilename(outputFilename)) {
 			throw new RuntimeException("Output is not a reserved file: "+outputFilename);
 		}
 		ResultsElement resultsElement = new ResultsElement();

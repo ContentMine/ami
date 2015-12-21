@@ -16,7 +16,7 @@ import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ResultElement;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.html.HtmlA;
@@ -68,7 +68,7 @@ public class RegexPluginTest {
 	@Test
 	// BMC has unusual XML
 	public void testRegexPlugins() throws IOException {
-		CMDir cTree = new CMDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR);
+		CTree cTree = new CTree(AMIFixtures.TEST_BMC_15_1_511_CMDIR);
 		File normaTemp = new File("target/bmc/regex/15_1_511_test");
 		cTree.copyTo(normaTemp, true);
 		String[] args = {
@@ -97,7 +97,7 @@ public class RegexPluginTest {
 				new RegexPlugin(),
 				"-q "+target+" -i scholarly.html --context 25 40 --r.regex regex/consort0.xml",
 				"regex/consort0/");
-		CMDir cTree = new CMDir(target);
+		CTree cTree = new CTree(target);
 		// this may alter it by reparsing
 		HtmlElement scholarlyHtml = cTree.ensureScholarlyHtmlElement();
 //		FileUtils.write(new File("target/consort0/text.html"), );
@@ -165,6 +165,15 @@ public class RegexPluginTest {
 	@Ignore // not yet implemented
 	public void testRegexPluginExtractNumbers() throws IOException {
 		String args = "-q target/bmc/regex/15_1_511_test -i scholarly.html -o results.xml --context 25 40 --r.regex regex/consort0.xml";
+		new RegexPlugin(args).runAndOutput();
+	}
+	
+	@Test
+	public void testNullSNPOutput() throws IOException {
+		
+		File regexDir = new File(AMIFixtures.TEST_AMI_DIR, "regex/");
+		FileUtils.copyDirectory(new File(regexDir, "PMC4625707"), new File("target/regex/PMC4625707/"));
+		String args = "-q target/regex/PMC4625707/ -i scholarly.html -o results.xml --context 25 40 --r.regex "+new File(regexDir, "snp.regex.xml");
 		new RegexPlugin(args).runAndOutput();
 	}
 }

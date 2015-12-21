@@ -12,7 +12,7 @@ import nu.xom.IllegalCharacterDataException;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ResultElement;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.cmine.files.ResultsElementList;
@@ -83,7 +83,7 @@ public class WordCollectionFactory {
 	}
 
 	private void createWordSets() {
-		CMDir currentCTree = wordArgProcessor.getCurrentCMDir();
+		CTree currentCTree = wordArgProcessor.getCurrentCMDir();
 		List<String> rawWords = null;
 		if (currentCTree != null) {
 			if (currentCTree.hasScholarlyHTML()) {
