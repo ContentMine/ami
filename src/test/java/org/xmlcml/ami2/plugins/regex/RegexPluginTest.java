@@ -13,8 +13,12 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.xmlcml.ami2.AMIArgProcessorTest;
 import org.xmlcml.ami2.AMIFixtures;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
+import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
+import org.xmlcml.ami2.plugins.word.WordArgProcessor;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ResultElement;
@@ -66,25 +70,31 @@ public class RegexPluginTest {
 	}
 	
 	@Test
-	// BMC has unusual XML
+	// EMPTY??
+	public void testRegexPlugin() throws IOException {
+		File target = new File("target/bmc/regex/15_1_511_test");
+		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
+		String args = 
+				"-q "+ target.toString()+" -i scholarly.html -o results.xml --context 25 40 --r.regex regex/common.xml";
+		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"common\" />");
+	}
+	
+	@Test
 	public void testRegexPlugins() throws IOException {
-		CTree cTree = new CTree(AMIFixtures.TEST_BMC_15_1_511_CMDIR);
+		File target = new File("target/bmc/regex/15_1_511_test");
+		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
 		File normaTemp = new File("target/bmc/regex/15_1_511_test");
-		cTree.copyTo(normaTemp, true);
-		String[] args = {
-				"-q", normaTemp.toString(),
-				"-i", "scholarly.html",
-				"-o", "results.xml",
-				"--context", "25", "40",
-				"--r.regex" ,
-			    	"regex/common.xml",
-			    	"regex/figure.xml",
-			    	"regex/phylotree.xml",
-		};
+		String args = 
+				"-q "+normaTemp.toString()+" -i scholarly.html -o results.xml --context 25 40 --r.regex regex/common.xml regex/figure.xml regex/phylotree.xml";
 		AMIPlugin regexPlugin = new RegexPlugin(args);
-		DefaultArgProcessor argProcessor = (DefaultArgProcessor) regexPlugin.getArgProcessor();
+		RegexArgProcessor argProcessor = (RegexArgProcessor) regexPlugin.getArgProcessor();
 		Assert.assertNotNull(argProcessor);
 		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
+				"<results title=\"common\" />");
 	}
 	
 	@Test
@@ -141,12 +151,30 @@ public class RegexPluginTest {
 	}
 
 	@Test
-	// FAILS
+	// TESTED 2016-01-12
+	public void testCONSORTRegex1() throws IOException {
+		File target = new File("target/consort0/15_1_511_test/");
+		FileUtils.copyDirectory(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
+		String args = "-q "+target+" -i scholarly.html --context 25 40 --r.regex regex/consort0.xml";
+		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"consort0\">"
+				+ "<result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][9]/*[local-name()='p'][1]\" />"
+				+ "<result pre=\"tion health, to alter or \"");
+
+	}
+	
+	@Test
+	// TESTED 2016-01-12
 	public void testSectioning() throws IOException {
 		FileUtils.copyDirectory(AMIFixtures.TEST_BMC_15_1_511_CMDIR, new File("target/consort0/15_1_511_test/"));
 		String cmd = "-q target/consort0/15_1_511_test/ -i scholarly.html --r.regex regex/consort0.xml";
 		RegexArgProcessor argProcessor = new RegexArgProcessor(cmd);
 		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"consort0\"><result pre=\"ety  3 . Approximately 90% of patients with LBP are labelled as having non-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause or pathology  4 . A wide range of health interventions for p\" xpath=\"/*[local-n");
+		
 		File resultsFile = new File("target/consort0/15_1_511_test/results/regex/consort0/results.xml");
 		Assert.assertEquals("results without xpath", 8,  
 				XMLUtil.getQueryElements(XMLUtil.parseQuietlyToDocument(resultsFile).getRootElement(), 
@@ -154,26 +182,52 @@ public class RegexPluginTest {
 		cmd = "-q target/consort0/15_1_511_test/ -i scholarly.html --xpath //*[@tagx='title']/* --r.regex regex/consort0.xml";
 		argProcessor = new RegexArgProcessor(cmd);
 		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"consort0\">"
+				+ "<result pre=\"r pattern of improvement following a wide range of primary care treatments: a systematic review of \" "
+				+ "name0=\"random\" value0=\"randomized\" post=\"clinical trials \" "
+				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][16]/*[local-name()="
+				);
 		resultsFile = new File("target/consort0/15_1_511_test/results/regex/consort0/results.xml");
 		Assert.assertEquals("results with xpath", 2,  
 				XMLUtil.getQueryElements(XMLUtil.parseQuietlyToDocument(resultsFile).getRootElement(), 
 						"//*[local-name()='result']").size());
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"consort0\"><result pre=\"r pattern of improvement following a wide range "
+				+ "of primary care treatments: a systematic review of \" name0=\"random\" value0=\"randomized\" "
+				+ "post=\"clinical trials \" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][16]/*[local-name()=");
+
+
 	}
 
 
 	@Test
-	@Ignore // not yet implemented
+	// TESTED 2016-01-12
 	public void testRegexPluginExtractNumbers() throws IOException {
-		String args = "-q target/bmc/regex/15_1_511_test -i scholarly.html -o results.xml --context 25 40 --r.regex regex/consort0.xml";
-		new RegexPlugin(args).runAndOutput();
+		String args = "-q target/bmc/regex/15_1_511_test -i scholarly.html -o results.xml --context 25 40 "
+				+ "--r.regex regex/consort0.xml";
+		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"consort0\"><result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" "
+				+ "value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" xpath=\""
+				+ "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][9]/*[local-name()='p'][1]\""
+				+ " /><result pre=\"tion health, to alter or \"");
 	}
 	
 	@Test
+	// TESTED 2016-01-12
 	public void testNullSNPOutput() throws IOException {
 		
 		File regexDir = new File(AMIFixtures.TEST_AMI_DIR, "regex/");
 		FileUtils.copyDirectory(new File(regexDir, "PMC4625707"), new File("target/regex/PMC4625707/"));
 		String args = "-q target/regex/PMC4625707/ -i scholarly.html -o results.xml --context 25 40 --r.regex "+new File(regexDir, "snp.regex.xml");
-		new RegexPlugin(args).runAndOutput();
+		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"snp\" />");
+
 	}
+	
+
 }

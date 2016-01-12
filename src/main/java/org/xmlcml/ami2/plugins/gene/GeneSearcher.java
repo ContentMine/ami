@@ -2,22 +2,20 @@ package org.xmlcml.ami2.plugins.gene;
 
 import java.util.List;
 
-import nu.xom.Element;
-
 import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.ResultElement;
 import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.html.HtmlP;
+import org.xmlcml.cmine.lookup.AbstractDictionary;
+
+import nu.xom.Element;
 
 public class GeneSearcher extends AMISearcher {
 
 	
-	public static final Logger LOG = Logger.getLogger(GeneSearcher.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -26,7 +24,12 @@ public class GeneSearcher extends AMISearcher {
 		super(argProcessor, namedPattern);
 	}
 
+	public GeneSearcher(AMIArgProcessor argProcessor, AbstractDictionary dictionary) {
+		super(argProcessor, dictionary);
+	}
+
 	@Override 
+	// this will probably disappear
 	public String getValue(Element xomElement) {
 		String xmlString = xomElement.toXML();
 		// this is ucky, but since we know the HTML is normalized it's probably OK

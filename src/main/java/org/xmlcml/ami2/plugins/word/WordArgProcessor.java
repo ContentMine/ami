@@ -5,17 +5,21 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
 import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.cmine.files.ResultsElementList;
+import org.xmlcml.cmine.lookup.AbstractDictionary;
 import org.xmlcml.euclid.IntRange;
 import org.xmlcml.xml.XMLUtil;
 
@@ -34,10 +38,12 @@ public class WordArgProcessor extends AMIArgProcessor {
 	
 	public final static String WORD_LENGTHS = "wordLengths";
 	public final static String WORD_FREQUENCIES = "wordFrequencies";
+	public final static String WORD_SEARCH = "wordSearch";
 	public final static List<String> ANALYSIS_METHODS = Arrays.asList(
 		new String[]{
 				WORD_FREQUENCIES,
-				WORD_LENGTHS
+				WORD_LENGTHS,
+				WORD_SEARCH
 		});
 	
 	public final static String ABBREVIATION = "abbreviation";
@@ -88,6 +94,8 @@ public class WordArgProcessor extends AMIArgProcessor {
 	WordResultsElement aggregatedFrequenciesElement;
 	private IntRange wordCount;
 	private WordResultsElement booleanFrequencyElement;
+	private Map<String, ResultsElement> resultsByDictionary;
+	
 	public WordArgProcessor() {
 		super();
 	}
@@ -143,7 +151,6 @@ public class WordArgProcessor extends AMIArgProcessor {
 	 */
 	public void parseStem(ArgumentOption option, ArgIterator argIterator) {
 		stemming = argIterator.getBoolean(option);
-		LOG.trace("Stemming not yet implemented");
 	}
 
 	public void parseStopwords(ArgumentOption option, ArgIterator argIterator) {
@@ -172,8 +179,19 @@ public class WordArgProcessor extends AMIArgProcessor {
 	}
 	
 	public void runExtractWords(ArgumentOption option) {
-		WordCollectionFactory wordCollectionFactory = new WordCollectionFactory(this);
+		ensureWordCollectionFactory();
 		wordCollectionFactory.extractWords();
+	}
+	
+	public void parseSearch(ArgumentOption option, ArgIterator argIterator) {
+		ensureSearcherList();
+		List<String> dictionarySources = argIterator.createTokenListUpToNextNonDigitMinus(option);
+		createAndAddDictionaries(dictionarySources);
+		for (AbstractDictionary dictionary : this.getDictionaryList()) {
+			AMISearcher wordSearcher = new WordSearcher(this, dictionary);
+			searcherList.add(wordSearcher);
+		}
+//		wordSearcher.setDictionaryList(this.getDictionaryList());
 	}
 	
 	/** refactor output option.
@@ -187,7 +205,7 @@ public class WordArgProcessor extends AMIArgProcessor {
 		ResultsElementList resultsElementList = currentContentProcessor.getOrCreateResultsElementList();
 		for (int i = 0; i < resultsElementList.size(); i++) {
 			File outputDirectory = currentContentProcessor.createResultsDirectoryAndOutputResultsElement(
-					option, resultsElementList.get(i), CTree.RESULTS_XML);
+					option, resultsElementList.get(i)/*, CTree.RESULTS_XML*/);
 			File htmlFile = new File(outputDirectory, CTree.RESULTS_HTML);
 			((WordResultsElement) resultsElementList.get(i)).writeResultsElementAsHTML(htmlFile, this);
 		}
@@ -204,7 +222,7 @@ public class WordArgProcessor extends AMIArgProcessor {
 	
 	public void finalSummary(ArgumentOption option) {
 		WordResultsElementList frequenciesElementList = this.aggregateOverCMDirList(getPlugin(), WordArgProcessor.FREQUENCIES);
-		WordCollectionFactory wordCollectionFactory = new WordCollectionFactory(this);
+		ensureWordCollectionFactory();
 		for (String method : summaryMethods) {
 			runSummaryMethod(frequenciesElementList, wordCollectionFactory, method);
 		}
@@ -227,6 +245,34 @@ public class WordArgProcessor extends AMIArgProcessor {
 		}
 	}
 
+	public void runSearch(ArgumentOption option) {
+		ensureResultsByDictionary();
+		ensureSearcherList();
+		for (AMISearcher searcher : searcherList) {
+			WordSearcher wordSearcher = (WordSearcher)searcher;
+			ResultsElement resultsElement = wordSearcher.searchWordList();
+			resultsByDictionary.put(wordSearcher.getTitle(), resultsElement);
+		}
+	}
+	
+	public void outputSearch(ArgumentOption option) {
+		outputResultsElements(option.getName());
+	}
+
+	private void outputResultsElements(String name) {
+		ContentProcessor currentContentProcessor = currentCTree.getOrCreateContentProcessor();
+		currentContentProcessor.clearResultsElementList();
+
+		for (String title : resultsByDictionary.keySet()) {
+			ResultsElement resultsElement = resultsByDictionary.get(title);
+			resultsElement.setTitle(title);
+			currentContentProcessor.addResultsElement(resultsElement);
+		}
+		currentContentProcessor.createResultsDirectoriesAndOutputResultsElement(name);
+	}
+	
+
+
 	private static void writeResultsElement(File outputFile, ResultsElement resultsElement) {
 		try {
 			outputFile.getParentFile().mkdirs();
@@ -237,6 +283,13 @@ public class WordArgProcessor extends AMIArgProcessor {
 	}
 	
 	// =============================
+
+	private void ensureResultsByDictionary() {
+		if (resultsByDictionary == null) {
+			resultsByDictionary = new HashMap<String, ResultsElement>();
+		}
+	}
+
 
 	private void addStopwords(List<String> stopwordLocations) {
 		ensureStopwordSetList();

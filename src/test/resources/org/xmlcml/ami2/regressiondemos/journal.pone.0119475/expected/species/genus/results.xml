@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<results title="genus"/>
+<results title="genus">
+ <result pre="g the transmission and movement of " exact="Plasmodium" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='p'][3]" match="Plasmodium" post=" parasites is crucial for malaria elimination and " name="genus"/>
+ <result pre="itate meiotic recombination in the " exact="Anopheles" match="Anopheles" post=" mosquito vectors, leading to generation of novel " name="genus"/>
+</results>

@@ -6,43 +6,59 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.ami2.plugins.gene.GenePlugin;
-import org.xmlcml.ami2.plugins.identifier.IdentifierPlugin;
-import org.xmlcml.ami2.plugins.regex.RegexPlugin;
-import org.xmlcml.ami2.plugins.species.SpeciesPlugin;
+import org.xmlcml.ami2.plugins.gene.GeneArgProcessor;
+import org.xmlcml.ami2.plugins.identifier.IdentifierArgProcessor;
+import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
+import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
-import org.xmlcml.ami2.plugins.word.WordPlugin;
 
 public class TutorialTest {
 
 	@Test
+	// TESTED 2016-01-12
 	public void testSpecies() throws Exception {
-		FileUtils.copyDirectory(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10"), new File("target/species10"));
+		AMIFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10"), new File("target/species10"));
 		String args = "-q target/species10 -i scholarly.html --sp.species --context 35 50 --sp.type binomial genus genussp";
-		SpeciesPlugin speciesPlugin = new SpeciesPlugin(args);
-		speciesPlugin.runAndOutput();
-		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
-				new File("target/species10/e0115544"), "species/binomial", AMIFixtures.RESULTS_XML);
+		SpeciesArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
+		speciesArgProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(speciesArgProcessor, 3, 0, 
+				"<results title=\"binomial\"><result pre=\" \" "
+				+ "exact=\"Cryptococcus neoformans\" "
+				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][10]\" "
+				+ "match=\"Cryptococcus neoformans\" "
+				+ "post=\" is a ubiquitous environmental fungus that can cau\" n"
+				);
+//		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
+//				new File("target/species10/e0115544"), "species/binomial", AMIFixtures.RESULTS_XML);
 	}
 	
 	@Test
-	@Ignore // not working
+	@Ignore // uses net
 	public void testSpeciesLookup() throws Exception {
-		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/specieslook10"));
+		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/specieslook10"));
 		String args = "-q target/specieslook10 -i scholarly.html --sp.species --context 35 50 --sp.type binomial genus genussp --lookup wikipedia genbank";
-		SpeciesPlugin speciesPlugin = new SpeciesPlugin(args);
-		speciesPlugin.runAndOutput();
-		
+		SpeciesArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
+		speciesArgProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(speciesArgProcessor, 3, 0, 
+				"<results title=\"mend me\">"
+				);
 	}
 	
 	@Test
-	// FIXME
+	// TESTED 2016-01-12
 	public void testRegex() throws Exception {
-		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/regex10"));
+		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/regex10"));
 		String args = "-q target/regex10/ -i scholarly.html --context 35 50 --r.regex regex/consort0.xml";
-		RegexPlugin regexPlugin = new RegexPlugin(args);
-		regexPlugin.runAndOutput();
+		RegexArgProcessor regexArgProcessor = new RegexArgProcessor(args);
+		regexArgProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(regexArgProcessor, 1, 0, 
+				"<results title=\"consort0\">"
+				+ "<result pre=\"ptococcal meningitis in Taiwan was \" "
+				+ "name0=\"diagnose\" value0=\"diagnosed\" "
+				+ "post=\"in 1957 [ 22]. Large clinical case series on crypt\" "
+				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][4]/*[local-name()='p']["
+				);
+		
 		/** omit as slightly different outout.
 		Fixtures.compareExpectedAndResults(new File(Fixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
 				new File("target/regex10/e0115544"), "regex/consort0", Fixtures.RESULTS_XML);
@@ -50,38 +66,49 @@ public class TutorialTest {
 	}
 	
 	@Test
+	// EMPTY result, check.
 	public void testIdentifier() throws Exception {
-		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/ident10"));
+		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/ident10"));
 		String args = "-q target/ident10/ -i scholarly.html --context 35 50 --id.identifier --id.regex regex/identifiers.xml --id.type bio.ena";
-		IdentifierPlugin identifierPlugin = new IdentifierPlugin(args);
-		identifierPlugin.runAndOutput();
-		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
-				new File("target/ident10/e0115544"), "identifier/bio.ena", AMIFixtures.RESULTS_XML);
+		IdentifierArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
+		identifierArgProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(identifierArgProcessor, 1, 0, 
+				"<results title=\"bio.ena\" />"
+				);
 		
 	}
 	
 	@Test
+	// EMPTY ?
 	public void testIdentifierClin() throws Exception {
-		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/clin10"));
+		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/clin10"));
 		String args = "-q target/clin10/ -i scholarly.html --context 35 50 --id.identifier --id.regex regex/identifiers.xml --id.type clin.nct clin.isrctn";
-		IdentifierPlugin identifierPlugin = new IdentifierPlugin(args);
-		identifierPlugin.runAndOutput();
-		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
-				new File("target/clin10/e0115544"), "identifier/clin.nct", AMIFixtures.RESULTS_XML);
+		IdentifierArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
+		identifierArgProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(identifierArgProcessor, 2, 0, 
+				"<results title=\"clin.nct\" />"
+				);
 	}
 		
 	@Test
-	// FIXME
-
+	// TESTED 2016-01-12
 	public void testBagOfWords() throws Exception {
-		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/word10"));
+		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/word10"));
 		String args = "-q target/word10/"
 				+ " -i scholarly.html"
 				+ " --context 35 50"
 				+ " --w.words wordFrequencies"
 				+ " --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
-		WordPlugin wordPlugin = new WordPlugin(args);
-		wordPlugin.runAndOutput();
+		WordArgProcessor wordArgProcessor = new WordArgProcessor(args);
+		wordArgProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(wordArgProcessor, 1, 0, 
+				"<results title=\"frequencies\">"
+				+ "<result title=\"frequency\" word=\"(.)\" count=\"55\" />"
+				+ "<result title=\"frequency\" word=\"cryptococcal\" count=\"48\" />"
+				+ "<result title=\"frequency\" word=\"neoformans\" count=\"47\" />"
+				+ "<result title=\"frequency\" word=\"meningitis\" count=\"41\" />"
+				+ "<result title=\"frequency\" word=\"risk\" count=\"41\""
+				);
 		// can't compare these directly as output needs sorting
 		File targetE0115544 = new File("target/word10/e0115544");
 		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
@@ -89,39 +116,65 @@ public class TutorialTest {
 	}
 
 	@Test
-	// FIXME
-
+	// TESTED 2016-01-12
 	public void testBagOfWordsNatureNano() throws Exception {
-		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/nature/nnano"), new File("target/nature/nnano"));
+		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/nature/nnano"), new File("target/nature/nnano"));
 		String args = "-q target/nature/nnano/"
 				+ " -i scholarly.html"
 				+ " --context 35 50"
 				+ " --w.words wordFrequencies"
 				+ " --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
-		WordPlugin wordPlugin = new WordPlugin(args);
-		wordPlugin.runAndOutput();
+		WordArgProcessor wordArgProcessor = new WordArgProcessor(args);
+		wordArgProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(wordArgProcessor, 1, 0, 
+				"<results title=\"frequencies\">"
+				+ "<result title=\"frequency\" word=\"carbon\" count=\"77\" />"
+				+ "<result title=\"frequency\" word=\"hybrid\" count=\"61\" />"
+				+ "<result title=\"frequency\" word=\"fibre\" count=\"53\" />"
+				+ "<result title=\"frequency\" word=\"().\" count=\"51\" />"
+				+ "<result title=\"frequency\" word=\"context\" count=\"51\" />"
+				+ "<result t"
+				);
 	}
 	
 
 	@Test
+	// EMPTY?
 	public void testGene() throws Exception {
-		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/gene10"));
+		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/gene10"));
 		String args = "-q target/gene10/ -i scholarly.html --context 35 50 --g.gene --g.type human mouse";
-		GenePlugin genePlugin = new GenePlugin(args);
-		genePlugin.runAndOutput();
+		GeneArgProcessor geneArgProcessor = new GeneArgProcessor(args);
+		geneArgProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(geneArgProcessor, 2, 0, 
+				"<results title=\"human\" />"
+				);
+		AMIFixtures.checkResultsElementList(geneArgProcessor, 2, 1, 
+				"<results title=\"mouse\" />"
+				);
+
 		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
 				new File("target/gene10/e0115544"), "gene/human", AMIFixtures.RESULTS_XML);
 		
 	}
 	
 	@Test
-	public void testNorma() throws IOException {
+	// TESTED 2016-01-12
+	public void testWordFrequencies() throws IOException {
 			FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/word10a"));
 			String args = "-q target/word10a/"
 					+ " -i fulltext.xml"
 					+ " --w.words wordFrequencies"
 					+ " -o scholarly.html";
-			AMIArgProcessor amiArgProcessor = new WordArgProcessor(args);
-			amiArgProcessor.runAndOutput();
+			WordArgProcessor wordArgProcessor = new WordArgProcessor(args);
+			wordArgProcessor.runAndOutput();
+			AMIFixtures.checkResultsElementList(wordArgProcessor, 1, 0, 
+					"<results title=\"frequencies\">"
+					+ "<result title=\"frequency\" word=\"the\" count=\"140\" />"
+					+ "<result title=\"frequency\" word=\"and\" count=\"104\" />"
+					+ "<result title=\"frequency\" word=\"with\" count=\"59\" />"
+					+ "<result title=\"frequency\" word=\"(.)\" count=\"55\" />"
+					+ "<result title=\"frequency\" word=\"cryptococcal\" count=\"48\" />"
+					+ "<result t"
+					);
 	}
 }

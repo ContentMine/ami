@@ -99,7 +99,7 @@ public class WikipediaLookupTest {
 //	}
 	
 	@Test
-	@Ignore // takes too long
+//	@Ignore // takes too long
 	public void testLookup() throws Exception {
 		File target = new File("target/lookup/pone_0115884");
 		FileUtils.copyDirectory(new File(AMIFixtures.TEST_PLOSONE_DIR, "journal.pone.0115884/"), target);
@@ -110,6 +110,10 @@ public class WikipediaLookupTest {
 		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor();
 		argProcessor.parseArgs(cmd);
 		argProcessor.runAndOutput();
+		// doesn't work
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"binomial\" />"
+				);
 	}
 
 	

@@ -4,15 +4,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import nu.xom.Element;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.ResultsElement;
 
@@ -60,7 +57,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	}
 
 	public void outputResultElements(ArgumentOption option) {
-		outputResultElementsx(option);
+		outputResultElements(option.getName());
 	}
 
 	// =========================
@@ -82,11 +79,11 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	}
 
 
-	/** might need to refactor option to use its name.
+	/** .
 	 * 
-	 * @param option
+	 * @param name of option
 	 */
-	private void outputResultElementsx(ArgumentOption option) {
+	private void outputResultElements(String name) {
 		ContentProcessor currentContentProcessor = currentCTree.getOrCreateContentProcessor();
 		currentContentProcessor.clearResultsElementList();
 		if (resultsByCompoundRegex == null) {
@@ -99,7 +96,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 			resultsElement.setTitle(regexTitle);
 			currentContentProcessor.addResultsElement(resultsElement);
 		}
-		currentContentProcessor.createResultsDirectoriesAndOutputResultsElement(option, CTree.RESULTS_XML);
+		currentContentProcessor.createResultsDirectoriesAndOutputResultsElement(name);
 	}
 
 	private void runRegex() {

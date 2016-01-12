@@ -5,7 +5,6 @@ import java.util.List;
 import nu.xom.Element;
 
 import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
@@ -15,7 +14,6 @@ import org.xmlcml.cmine.files.ResultsElement;
 public class DummySearcher extends AMISearcher {
 
 	
-	public static final Logger LOG = Logger.getLogger(DummySearcher.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}

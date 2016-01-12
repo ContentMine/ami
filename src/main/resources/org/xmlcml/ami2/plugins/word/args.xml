@@ -115,6 +115,19 @@
 		</help>
 	</arg>	
 	
+	<arg name="search" 
+		long="--w.search"
+		args="{min"
+		countRange="{1,*}"
+		parseMethod="parseSearch"
+		runMethod="runSearch"
+		outputMethod="outputSearch"
+		>
+		<help>
+		 arguments are names of dictionaries (currently filenames)
+		</help>
+	</arg>	
+	
 	
 </argList>
 			

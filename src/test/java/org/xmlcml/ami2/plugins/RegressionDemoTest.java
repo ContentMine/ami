@@ -31,19 +31,19 @@ public class RegressionDemoTest {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-	@Test
-	public void testIdentifiersArgProcessor() throws Exception {
-		// SHOWCASE
-		String cmd = "-q target/examples_16_1_1/ -i scholarly.html --context 25 40 "
-				+ "--id.identifier --id.regex regex/identifiers.xml --id.type clin.nct clin.isrctn";
-		AMIFixtures.runStandardTestHarness(
-				new File("src/test/resources/org/xmlcml/ami2/regressiondemos/http_www.trialsjournal.com_content_16_1_1/"),
-				new File("target/examples_16_1_1/"), 
-				new IdentifierPlugin(),
-				cmd,
-				"identifier/clin.nct/", "identifier/clin.isrctn/");
-	}
-
+//	@Test
+//	public void testIdentifiersArgProcessor() throws Exception {
+//		// SHOWCASE
+//		String cmd = "-q target/examples_16_1_1/ -i scholarly.html --context 25 40 "
+//				+ "--id.identifier --id.regex regex/identifiers.xml --id.type clin.nct clin.isrctn";
+//		AMIFixtures.runStandardTestHarness(
+//				new File("src/test/resources/org/xmlcml/ami2/regressiondemos/http_www.trialsjournal.com_content_16_1_1/"),
+//				new File("target/examples_16_1_1/"), 
+//				new IdentifierPlugin(),
+//				cmd,
+//				"identifier/clin.nct/", "identifier/clin.isrctn/");
+//	}
+//
 	/**
 	cp -R src/test/resources/org/xmlcml/ami2/regressiondemos/http_www.trialsjournal.com_content_16_1_1/ temp
 	ami-identifier -q target/examples_16_1_1/ -i scholarly.html --context 25 40 --id.identifier --id.type clin.nct clin.isrctn"
@@ -67,6 +67,14 @@ public class RegressionDemoTest {
 		String cmd = "-q target/regex00/ -i scholarly.html --context 25 40 --r.regex src/test/resources/org/xmlcml/ami2/regex/consort00.xml";
 		RegexArgProcessor regexArgProcessor = new RegexArgProcessor(cmd);
 		regexArgProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(regexArgProcessor, 1, 0, 
+				"<results title=\"consort00\">"
+				+ "<result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" "
+				+   "value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" "
+				+   "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][3]/*[local-name()='p'][1]\" />"
+				+ "</results>"
+				);
+
 	}
 	
 
@@ -76,6 +84,11 @@ public class RegressionDemoTest {
 		String cmd = "-q target/consort0/15_1_511_test/ -i scholarly.html --context 25 40 --r.regex regex/consort0.xml";
 		RegexArgProcessor regexArgProcessor = new RegexArgProcessor(cmd);
 		regexArgProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(regexArgProcessor, 1, 0, 
+				"<results title=\"consort0\">"
+				+   "<result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][9]/*[local-name()='p'][1]\" />"
+				+   "<result pre=\"tion health, to alter or \""
+				);
 	}
 	
 	@Test
@@ -105,18 +118,18 @@ public class RegressionDemoTest {
 
 	
 
-	@Test
-	public void testSpeciesHarness() throws Exception {
-		// SHOWCASE
-		String cmd = "--sp.species --context 35 50 --sp.type binomial genus genussp -q target/plosone/species/malaria -i scholarly.html"; 
- 
-		AMIFixtures.runStandardTestHarness(
-				new File("src/test/resources/org/xmlcml/ami2/regressiondemos/journal.pone.0119475/"),
-				new File("target/plosone/species/malaria"), 
-				new SpeciesPlugin(),
-				cmd,
-				"species/binomial/", "species/genus/", "species/genussp/");
-	}
+//	@Test
+//	public void testSpeciesHarness() throws Exception {
+//		// SHOWCASE
+//		String cmd = "--sp.species --context 35 50 --sp.type binomial genus genussp -q target/plosone/species/malaria -i scholarly.html"; 
+// 
+//		AMIFixtures.runStandardTestHarness(
+//				new File("src/test/resources/org/xmlcml/ami2/regressiondemos/journal.pone.0119475/"),
+//				new File("target/plosone/species/malaria"), 
+//				new SpeciesPlugin(),
+//				cmd,
+//				"species/binomial/", "species/genus/", "species/genussp/");
+//	}
 
 	@Test
 	public void testWordHarness() throws IOException {

@@ -3,10 +3,10 @@ package org.xmlcml.ami2.plugins.dummy;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.DefaultSearcher;
 
 /** 
  * Processes commandline arguments.
@@ -70,7 +70,7 @@ public class DummyArgProcessor extends AMIArgProcessor {
 	}
 
 	public void outputDummy(ArgumentOption option) {
-		getOrCreateContentProcessor().outputResultElements(option, this);
+		getOrCreateContentProcessor().outputResultElements(option.getName(), this);
 	}
 	
 	public void parseSummary(ArgumentOption option, ArgIterator argIterator) {
@@ -93,7 +93,7 @@ public class DummyArgProcessor extends AMIArgProcessor {
 	 * @param namedPattern 
 	 * @return subclassed Plugin
 	 */
-	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
+	protected AMISearcher createSearcher(NamedPattern namedPattern) {
 		return new DummySearcher(this, namedPattern);
 	}
 

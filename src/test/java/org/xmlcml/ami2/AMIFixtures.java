@@ -1,7 +1,6 @@
 package org.xmlcml.ami2;
 
 import java.io.File;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,9 +9,14 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.files.CProject;
 import org.xmlcml.cmine.files.CTree;
+import org.xmlcml.cmine.files.ContentProcessor;
+import org.xmlcml.cmine.files.ResultsElementList;
+import org.xmlcml.norma.NormaArgProcessor;
 import org.xmlcml.xml.XMLUtil;
 
 public class AMIFixtures {
@@ -50,7 +54,7 @@ public class AMIFixtures {
 	public final static File TEST_RRID_DIR           = new File(AMIFixtures.TEST_AMI_DIR, "rrid/");
 
 	public static final File TEST_WORD_EXAMPLES      = new File(TEST_AMI_DIR, "word/examples");
-	public static final File EXAMPLES_TEMP_16_1_1  = new File("target/examples_16_1_1");
+	public static final File TARGET_EXAMPLES_TEMP_16_1_1  = new File("target/examples_16_1_1");
 
 	public static final String RESULTS_XML = "results.xml";
 	private static final String RESULTS_DIR = "results/";
@@ -110,5 +114,65 @@ public class AMIFixtures {
 		}
 	    Assert.assertNull("message: "+msg, msg);
 	}
+	
+	public static void cleanAndCopyDir(File sourceDir, File targetDir) throws IOException {
+		if (targetDir.exists()) FileUtils.forceDelete(targetDir);
+		FileUtils.copyDirectory(sourceDir, targetDir);
+	}
+
+	// utility method to check first part of resultsElementList
+	
+	public static void checkResultsElementList(AMIArgProcessor argProcessor, int size, int elem, String start) {
+		CTree currentTree = argProcessor.getCurrentCTree();
+		if (currentTree == null) {
+			LOG.warn("Null CTree");
+			return;
+		}
+		ContentProcessor contentProcessor = argProcessor.getOrCreateContentProcessor();
+		ResultsElementList reList = contentProcessor.getOrCreateResultsElementList();
+		Assert.assertEquals(size, reList.size());
+		String results = reList.get(elem).toXML();
+		if (!results.startsWith(start)) {
+			String ss = results.substring(0,  Math.min(300,  results.length()));
+			String sss = ss.replaceAll("\"", "\\\\\\\"");
+			LOG.debug("start (escaped) \n"+sss);
+			Assert.fail("results assertion failure: starts with: "+ss);
+		}
+	}
+	
+	/**
+	 * 
+	 * @param dir
+	 * @param type "project" or "ctree"
+	 */
+	public static void runNorma(File dir, String type, String transform) {
+		// norma-lise
+		// check if already normalized
+		String args = null;
+		if (type.equals("project")) {
+			CProject project = new CProject(dir);
+			List<CTree> cTreeList = project.getCTreeList();
+			for (CTree cTree : cTreeList) {
+				if (!cTree.hasScholarlyHTML()) {
+					// mising SHTML, normalize all
+					args = "-i fulltext.xml  --transform "+transform+" -o scholarly.html --"+type+" "+dir;
+					break;
+				}
+			}
+		} else if (type.equals("ctree")) {
+			CTree cTree = new CTree(dir);
+			if (!cTree.hasScholarlyHTML()) {
+				// mising SHTML, normalize all
+				args = "-i fulltext.xml  --transform "+transform+" -o scholarly.html --"+type+" "+dir;
+			}
+		}
+		if (args != null) {
+			NormaArgProcessor argProcessor = new NormaArgProcessor(args);
+			argProcessor.runAndOutput();
+		}
+	}
+
+	
+
 	
 }

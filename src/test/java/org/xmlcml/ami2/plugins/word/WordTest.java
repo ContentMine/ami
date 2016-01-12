@@ -9,7 +9,9 @@ import org.apache.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.norma.NormaArgProcessor;
+
 
 public class WordTest {
 
@@ -50,15 +52,22 @@ public class WordTest {
 	@Test
 	public void testWordsRun() {
 		String args = 
-			"-q "+AMIFixtures.TEST_PLOSONE_0115884.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES + " --w.stopwords "+STOPWORDS_TXT + " --w.wordlengths {2,12} --w.wordtypes abbreviation";
-		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
+			"-q "+AMIFixtures.TEST_PLOSONE_0115884.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES + 
+			" --w.stopwords "+STOPWORDS_TXT + " --w.wordlengths {2,12} --w.wordtypes abbreviation";
+		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"frequencies\"><result title=\"frequency\" word=\"MZB\" count=\"11\" />"
+				+ "<result title=\"frequency\" word=\"MVZ\" count=\"8\" />"
+				+ "<result title=\"frequency\" word=\"SVL\" count=\"7\" /></results>"
+				);
 	}
 	
 	@Test
 	public void testSingleFile() throws IOException {
 		// SHOWCASE
-		String cmd = "-q target/word/16_1_1_test/ -i scholarly.html --context 25 40 --w.words wordLengths wordFrequencies --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
+		String cmd = "-q target/word/16_1_1_test/ -i scholarly.html --context 25 40 "
+				+ "--w.words wordLengths wordFrequencies --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
 		AMIFixtures.runStandardTestHarness(
 				new File(DATA_16_1_1), 
 				new File("target/word/16_1_1_test/"), 
@@ -84,45 +93,82 @@ public class WordTest {
 	}
 
 	@Test
-	@Ignore
 	public void testStemming() throws IOException {
 		FileUtils.copyDirectory(new File(DATA_16_1_1), new File(TEMP_16_1_1));
 		String args =
 			"-q "+TEMP_16_1_1+
 	" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" --w.wordlengths {2,12}"+
-	" --w.stem true";
-		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
+	" --w.stem true --w.case ignore";
+		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"frequencies\"><result title=\"frequency\" word=\"recruit\" count=\"163\" /><result title=\"f");
 	}
 	
 	@Test
 	public void testLowercase() throws IOException {
 		FileUtils.copyDirectory(new File(DATA_16_1_1), new File(TEMP_16_1_1));
 		String args = 
-			"-q "+TEMP_16_1_1+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" --w.wordlengths {2,12} --w.case ignore";
-		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
+			"-q "+TEMP_16_1_1+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+
+			" --w.stopwords "+STOPWORDS_TXT+" --w.wordlengths {2,12} --w.case ignore";
+		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"frequencies\"><result title=\"frequency\" word=\"smoking\" count=\"71\"");
 	}
 
 	@Test
 	public void testSummarize() throws IOException {
-		if (AMIFixtures.EXAMPLES_TEMP_16_1_1.exists()) FileUtils.forceDelete(AMIFixtures.EXAMPLES_TEMP_16_1_1);
-		FileUtils.copyDirectory(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.EXAMPLES_TEMP_16_1_1);
+		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
 		String args = 
-			"-q  "+AMIFixtures.EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" --w.case ignore --w.summary aggregate --summaryfile target/examples/";
-		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
+			"-q  "+AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+
+			" --w.stopwords "+STOPWORDS_TXT+" --w.case ignore --w.summary aggregate --summaryfile target/examples/";
+		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"frequencies\"><result title=\"frequency\" word=\"smoking\" count=\"71\"");
 	}
 
 
 	@Test
 	public void testSummarizeDocumentFrequencies() throws IOException {
-		if (AMIFixtures.EXAMPLES_TEMP_16_1_1.exists()) FileUtils.forceDelete(AMIFixtures.EXAMPLES_TEMP_16_1_1);
-		FileUtils.copyDirectory(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.EXAMPLES_TEMP_16_1_1);
+		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
 		String args = 
-			"-q "+AMIFixtures.EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" "+CLINICAL_STOPWORDS_TXT+" --w.case ignore --w.summary booleanFrequency --summaryfile target/examples/	--w.wordcount {3,*}";
-		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
+			"-q "+AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" "+CLINICAL_STOPWORDS_TXT+" --w.case ignore --w.summary booleanFrequency --summaryfile target/examples/	--w.wordcount {3,*}";
+		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, "<results title=\"frequencies\"><result title=\"frequency\" word=\"smoking\" count=\"71\"");
 	}
+
+	@Test
+	public void testWordSearch() throws IOException {
+		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
+		String args = 
+			"-q "+AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1.toString()+
+			" --w.search searchwords/adjectives.xml searchwords/prepositions.xml --w.stem true" ;
+		AMIArgProcessor argProcessor = new WordArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 2, 0, 
+		    "<results title=\"prepositions\"><result pre=\"1745 6215 16 1 1745 6215 Methodolog Lesson learn\" exact=\"from\" "
+		    + "post=\"recruit socioeconom disadvantag smoker into a pilot random control\" /><result "
+		    + "pre=\"term of the Creativ Common Attribut Licens http creativecommons.org licens\" exact=\"by\" post=\"4.0 which pe");
+	}
+	
+	@Test
+	public void testCompoundWordSearch() throws IOException {
+		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
+		String args = 
+			"-q "+AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1.toString()+
+			" --w.search searchwords/trials.xml " ;
+		AMIArgProcessor argProcessor = new WordArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+		    "<results title=\"trials\"><result pre=\"from recruiting socioeconomically disadvantaged smokers into a pilot "
+		    + "randomized controlled\" exact=\"trial\" post=\"to explore the role of Exercise Assisted Reduction then\" />"
+		    + "<result pre=\"recruitment. This was done as part of a pilot two-arm\" exact=\"trial\" post=\"of t");
+
+	}
+	
+	
 
 }

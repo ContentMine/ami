@@ -43,7 +43,12 @@ public class PhyloArgProcessorTest {
 		File normaTemp = new File("target/phylo/ijs_0_000174_0");
 		cTree.copyTo(normaTemp, true);
 		String cmd = "--ph.phylo -q target/phylo/ijs_0_000174_0 -i image/000.pbm.png -o target/phylo/junk.xml"; 
-		new PhyloTreeArgProcessor(cmd).runAndOutput();
+		PhyloTreeArgProcessor argProcessor = new PhyloTreeArgProcessor(cmd);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"mend me\">"
+				);
+
 	}
 
 	@Test
@@ -59,7 +64,11 @@ public class PhyloArgProcessorTest {
 		cTree.copyTo(normaTemp, true);
 //		String cmd = "--ph.phylo -q target/phylo/"+name+" -i image/"+img+".pbm.png -o target/phylotest/"+name; 
 		String cmd = "--ph.phylo -q target/phylo/"+name+" -i image/"+img+".pbm.png"; 
-		new PhyloTreeArgProcessor(cmd).runAndOutput();
+		PhyloTreeArgProcessor argProcessor = new PhyloTreeArgProcessor(cmd);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"mend me\">"
+				);
 	}
 
 	@Test
@@ -68,7 +77,7 @@ public class PhyloArgProcessorTest {
 	 * 
 	 * @throws Exception
 	 */
-//	@Ignore("requires tesseract")
+	@Ignore("requires tesseract")
 	public void testFullCommandLine() throws Exception {
 		String name = "ijs_0_000364_0"; 
 		String img = "003";
@@ -85,7 +94,11 @@ public class PhyloArgProcessorTest {
 				" --ph.newick image/"+img+".nwk"+
 				" --ph.nexml image/"+img+".nexml.xml"+
 				"";
-		new PhyloTreeArgProcessor(cmd).runAndOutput();
+		PhyloTreeArgProcessor argProcessor = new PhyloTreeArgProcessor(cmd);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"mend me\">"
+				);
 	}
 
 	@Test

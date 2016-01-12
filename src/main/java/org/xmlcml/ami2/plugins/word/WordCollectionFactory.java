@@ -1,16 +1,21 @@
 package org.xmlcml.ami2.plugins.word;
 
+import java.io.IOException;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import nu.xom.Attribute;
-import nu.xom.IllegalCharacterDataException;
-
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.en.PorterStemFilter;
+import org.apache.lucene.analysis.standard.StandardTokenizer;
+import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ResultElement;
@@ -22,6 +27,9 @@ import com.google.common.collect.ImmutableSortedMultiset;
 import com.google.common.collect.Multiset;
 import com.google.common.collect.Multiset.Entry;
 import com.google.common.collect.Multisets;
+
+import nu.xom.Attribute;
+import nu.xom.IllegalCharacterDataException;
 
 public class WordCollectionFactory {
 	private static final Logger LOG = Logger.getLogger(WordCollectionFactory.class);
@@ -47,8 +55,8 @@ public class WordCollectionFactory {
 	private static final int DEFAULT_MAX_RAW_WORD_LENGTH = 99999;
 	
 	private WordSetWrapper stopwords;
-	private List<String> currentWords;
-	private WordArgProcessor wordArgProcessor;
+//	private List<String> currentWords;
+	private AMIArgProcessor amiArgProcessor;
 	private List<String> abbreviations;
 	private List<String> capitalized;
 	private int minCountInSet;
@@ -61,8 +69,8 @@ public class WordCollectionFactory {
 	private WordResultsElement aggregatedFrequenciesElement;
 	private WordResultsElement booleanFrequenciesElement;
 
-	protected WordCollectionFactory(WordArgProcessor wordArgProcessor) {
-		this.wordArgProcessor = wordArgProcessor;
+	public WordCollectionFactory(AMIArgProcessor argProcessor) {
+		this.amiArgProcessor = argProcessor;
 		setDefaults();
 	}
 
@@ -73,17 +81,23 @@ public class WordCollectionFactory {
 	}
 
 	void extractWords() {
-		createWordSets();
+		List<String> words = createWordList();
+		if (words == null) {
+			LOG.warn("no words found to extract");
+		}
+		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
 		if (wordArgProcessor.getChosenMethods().contains(WordArgProcessor.WORD_LENGTHS)) {
-			wordArgProcessor.addResultsElement(createWordLengthsResultsElement());
+			ResultsElement resultsElement = createWordLengthsResultsElement(words);
+			wordArgProcessor.addResultsElement(resultsElement);
 		}
 		if (wordArgProcessor.getChosenMethods().contains(WordArgProcessor.WORD_FREQUENCIES)) {
-			wordArgProcessor.addResultsElement(getWordFrequencies());
+			ResultsElement resultsElement = getWordFrequencies(words);
+			wordArgProcessor.addResultsElement(resultsElement);
 		}
 	}
 
-	private void createWordSets() {
-		CTree currentCTree = wordArgProcessor.getCurrentCMDir();
+	public List<String> createWordList() {
+		CTree currentCTree = amiArgProcessor.getCurrentCTree();
 		List<String> rawWords = null;
 		if (currentCTree != null) {
 			if (currentCTree.hasScholarlyHTML()) {
@@ -94,30 +108,65 @@ public class WordCollectionFactory {
 				LOG.warn("No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory());
 			}
 		}
-		createCurrentWords(rawWords);
+		return createTransformedWords(rawWords);
 	}
 
-	private void createCurrentWords(List<String> rawWords) {
+	private List<String> createTransformedWords(List<String> rawWords) {
+		LOG.trace("REFACTOR createTransformedWords");
+		List<String> transformedWords = null;
 		if (rawWords != null) {
-			currentWords = rawWords;
+			if (!(amiArgProcessor instanceof WordArgProcessor)) {
+				throw new RuntimeException("must use WordArgProcessor; found: "+amiArgProcessor);
+			}
+			transformedWords = rawWords;
+			WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
 			if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.ABBREVIATION)) {
-				currentWords = createAbbreviations();
-			} else if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.CAPITALIZED)) {
-				currentWords = createCapitalized();
-			} else {
-				if (wordArgProcessor.getWordCaseList().contains(WordArgProcessor.IGNORE)) {
-					currentWords = toLowerCase(currentWords);
-				}
+				transformedWords = createAbbreviations(transformedWords);
+			}
+			if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.CAPITALIZED)) {
+				transformedWords = createCapitalized(transformedWords);
+			} 
+			if (wordArgProcessor.getWordCaseList().contains(WordArgProcessor.IGNORE)) {
+				transformedWords = toLowerCase(transformedWords);
 			}
 			for (WordSetWrapper stopwordSet : wordArgProcessor.getStopwordSetList()) {
-				currentWords = applyStopwordFilter(stopwordSet, currentWords);
+				transformedWords = applyStopwordFilter(stopwordSet, transformedWords);
+			}
+			if (wordArgProcessor.getStemming()) {
+				transformedWords = applyLucenePorterStemming(transformedWords);
 			}
 		}
+		return transformedWords;
 	}
 
-	private List<String> createAbbreviations() {
+	/** concatenates words, creates a TokenStream, and returns a list of stemmed words.
+	 * 
+	 * @param currentWords
+	 * @return
+	 */
+	private List<String> applyLucenePorterStemming(List<String> currentWords) {
+		String input = StringUtils .join(currentWords.iterator(), " ");
+	 
+        TokenStream tokenStream = new StandardTokenizer(new StringReader(input));
+        tokenStream = new PorterStemFilter(tokenStream);
+ 
+        CharTermAttribute charTermAttr = tokenStream.getAttribute(CharTermAttribute.class);
+        List<String> transformedWords = new ArrayList<String>();
+        try {
+            tokenStream.reset();
+            while (tokenStream.incrementToken()) {
+                transformedWords.add(charTermAttr.toString());
+            }
+            tokenStream.close();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        return transformedWords;
+	}
+
+	private List<String> createAbbreviations(List<String> inputWords) {
 		abbreviations = new ArrayList<String>();
-		for (String word : currentWords) {
+		for (String word : inputWords) {
 			if (isAbbreviation(word)) {
 				abbreviations.add(word);
 			}
@@ -125,9 +174,9 @@ public class WordCollectionFactory {
 		return abbreviations;
 	}
 
-	private List<String> createCapitalized() {
+	private List<String> createCapitalized(List<String> inputWords) {
 		capitalized = new ArrayList<String>();
-		for (String word : currentWords) {
+		for (String word : inputWords) {
 			if (isCapitalized(word)) {
 				capitalized.add(word);
 			}
@@ -186,15 +235,15 @@ public class WordCollectionFactory {
 	}
 
 	private List<String> applyStopwordFilter(WordSetWrapper stopwords, List<String> rawWords) {
-		currentWords = new ArrayList<String>();
+		List<String> transformedWords = new ArrayList<String>();
 		for (String word : rawWords) {
 			word = word.trim();
 			if (!stopwords.contains(word.toLowerCase())) {
-				currentWords.add(word);
+				transformedWords.add(word);
 			}
 		}
-		LOG.trace("stopwords "+stopwords.size()+"; current words: "+currentWords.size());
-		return currentWords;
+		LOG.trace("stopwords "+stopwords.size()+"; current words: "+transformedWords.size());
+		return transformedWords;
 	}
 	
 	private List<String> toLowerCase(List<String> words) {
@@ -205,9 +254,9 @@ public class WordCollectionFactory {
 		return newList;
 	}
 
-	private WordResultsElement createWordLengthsResultsElement() {
+	private WordResultsElement createWordLengthsResultsElement(List<String> words) {
 		Multiset<Integer> lengthSet = HashMultiset.create();
-		for (String word : currentWords) {
+		for (String word : words) {
 			lengthSet.add(word.length());
 		}
 		return getWordLengths(lengthSet);
@@ -224,13 +273,13 @@ public class WordCollectionFactory {
 		return lengthsElement;
 	}
 	
-	private WordResultsElement getWordFrequencies() {
+	private WordResultsElement getWordFrequencies(List<String> words) {
 		Multiset<String> wordSet = HashMultiset.create();
-		if (currentWords == null) {
+		if (words == null) {
 			LOG.warn("No current words ");
 			frequenciesElement = null;
 		} else {
-			for (String rawWord : currentWords) {
+			for (String rawWord : words) {
 	//			rawWord = rawWord.toLowerCase(); // normalize case
 				rawWord = rawWord.replaceAll("[\\d+]", ""); // remove numbers
 	//			if (!stopwords.contains(rawWord.toLowerCase()) 
@@ -372,9 +421,9 @@ public class WordCollectionFactory {
 		return stopwords;
 	}
 
-	public List<String> getCurrentWords() {
-		return currentWords;
-	}
+//	public List<String> getCurrentWords() {
+//		return currentWords;
+//	}
 
 	public List<String> getAbbreviations() {
 		return abbreviations;
