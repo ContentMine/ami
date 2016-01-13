@@ -1,4 +1,5 @@
-<argList name="ami" version="0.1.18">
+<argList name="ami" version="0.2.0">
+  <!-- 20160112 refactoring of Searchers, added dictionaries, improved testing of output-->
   <!-- 20150926 fixed RRID; fixed sequence and species; tidied debug -->
   <!-- 20150913 added rrid to lookup -->
   <!-- 20150912 added RRID -->
