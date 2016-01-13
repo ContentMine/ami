@@ -130,6 +130,7 @@ public class AMIFixtures {
 		}
 		ContentProcessor contentProcessor = argProcessor.getOrCreateContentProcessor();
 		ResultsElementList reList = contentProcessor.getOrCreateResultsElementList();
+		reList.sortByTitle();
 		Assert.assertEquals(size, reList.size());
 		String results = reList.get(elem).toXML();
 		if (!results.startsWith(start)) {

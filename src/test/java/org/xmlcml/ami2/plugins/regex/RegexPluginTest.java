@@ -95,6 +95,10 @@ public class RegexPluginTest {
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
 				"<results title=\"common\" />");
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
+				"<results title=\"figure\" />");
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 2, 
+				"<results title=\"phylotree\" />");
 	}
 	
 	@Test

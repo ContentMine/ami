@@ -141,6 +141,7 @@ public class WordTest {
 	}
 
 	@Test
+//	@Ignore // MEND - Jenkins uses adjectives - have to sort resultsElementList
 	public void testWordSearch() throws IOException {
 		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
 		String args = 
@@ -149,9 +150,14 @@ public class WordTest {
 		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 2, 0, 
-		    "<results title=\"prepositions\"><result pre=\"1745 6215 16 1 1745 6215 Methodolog Lesson learn\" exact=\"from\" "
-		    + "post=\"recruit socioeconom disadvantag smoker into a pilot random control\" /><result "
-		    + "pre=\"term of the Creativ Common Attribut Licens http creativecommons.org licens\" exact=\"by\" post=\"4.0 which pe");
+			    "<results title=\"adjectives\">"
+			    + "<result pre=\"19818578 Outcom criteria in smoke cessat trial propos for a\" "
+			    + "exact=\"common\" post=\"standard West R Hajek P Stead L Stapleton J\" /></results>");
+		AMIFixtures.checkResultsElementList(argProcessor, 2, 1, 
+			    "<results title=\"prepositions\">"
+			    + "<result pre=\"1745 6215 16 1 1745 6215 Methodolog Lesson learn\" exact=\"from\" "
+			    + "post=\"recruit socioeconom disadvantag smoker into a pilot random control\" /><result "
+			    + "pre=\"term of the Creativ Common Attribut Licens http creativecommons.org licens\" exact=\"by\" post=\"4.0 which pe");
 	}
 	
 	@Test

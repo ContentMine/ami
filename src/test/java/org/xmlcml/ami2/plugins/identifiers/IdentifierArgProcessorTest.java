@@ -75,14 +75,14 @@ public class IdentifierArgProcessorTest {
 		IdentifierArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(identifierArgProcessor, 2, 0, 
-				"<results title=\"clin.nct\" />"
-				);
-		AMIFixtures.checkResultsElementList(identifierArgProcessor, 2, 1, 
 				"<results title=\"clin.isrctn\">"
 				+ "<result pre=\"Controlled Trial Number (\" exact=\"ISRCTN): 13837944\" "
 				+ "post=\", UK Clinical Research Network (UKCRN) S\" "
 				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][8]/*[local-name()='p'][4]\" "
 				+ "name=\"clin.isrctn\" /></results>"
+				);
+		AMIFixtures.checkResultsElementList(identifierArgProcessor, 2, 1, 
+				"<results title=\"clin.nct\" />"
 				);
 	}
 

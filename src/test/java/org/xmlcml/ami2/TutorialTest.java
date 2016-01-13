@@ -86,6 +86,9 @@ public class TutorialTest {
 		IdentifierArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(identifierArgProcessor, 2, 0, 
+				"<results title=\"clin.isrctn\" />"
+				);
+		AMIFixtures.checkResultsElementList(identifierArgProcessor, 2, 1, 
 				"<results title=\"clin.nct\" />"
 				);
 	}

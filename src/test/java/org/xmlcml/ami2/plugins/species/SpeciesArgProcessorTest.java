@@ -107,6 +107,10 @@ public class SpeciesArgProcessorTest {
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
 				"<results title=\"mend me\" />");
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
+				"<results title=\"mend me\" />");
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 2, 
+				"<results title=\"mend me\" />");
 		File binomialFile = new File(newDir, "results/species/binomial/results.xml");
 		Element binomialElement = new Builder().build(binomialFile).getRootElement();
 	}
