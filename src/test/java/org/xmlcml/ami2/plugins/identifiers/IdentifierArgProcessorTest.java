@@ -118,6 +118,8 @@ public class IdentifierArgProcessorTest {
 	
 	@Test
 	// TESTED 2016-01-12
+	// we can't use examples/
+	@Ignore
 	public void testSeveralArticlesWithClin() throws Exception {
 		File newDir = new File("target/plosone/identifiers");
 		FileUtils.copyDirectory(new File("examples/"), newDir);

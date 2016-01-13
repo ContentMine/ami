@@ -75,7 +75,9 @@ public class HGNCDictionary extends AbstractDictionary {
 			} catch (IOException e) {
 				throw new RuntimeException("Cannot write geneXML file: "+HGNC_XML_FILE, e);
 			}
-		};
+		} else {
+			Element dictionary = XMLUtil.parseQuietlyToDocument(HGNC_XML_FILE).getRootElement();
+		}
 	}
 	
 	private void readHGNCJson() {
