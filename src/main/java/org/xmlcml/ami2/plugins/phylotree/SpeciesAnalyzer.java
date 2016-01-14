@@ -97,7 +97,7 @@ public class SpeciesAnalyzer {
 			String result = null;
 			try {
 				result = lookup.lookup(species);
-				System.out.println(result);
+//				System.out.println(result);
 			} catch (IOException e) {
 				LOG.error("failed to lookup "+species+"; "+e);
 			}

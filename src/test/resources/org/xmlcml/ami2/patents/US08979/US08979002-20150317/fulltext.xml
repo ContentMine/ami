@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE us-patent-grant SYSTEM "us-patent-grant-v45-2014-04-03.dtd" [ ]>
+<us-patent-grant lang="EN" dtd-version="v4.5 2014-04-03" file="US08979002-20150317.XML" status="PRODUCTION" id="us-patent-grant" country="US" date-produced="20150302" date-publ="20150317">
+<us-bibliographic-data-grant>
+<publication-reference>
+<document-id>
+<country>US</country>
+<doc-number>08979002</doc-number>
+<kind>B2</kind>
+<date>20150317</date>
+</document-id>
+</publication-reference>
+<application-reference appl-type="utility">
+<document-id>
+<country>US</country>
+<doc-number>12652848</doc-number>
+<date>20100106</date>
+</document-id>
+</application-reference>
+<us-application-series-code>12</us-application-series-code>
+<us-term-of-grant>
+<us-term-extension>766</us-term-extension>
+</us-term-of-grant>
+<classifications-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>B</section>
+<class>05</class>
+<subclass>B</subclass>
+<main-group>7</main-group>
+<subgroup>30</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>B</section>
+<class>05</class>
+<subclass>B</subclass>
+<main-group>7</main-group>
+<subgroup>04</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>B</section>
+<class>05</class>
+<subclass>B</subclass>
+<main-group>15</main-group>
+<subgroup>06</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>B</section>
+<class>05</class>
+<subclass>B</subclass>
+<main-group>1</main-group>
+<subgroup>04</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>B</section>
+<class>05</class>
+<subclass>B</subclass>
+<main-group>11</main-group>
+<subgroup>06</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>A</section>
+<class>45</class>
+<subclass>D</subclass>
+<main-group>33</main-group>
+<subgroup>02</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+</classifications-ipcr>
+<classifications-cpc>
+<main-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>B</section>
+<class>05</class>
+<subclass>B</subclass>
+<main-group>11</main-group>
+<subgroup>061</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</main-cpc>
+<further-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>B</section>
+<class>05</class>
+<subclass>B</subclass>
+<main-group>11</main-group>
+<subgroup>062</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>A</section>
+<class>45</class>
+<subclass>D</subclass>
+<main-group>33</main-group>
+<subgroup>02</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</further-cpc>
+</classifications-cpc>
+<classification-national>
+<country>US</country>
+<main-classification>239318</main-classification>
+<further-classification>239434</further-classification>
+<further-classification>239311</further-classification>
+</classification-national>
+<invention-title id="d2e53">Venturi-effect spraying device and its use in cosmetology and in perfumery</invention-title>
+<us-references-cited>
+<us-citation>
+<patcit num="00001">
+<document-id>
+<country>US</country>
+<doc-number>1877252</doc-number>
+<kind>A</kind>
+<name>Patou</name>
+<date>19320900</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239363</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00002">
+<document-id>
+<country>US</country>
+<doc-number>2665170</doc-number>
+<kind>A</kind>
+<name>Schmitt et al.</name>
+<date>19540100</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239353</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00003">
+<document-id>
+<country>US</country>
+<doc-number>2755132</doc-number>
+<kind>A</kind>
+<name>Croce</name>
+<date>19560700</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239353</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00004">
+<document-id>
+<country>US</country>
+<doc-number>3008651</doc-number>
+<kind>A</kind>
+<name>Follain</name>
+<date>19611100</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239353</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00005">
+<document-id>
+<country>US</country>
+<doc-number>3345111</doc-number>
+<kind>A</kind>
+<name>Bies et al.</name>
+<date>19671000</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00006">
+<document-id>
+<country>US</country>
+<doc-number>3430865</doc-number>
+<kind>A</kind>
+<name>McDougall</name>
+<date>19690300</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>2394275</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00007">
+<document-id>
+<country>US</country>
+<doc-number>3770209</doc-number>
+<kind>A</kind>
+<name>Wilcox</name>
+<date>19731100</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239434</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00008">
+<document-id>
+<country>US</country>
+<doc-number>5765758</doc-number>
+<kind>A</kind>
+<name>Chu</name>
+<date>19980600</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239369</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00009">
+<document-id>
+<country>US</country>
+<doc-number>7080761</doc-number>
+<kind>B1</kind>
+<name>Yu</name>
+<date>20060700</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00010">
+<document-id>
+<country>US</country>
+<doc-number>7490742</doc-number>
+<kind>B2</kind>
+<name>Yu</name>
+<date>20090200</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>222183</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00011">
+<document-id>
+<country>US</country>
+<doc-number>2004/0056112</doc-number>
+<kind>A1</kind>
+<name>Faye et al.</name>
+<date>20040300</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239424</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00012">
+<document-id>
+<country>US</country>
+<doc-number>2008/0073378</doc-number>
+<kind>A1</kind>
+<name>Yu</name>
+<date>20080300</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>2223211</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00013">
+<document-id>
+<country>US</country>
+<doc-number>2011/0163183</doc-number>
+<kind>A1</kind>
+<name>Ko</name>
+<date>20110700</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239302</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00014">
+<document-id>
+<country>US</country>
+<doc-number>2011/0233306</doc-number>
+<kind>A1</kind>
+<name>Ko</name>
+<date>20110900</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239337</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00015">
+<document-id>
+<country>EP</country>
+<doc-number>0178120</doc-number>
+<date>19860400</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00016">
+<document-id>
+<country>EP</country>
+<doc-number>0430438</doc-number>
+<kind>A2</kind>
+<date>19910600</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00017">
+<document-id>
+<country>FR</country>
+<doc-number>999 959</doc-number>
+<date>19520200</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00018">
+<document-id>
+<country>FR</country>
+<doc-number>1 524 931</doc-number>
+<date>19680500</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00019">
+<document-id>
+<country>GB</country>
+<doc-number>387 863</doc-number>
+<date>19330200</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00020">
+<document-id>
+<country>GB</country>
+<doc-number>582 099</doc-number>
+<date>19461100</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00021">
+<document-id>
+<country>GB</country>
+<doc-number>715 791</doc-number>
+<date>19540900</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00022">
+<document-id>
+<country>JP</country>
+<doc-number>2000-512901</doc-number>
+<date>20001000</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00023">
+<document-id>
+<country>JP</country>
+<doc-number>2000512901</doc-number>
+<kind>A</kind>
+<date>20001000</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00024">
+<document-id>
+<country>JP</country>
+<doc-number>2005-095886</doc-number>
+<date>20050400</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00025">
+<document-id>
+<country>JP</country>
+<doc-number>2005095886</doc-number>
+<kind>A</kind>
+<date>20050400</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00026">
+<document-id>
+<country>WO</country>
+<doc-number>WO 90/01375</doc-number>
+<date>19900200</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00027">
+<document-id>
+<country>WO</country>
+<doc-number>WO-98/46366</doc-number>
+<date>19981000</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<nplcit num="00028">
+<othercit>International Search Report issued in related PCT Application PCT/FR2008/051242; report dated Nov. 27, 2008.</othercit>
+</nplcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<nplcit num="00029">
+<othercit>Preliminary Search Report issued in related French Patent Application No. FR0704989; report dated Feb. 27, 2008.</othercit>
+</nplcit>
+<category>cited by applicant</category>
+</us-citation>
+</us-references-cited>
+<number-of-claims>16</number-of-claims>
+<us-exemplary-claim>1</us-exemplary-claim>
+<us-field-of-classification-search>
+<classification-national>
+<country>US</country>
+<main-classification>239318</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239434</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239633</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239209</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239594</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239340</main-classification>
+</classification-national>
+<classification-cpc-text>B05B 7/30</classification-cpc-text>
+<classification-cpc-text>B05B 7/04</classification-cpc-text>
+<classification-cpc-text>B05B 15/06</classification-cpc-text>
+<classification-cpc-text>B05B 1/04</classification-cpc-text>
+<classification-cpc-text>A62C 13/62</classification-cpc-text>
+<classification-cpc-text>A62C 13/66</classification-cpc-text>
+</us-field-of-classification-search>
+<figures>
+<number-of-drawing-sheets>6</number-of-drawing-sheets>
+<number-of-figures>6</number-of-figures>
+</figures>
+<us-related-documents>
+<related-publication>
+<document-id>
+<country>US</country>
+<doc-number>20100252656</doc-number>
+<kind>A1</kind>
+<date>20101007</date>
+</document-id>
+</related-publication>
+</us-related-documents>
+<us-parties>
+<us-applicants>
+<us-applicant sequence="001" app-type="applicant" designation="us-only">
+<addressbook>
+<last-name>Gerbron</last-name>
+<first-name>Jaques</first-name>
+<address>
+<city>Menton</city>
+<country>FR</country>
+</address>
+</addressbook>
+<residence>
+<country>FR</country>
+</residence>
+</us-applicant>
+<us-applicant sequence="002" app-type="applicant" designation="us-only">
+<addressbook>
+<last-name>Chevalier</last-name>
+<first-name>Marc</first-name>
+<address>
+<city>Franconville</city>
+<country>FR</country>
+</address>
+</addressbook>
+<residence>
+<country>FR</country>
+</residence>
+</us-applicant>
+</us-applicants>
+<inventors>
+<inventor sequence="001" designation="us-only">
+<addressbook>
+<last-name>Gerbron</last-name>
+<first-name>Jaques</first-name>
+<address>
+<city>Menton</city>
+<country>FR</country>
+</address>
+</addressbook>
+</inventor>
+<inventor sequence="002" designation="us-only">
+<addressbook>
+<last-name>Chevalier</last-name>
+<first-name>Marc</first-name>
+<address>
+<city>Franconville</city>
+<country>FR</country>
+</address>
+</addressbook>
+</inventor>
+</inventors>
+<agents>
+<agent sequence="01" rep-type="attorney">
+<addressbook>
+<orgname>Miller, Matthias &#x26; Hull LLP</orgname>
+<address>
+<country>unknown</country>
+</address>
+</addressbook>
+</agent>
+</agents>
+</us-parties>
+<assignees>
+<assignee>
+<addressbook>
+<orgname>LVMH Recherche</orgname>
+<role>03</role>
+<address>
+<city>Saint Jean de Braye</city>
+<country>FR</country>
+</address>
+</addressbook>
+</assignee>
+</assignees>
+<examiners>
+<primary-examiner>
+<last-name>Jonaitis</last-name>
+<first-name>Justin</first-name>
+<department>3752</department>
+</primary-examiner>
+</examiners>
+</us-bibliographic-data-grant>
+<abstract id="abstract">
+<p id="p-0001" num="0000">A manual compressed-air spraying device comprising a head in which are fixed an air nozzle forming a venturi and an output nozzle is disclosed. The head delimits, between the venturi and the output nozzle, a mixing chamber into which directly opens a conduit for channelling product to be sprayed. The output nozzle presents a convergent section and a divergent section downstream of the convergent section.</p>
+</abstract>
+<drawings id="DRAWINGS">
+<figure id="Fig-EMI-D00000" num="00000">
+<img id="EMI-D00000" he="155.62mm" wi="139.45mm" file="US08979002-20150317-D00000.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00001" num="00001">
+<img id="EMI-D00001" he="166.54mm" wi="108.12mm" file="US08979002-20150317-D00001.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00002" num="00002">
+<img id="EMI-D00002" he="164.59mm" wi="146.30mm" file="US08979002-20150317-D00002.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00003" num="00003">
+<img id="EMI-D00003" he="148.00mm" wi="175.01mm" file="US08979002-20150317-D00003.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00004" num="00004">
+<img id="EMI-D00004" he="146.47mm" wi="132.00mm" file="US08979002-20150317-D00004.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00005" num="00005">
+<img id="EMI-D00005" he="207.09mm" wi="164.08mm" file="US08979002-20150317-D00005.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00006" num="00006">
+<img id="EMI-D00006" he="229.45mm" wi="147.07mm" file="US08979002-20150317-D00006.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+</drawings>
+<description id="description">
+<?BRFSUM description="Brief Summary" end="lead"?>
+<heading id="h-0001" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+<p id="p-0002" num="0001">This application is a U.S. national stage filing of International Patent Application No. PCT/FR2008/051242 filed on Jul. 3, 2008, which claims priority under the Paris Convention to French Application No. 07 04898, filed on Jul. 6, 2007.</p>
+<heading id="h-0002" level="1">FIELD OF THE DISCLOSURE</heading>
+<p id="p-0003" num="0002">This invention relates to venturi spraying devices and to the uses of such devices in cosmetology and in perfumery.</p>
+<p id="p-0004" num="0003">More particularly, the invention relates to a spraying device comprising:
+<ul id="ul0001" list-style="none">
+    <li id="ul0001-0001" num="0000">
+    <ul id="ul0002" list-style="none">
+        <li id="ul0002-0001" num="0004">a distributor comprising:
+        <ul id="ul0003" list-style="none">
+            <li id="ul0003-0001" num="0005">a head,</li>
+            <li id="ul0003-0002" num="0006">an air nozzle and an output nozzle each molded from a single part made of synthetic material and assembled in the head,</li>
+            <li id="ul0003-0003" num="0007">an air circuit including at least, from upstream to downstream, an air inlet conduit at least partially formed in the air nozzle and a venturi formed in the air nozzle and an output conduit formed in the output nozzle, the venturi defining a vacuum zone in the air circuit,</li>
+        </ul>
+        </li>
+        <li id="ul0002-0002" num="0008">a conduit for channeling product to be sprayed extending according to a substantially vertical direction and communicating with the vacuum zone of the air circuit,</li>
+        <li id="ul0002-0003" num="0009">a manual compressed-air generator communicating with the air inlet conduit,</li>
+        <li id="ul0002-0004" num="0010">a reservoir adapted to contain the product to be sprayed, communicating with the conduit for channeling product to be sprayed.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<heading id="h-0003" level="1">BACKGROUND OF THE DISCLOSURE</heading>
+<p id="p-0005" num="0011">U.S. Pat. No. 7,080,761 describes an example of such a spraying device, wherein the product to be sprayed must follow a complex and narrow path between the conduit for channeling and the output conduit, in such a way that this type of spraying device can possibly operate for spraying a liquid product, but not for spraying a powdery product.</p>
+<p id="p-0006" num="0012">In addition, the form of the output conduit disclosed in this document is also not suited for the spraying of powdery product.</p>
+<p id="p-0007" num="0013">Finally, the air nozzle of this document has a form that is entirely not suited for the effective carrying out of a vacuum capable of sucking the product to be sprayed.</p>
+<heading id="h-0004" level="1">SUMMARY OF THE DISCLOSURE</heading>
+<p id="p-0008" num="0014">This invention has in particular for purpose to overcome these disadvantages.</p>
+<p id="p-0009" num="0015">To this effect, according to the invention, a spraying device of the type in question is characterized in that the head delimits a mixing chamber between the air nozzle and the output nozzle, said mixing chamber forming said vacuum zone and being arranged directly above the conduit for channeling, in that the venturi comprises a convergent section, and in that the output conduit comprises a divergent section open towards the exterior and a convergent section open towards the mixing chamber upstream of the divergent section.</p>
+<p id="p-0010" num="0016">Thanks to these arrangements, the spraying device according to the invention is adapted to effectively spray powdery products, as well as liquid products. In addition, the form of the Venturi, provided with a convergent section, allows for effective suction of the product to be sprayed.</p>
+<p id="p-0011" num="0017">In various embodiments of the spraying device according to the invention, further recourse is possible to one and/or the other of the following arrangements:
+<ul id="ul0004" list-style="none">
+    <li id="ul0004-0001" num="0000">
+    <ul id="ul0005" list-style="none">
+        <li id="ul0005-0001" num="0018">the output conduit comprises an inlet cone open towards the mixing chamber, said inlet cone being arranged upstream of said convergent section of the output conduit and having an angle at the top between 30 and 60 degrees and greater than an angle at the top formed by the convergent section;</li>
+        <li id="ul0005-0002" num="0019">the distributor comprises a protruding portion which penetrates in the mixing chamber above the conduit for channeling;</li>
+        <li id="ul0005-0003" num="0020">the air nozzle has an end in the form of a point forming said protruding portion;</li>
+        <li id="ul0005-0004" num="0021">the conduit for channeling has a section of passage having a first portion overhung by said protruding portion and a second portion not overhung by said protruding portion;</li>
+        <li id="ul0005-0005" num="0022">the head comprises a nozzle housing extending horizontally and wherein are nested the air nozzle and the output nozzle;</li>
+        <li id="ul0005-0006" num="0023">the air nozzle and the output nozzle are nested in the head;</li>
+        <li id="ul0005-0007" num="0024">the head is molded of synthetic material;</li>
+        <li id="ul0005-0008" num="0025">the air inlet conduit has a first section and the venturi has a minimal section, said minimal section having an area between 1% and 6.5% of the area of said first section;</li>
+        <li id="ul0005-0009" num="0026">the air inlet conduit is formed at least partially in a tip fixed to the air nozzle by nesting and connected to said manual compressed-air generator;</li>
+        <li id="ul0005-0010" num="0027">the distributor comprises an inlet valve which is adapted in order to allow only the circulation of air towards the venturi and which is arranged on air inlet conduit, said inlet valve comprising a valve member solicited by a spring towards a valve seat directed towards the venturi;</li>
+        <li id="ul0005-0011" num="0028">the output conduit has an output section between 0.25 and 1.2 mm<sup>2</sup>;</li>
+        <li id="ul0005-0012" num="0029">the head comprises a well that opens vertically in the mixing chamber and wherein is nested a dip tube which delimits at least partially the conduit for channeling product to be sprayed;</li>
+        <li id="ul0005-0013" num="0030">the dip tube has an internal diameter between 0.6 and 2 mm;</li>
+        <li id="ul0005-0014" num="0031">the head is covered by an added external envelope;</li>
+        <li id="ul0005-0015" num="0032">the manual compressed-air generator is a flexible bulb;</li>
+        <li id="ul0005-0016" num="0033">the manual compressed-air generator is a piston pump.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0012" num="0034">Moreover, the invention also has for objective a use of a device such as defined hereinabove, for the spraying of a powdery product. This powdery product can be for example a perfumery product, a cosmetic product, or other.</p>
+<?BRFSUM description="Brief Summary" end="tail"?>
+<?brief-description-of-drawings description="Brief Description of Drawings" end="lead"?>
+<description-of-drawings>
+<heading id="h-0005" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+<p id="p-0013" num="0035">Other characteristics and advantages of the invention shall appear during the course of the following description of several of its embodiments, provided by way of non-restricted examples, with regards to the attached drawings.</p>
+<p id="p-0014" num="0036">In the drawings:</p>
+<p id="p-0015" num="0037"><figref idref="DRAWINGS">FIG. 1</figref> is a general view of a spraying device according to a first embodiment of the invention,</p>
+<p id="p-0016" num="0038"><figref idref="DRAWINGS">FIG. 2</figref> is a vertical cross-section view of the device in <figref idref="DRAWINGS">FIG. 1</figref>,</p>
+<p id="p-0017" num="0039"><figref idref="DRAWINGS">FIG. 3</figref> is a detailed view of the section in <figref idref="DRAWINGS">FIG. 2</figref>;</p>
+<p id="p-0018" num="0040"><figref idref="DRAWINGS">FIG. 4</figref> is an exploded view of a portion of the device in <figref idref="DRAWINGS">FIGS. 1 and 2</figref>,</p>
+<p id="p-0019" num="0041"><figref idref="DRAWINGS">FIG. 5</figref> is a view similar to the <figref idref="DRAWINGS">FIG. 3</figref>, in a second embodiment of the invention,</p>
+<p id="p-0020" num="0042">and <figref idref="DRAWINGS">FIG. 6</figref> is a view similar to the <figref idref="DRAWINGS">FIG. 4</figref>, in the second embodiment of the invention.</p>
+</description-of-drawings>
+<?brief-description-of-drawings description="Brief Description of Drawings" end="tail"?>
+<?DETDESC description="Detailed Description" end="lead"?>
+<heading id="h-0006" level="1">DETAILED DESCRIPTION OF THE DISCLOSURE</heading>
+<p id="p-0021" num="0043">In the various figures, the same references designate identical or similar elements.</p>
+<p id="p-0022" num="0044"><figref idref="DRAWINGS">FIG. 1</figref> shows a portable spraying device comprising:
+<ul id="ul0006" list-style="none">
+    <li id="ul0006-0001" num="0000">
+    <ul id="ul0007" list-style="none">
+        <li id="ul0007-0001" num="0045">a distributor <b>2</b> adapted to spray a product by an outlet orifice <b>3</b>,</li>
+        <li id="ul0007-0002" num="0046">a manual compressed-air generator, for example a flexible bulb <b>4</b> made of elastomer or same, making it possible to insufflate air, for example in the form of an air stream, in the distributor <b>2</b> to spray the product in an air flow by the outlet orifice <b>3</b>,</li>
+        <li id="ul0007-0003" num="0047">a reservoir <b>5</b> adapted to contain the product to be sprayed, communicating with the distributor <b>2</b>.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0023" num="0048">The product to be sprayed <b>6</b> contained in the reservoir <b>5</b> (see <figref idref="DRAWINGS">FIG. 2</figref>) can be for example a powdery product, in particular a perfumery product, a cosmetic product, or other.</p>
+<p id="p-0024" num="0049">This powdery product, in particular a composition in the form of free perfumed cosmetic powder, can for example have a granulometry between a few micrometers and 200 &#x3bc;m, and a density between 0.6 and 1. This entails for example a mineral powder (such as mica, mineral pigments, etc.) or an organic powder (polyamide, PMMA or other), or a mixture of such mineral and organic powders. This product can also contain a mixed powder such as for example organic coloring agents fixed on a mineral support.</p>
+<p id="p-0025" num="0050">Note that the bulb <b>4</b> can for example comprise an air inlet valve <b>4</b><i>a </i>allowing the air to enter into the bulb <b>4</b> when it inflates via elasticity, but preventing the air outlet towards the exterior when a user presses said bulb <b>4</b>.</p>
+<p id="p-0026" num="0051">As shown in the <figref idref="DRAWINGS">FIGS. 2 to 4</figref>, the distributor <b>2</b> can comprise a head <b>107</b> which can for example be molded of plastic material. This head <b>107</b> can be fixed by clipping-on or other on the neck <b>8</b> of the reservoir <b>5</b>, in such a way as to close said reservoir. A seal <b>9</b> can where applicable be interposed between the head <b>107</b> and the neck <b>8</b>.</p>
+<p id="p-0027" num="0052">Finally, the head <b>107</b> can where applicable be covered by a decorative added external envelope <b>31</b> (<figref idref="DRAWINGS">FIGS. 1 to 4</figref>) which has recesses on the outlet orifice <b>3</b> and a tip connecting the head <b>107</b> to the bulb <b>4</b>.</p>
+<p id="p-0028" num="0053">The head <b>107</b> is crossed by a nozzle housing <b>110</b> which, in the example shown in the drawings, has a general form of a revolution around a substantially horizontal axis X, for example a cylindrical form.</p>
+<p id="p-0029" num="0054">The head <b>107</b> further comprises a well <b>114</b> extending according to a substantially vertical axis Z, which opens directly upwards in a mixing chamber <b>119</b> delimited by the nozzle housing <b>110</b>. In the well <b>114</b> is nested by force a dip tube <b>15</b> made of plastic material, delimiting a conduit for channeling product to be sprayed, extending downwards in the reservoir <b>5</b> and dipping into the product <b>6</b> to be sprayed (see <figref idref="DRAWINGS">FIGS. 2 to 4</figref>). The dip tube can for example have an internal diameter between 0.6 and 2 mm.</p>
+<p id="p-0030" num="0055">At the rear end <b>111</b> of the nozzle housing <b>110</b> is nested an air nozzle <b>116</b> which is molded of a single part made of synthetic material, in particular of thermoplastic.</p>
+<p id="p-0031" num="0056">As shown in more detail in <figref idref="DRAWINGS">FIG. 4</figref>, the air nozzle <b>116</b> can have an exterior form that is complementary to the nozzle housing <b>10</b>, in such a way as to be able to be nested by force via the rear end <b>11</b> of said nozzle housing. The air nozzle <b>116</b> is crossed by a recess centered on the axis X, which forms, from the rear towards the front:</p>
+<p id="p-0032" num="0057">a tip housing <b>117</b>, having for example a cylindrical form of a revolution centered on the axis X, of diameter D<b>1</b>,
+<ul id="ul0008" list-style="none">
+    <li id="ul0008-0001" num="0000">
+    <ul id="ul0009" list-style="none">
+        <li id="ul0009-0001" num="0058">then a tapered convergent section <b>118</b>, which in the example considered here is surrounded by a shoulder <b>118</b><i>a, </i></li>
+        <li id="ul0009-0002" num="0059">then a narrowed conduit <b>118</b><i>b</i>, having for example a cylindrical form of a revolution centered on the axis X, of diameter D<b>2</b>.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0033" num="0060">The conduit <b>118</b><i>b </i>opens in the mixing chamber <b>119</b> of the head <b>107</b>, at the front end <b>116</b><i>a </i>of the air nozzle <b>116</b>. Said front end <b>116</b><i>a </i>of the air nozzle can have a form of a point, for example tapered, protruding in the mixing chamber <b>119</b>.</p>
+<p id="p-0034" num="0061">In the example in <figref idref="DRAWINGS">FIGS. 1 to 4</figref>, a tip <b>122</b>, which can be for example molded from plastic material, is nested by force in the tip housing <b>117</b>.</p>
+<p id="p-0035" num="0062">As shown in more detail in <figref idref="DRAWINGS">FIG. 3</figref>, the tip <b>122</b> comprises a front end <b>123</b> and a rear end <b>124</b> whereon the bulb <b>4</b> is fixed in a sealed manner. The front end <b>123</b> of the tip <b>122</b> is nested to the exterior of the rear end of the air nozzle <b>116</b>, and said tip further comprises a tubular portion <b>123</b><i>a</i>, formed in the interior of the front end <b>123</b>, which is nested in the tip housing <b>117</b>. The tip <b>122</b> is pierced with a central recess which extends according to the axis X and which forms, from the rear towards the front:
+<ul id="ul0010" list-style="none">
+    <li id="ul0010-0001" num="0000">
+    <ul id="ul0011" list-style="none">
+        <li id="ul0011-0001" num="0063">an upstream conduit <b>125</b> of relatively small diameter, which opens towards the rear in the bulb <b>4</b>,</li>
+        <li id="ul0011-0002" num="0064">a valve seat <b>126</b> diverging towards the front.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0036" num="0065">The air nozzle <b>116</b> further contains an inlet valve <b>28</b> which comprises a valve member <b>29</b>, for example a ball made of plastic material or other, and coiled spring <b>30</b> supporting the convergent section <b>18</b> (or for example on a shoulder <b>118</b><i>a </i>surrounding this convergent section <b>18</b>) and soliciting the valve member towards the rear, in contact against the valve seat <b>126</b>.</p>
+<p id="p-0037" num="0066">At the front end <b>112</b> of the nozzle housing is furthermore nested by force an output nozzle <b>132</b> which delimits the output conduit <b>120</b>, this output nozzle <b>132</b> also being nested by force in the recess arranged across from the output <b>3</b> in the added external envelope <b>31</b>. The output nozzle <b>132</b> does not extend to the contact of the air nozzle <b>116</b>, in such a way that these two nozzles leave in the nozzle housing <b>110</b> a free space which constitutes the aforementioned mixing chamber <b>119</b>. The output nozzle <b>132</b> can comprise at its front end, an external collar <b>132</b><i>a </i>which abuts against the external envelope <b>31</b>.</p>
+<p id="p-0038" num="0067">The output nozzle <b>132</b> comprises, from the rear towards the front (i.e. from upstream towards downstream):
+<ul id="ul0012" list-style="none">
+    <li id="ul0012-0001" num="0000">
+    <ul id="ul0013" list-style="none">
+        <li id="ul0013-0001" num="0068">a convergent inlet cone <b>120</b><i>a </i>open towards the mixing chamber <b>119</b> and having a relatively substantial angle at the top &#x3b2;, for example between 30 and 60 degrees,</li>
+        <li id="ul0013-0002" num="0069">then a convergent section <b>120</b><i>b </i>having a relatively small angle at the top &#x3b3;, of a few degrees (for example less than 10 degrees),</li>
+        <li id="ul0013-0003" num="0070">then, where applicable, a short cylindrical portion (not referenced),</li>
+        <li id="ul0013-0004" num="0071">then a divergent section <b>120</b><i>c </i>also having a relatively small angle at the top &#x3b4; (for example less than 15 degrees) and opening towards the exterior via the outlet orifice <b>3</b>, of a section similar to the section of the first embodiment. Thanks to the presence of the convergent section <b>120</b><i>b </i>and of the divergent section <b>120</b><i>c </i>in the output conduit, the clogging of the output conduit <b>120</b> by agglomerates of powdery material is avoided or limited.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0039" num="0072">The head <b>107</b>, the air nozzle <b>116</b>, the tip <b>122</b> and the output nozzle <b>132</b> delimit as such an air circuit comprising, from upstream to downstream (i.e. from the rear towards the front in this case):
+<ul id="ul0014" list-style="none">
+    <li id="ul0014-0001" num="0000">
+    <ul id="ul0015" list-style="none">
+        <li id="ul0015-0001" num="0073">the upstream conduit <b>25</b>,</li>
+        <li id="ul0015-0002" num="0074">the inlet valve <b>28</b>,</li>
+        <li id="ul0015-0003" num="0075">the air inlet conduit <b>127</b>, delimited in the tip housing <b>117</b> downstream of the tip <b>122</b>,</li>
+        <li id="ul0015-0004" num="0076">the convergent section <b>118</b> and the conduit <b>118</b><i>b, </i></li>
+        <li id="ul0015-0005" num="0077">the mixing chamber <b>119</b>,</li>
+        <li id="ul0015-0006" num="0078">the output conduit <b>120</b>.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0040" num="0079">The convergent section <b>118</b> of the air nozzle <b>116</b>, forms a venturi which defines a vacuum zone corresponding substantially to the mixing chamber <b>119</b>, which is pressurized when air circulates in the air circuit from upstream towards downstream. Due to the fact that the venturi is formed in a part molded from synthetic material, its form is perfectly defined and can be reproduced from one spraying device to the other, independently of any mounting tolerance, in such a way that the vacuum created by the venturi is also perfectly defined.</p>
+<p id="p-0041" num="0080">In the particular case shown in the <figref idref="DRAWINGS">FIGS. 1 to 4</figref>, the air inlet conduit <b>127</b> is cylindrical, of diameter D<b>1</b> for example between 2 and 3 mm (in particular of a magnitude of 2.3 mm) and the minimum diameter D<b>2</b> of the convergent section <b>118</b> is for example between 0.5 and 0.7 mm (in particular of a magnitude of 0.6 mm). The ratio of the diameters D<b>1</b>/D<b>2</b> can be between 10% and 25% or, more generally, the ratio between the area of the corresponding sections can be between 1% and 6.5%. The angle at the top &#x3b1; of the convergent section <b>118</b> can for example be between 20 and 40 degrees.</p>
+<p id="p-0042" num="0081">In light of the fact that the head <b>107</b> can where applicable be covered by a decorative added external envelope <b>31</b>, the head <b>107</b> is independent of the exterior style of the spraying device <b>1</b>. In addition, the air nozzle <b>116</b> and the output nozzle <b>132</b> can themselves be standard parts used on several types of sprayers <b>1</b>, independently not only in relation to the exterior style of the spraying device <b>1</b>, but also to the type of head <b>107</b> (several types of head <b>107</b> can be used according to the applications, in particular in order to adapt to several types of reservoirs <b>5</b>).</p>
+<p id="p-0043" num="0082">A modular device can as such be manufactured comprised of a small number of thermoplastic parts which are simple to produce, and which implement all of the functions of the connection to the compressed air generator, venturi, channeling product, fixing on a recipient, product output, etc. These parts are assembled for example by simple nesting in relation to one another.</p>
+<p id="p-0044" num="0083">The device which has just been described operates as follows. When a user presses the bulb <b>4</b>, the inlet valve <b>4</b><i>a </i>of this bulb remains closed and the air contained in the bulb is compressed and insufflated into the distributor <b>2</b>, by following the air circuit of this distributor. Subsequent to its passing in the venturi formed by the convergent section <b>118</b>, the air flow creates a vacuum (by decreasing the pressure for example by 20 to 40 mbar [i.e. the equivalent of a column of 20 to 40 cm of water] in relation to the ambient pressure).</p>
+<p id="p-0045" num="0084">This vacuum sucks the powdery product via the dip tube. If the powdery product has agglomerates, these possible agglomerates are disintegrated by the front end <b>116</b><i>a </i>in the form of a point which protrudes into the mixing chamber <b>119</b> above the conduit for channeling delimited by the dip tube <b>15</b> (this front end in the form of a point does not however hinder the arrival of the powdery product in the mixing chamber <b>119</b> due to the form of a point of this front end and due to the fact that it does not fully overhang the section of passing of the conduit for channeling.</p>
+<p id="p-0046" num="0085">Note that the spraying device according to the invention makes it possible to spray a substantially constant dose of powdery product, right from the first actuating of the bulb <b>4</b>, and this, regardless of the level of product <b>6</b> in the reservoir <b>5</b>, as soon as the lower end of the dip tube <b>15</b> dips into the product <b>6</b>.</p>
+<p id="p-0047" num="0086">In the second embodiment of the invention, shown in the <figref idref="DRAWINGS">FIGS. 5 and 6</figref>, the spraying device <b>1</b> comprises as hereinabove a distributor <b>2</b> provided with an outlet orifice <b>3</b>, a manual compressed-air generator, comprised here of a manual pump <b>304</b>, and a reservoir <b>5</b> containing the product to be sprayed <b>6</b>, which can be for example similar to the powdery product described hereinabove.</p>
+<p id="p-0048" num="0087">The distributor <b>2</b> comprises a head <b>307</b> which can for example be molded from plastic material and which can in particular be fixed by clipping-on or other on the neck <b>8</b> of the reservoir <b>5</b>, a seal <b>9</b> able to be, where applicable, interposed between the head <b>7</b> and the neck <b>8</b>.</p>
+<p id="p-0049" num="0088">In the head <b>7</b> is arranged a cylindrical nozzle housing <b>310</b> which opens towards the exterior at a front end <b>312</b>. The nozzle housing <b>310</b> extends according to a substantially horizontal axis X from the front end <b>312</b> to a rear end <b>311</b> where said nozzle housing is extended upwards by a shaft <b>311</b><i>a </i>of which the lateral wall protrudes upwards.</p>
+<p id="p-0050" num="0089">The head <b>307</b> comprises as hereinabove, a well <b>314</b> which opens upwards in the nozzle housing <b>310</b> and which extends downwards, in parallel to a substantially vertical axis Z. In the well <b>314</b> can be nested a dip tube <b>15</b> made of plastic material or other, which extends downwards by dipping into the product to be sprayed <b>6</b> contained in the reservoir <b>5</b>. The dip tube <b>15</b> as such comprises, as hereinabove, a conduit for channeling product to be sprayed towards a mixing chamber <b>319</b> delimited on the inside by the nozzle housing <b>310</b>, above the well <b>314</b>.</p>
+<p id="p-0051" num="0090">At the rear end <b>311</b> of the nozzle housing is nested by force an air nozzle <b>316</b> which is molded of a single part of synthetic material, in particular thermoplastic. The air nozzle <b>316</b> has an exterior cylindrical form that is complementary to the interior form of the nozzle housing <b>310</b>, and it delimits interiorly a cylindrical air inlet conduit <b>327</b> of diameter D<b>1</b>, centered on the axis X. This inlet conduit <b>327</b> is extended, to 90 degrees upwards, inside the shaft <b>311</b><i>a</i>, passing through a hole <b>316</b><i>b </i>arranged at the rear end of the air nozzle <b>316</b>.</p>
+<p id="p-0052" num="0091">The air inlet conduit <b>327</b> is extended towards the front, in the air nozzle <b>316</b>, by a tapered convergent section <b>318</b> which can have an angle at the top for example between 20 and 40 degrees and which is extended by a short narrowed passage <b>318</b><i>b </i>of diameter D<b>2</b>, arranged at the front end <b>316</b><i>a </i>of the air nozzle. The diameters D<b>1</b> and D<b>2</b> can be similar to the diameters already described in the first embodiment of the invention.</p>
+<p id="p-0053" num="0092">The front end <b>316</b><i>a </i>of the air nozzle can be in the form of a point, in particular in a tapered form, and protrudes into the aforementioned mixing chamber <b>319</b>, above the well <b>314</b>.</p>
+<p id="p-0054" num="0093">Moreover, at the front end <b>312</b> of the nozzle housing is nested by force an output nozzle <b>332</b> of which the rear end arrives at the limit of the mixing chamber <b>319</b> and of which the front end comprises an exterior collar <b>332</b><i>a </i>coming to abut against the exterior lateral wall of the head <b>307</b>.</p>
+<p id="p-0055" num="0094">The output nozzle <b>332</b> delimits the output conduit <b>320</b> which can for example comprise a convergent inlet cone <b>320</b><i>a </i>open towards the mixing chamber <b>319</b>, followed by a convergent section <b>320</b><i>b </i>then where applicable by a short cylindrical passage of transition and finally by a divergent section <b>320</b><i>c </i>opening towards the exterior on the outlet orifice <b>3</b>, diameter D<b>3</b>. The form and the dimensions of the outlet passage <b>320</b> and of the outlet orifice <b>3</b> can be identical or similar in form and in dimension of the output passage <b>120</b> and of the outlet orifice <b>3</b> of the second embodiment described hereinabove.</p>
+<p id="p-0056" num="0095">Moreover, on the aforementioned shaft <b>311</b><i>a</i>, can be nested a tip <b>322</b> belonging to a part <b>334</b> which can be molded of plastic material. The tip <b>322</b> has a general cylindrical form of revolution centered on a vertical axis parallel to the axis Z and extends upwards to a tapered portion which converges upwards by forming a valve seat <b>326</b>. The valve seat <b>326</b> is normally sealed by a valve member <b>29</b> solicited upwards par coiled spring <b>30</b> pressing against the upper end of the shaft <b>311</b><i>a</i>. The valve member <b>29</b> and the spring <b>30</b> can be identical or similar to those already described hereinabove. The valve member <b>29</b> forms with the spring <b>30</b> and the valve seat <b>326</b> an air inlet valve <b>28</b> which allows only the entry of the air in the air inlet conduit <b>327</b>, through a recess <b>326</b><i>a </i>arranged in the center of the valve seat <b>326</b>.</p>
+<p id="p-0057" num="0096">The part <b>334</b> made of plastic material forms moreover a substantially horizontal piston <b>335</b> and has for example a form of a disk centered on the axis Z.</p>
+<p id="p-0058" num="0097">The piston <b>335</b> can comprise exteriorly one or several peripheral lips <b>336</b> whereon is nested a push-button <b>337</b> in the form of an inverted cup, made for example by molding of plastic material.</p>
+<p id="p-0059" num="0098">The push-button <b>337</b> can comprise for example an upper bottom <b>338</b> extended downwards by a cylindrical skirt <b>339</b> centered on the axis Z, the interior wall <b>339</b><i>a </i>of this skirt sliding sealingly on the peripheral lips <b>336</b> of the piston.</p>
+<p id="p-0060" num="0099">At its lower end, the cylindrical skirt <b>339</b> of the push-button is extended radially towards the exterior, by a flange ring <b>339</b><i>b </i>(or where applicable by exterior prongs) which is guided by vertical sliding, without sealing, by the cylindrical interior surface <b>340</b><i>a </i>of an annular lateral wall <b>340</b> centered on the axis Z, which can be formed of a single part with the head <b>307</b>.</p>
+<p id="p-0061" num="0100">The annular lateral wall <b>340</b> comprises, at its upper end, an interior rim <b>341</b> (continuous or discontinuous) against which abuts the flange ring <b>339</b><i>b </i>upwards, in order to limit the sliding upwards of the push-button <b>337</b>.</p>
+<p id="p-0062" num="0101">In the piston <b>335</b> can furthermore be formed an air inlet valve <b>342</b> which allows only the entry of air from the exterior, via the space located below the piston <b>335</b>, towards the space delimited between the piston <b>335</b> and the push-button <b>337</b>. This valve <b>342</b> can comprise for example an orifice <b>344</b> of tapered form, expanded upwards, which delimits as such a valve seat <b>345</b> against which is applied a valve member <b>343</b> which can for example be formed by a tab molded from a single part with the piston <b>335</b> and connected to this piston by a zone forming a hinge <b>343</b><i>a. </i></p>
+<p id="p-0063" num="0102">Moreover, coiled spring <b>346</b> is interposed between the piston <b>335</b> and the bottom <b>338</b> of the push-button <b>337</b>.</p>
+<p id="p-0064" num="0103">Finally, the piston <b>335</b> can be supported by two cylindrical tubular supports <b>347</b> which extend downwards according to the axis Z starting from the lower surface of said piston and which are nested by force on two cylindrical tenons <b>348</b> molded from a single part with the head <b>307</b> and extending upwards starting from said head (see <figref idref="DRAWINGS">FIG. 10</figref>).</p>
+<p id="p-0065" num="0104">The device that has just been described operates as follows.</p>
+<p id="p-0066" num="0105">When a user presses on the push-button <b>337</b>, against the solicitation of the spring <b>346</b>, he compresses the air contained in the chamber which is delimited between the piston <b>335</b> and the push-button <b>337</b>, in such a way that this compressed air is expulsed through the air inlet valve <b>28</b>, towards the air inlet conduit <b>327</b>, then the convergent section <b>318</b> forming venturi, then the mixing chamber <b>319</b> where a vacuum is produced sucking upwards the powdery product <b>6</b> contained inside the reservoir <b>5</b>. This powdery product is mixed with the air flow inside the chamber <b>319</b>, and then sprayed towards the exterior through the output conduit <b>320</b> as explained hereinabove.</p>
+<p id="p-0067" num="0106">When the user releases the push-button <b>337</b>, the latter returns to its initial position under the solicitation of the spring <b>346</b>. During this movement, the air inlet valve <b>28</b> remains closed, but the valve <b>342</b> opens, allowing the entry of air into the chamber delimited between the piston <b>335</b> and the push-button <b>337</b>.</p>
+<?DETDESC description="Detailed Description" end="tail"?>
+</description>
+<us-claim-statement>The invention claimed is:</us-claim-statement>
+<claims id="claims">
+<claim id="CLM-00001" num="00001">
+<claim-text>1. A distributor for a spraying device, the distributor comprising:
+<claim-text>a head;</claim-text>
+<claim-text>an air nozzle and an output nozzle each molded of a single part of synthetic material and assembled in the head,</claim-text>
+<claim-text>an air circuit including at least, from upstream to downstream, an air inlet conduit at least partially formed in the air nozzle, a venturi at least partially formed in the air nozzle and an output conduit formed in the output nozzle, the venturi comprising a mixing chamber between the air nozzle and the output nozzle,</claim-text>
+<claim-text>a dip tube for channeling product to be sprayed extending according to a substantially vertical direction communicating with the mixing chamber which is immediately overhanging said dip tube, the head comprising an open well which opens vertically in the mixing chamber and wherein is nested said dip tube, said dip tube being free of any obstruction and freely communicating with the mixing chamber without any obstruction, and said air nozzle having a protruding portion which penetrates in the mixing chamber above the dip tube, said dip tube having an internal area having a first portion overhung by said protruding portion and a second portion not overhung by said protruding portion,</claim-text>
+<claim-text>a manual compressed-air generator communicating with the air inlet conduit,</claim-text>
+<claim-text>a reservoir adapted to contain product to be sprayed, communicating with the dip tube,</claim-text>
+<claim-text>wherein the venturi comprises a convergent section, and wherein the output conduit comprises a divergent section open towards atmosphere and a convergent section open towards the mixing chamber upstream of the divergent section.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00002" num="00002">
+<claim-text>2. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the output conduit comprises an inlet cone open towards the mixing chamber, said inlet cone being arranged upstream of said convergent section and having an angle between 30 and 60 degrees and greater than an angle formed by the convergent section.</claim-text>
+</claim>
+<claim id="CLM-00003" num="00003">
+<claim-text>3. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the air nozzle has an end in the form of a point forming said protruding portion.</claim-text>
+</claim>
+<claim id="CLM-00004" num="00004">
+<claim-text>4. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the head comprises a nozzle housing extending horizontally and wherein the air nozzle and the output nozzle are nested.</claim-text>
+</claim>
+<claim id="CLM-00005" num="00005">
+<claim-text>5. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the air nozzle and the output nozzle are nested in the head.</claim-text>
+</claim>
+<claim id="CLM-00006" num="00006">
+<claim-text>6. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the head is molded of synthetic material.</claim-text>
+</claim>
+<claim id="CLM-00007" num="00007">
+<claim-text>7. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the air inlet conduit has a first section and the venturi has a minimum section, said minimum section having an area between 1% and 6.5% of the area of said first section.</claim-text>
+</claim>
+<claim id="CLM-00008" num="00008">
+<claim-text>8. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the air inlet conduit is formed at least partially in a tip fixed to the air nozzle by nesting and connected to said manual compressed-air generator.</claim-text>
+</claim>
+<claim id="CLM-00009" num="00009">
+<claim-text>9. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the distributor comprises an inlet valve which is adapted to allow only the circulation of air towards the venturi and which is arranged on the air inlet conduit, said inlet valve comprising a valve member solicited by a spring towards a valve seat directed towards the venturi.</claim-text>
+</claim>
+<claim id="CLM-00010" num="00010">
+<claim-text>10. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the output conduit has an output section area between 0.25 and 1.2 mm<sup>2</sup>.</claim-text>
+</claim>
+<claim id="CLM-00011" num="00011">
+<claim-text>11. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the dip tube has an internal diameter between 0.6 and 2 mm.</claim-text>
+</claim>
+<claim id="CLM-00012" num="00012">
+<claim-text>12. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the head is covered by an added external envelope.</claim-text>
+</claim>
+<claim id="CLM-00013" num="00013">
+<claim-text>13. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the manual compressed-air generator is a flexible bulb.</claim-text>
+</claim>
+<claim id="CLM-00014" num="00014">
+<claim-text>14. The device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the manual compressed-air generator is a piston pump.</claim-text>
+</claim>
+<claim id="CLM-00015" num="00015">
+<claim-text>15. The use of a device according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, to spray a powdery product.</claim-text>
+</claim>
+<claim id="CLM-00016" num="00016">
+<claim-text>16. The use according to <claim-ref idref="CLM-00015">claim 15</claim-ref>, wherein the powdery product is selected from among perfumery products and cosmetic products.</claim-text>
+</claim>
+</claims>
+</us-patent-grant>

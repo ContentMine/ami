@@ -4,29 +4,25 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import nu.xom.Element;
-import nu.xom.Text;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.AMIArgProcessorTest;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
-import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
-import org.xmlcml.ami2.plugins.word.WordArgProcessor;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ResultElement;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.html.HtmlA;
 import org.xmlcml.html.HtmlElement;
 import org.xmlcml.html.HtmlP;
+import org.xmlcml.norma.util.NormaTestFixtures;
 import org.xmlcml.xml.XMLUtil;
+
+import nu.xom.Element;
+import nu.xom.Text;
 
 public class RegexPluginTest {
 	
@@ -73,7 +69,7 @@ public class RegexPluginTest {
 	// EMPTY??
 	public void testRegexPlugin() throws IOException {
 		File target = new File("target/bmc/regex/15_1_511_test");
-		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
+		NormaTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
 		String args = 
 				"-q "+ target.toString()+" -i scholarly.html -o results.xml --context 25 40 --r.regex regex/common.xml";
 		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
@@ -85,7 +81,7 @@ public class RegexPluginTest {
 	@Test
 	public void testRegexPlugins() throws IOException {
 		File target = new File("target/bmc/regex/15_1_511_test");
-		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
+		NormaTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
 		File normaTemp = new File("target/bmc/regex/15_1_511_test");
 		String args = 
 				"-q "+normaTemp.toString()+" -i scholarly.html -o results.xml --context 25 40 --r.regex regex/common.xml regex/figure.xml regex/phylotree.xml";

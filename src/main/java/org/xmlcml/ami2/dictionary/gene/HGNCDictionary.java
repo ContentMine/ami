@@ -1,13 +1,11 @@
-package org.xmlcml.ami2.lookups;
+package org.xmlcml.ami2.dictionary.gene;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.StringWriter;
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -15,7 +13,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cmine.lookup.AbstractDictionary;
+import org.xmlcml.ami2.dictionary.AbstractAMIDictionary;
 import org.xmlcml.xml.XMLUtil;
 
 import com.google.gson.JsonArray;
@@ -25,65 +23,51 @@ import com.google.gson.JsonParser;
 import com.google.gson.internal.Streams;
 import com.google.gson.stream.JsonWriter;
 
-import nu.xom.Attribute;
-import nu.xom.Element;
-
 /** Human gene nomenclature from
  * ftp://ftp.ebi.ac.uk/pub/databases/genenames/new/json/hgnc_complete_set.json
  * 
  * @author pm286
  *
  */
-public class HGNCDictionary extends AbstractDictionary {
+public class HGNCDictionary extends AbstractAMIDictionary {
 
+	private static final String HGNC = "hgnc";
+	private static final String UTF_8 = "UTF-8";
+	
 	private static final Logger LOG = Logger.getLogger(HGNCDictionary.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	private final static File GENE_DIR = new File("src/main/resources/org/xmlcml/ami2/plugins/gene");
-	private final static File HGNC_DIR = new File(GENE_DIR, "hgnc");
+	private final static File HGNC_DIR = new File(GENE_DIR, HGNC);
 	private final static File HGNC_JSON_FILE = new File(HGNC_DIR, "hgnc_complete_set.json");
-	private final static File HGNC_JSON_FILE1 = new File(HGNC_DIR, "hgnc_complete_set1.json");
-	private final static File HGNC_XML_FILE = new File(HGNC_DIR, "hgnc_complete_set.xml");
+	private final static File HGNC_JSON_FILE1 = new File(HGNC_DIR, "hgnc_complete_set_readable.json");
+	private final static File HGNC_XML_FILE = new File(HGNC_DIR, "hgnc.xml");
+	
 	private JsonObject hgncJson;
-	private int numGenes;
-	private Set<String> geneIds;
-	private InputStream inputStream;
-
+	
 	public HGNCDictionary() {
 		init();
 	}
 	
 	private void init() {
-		readHGNCJson();
 		readHGNCXML();
 	}
 
 	private void readHGNCXML() {
 		if (!HGNC_XML_FILE.exists()) {
 			readHGNCJson();
-			Element dictionary = new Element("dictionary");
-			dictionary.addAttribute(new Attribute("title", "hgnc"));
-			for (String geneId : geneIds) {
-				Element entry = new Element("entry");
-				entry.appendChild(geneId);
-				dictionary.appendChild(entry);
-			}
-			try {
-				XMLUtil.debug(dictionary, HGNC_XML_FILE, 2);
-			} catch (IOException e) {
-				throw new RuntimeException("Cannot write geneXML file: "+HGNC_XML_FILE, e);
-			}
+			createDictionaryElement(HGNC);
+			writeXMLFile(HGNC_XML_FILE);
 		} else {
-			Element dictionary = XMLUtil.parseQuietlyToDocument(HGNC_XML_FILE).getRootElement();
+			readDictionary(HGNC_XML_FILE);
 		}
 	}
-	
+
 	private void readHGNCJson() {
 		try {
-			readFile("hgnc", new FileInputStream(HGNC_JSON_FILE));
-			String resultsJsonString = IOUtils.toString(inputStream, "UTF-8");
+			readFile(HGNC, new FileInputStream(HGNC_JSON_FILE));
+			String resultsJsonString = IOUtils.toString(inputStream, UTF_8);
 		    JsonParser parser = new JsonParser();
 		    hgncJson = (JsonObject) parser.parse(resultsJsonString);
 		    try {
@@ -101,14 +85,13 @@ public class HGNCDictionary extends AbstractDictionary {
 		}
 		
 		JsonObject response = (JsonObject) hgncJson.get("response");
-		numGenes = response.get("numFound").getAsInt();
+		int numTerms = response.get("numFound").getAsInt();
 		JsonArray docs = response.get("docs").getAsJsonArray();
-//		int start =  response.get("start").getAsInt(); // don't know what this is (it's 0)
-		createGeneIds(docs);
+		createIds(docs, numTerms);
 	}
 
-	private void createGeneIds(JsonArray docs) {
-		geneIds = new HashSet<String>();
+	private void createIds(JsonArray docs, int numTerms) {
+		namesByTerm = new HashMap<String, String>();
 		/**
 {
     "gene_family":["Immunoglobulin-like domain containing"],
@@ -140,13 +123,15 @@ public class HGNCDictionary extends AbstractDictionary {
 	"location_sortable":"19q13.43"
 	},
 		 */
-		for (int i = 0; i < numGenes; i++) {
+		for (int i = 0; i < numTerms; i++) {
 			JsonObject doc = (JsonObject) docs.get(i);
-			String geneId = doc.get("symbol").getAsString();
-			geneIds.add(geneId);
+			String term = doc.get("symbol").getAsString();
+			String name = doc.get("name").getAsString();
+			namesByTerm.put(term, name);
 		}
 	}
 
+	// only for developing
 	private void debug(JsonObject jsonObject) {
 		Set<Map.Entry<String, JsonElement>> set = jsonObject.entrySet();
 		LOG.debug(set.size());
@@ -155,20 +140,6 @@ public class HGNCDictionary extends AbstractDictionary {
 			Map.Entry<String , JsonElement> element = iterator.next();
 			LOG.debug("IT "+element.getKey());
 		}
-	}
-
-	public boolean contains(String geneSymbol) {
-		return geneIds.contains(geneSymbol);
-	}
-
-	@Override
-	protected void readFile(String name, InputStream is) throws IOException {
-		inputStream = is;
-	}
-
-	@Override
-	public List<List<String>> getTrailingWords(String key) {
-		throw new RuntimeException("cannot use for HGNC");
 	}
 
 

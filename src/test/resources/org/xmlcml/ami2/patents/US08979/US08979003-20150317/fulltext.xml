@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE us-patent-grant SYSTEM "us-patent-grant-v45-2014-04-03.dtd" [ ]>
+<us-patent-grant lang="EN" dtd-version="v4.5 2014-04-03" file="US08979003-20150317.XML" status="PRODUCTION" id="us-patent-grant" country="US" date-produced="20150302" date-publ="20150317">
+<us-bibliographic-data-grant>
+<publication-reference>
+<document-id>
+<country>US</country>
+<doc-number>08979003</doc-number>
+<kind>B2</kind>
+<date>20150317</date>
+</document-id>
+</publication-reference>
+<application-reference appl-type="utility">
+<document-id>
+<country>US</country>
+<doc-number>13498476</doc-number>
+<date>20090929</date>
+</document-id>
+</application-reference>
+<us-application-series-code>13</us-application-series-code>
+<us-term-of-grant>
+<us-term-extension>278</us-term-extension>
+</us-term-of-grant>
+<classifications-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>B</section>
+<class>05</class>
+<subclass>B</subclass>
+<main-group>15</main-group>
+<subgroup>00</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>A</section>
+<class>01</class>
+<subclass>G</subclass>
+<main-group>25</main-group>
+<subgroup>02</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+</classifications-ipcr>
+<classifications-cpc>
+<main-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>A</section>
+<class>01</class>
+<subclass>G</subclass>
+<main-group>25</main-group>
+<subgroup>02</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</main-cpc>
+<further-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>B</section>
+<class>05</class>
+<subclass>B</subclass>
+<main-group>15</main-group>
+<subgroup>008</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</further-cpc>
+</classifications-cpc>
+<classification-national>
+<country>US</country>
+<main-classification>239547</main-classification>
+<further-classification>239145</further-classification>
+<further-classification>239542</further-classification>
+<further-classification>239575</further-classification>
+<further-classification>2395903</further-classification>
+<further-classification>405 45</further-classification>
+</classification-national>
+<invention-title id="d2e53">Filtration irrigation device</invention-title>
+<us-references-cited>
+<us-citation>
+<patcit num="00001">
+<document-id>
+<country>US</country>
+<doc-number>2769668</doc-number>
+<kind>A</kind>
+<name>Richards</name>
+<date>19561100</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239145</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00002">
+<document-id>
+<country>US</country>
+<doc-number>2798768</doc-number>
+<kind>A</kind>
+<name>Babin</name>
+<date>19570700</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239145</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00003">
+<document-id>
+<country>US</country>
+<doc-number>3799442</doc-number>
+<kind>A</kind>
+<name>Delmer</name>
+<date>19740300</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00004">
+<document-id>
+<country>US</country>
+<doc-number>3901448</doc-number>
+<kind>A</kind>
+<name>Babin</name>
+<date>19750800</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239145</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00005">
+<document-id>
+<country>US</country>
+<doc-number>4254791</doc-number>
+<kind>A</kind>
+<name>Bron</name>
+<date>19810300</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00006">
+<document-id>
+<country>US</country>
+<doc-number>5996909</doc-number>
+<kind>A</kind>
+<name>Lin</name>
+<date>19991200</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239542</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00007">
+<document-id>
+<country>US</country>
+<doc-number>2004/0222321</doc-number>
+<kind>A1</kind>
+<name>Golan et al.</name>
+<date>20041100</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00008">
+<document-id>
+<country>BE</country>
+<doc-number>892617</doc-number>
+<kind>A1</kind>
+<date>19820900</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00009">
+<document-id>
+<country>CN</country>
+<doc-number>2149098</doc-number>
+<kind>Y</kind>
+<date>19931200</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00010">
+<document-id>
+<country>CN</country>
+<doc-number>1802089</doc-number>
+<kind>A</kind>
+<date>20060700</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00011">
+<document-id>
+<country>FR</country>
+<doc-number>2618049</doc-number>
+<kind>A1</kind>
+<date>19890100</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00012">
+<document-id>
+<country>JP</country>
+<doc-number>5-95737</doc-number>
+<kind>A</kind>
+<date>19930400</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00013">
+<document-id>
+<country>JP</country>
+<doc-number>05123065</doc-number>
+<kind>A</kind>
+<date>19930500</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00014">
+<document-id>
+<country>JP</country>
+<doc-number>2005525806</doc-number>
+<kind>A</kind>
+<date>20050900</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00015">
+<document-id>
+<country>JP</country>
+<doc-number>2006034151</doc-number>
+<kind>A</kind>
+<date>20060200</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00016">
+<document-id>
+<country>JP</country>
+<doc-number>2009-201401</doc-number>
+<kind>A</kind>
+<date>20090900</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00017">
+<document-id>
+<country>JP</country>
+<doc-number>2012-5369</doc-number>
+<kind>A</kind>
+<date>20120100</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00018">
+<document-id>
+<country>KR</country>
+<doc-number>1020110114438</doc-number>
+<kind>A</kind>
+<date>20111000</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00019">
+<document-id>
+<country>WO</country>
+<doc-number>2006000048</doc-number>
+<kind>A1</kind>
+<date>20060100</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00020">
+<document-id>
+<country>WO</country>
+<doc-number>2007/073614</doc-number>
+<kind>A1</kind>
+<date>20070700</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00021">
+<document-id>
+<country>WO</country>
+<doc-number>2009/121306</doc-number>
+<kind>A1</kind>
+<date>20091000</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<nplcit num="00022">
+<othercit>International Search Report for International Application No. PCT/CN2009/074304, mailed Jul. 8, 2010, with English translation.</othercit>
+</nplcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<nplcit num="00023">
+<othercit>Colombian First Office Action for International Application No. PCT/CN2009/074304; Date of Mailing: May 3, 2013, with English Translation.</othercit>
+</nplcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<nplcit num="00024">
+<othercit>Extended European Search Report for Application No. 09849946.0-1655; Date of Mailing: May 6, 2013.</othercit>
+</nplcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<nplcit num="00025">
+<othercit>Notice of Allowance of Patent for Korean Application No. 10-2012-7011079, delivery date Mar. 24, 2014, with English translation.</othercit>
+</nplcit>
+<category>cited by applicant</category>
+</us-citation>
+</us-references-cited>
+<number-of-claims>18</number-of-claims>
+<us-exemplary-claim>1</us-exemplary-claim>
+<us-field-of-classification-search>
+<classification-national>
+<country>US</country>
+<main-classification>239145</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239542</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239547</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239575</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239590</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>2395903</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>405 45</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>405 51</main-classification>
+</classification-national>
+</us-field-of-classification-search>
+<figures>
+<number-of-drawing-sheets>6</number-of-drawing-sheets>
+<number-of-figures>28</number-of-figures>
+</figures>
+<us-related-documents>
+<related-publication>
+<document-id>
+<country>US</country>
+<doc-number>20120181357</doc-number>
+<kind>A1</kind>
+<date>20120719</date>
+</document-id>
+</related-publication>
+</us-related-documents>
+<us-parties>
+<us-applicants>
+<us-applicant sequence="001" app-type="applicant" designation="us-only">
+<addressbook>
+<last-name>Zhu</last-name>
+<first-name>Jun</first-name>
+<address>
+<city>Beijing</city>
+<country>CN</country>
+</address>
+</addressbook>
+<residence>
+<country>CN</country>
+</residence>
+</us-applicant>
+</us-applicants>
+<inventors>
+<inventor sequence="001" designation="us-only">
+<addressbook>
+<last-name>Zhu</last-name>
+<first-name>Jun</first-name>
+<address>
+<city>Beijing</city>
+<country>CN</country>
+</address>
+</addressbook>
+</inventor>
+</inventors>
+<agents>
+<agent sequence="01" rep-type="attorney">
+<addressbook>
+<orgname>Cantor Colburn LLP</orgname>
+<address>
+<country>unknown</country>
+</address>
+</addressbook>
+</agent>
+</agents>
+</us-parties>
+<examiners>
+<primary-examiner>
+<last-name>Ganey</last-name>
+<first-name>Steven J</first-name>
+<department>3752</department>
+</primary-examiner>
+</examiners>
+<pct-or-regional-filing-data>
+<document-id>
+<country>WO</country>
+<doc-number>PCT/CN2009/074304</doc-number>
+<kind>00</kind>
+<date>20090929</date>
+</document-id>
+<us-371c124-date>
+<date>20120327</date>
+</us-371c124-date>
+</pct-or-regional-filing-data>
+<pct-or-regional-publishing-data>
+<document-id>
+<country>WO</country>
+<doc-number>WO2011/038538</doc-number>
+<kind>A </kind>
+<date>20110407</date>
+</document-id>
+</pct-or-regional-publishing-data>
+</us-bibliographic-data-grant>
+<abstract id="abstract">
+<p id="p-0001" num="0000">A filtration irrigation method, filtration irrigation device and the manufacturing method thereof, said filtration irrigation device comprises a water carrying chamber, in which one or more porous filter membranes are arranged. One or more flow restrictors corresponding to each membrane are set on the wall of the water carrying chamber. The total permeation capacity of the flow restrictors is less than that of said filter membranes. The present invention can avoid the blockage of the device effectively.</p>
+</abstract>
+<drawings id="DRAWINGS">
+<figure id="Fig-EMI-D00000" num="00000">
+<img id="EMI-D00000" he="108.29mm" wi="107.78mm" file="US08979003-20150317-D00000.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00001" num="00001">
+<img id="EMI-D00001" he="226.65mm" wi="170.77mm" orientation="landscape" file="US08979003-20150317-D00001.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00002" num="00002">
+<img id="EMI-D00002" he="220.39mm" wi="168.40mm" orientation="landscape" file="US08979003-20150317-D00002.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00003" num="00003">
+<img id="EMI-D00003" he="251.04mm" wi="163.75mm" orientation="landscape" file="US08979003-20150317-D00003.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00004" num="00004">
+<img id="EMI-D00004" he="209.97mm" wi="172.47mm" orientation="landscape" file="US08979003-20150317-D00004.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00005" num="00005">
+<img id="EMI-D00005" he="234.53mm" wi="170.77mm" orientation="landscape" file="US08979003-20150317-D00005.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00006" num="00006">
+<img id="EMI-D00006" he="207.01mm" wi="183.39mm" orientation="landscape" file="US08979003-20150317-D00006.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+</drawings>
+<description id="description">
+<?BRFSUM description="Brief Summary" end="lead"?>
+<heading id="h-0001" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+<p id="p-0002" num="0001">This is a U.S. national stage of application No. PCT/CN2009/074304, filed on 29 Sep. 2009.</p>
+<heading id="h-0002" level="1">FIELD OF THE INVENTION</heading>
+<p id="p-0003" num="0002">The present invention relates to a micro-irrigation technique for irrigating plants, and particularly, to an infiltration irrigation method, an infiltration irrigation apparatus and a method for manufacturing the same.</p>
+<heading id="h-0003" level="1">BACKGROUND OF THE INVENTION</heading>
+<p id="p-0004" num="0003">In the drip irrigation and the infiltration irrigation at present, a most important problem is the blockage of the water outflow pores of the irrigator. In order to prevent the blockage, a common method is to perform a water treatment at the water supply end of the irrigation pipeline. However, this requires a very large investment on equipments, and the whole pipeline may be discarded due to any improper water treatment.</p>
+<p id="p-0005" num="0004">A diameter of the drip irrigation water outflow pore is generally between 0.5 and 1 mm, and the diameter of the infiltration irrigation water outflow pore is mainly from tens of microns to more than one hundred microns. It is found upon research that the blockage is caused by many impurities of different diameters within the above pore diameter ranges, and the particle diameter ranges from tens of microns to less than one micron. Careful studies show that the blockage process of these water outflow pores is as follows. The water in the pipe flows in an axial direction under pressure, wherein some water flows out in a radial direction through the water outflow pores, i.e., becomes irrigation water. Particles carried in the water with small diameters or diameters close to those of the water outflow pores form a bridge and block the outflow passage due to quick impact and drive by the water flowing by the water outflow pores. Thus smaller pores are remained near the bridge, while these pores will be further occupied by other particles or smaller particle bridges, and then are gradually blocked.</p>
+<p id="p-0006" num="0005">For this reason, it is necessary to provide an infiltration irrigation apparatus to solve or improve the problem of the blockage of the water outflow pores in the current drip irrigation and infiltration irrigation.</p>
+<heading id="h-0004" level="1">SUMMARY OF THE INVENTION</heading>
+<p id="p-0007" num="0006">An object of the present invention is to provide an infiltration irrigation method, an infiltration irrigation apparatus and a method for manufacturing the same, which are capable of automatically clearing the obstructions by sufficiently utilizing the water flow to improve or prevent the blockage of the infiltration irrigation apparatus, prolong the service life of the infiltration irrigation apparatus, and reduce the use cost.</p>
+<p id="p-0008" num="0007">After repeated tests and studies of the water in the pipe, the inventor finds that when the diameter of the infiltration irrigation water outflow pore is small enough and the water outflow rate is sufficiently low, the impurities are difficult to block the outflow passage. Instead, they are slightly attached to the surfaces of the outflow pores, and then can be easily cleared by a shearing force generated by parallel water stream in the pipe. An anti-blockage and water-saving infiltration irrigation apparatus then can be manufactured by sufficiently utilizing such characteristic. The whole irrigation system adopting the infiltration irrigation apparatus can completely perform an automatic cleaning just using the water stream inside the irrigation pipeline, without needing any water treatment device, and will not be blocked during a long-term usage.</p>
+<p id="p-0009" num="0008">On the basis of the above principle, the present invention provides an infiltration irrigation apparatus including:</p>
+<p id="p-0010" num="0009">a water passing chamber having a water outlet and a water inlet, wherein a water stream along an axial direction of the water passing chamber is formed when the water flows between the water inlet and the water outlet;</p>
+<p id="p-0011" num="0010">one or more porous filter membranes disposed in the water passing chamber and formed with a filtration section for accommodating the water filtered by the one or more porous filter membranes; and the location of the one or more porous filter membrane is set so that at least a part of the water stream flows along a surface of the porous filter membrane to wash the surface when the axial water stream exists in the water passing chamber; and</p>
+<p id="p-0012" num="0011">one or more flow restrictors each disposed on a sidewall of the water passing chamber corresponding to the porous filter membrane, wherein each of the one or more flow restrictors has one or more restricting orifices, an inlet communicated with the filtration section of the one or more porous filter membranes and an outlet outside the water passing chamber, and a total water seepage capability of the one or more flow restrictors is smaller than that of the one or more porous filter membranes.</p>
+<p id="p-0013" num="0012">In a preferred example of the present invention, a maximum pore diameter of a restricting orifice of the flow restrictor is larger than that of the porous filter membrane.</p>
+<p id="p-0014" num="0013">In an optional embodiment of the present invention, the number of the one or more porous filter membranes is one, and one or more flow restrictors are disposed in correspondence to the porous filter membrane.</p>
+<p id="p-0015" num="0014">In another optional embodiment of the present invention, the number of the one or more porous filter membranes is more than one, and one or more flow restrictors are disposed in correspondence to each of the porous filter membranes.</p>
+<p id="p-0016" num="0015">In an optional embodiment of the present invention, the porous filter membrane covers a part of an inner wall of the water passing chamber, and edges of the porous filter membrane closely engage with the inner wall of the water passing chamber, so as to form the filtration section between the porous filter membrane and the inner wall of the water passing chamber covered thereby.</p>
+<p id="p-0017" num="0016">In another optional embodiment of the present invention, the porous filter membrane covers a complete circumference of an inner wall of the water passing chamber, and the edges of the porous filter membrane closely engage with the inner wall of the water passing chamber, so as to form the filtration section between the porous filter membrane and the inner wall of the water passing chamber covered thereby.</p>
+<p id="p-0018" num="0017">In yet another optional embodiment of the present invention, the porous filter membrane is bag-shaped, and the filtration section is formed in a bag of the porous filter membrane. In an example of this embodiment, the sidewall of the water passing chamber is disposed with an opening for engaging with the flow restrictor, the flow restrictor is inserted into the opening, a housing of the flow restrictor closely engages with edges of the opening, a bag mouth of the bag-shaped porous filter membrane closely engages with the inlet of the flow restrictor, so that the inlet of the flow restrictor is communicated with the filtration section. In a preferred example of this embodiment, the porous filter membrane has a flat bag shape, and the flat bag shaped porous filter membrane is set flush in the water passing chamber.</p>
+<p id="p-0019" num="0018">In still another optional embodiment of the present invention, the porous filter membrane and the flow restrictor are integrally formed with a same porous material. In this embodiment, the porous material may be porous ceramics.</p>
+<p id="p-0020" num="0019">In the present invention, the sidewall of the water passing chamber is disposed with an opening for engaging with the flow restrictor, an inlet of the flow restrictor closely engages with the opening, so as to dispose the flow restrictor on the sidewall of the water passing chamber; or the flow restrictor is directly mounted in the opening, so as to dispose the flow restrictor on the sidewall of the tubular water passing chamber.</p>
+<p id="p-0021" num="0020">In an optional embodiment of the present invention, the water passing chamber may be specifically formed in a tubular shape.</p>
+<p id="p-0022" num="0021">In an optional embodiment of the present invention, the water passing chamber is constituted by a water pipe or a part thereof, or a tubular support enclosed in the water pipe, and when the water flows in the water pipe, some flows in an axial direction of the water pipe and passes by a surface of the porous filter membrane to wash the surface, while some is filtered by the porous filter membrane, enters the flow restrictor through the filtration section, and flows out of the outlet of the flow restrictor to form irrigation water.</p>
+<p id="p-0023" num="0022">In an optional embodiment of the present invention, the number of the porous filter membranes is more than one, each of the porous filter membranes is disposed in a tubular support, and a plurality of tubular supports disposed with the porous filter membranes are enclosed in the water pipe, respectively, in the axial direction of the water pipe, so that the porous filter membranes are distributed in the water pipe.</p>
+<p id="p-0024" num="0023">In the present invention, the water pipe may be disposed with a valve or mounted with a micro pump actuated periodically, so that the water in the pipe moves to clear the impurities on the surface of the porous filter membrane.</p>
+<p id="p-0025" num="0024">In the present invention, the total water seepage capability of the porous filter membrane may be equal to or greater than five times of that of the corresponding one or more flow restrictors.</p>
+<p id="p-0026" num="0025">In the present invention, a maximum pore diameter of the restricting orifice may be equal to or greater than five times of that of the porous filter membrane.</p>
+<p id="p-0027" num="0026">The present invention further provides an infiltration irrigation method that uses the above infiltration irrigation apparatus, wherein one or more porous filter membranes are installed in a water passing chamber, and a filtration section is formed to accommodate the water filtered by the porous filter membrane; a sidewall of the water passing chamber corresponding to the location of each of the porous filter membranes is disposed with one or more flow restrictors, each of the flow restrictors has one or more restricting orifices, an inlet communicated with the filtration section of the porous filter membrane and an outlet outside the water passing chamber, and a total water seepage capability of the one or more flow restrictors is smaller than that of the one or more porous filter membranes; the water in the water passing chamber is made to flow axially at regular time so that an axial water stream flows along a surface of the porous filter membrane to wash the surface.</p>
+<p id="p-0028" num="0027">The present invention further provides a method for manufacturing the above infiltration irrigation apparatus, including:</p>
+<p id="p-0029" num="0028">A. providing one or more flow restrictors and one or more porous filter membranes, wherein each of the flow restrictors has one or more restricting orifices, and a total water seepage capability of the one or more flow restrictors is smaller than that of the one or more porous filter membranes;</p>
+<p id="p-0030" num="0029">B. correspondingly disposing the porous filter membrane and the flow restrictor on a plastic sheet having first and second longitudinal edges, wherein the porous filter membrane is located at an inner side of the plastic sheet and the flow restrictor is located at an outer side of the plastic sheet; a filtration section for accommodating the water filtered by the porous filter membrane is formed at a side where the porous filter membrane is located; and an inlet of the flow restrictor is communicated with the filtration section; and</p>
+<p id="p-0031" num="0030">C. engaging the first and second longitudinal edges of the plastic sheet with each other to form a tubular shape.</p>
+<p id="p-0032" num="0031">The present invention further provides a method for manufacturing the above infiltration irrigation apparatus, including:</p>
+<p id="p-0033" num="0032">A. providing one or more flow restrictors, one or more porous filter membranes, and a water passing chamber composed of a tubular support, wherein each of the flow restrictors has one or more restricting orifices, and a total water seepage capability of the one or more flow restrictors is smaller than that of the one or more porous filter membranes;</p>
+<p id="p-0034" num="0033">B. correspondingly disposing the porous filter membrane and the flow restrictor on the tubular support, wherein the porous filter membrane is located in a pipe of the tubular support; a filtration section for accommodating the water filtered by the porous filter membrane is formed; the flow restrictor is mounted on a sidewall of the tubular support in correspondence to the porous filter membrane; and an inlet of the flow restrictor is communicated with the filtration section of the porous filter membrane;</p>
+<p id="p-0035" num="0034">C. putting the tubular support having the porous filter membrane and the flow restrictor into a molding machine head during an extrusion molding of a water pipe, so that the tubular support is wrapped in the water pipe after the water pipe is extruded by the molding machine head; and</p>
+<p id="p-0036" num="0035">D. making a cut at a location corresponding to the outlet of the flow restrictor on the sidewall of the water pipe, so as to expose the outlet of the flow restrictor.</p>
+<p id="p-0037" num="0036">When the infiltration irrigation apparatus and the infiltration irrigation method of the present invention are adopted, since the total water seepage capability of the one or more flow restrictors is smaller than that of the one or more porous filter membranes, the total water outflow of the one or more flow restrictors is smaller than that of the one or more porous filter membranes, which reduces the amount of water penetrating the one or more porous filter membrane. Therefore, the water penetration rate of the porous filter membrane is reduced, and the impact speed of the impurities carried in the water on the porous filter membrane is decreased, so that the impurities are attached to the surface of the porous filter membrane very slightly. In addition, as the porous filter membrane is disposed in the water passing chamber, the surface of the porous filter membrane can be washed through the axial water stream in the water passing chamber, so that the impurities attached to the surface of the porous filter membrane very slightly are washed away by the water stream flowing along the surface of the porous filter membrane, which improves or avoids the blockage of the porous filter membrane, and effectively improves the blockage of the infiltration irrigation apparatus. Further, since the maximum pore diameter of the restricting orifice of the flow restrictor is preferably larger than that of the porous filter membrane, the restricting orifice will not be blocked when the water filtered by the porous filter membrane flows by the restricting orifice. Therefore, the infiltration irrigation apparatus of the present invention is very difficult to be blocked during the usage, and the service life of an infiltration irrigation system using such infiltration irrigation apparatus is far prolonged as compared with the case of adopting the infiltration irrigation apparatus of the prior art, which greatly reduces the use cost.</p>
+<p id="p-0038" num="0037">During the production of the infiltration irrigation apparatus of the present invention, the porous filter membrane and the flow restrictor may be directly engaged with the plastic sheet at first, and then the two longitudinal edges of the plastic sheet are engaged (by hot melting or gluing) with each other to form the plastic sheet into a tubular shape, which facilitates the continuous production of the tubular infiltration irrigation apparatus.</p>
+<?BRFSUM description="Brief Summary" end="tail"?>
+<?brief-description-of-drawings description="Brief Description of Drawings" end="lead"?>
+<description-of-drawings>
+<heading id="h-0005" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+<p id="p-0039" num="0038">In order to more clearly describe the technical solutions in the embodiments of the present invention or the prior art, the drawings needed for the descriptions of the embodiments or the prior art are briefly introduced as follows. It is obvious that the following drawings are just some embodiments of the present invention, and a person skilled in the art can acquire other drawings based on these drawings without paying any creative effort. Furthermore, these drawings are just exemplary, and do not limit the scales of various parts in the drawings.</p>
+<p id="p-0040" num="0039"><figref idref="DRAWINGS">FIG. 1</figref> is a structural diagram of Embodiment 1 of the present invention;</p>
+<p id="p-0041" num="0040"><figref idref="DRAWINGS">FIG. 1A</figref> is another structural diagram of Embodiment 1 of the present invention;</p>
+<p id="p-0042" num="0041"><figref idref="DRAWINGS">FIG. 2</figref> is a sectional diagram of <figref idref="DRAWINGS">FIG. 1</figref> of the present invention;</p>
+<p id="p-0043" num="0042"><figref idref="DRAWINGS">FIG. 3</figref> is a structural diagram of Embodiment 1 of the present invention in which one porous filter membrane is corresponding to a plurality of flow restrictors;</p>
+<p id="p-0044" num="0043"><figref idref="DRAWINGS">FIG. 4</figref> is a structural diagram of Embodiment 1 of the present invention in which a plurality of porous filter membranes are disposed in a water passing chamber;</p>
+<p id="p-0045" num="0044"><figref idref="DRAWINGS">FIG. 5</figref> is a structural diagram of Embodiment 1 of the present invention in which an entire porous filter membrane is disposed in an axial direction in the water passing chamber;</p>
+<p id="p-0046" num="0045"><figref idref="DRAWINGS">FIG. 6</figref> is a schematic diagram of a manufacturing process of Embodiment 1 of the present invention;</p>
+<p id="p-0047" num="0046"><figref idref="DRAWINGS">FIG. 7</figref> is a structural diagram of Embodiment 1 of the present invention in which the water passing chamber is a tubular support;</p>
+<p id="p-0048" num="0047"><figref idref="DRAWINGS">FIG. 8</figref> is a schematic diagram of Embodiment 1 of the present invention in which an infiltration irrigation apparatus as illustrated in <figref idref="DRAWINGS">FIG. 7</figref> is mounted into a water pipe or a part thereof;</p>
+<p id="p-0049" num="0048"><figref idref="DRAWINGS">FIG. 9</figref> is a structural diagram of Embodiment 2 of the present invention;</p>
+<p id="p-0050" num="0049"><figref idref="DRAWINGS">FIG. 10</figref> is a sectional diagram of <figref idref="DRAWINGS">FIG. 9</figref> of the present invention;</p>
+<p id="p-0051" num="0050"><figref idref="DRAWINGS">FIG. 11</figref> is a structural diagram of Embodiment 2 of the present invention in which a plurality of porous filter membranes are disposed in a water passing chamber;</p>
+<p id="p-0052" num="0051"><figref idref="DRAWINGS">FIG. 12</figref> is a structural diagram of Embodiment 2 of the present invention in which an entire porous filter membrane is disposed in an axial direction in the water passing chamber;</p>
+<p id="p-0053" num="0052"><figref idref="DRAWINGS">FIG. 13</figref> is a schematic diagram of a manufacturing process of Embodiment 2 of the present invention;</p>
+<p id="p-0054" num="0053"><figref idref="DRAWINGS">FIG. 14</figref> is a structural diagram of Embodiment 3 of the present invention;</p>
+<p id="p-0055" num="0054"><figref idref="DRAWINGS">FIG. 14A</figref> is another structural diagram of Embodiment 3 of the present invention;</p>
+<p id="p-0056" num="0055"><figref idref="DRAWINGS">FIG. 14B</figref> is yet another structural diagram of Embodiment 3 of the present invention;</p>
+<p id="p-0057" num="0056"><figref idref="DRAWINGS">FIG. 15</figref> is a sectional diagram of <figref idref="DRAWINGS">FIG. 14</figref> of the present invention;</p>
+<p id="p-0058" num="0057"><figref idref="DRAWINGS">FIG. 16</figref> is a structural diagram of Embodiment 3 of the present invention in which one porous filter membrane is corresponding to a plurality of flow restrictors;</p>
+<p id="p-0059" num="0058"><figref idref="DRAWINGS">FIG. 17</figref> is a structural diagram of Embodiment 3 of the present invention in which a plurality of porous filter membranes are disposed in a water passing chamber;</p>
+<p id="p-0060" num="0059"><figref idref="DRAWINGS">FIG. 18</figref> is a schematic diagram of Embodiment 3 of the present invention in which an infiltration irrigation apparatus using a tubular support as a water passing chamber is mounted into a water pipe or a part thereof;</p>
+<p id="p-0061" num="0060"><figref idref="DRAWINGS">FIG. 19</figref> is schematic diagram of a mounting structure of Embodiment 3 of the present invention;</p>
+<p id="p-0062" num="0061"><figref idref="DRAWINGS">FIG. 20</figref> is a schematic diagram of a manufacturing process of Embodiment 3 of the present invention;</p>
+<p id="p-0063" num="0062"><figref idref="DRAWINGS">FIG. 21</figref> is a structural diagram of Embodiment 4 of the present invention;</p>
+<p id="p-0064" num="0063"><figref idref="DRAWINGS">FIG. 22</figref> is a structural diagram of Embodiment 4 of the present invention in which one porous filter membrane is corresponding to a plurality of flow restrictors;</p>
+<p id="p-0065" num="0064"><figref idref="DRAWINGS">FIG. 23</figref> is a structural diagram of Embodiment 4 of the present invention in which a plurality of porous filter membranes are disposed in a water passing chamber;</p>
+<p id="p-0066" num="0065"><figref idref="DRAWINGS">FIG. 24</figref> is schematic diagram of Embodiment 4 of the present invention in which an infiltration irrigation apparatus using a tubular support as a water passing chamber is mounted into a water pipe or a part thereof; and</p>
+<p id="p-0067" num="0066"><figref idref="DRAWINGS">FIG. 25</figref> is a schematic diagram of a manufacturing process of Embodiment 4 of the present invention.</p>
+</description-of-drawings>
+<?brief-description-of-drawings description="Brief Description of Drawings" end="tail"?>
+<?DETDESC description="Detailed Description" end="lead"?>
+<heading id="h-0006" level="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS</heading>
+<p id="p-0068" num="0067">Other features, advantages and embodiments of the present invention will be illustrated or explained in the following descriptions, drawings and claims. In addition, it shall be appreciated that the above summary and the following descriptions are just exemplary, and they intend to provide further explanations, instead of limiting the scope of the present invention.</p>
+<p id="p-0069" num="0068">Through a large number of tests, the inventor finds that whether the water stream in a pipe can burst through impurity particles blocked in the water outflow passage depends on the adhesive force of the impurities on the water outflow passage. Meanwhile, the adhesive force of the impurities on the water outflow passage is directly influenced by the particle size and the &#x201c;impact speed&#x201d; of the impurities blocked on the water outflow pore when the impurities is carried by a radial water stream to the water outflow pore. That is, the faster the &#x201c;impact speed&#x201d; is, the deeper the location of the impurities blocked in the water outflow passage is, the larger the adhesive force is, and the impurities are not easy to be burst through by an axial parallel water stream. On the contrary, if the location of the impurities blocked in the water outflow passage is shallow, the adhesive force is small, and the impurities are easy to be burst through by a transverse water stream. Since the particle sizes of the impurities determine the &#x201c;impact speed&#x201d; of the impurities during the settlement in the water, the relation between the particle size and the settling speed is described as follow by taking the sediment particles as an example: the coarse sand with a particle diameter of 1 mm sinks at 1 m/s in the water, the fine sand with a particle diameter of 0.1 mm sinks at 8 mm/s, the fine soil with a particle diameter of 10 microns sinks at 0.154 mm/s, and the fine clay with a particle diameter of 1 micron sinks at 0.00154 mm/s The specific gravity of the clay particle is the same as that of the coarse sediment, and the great difference in settling speed is caused by the Brownian motion. The smaller the particle diameter of the impurities in the water is, the stronger the Brownian motion is. Thus, under the influence of the Brownian motion, the smaller impurities have a lower adhesive force on the water outflow pore. Such impurities will be displaced for a large distance even by a very slight water oscillation, and can be easily cleared by the water stream in the pipe.</p>
+<p id="p-0070" num="0069">On the other hand, even the porous filter membrane is not easy to be blocked due to the tiny particles of impurities are influenced by the Brownian motion, the blockage possibility may be greatly increased when the water penetrating the pores has a high water outflow rate, because the flow rate of the tiny particles carried in the water stream will also be increased.</p>
+<p id="p-0071" num="0070">Based on the above influence factors, the present invention provides an infiltration irrigation apparatus. As illustrated in <figref idref="DRAWINGS">FIGS. 1 to 25</figref>, the infiltration irrigation apparatus of the present invention includes a water passing chamber <b>1</b>, one or more porous filter membranes <b>2</b>, and one or more flow restrictors <b>3</b>. In which, the water passing chamber <b>1</b> has a water inlet <b>11</b> and a water outlet <b>12</b>, and when the water flows between the water inlet <b>11</b> and the water outlet <b>12</b>, a water stream along an axial direction of the water passing chamber <b>1</b> will be formed in the water passing chamber <b>1</b>. The one or more porous filter membranes <b>2</b> are disposed in the water passing chamber <b>1</b> and formed with a filtration section <b>20</b> for accommodating the water filtered by the porous filter membrane <b>2</b>. The location of the porous filter membrane <b>2</b> is set so that when an axial water stream exists in the water passing chamber <b>1</b>, at least a part of the water stream flows along a surface of the porous filter membrane <b>2</b> to wash the surface. Each of the flow restrictors <b>3</b> is disposed on a sidewall of the water passing chamber <b>1</b> corresponding to the porous filter membrane <b>2</b>. Each of the flow restrictors <b>3</b> has one or more restricting orifices, an inlet communicated with the filtration section <b>20</b> of the porous filter membrane <b>2</b> and an outlet outside the water passing chamber <b>1</b>, and a total water seepage capability of the one or more flow restrictors <b>3</b> is smaller than that of the one or more porous filter membranes <b>2</b>.</p>
+<p id="p-0072" num="0071">The present invention further provides an infiltration irrigation method based on the above infiltration irrigation apparatus. In which, one or more porous filter membranes <b>2</b> are installed in a water passing chamber <b>1</b> and formed with a filtration section <b>20</b> for accommodating the water filtered by the porous filter membrane <b>2</b>. One or more flow restrictors <b>3</b> are disposed on a sidewall of the water passing chamber <b>1</b> corresponding to the location of each of the porous filter membranes <b>2</b>. Each of the flow restrictors <b>3</b> has one or more restricting orifices, an inlet communicated with the filtration section <b>20</b> of the porous filter membrane <b>2</b> and an outlet outside the water passing chamber <b>1</b>, and a total water seepage capability of the one or more flow restrictors <b>3</b> is smaller than that of the one or more porous filter membrane <b>2</b>. The water in the water passing chamber <b>1</b> is made to flow axially at regular time so that the axial water stream flows along a surface of the porous filter membrane <b>2</b> to wash the surface.</p>
+<p id="p-0073" num="0072">Thus, when an infiltration irrigation is carried out, the water is firstly filtered by the porous filter membrane <b>2</b> in the water passing chamber <b>1</b> and enters the filtration section <b>20</b>, then the water filtered by the filtration section <b>20</b> flows out through the flow restrictor <b>3</b>. Since the total water seepage capability of the one or more flow restrictors <b>3</b> is designed to be smaller than that of the one or more porous filter membranes <b>2</b> in the present invention, the total water outflow amount of the one or more flow restrictors <b>3</b> is smaller than that of the one or more porous filter membranes <b>2</b>, which reduces the amount of water penetrating the porous filter membrane <b>2</b>. Therefore, the water penetration rate of the porous filter membrane <b>2</b> is reduced, and the impact speed of the impurities carried in the water stream on the porous filter membrane <b>2</b> is decreased, so that the impurities are attached to the surface of the porous filter membrane <b>2</b> very slightly. In addition, as the porous filter membrane <b>2</b> is disposed in the water passing chamber <b>1</b>, the surface of the porous filter membrane <b>2</b> can be washed through the axial water stream in the water passing chamber <b>1</b>, so that the impurities attached to the surface of the porous filter membrane <b>2</b> very slightly are washed away by the water stream flowing along the surface of the porous filter membrane <b>2</b>, which improves or avoids a blockage of the porous filter membrane <b>2</b>, and effectively improves the blockage problem of the entire infiltration irrigation apparatus.</p>
+<p id="p-0074" num="0073">In the present invention, a maximum pore diameter of the restricting orifice of the flow restrictor <b>3</b> is preferably set to be larger than a maximum pore diameter of the porous filter membrane <b>2</b> (it can refer to Chinese national standard GB/T 1967-1996 for the method of measuring the maximum pore diameter). Thus a control may be carried out in the aspects of water penetration diameter and water seepage rate. Since the maximum pore diameter of the restricting orifice of the flow restrictor <b>3</b> is larger than that of the porous filter membrane <b>2</b>, the water filtered by the porous filter membrane <b>2</b> will not cause a blockage when flowing through the restricting orifice.</p>
+<p id="p-0075" num="0074">In the present invention, the maximum pore diameter may be defined as follows: a pore diameter corresponding to an intensity of pressure required for enabling the gas to pass through one end and a first bubble to occur at the other end after a porous substance is wetted by a liquid. The definitions of various pore diameters in the present invention may be acquired with reference to prior methods for measuring the pore diameter of the porous substance, and herein are not described in details.</p>
+<p id="p-0076" num="0075">As illustrated in <figref idref="DRAWINGS">FIG. 3</figref>, a plurality of flow restrictors <b>3</b> may be disposed at the water outflow side corresponding to each of the porous filter membranes <b>2</b>, and each of the flow restrictors <b>3</b> has at least one restricting orifice. The total water outflow amount of these flow restrictors <b>3</b> is smaller than that of the porous filter membrane(s) <b>2</b>, i.e., the total water seepage of each flow restrictor <b>3</b> is smaller than that of corresponding porous filter membrane(s) <b>2</b>, and the water filtered by all the porous filter membrane(s) <b>2</b> will not flow out of the infiltration irrigation apparatus unless passing through these restricting orifices.</p>
+<p id="p-0077" num="0076">As mentioned above, the maximum pore diameter of the restricting orifice in the flow restrictor <b>3</b> is larger than that of the porous filter membrane <b>2</b>, so that the water filtered by the porous filter membrane <b>2</b> will not cause a blockage when passing through the restricting orifice. These restricting orifices function to reduce the amount of water penetrating the porous filter membrane <b>2</b> in a certain proportion upon demand, so as to decrease the water penetration rate of the porous filter membrane <b>2</b>. That is, the impact speed of the impurities carried in the water stream on the porous filter membrane <b>2</b> is decreased, so that the impurities are attached very slightly to the pores of the porous filter membrane <b>2</b> and can be easily washed away by the water stream. Such infiltration irrigation apparatus is suitable to a wide range of water supplying pressure, and the water outflow of the porous filter membrane <b>2</b> under a certain water supplying pressure may be controlled by selecting an appropriate number and appropriate pore diameters of restricting orifices. Thus the water has a sufficiently low penetration rate on the porous filter membrane <b>2</b> of a certain area where it penetrates, so as to ensure that the surface of the porous filter membrane <b>2</b> will not be blocked under the washing of the water stream of a low flow rate.</p>
+<p id="p-0078" num="0077">Preferably, the present invention uses a porous filter membrane <b>2</b> with the maximum pore diameter no more than 20 &#x3bc;m (more preferably 10 &#x3bc;m) as the water outflow passage for infiltration irrigation, so as to choose impurity particles having strong Brown motion characteristics to fit the pores of the porous filter membrane <b>2</b>. As a result, impurity particles capable of blocking the pores of the porous filter membrane <b>2</b> are not easily to be attached to the pores of the porous filter membrane <b>2</b>, and can be washed away by the water flowing along the surface of the porous filter membrane <b>2</b>. The particle diameters of smaller impurities are far less than the pores of the porous filter membrane <b>2</b>, and can easily pass through these pores without causing a blockage. Since large impurities will not be blocked in the membrane pores, the adhesive force is greatly reduced, and the impurities are easy to be washed away. Among even larger impurity particles there are many pores, and those impurities will not block the pores of the porous filter membrane <b>2</b> even stayed on the surface of the porous filter membrane <b>2</b>.</p>
+<p id="p-0079" num="0078">Thus, the present invention, by determining the diameters of pores of the porous filter membrane <b>2</b>, chooses out impurities having strong Brown motion characteristics as potential obstructions. In the meantime, the flow rate of water penetrating the porous filter membrane <b>2</b> is restricted by the flow restrictor <b>3</b> so as to decrease the &#x201c;impact speed&#x201d; of the obstruction. Under the influence of the Brown motion, the obstructions can only suspend on the surface of the porous filter membrane <b>2</b>, and can be easily carried away by the water stream on the surface of the porous filter membrane <b>2</b>, and the porous filter membrane <b>2</b> will nearly not be blocked by any particle. At the same time, the pore diameter of the flow restrictor <b>3</b> is larger than that of the porous filter membrane <b>2</b>, thus the flow restrictor <b>3</b> also will not be blocked. Therefore, the infiltration irrigation apparatus of the present invention is difficult to be blocked, and the service life of the entire irrigation system using the infiltration irrigation apparatus is greatly prolonged.</p>
+<p id="p-0080" num="0079">The water passing chamber <b>1</b> in the infiltration irrigation apparatus of the present invention may be formed in a tubular shape. As illustrated in <figref idref="DRAWINGS">FIGS. 1</figref>, <b>4</b> and <b>5</b>, the water passing chamber <b>1</b> may be constituted by a water pipe <b>10</b> or a part thereof, or may be a tubular support enclosed in the water pipe as illustrated in <figref idref="DRAWINGS">FIGS. 6 and 7</figref>. Thus, when water flows in the water pipe, some flows in the axial direction of the water pipe and passes by the surface of the porous filter membrane <b>2</b> to wash the surface, while some is filtered by the porous filter membrane <b>2</b>, enters the flow restrictor <b>3</b> through the filtration section <b>20</b>, and flows out of the outlet of the flow restrictor <b>3</b> to form irrigation water.</p>
+<p id="p-0081" num="0080">When the infiltration irrigation apparatus of the present invention is used, the water in the water passing chamber <b>1</b> may be enabled to flow axially at regular time, so as to periodically clear the impurities on the surface of the porous filter membrane <b>2</b> in the water passing chamber <b>1</b>. The flow of water stream in the water passing chamber <b>1</b> may be implemented in various manners. For example, one end of the water pipe is provided with a valve or micro pump, and the water in the whole pipe will flow when some water is discharged by opening the valve or the water is pumped by the other end of the micro pump, so as to form an axial water stream in the water passing chamber <b>1</b>. Such axial flow of the water stream in the water passing chamber <b>1</b> may effectively wash the porous filter membrane <b>2</b>, so that the impurities stayed thereon will be displaced and cannot block the pores of the porous filter membrane <b>2</b>, thus a long-time and stable operation of the entire irrigation system is ensured. Or, when the water pipe is an annular (circular, elliptical, rectangular or the like) structure, a micro pump may also be mounted on the pipe, so as to make the water in the pipe move periodically, and continuously clear the impurities on the porous filter membrane <b>2</b>. Thus the membrane is ensured to be unobstructed and the flow restrictor <b>3</b> will not be blocked, and the entire irrigation system can operate stably in a long term.</p>
+<p id="p-0082" num="0081">In the present invention, the restricting orifices of the flow restrictor <b>2</b> may be formed in various manners. For example, a porous medium having a capillary function or capillary tube bundles may be disposed in the flow restrictor <b>2</b> to form a plurality of restricting orifices. Of course, the restricting orifices may also be formed in other manners known by persons skilled in the art, and herein is not limited.</p>
+<p id="p-0083" num="0082">During the actual operation, a manner may also be adopted in which the average or minimum pore diameter of the restricting orifice is larger than the maximum pore diameter of the porous filter membrane, which is more favorable to prevent the flow restrictor from being blocked (it can refer to Chinese national standard GB/T 1967-1996 for the method of measuring the average and minimum pore diameters).</p>
+<p id="p-0084" num="0083">Preferably, the maximum pore diameter of the restricting orifice <b>3</b> is chosen to be equal to or greater than 5 times of that of the porous filter membrane <b>2</b>. Or even preferably, the maximum pore diameter of the restricting orifice <b>3</b> is chosen to be equal to or greater than 10 times of that of the porous filter membrane <b>2</b>. The definitive relation between the pore diameters of the restricting orifice and the porous filter membrane <b>2</b> solves the problem that the restricting orifice is easy to be blocked.</p>
+<p id="p-0085" num="0084">The larger the difference between the water seepage capabilities of the flow restrictor <b>3</b> and the porous filter membrane <b>2</b> is, the slower the water seepage rate of the porous filter membrane <b>2</b> is, the smaller the &#x201c;impact speed&#x201d; of the impurity is, and the longer the service life of the porous filter membrane <b>2</b>. Thus, in order to manufacture an infiltration irrigation apparatus of an ultra-long service life, works of the following two aspects shall be done after the pore diameter of the porous filter membrane <b>2</b> has been determined: on one hand, the water outflow of the flow restrictor <b>3</b> is decreased so far as possible on the condition that the water amount needed by the plants is satisfied, by reducing the number of the restricting orifices or the pore diameter thereof (not less than that of the porous filter membrane); on the other hand, water seepage capability of the porous filter membrane <b>2</b> is enhanced so far as possible by increasing the seepage area. Thus, an infiltration irrigation apparatus can be manufactured to work in long term using any water.</p>
+<p id="p-0086" num="0085">The embodiments of the infiltration irrigation apparatus of the present invention are described as follows with reference to the drawings, so as to further describe the infiltration irrigation apparatus and the method for manufacturing the same. To be noted, all the drawings are just illustrative and not drafted in scales. In the drawings, the same reference signs are used to denote the same or similar components.</p>
+<p id="h-0007" num="0000">Embodiment 1</p>
+<p id="p-0087" num="0086"><figref idref="DRAWINGS">FIGS. 1 to 8</figref> illustrate the structural diagrams of the infiltration irrigation apparatus according to Embodiment 1 of the present invention. As illustrated in <figref idref="DRAWINGS">FIG. 1</figref>, the infiltration irrigation apparatus according to the embodiment includes a water passing chamber <b>1</b>, a porous filter membrane <b>2</b> and a flow restrictor <b>3</b>. The water passing chamber <b>1</b> has a water inlet <b>11</b> and a water outlet <b>12</b>. The porous filter membrane <b>2</b> covers a complete circumference of inner wall of the water passing chamber <b>1</b>. The edges of both ends of the porous filter membrane <b>2</b> may closely engage with the inner wall of the water passing chamber <b>1</b> and then become waterproof, so as to form a filtration section <b>20</b> between the porous filter membrane <b>2</b> and the inner wall of the water passing chamber <b>1</b> covered thereby. The flow restrictor <b>3</b> is disposed on a sidewall of the water passing chamber <b>1</b> corresponding to the porous filter membrane <b>2</b>. Each flow restrictor <b>3</b> has one or more restricting orifices, an inlet communicated with the filtration section <b>20</b> of the porous filter membrane <b>2</b> and an outlet outside the water passing chamber <b>1</b>. The total water seepage capability of the flow restrictor <b>3</b> is smaller than that of the porous filter membrane <b>2</b>.</p>
+<p id="p-0088" num="0087">Thus as illustrated in <figref idref="DRAWINGS">FIGS. 1 to 8</figref>, since the porous filter membrane <b>2</b> covers the complete circumference of inner wall of the water passing chamber <b>1</b>, when an infiltration irrigation for plants is carried out, the water in the water passing chamber <b>1</b> will be filtered by the porous filter membrane <b>2</b>, enter the filtration section <b>20</b> between the porous filter membrane <b>2</b> and the inner wall of the water passing chamber <b>1</b>, and flow out through the restricting orifice of the flow restrictor <b>3</b>, so as to form irrigation water for irrigating plants. Since the total water seepage capability of the flow restrictor <b>3</b> is smaller than that of the porous filter membrane <b>2</b>, i.e., the total water outflow amount of the flow restrictor <b>3</b> is smaller than that of the porous filter membrane <b>2</b>, the water penetrating the porous filter membrane <b>2</b> flows very slowly. After the infiltration irrigation apparatus is used for some time, the impurities in water will only be slightly attached to the porous filter membrane <b>2</b>. In that case, by making water in the water passing chamber <b>1</b> flow axially, the axial water stream passing by the water passing chamber <b>1</b> will flow along the surface of the porous filter membrane <b>2</b>, so as to wash impurities on the porous filter membrane <b>2</b>, and effectively prevents the porous filter membrane <b>2</b> from being blocked.</p>
+<p id="p-0089" num="0088">In this embodiment, the maximum pore diameter of the restricting orifice of the flow restrictor <b>3</b> is preferably larger than that of the porous filter membrane <b>2</b>. Thus, the restricting orifice of the flow restrictor <b>3</b> will not be blocked during the infiltration irrigation since the maximum pore diameter of the restricting orifice of the flow restrictor <b>3</b> is larger than that of the porous filter membrane <b>2</b>.</p>
+<p id="p-0090" num="0089">In this embodiment, the porous filter membrane <b>2</b> may be directly disposed on the inner wall of the water passing chamber <b>1</b> by welding or compression joint, so that the water stream flows on the porous filter membrane <b>2</b> and the wash effect is the optimum.</p>
+<p id="p-0091" num="0090">As illustrated in <figref idref="DRAWINGS">FIGS. 1 and 3</figref>, the flow restrictor <b>3</b> may be composed of one or more restricting orifices. The flow restrictor <b>3</b> may be directly opened on the pipe wall in the range covered by the porous filter membrane <b>2</b>, or the restricting orifice may be extended outside the infiltration irrigation apparatus by appropriately extending the flow restrictor <b>3</b>. As illustrated in <figref idref="DRAWINGS">FIG. 1</figref>, in this embodiment, the sidewall of the water passing chamber <b>1</b> may be disposed with an opening for engaging with the flow restrictor <b>3</b>. The flow restrictor <b>3</b> may be directly mounted in the opening to dispose the flow restrictor <b>3</b> on the sidewall of the tubular water passing chamber <b>1</b>. The mounting of the flow restrictor <b>3</b> in the opening of the water passing chamber <b>1</b> may be specifically as follows: the flow restrictor <b>3</b> is made of porous ceramics and inserted into the opening with its outer wall closely engaging with the opening edge; or the flow restrictor <b>3</b> is made of several hydrophilic fibers directly disposed in the opening with their ends extending outside, so as to form a mounting structure for the flow restrictor <b>3</b> and the opening. As illustrated in <figref idref="DRAWINGS">FIG. 1A</figref>, the inlet of the flow restrictor <b>3</b> may be closely engaged with the opening to dispose the flow restrictor <b>3</b> on the sidewall of the water passing chamber <b>1</b>.</p>
+<p id="p-0092" num="0091">As illustrated in <figref idref="DRAWINGS">FIGS. 1 and 2</figref>, in this embodiment, each porous filter membrane <b>2</b> may be correspondingly disposed with one flow restrictor <b>3</b>, or as illustrated in <figref idref="DRAWINGS">FIGS. 3 and 5</figref>, each porous filter membrane <b>2</b> is corresponding to two or more flow restrictors <b>3</b>, so as to distribute the irrigation water to different irrigation locations. Under the same pressure and time, the water outflow amounts of the porous filter membrane <b>2</b> are measured and the water outflow amounts of the one or more flow restrictors <b>3</b> in the range covered by the porous filter membrane <b>2</b> are measured, and the total water seepage amount of the one or more flow restrictors <b>3</b> shall be smaller than that of the porous filter membrane <b>2</b>, i.e., the total water seepage capability of the one or more flow restrictors <b>3</b> is smaller than that of the porous filter membrane <b>2</b>. Thus the flow restrictor <b>3</b> limits the water seepage rate of the porous filter membrane <b>2</b>, and reduces the &#x201c;impact speed&#x201d; of impurities in the water on the porous filter membrane <b>2</b>. So the impurities on the surface of the porous filter membrane <b>2</b> are easier to be cleared by the water stream, which greatly prolongs the service life of the porous filter membrane.</p>
+<p id="p-0093" num="0092">In this embodiment, as illustrated in <figref idref="DRAWINGS">FIGS. 1</figref>, <b>4</b>, <b>5</b> and <b>8</b>, the water passing chamber <b>1</b> may be constituted by a water pipe <b>10</b> or a part thereof. As illustrated in <figref idref="DRAWINGS">FIG. 4</figref>, a plurality of porous filter membranes <b>2</b> may be disposed in the axial direction of the water pipe <b>10</b> or a part thereof. Or as illustrated in <figref idref="DRAWINGS">FIG. 5</figref>, a whole porous filter membrane <b>2</b> is extendedly disposed in the axial direction of the water pipe <b>10</b> or a part thereof, and a plurality of flow restrictors <b>3</b> are disposed in correspondence to the porous filter membrane <b>2</b>, so as to irrigate plants at different locations.</p>
+<p id="p-0094" num="0093">As illustrated in <figref idref="DRAWINGS">FIGS. 7 and 8</figref>, the water passing chamber <b>1</b> may also be a tubular support enclosed in the water pipe <b>10</b>. An infiltration irrigation apparatus having such a water passing chamber <b>1</b> composed of a tubular support may be manufactured in the following steps:</p>
+<p id="p-0095" num="0094">A. providing one or more flow restrictors <b>3</b>, one or more porous filter membranes <b>2</b>, and a water passing chamber <b>1</b> composed of a tubular support, wherein each flow restrictor <b>3</b> has one or more restricting orifices, and the total water seepage capability of the one or more flow restrictors <b>3</b> is smaller than that of the one or more porous filter membranes <b>2</b>;</p>
+<p id="p-0096" num="0095">B. correspondingly disposing the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> on the tubular support, wherein the porous filter membrane <b>2</b> is located in the pipe of the tubular support; a filtration section <b>20</b> for accommodating water filtered by the porous filter membrane <b>2</b> is formed; the flow restrictor <b>3</b> is mounted on the sidewall of the tubular support in correspondence to the porous filter membrane <b>2</b>; and an inlet of the flow restrictor <b>3</b> is communicated with the filtration section <b>30</b> of the porous filter membrane <b>2</b>;</p>
+<p id="p-0097" num="0096">C. putting the tubular support having the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> into a molding machine head during an extrusion molding of a water pipe <b>10</b>, so that the tubular support is wrapped in the water pipe <b>10</b> after the water pipe <b>10</b> is extruded by the molding machine head; and</p>
+<p id="p-0098" num="0097">D. making a cut at a location corresponding to an outlet of flow restrictor <b>3</b> on the sidewall of the water pipe <b>10</b>, so as to expose the outlet of the flow restrictor <b>3</b> and form an infiltration irrigation apparatus as illustrated in <figref idref="DRAWINGS">FIG. 8</figref>.</p>
+<p id="p-0099" num="0098">Thus, when water flows in the water pipe, some flows in the axial direction of the water pipe and passes by the surface of the porous filter membrane <b>2</b> to wash the surface, while some is filtered by the porous filter membrane <b>2</b>, enters the flow restrictor <b>3</b> through the filtration section <b>20</b>, and flows out of the outlet of the flow restrictor <b>3</b> to form irrigation water.</p>
+<p id="p-0100" num="0099">Upon the irrigation demand, the water pipe <b>10</b> or a part thereof may be a main water pipe in the irrigation system, or a plurality of branches connected to the main water pipe, and herein is not limited.</p>
+<p id="p-0101" num="0100">The flow of water stream in the water passing chamber <b>1</b> may be implemented in various manners. For example, one end of the water pipe is provided with a valve or micro pump, and the water in the whole pipe will flow when some water is discharged by opening the valve or the water is pumped by the other end of the micro pump upon demand, so as to form an axial water stream in the water passing chamber <b>1</b>. For a short water passing chamber <b>1</b> or water pipe, a pushable piston may be disposed at the location of a water inlet <b>11</b>. When the porous filter membrane <b>2</b> needs to be cleaned, the piston is pushed to make the water in the water passing chamber <b>1</b> or the water pipe flow, so as to wash the surface of the porous filter membrane <b>2</b>.</p>
+<p id="p-0102" num="0101">During the production of such infiltration irrigation apparatus, it is inconvenient to mount the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> in the narrow tube, and there are many inconveniences in implementation with prior producing methods. The infiltration irrigation apparatus of the present invention may be manufactured by using the following method, in addition to the manner as illustrated in <figref idref="DRAWINGS">FIGS. 7 and 8</figref> in which a tubular support having the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> is firstly formed and then put into the water pipe:</p>
+<p id="p-0103" num="0102">A. molding a flow restrictor <b>3</b> having one or more restricting orifices;</p>
+<p id="p-0104" num="0103">B. engaging one or more flow restrictors <b>3</b> with a plastic sheet <b>13</b> having first and second longitudinal edges <b>131</b>, <b>132</b>, as illustrated in <figref idref="DRAWINGS">FIG. 6</figref>;</p>
+<p id="p-0105" num="0104">C. providing a porous filter membrane <b>2</b> such that the total water seepage capability of the one or more flow restrictors <b>3</b> is smaller than that of the porous filter membrane <b>2</b>;</p>
+<p id="p-0106" num="0105">D. making one or more porous filter membranes <b>2</b> to at least cover an inner wall of the plastic sheet <b>13</b> corresponding to the flow restrictor <b>3</b>, so as to form the filtration section between the porous filter membrane <b>2</b> and the inner wall covered thereby, as illustrated in <figref idref="DRAWINGS">FIG. 6</figref>; and</p>
+<p id="p-0107" num="0106">E. engaging the first longitudinal edge of the plastic sheet <b>10</b> with the second longitudinal edge of the plastic sheet <b>10</b> to form a tubular shape, as illustrated in <figref idref="DRAWINGS">FIG. 6</figref>.</p>
+<p id="p-0108" num="0107">The steps C and D may be performed before the steps A and B, i.e., the porous filter membrane <b>2</b> may be connected to the plastic sheet <b>13</b> firstly, then the flow restrictor <b>3</b> is engaged with the plastic sheet <b>13</b>, and limitation is not made in the present application. Furthermore, in step A, the flow restrictor <b>3</b> may be an independent product, or directly formed by molding the porous medium or capillary tubes at the opening of the plastic sheet <b>10</b>, and herein is not limited.</p>
+<p id="p-0109" num="0108">Thus in this embodiment, the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> may be directly engaged with the plastic sheet <b>13</b> at first in the production, and then the first and second longitudinal edges <b>131</b> and <b>132</b> of the plastic sheet are engaged (by hot melting or gluing) with each other to form the plastic sheet <b>13</b> into a tubular shape, so as to facilitate the continuous production of the tubular infiltration irrigation apparatus.</p>
+<p id="h-0008" num="0000">Embodiment 2</p>
+<p id="p-0110" num="0109"><figref idref="DRAWINGS">FIGS. 9 to 13</figref> illustrate structural diagrams of Embodiment 2 of the present invention. The basic structure of this embodiment is substantially the same as that of Embodiment 1, the descriptions of the same portions are omitted herein, and the difference is the manner of disposing the porous filter membrane <b>2</b>. In this embodiment, provided that the total water seepage capability of the porous filter membrane <b>2</b> is larger than that of the flow restrictor <b>3</b>, the porous filter membrane <b>2</b> may be just disposed on a part of the circumference of the inner wall of the water pipe <b>1</b>, i.e., it only covers a part of the inner circumferential wall of the water passing chamber <b>1</b> corresponding to the flow restrictor <b>3</b>. In addition, the edges of the porous filter membrane <b>3</b> closely engage with the inner of the water pipe to proof water, so as to form an isolated filtration section <b>20</b> between the porous filter membrane <b>2</b> and the inner wall of the water pipe covered thereby. The water cannot become irrigation water until it enters the filtration section <b>20</b> through the porous filter membrane <b>2</b> and flows out through the flow restrictor. The water stream in the water pipe functions to clear impurities when passing by the surface of the porous filter membrane <b>2</b>.</p>
+<p id="p-0111" num="0110">In this embodiment, as illustrated in <figref idref="DRAWINGS">FIG. 9</figref>, each porous filter membrane <b>2</b> may be correspondingly disposed with a flow restrictor <b>3</b>. Or as illustrated in <figref idref="DRAWINGS">FIGS. 11 and 12</figref>, each porous filter membrane <b>2</b> may be corresponding to two or more flow restrictors <b>3</b>, so as to distribute the irrigation water to different irrigation locations.</p>
+<p id="p-0112" num="0111">In this embodiment, as illustrated in <figref idref="DRAWINGS">FIGS. 9</figref>, <b>11</b> and <b>12</b>, the water passing chamber <b>1</b> may be constituted by a water pipe <b>10</b> or a part thereof. As illustrated in <figref idref="DRAWINGS">FIG. 11</figref>, a plurality of porous filter membranes <b>2</b> may be disposed in the axial direction of the water pipe <b>10</b> or a part thereof. Or as illustrated in <figref idref="DRAWINGS">FIG. 12</figref>, a whole porous filter membrane <b>2</b> is extendedly disposed in the axial direction of the water pipe <b>10</b> or a part thereof, and a plurality of flow restrictors <b>3</b> are disposed in correspondence to the porous filter membrane <b>2</b>, so as to irrigate plants at different locations. Upon the irrigation demand, the water pipe <b>10</b> or a part thereof may be a main water pipe in the irrigation system, or a plurality of branches connected to the main water pipe, and herein is not limited.</p>
+<p id="p-0113" num="0112">In this embodiment, being similar to illustrations of <figref idref="DRAWINGS">FIGS. 7 and 8</figref> in Embodiment 1, the water passing chamber <b>1</b> may be a tubular support enclosed in the water pipe <b>10</b> (not shown). The manufacturing method thereof can also be the same as that in Embodiment 1, and herein is omitted.</p>
+<p id="p-0114" num="0113">In this embodiment, the flow of water stream in the water passing chamber <b>1</b> may also be implemented in various manners. For example, one end of the water pipe is provided with a valve or micro pump, and the water in the whole pipe will flow when some water is discharged by opening the valve or the water is pumped by the other end of the micro pump upon demand, so as to form an axial water stream in the water passing chamber <b>1</b>. For a short water passing chamber <b>1</b> or water pipe, a pushable piston may be disposed at the location of a water inlet <b>11</b>. When the porous filter membrane <b>2</b> needs to be cleaned, the piston is pushed to make water in the water passing chamber <b>1</b> or the water pipe flow, so as to wash the surface of the porous filter membrane <b>2</b>.</p>
+<p id="p-0115" num="0114">During the production of such infiltration irrigation apparatus, it is inconvenient to mount the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> in the narrow tube, and there are many inconveniences in implementation with the prior producing methods. Being similar to Embodiment 1, in addition to the manner as illustrated in <figref idref="DRAWINGS">FIGS. 7 and 8</figref> in which a tubular support having the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> is firstly formed and then put into the water pipe, the following method may be adopted: as illustrated in <figref idref="DRAWINGS">FIG. 13</figref>, the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> may be firstly disposed on the plastic sheet <b>13</b> having the first and second longitudinal edges <b>131</b> and <b>132</b>, and then the first and second longitudinal edges <b>131</b> and <b>132</b> of the plastic sheet <b>13</b> are engaged (by hot melting or gluing) with each other to form the plastic sheet <b>13</b> into a tubular shape, so as to facilitate the continuous production of the tubular infiltration irrigation apparatus.</p>
+<p id="p-0116" num="0115">Since the embodiment has a structure substantially the same as that of Embodiment 1, the technical effect of Embodiment 1 will also be achieved, and herein is omitted.</p>
+<p id="h-0009" num="0000">Embodiment 3</p>
+<p id="p-0117" num="0116"><figref idref="DRAWINGS">FIGS. 14 to 19</figref> illustrate structural diagrams of Embodiment 3 of the present invention. The basic structure and the principle of this embodiment are substantially the same as that of Embodiment 1, and the descriptions of the same portions are omitted herein. As illustrated in <figref idref="DRAWINGS">FIGS. 14 to 19</figref>, this embodiment differs from Embodiment 1 in that the porous filter membrane <b>2</b> is bag-shaped, and the filtration section <b>20</b> is formed in a bag of the porous filter membrane <b>2</b>. During the infiltration irrigation, the water cannot become irrigation water until it enters the bag through the bag-shaped porous filter membrane <b>2</b> (i.e., into the filtration section <b>20</b>), and flows out of the tubular infiltration irrigation apparatus through the flow restrictor <b>3</b>.</p>
+<p id="p-0118" num="0117">In addition to the effect of Embodiment 1, since a bag-shaped porous filter membrane <b>2</b> is used, a blockage is more difficult to be caused. Because firstly, as compared with the flush porous filter membrane, the bag-shaped porous filter membrane <b>2</b> can multiply the membrane area in a narrow space, reduce the adhesive force of impurities, and prolong the membrane life. Secondly, once water flows in the pipe, a pressure will be produced in a part of region of the bag of the porous filter membrane <b>2</b>; such pressure is transferred to the water in the bag and causes a liquid pressure outward from the inside of the bag; and some water flows outwards from the inside of the bag through the pores on the membrane, so as to produce a certain effect of backwash and prolong the membrane life.</p>
+<p id="p-0119" num="0118">As illustrated in <figref idref="DRAWINGS">FIGS. 14A and 14B</figref>, in this embodiment, the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> may be disposed on the water passing chamber <b>1</b> in a manner similar to that of Embodiment 1. The bag mouth edges of the porous filter membrane <b>2</b> closely engage with the inner wall of the water passing chamber <b>1</b>, an opening for engaging with the flow restrictor <b>3</b> is disposed at a location on the sidewall of the water passing chamber <b>1</b> corresponding to the bag mouth of the porous filter membrane <b>2</b>, and the inlet of the flow restrictor <b>3</b> may directly and closely engage with the opening on the sidewall of the water passing chamber <b>1</b> as illustrated in <figref idref="DRAWINGS">FIG. 14A</figref>, or as illustrated in <figref idref="DRAWINGS">FIG. 14B</figref>, the flow restrictor <b>3</b> is mounted in the opening with its outer wall engaging with the opening edges. As illustrated in <figref idref="DRAWINGS">FIG. 14</figref>, in this embodiment, the bag mouth of the porous filter membrane <b>2</b> may be fixedly and closely engaged with the inlet edge of the flow restrictor <b>3</b> at first, so that the inlet of the flow restrictor <b>3</b> is communicated with the filtration section <b>20</b>; and then the flow restrictor <b>3</b> having a membrane bag is fixed by plugging from inside to outside and sealed at the opening of the water passing chamber <b>1</b>. This mounting manner is simple and convenient, in which the flow restrictor <b>3</b> may have an inverted cone shape so as to be conveniently plugged at the opening of the water passing chamber <b>1</b>. Further as illustrated in <figref idref="DRAWINGS">FIG. 19</figref>, the upper portion of the flow restrictor <b>3</b> may have a neck. During the mounting, the bag mouth of the membrane bag is fixedly and closely engaged with the opening of the water passing chamber <b>1</b>, then the flow restrictor <b>3</b> is inserted into the opening from outside the water passing chamber <b>1</b>, and the neck of the flow restrictor <b>3</b> is clamped and fixed at the opening, finally is sealed. Preferably, the opening of the water passing chamber <b>1</b> is made of a material (e.g., rubber) of a good elasticity for the convenience of mounting and ensuring the sealing effect.</p>
+<p id="p-0120" num="0119">In this embodiment, the porous filter membrane <b>2</b> is preferably in a flat bag shape, and the flat bag-shaped porous filter membrane <b>2</b> is set flush in the water passing chamber <b>1</b>, which can effectively increase the area of the porous filter membrane <b>2</b>, and will not cause too large a resistance to the water stream in the pipe.</p>
+<p id="p-0121" num="0120">In this embodiment, each porous filter membrane <b>2</b> may be provided with a flow restrictor <b>3</b> as illustrated in <figref idref="DRAWINGS">FIG. 14</figref>; or as illustrated in <figref idref="DRAWINGS">FIG. 16</figref>, each porous filter membrane <b>2</b> is corresponding to two or more flow restrictors <b>3</b>, so as to distribute the irrigation water to different irrigation locations.</p>
+<p id="p-0122" num="0121">In this embodiment, as illustrated in <figref idref="DRAWINGS">FIGS. 14</figref>, <b>17</b> and <b>18</b>, the water passing chamber <b>1</b> may be constituted by a water pipe <b>10</b> or a part thereof. As illustrated in <figref idref="DRAWINGS">FIGS. 17 and 18</figref>, a plurality of porous filter membranes <b>2</b> may be disposed along the axial direction of the water pipe <b>10</b> or a part thereof. Upon the irrigation demand, the water pipe <b>10</b> or a part thereof may be a main water pipe in the irrigation system, or a plurality of branches connected to the main water pipe, and herein is not limited.</p>
+<p id="p-0123" num="0122">In this embodiment, as illustrated in <figref idref="DRAWINGS">FIG. 18</figref>, the water passing chamber <b>1</b> may be a tubular support enclosed in the water pipe <b>10</b> similar to that as illustrated in <figref idref="DRAWINGS">FIGS. 7 and 8</figref> of Embodiment 1. The manufacturing method thereof may be the same as that of Embodiment 1, and herein is omitted.</p>
+<p id="p-0124" num="0123">In this embodiment, the flow of water stream in the water passing chamber <b>1</b> may be implemented in various manners. For example, one end of the water pipe is provided with a valve or micro pump, and the water in the whole pipe will flow when some water is discharged by opening the valve or the water is pumped by the other end of the micro pump upon demand, so as to form an axial water stream in the water passing chamber <b>1</b>. For a short water passing chamber <b>1</b> or water pipe, a pushable piston may be disposed at the location of a water inlet <b>11</b>. When the porous filter membrane <b>2</b> needs to be cleaned, the piston is pushed to make water in the water passing chamber <b>1</b> or the water pipe flow, so as to wash the surface of the porous filter membrane <b>2</b>.</p>
+<p id="p-0125" num="0124">During the production of such infiltration irrigation apparatus, it is inconvenient to mount the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> in the narrow tube, and there are many inconveniences in implementation with the prior producing methods. Being similar to Embodiment 1, in addition to the manner as illustrated in <figref idref="DRAWINGS">FIGS. 7 and 8</figref> in which a tubular support having the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> is firstly formed and then put into the water pipe, the following method may be adopted: as illustrated in <figref idref="DRAWINGS">FIG. 20</figref>, the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> may be firstly disposed on the plastic sheet <b>13</b> having the first and second longitudinal edges <b>131</b> and <b>132</b>, and then the first and second longitudinal edges <b>131</b> and <b>132</b> of the plastic sheet <b>13</b> are engaged (by hot melting or gluing) with each other to form the plastic sheet <b>13</b> into a tubular shape, so as to facilitate the continuous production of the tubular infiltration irrigation apparatus.</p>
+<p id="p-0126" num="0125">Since the embodiment has a structure substantially the same as Embodiment 1, the technical effect of Embodiment 1 will also be achieved, and herein is omitted.</p>
+<p id="h-0010" num="0000">Embodiment 4</p>
+<p id="p-0127" num="0126"><figref idref="DRAWINGS">FIGS. 21 to 25</figref> illustrate structural diagrams of Embodiment 4 of the present invention. The basic structure and the principle of this embodiment are substantially the same as the preceding embodiments, and the descriptions of the same portions are omitted herein. In which as illustrated in <figref idref="DRAWINGS">FIGS. 21 to 25</figref>, this embodiment differs from the preceding embodiments as follows: in preceding Embodiments 1 to 3, the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> are not integrally formed and may be formed of different materials, e.g., the porous filter membrane <b>2</b> is made of nylon membrane, and the flow restrictor <b>3</b> is made of hydrophilic fibers or porous material; while in this embodiment, the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> are formed integrally with the same porous material (e.g., porous ceramics), i.e., the upper portion of the flow restrictor <b>3</b> becomes the porous filter membrane <b>2</b> of a large area so that the porous filter membrane <b>2</b> itself forms a filtration section <b>20</b> isolated from the water passing chamber <b>1</b>, and the bottom of the porous filter membrane <b>2</b> extrudes integrally to form the flow restrictor <b>3</b>. In addition, the thickness and area of the porous filter membrane <b>2</b> may be set according to the filtration demands.</p>
+<p id="p-0128" num="0127">In this embodiment, the total water seepage capability of the porous filter membrane <b>2</b> may be larger than that of one or more flow restrictors <b>3</b> by setting the water seepage surface of the porous filter membrane <b>2</b> to be larger than the total water outflow area of the one or more flow restrictors <b>3</b>, so as to restrict the flow rate of the water penetrating the porous filter membrane <b>2</b>.</p>
+<p id="p-0129" num="0128">The integral structure of the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> has a small water outflow area outside the water passing chamber <b>1</b>, while a far larger volume and a quite larger surface inside the water passing chamber <b>1</b>. Thus the water outlet at the outside actually functions to restrict the water stream, and the water penetration rate on the large surface inside is very slow. The &#x201c;impact speed&#x201d; of impurities is slower correspondingly, which is very beneficial for clearing the impurities. The porous filter membrane <b>2</b> and the flow restrictor <b>3</b> made of an integral material are easier for manufacturing and mounting, and have a reduced cost.</p>
+<p id="p-0130" num="0129">In this embodiment, an opening may be pre-disposed on the water passing chamber <b>1</b>, and the water outlet of the flow restrictor <b>3</b> may be inserted from the inside to the outside through the opening and then fixed and sealed. Alternatively, the flow restrictor <b>3</b> may be screwed on the sidewall of the water passing chamber <b>1</b> by its housing.</p>
+<p id="p-0131" num="0130">As illustrated in <figref idref="DRAWINGS">FIG. 25</figref>, the method for manufacturing the infiltration irrigation apparatus is easier than that of Embodiment 1. It only needs to molding the porous filter membrane <b>2</b> and the flow restrictor <b>3</b> integrally formed with a same material (e.g., porous ceramics), and then engaging them with the plastic sheet. It can refer to Embodiment 1 for other portions.</p>
+<p id="p-0132" num="0131">In this embodiment, as illustrated in <figref idref="DRAWINGS">FIG. 24</figref>, the water passing chamber <b>1</b> may also be a tubular support enclosed in the water pipe <b>10</b>. The manufacturing method thereof may be the same as that of Embodiment 1, and herein is omitted.</p>
+<p id="p-0133" num="0132">Although the embodiments disclose the present invention, they do not intend to limit the present invention. Any replacement of equivalent assembly made by a person skilled in the art without deviating from the concept and scope of the present invention, or any equivalent change and modification made according to the patent protection scope of the present invention, shall be covered by the present patent application.</p>
+<?DETDESC description="Detailed Description" end="tail"?>
+</description>
+<us-claim-statement>What is claimed is:</us-claim-statement>
+<claims id="claims">
+<claim id="CLM-00001" num="00001">
+<claim-text>1. An infiltration irrigation apparatus, comprising:
+<claim-text>a water passing chamber having a water outlet and a water inlet, wherein a water stream along an axial direction of the water passing chamber is formed when water flows between the water inlet and the water outlet;</claim-text>
+<claim-text>one or more porous filter membranes disposed in the water passing chamber and formed with a filtration section for accommodating the water filtered by the one or more porous filter membranes, wherein the location of the one or more porous filter membranes is set so that at least a part of the water stream flows along a surface of the porous filter membrane to wash the surface when the axial water stream exists in the water passing chamber; and</claim-text>
+<claim-text>one or more flow restrictors each disposed on a sidewall of the water passing chamber corresponding to the porous filter membrane, wherein each of the one or more flow restrictors has one or more restricting orifices, an inlet communicated with the filtration section of the one or more porous filter membranes and an outlet outside the water passing chamber, a maximum pore diameter of the restricting orifice of the flow restrictor is larger than that of the porous filter membrane and a total water seepage capability of the one or more flow restrictors is smaller than that of the one or more porous filter membranes.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00002" num="00002">
+<claim-text>2. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the number of the one or more porous filter membranes is one, and one or more flow restrictors are disposed in correspondence to the porous filter membrane.</claim-text>
+</claim>
+<claim id="CLM-00003" num="00003">
+<claim-text>3. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the number of the one or more porous filter membranes is more than one, and one or more flow restrictors are disposed in correspondence to each of the porous filter membranes.</claim-text>
+</claim>
+<claim id="CLM-00004" num="00004">
+<claim-text>4. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the porous filter membrane covers a part of an inner wall of the water passing chamber, and edges of the porous filter membrane closely engage with the inner wall of the water passing chamber, so as to form the filtration section between the porous filter membrane and the inner wall of the water passing chamber covered thereby.</claim-text>
+</claim>
+<claim id="CLM-00005" num="00005">
+<claim-text>5. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the porous filter membrane covers a complete circumference of an inner wall of the water passing chamber, and edges of the porous filter membrane closely engage with the inner wall of the water passing chamber, so as to form the filtration section between the porous filter membrane and the inner wall of the water passing chamber covered thereby.</claim-text>
+</claim>
+<claim id="CLM-00006" num="00006">
+<claim-text>6. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the porous filter membrane is bag-shaped, and the filtration section is formed in a bag of the porous filter membrane.</claim-text>
+</claim>
+<claim id="CLM-00007" num="00007">
+<claim-text>7. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00006">claim 6</claim-ref>, wherein the sidewall of the water passing chamber is disposed with an opening for engaging with the flow restrictor, the flow restrictor is inserted into the opening, a housing of the flow restrictor closely engages with edges of the opening, a bag mouth of the bag-shaped porous filter membrane closely engages with the inlet of the flow restrictor, so that the inlet of the flow restrictor is communicated with the filtration section.</claim-text>
+</claim>
+<claim id="CLM-00008" num="00008">
+<claim-text>8. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00006">claim 6</claim-ref>, wherein the porous filter membrane has a flat bag shape, and the flat bag shaped porous filter membrane is set flush in the water passing chamber.</claim-text>
+</claim>
+<claim id="CLM-00009" num="00009">
+<claim-text>9. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the sidewall of the water passing chamber is disposed with an opening for engaging with the flow restrictor, the inlet of the flow restrictor closely engages with the opening, so as to dispose the flow restrictor on the sidewall of the water passing chamber.</claim-text>
+</claim>
+<claim id="CLM-00010" num="00010">
+<claim-text>10. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the sidewall of the water passing chamber is disposed with an opening for engaging with the flow restrictor, the flow restrictor is directly mounted in the opening, so as to dispose the flow restrictor on the sidewall of the water passing chamber.</claim-text>
+</claim>
+<claim id="CLM-00011" num="00011">
+<claim-text>11. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the water passing chamber is formed in a tubular shape.</claim-text>
+</claim>
+<claim id="CLM-00012" num="00012">
+<claim-text>12. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the water passing chamber is constituted by a water pipe or a part thereof, or a tubular support enclosed in the water pipe, and when the water flows in the water pipe, some flows in an axial direction of the water pipe and passes by a surface of the porous filter membrane to wash the surface, while some is filtered by the porous filter membrane, enters the flow restrictor through the filtration section, and flows out of the outlet of the flow restrictor to form irrigation water.</claim-text>
+</claim>
+<claim id="CLM-00013" num="00013">
+<claim-text>13. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00012">claim 12</claim-ref>, wherein the number of the porous filter membranes is more than one, each of the porous filter membranes is disposed in a tubular support, and a plurality of tubular supports disposed with the porous filter membranes are enclosed in the water pipe, respectively, in the axial direction of the water pipe, so that the porous filter membranes are distributed in the water pipe.</claim-text>
+</claim>
+<claim id="CLM-00014" num="00014">
+<claim-text>14. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00012">claim 12</claim-ref>, wherein the water pipe is disposed with a valve or mounted with a micro pump actuated periodically, so that the water in the pipe moves to clear the impurities on the surface of the porous filter membrane.</claim-text>
+</claim>
+<claim id="CLM-00015" num="00015">
+<claim-text>15. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the total water seepage capability of the porous filter membrane is equal to or greater than five times of that of the corresponding one or more flow restrictors.</claim-text>
+</claim>
+<claim id="CLM-00016" num="00016">
+<claim-text>16. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the maximum pore diameter of the restricting orifice is equal to or greater than five times of that of the porous filter membrane.</claim-text>
+</claim>
+<claim id="CLM-00017" num="00017">
+<claim-text>17. An infiltration irrigation apparatus, comprising:
+<claim-text>a water passing chamber having a water outlet and a water inlet, wherein a water stream along an axial direction of the water passing chamber is formed in the water passing chamber when water flows between the water inlet and the water outlet;</claim-text>
+<claim-text>one or more porous filter membranes disposed in the water passing chamber and formed with a filtration section for accommodating the water filtered by the one or more porous filter membranes; wherein the location of the one or more porous filter membranes is disposed so that at least a part of the water stream flows along the surface of the porous filter membrane to wash the surface when the axial water stream exists in the water passing chamber, and</claim-text>
+<claim-text>one or more flow restrictors each disposed on a sidewall of the water passing chamber corresponding to the porous filter membrane, wherein each of the one or more flow restrictors has one or more restricting orifices, an inlet communicated with the filtration section of the one or more porous filter membranes and an outlet outside the water passing chamber, a maximum pore diameter of the restricting orifice restrictor is larger than that of the porous filter membrane and the total water seepage capability of the one or more flow restrictors is smaller than that of the one or more porous filter membranes; and the porous filter membrane and the flow restrictor are integrally formed with a same porous material.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00018" num="00018">
+<claim-text>18. The infiltration irrigation apparatus according to <claim-ref idref="CLM-00017">claim 17</claim-ref>, wherein the porous material is porous ceramics.</claim-text>
+</claim>
+</claims>
+</us-patent-grant>

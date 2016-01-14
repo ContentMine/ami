@@ -106,7 +106,6 @@ public class WikipediaLookupTest {
 		String cmd = "--sp.species --context 35 --sp.type binomial binomialsp "
 				+ "-q "+target+" -i scholarly.html "
 				+ "--lookup wikipedia";
-		LOG.debug(cmd);
 		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor();
 		argProcessor.parseArgs(cmd);
 		argProcessor.runAndOutput();

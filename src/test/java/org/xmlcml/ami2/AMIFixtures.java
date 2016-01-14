@@ -12,11 +12,9 @@ import org.junit.Assert;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CProject;
 import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.ResultsElementList;
-import org.xmlcml.norma.NormaArgProcessor;
 import org.xmlcml.xml.XMLUtil;
 
 public class AMIFixtures {
@@ -39,6 +37,8 @@ public class AMIFixtures {
 	public final static File TEST_GRAPHCHEM_ASPERGILLUS    = new File(AMIFixtures.TEST_GRAPHCHEM_DIR, "aspergillus_9");
 	
 	public final static File TEST_MIXED_DIR        = new File(AMIFixtures.TEST_AMI_DIR, "mixed");
+
+	public final static File TEST_PATENTS_DIR      = new File(AMIFixtures.TEST_AMI_DIR, "patents");
 
 	public final static File TEST_PLOSONE_DIR      = new File(AMIFixtures.TEST_AMI_DIR, "plosone");
 	public final static File TEST_PLOSONE_0115884  = new File(AMIFixtures.TEST_PLOSONE_DIR, "journal.pone.0115884");
@@ -115,10 +115,7 @@ public class AMIFixtures {
 	    Assert.assertNull("message: "+msg, msg);
 	}
 	
-	public static void cleanAndCopyDir(File sourceDir, File targetDir) throws IOException {
-		if (targetDir.exists()) FileUtils.forceDelete(targetDir);
-		FileUtils.copyDirectory(sourceDir, targetDir);
-	}
+	
 
 	// utility method to check first part of resultsElementList
 	
@@ -138,38 +135,6 @@ public class AMIFixtures {
 			String sss = ss.replaceAll("\"", "\\\\\\\"");
 			LOG.debug("start (escaped) \n"+sss);
 			Assert.fail("results assertion failure: starts with: "+ss);
-		}
-	}
-	
-	/**
-	 * 
-	 * @param dir
-	 * @param type "project" or "ctree"
-	 */
-	public static void runNorma(File dir, String type, String transform) {
-		// norma-lise
-		// check if already normalized
-		String args = null;
-		if (type.equals("project")) {
-			CProject project = new CProject(dir);
-			List<CTree> cTreeList = project.getCTreeList();
-			for (CTree cTree : cTreeList) {
-				if (!cTree.hasScholarlyHTML()) {
-					// mising SHTML, normalize all
-					args = "-i fulltext.xml  --transform "+transform+" -o scholarly.html --"+type+" "+dir;
-					break;
-				}
-			}
-		} else if (type.equals("ctree")) {
-			CTree cTree = new CTree(dir);
-			if (!cTree.hasScholarlyHTML()) {
-				// mising SHTML, normalize all
-				args = "-i fulltext.xml  --transform "+transform+" -o scholarly.html --"+type+" "+dir;
-			}
-		}
-		if (args != null) {
-			NormaArgProcessor argProcessor = new NormaArgProcessor(args);
-			argProcessor.runAndOutput();
 		}
 	}
 

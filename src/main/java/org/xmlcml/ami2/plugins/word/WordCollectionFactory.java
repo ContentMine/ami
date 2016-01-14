@@ -115,26 +115,32 @@ public class WordCollectionFactory {
 		LOG.trace("REFACTOR createTransformedWords");
 		List<String> transformedWords = null;
 		if (rawWords != null) {
-			if (!(amiArgProcessor instanceof WordArgProcessor)) {
-				throw new RuntimeException("must use WordArgProcessor; found: "+amiArgProcessor);
-			}
 			transformedWords = rawWords;
-			WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
-			if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.ABBREVIATION)) {
-				transformedWords = createAbbreviations(transformedWords);
+			if (!(amiArgProcessor instanceof WordArgProcessor)) {
+				LOG.trace("must develop TokenStream for : "+amiArgProcessor);
+			} else {
+				transformedWords = transformWordStream(transformedWords);
 			}
-			if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.CAPITALIZED)) {
-				transformedWords = createCapitalized(transformedWords);
-			} 
-			if (wordArgProcessor.getWordCaseList().contains(WordArgProcessor.IGNORE)) {
-				transformedWords = toLowerCase(transformedWords);
-			}
-			for (WordSetWrapper stopwordSet : wordArgProcessor.getStopwordSetList()) {
-				transformedWords = applyStopwordFilter(stopwordSet, transformedWords);
-			}
-			if (wordArgProcessor.getStemming()) {
-				transformedWords = applyLucenePorterStemming(transformedWords);
-			}
+		}
+		return transformedWords;
+	}
+
+	private List<String> transformWordStream(List<String> transformedWords) {
+		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
+		if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.ABBREVIATION)) {
+			transformedWords = createAbbreviations(transformedWords);
+		}
+		if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.CAPITALIZED)) {
+			transformedWords = createCapitalized(transformedWords);
+		} 
+		if (wordArgProcessor.getWordCaseList().contains(WordArgProcessor.IGNORE)) {
+			transformedWords = toLowerCase(transformedWords);
+		}
+		for (WordSetWrapper stopwordSet : wordArgProcessor.getStopwordSetList()) {
+			transformedWords = applyStopwordFilter(stopwordSet, transformedWords);
+		}
+		if (wordArgProcessor.getStemming()) {
+			transformedWords = applyLucenePorterStemming(transformedWords);
 		}
 		return transformedWords;
 	}
@@ -159,7 +165,7 @@ public class WordCollectionFactory {
             }
             tokenStream.close();
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            System.err.println("Stemming error "+e.getMessage());
         }
         return transformedWords;
 	}

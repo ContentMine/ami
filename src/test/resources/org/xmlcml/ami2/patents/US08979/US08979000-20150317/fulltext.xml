@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE us-patent-grant SYSTEM "us-patent-grant-v45-2014-04-03.dtd" [ ]>
+<us-patent-grant lang="EN" dtd-version="v4.5 2014-04-03" file="US08979000-20150317.XML" status="PRODUCTION" id="us-patent-grant" country="US" date-produced="20150302" date-publ="20150317">
+<us-bibliographic-data-grant>
+<publication-reference>
+<document-id>
+<country>US</country>
+<doc-number>08979000</doc-number>
+<kind>B2</kind>
+<date>20150317</date>
+</document-id>
+</publication-reference>
+<application-reference appl-type="utility">
+<document-id>
+<country>US</country>
+<doc-number>12972844</doc-number>
+<date>20101220</date>
+</document-id>
+</application-reference>
+<us-application-series-code>12</us-application-series-code>
+<priority-claims>
+<priority-claim sequence="01" kind="national">
+<country>JP</country>
+<doc-number>2009-291440</doc-number>
+<date>20091222</date>
+</priority-claim>
+</priority-claims>
+<us-term-of-grant>
+<us-term-extension>158</us-term-extension>
+</us-term-of-grant>
+<classifications-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>B</section>
+<class>05</class>
+<subclass>B</subclass>
+<main-group>1</main-group>
+<subgroup>08</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>B</section>
+<class>05</class>
+<subclass>B</subclass>
+<main-group>17</main-group>
+<subgroup>06</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>B</section>
+<class>01</class>
+<subclass>D</subclass>
+<main-group>1</main-group>
+<subgroup>14</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>B</section>
+<class>01</class>
+<subclass>D</subclass>
+<main-group>1</main-group>
+<subgroup>20</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+</classifications-ipcr>
+<classifications-cpc>
+<main-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>B</section>
+<class>05</class>
+<subclass>B</subclass>
+<main-group>17</main-group>
+<subgroup>0615</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</main-cpc>
+<further-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>B</section>
+<class>01</class>
+<subclass>D</subclass>
+<main-group>1</main-group>
+<subgroup>14</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>B</section>
+<class>01</class>
+<subclass>D</subclass>
+<main-group>1</main-group>
+<subgroup>20</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20150317</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</further-cpc>
+</classifications-cpc>
+<classification-national>
+<country>US</country>
+<main-classification>2391022</main-classification>
+<further-classification>239  4</further-classification>
+<further-classification>239  8</further-classification>
+<further-classification>239 11</further-classification>
+<further-classification>239355</further-classification>
+<further-classification>239368</further-classification>
+<further-classification>239124</further-classification>
+<further-classification>239127</further-classification>
+</classification-national>
+<invention-title id="d2e71">Ultrasonic atomization method and apparatus</invention-title>
+<us-references-cited>
+<us-citation>
+<patcit num="00001">
+<document-id>
+<country>US</country>
+<doc-number>3469785</doc-number>
+<kind>A</kind>
+<name>Tobin et al.</name>
+<date>19690900</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239  4</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00002">
+<document-id>
+<country>US</country>
+<doc-number>4738806</doc-number>
+<kind>A</kind>
+<name>Noma et al.</name>
+<date>19880400</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00003">
+<document-id>
+<country>US</country>
+<doc-number>5217165</doc-number>
+<kind>A</kind>
+<name>Takahashi et al.</name>
+<date>19930600</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>2391022</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00004">
+<document-id>
+<country>US</country>
+<doc-number>5485828</doc-number>
+<kind>A</kind>
+<name>Hauser</name>
+<date>19960100</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>12820016</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00005">
+<document-id>
+<country>US</country>
+<doc-number>7357334</doc-number>
+<kind>B2</kind>
+<name>Matsuura et al.</name>
+<date>20080400</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>239 34</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00006">
+<document-id>
+<country>US</country>
+<doc-number>7686285</doc-number>
+<kind>B2</kind>
+<name>Murray et al.</name>
+<date>20100300</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>261 81</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00007">
+<document-id>
+<country>US</country>
+<doc-number>2005/0016380</doc-number>
+<kind>A1</kind>
+<name>Matsuura et al.</name>
+<date>20050100</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification> 96389</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00008">
+<document-id>
+<country>US</country>
+<doc-number>2006/0213508</doc-number>
+<kind>A1</kind>
+<name>Murray et al.</name>
+<date>20060900</date>
+</document-id>
+</patcit>
+<category>cited by examiner</category>
+<classification-national><country>US</country><main-classification>12820016</main-classification></classification-national>
+</us-citation>
+<us-citation>
+<patcit num="00009">
+<document-id>
+<country>US</country>
+<doc-number>2008/0000842</doc-number>
+<kind>A1</kind>
+<name>Matsuura et al.</name>
+<date>20080100</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00010">
+<document-id>
+<country>JP</country>
+<doc-number>6-507836</doc-number>
+<date>19940900</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00011">
+<document-id>
+<country>JP</country>
+<doc-number>2005-66554</doc-number>
+<date>20050300</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00012">
+<document-id>
+<country>WO</country>
+<doc-number>98/36888</doc-number>
+<date>19980800</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<nplcit num="00013">
+<othercit>Extended European Search Report issued Mar. 8, 2013 in European Patent Application No. 10196377.5.</othercit>
+</nplcit>
+<category>cited by applicant</category>
+</us-citation>
+</us-references-cited>
+<number-of-claims>16</number-of-claims>
+<us-exemplary-claim>1</us-exemplary-claim>
+<us-field-of-classification-search>
+<classification-national>
+<country>US</country>
+<main-classification> 96389</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239  4</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239  8</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239 11</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>2391021</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239355</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239368</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239124</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>239127</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>2391022</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>261 30</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>261 81</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>261128</main-classification>
+</classification-national>
+<classification-cpc-text>B05B 17/0615</classification-cpc-text>
+<classification-cpc-text>B01D 1/14</classification-cpc-text>
+<classification-cpc-text>B01D 1/20</classification-cpc-text>
+</us-field-of-classification-search>
+<figures>
+<number-of-drawing-sheets>10</number-of-drawing-sheets>
+<number-of-figures>12</number-of-figures>
+</figures>
+<us-related-documents>
+<related-publication>
+<document-id>
+<country>US</country>
+<doc-number>20110147482</doc-number>
+<kind>A1</kind>
+<date>20110623</date>
+</document-id>
+</related-publication>
+</us-related-documents>
+<us-parties>
+<us-applicants>
+<us-applicant sequence="001" app-type="applicant" designation="us-only">
+<addressbook>
+<last-name>Matsuura</last-name>
+<first-name>Kazuo</first-name>
+<address>
+<city>Naruto</city>
+<country>JP</country>
+</address>
+</addressbook>
+<residence>
+<country>JP</country>
+</residence>
+</us-applicant>
+</us-applicants>
+<inventors>
+<inventor sequence="001" designation="us-only">
+<addressbook>
+<last-name>Matsuura</last-name>
+<first-name>Kazuo</first-name>
+<address>
+<city>Naruto</city>
+<country>JP</country>
+</address>
+</addressbook>
+</inventor>
+</inventors>
+<agents>
+<agent sequence="01" rep-type="attorney">
+<addressbook>
+<orgname>Wenderoth, Lind &#x26; Ponack, LLP</orgname>
+<address>
+<country>unknown</country>
+</address>
+</addressbook>
+</agent>
+</agents>
+</us-parties>
+<assignees>
+<assignee>
+<addressbook>
+<orgname>Honke Matsuura Brewery Co., Ltd.</orgname>
+<role>03</role>
+<address>
+<city>Tokushima</city>
+<country>JP</country>
+</address>
+</addressbook>
+</assignee>
+</assignees>
+<examiners>
+<primary-examiner>
+<last-name>Boeckmann</last-name>
+<first-name>Jason</first-name>
+<department>3752</department>
+</primary-examiner>
+<assistant-examiner>
+<last-name>Zhou</last-name>
+<first-name>Joel</first-name>
+</assistant-examiner>
+</examiners>
+</us-bibliographic-data-grant>
+<abstract id="abstract">
+<p id="p-0001" num="0000">In the ultrasonic atomization method, a liquid is ultrasonically oscillated in an atomization chamber <b>4</b> and a liquid column P is projected in carrier gas to thus atomize the liquid into mists, the carrier gas carrying the atomized mists outwardly of the atomization chamber <b>4</b>; the carrier gas is forcibly sucked from a lateral point being away at a distance (d<b>1</b>) of 5 cm or less from a center axis m of the liquid column P and thereby a gas flow is blown across the liquid column P; the mists are separated away from the liquid column P by means of the blown gas flow; and such separated mists are transferred outwardly of the atomization chamber <b>4</b> by means of the carrier gas.</p>
+</abstract>
+<drawings id="DRAWINGS">
+<figure id="Fig-EMI-D00000" num="00000">
+<img id="EMI-D00000" he="206.33mm" wi="153.67mm" file="US08979000-20150317-D00000.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00001" num="00001">
+<img id="EMI-D00001" he="242.15mm" wi="150.11mm" file="US08979000-20150317-D00001.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00002" num="00002">
+<img id="EMI-D00002" he="217.76mm" wi="157.40mm" file="US08979000-20150317-D00002.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00003" num="00003">
+<img id="EMI-D00003" he="234.10mm" wi="137.33mm" file="US08979000-20150317-D00003.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00004" num="00004">
+<img id="EMI-D00004" he="167.13mm" wi="133.86mm" file="US08979000-20150317-D00004.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00005" num="00005">
+<img id="EMI-D00005" he="154.26mm" wi="129.54mm" file="US08979000-20150317-D00005.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00006" num="00006">
+<img id="EMI-D00006" he="236.64mm" wi="159.60mm" file="US08979000-20150317-D00006.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00007" num="00007">
+<img id="EMI-D00007" he="241.47mm" wi="161.04mm" file="US08979000-20150317-D00007.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00008" num="00008">
+<img id="EMI-D00008" he="222.25mm" wi="146.64mm" file="US08979000-20150317-D00008.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00009" num="00009">
+<img id="EMI-D00009" he="179.24mm" wi="149.18mm" file="US08979000-20150317-D00009.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00010" num="00010">
+<img id="EMI-D00010" he="179.15mm" wi="133.86mm" file="US08979000-20150317-D00010.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+</drawings>
+<description id="description">
+<?BRFSUM description="Brief Summary" end="lead"?>
+<heading id="h-0001" level="1">BACKGROUND OF THE INVENTION</heading>
+<p id="p-0002" num="0001">1. Technical Field</p>
+<p id="p-0003" num="0002">The present invention relates to a method and apparatus for atomizing a liquid into fine mists. The invention relates in particular to an ultrasonic atomization method and apparatus that is used as an apparatus for atomizing Sake, alcohol used for Sake production, petroleum, crude oil or the like into the mists to obtain a highly concentrated solution as a target substance, or which is optimally used as a humidifier, etc. for atomizing water into the mists to be vaporized into the air.</p>
+<p id="p-0004" num="0003">2. Background Art</p>
+<p id="p-0005" num="0004">The present inventor has previously developed an apparatus for atomizing a liquid containing alcohol into mists, collecting such atomized mists, and separating highly concentrated alcohol (see Patent Document 1). This separation apparatus can, for example, ultrasonically oscillate a starting liquid containing alcohol, atomize the liquid into fine mists to be sent into carrier gas, separate and collect the atomized mists, and separate an alcohol liquid having a higher concentration than the starting liquid. The separation apparatus of this system can separate a highly concentrated alcohol with a small amount of energy when compared with an apparatus in which a starting liquid is heated and vaporized.</p>
+<p id="p-0006" num="0005">In addition, a humidifier ultrasonically oscillating and atomizing water into the mists and vaporizing the atomized mists can humidify the air with a large amount of water and with a small amount of power consumption when compared with a method of heating and vaporizing the water.</p>
+<p id="p-0007" num="0006">In the case of the apparatus for atomizing a liquid into the mists, it is vital how efficiently the liquid can be ultrasonically oscillated and atomized into the mists. This is because the efficiency of atomizing into the mists determines the amount of energy to be consumed, and when the efficiency decreases, the energy consumption increases accordingly. For example, when a lowly concentrated alcohol having been obtained from fermented organic substances is to be separated from water in producing a highly concentrated alcohol, the atomization of water into the mists can be utilized. This is because the lowly concentrated alcohol is atomized into the mists and the atomized mists are collected to obtain a highly concentrated alcohol. The lowly concentrated alcohol is produced by fermentation of organic waste. According to this method, a huge amount of waste can be efficiently utilized to produce a lowly concentrated alcohol. Conventionally, however, the lowly concentrated alcohol is distilled for concentration into the highly concentrated alcohol, which leads to a great amount of energy consumption. Thus, for production of a highly concentrated alcohol, a large amount of energy is consumed in order to utilize the lowly concentrated alcohol being available at a lower cost, which results in an increased cost due to a large amount of energy consumption. It is really important to seek a lower cost process for converting the lowly concentrated alcohol to the highly concentrated alcohol. The method of atomizing the lowly concentrated alcohol into the mists can save energy consumption because the alcohol is not vaporized unlike in the method of distillation. In the process of atomization into the mists, however, it is important to efficiently atomize the lowly concentrated alcohol into the mists.</p>
+<p id="p-0008" num="0007">The apparatus is also used as a humidifier for ultrasonically oscillating water into the mists. For this humidifier as well, it is important to increase the efficiency of atomizing into the mists by the ultrasonic oscillation in order to achieve efficient humidification with smaller electrical consumption.</p>
+<p id="p-0009" num="0008">When the liquid is ultrasonically oscillated upwardly from the bottom by the oscillation apparatus, a liquid column P is generated on the liquid surface W, as shown in <figref idref="DRAWINGS">FIG. 1</figref>, where the liquid is atomized. The inventor has developed an apparatus and method for atomizing a liquid into mists in accordance with such ultrasonic atomization method (refer to Patent Document 1).</p>
+<heading id="h-0002" level="1">PRIOR ART</heading>
+<p id="p-0010" num="0000">
+<ul id="ul0001" list-style="none">
+    <li id="ul0001-0001" num="0009">Patent Document 1: JP 2005-66554 A</li>
+</ul>
+</p>
+<heading id="h-0003" level="1">SUMMARY OF THE INVENTION</heading>
+<p id="p-0011" num="0010">The apparatus shown in <figref idref="DRAWINGS">FIG. 2</figref> is designed to ultrasonically oscillate and atomize a liquid into mists. In this apparatus, a liquid column P generated in projecting upwardly of the liquid surface W by means of the ultrasonic oscillation is blasted by a laterally blown wind, by which wind the liquid column P is bent down in a parallel direction with respect to the liquid surface W and thus the atomization efficiency is improved. By bending down the liquid column in a parallel direction with respect to the liquid surface, the apparatus can efficiently atomize the liquid inside the liquid column because attenuation of the vertical ultrasonic oscillation caused by collision is effectively prevented. However, if an even higher atomization efficiency is available than this particular atomization apparatus, it will be possible to further reduce running and equipment costs to minimum. In particular, the apparatus shown in <figref idref="DRAWINGS">FIG. 2</figref> suffers a disadvantage that it is difficult to increase an atomization efficiency by using multiple ultrasonic oscillators in order to increase an amount of atomization per unit time.</p>
+<p id="p-0012" num="0011">The present invention has been made to further improve the efficiency of atomization, and the object of the invention is to provide an ultrasonic atomization method and apparatus providing such a highly efficient ultrasonic atomization method and apparatus as may exceed a conventional method and apparatus of atomization.</p>
+<p id="p-0013" num="0012">In the ultrasonic atomization method according to a first aspect of the present invention, a liquid is ultrasonically oscillated in an atomization chamber <b>4</b> and a liquid column P is projected in carrier gas to thus atomize the liquid into mists, the carrier gas carrying the atomized mists outwardly of the atomization chamber <b>4</b>; the carrier gas is forcibly sucked from a lateral point being away at a distance (d<b>1</b>) of 5 cm or less from a center axis m of the liquid column P and thereby a gas flow is blown across the liquid column P; the mists are separated away from the liquid column P by means of the blown gas flow; and such separated mists are transferred outwardly of the atomization chamber <b>4</b> by means of the carrier gas.</p>
+<p id="p-0014" num="0013">In the ultrasonic atomization method according to a second aspect of the present invention, the carrier gas is forcibly sucked from an intermediate point across a projecting direction of the liquid column P.</p>
+<p id="p-0015" num="0014">In the ultrasonic atomization method according to a third aspect of the present invention, the carrier gas is blown to the liquid column P from a first point and sucked into a second point, and the gas flow is carried across the direction of the liquid column P, whereby the mists are separated away from the liquid column P.</p>
+<p id="p-0016" num="0015">In the ultrasonic atomization method according to a fourth aspect of the present invention, the carrier gas is blown to the liquid column P from a lateral point being away at a distance (d<b>2</b>) of 10 cm or less from the center axis m of the liquid column P, whereby the gas flow is blown across the liquid column P.</p>
+<p id="p-0017" num="0016">In the ultrasonic atomization method according to a fifth aspect of the present invention, a plurality of liquid columns P are provided by ultrasonically oscillating the liquid in the atomization chamber <b>4</b> by means of a plurality of ultrasonic oscillators <b>2</b>; the carrier gas is sucked from a lateral point being away at a distance (d<b>1</b>)) of 5 cm or less from a center axis m of each of the liquid columns P, whereby a gas flow is blown across each of the liquid columns P; the mists are separated away from each of the liquid columns P by means of such blown gas flow; and such separated mists are discharged outwardly of the atomization chamber <b>4</b> by means of the carrier gas.</p>
+<p id="p-0018" num="0017">In the ultrasonic atomization method according to a sixth aspect of the present invention, the carrier gas is blown to each of the liquid columns P from a lateral point being away at a distance (d<b>2</b>) of 10 cm or less from the center axis m of each of the liquid columns P, whereby the gas flow is blown across each of the liquid columns P.</p>
+<p id="p-0019" num="0018">The ultrasonic atomization apparatus according to a seventh aspect of the present invention includes:</p>
+<p id="p-0020" num="0019">an atomization chamber <b>4</b> for storing the liquid:</p>
+<p id="p-0021" num="0020">a plurality of ultrasonic oscillators <b>2</b> for ultrasonically oscillating the liquid and allowing a plurality of liquid columns P to project from a liquid surface to thus atomize the liquid into mists;</p>
+<p id="p-0022" num="0021">an ultrasonic power source <b>3</b> connected to the plurality of ultrasonic oscillators <b>2</b> to supply high-frequency power thereto for ultrasonic oscillation; and</p>
+<p id="p-0023" num="0022">a blower mechanism <b>20</b> for blowing a carrier gas to the atomization chamber <b>4</b>.</p>
+<p id="p-0024" num="0023">In the ultrasonic atomization apparatus, the blower mechanism <b>20</b> includes a suction mechanism <b>21</b>, the suction mechanism being provided with a suction port <b>22</b> at a lateral point being away at a distance (d<b>1</b>) of 5 cm or less from a center axis m of each of the liquid columns P generated by each of the ultrasonic oscillators <b>2</b>, whereby the carrier gas is sucked into the suction port <b>22</b> and blown across each of the liquid columns P; wherein the suction mechanism <b>21</b> blows the gas flow against each of the liquid columns P to thus separate the mists from each of the liquid columns P and discharge such separated mists outwardly of the atomization chamber <b>4</b>.</p>
+<p id="p-0025" num="0024">In the ultrasonic atomization apparatus according to an eighth aspect of the present invention, the blower mechanism <b>20</b> includes:</p>
+<p id="p-0026" num="0025">a suction mechanism <b>21</b> provided with the suction port <b>22</b> at a lateral point away from the liquid column P generated by each of the ultrasonic oscillators <b>2</b>, whereby the carrier gas is sucked into the suction port <b>22</b>; and</p>
+<p id="p-0027" num="0026">a blast mechanism <b>25</b> provided with a blower port <b>26</b> for blowing the carrier gas against each of the liquid columns P.</p>
+<p id="p-0028" num="0027">The blast mechanism <b>25</b> blows the carrier gas against the liquid column P, and the suction mechanism <b>21</b> sucks the carrier gas out of the lateral point away from the liquid column P to allow the carrier gas to flow across the liquid column P.</p>
+<p id="p-0029" num="0028">In the ultrasonic atomization apparatus according to a ninth aspect of the present invention, the blast mechanism <b>25</b> is provided with the suction port <b>22</b> at a lateral point being away at a distance (d<b>2</b>) of 10 cm or less from the center axis m of each of the liquid columns P.</p>
+<p id="p-0030" num="0029">In the ultrasonic atomization apparatus according to a tenth aspect of the present invention, the suction port <b>22</b> and blower port <b>26</b> are positioned respectively at opposing lateral points away from the liquid column P.</p>
+<p id="p-0031" num="0030">In the ultrasonic atomization apparatus according to an eleventh aspect of the present invention, a distance (D) between the suction port <b>22</b> and blower port <b>26</b> is 15 cm or less.</p>
+<p id="p-0032" num="0031">In the ultrasonic atomization apparatus according to a twelfth aspect of the present invention, the suction mechanism <b>21</b> includes a suction duct <b>24</b> provided with the suction port <b>22</b> at a lateral point away from each of the liquid columns P, while the blast mechanism <b>25</b> includes a blower duct <b>28</b> provided with the blower port <b>26</b> at a lateral point away from each of the liquid columns P; the suction duct <b>24</b> and blower duct <b>28</b> are positioned alternately in a plurality of lines, and each ultrasonic oscillator <b>2</b> is positioned between the suction duct <b>24</b> and blower duct <b>28</b> which are adjacent to each other; and the carrier gas is blown from the blower port <b>26</b> of the blower duct <b>28</b> against each of the liquid columns P generated by each ultrasonic oscillator <b>2</b>, and the carrier gas is sucked into the suction port <b>22</b> of the suction duct <b>24</b>.</p>
+<p id="p-0033" num="0032">The ultrasonic atomization method and apparatus respectively according to first and seventh aspects of the invention can yield such an excellent efficiency of atomization as may exceed a conventional method and apparatus of atomization. For example, in terms of the same ultrasonic oscillator and the same air volume, a speed of atomization per hour in the ultrasonic atomization apparatus as shown in <figref idref="DRAWINGS">FIG. 3</figref> exhibits a superb improvement of being more than seven times the speed achieved by the apparatus shown in <figref idref="DRAWINGS">FIG. 2</figref>. This is because in the atomization method and apparatus of the present invention the carrier gas is sucked from the lateral point being away at a distance (d<b>1</b>)) of 5 cm or less from the center axis of the liquid column and is blown to the liquid column, and thus the carrier gas flows across the liquid column to efficiently separate from the liquid column the mists which are atomized around the periphery of the liquid column.</p>
+<p id="p-0034" num="0033">In the ultrasonic atomization method according to a second aspect of the invention, the carrier gas is blown across the intermediate point of the liquid column, and the mists can be efficiently separated from the liquid column. This is because the carrier gas blown across the liquid column can separate the mists from the liquid column at its full height.</p>
+<p id="p-0035" num="0034">In the ultrasonic atomization method according to a third aspect of the invention, the carrier gas is blown from a first lateral point of the liquid column and sucked into a second lateral point of the liquid column, which assures that the carrier gas can be most efficiently used for separating the mists. This enables the mists to be efficiently separated with a particularly smaller air volume.</p>
+<p id="p-0036" num="0035">In the ultrasonic atomization method according to a fifth aspect of the invention, a plurality of ultrasonic oscillators efficiently separate the mists from each of the liquid columns generated by each of ultrasonic oscillators. Thus, the use of a plurality of ultrasonic oscillators enables a total amount of atomizable mists to be highly increased.</p>
+<p id="p-0037" num="0036">In the ultrasonic atomization apparatus according to an eighth aspect of the invention, the carrier gas is blown out of the blower port in the blast mechanism to the lateral point away from the liquid column, and sucked from the lateral point away from the liquid column into the suction port in the suction mechanism in a manner that the carrier gas is carried across the liquid column. The carrier gas blown from a first lateral point of the liquid column and sucked into a second lateral point can be most efficiently used for separation of the mists. Thus, the mists can be efficiently separated with a smaller air volume in the blower mechanism.</p>
+<p id="p-0038" num="0037">In the ultrasonic atomization apparatus according to a tenth aspect of the invention, the arrangement of the suction port and blower port respectively at the opposing lateral points away from the liquid column enables the carrier gas fed out of the blower port to be carried across the liquid column for an efficient suction into the suction port.</p>
+<p id="p-0039" num="0038">In the ultrasonic atomization apparatus according to an eleventh aspect of the invention, the arrangement of the liquid column between the suction port and the blower port, being set at the distance (D) of 15 cm or less, enables the carrier gas to be forcibly blown rectilinearly from the blower port to the suction port, with the dispersion of the carrier gas being reduced to minimum. In addition, the passage of such blown carrier gas through the liquid column enables the mists to be separated in a specially efficient manner.</p>
+<p id="p-0040" num="0039">In the ultrasonic atomization apparatus according to a twelfth aspect of the invention, while its entire structure is simplified, the mists can be efficiently separated from the plurality of liquid columns.</p>
+<?BRFSUM description="Brief Summary" end="tail"?>
+<?brief-description-of-drawings description="Brief Description of Drawings" end="lead"?>
+<description-of-drawings>
+<heading id="h-0004" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+<p id="p-0041" num="0040"><figref idref="DRAWINGS">FIG. 1</figref> is a schematic, cross section view showing the state where the solution is ultrasonically oscillated to form a liquid column on the surface of the solution;</p>
+<p id="p-0042" num="0041"><figref idref="DRAWINGS">FIG. 2</figref> is a block diagram which schematically shows the ultrasonic separation apparatus having previously been invented by the present inventor;</p>
+<p id="p-0043" num="0042"><figref idref="DRAWINGS">FIG. 3</figref> is a block diagram which schematically shows the separation apparatus provided with the ultrasonic atomization apparatus in accordance with an embodiment of the present invention;</p>
+<p id="p-0044" num="0043"><figref idref="DRAWINGS">FIG. 4</figref> is a vertical, cross sectional view showing the ultrasonic atomization apparatus in accordance with an embodiment of the invention;</p>
+<p id="p-0045" num="0044"><figref idref="DRAWINGS">FIG. 5</figref> is an enlarged, cross sectional view showing the connection structure of the ultrasonic oscillator;</p>
+<p id="p-0046" num="0045"><figref idref="DRAWINGS">FIG. 6</figref> is a circuit diagram showing an example of the amplifier for high frequency;</p>
+<p id="p-0047" num="0046"><figref idref="DRAWINGS">FIG. 7</figref> is a vertical, cross sectional view showing the ultrasonic atomization apparatus in accordance with another embodiment of the invention;</p>
+<p id="p-0048" num="0047"><figref idref="DRAWINGS">FIG. 8</figref> is a horizontal, cross sectional view showing the ultrasonic atomization apparatus in accordance with yet another embodiment of the invention;</p>
+<p id="p-0049" num="0048"><figref idref="DRAWINGS">FIG. 9</figref> is a top plan view showing the ultrasonic atomization apparatus in accordance with even another embodiment of the invention;</p>
+<p id="p-0050" num="0049"><figref idref="DRAWINGS">FIG. 10</figref> is a partially enlarged, vertical, cross sectional view of the ultrasonic atomization apparatus shown in <figref idref="DRAWINGS">FIG. 9</figref>;</p>
+<p id="p-0051" num="0050"><figref idref="DRAWINGS">FIG. 11</figref> is a vertical, cross sectional view showing the ultrasonic atomization apparatus in accordance with an alternative embodiment of the invention; and</p>
+<p id="p-0052" num="0051"><figref idref="DRAWINGS">FIG. 12</figref> is an enlarged, cross sectional view of the ultrasonic atomization apparatus shown in <figref idref="DRAWINGS">FIG. 11</figref>.</p>
+</description-of-drawings>
+<?brief-description-of-drawings description="Brief Description of Drawings" end="tail"?>
+<?DETDESC description="Detailed Description" end="lead"?>
+<heading id="h-0005" level="1">MODE(S) FOR CARRYING OUT THE INVENTION</heading>
+<p id="p-0053" num="0052">Embodiments of the present invention will now be discussed in conjunction with the accompanying drawings. It should be noted here that the following embodiments are intended to be illustrative of an ultrasonic atomization method and apparatus to embody the technical ideas of the invention, and the inventive method and apparatus are, in no way, limited to the ultrasonic atomization method and apparatus described below.</p>
+<p id="p-0054" num="0053">Further, in the present disclosure, reference numerals corresponding to members shown in the embodiments are suffixed to members shown in the &#x201c;CLAIMS&#x201d; and &#x201c;MEANS TO SOLVE THE PROBLEM&#x201d; in order to facilitate appreciation of the claims. However, the members shown in the claims shall, in no way, be specified to those members shown in the embodiments.</p>
+<p id="p-0055" num="0054">In the present ultrasonic atomization method and apparatus, the liquid is ultrasonically oscillated to atomize the mists into the carrier gas. A specific example in which the ultrasonic atomization apparatus is used as a separation apparatus shall now be discussed in conjunction with embodiment(s) of the present invention. In the separation apparatus described below, a liquid containing two or more substances is ultrasonically oscillated to be atomized into mists, and such atomized mists are condensed and collected to thus separate the liquid. In the present invention, however, an application of the ultrasonic atomization apparatus is not limited to a liquid separation apparatus. The ultrasonic atomization apparatus of the present invention can also be used as a humidifier for atomizing water into mists to be vaporized into the air.</p>
+<p id="p-0056" num="0055">In the following separation apparatus provided with the ultrasonic atomization apparatus, a specific liquid is separated in a high concentration from a liquid containing at least two kinds of substances. Although not intended to specify a solvent and/or a solute contained in the liquid, water is a main solvent. Besides the water, other organic solvents such as alcohol can also be used. By way of example, the liquid to be separated includes any of the following:</p>
+<p id="p-0057" num="0056">(1) refined Sake, beer, wine, table vinegar, sweet Sake for cooking, spirits, Japanese &#x2018;Shouchuu&#x2019; spirits, brandy, whisky, liquor;</p>
+<p id="p-0058" num="0057">(2) any liquid including a perfume, aromatic component or aroma component such as pinene, linalool, limonene, polyphenol;</p>
+<p id="p-0059" num="0058">(3) any liquid including an organic compound belonging to any among the alkanes or cyclo-alkanes, which are saturated hydrocarbons, alkenes, cyclo-alkenes, alkynes, which are unsaturated hydrocarbons, or ethers, thioethers or aromatic hydrocarbons, or a substance in which these are combined;</p>
+<p id="p-0060" num="0059">(4) any liquid including a substance in which, in an organic compound belonging to any among the alkanes or cyclo-alkanes, which are saturated hydrocarbons, alkenes, cyclo-alkenes, alkynes, which are unsaturated hydrocarbons, or ethers, thioethers or aromatic hydrocarbons, or a combination of these, at least one hydrogen atom or functional radical has been replaced with a halogen;</p>
+<p id="p-0061" num="0060">(5) any liquid including a substance in which, in an organic compound belonging to any among the alkanes or cyclo-alkanes, which are saturated hydrocarbons, alkenes, cyclo-alkenes, alkynes, which are unsaturated hydrocarbons, or ethers, thioethers or aromatic hydrocarbons, or a combination of these, at least one hydrogen atom or functional radical has been replaced with a hydroxyl group;</p>
+<p id="p-0062" num="0061">(6) any liquid including a substance in which, in an organic compound belonging to any among the alkanes or cyclo-alkanes, which are saturated hydrocarbons, alkenes, cyclo-alkenes, alkynes, which are unsaturated hydrocarbons, or ethers, thioethers or aromatic hydrocarbons, or a combination of these, at least one hydrogen atom or functional radical has been replaced with an amino group;</p>
+<p id="p-0063" num="0062">(7) any liquid including a substance in which, in an organic compound belonging to any among the alkanes or cyclo-alkanes, which are saturated hydrocarbons, alkenes, cyclo-alkenes, alkynes, which are unsaturated hydrocarbons, or ethers, thioethers or aromatic hydrocarbons, or a combination of these, at least one hydrogen atom or functional radical has been replaced with a carbonyl group;</p>
+<p id="p-0064" num="0063">(8) any liquid including a substance in which, in an organic compound belonging to any among the alkanes or cyclo-alkanes, which are saturated hydrocarbons, alkenes, cyclo-alkenes, alkynes, which are unsaturated hydrocarbons, or ethers, thioethers or aromatic hydrocarbons, or a combination of these, at least one hydrogen atom or functional radical has been replaced with a carboxyl group;</p>
+<p id="p-0065" num="0064">(9) any liquid including a substance in which, in an organic compound belonging to any among the alkanes or cyclo-alkanes, which are saturated hydrocarbons, alkenes, cyclo-alkenes, alkynes, which are unsaturated hydrocarbons, or ethers, thioethers or aromatic hydrocarbons, or a combination of these, at least one hydrogen atom or functional radical has been replaced with a nitro group;</p>
+<p id="p-0066" num="0065">(10) any liquid including a substance in which, in an organic compound belonging to any among the alkanes or cyclo-alkanes, which are saturated hydrocarbons, alkenes, cyclo-alkenes, alkynes, which are unsaturated hydrocarbons, or ethers, thioethers or aromatic hydrocarbons, or a combination of these, at least one hydrogen atom or functional radical has been replaced with a cyano group;</p>
+<p id="p-0067" num="0066">(11) any liquid; including a substance in which, in an organic compound belonging to any among the alkanes or cyclo-alkanes, which are saturated hydrocarbons, alkenes, cyclo-alkenes, alkynes, which are unsaturated hydrocarbons, or ethers, thioethers or aromatic hydrocarbons, or a combination of these, at least one hydrogen atom or functional radical has been replaced with a mercapto group;</p>
+<p id="p-0068" num="0067">(12) any liquid including a substance in which any one or more atoms included in a liquid mentioned above in (3) to (11) has been replaced with a metal ion;</p>
+<p id="p-0069" num="0068">(13) any liquid including a substance in which any hydrogen atom, carbon atom or functional radical in a molecule included in a liquid mentioned above in (3) to (11) has been replaced with any molecule among molecules mentioned above in (3) to (11);</p>
+<p id="p-0070" num="0069">(14) any liquid including a substance in which any carbon atom in a molecule included in a liquid mentioned above in (3) to (11) has been replaced with any atom;</p>
+<p id="p-0071" num="0070">(15) any liquid including nonvolatile matter such as surfactant, saline, saccharide, organic acid, inorganic acid, and amino acid; and</p>
+<p id="p-0072" num="0071">(16) any liquid mixture with water including heavy water.</p>
+<p id="p-0073" num="0072">When a liquid containing two or more substances is ultrasonically oscillated to separate mists from the liquid and such separated mists are condensed and collected, a concentration of contained substance(s) differs between the liquid collected from the mists and the remaining liquid which is not turned to the mists. For example, when an alcoholic solution is atomized into mists by the ultrasonic oscillation and such atomized mists are collected, the liquid thus collected from the atomized mists has a higher concentration of alcohol than does the remaining alcohol which is not turned to the mists. The reason for such higher alcohol concentration in the liquid obtained by condensing and collecting the mists is that when compared with the water, the alcohol is easier to be atomized into fine mists by the ultrasonic oscillation.</p>
+<p id="p-0074" num="0073">Now with alcohol being taken as an exemplary liquid, an explanation shall be made on a separation apparatus for atomizing the alcohol into mists by the ultrasonic atomization apparatus, collecting the mists, and separating highly concentrated alcohol from the collected mists. It should be noted that, in the separation apparatus, the liquid is not specified to be alcohol as a target to be atomized and separated. The invention can be used for separating any of the liquids that can be separated in the form of atomized mists as enumerated above, as well as for separating other kinds of liquids.</p>
+<p id="p-0075" num="0074">The liquid separation apparatus shown in <figref idref="DRAWINGS">FIG. 3</figref> includes an ultrasonic atomization apparatus <b>1</b> for atomizing the liquid into the mists, and a collection unit <b>5</b> for collecting the mists atomized by the ultrasonic atomization apparatus <b>1</b>.</p>
+<p id="p-0076" num="0075">The ultrasonic atomization apparatus shown respectively in <figref idref="DRAWINGS">FIG. 3</figref> and <figref idref="DRAWINGS">FIG. 4</figref> includes an atomization chamber <b>4</b> for storing a liquid to be atomized into mists, an ultrasonic oscillator <b>2</b> for ultrasonically oscillating the liquid and allowing a liquid column P to project from the liquid surface W to thus atomize the liquid into the mists, an ultrasonic power source <b>3</b> connected to the ultrasonic oscillator <b>2</b> and supplying high-frequency power to the ultrasonic oscillator <b>2</b> for ultrasonic oscillation, and a blower mechanism <b>20</b> for blowing the carrier gas into the atomization chamber <b>4</b>.</p>
+<p id="p-0077" num="0076">The atomization chamber <b>4</b> is a closed chamber storing a liquid maintained at a given level of liquid surface W, inside which the liquid is atomized into the mists and such atomized mists are discharged outwardly by means of the carrier gas. It should be noted, however, that the atomization chamber does not necessarily have to be completely sealed off but can be partially opened. The atomization chamber <b>4</b> shown in <figref idref="DRAWINGS">FIG. 4</figref> is provided with a liquid supply port <b>13</b> positioned below the liquid surface level. In order to control a constant level of the liquid to be supplied, the chamber is provided with an overflow port <b>14</b>. The liquid is supplied from the supply port <b>13</b> and discharged through the overflow port <b>14</b>. In this atomization chamber <b>4</b>, the liquid surface is controlled the overflow port <b>14</b> to maintain a constant level, but it is also possible to maintain the constant level of the liquid surface by controlling a weight of the liquid supplied from the supply port <b>13</b>. In the atomization chamber <b>4</b> where the constant level of the liquid surface is controlled, the depth of the liquid to be ultrasonically oscillated by the ultrasonic oscillator <b>2</b> can be maintained to be such a depth as may be most efficiently atomizable.</p>
+<p id="p-0078" num="0077">The liquid is supplied into the atomization chamber <b>4</b> using a supply mechanism <b>7</b>. The supply mechanism <b>7</b> shown in <figref idref="DRAWINGS">FIG. 3</figref> includes a liquid reservoir <b>11</b> storing the liquid to be supplied to the atomization chamber <b>4</b>, and a liquid pump <b>10</b> for supplying into the atomization chamber <b>4</b> the liquid stored in the liquid reservoir <b>11</b>. The liquid pump <b>10</b> has its suction side connected to the liquid reservoir <b>11</b> while having its discharging side communicated with the atomization chamber <b>4</b>. This supply mechanism <b>7</b> is so constructed as to continuously supply the liquid from the liquid reservoir <b>11</b> to the atomization chamber <b>4</b>. In the ultrasonic atomization apparatus <b>1</b> shown in <figref idref="DRAWINGS">FIG. 3</figref>, while the liquid is discharged out of the atomization chamber <b>4</b>, the liquid is supplied from the liquid reservoir <b>11</b> to thus prevent a reduction of the concentration of a target substance, such as liquid alcohol, in the atomization chamber <b>4</b>. In this ultrasonic atomization apparatus <b>1</b>, when a concentration of the target substance is reduced, i.e., when a given time period is elapsed, the liquid can be renewed by replacing a new liquid in the atomization chamber <b>4</b> and the liquid reservoir <b>11</b>. Also as indicated by arrow A in the drawing, it is possible to prevent a reduction of the concentration of the target substance contained in the liquid reservoir <b>11</b>, by discharging the liquid contained in the atomization chamber <b>4</b> outwardly instead of circulation into the liquid reservoir <b>11</b>.</p>
+<p id="p-0079" num="0078">As shown in the enlarged, cross sectional view in <figref idref="DRAWINGS">FIG. 5</figref>, the ultrasonic oscillator <b>2</b> is so fixed as to water-tightly close off the opening <b>12</b>A provided to the bottom plate <b>12</b> of the atomization chamber <b>4</b>. With an electrode provided on a back surface being connected to the high-frequency power source <b>3</b>, the ultrasonic oscillator <b>2</b> is ultrasonically oscillated by the power supplied from the high-frequency power source <b>3</b>. The high-frequency power source <b>3</b> is connected to the ultrasonic oscillator <b>2</b> via a lead wire <b>15</b> to thus output high-frequency power to the ultrasonic oscillator <b>2</b>.</p>
+<p id="p-0080" num="0079">As shown in <figref idref="DRAWINGS">FIG. 6</figref>, the high-frequency power source <b>3</b> is provided with an output transistor <b>16</b> which is switched on and off at given intervals to output the high-frequency power to the ultrasonic oscillator <b>2</b>. The output side of the output transistor <b>16</b> is connected via a transformer <b>17</b> to the ultrasonic oscillator <b>2</b>. The illustrated high-frequency power source <b>3</b> employs an FET as the output transistor <b>16</b> but can also employ a bipolar transistor.</p>
+<p id="p-0081" num="0080">As shown in <figref idref="DRAWINGS">FIG. 4</figref>, the blower mechanism <b>20</b> is provided with the suction port <b>22</b> being away at a distance (d<b>1</b>) of 5 cm or less from the center axis m of the liquid column P generated by ultrasonic oscillation, and includes a suction mechanism <b>21</b> for sucking the carrier gas into the suction port <b>22</b> to blow the gas flow across the liquid column P. As the carrier gas is blown across the liquid column P, the liquid column P is so formed that its distal end bends in the blowing direction as shown in <figref idref="DRAWINGS">FIG. 4</figref>, depending on an air volume to be blown. The bending form is not uniform but varies depending on the air volume of the carrier gas. In the present specification, therefore, the &#x201c;center axis m of the liquid column&#x201d; shall mean the direction that when the carrier gas is not blown, the liquid column P is projected by the ultrasonic oscillator <b>2</b>, namely, the vertical line L running in the center of the ultrasonic oscillator <b>2</b>. The suction port <b>22</b> is at a distance (d<b>1</b>) away from the center axis m which coincides with the vertical line L.</p>
+<p id="p-0082" num="0081">Furthermore, the blower mechanism <b>20</b> shown in <figref idref="DRAWINGS">FIG. 4</figref> is also provided with a blast mechanism <b>25</b> for blowing the carrier gas toward the liquid column P. The blast mechanism <b>25</b> laterally blows the carrier gas toward the liquid column P from the blower port <b>26</b> provided at the lateral point away from the liquid column P. In the illustrated blower mechanism <b>20</b>, the blower port <b>26</b> is arranged at a first lateral point away from the liquid column P, and the suction port <b>22</b> is arranged at a second lateral point away from the liquid column P. In other words, the blower port <b>26</b> and the suction port <b>22</b> are placed at opposing lateral points away from the liquid column P, between which is placed the liquid column P.</p>
+<p id="p-0083" num="0082">In the blower mechanism <b>20</b> described above, the carrier gas is blown rectilinearly from the blower port <b>26</b> toward the suction port <b>22</b>, which is made possible by sucking into the suction port <b>22</b> the carrier gas blown from the blower port <b>26</b>. Such rectilinearly blown carrier gas flows across the liquid column P to efficiently separate from the liquid column P the mists generated around the liquid column P. The blower port <b>26</b> and the suction port <b>22</b> are provided at the intermediate point of the projecting direction of the liquid column P. When the projecting length of the liquid column P is considered to be 100%, the suction port <b>22</b> and the blower port <b>26</b> which are opened at the intermediate point of the projecting direction of the liquid column P are placed for example at the position of 10%-80% in the projecting direction, preferably 30%-80%, and more preferably 40%-80%. The blower port <b>26</b> and the suction port <b>22</b> provided at the intermediate point of the liquid column P allows the carrier gas to flow across the intermediate point of the liquid column P, and thus the mists dispersed around the liquid column P is most efficiently separated from the liquid column P.</p>
+<p id="p-0084" num="0083">The suction port <b>22</b>; being at a distance (d<b>1</b>) of 5 cm or less away from the center axis m of the liquid column P, allows the sucked carrier gas to be efficiently carried across the liquid column P. When the distance (d<b>1</b>)) of the suction port <b>22</b> away from the center axis m of the liquid column P is shortened, the carrier gas sucked into the suction port <b>22</b> can be blown across the liquid column P more efficiently. Therefore, the distance (d<b>1</b>) of the suction port <b>22</b> away from the center axis m of the liquid column P is set to be more preferably 3 cm or less. However, when the suction port <b>22</b> is placed too close to the liquid column P, larger particles of the mists generated around the liquid column P are more likely to be sucked into the suction port <b>22</b>, resulting in a difficulty of selectively sucking fine mists alone. When larger mists are sucked, a separation efficiency decreases in the case of the separation apparatus. For example, in the case of an apparatus for atomizing an alcoholic solution into the mists, an alcoholic concentration with fine mists becomes higher than the one with larger mists. Therefore, in the case of an atomization apparatus to be used as a separation apparatus, the distance (d<b>1</b>) of the suction port <b>22</b> away from the center axis m of the liquid column P is set to be an optimal value, with the size of the sucked mists being taken into consideration, and so such distance (d<b>1</b>) is set to be for example larger than 3 mm, and preferably larger than 5 mm. However, in the case of such an atomization apparatus as may not mind the size of mists like in a humidifier, the distance of the suction port away from the center axis of the liquid column can be shortened to allow the mists to be generated more efficiently.</p>
+<p id="p-0085" num="0084">Furthermore, when the blower port <b>26</b> is also placed closer to the liquid column P, the carrier gas can be efficiently blown across the liquid column P. Therefore, the distance (d<b>2</b>) of the blower port <b>26</b> away from the center axis m of the liquid column P is set to be 10 cm or less, and preferably 5 cm or less. When the blower port <b>26</b> is also placed too close to the liquid column P, the mean particle size of the mists separated from the liquid column P becomes larger. Therefore, in the case of an atomization apparatus to be used as a separation apparatus, the distance (d<b>2</b>) of the blower port <b>26</b> away from the center axis m of the liquid column P is set to be preferably 3 mm or more, and more preferably 5 mm or more.</p>
+<p id="p-0086" num="0085">In the case of a blower mechanism <b>20</b> having the blower port <b>26</b> and the suction port <b>22</b> respectively placed at opposite lateral points away from the liquid column P, in other words, in the case of a blower mechanism <b>20</b> having the liquid column P placed between the blower port <b>26</b> and the suction port <b>22</b>, the distance (D) between the blower port <b>26</b> and the suction port <b>22</b> affects an atomization efficiency and a mean particle size of the mists. As the blower port <b>26</b> and the suction port <b>22</b> are placed closer to each other, the carrier gas blown rectilinearly from the blower port <b>26</b> to the suction port <b>22</b> becomes larger in volume, and the carrier gas blown dispersedly away from the straight line becomes smaller in volume. For this reason, the atomization efficiency can be increased when the distance (D) between the blower port <b>26</b> and the suction port <b>22</b> is shortened to enable the carrier gas to be efficiently blown across the liquid column P. However, when such distance (D) is too short, the mean particle size of the mists separated from the liquid column P becomes larger. Therefore, in the case of an atomization apparatus to be used as a separation apparatus, the distance (D) between the blower port <b>26</b> and the suction port <b>22</b> is set to be, for example, 15 cm or less, and preferably 8 cm or less, and thus the mean particle size of the separated mists becomes smaller. However, in an application that the mean particle size of the mists is not minded like in a humidifier, the distance (D) between the blower port <b>26</b> and the suction port <b>2</b> can be made narrower.</p>
+<p id="p-0087" num="0086">In the blower mechanism <b>20</b> shown in <figref idref="DRAWINGS">FIG. 7</figref>, the distance (d<b>2</b>) of the blower port <b>26</b> of the blast mechanism <b>25</b> away from the center axis m of the liquid column P is made shorter than the distance (d<b>1</b>) of the suction port <b>22</b> of the suction mechanism <b>21</b> away from the center axis m of the liquid column P. This blower mechanism <b>20</b> carries the advantage that the mists can be efficiently separated from the liquid column P which is bent by the carrier gas blown from the blower port <b>26</b> and thus the mean particle size can be made smaller. This is because even when the liquid column P is bent by the carrier gas blown across the liquid column P, the suction port <b>22</b> is positioned away from the liquid column P to thus suck the mists.</p>
+<p id="p-0088" num="0087">In the blower mechanism <b>20</b> shown respectively in <figref idref="DRAWINGS">FIG. 4</figref> and <figref idref="DRAWINGS">FIG. 7</figref>, the suction mechanism <b>21</b> is provided with a suction fan <b>23</b> for sucking the carrier gas into the suction port <b>22</b>. The suction fan <b>23</b> sucks the carrier gas out of the atomization chamber <b>4</b> into the suction port <b>22</b>, and the carrier gas is forcibly discharged outwardly. When the carrier gas is forcibly discharged, the atomization chamber <b>4</b> is evacuated. When the atomization chamber <b>4</b> is evacuated, the carrier gas is blown out of the blower port <b>26</b> into the atomization chamber <b>4</b>. The atomization apparatus in which the atomization chamber <b>4</b> is evacuated and the carrier gas is discharged outwardly can improve the atomization efficiency by evacuating the atomization chamber <b>4</b>. In addition, the carrier gas can be blown out of the blower port <b>26</b> toward the liquid column P without using a fan for forcibly blowing the carrier gas out of the blower port <b>26</b>. In the blower mechanism <b>20</b>, however, the blower port <b>26</b> can also be connected to the blower fan <b>27</b> to blow the carrier gas to the liquid column P by means of the blower fan <b>27</b>. It is also possible that the blower port <b>26</b> is connected to the blower fan <b>27</b> and the suction port <b>22</b> is connected to the suction fan <b>23</b>, and thus the carrier gas can also be blown across the liquid column P by both of the blower fan <b>27</b> and the suction fan <b>23</b>.</p>
+<p id="p-0089" num="0088">In the blower mechanism <b>20</b> shown respectively in <figref idref="DRAWINGS">FIG. 4</figref> and <figref idref="DRAWINGS">FIG. 7</figref>, the blast mechanism <b>25</b> has the blower port <b>26</b> connected to the blower fan <b>27</b>, and the blower fan <b>27</b> blows the carrier gas to the liquid column P. In this blower mechanism <b>20</b>, the carrier gas is blown to the liquid column P without evacuating the atomization chamber <b>4</b>. Furthermore, in the illustrated blower mechanism <b>20</b>, the blower port <b>26</b> is connected to the blower fan <b>27</b> while the suction port <b>22</b> is connected to the suction fan <b>23</b>, and thus the carrier gas is blown across the liquid column P by both of the blower fan <b>27</b> and the suction fan <b>23</b>. In the blower mechanism <b>20</b> provided with the blower fan <b>27</b> and the suction fan <b>23</b>, the suction of the suction fan <b>23</b> is powered up to be stronger than the blower fan <b>27</b> to thus be able to blow the carrier gas to the liquid column P, with the atomization chamber <b>4</b> being evacuated. It is also possible that the blow of the blower fan <b>27</b> is powered up to be stronger than the suction <b>23</b> to thus be able to keep the atomization chamber under a pressurized state.</p>
+<p id="p-0090" num="0089">In the blower mechanism <b>20</b> shown respectively in <figref idref="DRAWINGS">FIG. 4</figref> and <figref idref="DRAWINGS">FIG. 7</figref>, the suction port <b>22</b> is placed at a first lateral point away from the liquid column P and the blower port <b>26</b> is placed at a second lateral point away from the liquid column P, and thus the carrier gas is blown across the liquid column P. In the blower mechanism <b>20</b> as shown in <figref idref="DRAWINGS">FIG. 8</figref>, two lateral points away from the liquid column P may be respectively provided with each blower port <b>26</b> to make up the suction mechanism <b>21</b>, and another two lateral points away from the liquid column P may be respectively provided with each suction port <b>22</b> to make up a blast mechanism <b>25</b>. In this blower mechanism <b>20</b>, the blower port <b>26</b> and the suction port <b>22</b> are placed at opposite positions, and thus the carrier gas blown out of the blower port <b>26</b> is sucked into the suction port <b>22</b> to be blown across the liquid column P. In this blower mechanism <b>20</b> as well, the distance (d<b>1</b>) of the suction port <b>22</b> away from the center axis m of the liquid column P is set to be 5 cm or less, and the distance (d<b>2</b>) of the blower port <b>26</b> away from the center axis m of the liquid column P is set to be 10 cm or less.</p>
+<p id="p-0091" num="0090">In the ultrasonic atomization apparatus <b>1</b> described above, the ultrasonic oscillator <b>2</b> are placed horizontally to allow the liquid column P to project vertically from the liquid surface. Regarding the atomization apparatus, it is also possible that the ultrasonic oscillator <b>2</b> is placed in an oblique posture to allow the liquid column P to project in an oblique posture with respect to the liquid surface. In this atomization apparatus as well, &#x201c;the center axis of the liquid column&#x201d; shall mean a vertical line at the center of the ultrasonic oscillator.</p>
+<p id="p-0092" num="0091">The ultrasonic atomization apparatus <b>1</b> shown in the top plan view in <figref idref="DRAWINGS">FIG. 9</figref> and in the vertical, cross section view in <figref idref="DRAWINGS">FIG. 10</figref> has a plurality of arrays of ultrasonic oscillators <b>2</b> arranged in the atomization chamber <b>4</b>. In the illustrated ultrasonic atomization apparatus <b>1</b>, ten pieces of ultrasonic oscillators <b>2</b> are placed in one row, which are then arranged to make up four lines, thus arranging forty pieces of ultrasonic oscillators <b>2</b> in total at the bottom of the atomization chamber <b>4</b>.</p>
+<p id="p-0093" num="0092">In the illustrated ultrasonic atomization apparatus <b>1</b>, the suction mechanism <b>21</b> includes a suction duct <b>24</b> in which a suction port <b>22</b> is provided at a lateral point away from each liquid column P, while the blast mechanism <b>25</b> includes a blower duct <b>28</b> in which a blower port <b>26</b> is provided at a lateral point away from each liquid column P. In the illustrated atomization apparatus, the suction duct <b>24</b> of the suction mechanism <b>21</b> and the blower duct <b>28</b> of the blast mechanism <b>25</b> are arranged in a parallel relationship on opposite sides of each row of ultrasonic oscillator <b>2</b>. The suction duct <b>24</b> is provided with the suction port <b>22</b> at a lateral point away from the liquid column P projecting above each ultrasonic oscillator <b>2</b>. Therefore, the suction duct <b>24</b> has the suction port <b>22</b> at the interval of arranging each ultrasonic oscillator <b>2</b>. In the suction mechanism <b>21</b>, the suction duct <b>24</b> is placed such that the distance (d<b>1</b>) of the suction port <b>22</b> away from the center axis m of the liquid column P generated by each ultrasonic oscillator <b>2</b> is 5 cm or less. The blower duct <b>28</b> is provided with the blower port <b>26</b> at the lateral point away from the liquid column P. The blower duct <b>28</b> shown in <figref idref="DRAWINGS">FIG. 10</figref> is provided with an injection portion <b>29</b> projecting from the blower duct <b>28</b> toward the liquid column P, and thus the carrier gas can be effectively blown toward the liquid column P, with a distal end of the injection portion <b>29</b> being provided with the blower port <b>26</b>. The blower duct <b>28</b> as well is provided with the blower port <b>26</b> at the interval of arranging each ultrasonic oscillator <b>2</b>. In the blast mechanism <b>25</b> as well, the blower duct <b>28</b> is arranged such that the distance (d<b>2</b>) of the blower port <b>26</b> away from the center axis m of the liquid column P generated by each ultrasonic oscillator <b>2</b> is 10 cm or less. The suction duct <b>24</b> and the blower duct <b>28</b> are alternately arranged in a plurality of rows, and the ultrasonic oscillator <b>2</b> is arranged between the suction duct <b>24</b> and the blower duct <b>28</b> which are adjacent to each other.</p>
+<p id="p-0094" num="0093">Furthermore, in the blower mechanism <b>20</b> shown in <figref idref="DRAWINGS">FIG. 9</figref>, the blower duct <b>28</b> is connected to the blower fan <b>27</b>, while the suction duct <b>24</b> is connected to the suction fan <b>23</b>. In the atomization apparatus described above, the carrier gas is blown out of the blower port <b>26</b> of the blower duct <b>28</b> to each liquid column P generated by each ultrasonic oscillator <b>2</b>, and the carrier gas is sucked into the suction port <b>22</b> of the suction duct <b>24</b>; thus the carrier gas is blown across the liquid column P and the mists are separated from each liquid column P.</p>
+<p id="p-0095" num="0094">Furthermore, in the ultrasonic atomization apparatus <b>1</b> shown respectively in <figref idref="DRAWINGS">FIG. 11</figref> and <figref idref="DRAWINGS">FIG. 12</figref>, a tubular body <b>6</b> is arranged inside the atomization chamber <b>4</b>. The tubular body <b>6</b>, being arranged above the ultrasonic oscillator <b>2</b>, allows the liquid column P to project out of the top end of tubular body <b>6</b>, the liquid column P being generated from the liquid which is ultrasonically oscillated by the ultrasonic oscillator <b>2</b>. The tubular body <b>6</b>, being a conical tube tapered toward the upper end, is provided with a spraying port <b>6</b>A at the upper end. In the ultrasonic atomization apparatus <b>1</b> illustrated in these drawings, the liquid supplied to the atomization chamber <b>4</b> is supplied inside the tubular body <b>6</b>, while the liquid supplied inside the tubular body is subjected to an ultrasonic oscillation directed from the ultrasonic oscillator <b>2</b> toward the spraying port <b>6</b>A, from which is projected the generated liquid column P. The illustrated ultrasonic oscillator <b>2</b> radiates an ultrasonic wave upwardly. Therefore, the tubular body <b>6</b> is arranged, above the ultrasonic oscillator <b>2</b>, in a vertical posture.</p>
+<p id="p-0096" num="0095">In the ultrasonic atomization apparatus <b>1</b> shown in <figref idref="DRAWINGS">FIG. 11</figref>, a plurality of ultrasonic oscillators <b>2</b> are arranged on the bottom plate <b>12</b> of the atomization chamber <b>4</b>, while a plurality of tubular bodies <b>6</b> are placed at the lower portion of the atomization chamber <b>4</b> in an opposing relationship with respect to each ultrasonic oscillator <b>2</b>. In the case of this ultrasonic atomization apparatus <b>1</b>, the plurality of tubular bodies <b>6</b> are arranged to be upwardly spaced apart from the bottom plate <b>12</b> to which the ultrasonic oscillator is fixed. In the ultrasonic atomization apparatus <b>1</b>, the ultrasonic oscillation generated by the ultrasonic oscillator <b>2</b> positioned below the lower end of the tubular body <b>6</b> is guided inwardly of the tubular body <b>6</b>, and thus the liquid column P is projected out of the spraying port <b>6</b>A located at the upper end of the tubular body <b>6</b>. The plurality of tubular bodies <b>6</b>, with their lower ends being connected to a connection plate <b>18</b>, are arranged on the same plane. In this ultrasonic atomization apparatus <b>1</b>, the lower portion of the atomization chamber <b>4</b> to which the liquid is supplied is of a structure being closed by the tubular bodies <b>6</b> and the connection plate <b>18</b>, and the liquid supplied in here is to be projected by the ultrasonic oscillation as a liquid column P into the gas out of the spraying ports <b>6</b>A of the plurality of tubular bodies <b>6</b>.</p>
+<p id="p-0097" num="0096">In the ultrasonic atomization apparatus <b>1</b> provided with the tubular body <b>6</b>, the liquid supplied inwardly of the tubular body <b>6</b> is exposed to the ultrasonic oscillation in the direction toward the spraying port <b>6</b>A from the ultrasonic oscillator <b>2</b>, and thus the liquid column P is projected from the spraying port <b>6</b>A. This tubular body <b>6</b> allows the liquid column to efficiently protect from the liquid being ultrasonically oscillated by the ultrasonic oscillator <b>2</b>. The illustrated tubular body <b>6</b> is a conical horn tapering gradually toward the upper end. However, the tubular body can be an exponential horn with its inner surface being of an exponentially curved shape. The tubular body in the shape of a conical horn or an exponential horn has an advantage that the ultrasonic oscillation can be efficiently transmitted inwardly to efficiently generate the liquid column P. It should be noted, however, that the tubular body can also be a cylindrical, oblong or polygonal tube.</p>
+<p id="p-0098" num="0097">For an efficient transmission of the ultrasonic oscillation inwardly of the tubular body, the inner shape at the lower end of the tubular body <b>6</b> is made either smaller or larger than the outer shape of the ultrasonic oscillator <b>2</b>, and thus the ultrasonic oscillation rises along the inner surface of the tubular body <b>6</b>. As illustrated in <figref idref="DRAWINGS">FIG. 11</figref> and <figref idref="DRAWINGS">FIG. 12</figref>, in the tubular body <b>6</b> which is arranged to be spaced apart from the bottom plate <b>12</b> to which the ultrasonic oscillator <b>2</b> is fixed, the inner diameter of the spraying port <b>6</b>A at the lower end of the tubular body <b>6</b> is set to be 50-150%, preferably 60-100% of the outer diameter of the ultrasonic oscillator <b>2</b>.</p>
+<p id="p-0099" num="0098">The size of the spraying port <b>6</b>A of the tubular body <b>6</b> specifically determines the diametrical thickness of the liquid column P when the liquid supplied into the tubular body <b>6</b> projects as the liquid column P out of the spraying port <b>6</b>A, namely the cross section of the liquid column P. A liquid column with its larger cross section, due to its larger surface area, can be efficiently atomized into the gas by the ultrasonic oscillation. To be noted is that when such cross section is too large, energy required of the ultrasonic oscillator for atomization from the surface of the liquid column becomes larger. Conversely, when the cross section is made smaller, the energy required of the ultrasonic oscillator for atomization can be made smaller, but the surface area of the liquid column becomes smaller and the efficiency of atomizing into the mists decreases in a state where the carrier gas is blown. Therefore, with these factors in mind, the size of the spraying port <b>6</b>A of the tubular body <b>6</b> is designed to be optimal in accordance with the size, output, frequency, etc. of the ultrasonic oscillator <b>2</b>.</p>
+<p id="p-0100" num="0099">With reference to the liquid column P projecting out of the spraying port <b>6</b>A of the tubular body <b>6</b>, the mists are separated by the carrier gas carried by the blower mechanism <b>20</b>, and such separated mists are transferred by means of the carrier gas outwardly of the atomization chamber <b>5</b>. The illustrated blower mechanism includes the suction mechanism <b>21</b> that is provided with a suction port <b>22</b> at a lateral point away from the liquid column P projecting out of the spraying port <b>6</b>A of the tubular body <b>6</b>, and which sucks the carrier gas into the suction port <b>22</b> to thus blow the gas flow across the liquid column P. In addition, the blower mechanism <b>20</b> shown in <figref idref="DRAWINGS">FIG. 11</figref> also includes the blast mechanism <b>25</b> for blowing the carrier gas toward the liquid column P. In the blast mechanism <b>25</b>, the carrier gas is blown laterally toward the liquid column P out of the blower port <b>26</b> opened at a lateral point away from the liquid column P. In the blower mechanism <b>20</b> shown in <figref idref="DRAWINGS">FIG. 12</figref>, the blower port <b>26</b> is placed at a first lateral point away from the liquid column P, the suction port <b>22</b> is placed at a second lateral point away from the liquid column P, namely, the blower port <b>26</b> and the suction port <b>22</b> are placed at opposite lateral points away from the liquid column P with respect to each other, or in other words, the liquid column P is placed between the blower port <b>26</b> and the suction port <b>22</b>. In this blower mechanism <b>20</b> as well, the distance (d<b>1</b>) of the suction port <b>22</b> away from the center axis m of the liquid column P is set to be 5 cm or less, and preferably 3 cm or less, and thus the carrier gas to be sucked is efficiently blown across the liquid column P. In addition, the distance (d<b>2</b>) of the blower port <b>26</b> away from the center axis m of the liquid column P is set to be 10 cm or less, and preferably 5 cm or less.</p>
+<p id="p-0101" num="0100">Furthermore, the blower mechanism <b>20</b> shown in <figref idref="DRAWINGS">FIG. 11</figref> includes the suction fan <b>23</b> with which the suction mechanism <b>21</b> sucks the carrier gas into the suction port <b>22</b>, and the carrier gas sucked out of the atomization chamber <b>4</b> into the suction port <b>22</b> is forcibly discharged outwardly. Also in the blower mechanism <b>20</b>, the blast mechanism <b>25</b> has the blower port <b>26</b> connected to the blower fan <b>27</b>, and the carrier gas is blown by the blower fan <b>27</b> to the liquid column P. In this atomization apparatus, the carrier gas out of the blower port <b>26</b> of the blower duct <b>28</b> is blown to each liquid column P projecting out of the spraying port <b>6</b>A of the tubular body <b>6</b>, with the carrier gas being sucked into the suction port <b>22</b> of the suction duct <b>24</b> so as to be carried across the liquid column P, and thus the mists are separated from each liquid column P. Such structure enables the mists to be efficiently separated and carried from the surface of the liquid column P projecting out of the spraying port <b>6</b>A of the tubular body <b>6</b>. In particular, as the tubular body <b>6</b> enables the liquid column P to be generated in a more accurate position, the carrier gas can be precisely blown across the liquid column P to thus separate the mists efficiently from the surface of the liquid column P.</p>
+<p id="p-0102" num="0101">Furthermore, in the atomization apparatus shown in <figref idref="DRAWINGS">FIG. 11</figref>, the atomization chamber <b>4</b> is provided with a discharge path <b>19</b> which is used for collecting the liquid overflowed and blown around the spraying port <b>6</b>A of the tubular body <b>6</b>. The liquid column P projecting out of the spraying port <b>6</b>A of the tubular body <b>6</b> in the state of ultrasonically oscillation is atomized into the mists by the carrier gas and such mists are transferred outwardly, but part of the liquid column P, in the state of liquid without being atomized, falls down around the tubular body <b>6</b>. The atomization chamber <b>4</b> is connected to the discharge path <b>19</b> in order to collect such liquid. The liquid collected at the discharge path <b>19</b> is again circulated into the liquid reservoir <b>11</b>, or alternatively the liquid is discharged outwardly as indicated by arrow A in the drawing.</p>
+<p id="p-0103" num="0102">In the ultrasonic atomization apparatus <b>1</b> described above, the liquid in the atomization chamber <b>4</b> is ultrasonically oscillated by the ultrasonic oscillation <b>2</b> to be atomized into the mists. The mists atomized by the atomization apparatus is higher than the liquid in terms of the concentration of the target substance. Therefore, the separation apparatus can efficiently separate a highly concentrated liquid through atomizing the liquid by the atomization apparatus and condensing such mists for collection.</p>
+<p id="p-0104" num="0103">The mists of liquid having been atomized by the ultrasonic atomization apparatus <b>1</b> is flowed into a collection unit <b>5</b> by means of the carrier gas and collected in a collection unit <b>5</b>. In the separation apparatus shown in <figref idref="DRAWINGS">FIG. 3</figref>, the collection unit <b>5</b> is connected to the ultrasonic atomization apparatus <b>1</b> through the duct <b>8</b> in order to allow the mists to flow into the collection unit <b>5</b>. In the illustrated separation apparatus, the carrier gas is transferred into the collection unit <b>5</b> by means of a blower <b>9</b>. In the separation apparatus, it should be noted that the suction fan <b>23</b> of the blower mechanism <b>20</b> can also be jointly used as a blower for transferring the carrier gas into the collection unit <b>5</b>.</p>
+<p id="p-0105" num="0104">In these separation apparatuses, the carrier gas containing the mists is transferred from the ultrasonic atomization apparatus <b>1</b> into the collection unit <b>5</b>. Particularly in the illustrated separation apparatus, the discharging side of the collection unit <b>5</b> is connected to the atomization chamber <b>4</b>, and the carrier gas with the mist component being separated is circulated to the atomization chamber <b>4</b>. In this separation apparatus, the carrier gas can preferably be selected from an inert gas such as nitrogen, helium and argon. In this separation apparatus, the inert gas prevents the liquid from getting deteriorated in the ultrasonic atomization apparatus <b>1</b> and/or in the collection unit <b>5</b>. Thus, a highly concentrated liquid can be obtained in the state of a higher quality. However, air can also be used as the carrier gas. Furthermore, in the separation apparatus, the carrier gas can also be supplied, without circulation, by being discharged at the discharging side of the collection unit and through connection of air supply source to the atomization chamber. The air can be used as such carrier gas.</p>
+<p id="p-0106" num="0105">In the collection unit <b>5</b>, the fine mists are condensed and collected as a highly concentrated alcohol liquid. Therefore, every structure of being able to condense and collect the fine mists and having already been developed or to be developed in the future can be used for this collection unit <b>5</b>. The mists, not being the gas in nature, can be condensed and collected without being necessarily cooled down. However, when the mists are cooled down, the collection can be accelerated. For example, as shown in <figref idref="DRAWINGS">FIG. 3</figref>, the collection unit <b>5</b> can incorporate a cooling heat-exchanger <b>5</b>A to cool the mists flowed into the collection unit <b>5</b> for a larger dew condensation, to thus collect in the form of liquid.</p>
+<p id="p-0107" num="0106">And, although not illustrated, the collection unit can also be so designed that a vapor of target substance such as alcohol contained in the gas is adsorbed into an adsorbent for collection. In such collection unit, for example, the alcohol adsorbed into the adsorbent can be removed by using a heated recovery gas, and then the recovery gas is cooled to condense and recover the removed alcohol. Such a collection unit can be composed of a rotor with the adsorbent provided in an air gap, and a rotational drive mechanism for rotating the rotor. The rotor is a honeycomb rotor having the air gap through which a carrier gas can pass in the direction of the rotational axis. As the adsorbent, for example, any one of zeolite, activated carbon, lithium oxide and silica gel or a mixture of them can be used. In this collection unit, the rotor is rotated at a predetermined speed by means of the rotational drive mechanism and moved between an adsorbing region in which the vapor is adsorbed and a releasing region in which the adsorbed vapor is released. When the rotor is moved into the adsorbing region, the gas containing the vapor of alcohol that is the target substance is passed through the air gap, and the alcohol contained as a target substance in the gas is adsorbed by the adsorbent. When the rotor is rotated and moved into the releasing region, the adsorbed alcohol as a target substance is released. The released alcohol as a target substance is recovered by cooling the recovery gas. The gas having passed through the adsorbing region of the rotor is moved back to the ultrasonic atomization chamber again.</p>
+<p id="p-0108" num="0107">Further, regarding the collection unit, the closed chamber can be provided with a liquid spraying nozzle for spraying the liquid out of the nozzle, for collection of the mists contained in the carrier gas. In addition, the collecting unit can be provided with a plurality of baffles inside, upon the surface of baffle the mists are impinged and adhered, and thus the liquid flowing down by itself can be collected. The baffle has an uneven or rugged surface to enable the mists to be in contact with the surface and collected more efficiently. Furthermore, the collection unit is provided with a fan for forcibly blowing and agitating the mists. Thus, the mists in the collection unit are agitated and impinged upon each other, and the mists can be collected. Such condensed mists rapidly fall downward and can be collected.</p>
+<p id="p-0109" num="0108">Furthermore, the collection unit can be provided with a mist vibrator for enhancing the probability of the mists being impinged upon each other through the vibration of the mists. The mist vibrator includes an electrical-to-mechanical oscillation converter for vibrating the gas in the collection unit, and an electric vibration source for driving the electrical-to-mechanical oscillation converter, wherein sound with an audible frequency and/or an ultrasonic wave higher than the audible frequency are emitted to vehemently vibrate the mists for mutual impingement in an efficient manner for a rapid collection.</p>
+<p id="p-0110" num="0109">In addition, the ultrasonic separation apparatus can have a nozzle for spraying the liquid, a fan for agitating the mists, and a vibrator for vibrating the mists, in a full set built inside the collection unit, and thus the mists can be condensed with the highest efficiency. Two units of such devices for condensing the mists may also be incorporated to condense the mists efficiently.</p>
+<heading id="h-0006" level="1">INDUSTRIAL APPLICABILITY</heading>
+<p id="p-0111" num="0110">The method and apparatus for ultrasonically atomizing the liquid, as embodied in accordance with the present invention, can atomize the liquid into the fine mists very efficiently, assuring that the invention can be used as a separation apparatus for atomizing Sake, alcohol used for Sake production, petroleum, crude oil or the like into the mists to obtain a highly concentrated solution as a target substance, or can be advantageously used as a humidifier, etc. for atomizing water into the mists to be vaporized into the air.</p>
+<?DETDESC description="Detailed Description" end="tail"?>
+</description>
+<us-claim-statement>The invention claimed is:</us-claim-statement>
+<claims id="claims">
+<claim id="CLM-00001" num="00001">
+<claim-text>1. An apparatus for ultrasonically atomizing a liquid, the apparatus comprising:
+<claim-text>an atomization chamber for storing the liquid;</claim-text>
+<claim-text>a first ultrasonic oscillator for ultrasonically oscillating the liquid and generating a first liquid column that projects in a projecting direction from a surface of the liquid to atomize the liquid into mist;</claim-text>
+<claim-text>an amplifier for ultrasound connected to the first ultrasonic oscillator to supply high-frequency power thereto for ultrasonic oscillation; and</claim-text>
+<claim-text>a streaming mechanism for conveying a carrier gas in the atomization chamber, the streaming mechanism including a suction mechanism,</claim-text>
+<claim-text>wherein the suction mechanism has a first suction port located inside the atomization chamber for sucking the carrier gas into the first suction port, and the suction mechanism is elongated and extends into the atomization chamber inwardly,</claim-text>
+<claim-text>wherein the first suction port of the suction mechanism is arranged in the atomization chamber at a distance away from a center axis of the first liquid column in a horizontal direction perpendicular to the projecting direction of the first liquid column, and an opening of the first suction port will face a side surface of the first liquid column which extends upwardly from the surface of the liquid,</claim-text>
+<claim-text>wherein the suction mechanism is arranged to suck the carrier gas from the side surface of the first liquid column, which extends upwardly from the surface of the liquid, in a horizontal direction perpendicular to the projecting direction of the first liquid column such that the carrier gas flows across the first liquid column and the mist from the first liquid column is separated and discharged outwardly of the atomization chamber,</claim-text>
+<claim-text>wherein the streaming mechanism comprises a blast mechanism provided with a first blower port for blowing the carrier gas against the first liquid column generated,</claim-text>
+<claim-text>wherein the blast mechanism is elongated and extends into the atomization chamber inwardly,</claim-text>
+<claim-text>wherein the first suction port and the first blower port are located at substantially the same level away from the first ultrasonic oscillator in the projecting direction of the liquid column, and</claim-text>
+<claim-text>wherein the first suction port and the first blower port are positioned on opposite sides with respect to the first liquid column in the horizontal direction perpendicular to the projecting direction of the liquid column, facing each other within a projecting region of the liquid column in the projecting direction of the liquid column.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00002" num="00002">
+<claim-text>2. The apparatus of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the first suction port of the suction mechanism is positioned at a distance of 5 cm or less away from the center axis of the first liquid column, and the first blower port of the blast mechanism is positioned at a distance of 10 cm or less from the center axis of the first liquid column.</claim-text>
+</claim>
+<claim id="CLM-00003" num="00003">
+<claim-text>3. The apparatus of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein a distance between the first suction port and the first blower port is 15 cm or less.</claim-text>
+</claim>
+<claim id="CLM-00004" num="00004">
+<claim-text>4. An apparatus for ultrasonically atomizing a liquid, the apparatus comprising:
+<claim-text>an atomization chamber for storing the liquid;</claim-text>
+<claim-text>a first ultrasonic oscillator for ultrasonically oscillating the liquid and generating a first liquid column that projects in a projecting direction from a surface of the liquid to atomize the liquid into mist;</claim-text>
+<claim-text>an amplifier for ultrasound connected to the first ultrasonic oscillator to supply high-frequency power thereto for ultrasonic oscillation; and</claim-text>
+<claim-text>a streaming mechanism for conveying a carrier gas in the atomization chamber, the streaming mechanism including a suction mechanism,</claim-text>
+<claim-text>wherein the suction mechanism has a first suction port located inside the atomization chamber for sucking the carrier gas into the first suction port, and the suction mechanism is elongated and extends into the atomization chamber inwardly,</claim-text>
+<claim-text>wherein the first suction port of the suction mechanism is arranged in the atomization chamber at a distance away from a center axis of the first liquid column in a horizontal direction perpendicular to the projecting direction of the first liquid column, and an opening of the first suction port will face a side surface of the first liquid column which extends upwardly from the surface of the liquid,</claim-text>
+<claim-text>wherein the suction mechanism is arranged to suck the carrier gas from the side surface of the first liquid column, which extends upwardly from the surface of the liquid, in a horizontal direction perpendicular to the projecting direction of the first liquid column such that the carrier gas flows across the first liquid column and the mist from the first liquid column is separated and discharged outwardly of the atomization chamber,</claim-text>
+<claim-text>wherein the streaming mechanism comprises a blast mechanism provided with a first blower port for blowing the carrier gas against the first liquid column generated,</claim-text>
+<claim-text>wherein the blast mechanism is elongated and extends into the atomization chamber inwardly,</claim-text>
+<claim-text>wherein the first suction port and the first blower port are located at the same level away from the first ultrasonic oscillator in the projecting direction of the liquid column, and</claim-text>
+<claim-text>wherein the first suction port and the first blower port are positioned facing each other on opposite sides of the first ultrasonic oscillator in the horizontal direction perpendicular to the projecting direction of the liquid column.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00005" num="00005">
+<claim-text>5. The apparatus of <claim-ref idref="CLM-00001">claim 1</claim-ref>, a distance between the first suction port and a vertical line running through a center of the first ultrasonic oscillator is smaller than a distance between the first blower port and the vertical line of the first ultrasonic oscillator.</claim-text>
+</claim>
+<claim id="CLM-00006" num="00006">
+<claim-text>6. The apparatus of <claim-ref idref="CLM-00001">claim 1</claim-ref>, an opening space of the first suction port is larger than an opening space of the first blower port.</claim-text>
+</claim>
+<claim id="CLM-00007" num="00007">
+<claim-text>7. The apparatus of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the first suction port and the first blower port are placed at a position of 10% to 80% in a vertical direction with respect to a projecting length of the liquid column when the projecting length of the liquid column is considered to be 100%.</claim-text>
+</claim>
+<claim id="CLM-00008" num="00008">
+<claim-text>8. The apparatus of <claim-ref idref="CLM-00004">claim 4</claim-ref>, further comprising a tubular body disposed in the atomization chamber in an opposing relationship with respect to the first ultrasonic oscillator.</claim-text>
+</claim>
+<claim id="CLM-00009" num="00009">
+<claim-text>9. The apparatus of <claim-ref idref="CLM-00001">claim 1</claim-ref>, further comprising a second ultrasonic oscillator for ultrasonically oscillating the liquid and generating a second liquid column that projects from the surface of the liquid to atomize the liquid into mist,
+<claim-text>wherein the suction mechanism includes a first suction duct having the first suction port and a second suction duct having a second suction port, the second suction port being located inside the atomization chamber for sucking the carrier gas into the second suction port,</claim-text>
+<claim-text>wherein the blast mechanism includes a first blower duct having the first blower port and a second blower duct having a second blower port for blowing the carrier gas against the second liquid column, and</claim-text>
+<claim-text>wherein the first ultrasonic oscillator is disposed between the first blower duct and the first suction duct, and the second ultrasonic oscillator is disposed between the second blower duct and the second suction duct.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00010" num="00010">
+<claim-text>10. The apparatus of <claim-ref idref="CLM-00009">claim 9</claim-ref>, wherein the first blower duct, the first suction duct, the second blower duct, and the second suction duct surround the ultrasonic oscillators in a horizontal cross section of the atomization chamber.</claim-text>
+</claim>
+<claim id="CLM-00011" num="00011">
+<claim-text>11. The apparatus of <claim-ref idref="CLM-00009">claim 9</claim-ref>, wherein the first blower duct, the first suction duct, the second blower duct, and the second suction duct extend in a horizontal direction of the atomization chamber perpendicular to the center axis of the first liquid column and a center axis of the second liquid column, and
+<claim-text>wherein first blower duct includes a plurality of blower ports, the first suction duct includes a plurality of suction ports, the second blower duct includes a plurality of blower ports, and the second suction duct includes a plurality of suction ports.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00012" num="00012">
+<claim-text>12. The apparatus of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the liquid contains at least two kinds of substances,
+<claim-text>wherein the apparatus is configured to atomize and separate the liquid to collect and condense the separated mist which contains at least one substance of the at least two kinds of substances, and</claim-text>
+<claim-text>wherein a liquid collected from the mist and a remaining liquid which is not turned to the mist are different in a concentration of the at least one substance.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00013" num="00013">
+<claim-text>13. The apparatus of <claim-ref idref="CLM-00004">claim 4</claim-ref>, wherein the atomization chamber comprises a liquid supply port for supplying a liquid into the chamber and an overflow port that controls a surface of the liquid to maintain a constant level.</claim-text>
+</claim>
+<claim id="CLM-00014" num="00014">
+<claim-text>14. The apparatus of <claim-ref idref="CLM-00004">claim 4</claim-ref>, wherein the first suction port of the suction mechanism is positioned at a distance of 5 cm or less away from the center axis of the first liquid column, and the first blower port of the blast mechanism is positioned at a distance of 10 cm or less from the center axis of the first liquid column.</claim-text>
+</claim>
+<claim id="CLM-00015" num="00015">
+<claim-text>15. The apparatus of <claim-ref idref="CLM-00004">claim 4</claim-ref>, wherein a distance between the first suction port and the first blower port is 15 cm or less.</claim-text>
+</claim>
+<claim id="CLM-00016" num="00016">
+<claim-text>16. The apparatus of <claim-ref idref="CLM-00004">claim 4</claim-ref>, wherein the first suction port and the first blower port are placed at a position of 10% to 80% in a vertical direction with respect to a projecting length of the liquid column when the projecting length of the liquid column is considered to be 100%. </claim-text>
+</claim>
+</claims>
+</us-patent-grant>

@@ -30,13 +30,13 @@ public class DummySearcher extends AMISearcher {
 
 	@Override
 	public ResultsElement search(List<? extends Element> elements) {
-		ResultsElement resultsElement = new DummyResultsElement();
-		for (Element element : elements) {
-			String xmlString = getValue(element);
-			LOG.trace(xmlString);
-			List<ResultElement> resultElementList = this.search(xmlString);
-			addXpathAndAddtoResultsElement(element, resultsElement, resultElementList);
-		}
+		ResultsElement resultsElement = null;
+//		for (Element element : elements) {
+//			String xmlString = getValue(element);
+//			LOG.trace(xmlString);
+//			List<ResultElement> resultElementList = this.search(xmlString);
+//			addXpathAndAddtoResultsElement(element, resultsElement, resultElementList);
+//		}
 		return resultsElement;
 	}
 

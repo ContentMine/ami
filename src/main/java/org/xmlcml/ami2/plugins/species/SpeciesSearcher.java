@@ -50,8 +50,8 @@ public class SpeciesSearcher extends AMISearcher {
 			for (Element element : elements) {
 				String xmlString = getValue(element);
 				LOG.trace(xmlString);
-				List<ResultElement> resultElementList = this.search(xmlString);
-				addXpathAndAddtoResultsElement(element, resultsElement, resultElementList);
+				ResultsElement resultsElementToAdd = this.search(xmlString);
+				addXpathAndAddtoResultsElement(element, resultsElement, resultsElementToAdd);
 			}
 			List<String> exactList = resultsElement.getExactList();
 			LinneanNamer linneanNamer = new LinneanNamer();

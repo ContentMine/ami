@@ -124,11 +124,12 @@ public class AMISearcher extends AbstractSearcher {
 
 
 	protected void addXpathAndAddtoResultsElement(Element elementToSearch, ResultsElement resultsElement,
-			List<ResultElement> resultElementList) {
-		if (resultElementList == null) {
-			LOG.warn("null resultsElementList");
+			ResultsElement resultsElementToAdd) {
+		if (resultsElementToAdd == null) {
+			LOG.warn("null resultsElement");
 		} else {
-			for (ResultElement resultElement : resultElementList) {
+			for (ResultElement resultElement : resultsElementToAdd) {
+				resultElement.detach();
 				String xpath = new XPathGenerator(elementToSearch).getXPath();
 				resultsElement.setXPath(xpath);
 				resultsElement.appendChild(resultElement);
@@ -294,31 +295,25 @@ public class AMISearcher extends AbstractSearcher {
 	 * @return
 	 */
 	public ResultsElement searchXomElement(Element xomElement) {
-		ResultsElement resultsElement = new ResultsElement();
 		String value = getValue(xomElement);
-		List<ResultElement> resultElementList = search(value); // crude to start with
-		if (resultElementList == null) {
-			throw new RuntimeException("Null resultsList");
-		}
-		for (ResultElement resultElement : resultElementList) {
-			resultsElement.appendChild(resultElement);
-		}
+		ResultsElement resultsElement = search(value); // crude to start with
 		return resultsElement;
 	}
 
 
-	public List<ResultElement> search(String value) {
-		List<ResultElement> resultElementList = null;
+	public ResultsElement search(String value) {
+		ResultsElement resultsElement = null;
 		if (getDictionary() != null) {
-			resultElementList = searchWithDictionary(value);
+			resultsElement = searchWithDictionary(value);
 		} else if (getPattern() != null) {
-			resultElementList = searchWithPattern(value);
+			resultsElement = searchWithPattern(value);
 		}
-		return resultElementList;
+		return resultsElement;
 	}
 
 	public ResultsElement searchWithDictionary(List<String> strings) {
 		ResultsElement resultsElement = new ResultsElement();
+//		ResultsElement resultsElement = new ResultsElement();
 		for (int pos = 0; pos < strings.size(); pos++) {
 			String firstword = strings.get(pos);
 			List<List<String>> trailingListList = dictionary.getTrailingWords(firstword);
@@ -333,31 +328,35 @@ public class AMISearcher extends AbstractSearcher {
 		return resultsElement;
 	}
 
-	private List<ResultElement> searchWithDictionary(String value) {
-			List<ResultElement> resultElementList = new ArrayList<ResultElement>();
+	private ResultsElement searchWithDictionary(String value) {
+			ResultsElement resultsElement = new ResultsElement();
 			WordCollectionFactory wordCollectionFactory = amiArgProcessor.ensureWordCollectionFactory();
 			List<String> stringList = wordCollectionFactory.createWordList();
 	//		createWordList
 	//		makeStrings();
-			for (String string : stringList) {
-				if (true) throw new RuntimeException("NYI");
-				//CHECK THIS
-				ResultElement resultElement = createResultElement(value, dictionary);
-				resultElementList.add(resultElement);
-			}
-			return resultElementList;
+			resultsElement = searchWithDictionary(stringList);
+//			if (true) {
+//				LOG.warn("searchWithDictionary NYI");
+//			} else {
+//				for (String string : stringList) {
+//					//CHECK THIS
+//					ResultElement resultElement = createResultElement(value, dictionary);
+//					resultsElement.appendChild(resultElement);
+//				}
+//			}
+			return resultsElement;
 		}
 
-	private List<ResultElement> searchWithPattern(String value) {
-		List<ResultElement> resultElementList = new ArrayList<ResultElement>();
+	private ResultsElement searchWithPattern(String value) {
+		ResultsElement resultsElement = new ResultsElement();
 		Matcher matcher = getPattern().matcher(value);
 		int start = 0;
 		while (matcher.find(start)) {
 			ResultElement resultElement = createResultElement(value, matcher);
-			resultElementList.add(resultElement);
+			resultsElement.appendChild(resultElement);
 			start = matcher.end();
 		}
-		return resultElementList;
+		return resultsElement;
 	}
 
 

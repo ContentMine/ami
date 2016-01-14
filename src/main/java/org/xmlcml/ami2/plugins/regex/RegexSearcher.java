@@ -43,8 +43,8 @@ public class RegexSearcher extends AMISearcher {
 		String xomValue = xomElement.getValue();
 		for (RegexComponent regexComponent : regexComponents) {
 			MatcherResult matcherResult = regexComponent.searchWithPattern(xomValue); // crude to start with
-			List<ResultElement> resultElementList = matcherResult.createResultElementList();
-			addXpathAndAddtoResultsElement(xomElement, resultsElement, resultElementList);
+			ResultsElement resultsElementToAdd = matcherResult.createResultsElement();
+			addXpathAndAddtoResultsElement(xomElement, resultsElement, resultsElementToAdd);
 		}
 		return resultsElement;
 	}

@@ -5,11 +5,10 @@ import java.io.File;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.ami2.plugins.word.WordTest;
+import org.xmlcml.norma.util.NormaTestFixtures;
 
 import nu.xom.Builder;
 import nu.xom.Element;
@@ -74,8 +73,8 @@ public class SpeciesArgProcessorTest {
 	// TESTED 2016-01-12
 	public void testSpeciesArgProcessor() throws Exception {
 		File newDir = new File("target/plosone/species/0121780/");
-		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
-		AMIFixtures.runNorma(newDir, "ctree", "nlm2html");
+		NormaTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
+		NormaTestFixtures.runNorma(newDir, "ctree", "nlm2html");
 		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
 		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();
@@ -121,7 +120,7 @@ public class SpeciesArgProcessorTest {
 	public void testMalariaArgProcessor() throws Exception {
 		File newDir = new File("target/plosone/species/malaria");
 		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_MALARIA_0119475, newDir);
-		AMIFixtures.runNorma(newDir, "ctree", "nlm2html");
+		NormaTestFixtures.runNorma(newDir, "ctree", "nlm2html");
 		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
 		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();
@@ -160,7 +159,7 @@ public class SpeciesArgProcessorTest {
 	public void testSpecies() {
 		File large = new File("../patents/US08979");
 		if (!large.exists()) return; // only on PMR machine
-		AMIFixtures.runNorma(large, "project", "uspto2html");
+		NormaTestFixtures.runNorma(large, "project", "uspto2html");
 		String args = "-i scholarly.html  --sp.species --context 35 50 --sp.type binomial genus --project "+large; 
 		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();

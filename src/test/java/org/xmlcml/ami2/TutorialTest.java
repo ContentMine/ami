@@ -11,13 +11,14 @@ import org.xmlcml.ami2.plugins.identifier.IdentifierArgProcessor;
 import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
 import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
+import org.xmlcml.norma.util.NormaTestFixtures;
 
 public class TutorialTest {
 
 	@Test
 	// TESTED 2016-01-12
 	public void testSpecies() throws Exception {
-		AMIFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10"), new File("target/species10"));
+		NormaTestFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10"), new File("target/species10"));
 		String args = "-q target/species10 -i scholarly.html --sp.species --context 35 50 --sp.type binomial genus genussp";
 		SpeciesArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
 		speciesArgProcessor.runAndOutput();
@@ -35,7 +36,7 @@ public class TutorialTest {
 	@Test
 	@Ignore // uses net
 	public void testSpeciesLookup() throws Exception {
-		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/specieslook10"));
+		NormaTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/specieslook10"));
 		String args = "-q target/specieslook10 -i scholarly.html --sp.species --context 35 50 --sp.type binomial genus genussp --lookup wikipedia genbank";
 		SpeciesArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
 		speciesArgProcessor.runAndOutput();
@@ -47,7 +48,7 @@ public class TutorialTest {
 	@Test
 	// TESTED 2016-01-12
 	public void testRegex() throws Exception {
-		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/regex10"));
+		NormaTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/regex10"));
 		String args = "-q target/regex10/ -i scholarly.html --context 35 50 --r.regex regex/consort0.xml";
 		RegexArgProcessor regexArgProcessor = new RegexArgProcessor(args);
 		regexArgProcessor.runAndOutput();
@@ -68,7 +69,7 @@ public class TutorialTest {
 	@Test
 	// EMPTY result, check.
 	public void testIdentifier() throws Exception {
-		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/ident10"));
+		NormaTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/ident10"));
 		String args = "-q target/ident10/ -i scholarly.html --context 35 50 --id.identifier --id.regex regex/identifiers.xml --id.type bio.ena";
 		IdentifierArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
@@ -81,7 +82,7 @@ public class TutorialTest {
 	@Test
 	// EMPTY ?
 	public void testIdentifierClin() throws Exception {
-		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/clin10"));
+		NormaTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/clin10"));
 		String args = "-q target/clin10/ -i scholarly.html --context 35 50 --id.identifier --id.regex regex/identifiers.xml --id.type clin.nct clin.isrctn";
 		IdentifierArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
@@ -96,7 +97,7 @@ public class TutorialTest {
 	@Test
 	// TESTED 2016-01-12
 	public void testBagOfWords() throws Exception {
-		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/word10"));
+		NormaTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/word10"));
 		String args = "-q target/word10/"
 				+ " -i scholarly.html"
 				+ " --context 35 50"
@@ -121,7 +122,7 @@ public class TutorialTest {
 	@Test
 	// TESTED 2016-01-12
 	public void testBagOfWordsNatureNano() throws Exception {
-		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/nature/nnano"), new File("target/nature/nnano"));
+		NormaTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/nature/nnano"), new File("target/nature/nnano"));
 		String args = "-q target/nature/nnano/"
 				+ " -i scholarly.html"
 				+ " --context 35 50"
@@ -144,7 +145,7 @@ public class TutorialTest {
 	@Test
 	// EMPTY?
 	public void testGene() throws Exception {
-		AMIFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/gene10"));
+		NormaTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/gene10"));
 		String args = "-q target/gene10/ -i scholarly.html --context 35 50 --g.gene --g.type human mouse";
 		GeneArgProcessor geneArgProcessor = new GeneArgProcessor(args);
 		geneArgProcessor.runAndOutput();

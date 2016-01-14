@@ -10,7 +10,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.norma.NormaArgProcessor;
+import org.xmlcml.norma.util.NormaTestFixtures;
 
 
 public class WordTest {
@@ -119,7 +119,7 @@ public class WordTest {
 
 	@Test
 	public void testSummarize() throws IOException {
-		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
+		NormaTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
 		String args = 
 			"-q  "+AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+
 			" --w.stopwords "+STOPWORDS_TXT+" --w.case ignore --w.summary aggregate --summaryfile target/examples/";
@@ -132,7 +132,7 @@ public class WordTest {
 
 	@Test
 	public void testSummarizeDocumentFrequencies() throws IOException {
-		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
+		NormaTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
 		String args = 
 			"-q "+AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" "+CLINICAL_STOPWORDS_TXT+" --w.case ignore --w.summary booleanFrequency --summaryfile target/examples/	--w.wordcount {3,*}";
 		AMIArgProcessor argProcessor = new WordArgProcessor(args);
@@ -143,7 +143,7 @@ public class WordTest {
 	@Test
 //	@Ignore // MEND - Jenkins uses adjectives - have to sort resultsElementList
 	public void testWordSearch() throws IOException {
-		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
+		NormaTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
 		String args = 
 			"-q "+AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1.toString()+
 			" --w.search searchwords/adjectives.xml searchwords/prepositions.xml --w.stem true" ;
@@ -162,7 +162,7 @@ public class WordTest {
 	
 	@Test
 	public void testCompoundWordSearch() throws IOException {
-		AMIFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
+		NormaTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
 		String args = 
 			"-q "+AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1.toString()+
 			" --w.search searchwords/trials.xml " ;
