@@ -65,7 +65,6 @@ public class SpeciesArgProcessorTest {
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 2, 
 				"<results title=\"genussp\" />");
 	}
-
 	@Test
 	// TESTED 2016-01-12
 	public void testSpeciesArgProcessor() throws Exception {
@@ -125,7 +124,8 @@ public class SpeciesArgProcessorTest {
 				"<results title=\"binomial\">"
 				+ "<result pre=\"porozoite protein ( csp) of \" exact=\"P. falciparum\""
 				+ " xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][1]\""
-				+ " match=\"P. falciparum\" post=\" and P. vivax populations to examine the pa\" na");
+				+ " match=\"P. falciparum\" post=\" and P. vivax populations to examine the pa\"");
+
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
 				"<results title=\"genus\">"
 				+ "<result pre=\"g the transmission and movement of \" exact=\"Plasmodium\""

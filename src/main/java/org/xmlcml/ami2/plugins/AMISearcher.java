@@ -10,6 +10,8 @@ import java.util.regex.Pattern;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
+import org.xmlcml.ami2.plugins.species.LinneanNamer;
 import org.xmlcml.ami2.plugins.word.WordCollectionFactory;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.AbstractSearcher;
@@ -364,5 +366,21 @@ public class AMISearcher extends AbstractSearcher {
 		this.dictionary = dictionary;
 	}
 
+	protected String getDictionaryTerm(ResultElement resultElement) {
+		return resultElement.getMatch();
+	}
+
+	protected void markFalsePositives(ResultsElement resultsElement, DefaultAMIDictionary dictionary) {
+		for (int i = resultsElement.size() - 1; i >= 0; i--) {
+			ResultElement resultElement = resultsElement.get(i);
+			if (resultElement != null) {
+				String term = getDictionaryTerm(resultElement);
+				if (!dictionary.contains(term)) {
+					LOG.debug("marking potential false positive: "+resultElement.toXML());
+					resultsElement.get(i).setDictionaryCheck(dictionary, false);
+				}
+			}
+		}
+	}
 
 }

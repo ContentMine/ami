@@ -80,7 +80,7 @@ public class LuceneTokenizationTest {
 	@Test
 	public void testWhitespaceTokenizeLarge() {
 		List<String> result = LuceneUtils.whitespaceTokenize(value);
-		LOG.debug(result);
+//		LOG.debug(result);
 		Assert.assertTrue("e0115544", result.toString().startsWith(
 				"[Better, Informing, Decision, Making, with, "));
 		Assert.assertEquals(8946,  result.size());
