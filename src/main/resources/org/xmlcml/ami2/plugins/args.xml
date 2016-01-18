@@ -1,4 +1,4 @@
-<argList name="ami" version="0.2.3">
+<argList name="ami" version="0.2.4">
   <p>201601-18 fixed tests</p>
   <p>201601-18 added dictionary lookup</p>
   <p>201601-18 fixed bugs</p>
