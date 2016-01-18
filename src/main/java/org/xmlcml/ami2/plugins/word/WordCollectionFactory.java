@@ -1,21 +1,15 @@
 package org.xmlcml.ami2.plugins.word;
 
-import java.io.IOException;
-import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.en.PorterStemFilter;
-import org.apache.lucene.analysis.standard.StandardTokenizer;
-import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.tokens.LuceneUtils;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ResultElement;
@@ -55,7 +49,6 @@ public class WordCollectionFactory {
 	private static final int DEFAULT_MAX_RAW_WORD_LENGTH = 99999;
 	
 	private WordSetWrapper stopwords;
-//	private List<String> currentWords;
 	private AMIArgProcessor amiArgProcessor;
 	private List<String> abbreviations;
 	private List<String> capitalized;
@@ -140,34 +133,9 @@ public class WordCollectionFactory {
 			transformedWords = applyStopwordFilter(stopwordSet, transformedWords);
 		}
 		if (wordArgProcessor.getStemming()) {
-			transformedWords = applyLucenePorterStemming(transformedWords);
+			transformedWords = LuceneUtils.applyPorterStemming(transformedWords);
 		}
 		return transformedWords;
-	}
-
-	/** concatenates words, creates a TokenStream, and returns a list of stemmed words.
-	 * 
-	 * @param currentWords
-	 * @return
-	 */
-	private List<String> applyLucenePorterStemming(List<String> currentWords) {
-		String input = StringUtils .join(currentWords.iterator(), " ");
-	 
-        TokenStream tokenStream = new StandardTokenizer(new StringReader(input));
-        tokenStream = new PorterStemFilter(tokenStream);
- 
-        CharTermAttribute charTermAttr = tokenStream.getAttribute(CharTermAttribute.class);
-        List<String> transformedWords = new ArrayList<String>();
-        try {
-            tokenStream.reset();
-            while (tokenStream.incrementToken()) {
-                transformedWords.add(charTermAttr.toString());
-            }
-            tokenStream.close();
-        } catch (IOException e) {
-            System.err.println("Stemming error "+e.getMessage());
-        }
-        return transformedWords;
 	}
 
 	private List<String> createAbbreviations(List<String> inputWords) {

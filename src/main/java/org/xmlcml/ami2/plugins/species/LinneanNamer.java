@@ -194,4 +194,18 @@ public class LinneanNamer {
 		nameMultimap = new NameMultimap();
 	}
 
+	/** assumes either a genus or Genus followed by species or "sp" or ...
+	 * simplistic
+	 * @param exact
+	 * @return
+	 */
+	public static String createGenus(String exact) {
+		String genus = null;
+		if (exact != null) {
+			String[] bits = exact.trim().split("\\s+");
+			genus = bits[0];
+		}
+		return genus;
+	}
+
 }

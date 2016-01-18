@@ -102,7 +102,7 @@ public class WordTest {
 		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
-				"<results title=\"frequencies\"><result title=\"frequency\" word=\"recruit\" count=\"163\" /><result title=\"f");
+				"<results title=\"frequencies\"><result title=\"frequency\" word=\"recruit\" count=\"153\" /><result title=\"frequency\" word=\"smoke\" count=\"76\" /><result title=\"frequency\" word=\"particip\" count=\"60\" /><result title=\"frequency\" word=\"invit\" count=\"59\" /><result title=\"frequency\" word=\"research\" count=\"58\" /><r");
 	}
 	
 	@Test
@@ -150,14 +150,11 @@ public class WordTest {
 		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 2, 0, 
-			    "<results title=\"adjectives\">"
-			    + "<result pre=\"19818578 Outcom criteria in smoke cessat trial propos for a\" "
-			    + "exact=\"common\" post=\"standard West R Hajek P Stead L Stapleton J\" /></results>");
+			    "<results title=\"adjectives\"><result pre=\"19818578 Outcom criteria in smoke cessat trials: propos for a\" exact=\"common\" post=\"standard West R Hajek P Stead L Stapleton J\" /></results>"
+				);
 		AMIFixtures.checkResultsElementList(argProcessor, 2, 1, 
-			    "<results title=\"prepositions\">"
-			    + "<result pre=\"1745 6215 16 1 1745 6215 Methodolog Lesson learn\" exact=\"from\" "
-			    + "post=\"recruit socioeconom disadvantag smoker into a pilot random control\" /><result "
-			    + "pre=\"term of the Creativ Common Attribut Licens http creativecommons.org licens\" exact=\"by\" post=\"4.0 which pe");
+				"<results title=\"prepositions\"><result pre=\" 1745-6215-16-1 1745-6215 Methodolog Lesson learn\" exact=\"from\" post=\"recruit socioeconom disadvantag smoker into a pilot random control\" /><result pre=\"wish to quit. Method Smoker were recruit through mail invit\" exact=\"from\" post=\"three primari care pract"
+				);
 	}
 	
 	@Test

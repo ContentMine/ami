@@ -13,8 +13,8 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.dictionary.AbstractAMIDictionary;
-import org.xmlcml.xml.XMLUtil;
+import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
+import org.xmlcml.ami2.dictionary.DictionaryTerm;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -29,11 +29,9 @@ import com.google.gson.stream.JsonWriter;
  * @author pm286
  *
  */
-public class HGNCDictionary extends AbstractAMIDictionary {
+public class HGNCDictionary extends DefaultAMIDictionary {
 
 	private static final String HGNC = "hgnc";
-	private static final String UTF_8 = "UTF-8";
-	
 	private static final Logger LOG = Logger.getLogger(HGNCDictionary.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -43,6 +41,8 @@ public class HGNCDictionary extends AbstractAMIDictionary {
 	private final static File HGNC_JSON_FILE = new File(HGNC_DIR, "hgnc_complete_set.json");
 	private final static File HGNC_JSON_FILE1 = new File(HGNC_DIR, "hgnc_complete_set_readable.json");
 	private final static File HGNC_XML_FILE = new File(HGNC_DIR, "hgnc.xml");
+	
+	public static HGNCDictionary DEFAULT_HGNCDictionary = null;
 	
 	private JsonObject hgncJson;
 	
@@ -57,7 +57,7 @@ public class HGNCDictionary extends AbstractAMIDictionary {
 	private void readHGNCXML() {
 		if (!HGNC_XML_FILE.exists()) {
 			readHGNCJson();
-			createDictionaryElement(HGNC);
+			createDictionaryElementFromHashMap(HGNC);
 			writeXMLFile(HGNC_XML_FILE);
 		} else {
 			readDictionary(HGNC_XML_FILE);
@@ -66,7 +66,7 @@ public class HGNCDictionary extends AbstractAMIDictionary {
 
 	private void readHGNCJson() {
 		try {
-			readFile(HGNC, new FileInputStream(HGNC_JSON_FILE));
+			setInputStream(HGNC, new FileInputStream(HGNC_JSON_FILE));
 			String resultsJsonString = IOUtils.toString(inputStream, UTF_8);
 		    JsonParser parser = new JsonParser();
 		    hgncJson = (JsonObject) parser.parse(resultsJsonString);
@@ -91,7 +91,7 @@ public class HGNCDictionary extends AbstractAMIDictionary {
 	}
 
 	private void createIds(JsonArray docs, int numTerms) {
-		namesByTerm = new HashMap<String, String>();
+		namesByTerm = new HashMap<DictionaryTerm, String>();
 		/**
 {
     "gene_family":["Immunoglobulin-like domain containing"],
@@ -127,7 +127,7 @@ public class HGNCDictionary extends AbstractAMIDictionary {
 			JsonObject doc = (JsonObject) docs.get(i);
 			String term = doc.get("symbol").getAsString();
 			String name = doc.get("name").getAsString();
-			namesByTerm.put(term, name);
+			namesByTerm.put(new DictionaryTerm(term), name);
 		}
 	}
 
@@ -141,6 +141,5 @@ public class HGNCDictionary extends AbstractAMIDictionary {
 			LOG.debug("IT "+element.getKey());
 		}
 	}
-
-
+	
 }

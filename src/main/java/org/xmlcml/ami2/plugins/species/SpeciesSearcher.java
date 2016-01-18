@@ -5,6 +5,7 @@ import java.util.List;
 import nu.xom.Element;
 
 import org.apache.log4j.Level;
+import org.xmlcml.ami2.dictionary.species.TaxDumpGenusDictionary;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
@@ -49,18 +50,37 @@ public class SpeciesSearcher extends AMISearcher {
 		if (elements != null) {
 			for (Element element : elements) {
 				String xmlString = getValue(element);
-				LOG.trace(xmlString);
+				LOG.debug(xmlString);
 				ResultsElement resultsElementToAdd = this.search(xmlString);
 				addXpathAndAddtoResultsElement(element, resultsElement, resultsElementToAdd);
 			}
 			List<String> exactList = resultsElement.getExactList();
 			LinneanNamer linneanNamer = new LinneanNamer();
 			List<String> matchList = linneanNamer.expandAbbreviations(exactList);
-			LOG.trace("EXACT "+exactList+"; MATCH "+matchList);
+			LOG.debug("EXACT "+exactList+"; MATCH "+matchList);
 			resultsElement.addMatchAttributes(matchList);
+			removeFalsePositives(resultsElement);
 		}
 		
 		return resultsElement;
+	}
+	
+
+	private void removeFalsePositives(SpeciesResultsElement resultsElement) {
+		TaxDumpGenusDictionary dictionary = (TaxDumpGenusDictionary) 
+				((SpeciesArgProcessor)this.getArgProcessor()).getOrCreateGenusDictionary();
+		for (int i = resultsElement.size() - 1; i >= 0; i--) {
+			ResultElement resultElement = resultsElement.get(i);
+			if (resultElement != null) {
+				String exact = resultElement.getMatch();
+				String genus = LinneanNamer.createGenus(exact);
+				if (!dictionary.contains(genus)) {
+					LOG.debug("Removing potential false positive: "+resultElement.toXML());
+					resultsElement.remove(i);
+				}
+			}
+		}
+		LOG.debug(resultsElement.toXML());
 	}
 
 	/**

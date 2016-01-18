@@ -53,6 +53,8 @@ public class AMIFixtures {
 	public final static File TEST_PHYLO_DIR          = new File(AMIFixtures.TEST_AMI_DIR, "phylo");
 	public final static File TEST_RRID_DIR           = new File(AMIFixtures.TEST_AMI_DIR, "rrid/");
 
+	public final static File TEST_TUTORIAL_DIR           = new File(AMIFixtures.TEST_AMI_DIR, "tutorial/");
+
 	public static final File TEST_WORD_EXAMPLES      = new File(TEST_AMI_DIR, "word/examples");
 	public static final File TARGET_EXAMPLES_TEMP_16_1_1  = new File("target/examples_16_1_1");
 
@@ -129,12 +131,14 @@ public class AMIFixtures {
 		ResultsElementList reList = contentProcessor.getOrCreateResultsElementList();
 		reList.sortByTitle();
 		Assert.assertEquals(size, reList.size());
-		String results = reList.get(elem).toXML();
-		if (!results.startsWith(start)) {
-			String ss = results.substring(0,  Math.min(300,  results.length()));
-			String sss = ss.replaceAll("\"", "\\\\\\\"");
-			LOG.debug("start (escaped) \n"+sss);
-			Assert.fail("results assertion failure: starts with: "+ss);
+		if (elem < size) {
+			String results = reList.get(elem).toXML();
+			if (!results.startsWith(start)) {
+				String ss = results.substring(0,  Math.min(300,  results.length()));
+				String sss = ss.replaceAll("\"", "\\\\\\\"");
+				LOG.debug("start (escaped) \n"+sss);
+				Assert.fail("results assertion failure: starts with: "+ss);
+			}
 		}
 	}
 

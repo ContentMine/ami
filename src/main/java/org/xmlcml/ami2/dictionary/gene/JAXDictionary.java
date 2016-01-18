@@ -4,13 +4,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.dictionary.AbstractAMIDictionary;
+import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
+import org.xmlcml.ami2.dictionary.DictionaryTerm;
 
 import com.univocity.parsers.tsv.TsvParser;
 import com.univocity.parsers.tsv.TsvParserSettings;
@@ -29,7 +29,7 @@ MGI:87854	Gene	Pzp	pregnancy zone protein	GRCm38	11287	6	128483567	128526720	-	E
 
  * probably only (3) and (4) are useful at this stage
  */
-public class JAXDictionary extends AbstractAMIDictionary {
+public class JAXDictionary extends DefaultAMIDictionary {
 
 	private static final Logger LOG = Logger.getLogger(JAXDictionary.class);
 	static {
@@ -51,7 +51,7 @@ public class JAXDictionary extends AbstractAMIDictionary {
 	private void readJAX_XML() {
 		if (!JAX_XML_FILE.exists()) {
 			readJAXTSV(JAX_TSV_FILE);
-			dictionary = createDictionaryElement("jax");
+			dictionaryElement = createDictionaryElementFromHashMap("jax");
 			writeXMLFile(JAX_XML_FILE);
 		} else {
 			readDictionary(JAX_XML_FILE);
@@ -71,21 +71,12 @@ public class JAXDictionary extends AbstractAMIDictionary {
 		} catch (IOException e) {
 			throw new RuntimeException("Cannot read: "+file, e);
 		}
-	    namesByTerm = new HashMap<String, String>();
+	    namesByTerm = new HashMap<DictionaryTerm, String>();
 	    for (String[] row : allRows) {
 	    	String symbol = row[2];
 	    	String name = row[3];
-	    	namesByTerm.put(symbol, name);
+	    	namesByTerm.put(new DictionaryTerm(symbol), name);
 	    }
-	}
-
-	public boolean contains(String id) {
-		return namesByTerm.keySet().contains(id);
-	}
-
-	@Override
-	protected void readFile(String name, InputStream is) throws IOException {
-		inputStream = is;
 	}
 
 	@Override

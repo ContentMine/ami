@@ -2,6 +2,8 @@ package org.xmlcml.ami2.plugins.species;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
+import org.xmlcml.ami2.dictionary.species.TaxDumpGenusDictionary;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
@@ -18,6 +20,7 @@ public class SpeciesArgProcessor extends AMIArgProcessor {
 	
 	public static final Logger LOG = Logger.getLogger(SpeciesArgProcessor.class);
 	private Boolean expandAbbreviations;
+	private DefaultAMIDictionary genusDictionary;
 	
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -88,6 +91,12 @@ public class SpeciesArgProcessor extends AMIArgProcessor {
 		return new SpeciesSearcher(this, namedPattern);
 	}
 
+	public DefaultAMIDictionary getOrCreateGenusDictionary() {
+		if (genusDictionary == null) {
+			genusDictionary = new TaxDumpGenusDictionary();
+		}
+		return genusDictionary;
+	}
 
 
 }

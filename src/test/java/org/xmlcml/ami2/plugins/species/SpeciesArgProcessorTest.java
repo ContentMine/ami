@@ -34,11 +34,8 @@ public class SpeciesArgProcessorTest {
 		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
-				"<results title=\"binomial\">"
-				+ "<result pre=\"This is \" exact=\"Homo sapiens\" "
-				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='p'][4]\" "
-				+ "match=\"Homo sapiens\" post=\" at a terminal.\" name=\"binomial\" />"
-				+ "<result pre=\"I can refer to me as \" exact=\"H. sapiens\" xpath=\"/*[local-name()='html'");
+				"<results title=\"binomial\"><result pre=\"This is \" exact=\"Homo sapiens\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='p'][5]\" match=\"Homo sapiens\" post=\" at a terminal.\" name=\"binomial\" /><result pre=\"I can refer to me as \" exact=\"H. sapiens\" xpath=\"/*[local-name()='html'"
+				);
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
 				"<results title=\"genus\">"
 				+ "<result pre=\"I belong to genus \" exact=\"Homo\" match=\"Homo\" post=\" ; my ancestors may be Homo sp.\" name=\"genus\" />"
