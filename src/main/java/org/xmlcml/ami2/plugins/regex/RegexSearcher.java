@@ -37,6 +37,9 @@ public class RegexSearcher extends AMISearcher {
 
 	// ====== args ========
 
+	/** specific search, iterates thorugh RegexComponents
+	 * 
+	 */
 	public ResultsElement searchXomElement(Element xomElement) {
 		List<RegexComponent> regexComponents = compoundRegex.getOrCreateRegexComponentList();
 		ResultsElement resultsElement = new ResultsElement();
@@ -49,10 +52,8 @@ public class RegexSearcher extends AMISearcher {
 		return resultsElement;
 	}
 
-	
-
-
 	// ===============
+
 	
 	public void debug() {
 		LOG.debug(compoundRegex.getTitle()+"/"+compoundRegex.getRegexValues().size());

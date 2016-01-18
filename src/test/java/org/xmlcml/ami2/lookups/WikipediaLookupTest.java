@@ -14,6 +14,7 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
 import org.xmlcml.euclid.IntArray;
 import org.xmlcml.xml.XMLUtil;
@@ -106,7 +107,7 @@ public class WikipediaLookupTest {
 		String cmd = "--sp.species --context 35 --sp.type binomial binomialsp "
 				+ "-q "+target+" -i scholarly.html "
 				+ "--lookup wikipedia";
-		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor();
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor();
 		argProcessor.parseArgs(cmd);
 		argProcessor.runAndOutput();
 		// doesn't work

@@ -4,11 +4,14 @@ import java.util.ArrayList;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
+import org.xmlcml.ami2.dictionary.gene.HGNCDictionary;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
+import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.cmine.lookup.AbstractDictionary;
 
 /** 
@@ -99,6 +102,19 @@ public class GeneArgProcessor extends AMIArgProcessor {
 	protected AMISearcher createSearcher(AbstractDictionary dictionary) {
 		return new GeneSearcher(this, dictionary);
 	}
+
+	@Override
+	protected ResultsElement createResultsElement() {
+		return new GeneResultsElement();
+	}
+
+	public DefaultAMIDictionary getOrCreateCurrentDictionary() {
+		if (currentDictionary == null) {
+			currentDictionary = new HGNCDictionary();
+		}
+		return currentDictionary;
+	}
+
 
 
 

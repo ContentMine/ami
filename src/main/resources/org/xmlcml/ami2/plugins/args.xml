@@ -1,5 +1,6 @@
-<argList name="ami" version="0.2.2">
+<argList name="ami" version="0.2.3">
   <p>201601-18 added dictionary lookup</p>
+  <p>201601-18 fixed bugs</p>
   <p>201601-14 fixed ResultsList bugs</p>
   <!-- 20160112 refactoring of Searchers, added dictionaries, improved testing of output-->
   <!-- 20150926 fixed RRID; fixed sequence and species; tidied debug -->

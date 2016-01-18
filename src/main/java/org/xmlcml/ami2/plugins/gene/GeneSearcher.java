@@ -1,14 +1,10 @@
 package org.xmlcml.ami2.plugins.gene;
 
-import java.util.List;
-
 import org.apache.log4j.Level;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.ResultElement;
-import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.cmine.lookup.AbstractDictionary;
 
 import nu.xom.Element;
@@ -47,19 +43,6 @@ public class GeneSearcher extends AMISearcher {
 		xmlString = xmlString.replaceAll("<div>", "");
 		xmlString = xmlString.replaceAll("</div>", "");
 		return xmlString;
-	}
-
-	@Override
-	public ResultsElement search(List<? extends Element> elements) {
-		ResultsElement resultsElement = new GeneResultsElement();
-		for (Element element : elements) {
-			String xmlString = getValue(element);
-			LOG.trace(xmlString);
-			ResultsElement resultsElement0 = this.search(xmlString);
-			addXpathAndAddtoResultsElement(element, resultsElement, resultsElement0);
-		}
-		List<String> exactList = resultsElement.getExactList();
-		return resultsElement;
 	}
 
 	/**

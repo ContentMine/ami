@@ -12,6 +12,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
 import org.xmlcml.ami2.plugins.species.LinneanNamer;
+import org.xmlcml.ami2.plugins.species.SpeciesResultsElement;
 import org.xmlcml.ami2.plugins.word.WordCollectionFactory;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.AbstractSearcher;
@@ -274,21 +275,44 @@ public class AMISearcher extends AbstractSearcher {
 		return false;
 	}
 
-	public ResultsElement search(List<? extends Element> elements) {
-		ResultsElement resultsElement = new ResultsElement();
+	public ResultsElement search(List<? extends Element> elements, ResultsElement resultsElement) {
 		for (Element element : elements) {
-			ResultsElement subResultsElement = this.searchXomElement(element);
-			LOG.trace("SUB RESULT"+subResultsElement.toXML()+" "+element.toXML());
-			if (subResultsElement.size() > 0) {
-				String xpath = new XPathGenerator(element).getXPath();
-				LOG.trace("XPATH :"+xpath+"; "+element.toXML());
-				subResultsElement.setXPath(xpath);
-				resultsElement.transferResultElements(subResultsElement);
-			}
+			ResultsElement resultsElementToAdd = this.searchXomElement(element);
+//			if (resultsElementToAdd.size() > 0) {
+//				String xpath = new XPathGenerator(element).getXPath();
+//				resultsElementToAdd.setXPath(xpath);
+//				resultsElement.transferResultElements(resultsElementToAdd);
+//			}
+			addXpathAndAddtoResultsElement(element, resultsElement, resultsElementToAdd);
 		}
+		postProcessResultsElement(resultsElement);
+		markFalsePositives(resultsElement, this.getOrCreateCurrentDictionary());
 		return resultsElement;
 	}
+
+//	protected void searchAndUpdateResultsElement(List<? extends Element> elements, ResultsElement resultsElement) {
+//		if (elements != null) {
+//			for (Element element : elements) {
+//				ResultsElement resultsElementToAdd = this.searchXomElement(element);
+//				addXpathAndAddtoResultsElement(element, resultsElement, resultsElementToAdd);
+//			}
+//			postProcessResultsElement(resultsElement);
+//			markFalsePositives(resultsElement);
+//		}
+//	}
 	
+
+//	private DefaultAMIDictionary getOrCreateCurrentDictionary() {
+//		getArgProcessor().
+//		
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+
+	private DefaultAMIDictionary getOrCreateCurrentDictionary() {
+		return this.getArgProcessor().getOrCreateCurrentDictionary();
+	}
+
 	/** create resultsElement.
 	 * 
 	 * May be empty if no hits
@@ -315,7 +339,6 @@ public class AMISearcher extends AbstractSearcher {
 
 	public ResultsElement searchWithDictionary(List<String> strings) {
 		ResultsElement resultsElement = new ResultsElement();
-//		ResultsElement resultsElement = new ResultsElement();
 		for (int pos = 0; pos < strings.size(); pos++) {
 			String firstword = strings.get(pos);
 			List<List<String>> trailingListList = dictionary.getTrailingWords(firstword);
@@ -366,21 +389,43 @@ public class AMISearcher extends AbstractSearcher {
 		this.dictionary = dictionary;
 	}
 
+	/** sometimes overridden by subclasses with complex terms.
+	 * 
+	 * default is resultsElement.getMatch(), but subclasses may need more 
+	 * processing
+	 * 
+	 * @param resultElement
+	 * @return
+	 */
 	protected String getDictionaryTerm(ResultElement resultElement) {
 		return resultElement.getMatch();
 	}
 
 	protected void markFalsePositives(ResultsElement resultsElement, DefaultAMIDictionary dictionary) {
-		for (int i = resultsElement.size() - 1; i >= 0; i--) {
-			ResultElement resultElement = resultsElement.get(i);
-			if (resultElement != null) {
-				String term = getDictionaryTerm(resultElement);
-				if (!dictionary.contains(term)) {
-					LOG.debug("marking potential false positive: "+resultElement.toXML());
-					resultsElement.get(i).setDictionaryCheck(dictionary, false);
+		if (dictionary != null && resultsElement != null) {
+			for (int i = resultsElement.size() - 1; i >= 0; i--) {
+				ResultElement resultElement = resultsElement.get(i);
+				if (resultElement != null) {
+					String term = getDictionaryTerm(resultElement);
+					if (!dictionary.contains(term)) {
+						LOG.debug("marking potential false positive: "+resultElement.toXML());
+						resultsElement.get(i).setDictionaryCheck(dictionary, false);
+					}
 				}
 			}
 		}
 	}
+
+	/** maybe overridden by specialist subclasses
+	 * 
+	 * this defaults to no-op
+	 * 
+	 * @param resultsElement
+	 */
+	protected void postProcessResultsElement(ResultsElement resultsElement) {
+		// no-op
+	}
+	
+
 
 }

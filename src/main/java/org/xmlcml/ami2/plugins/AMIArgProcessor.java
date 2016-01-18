@@ -8,6 +8,7 @@ import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
 import org.xmlcml.ami2.plugins.regex.CompoundRegex;
 import org.xmlcml.ami2.plugins.regex.CompoundRegexList;
 import org.xmlcml.ami2.plugins.regex.RegexComponent;
@@ -66,6 +67,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	protected HashMap<String, AMISearcher> searcherByNameMap; // req
 	// searching
 	protected List<AMISearcher> searcherList; // req
+	protected DefaultAMIDictionary currentDictionary;
 	
 	public AMIArgProcessor() {
 		super();
@@ -287,16 +289,27 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	protected void searchSectionElements() {
 		if (currentCTree != null) {
 			ensureSectionElements();
+			if (searcherList == null) {
+				throw new RuntimeException("No searchers created");
+			}
 			for (AMISearcher searcher : searcherList) {
 				String name = searcher.getName();
 				LOG.trace("search "+name);
-				ResultsElement resultsElement = searcher.search(sectionElements);
+				ResultsElement resultsElement = searcher.search(sectionElements, createResultsElement());
 				resultsElement.lookup(lookupInstanceByName, lookupNames);
 				LOG.trace("exactList "+resultsElement.getExactList());
 				resultsElement.setAllResultElementNames(name);
 				currentCTree.putInContentProcessor(name, resultsElement);
 			}
 		}
+	}
+
+	/** normally overridden
+	 * 
+	 * @return
+	 */
+	protected ResultsElement createResultsElement() {
+		return new ResultsElement();
 	}
 	
 
@@ -439,8 +452,9 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		return searcherList;
 	}
 
-//	protected AMISearcher createSearcher(AbstractDictionary dictionary) {
-//		throw new RuntimeException("This should be subclassed");
-//	}
+	public DefaultAMIDictionary getOrCreateCurrentDictionary() {
+		return currentDictionary;
+	}
+
 
 }

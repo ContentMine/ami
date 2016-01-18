@@ -3,7 +3,7 @@ package org.xmlcml.ami2.plugins.species;
 import java.util.List;
 
 import org.apache.log4j.Level;
-import org.xmlcml.ami2.dictionary.species.TaxDumpGenusDictionary;
+import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
@@ -44,30 +44,13 @@ public class SpeciesSearcher extends AMISearcher {
 	}
 
 	@Override
-	public ResultsElement search(List<? extends Element> elements) {
-		SpeciesResultsElement resultsElement = new SpeciesResultsElement();
-		if (elements != null) {
-			for (Element element : elements) {
-				String xmlString = getValue(element);
-				ResultsElement resultsElementToAdd = this.search(xmlString);
-				addXpathAndAddtoResultsElement(element, resultsElement, resultsElementToAdd);
-			}
-			List<String> exactList = resultsElement.getExactList();
-			LinneanNamer linneanNamer = new LinneanNamer();
-			List<String> matchList = linneanNamer.expandAbbreviations(exactList);
-			resultsElement.addMatchAttributes(matchList);
-			markFalsePositives(resultsElement);
-		}
-		
-		return resultsElement;
+	protected void postProcessResultsElement(ResultsElement resultsElement) {
+		List<String> exactList = resultsElement.getExactList();
+		LinneanNamer linneanNamer = new LinneanNamer();
+		List<String> matchList = linneanNamer.expandAbbreviations(exactList);
+		resultsElement.addMatchAttributes(matchList);
 	}
 	
-
-	private void markFalsePositives(ResultsElement resultsElement) {
-		TaxDumpGenusDictionary dictionary = (TaxDumpGenusDictionary) 
-				((SpeciesArgProcessor)this.getArgProcessor()).getOrCreateGenusDictionary();
-		markFalsePositives(resultsElement, dictionary);
-	}
 
 	@Override
 	public String getDictionaryTerm(ResultElement resultElement) {

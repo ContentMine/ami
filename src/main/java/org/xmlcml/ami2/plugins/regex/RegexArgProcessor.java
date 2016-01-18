@@ -104,7 +104,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 		resultsByCompoundRegex = new HashMap<String, ResultsElement>();
 		for (CompoundRegex compoundRegex : compoundRegexList) {
 			AMISearcher regexSearcher = createSearcher(this, compoundRegex);
-			ResultsElement resultsElement = regexSearcher.search(sectionElements);
+			ResultsElement resultsElement = regexSearcher.search(sectionElements, createResultsElement());
 			resultsByCompoundRegex.put(compoundRegex.getTitle(), resultsElement);
 		}
 	}

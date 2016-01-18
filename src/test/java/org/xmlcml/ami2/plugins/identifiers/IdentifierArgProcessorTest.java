@@ -35,11 +35,7 @@ public class IdentifierArgProcessorTest {
 		IdentifierArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(identifierArgProcessor, 3, 0, 
-				"<results title=\"bio.ena\">"
-				+ "<result pre=\"ecies. (GenBank accession numbers; \" "
-				+ "exact=\"GQ906358\" "
-				+ "post=\", NR102976 and KC954171), 3 Arcobacter species (NR\" "
-				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][1]/*[local-name()="
+				"<results title=\"bio.ena\"><result pre=\"ecies. (GenBank accession numbers; \" exact=\"GQ906358\" post=\", NR102976 and KC954171), 3 Arcobacter species (NR\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][4]/*[local-name()="
 				);
 		AMIFixtures.checkResultsElementList(identifierArgProcessor, 3, 1, 
 				"<results title=\"bio.pdb\" />"
@@ -75,11 +71,7 @@ public class IdentifierArgProcessorTest {
 		IdentifierArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(identifierArgProcessor, 2, 0, 
-				"<results title=\"clin.isrctn\">"
-				+ "<result pre=\"Controlled Trial Number (\" exact=\"ISRCTN): 13837944\" "
-				+ "post=\", UK Clinical Research Network (UKCRN) S\" "
-				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][8]/*[local-name()='p'][4]\" "
-				+ "name=\"clin.isrctn\" /></results>"
+				"<results title=\"clin.isrctn\"><result pre=\"Controlled Trial Number (\" exact=\"ISRCTN): 13837944\" post=\", UK Clinical Research Network (UKCRN) S\" name=\"clin.isrctn\" /></results>"
 				);
 		AMIFixtures.checkResultsElementList(identifierArgProcessor, 2, 1, 
 				"<results title=\"clin.nct\" />"
@@ -109,9 +101,7 @@ public class IdentifierArgProcessorTest {
 		IdentifierArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(identifierArgProcessor, 1, 0, 
-				"<results title=\"bio.ena\">"
-				+ "<result pre=\"ecies. (GenBank accession numbers; \" exact=\"GQ906358\""
-				+ " post=\", NR102976 and KC954171), 3 Arcobacter species (NR\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][1]/*[local-name()="
+				"<results title=\"bio.ena\"><result pre=\"ecies. (GenBank accession numbers; \" exact=\"GQ906358\" post=\", NR102976 and KC954171), 3 Arcobacter species (NR\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][4]/*[local-name()="
 				);
 
 	}

@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.norma.util.NormaTestFixtures;
 
 import nu.xom.Builder;
@@ -31,7 +32,7 @@ public class SpeciesArgProcessorTest {
 		File newDir = new File("target/species/simple/");
 		FileUtils.copyDirectory(new File(SPECIES_DIR, "simple"), newDir);
 		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
-		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor(args);
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
 				"<results title=\"binomial\"><result pre=\"This is \" exact=\"Homo sapiens\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='p'][5]\" match=\"Homo sapiens\" post=\" at a terminal.\" name=\"binomial\" /><result pre=\"I can refer to me as \" exact=\"H. sapiens\" xpath=\"/*[local-name()='html'"
@@ -52,7 +53,7 @@ public class SpeciesArgProcessorTest {
 		File newDir = new File("target/species/simple1/");
 		FileUtils.copyDirectory(new File(SPECIES_DIR, "simple1"), newDir);
 		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
-		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor(args);
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
 				"<results title=\"binomial\">"
@@ -72,7 +73,7 @@ public class SpeciesArgProcessorTest {
 		NormaTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		NormaTestFixtures.runNorma(newDir, "ctree", "nlm2html");
 		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
-		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor(args);
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
 				"<results title=\"binomial\">"
@@ -98,7 +99,7 @@ public class SpeciesArgProcessorTest {
 		File newDir = new File("target/plosone/species");
 		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--sp.species --context 35 50 --sp.type binomial binomialsp -q "+newDir+" -i scholarly.html --lookup wikipedia"; 
-		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor(args);
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
 				"<results title=\"mend me\" />");
@@ -118,7 +119,7 @@ public class SpeciesArgProcessorTest {
 		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_MALARIA_0119475, newDir);
 		NormaTestFixtures.runNorma(newDir, "ctree", "nlm2html");
 		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
-		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor(args);
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
 				"<results title=\"binomial\">"
@@ -158,7 +159,7 @@ public class SpeciesArgProcessorTest {
 		if (!large.exists()) return; // only on PMR machine
 		NormaTestFixtures.runNorma(large, "project", "uspto2html");
 		String args = "-i scholarly.html  --sp.species --context 35 50 --sp.type binomial genus --project "+large; 
-		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor(args);
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 2, 0, 
 				"<results title=\"binomial\" />");

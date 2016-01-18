@@ -3,12 +3,14 @@ package org.xmlcml.ami2.plugins.species;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
+import org.xmlcml.ami2.dictionary.gene.HGNCDictionary;
 import org.xmlcml.ami2.dictionary.species.TaxDumpGenusDictionary;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
+import org.xmlcml.cmine.files.ResultsElement;
 
 /** 
  * Processes commandline arguments.
@@ -20,8 +22,6 @@ public class SpeciesArgProcessor extends AMIArgProcessor {
 	
 	public static final Logger LOG = Logger.getLogger(SpeciesArgProcessor.class);
 	private Boolean expandAbbreviations;
-	private DefaultAMIDictionary genusDictionary;
-	
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -91,11 +91,20 @@ public class SpeciesArgProcessor extends AMIArgProcessor {
 		return new SpeciesSearcher(this, namedPattern);
 	}
 
-	public DefaultAMIDictionary getOrCreateGenusDictionary() {
-		if (genusDictionary == null) {
-			genusDictionary = new TaxDumpGenusDictionary();
+	@Override
+	protected ResultsElement createResultsElement() {
+		return new SpeciesResultsElement();
+	}
+
+	/** currently only HGNC hardcoded but will allow dictionary choice later
+	 * 
+	 * @return
+	 */
+	public DefaultAMIDictionary getOrCreateCurrentDictionary() {
+		if (currentDictionary == null) {
+			currentDictionary = new TaxDumpGenusDictionary();
 		}
-		return genusDictionary;
+		return currentDictionary;
 	}
 
 

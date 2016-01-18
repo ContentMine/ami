@@ -68,11 +68,7 @@ public class RegressionDemoTest {
 		RegexArgProcessor regexArgProcessor = new RegexArgProcessor(cmd);
 		regexArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(regexArgProcessor, 1, 0, 
-				"<results title=\"consort00\">"
-				+ "<result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" "
-				+   "value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" "
-				+   "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][3]/*[local-name()='p'][1]\" />"
-				+ "</results>"
+				"<results title=\"consort00\"><result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" /></results>"
 				);
 
 	}
@@ -85,9 +81,7 @@ public class RegressionDemoTest {
 		RegexArgProcessor regexArgProcessor = new RegexArgProcessor(cmd);
 		regexArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(regexArgProcessor, 1, 0, 
-				"<results title=\"consort0\">"
-				+   "<result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][9]/*[local-name()='p'][1]\" />"
-				+   "<result pre=\"tion health, to alter or \""
+				"<results title=\"consort0\"><result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][16]/*[local-name()='div'][2]/*[local-name()='div'][9]/*[local-name()"
 				);
 	}
 	
@@ -104,17 +98,17 @@ public class RegressionDemoTest {
 				"regex/consort0/");
 	}
 	
-	@Test
-	public void testSequenceHarness() throws Exception {
-		// SHOWCASE
-		String cmd = "--sq.sequence --context 35 50 --sq.type dnaprimer prot1 -q target/plosone/sequences/ -i scholarly.html"; 
-		AMIFixtures.runStandardTestHarness(
-				new File("src/test/resources/org/xmlcml/ami2/regressiondemos/journal.pone.0121780/"), 
-				new File("target/plosone/sequences/"), 
-				new SequencePlugin(),
-				cmd,
-				"sequence/dnaprimer/", "sequence/prot1/");
-	}
+//	@Test
+//	public void testSequenceHarness() throws Exception {
+//		// SHOWCASE
+//		String cmd = "--sq.sequence --context 35 50 --sq.type dnaprimer prot1 -q target/plosone/sequences/ -i scholarly.html"; 
+//		AMIFixtures.runStandardTestHarness(
+//				new File("src/test/resources/org/xmlcml/ami2/regressiondemos/journal.pone.0121780/"), 
+//				new File("target/plosone/sequences/"), 
+//				new SequencePlugin(),
+//				cmd,
+//				"sequence/dnaprimer/", "sequence/prot1/");
+//	}
 
 	
 

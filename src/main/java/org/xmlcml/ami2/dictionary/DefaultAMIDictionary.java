@@ -62,7 +62,7 @@ public class DefaultAMIDictionary extends AbstractDictionary {
 
 	private static final String ENTRY = "entry";
 	private static final String DICTIONARY = "dictionary";
-	private static final String TITLE = "title";
+	public static final String TITLE = "title";
 	private static final String NAME = "name";
 	private static final String TERM = "term";
 
@@ -244,6 +244,17 @@ public class DefaultAMIDictionary extends AbstractDictionary {
 		return dictionary;
 	}
 	
+	public String toString() {
+		String s = "";
+		s += "dictionarySource: "+dictionarySource;
+		s += "; terms: "+getTermsSortedBySize().size();
+		s += "; title:  "+getTitle();
+		return s;
+
+	}
 	
+	public String getTitle() {
+		return dictionaryElement == null ? null : dictionaryElement.getAttributeValue(DefaultAMIDictionary.TITLE);
+	}
 
 }

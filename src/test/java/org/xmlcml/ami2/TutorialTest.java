@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.gene.GeneArgProcessor;
 import org.xmlcml.ami2.plugins.identifier.IdentifierArgProcessor;
 import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
@@ -20,7 +21,7 @@ public class TutorialTest {
 	public void testSpecies() throws Exception {
 		NormaTestFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10"), new File("target/species10"));
 		String args = "-q target/species10 -i scholarly.html --sp.species --context 35 50 --sp.type binomial genus genussp";
-		SpeciesArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
+		AMIArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
 		speciesArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(speciesArgProcessor, 3, 0, 
 				"<results title=\"binomial\"><result pre=\" \" "
@@ -38,7 +39,7 @@ public class TutorialTest {
 	public void testSpeciesLookup() throws Exception {
 		NormaTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/specieslook10"));
 		String args = "-q target/specieslook10 -i scholarly.html --sp.species --context 35 50 --sp.type binomial genus genussp --lookup wikipedia genbank";
-		SpeciesArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
+		AMIArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
 		speciesArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(speciesArgProcessor, 3, 0, 
 				"<results title=\"mend me\">"
@@ -53,11 +54,7 @@ public class TutorialTest {
 		RegexArgProcessor regexArgProcessor = new RegexArgProcessor(args);
 		regexArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(regexArgProcessor, 1, 0, 
-				"<results title=\"consort0\">"
-				+ "<result pre=\"ptococcal meningitis in Taiwan was \" "
-				+ "name0=\"diagnose\" value0=\"diagnosed\" "
-				+ "post=\"in 1957 [ 22]. Large clinical case series on crypt\" "
-				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][4]/*[local-name()='p']["
+				"<results title=\"consort0\"><result pre=\"ptococcal meningitis in Taiwan was \" name0=\"diagnose\" value0=\"diagnosed\" post=\"in 1957 [ 22]. Large clinical case series on crypt\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p']["
 				);
 		
 		/** omit as slightly different outout.
@@ -146,18 +143,16 @@ public class TutorialTest {
 	// EMPTY?
 	public void testGene() throws Exception {
 		NormaTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/gene10"));
-		String args = "-q target/gene10/ -i scholarly.html --context 35 50 --g.gene --g.type human mouse";
+		String args = "-q target/gene10/e0115544 -i scholarly.html --context 35 50 --g.gene --g.type human mouse";
 		GeneArgProcessor geneArgProcessor = new GeneArgProcessor(args);
 		geneArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(geneArgProcessor, 2, 0, 
-				"<results title=\"human\" />"
+				"<results title=\"human\"><result pre=\"the most effective model of care ( \" exact=\"DU\" post=\" \" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][2]/*[local-name()='div'][3]/*[local-name()='div'][1]/*[local-name()='div']["
 				);
 		AMIFixtures.checkResultsElementList(geneArgProcessor, 2, 1, 
 				"<results title=\"mouse\" />"
 				);
 
-		AMIFixtures.compareExpectedAndResults(new File(AMIFixtures.TEST_AMI_DIR, "tutorial/plos10/e0115544"), 
-				new File("target/gene10/e0115544"), "gene/human", AMIFixtures.RESULTS_XML);
 		
 	}
 	
