@@ -72,10 +72,4 @@ public class IdentifierArgProcessor extends AMIArgProcessor {
 	
 	// =============================
 
-//	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
-//		DefaultSearcher defaultSearcher = new AMISearcher(this);
-//		defaultSearcher.setNamedPattern(namedPattern);
-//		return defaultSearcher;
-//	}
-
 }

@@ -96,7 +96,7 @@ public class GeneArgProcessorTest {
 		AMIArgProcessor argProcessor = new GeneArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
-				"<results title=\"human\"><result pre=\"This is \" exact=\"BRCA1\" post=\" and BRCA2, not FOOBAR.\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='p'][2]\""
+				"<results title=\"human\"><result pre=\"This is \" exact=\"BRCA1\" post=\" and BRCA2, not FOOBAR.\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='p'][3]\" name=\"human\" /><result pre=\"This is BRCA1 and \" exact=\"BRCA2\" post=\", not FOOBAR.\" xpath=\"/*[local-name()='html'][1]/*[local-"
 				);
 	}
 

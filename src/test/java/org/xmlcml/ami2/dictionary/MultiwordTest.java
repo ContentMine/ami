@@ -209,19 +209,23 @@ public class MultiwordTest {
 		List<String> wordList = LuceneUtils.createWhitespaceList(EXAMPLE);
 		DefaultAMIDictionary dictionary = DefaultAMIDictionary.createSortedDictionary(MULTIWORD_SYNBIO);
 		List<DictionaryTerm> dictionaryTerms = dictionary.getDictionaryTermList();
-//		dictionary.search(wordList);
+		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < wordList.size(); i++) {
 			for (int j = dictionaryTerms.size() - 1; j >= 0; j--) {
 				DictionaryTerm dictionaryTerm = dictionaryTerms.get(j);
 				if (dictionaryTerm.match(wordList, i)) {
-					LOG.debug("matched: ("+i+")"+dictionaryTerm);
+					sb.append("; ("+i+")"+dictionaryTerm);
 					break;
 				}
 			}
 		}
-		
-
-		
+		Assert.assertEquals(""
+				+ "; (5)[bacterial];"
+				+ " (9)[artificial, gene];"
+				+ " (13)[biological, circuit];"
+				+ " (17)[dna, synthesis];"
+				+ " (21)[riboswitch];"
+				+ " (23)[photosynthesis]", sb.toString());
 	}
 
 }

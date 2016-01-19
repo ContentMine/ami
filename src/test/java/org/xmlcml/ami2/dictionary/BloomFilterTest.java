@@ -39,7 +39,7 @@ private BloomFilter<String> f;
 	}
 	
 	private void printMightContain(String s) {
-		System.out.println(s+": mightContain: "+f.mightContain(s)+" "+f.expectedFpp());
+//		System.out.println(s+": mightContain: "+f.mightContain(s)+" "+f.expectedFpp());
 	}
 	
 }

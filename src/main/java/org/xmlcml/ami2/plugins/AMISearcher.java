@@ -398,7 +398,12 @@ public class AMISearcher extends AbstractSearcher {
 	 * @return
 	 */
 	protected String getDictionaryTerm(ResultElement resultElement) {
-		return resultElement.getMatch();
+		String term = resultElement.getMatch();
+		if (term == null) {
+			term = resultElement.getExact();
+		}
+//		LOG.debug("Term: "+term);
+		return term;
 	}
 
 	protected void markFalsePositives(ResultsElement resultsElement, DefaultAMIDictionary dictionary) {
@@ -408,7 +413,7 @@ public class AMISearcher extends AbstractSearcher {
 				if (resultElement != null) {
 					String term = getDictionaryTerm(resultElement);
 					if (!dictionary.contains(term)) {
-						LOG.debug("marking potential false positive: "+resultElement.toXML());
+						LOG.trace("marking potential false positive: "+resultElement.toXML());
 						resultsElement.get(i).setDictionaryCheck(dictionary, false);
 					}
 				}

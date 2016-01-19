@@ -141,6 +141,7 @@ public class TutorialTest {
 
 	@Test
 	// EMPTY?
+	@Ignore
 	public void testGene() throws Exception {
 		NormaTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/tutorial/plos10"), new File("target/gene10"));
 		String args = "-q target/gene10/e0115544 -i scholarly.html --context 35 50 --g.gene --g.type human mouse";
