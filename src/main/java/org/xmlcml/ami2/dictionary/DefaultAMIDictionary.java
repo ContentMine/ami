@@ -12,6 +12,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -60,11 +62,13 @@ public class DefaultAMIDictionary extends AbstractDictionary {
 		LOG.setLevel(Level.DEBUG);
 	}
 
-	private static final String ENTRY = "entry";
 	private static final String DICTIONARY = "dictionary";
-	public static final String TITLE = "title";
+	private static final String ENTRY = "entry";
 	private static final String NAME = "name";
+	private static final String REGEX = "regex";
 	private static final String TERM = "term";
+	public static final String TITLE = "title";
+	private static final String URL = "url";
 
 	/** later these should be read in from args.xml ...
 	 * 
@@ -253,6 +257,36 @@ public class DefaultAMIDictionary extends AbstractDictionary {
 
 	}
 	
+	public String getURL() {
+		return dictionaryElement == null ? null : dictionaryElement.getAttributeValue(DefaultAMIDictionary.URL);
+		
+	}
+	
+	public String getRegexString() {
+		return dictionaryElement == null ? null : dictionaryElement.getAttributeValue(DefaultAMIDictionary.REGEX);
+		
+	}
+	
+	public List<DictionaryTerm> checkNonMatchingTerms() {
+		String regexString = getRegexString();
+		List<DictionaryTerm> nonMatchingTermList = new ArrayList<DictionaryTerm>();
+		if (regexString == null) {
+			LOG.warn("cannot find regex");
+		} else {
+			LOG.debug(regexString);
+			Pattern pattern = Pattern.compile(regexString);
+			if (dictionaryTermList != null) {
+				for (DictionaryTerm term : dictionaryTermList) {
+					String s =  term.getTermPhrase().getString();
+					Matcher matcher = pattern.matcher(s);
+					if (!matcher.matches()) {
+						nonMatchingTermList.add(term);
+					}
+				}
+			}
+		}		
+		return nonMatchingTermList;
+	}
 	public String getTitle() {
 		return dictionaryElement == null ? null : dictionaryElement.getAttributeValue(DefaultAMIDictionary.TITLE);
 	}

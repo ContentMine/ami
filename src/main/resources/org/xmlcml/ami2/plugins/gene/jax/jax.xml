@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dictionary title="jax">
+<!-- this is not a complete regex - I got bored. About 20 genes are omitted (that's < 0.1%) 
+add them in if you really care -->
+<dictionary title="jax" regex="(([A-Z0-9]+Rik\d?)|[A-Z][A-Z0-9]{7}|LOC\d{6,11}|D.*Ertd.*e|Tcrg\-[CV]\d|H2\-[A-Z0-9a-z]+(\.\d+)?|((n|mt)\-)?[A-Z][a-z0-9\-]+(\-ps\d*)?)">
   <entry term="0610005C13Rik" name="RIKEN cDNA 0610005C13 gene"/>
   <entry term="0610006L08Rik" name="RIKEN cDNA 0610006L08 gene"/>
   <entry term="0610007P14Rik" name="RIKEN cDNA 0610007P14 gene"/>

@@ -130,6 +130,8 @@ public class HGNCDictionary extends DefaultAMIDictionary {
 			namesByTerm.put(new DictionaryTerm(term), name);
 		}
 	}
+	
+	// ===============
 
 	// only for developing
 	private void debug(JsonObject jsonObject) {
@@ -141,5 +143,6 @@ public class HGNCDictionary extends DefaultAMIDictionary {
 			LOG.debug("IT "+element.getKey());
 		}
 	}
+	
 	
 }
