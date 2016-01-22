@@ -80,7 +80,7 @@ public class WordCollectionFactory {
 		}
 		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
 		List<String> chosenMethods = wordArgProcessor.getChosenMethods();
-		LOG.debug("chosen methods: "+chosenMethods);
+//		LOG.debug("chosen methods: "+chosenMethods);
 		if (chosenMethods.contains(WordArgProcessor.WORD_LENGTHS)) {
 			ResultsElement resultsElement = createWordLengthsResultsElement(words);
 			wordArgProcessor.addResultsElement(resultsElement);

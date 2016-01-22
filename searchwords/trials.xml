@@ -1,10 +1,9 @@
 <dictionary title="trials">
- 
-  <entry>trial</entry>
-  <entry>research post</entry>
-  <entry>research study</entry>
-  <entry>research team</entry>
-  <entry>primary care</entry>
-  <entry>mental health</entry>
-  <entry>mental health examination</entry>
+  <entry term="trial"/>
+  <entry term="research post"/>
+  <entry term="research study"/>
+  <entry term="research team"/>
+  <entry term="primary care"/>
+  <entry term="mental health"/>
+  <entry term="mental health examination"/>
 </dictionary>

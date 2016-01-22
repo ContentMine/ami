@@ -1,24 +1,24 @@
 <dictionary title="synbio">
-  <entry>enzyme activity</entry>
-  <entry>gene expression</entry>
-  <entry>gene transfer</entry>
-  <entry>gene expression</entry>
-  <entry>gene</entry>
-  <entry>primer</entry>
-  <entry>synthetic biology</entry>
-  <entry>codon</entry>
-  <entry>Biobrick</entry>
-  <entry>BioBrick</entry>
-  <entry>transcription factor</entry>
-  <entry>transcription</entry>
-  <entry>terminator</entry>
-  <entry>promoter</entry>
-  <entry>GFP</entry>
-  <entry>CRISPR</entry>
-  <entry>Cas9</entry>
-  <entry>RNAi</entry>
-  <entry>TetR</entry>
-  <entry>phage</entry>
-  <entry>plasmid</entry>
-  <entry>bacteriophage</entry>
+  <entry term="enzyme activity"/>
+  <entry term="gene expression"/>
+  <entry term="gene transfer"/>
+  <entry term="gene expression"/>
+  <entry term="gene"/>
+  <entry term="primer"/>
+  <entry term="synthetic biology"/>
+  <entry term="codon"/>
+  <entry term="Biobrick"/>
+  <entry term="BioBrick"/>
+  <entry term="transcription factor"/>
+  <entry term="transcription"/>
+  <entry term="terminator"/>
+  <entry term="promoter"/>
+  <entry term="GFP"/>
+  <entry term="CRISPR"/>
+  <entry term="Cas9"/>
+  <entry term="RNAi"/>
+  <entry term="TetR"/>
+  <entry term="phage"/>
+  <entry term="plasmid"/>
+  <entry term="bacteriophage"/>
 </dictionary>

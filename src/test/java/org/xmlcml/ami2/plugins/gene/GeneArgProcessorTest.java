@@ -61,7 +61,7 @@ public class GeneArgProcessorTest {
 		GeneArgProcessor argProcessor = new GeneArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
-				"<results title=\"hgnc\" />"
+				"<results title=\"hgnc\"><result pre=\"Theodore Columbus OH US Agents Agent: [addressbook]: Patterson &amp;amp; Sheridan,\" exact=\"LLP\" post=\"unknown Assignees Assignee: [addressbook]: Fater S.p.A. 03 Pescara IT\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local"
 				);
 
 	}

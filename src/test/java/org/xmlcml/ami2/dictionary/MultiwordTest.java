@@ -32,7 +32,7 @@ public class MultiwordTest {
 	public void testReadMultiwordDictionary() {
 		DefaultAMIDictionary dictionary = new DefaultAMIDictionary();
 		dictionary.readDictionary(MULTIWORD_SYNBIO);
-		Assert.assertEquals("synbio", 70, dictionary.size());
+		Assert.assertEquals("synbio", 71, dictionary.size());
 	}
 	
 
@@ -40,10 +40,11 @@ public class MultiwordTest {
 	public void testReadMultiwordDictionaryStrings() {
 		DefaultAMIDictionary dictionary = DefaultAMIDictionary.createSortedDictionary(MULTIWORD_SYNBIO);
 		List<DictionaryTerm> dictionaryTerms = dictionary.getDictionaryTermList();
-		Assert.assertEquals("synbio", 70, dictionary.size());
+		Assert.assertEquals("synbio", 71, dictionary.size());
 		Assert.assertEquals("synbio", 
 			"["
 			+ "[bacterial], "
+			+ "[gene], "
 	        + "[microfluidics], "
 	        + "[photosynthesis], "
 	        + "[photosynthetic], "
@@ -131,6 +132,7 @@ public class MultiwordTest {
 		Assert.assertEquals("stemmed phrases", ""
 		+ "["
 		+ "[bacteri], "
+		+ "[gene], "
         + "[microfluid], "
         + "[photosynthesi], "
         + "[photosynthet], "
@@ -222,6 +224,7 @@ public class MultiwordTest {
 		Assert.assertEquals(""
 				+ "; (5)[bacterial];"
 				+ " (9)[artificial, gene];"
+				+ " (10)[gene];"
 				+ " (13)[biological, circuit];"
 				+ " (17)[dna, synthesis];"
 				+ " (21)[riboswitch];"

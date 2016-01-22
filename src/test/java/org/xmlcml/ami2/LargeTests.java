@@ -28,6 +28,7 @@ public class LargeTests {
 	
 	@Test
 	// TESTED 2016-01-12
+	@Ignore
 	public void testLargeWordFrequencies() {
 		if (!large.exists()) return; // only on PMR machine
 		String args = "-i scholarly.html  --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+WordTest.STOPWORDS_TXT+" --project "+large;
@@ -45,6 +46,7 @@ public class LargeTests {
 	@Test
 	// TESTED 2016-01-12
 	// expensive
+	@Ignore
 	public void testLargeConsortRegex() {
 		String args = "-i scholarly.html  --context 25 40 --r.regex regex/synbio.xml --project "+large; 
 		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
@@ -55,6 +57,7 @@ public class LargeTests {
 
 	@Test
 	// TESTED 2016-01-12
+	@Ignore
 	public void testLargeProject() {
 		File large = new File("../patents/US08979");
 		if (!large.exists()) return; // only on PMR machine
@@ -84,6 +87,7 @@ public class LargeTests {
 	
 	@Test
 	// TESTED 2016-01-12
+	@Ignore
 	public void testSynbioStem() {
 		File large = new File("../patents/US08979");
 		if (!large.exists()) return; // only on PMR machine
