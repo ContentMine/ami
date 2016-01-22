@@ -18,7 +18,7 @@ import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.AbstractSearcher;
 import org.xmlcml.cmine.files.ResultElement;
 import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.cmine.lookup.AbstractDictionary;
+import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 import org.xmlcml.cmine.lookup.AbstractLookup;
 import org.xmlcml.xml.XPathGenerator;
 
@@ -43,7 +43,7 @@ public class AMISearcher extends AbstractSearcher {
 	public static final String POST = "post";
 	public static final String PRE = "pre";
 	protected Integer[] contextCounts;
-	protected AbstractDictionary dictionary;
+	protected DefaultStringDictionary dictionary;
 	public int maxPostWordCount = DEFAULT_POST_WORD_COUNT;
 	public int maxPreWordCount = DEFAULT_PRE_WORD_COUNT;
 	protected String name;
@@ -67,7 +67,7 @@ public class AMISearcher extends AbstractSearcher {
 		this.setNamedPattern(namedPattern);
 	}
 
-	public AMISearcher(AMIArgProcessor argProcessor, AbstractDictionary dictionary) {
+	public AMISearcher(AMIArgProcessor argProcessor, DefaultStringDictionary dictionary) {
 		this(argProcessor);
 		this.setDictionary(dictionary);
 		this.name = dictionary.getTitle();
@@ -227,11 +227,11 @@ public class AMISearcher extends AbstractSearcher {
 		return resultElement;
 	}
 
-	protected ResultElement createResultElement(String value, AbstractDictionary dictionary) {
+	protected ResultElement createResultElement(String value, DefaultStringDictionary dictionary) {
 		throw new RuntimeException("createResultElement(dictionary) NYI");
 	}
 
-	public AbstractDictionary getDictionary() {
+	public DefaultStringDictionary getDictionary() {
 		return dictionary;
 	}
 
@@ -278,36 +278,12 @@ public class AMISearcher extends AbstractSearcher {
 	public ResultsElement search(List<? extends Element> elements, ResultsElement resultsElement) {
 		for (Element element : elements) {
 			ResultsElement resultsElementToAdd = this.searchXomElement(element);
-//			if (resultsElementToAdd.size() > 0) {
-//				String xpath = new XPathGenerator(element).getXPath();
-//				resultsElementToAdd.setXPath(xpath);
-//				resultsElement.transferResultElements(resultsElementToAdd);
-//			}
 			addXpathAndAddtoResultsElement(element, resultsElement, resultsElementToAdd);
 		}
 		postProcessResultsElement(resultsElement);
 		markFalsePositives(resultsElement, this.getOrCreateCurrentDictionary());
 		return resultsElement;
 	}
-
-//	protected void searchAndUpdateResultsElement(List<? extends Element> elements, ResultsElement resultsElement) {
-//		if (elements != null) {
-//			for (Element element : elements) {
-//				ResultsElement resultsElementToAdd = this.searchXomElement(element);
-//				addXpathAndAddtoResultsElement(element, resultsElement, resultsElementToAdd);
-//			}
-//			postProcessResultsElement(resultsElement);
-//			markFalsePositives(resultsElement);
-//		}
-//	}
-	
-
-//	private DefaultAMIDictionary getOrCreateCurrentDictionary() {
-//		getArgProcessor().
-//		
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
 
 	private DefaultAMIDictionary getOrCreateCurrentDictionary() {
 		return this.getArgProcessor().getOrCreateCurrentDictionary();
@@ -357,18 +333,7 @@ public class AMISearcher extends AbstractSearcher {
 			ResultsElement resultsElement = new ResultsElement();
 			WordCollectionFactory wordCollectionFactory = amiArgProcessor.ensureWordCollectionFactory();
 			List<String> stringList = wordCollectionFactory.createWordList();
-	//		createWordList
-	//		makeStrings();
 			resultsElement = searchWithDictionary(stringList);
-//			if (true) {
-//				LOG.warn("searchWithDictionary NYI");
-//			} else {
-//				for (String string : stringList) {
-//					//CHECK THIS
-//					ResultElement resultElement = createResultElement(value, dictionary);
-//					resultsElement.appendChild(resultElement);
-//				}
-//			}
 			return resultsElement;
 		}
 
@@ -385,7 +350,7 @@ public class AMISearcher extends AbstractSearcher {
 	}
 
 
-	public void setDictionary(AbstractDictionary dictionary) {
+	public void setDictionary(DefaultStringDictionary dictionary) {
 		this.dictionary = dictionary;
 	}
 

@@ -66,7 +66,7 @@ public class HGNCDictionary extends DefaultAMIDictionary {
 
 	private void readHGNCJson() {
 		try {
-			setInputStream(HGNC, new FileInputStream(HGNC_JSON_FILE));
+			createFromInputStream(HGNC, new FileInputStream(HGNC_JSON_FILE));
 			String resultsJsonString = IOUtils.toString(inputStream, UTF_8);
 		    JsonParser parser = new JsonParser();
 		    hgncJson = (JsonObject) parser.parse(resultsJsonString);

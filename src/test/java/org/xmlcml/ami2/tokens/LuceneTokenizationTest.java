@@ -9,14 +9,12 @@ import org.apache.log4j.Logger;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.ami2.tokens.LuceneUtils;
 import org.xmlcml.cmine.files.CTree;
-import org.xmlcml.norma.util.NormaTestFixtures;
+import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.xml.XMLUtil;
 
 
@@ -41,7 +39,7 @@ public class LuceneTokenizationTest {
 	
 	@Before
 	public void setUp() throws IOException {
-		NormaTestFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_TUTORIAL_DIR, "plos10/e0115544"), targetDir);
+		CMineTestFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_TUTORIAL_DIR, "plos10/e0115544"), targetDir);
 		File shtmlFile = new CTree(targetDir).getExistingScholarlyHTML();
 		value = XMLUtil.parseQuietlyToDocument(shtmlFile).getValue();
 		whitespaceAnalyzer = new WhitespaceAnalyzer();

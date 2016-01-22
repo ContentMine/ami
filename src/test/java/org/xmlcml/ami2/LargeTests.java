@@ -12,7 +12,7 @@ import org.xmlcml.ami2.plugins.word.WordArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordTest;
 import org.xmlcml.norma.NormaArgProcessor;
 
-@Ignore
+//@Ignore
 public class LargeTests {
 	
 	File large = new File("../patents/US08979");
@@ -75,11 +75,11 @@ public class LargeTests {
 		File large = new File("../patents/US08979");
 		if (!large.exists()) return; // only on PMR machine
 //		runNorma(large);
-		String args = "-i scholarly.html  --w.search searchwords/synbio.xml --project "+large;
+		String args = "-i scholarly.html --clean results/* --w.search /org/xmlcml/ami2/plugins/synbio/synbio.xml --project "+large;
 		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
-				"<results title=\"synbio\" />");
+				"<results title=\"synbioPhrases\" />");
 	}
 	
 	@Test
@@ -88,12 +88,12 @@ public class LargeTests {
 		File large = new File("../patents/US08979");
 		if (!large.exists()) return; // only on PMR machine
 //		runNorma(large);
-		String args = "-i scholarly.html  --w.search searchwords/synbio.xml --w.stem true --project "+large;
+		String args = "-i scholarly.html  --w.search /org/xmlcml/ami2/plugins/synbio/synbio.xml --w.stem true --project "+large;
 		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 		// the last result has no synbio
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
-				"<results title=\"synbio\" />");
+				"<results title=\"synbioPhrases\" />");
 	}
 	
 

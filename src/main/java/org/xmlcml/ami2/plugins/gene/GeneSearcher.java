@@ -5,7 +5,7 @@ import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.lookup.AbstractDictionary;
+import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 
 import nu.xom.Element;
 
@@ -20,7 +20,7 @@ public class GeneSearcher extends AMISearcher {
 		super(argProcessor, namedPattern);
 	}
 
-	public GeneSearcher(AMIArgProcessor argProcessor, AbstractDictionary dictionary) {
+	public GeneSearcher(AMIArgProcessor argProcessor, DefaultStringDictionary dictionary) {
 		super(argProcessor, dictionary);
 	}
 

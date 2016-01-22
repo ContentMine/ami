@@ -1,4 +1,4 @@
-<dictionary name="synbio">
+<dictionary name="synbio" title="synbio">
 <!--  simple test for common synthetic bio terms as single words -->
 <entry term="riboswitch"/>
 <entry term="synthetic" name="synthetic"/>

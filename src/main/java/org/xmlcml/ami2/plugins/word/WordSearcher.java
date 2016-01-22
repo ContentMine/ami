@@ -9,7 +9,7 @@ import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.regex.CompoundRegex;
 import org.xmlcml.ami2.plugins.regex.RegexComponent;
 import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.cmine.lookup.AbstractDictionary;
+import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 
 import nu.xom.Element;
 
@@ -27,11 +27,11 @@ public class WordSearcher extends AMISearcher {
 	private List<String> searchWords;
 	private ResultsElement resultsElement;
 	
-	public WordSearcher(AMIArgProcessor argProcessor, AbstractDictionary dictionary) {
+	public WordSearcher(AMIArgProcessor argProcessor, DefaultStringDictionary dictionary) {
 		super(argProcessor, dictionary);
 	}
 
-	public static AMISearcher createSearcher(AMIArgProcessor argProcessor, AbstractDictionary dictionary) {
+	public static AMISearcher createSearcher(AMIArgProcessor argProcessor, DefaultStringDictionary dictionary) {
 		return new WordSearcher(argProcessor, dictionary);
 	}
 

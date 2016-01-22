@@ -9,6 +9,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.norma.util.NormaTestFixtures;
 
 public class GeneArgProcessorTest {
@@ -39,7 +40,7 @@ public class GeneArgProcessorTest {
 	@Test
 	public void testGenePlos() throws Exception {
 		File targetDir = new File("target/plosone/gene1/");
-		NormaTestFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_PLOSONE_DIR, "journal.pone.0008887"), targetDir);
+		CMineTestFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_PLOSONE_DIR, "journal.pone.0008887"), targetDir);
 		String cmd = "--g.gene --context 35 50 --g.type human -q "+targetDir+" -i scholarly.html"; 
  
 		GeneArgProcessor argProcessor = new GeneArgProcessor();

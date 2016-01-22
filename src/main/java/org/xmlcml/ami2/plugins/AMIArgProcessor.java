@@ -22,7 +22,7 @@ import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.EuclidSource;
 import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.cmine.lookup.AbstractDictionary;
+import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 import org.xmlcml.cmine.lookup.AbstractLookup;
 import org.xmlcml.norma.NormaArgProcessor;
 import org.xmlcml.xml.XMLUtil;
@@ -261,7 +261,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		return amiSearcher;
 	}
 
-	protected AMISearcher createSearcher(AbstractDictionary dictionary) {
+	protected AMISearcher createSearcher(DefaultStringDictionary dictionary) {
 		AMISearcher defaultSearcher = new AMISearcher(this);
 		defaultSearcher.setDictionary(dictionary);
 		return defaultSearcher;

@@ -12,7 +12,7 @@ import org.xmlcml.ami2.plugins.NamedPattern;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
 import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.cmine.lookup.AbstractDictionary;
+import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 
 /** 
  * Processes commandline arguments.
@@ -56,7 +56,7 @@ public class GeneArgProcessor extends AMIArgProcessor {
 		ensureDictionaryList();
 		if (dictionaryList.size() > 0) {
 			searcherList = new ArrayList<AMISearcher>();
-			for (AbstractDictionary dictionary : dictionaryList) {
+			for (DefaultStringDictionary dictionary : dictionaryList) {
 				GeneSearcher searcher = new GeneSearcher(this, dictionary);
 				searcherList.add(searcher);
 			}
@@ -99,7 +99,7 @@ public class GeneArgProcessor extends AMIArgProcessor {
 	 * @return subclassed searcher
 	 */
 	@Override
-	protected AMISearcher createSearcher(AbstractDictionary dictionary) {
+	protected AMISearcher createSearcher(DefaultStringDictionary dictionary) {
 		return new GeneSearcher(this, dictionary);
 	}
 

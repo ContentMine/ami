@@ -15,10 +15,10 @@ import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ResultElement;
 import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.html.HtmlA;
 import org.xmlcml.html.HtmlElement;
 import org.xmlcml.html.HtmlP;
-import org.xmlcml.norma.util.NormaTestFixtures;
 import org.xmlcml.xml.XMLUtil;
 
 import nu.xom.Element;
@@ -69,7 +69,7 @@ public class RegexPluginTest {
 	// EMPTY??
 	public void testRegexPlugin() throws IOException {
 		File target = new File("target/bmc/regex/15_1_511_test");
-		NormaTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
+		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
 		String args = 
 				"-q "+ target.toString()+" -i scholarly.html -o results.xml --context 25 40 --r.regex regex/common.xml";
 		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
@@ -81,7 +81,7 @@ public class RegexPluginTest {
 	@Test
 	public void testRegexPlugins() throws IOException {
 		File target = new File("target/bmc/regex/15_1_511_test");
-		NormaTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
+		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
 		File normaTemp = new File("target/bmc/regex/15_1_511_test");
 		String args = 
 				"-q "+normaTemp.toString()+" -i scholarly.html -o results.xml --context 25 40 --r.regex regex/common.xml regex/figure.xml regex/phylotree.xml";

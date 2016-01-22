@@ -3,6 +3,8 @@ package org.xmlcml.ami2.tokens;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * original code from
@@ -659,4 +661,21 @@ public class PorterStemmer {
 			}
 		}
 	}
+	
+	public List<String> applyStemming(String stringToSplit) {
+		List<String> newWordList = new ArrayList<String>();
+		for (String word : stringToSplit.split("\\s+")) {
+			newWordList.add(this.stem(word));
+		}
+		return newWordList;
+	}
+	
+	public List<String> applyStemming(List<String> wordList) {
+		List<String> newWordList = new ArrayList<String>();
+		for (String word : wordList) {
+			newWordList.add(this.stem(word));
+		}
+		return newWordList;
+	}
+
 }

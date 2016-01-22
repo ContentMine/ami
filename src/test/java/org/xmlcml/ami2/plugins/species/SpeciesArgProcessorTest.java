@@ -9,6 +9,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.norma.util.NormaTestFixtures;
 
 import nu.xom.Builder;
@@ -70,7 +71,7 @@ public class SpeciesArgProcessorTest {
 	// TESTED 2016-01-12
 	public void testSpeciesArgProcessor() throws Exception {
 		File newDir = new File("target/plosone/species/0121780/");
-		NormaTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
+		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		NormaTestFixtures.runNorma(newDir, "ctree", "nlm2html");
 		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
 		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);

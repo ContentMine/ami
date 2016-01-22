@@ -19,7 +19,7 @@ import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.cmine.files.ResultsElementList;
-import org.xmlcml.cmine.lookup.AbstractDictionary;
+import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 import org.xmlcml.euclid.IntRange;
 import org.xmlcml.xml.XMLUtil;
 
@@ -187,7 +187,7 @@ public class WordArgProcessor extends AMIArgProcessor {
 		ensureSearcherList();
 		List<String> dictionarySources = argIterator.createTokenListUpToNextNonDigitMinus(option);
 		createAndAddDictionaries(dictionarySources);
-		for (AbstractDictionary dictionary : this.getDictionaryList()) {
+		for (DefaultStringDictionary dictionary : this.getDictionaryList()) {
 			AMISearcher wordSearcher = new WordSearcher(this, dictionary);
 			searcherList.add(wordSearcher);
 		}
@@ -250,8 +250,10 @@ public class WordArgProcessor extends AMIArgProcessor {
 		ensureSearcherList();
 		for (AMISearcher searcher : searcherList) {
 			WordSearcher wordSearcher = (WordSearcher)searcher;
+			String title = wordSearcher.getTitle();
 			ResultsElement resultsElement = wordSearcher.searchWordList();
-			resultsByDictionary.put(wordSearcher.getTitle(), resultsElement);
+			resultsElement.setTitle(title);
+			resultsByDictionary.put(title, resultsElement);
 		}
 	}
 	

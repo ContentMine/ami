@@ -79,14 +79,20 @@ public class WordCollectionFactory {
 			LOG.warn("no words found to extract");
 		}
 		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
-		if (wordArgProcessor.getChosenMethods().contains(WordArgProcessor.WORD_LENGTHS)) {
+		List<String> chosenMethods = wordArgProcessor.getChosenMethods();
+		LOG.debug("chosen methods: "+chosenMethods);
+		if (chosenMethods.contains(WordArgProcessor.WORD_LENGTHS)) {
 			ResultsElement resultsElement = createWordLengthsResultsElement(words);
 			wordArgProcessor.addResultsElement(resultsElement);
 		}
-		if (wordArgProcessor.getChosenMethods().contains(WordArgProcessor.WORD_FREQUENCIES)) {
+		if (chosenMethods.contains(WordArgProcessor.WORD_FREQUENCIES)) {
 			ResultsElement resultsElement = getWordFrequencies(words);
 			wordArgProcessor.addResultsElement(resultsElement);
 		}
+//		if (chosenMethods.contains(WordArgProcessor.WORD_SEARCH)) {
+//			ResultsElement resultsElement = runSearch(words);
+//			wordArgProcessor.addResultsElement(resultsElement);
+//		}
 	}
 
 	public List<String> createWordList() {

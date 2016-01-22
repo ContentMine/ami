@@ -1,6 +1,7 @@
 package org.xmlcml.ami2.dictionary;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import java.util.regex.Pattern;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cmine.lookup.AbstractDictionary;
+import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 import org.xmlcml.xml.XMLUtil;
 
 import com.google.common.hash.BloomFilter;
@@ -55,7 +56,7 @@ import nu.xom.Elements;
  * @author pm286
  *
  */
-public class DefaultAMIDictionary extends AbstractDictionary {
+public class DefaultAMIDictionary extends DefaultStringDictionary {
 
 	private static final Logger LOG = Logger.getLogger(DefaultAMIDictionary.class);
 	static {
@@ -124,15 +125,15 @@ public class DefaultAMIDictionary extends AbstractDictionary {
 		return namesByTerm;
 	}
 
-	@Override
-	protected void setInputStream(String dictionarySource, InputStream is) throws IOException {
-		inputStream = is;
-		this.dictionarySource = dictionarySource;
-	}
+//	@Override
+//	protected void createFromInputStream(String dictionarySource, InputStream is) throws IOException {
+//		inputStream = is;
+//		this.dictionarySource = dictionarySource;
+//	}
 
 	@Override
 	public List<List<String>> getTrailingWords(String key) {
-		throw new RuntimeException("cannot use for genes");
+		throw new RuntimeException("NYI");
 	}
 
 	protected Element createDictionaryElementFromHashMap(String title) {
@@ -144,7 +145,6 @@ public class DefaultAMIDictionary extends AbstractDictionary {
 		for (DictionaryTerm dictionaryTerm : dictionaryTerms) {
 			Element entry = new Element(ENTRY);
 			String term = dictionaryTerm.getTermPhrase().getString();
-//			LOG.debug("term: "+term);
 			entry.addAttribute(new Attribute(TERM, term));
 			entry.addAttribute(new Attribute(NAME, namesByTerm.get(dictionaryTerm)));
 			dictionaryElement.appendChild(entry);
@@ -287,6 +287,7 @@ public class DefaultAMIDictionary extends AbstractDictionary {
 		}		
 		return nonMatchingTermList;
 	}
+	
 	public String getTitle() {
 		return dictionaryElement == null ? null : dictionaryElement.getAttributeValue(DefaultAMIDictionary.TITLE);
 	}

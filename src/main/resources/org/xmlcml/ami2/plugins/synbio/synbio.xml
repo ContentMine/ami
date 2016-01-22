@@ -1,4 +1,5 @@
-<dictionary name="synbio">
+<dictionary name="synbio" title="synbioPhrases">
+<!-- <entry term="present invention"/> -->
 <entry term="riboswitch"/>
 <entry term="synthetic biology" name="synthetic biology"/>
 <entry term="synthetic amino acid" name="synthetic amino acid"/>
@@ -69,4 +70,6 @@
 <entry term="photosynthesis " name="photosynthesis "/>
 <entry term="photosynthetic " name="photosynthetic "/>
 <entry term="bacterial" name="bacterial"/>
+<entry term="gene" name="gene"/>
+
 </dictionary>
