@@ -2,6 +2,10 @@
 
 Updated 20160125
 
+Read in conjunction with
+https://github.com/petermr/ami-plugin/blob/master/src/test/java/org/xmlcml/ami2/TutorialTest.java
+especially `testSpeciesSequencesGeneWordsCMine()`
+
 This demonstrates the analysis of several fairly diverse `CTree`s containing a mixture of 
 * genes
 * species
