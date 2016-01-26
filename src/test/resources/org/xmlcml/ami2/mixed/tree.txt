@@ -1,0 +1,38 @@
+mixed
+├── file0
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   └── scholarly.html
+├── file1
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   └── scholarly.html
+├── file2
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   └── scholarly.html
+├── file3
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   └── scholarly.html
+├── file4
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   └── scholarly.html
+├── file5
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   └── scholarly.html
+└── file6
+    ├── fulltext.html
+    ├── fulltext.pdf
+    ├── fulltext.xml
+    ├── results.json
+    └── scholarly.html
+

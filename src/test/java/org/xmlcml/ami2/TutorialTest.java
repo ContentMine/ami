@@ -3,18 +3,28 @@ package org.xmlcml.ami2;
 import java.io.File;
 import java.io.IOException;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.gene.GeneArgProcessor;
 import org.xmlcml.ami2.plugins.identifier.IdentifierArgProcessor;
 import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
+import org.xmlcml.ami2.plugins.sequence.SequenceArgProcessor;
 import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.util.CMineTestFixtures;
 
 public class TutorialTest {
 
+	;
+	private static final Logger LOG = Logger.getLogger(TutorialTest.class);
+	static {
+		LOG.setLevel(Level.DEBUG);
+	}
+	
 	@Test
 	// TESTED 2016-01-12
 	@Ignore // tests broken (?overwrite)
@@ -184,4 +194,49 @@ public class TutorialTest {
 					+ "<result t"
 					);
 	}
+	
+	@Test
+	public void testSpeciesSequencesGeneWordsCMine() throws IOException {
+		String args;
+		File targetDir = new File("target/tutorial/mixed");
+		CMineTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/ami2/mixed"), targetDir);
+		args = "--project "+targetDir+" -i scholarly.html --sq.sequence --context 35 --sq.type dnaprimer";
+		LOG.debug("search for DNA");
+		new SequenceArgProcessor(args).runAndOutput();
+		args = "--project "+targetDir+" -i scholarly.html"
+				+ " --w.words wordFrequencies --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt ";
+		LOG.debug("wordFrequencies");
+		new WordArgProcessor(args).runAndOutput();
+		args = "--project "+targetDir+" -i scholarly.html --sp.species --context 35 --sp.type binomial genus";
+		LOG.debug("species");
+		new SpeciesArgProcessor(args).runAndOutput();
+		LOG.debug("genes");
+		args = "--project "+targetDir+" -i scholarly.html --g.gene --context 100 --g.type human";
+		new GeneArgProcessor(args).runAndOutput();
+		
+		LOG.debug("file files");
+		args = "--project "+targetDir+" --analyze file(**/gene/human/results.xml) -o geneFiles.xml" ;
+		new DefaultArgProcessor(args).runAndOutput(); 
+		args = "--project "+targetDir+" --analyze file(**/species/**/results.xml) -o speciesFiles.xml" ;
+		new DefaultArgProcessor(args).runAndOutput(); 
+		args = "--project "+targetDir+" --analyze file(**/sequence/**/results.xml) -o sequenceFiles.xml" ;
+		new DefaultArgProcessor(args).runAndOutput(); 
+		args = "--project "+targetDir+" --analyze file(**/word/**/results.xml) -o wordFiles.xml" ;
+		new DefaultArgProcessor(args).runAndOutput(); 
+		
+		LOG.debug("snippets files");
+		args = "--project "+targetDir+" --analyze file(**/gene/human/results.xml)xpath(//result) -o geneSnippets.xml" ;
+		new DefaultArgProcessor(args).runAndOutput(); 
+		args = "--project "+targetDir+" --analyze file(**/gene/human/results.xml)xpath(//result[contains(@pre,'genotype')]) -o genegeneSnippets.xml" ;
+		new DefaultArgProcessor(args).runAndOutput(); 
+		args = "--project "+targetDir+" --analyze file(**/species/**/results.xml)xpath(//result) -o speciesSnippets.xml" ;
+		new DefaultArgProcessor(args).runAndOutput(); 
+		args = "--project "+targetDir+" --analyze file(**/sequence/**/results.xml)xpath(//result) -o sequenceSnippets.xml" ;
+		new DefaultArgProcessor(args).runAndOutput(); 
+		args = "--project "+targetDir+" --analyze file(**/word/**/results.xml)xpath(//result[@count>20]) -o wordSnippets.xml" ;
+		new DefaultArgProcessor(args).runAndOutput(); 
+		LOG.debug("end");
+
+	}
+	
 }

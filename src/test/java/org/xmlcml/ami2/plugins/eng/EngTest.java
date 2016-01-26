@@ -36,28 +36,29 @@ public class EngTest {
 	
 	@Test
 	// TESTED
+	@Ignore
 	public void testReadIEEEPDF() throws IOException {
-		String ENG = "src/test/resources/org/xmlcml/ami2/engineering/01268283";
-		FileUtils.copyDirectory(new File(ENG), new File("target/eng/01268283/"));
-		Norma norma = new Norma();
-		// note output must be fulltext.pdf.txt
-		String args = 
-				"-q target/eng/01268283/ -i fulltext.pdf -o fulltext.pdf.txt --transform pdf2txt";
-		norma.run(args);
-		args = 
-				"-q target/eng/01268283/ -i fulltext.txt --w.words "+WordArgProcessor.WORD_FREQUENCIES +
-				  " --w.stopwords "+WordTest.STOPWORDS_TXT  ;
-			WordArgProcessor argProcessor = new WordArgProcessor(args);
-			argProcessor.runAndOutput();
-			AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
-					"<results title=\"frequencies\">"
-					+   "<result title=\"frequency\" word=\"MIM\" count=\"62\" />"
-					+   "<result title=\"frequency\" word=\"spectral\" count=\"37\" />"
-					+   "<result title=\"frequency\" word=\"TPV\" count=\"33\" />"
-					+   "<result title=\"frequency\" word=\"temperature\" count=\"31\" />"
-					+   "<result title=\"frequency\" word=\"control\" count=\"27\" />"
-					+   "<res" // ...
-					);
+//		String ENG = "src/test/resources/org/xmlcml/ami2/engineering/01268283";
+//		FileUtils.copyDirectory(new File(ENG), new File("target/eng/01268283/"));
+//		Norma norma = new Norma();
+//		// note output must be fulltext.pdf.txt
+//		String args = 
+//				"-q target/eng/01268283/ -i fulltext.pdf -o fulltext.pdf.txt --transform pdf2txt";
+//		norma.run(args);
+//		args = 
+//				"-q target/eng/01268283/ -i fulltext.txt --w.words "+WordArgProcessor.WORD_FREQUENCIES +
+//				  " --w.stopwords "+WordTest.STOPWORDS_TXT  ;
+//			WordArgProcessor argProcessor = new WordArgProcessor(args);
+//			argProcessor.runAndOutput();
+//			AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+//					"<results title=\"frequencies\">"
+//					+   "<result title=\"frequency\" word=\"MIM\" count=\"62\" />"
+//					+   "<result title=\"frequency\" word=\"spectral\" count=\"37\" />"
+//					+   "<result title=\"frequency\" word=\"TPV\" count=\"33\" />"
+//					+   "<result title=\"frequency\" word=\"temperature\" count=\"31\" />"
+//					+   "<result title=\"frequency\" word=\"control\" count=\"27\" />"
+//					+   "<res" // ...
+//					);
 
 	}
 	
