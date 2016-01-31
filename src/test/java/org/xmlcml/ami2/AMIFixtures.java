@@ -135,6 +135,7 @@ public class AMIFixtures {
 			String results = reList.get(elem).toXML();
 			if (!results.startsWith(start)) {
 				String ss = results.substring(0,  Math.min(300,  results.length()));
+				// replace " apos by \"
 				String sss = ss.replaceAll("\"", "\\\\\\\"");
 				LOG.debug("start (escaped) \n"+sss);
 				Assert.fail("results assertion failure: starts with: "+ss);
