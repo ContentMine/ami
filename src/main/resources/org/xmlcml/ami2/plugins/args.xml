@@ -1,5 +1,6 @@
-<argList name="ami" version="0.2.7">
+<argList name="ami" version="0.2.8">
 
+  <p>201602-01 fixed commandline</p>
   <p>201601-22 fixed tests, and dictionaries</p>
   <p>201601-20 added dictionary checker</p>
   <p>201601-19 ignored failing tests</p>
