@@ -109,7 +109,7 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 			return false;
 		} else {
 //			Set<DictionaryTerm> termSet = namesByTerm.keySet();
-			return rawTermSet.contains(string);
+			return (rawTermSet == null) ? false : rawTermSet.contains(string);
 		}
 	}
 

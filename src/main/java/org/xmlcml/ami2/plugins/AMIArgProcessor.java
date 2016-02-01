@@ -150,7 +150,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		if (tokens.size() == 0) {
 //			LOG.debug(XPATH_OPTION).getHelp());
 		} else if (tokens.size() > 1) {
-			LOG.debug("Exactly one xpath required");
+			LOG.warn("Exactly one xpath required");
 		} else {
 			xPathProcessor = new XPathProcessor(tokens.get(0));
 		}

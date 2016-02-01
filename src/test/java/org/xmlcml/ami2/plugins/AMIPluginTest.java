@@ -20,6 +20,18 @@ public class AMIPluginTest {
 	}
 	
 	@Test
+	public void testAMIPluginHelp() {
+		String[] args = {"regex", "--help"};
+		AMIPlugin.main(args);
+	}
+	
+	@Test
+	public void testAMIPluginIO() {
+		String[] args = {"regex", "--input", "foo", "--output", "bar"};
+		AMIPlugin.main(args);
+	}
+	
+	@Test
 	public void testBadXPath() {
 		String cmd = "-q src/test/resources/org/xmlcml/ami2/bmc/15_1_511 -i fulltext.xml --xpath //*]"; 
 		try {
@@ -58,5 +70,22 @@ public class AMIPluginTest {
 				+ " --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
 		AMIArgProcessor argProcessor = new WordArgProcessor(cmd);
 		argProcessor.runAndOutput();
+	}
+	
+	@Test
+	public void testWordArgs() throws IOException {
+		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/ieee"), new File("target/ieee/words"));
+		String[] args = {
+				"word", 
+				"--ctree", 
+				"target/ieee/words",
+				"--input", 
+				"scholarly.html",
+				"--w.words",
+				"wordFrequencies",
+				"--w.stopwords", 
+				"/org/xmlcml/ami2/plugins/word/stopwords.txt"
+				};
+		AMIPlugin.main(args);
 	}
 }
