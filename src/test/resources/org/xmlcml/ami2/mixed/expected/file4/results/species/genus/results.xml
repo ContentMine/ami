@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="genus">
+ <result pre="ociated with cancer progression in " exact="Wwox" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][2]" match="Wwox" post=" conditional knockout (KO) mice ( Y" name="genus"/>
+ <result pre="hality that was similar to that in " exact="Wwox" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][2]" match="Wwox" post=" KO mice, which died by 4 weeks of " name="genus"/>
+ <result pre="007). Other phenotypes observed in " exact="Wwox" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][2]" match="Wwox" post=" KO mice included abnormal bone str" name="genus"/>
+ <result pre="bryos. Similarly, postnatal day 18 " exact="Wwox" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][2]" match="Wwox" post=" KO mice showed notable differences" name="genus"/>
+ <result pre="d with wild-type mice. Moreover, a " exact="Wwox" match="Wwox" post=" gene mutation ( lde) was id" name="genus"/>
+</results>

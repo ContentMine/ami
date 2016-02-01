@@ -56,7 +56,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	private Integer[] contextCount = new Integer[] {98, 98};
 	private List<String> params;
 	
-	private XPathProcessor xPathProcessor;
 	private String plugin;
     Map<String,AbstractLookup> lookupInstanceByName;
 	protected CompoundRegexList compoundRegexList;
@@ -143,17 +142,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	public void parseTest(ArgumentOption option, ArgIterator argIterator) {
 		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
 		LOG.debug("The test strings are..."+tokens+"; override this if you want to use your own parseTest()");
-	}
-
-	public void parseXpath(ArgumentOption option, ArgIterator argIterator) {
-		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
-		if (tokens.size() == 0) {
-//			LOG.debug(XPATH_OPTION).getHelp());
-		} else if (tokens.size() > 1) {
-			LOG.warn("Exactly one xpath required");
-		} else {
-			xPathProcessor = new XPathProcessor(tokens.get(0));
-		}
 	}
 
 	public void parseLookup(ArgumentOption option, ArgIterator argIterator) {

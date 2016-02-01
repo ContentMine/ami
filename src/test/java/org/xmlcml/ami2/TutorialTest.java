@@ -215,25 +215,25 @@ public class TutorialTest {
 		new GeneArgProcessor(args).runAndOutput();
 		
 		LOG.debug("file files");
-		args = "--project "+targetDir+" --analyze file(**/gene/human/results.xml) -o geneFiles.xml" ;
+		args = "--project "+targetDir+" --filter file(**/gene/human/results.xml) -o geneFiles.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/species/**/results.xml) -o speciesFiles.xml" ;
+		args = "--project "+targetDir+" --filter file(**/species/**/results.xml) -o speciesFiles.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/sequence/**/results.xml) -o sequenceFiles.xml" ;
+		args = "--project "+targetDir+" --filter file(**/sequence/**/results.xml) -o sequenceFiles.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/word/**/results.xml) -o wordFiles.xml" ;
+		args = "--project "+targetDir+" --filter file(**/word/**/results.xml) -o wordFiles.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
 		
 		LOG.debug("snippets files");
-		args = "--project "+targetDir+" --analyze file(**/gene/human/results.xml)xpath(//result) -o geneSnippets.xml" ;
+		args = "--project "+targetDir+" --filter file(**/gene/human/results.xml)xpath(//result) -o geneSnippets.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/gene/human/results.xml)xpath(//result[contains(@pre,'genotype')]) -o genegeneSnippets.xml" ;
+		args = "--project "+targetDir+" --filter file(**/gene/human/results.xml)xpath(//result[contains(@pre,'genotype')]) -o genegeneSnippets.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/species/**/results.xml)xpath(//result) -o speciesSnippets.xml" ;
+		args = "--project "+targetDir+" --filter file(**/species/**/results.xml)xpath(//result) -o speciesSnippets.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/sequence/**/results.xml)xpath(//result) -o sequenceSnippets.xml" ;
+		args = "--project "+targetDir+" --filter file(**/sequence/**/results.xml)xpath(//result) -o sequenceSnippets.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/word/**/results.xml)xpath(//result[@count>20]) -o wordSnippets.xml" ;
+		args = "--project "+targetDir+" --filter file(**/word/**/results.xml)xpath(//result[@count>20]) -o wordSnippets.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
 		LOG.debug("end");
 
