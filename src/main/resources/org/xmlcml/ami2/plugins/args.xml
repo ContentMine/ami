@@ -1,5 +1,6 @@
 <argList name="ami" version="0.2.10">
 
+  <p>201602-01 added summarizatin counts and Tutorial/p>
   <p>201602-01 fixed summary routines</p>
   <p>201602-01 moved xpath to CMine</p>
   <p>201602-01 fixed commandline</p>
