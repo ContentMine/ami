@@ -55,7 +55,8 @@ public class AMIFixtures {
 
 	public final static File TEST_TUTORIAL_DIR           = new File(AMIFixtures.TEST_AMI_DIR, "tutorial/");
 
-	public static final File TEST_WORD_EXAMPLES      = new File(TEST_AMI_DIR, "word/examples");
+	public static final File TEST_WORD_DIR           = new File(TEST_AMI_DIR, "word");
+	public static final File TEST_WORD_EXAMPLES      = new File(TEST_WORD_DIR, "examples");
 	public static final File TARGET_EXAMPLES_TEMP_16_1_1  = new File("target/examples_16_1_1");
 
 	public static final String RESULTS_XML = "results.xml";

@@ -332,6 +332,60 @@ public class TutorialTest {
 
 	}
 	
+	@Test
+	// ADVERT
 	
+	/** this tutorial shows how to aggregate from results.xml files.
+	 * Files are all getpapers with "Zika" query 
+	 * first we run ami-species which generates results.xml
+	 * These are then aggregated to a single speciesSnippets.xml file for each cTree.
+	 * These are then aggregated to give a summary speciesSnippets.xml for the cProject
+	 */
+	public void testSummarizeZika() throws IOException {
+		/** create a clean version in target/
+		 * there are 20+ ctrees
+		 */
+		String args;
+		File targetDir = new File("target/tutorial/zika");
+		CMineTestFixtures.cleanAndCopyDir(new File("../norma/target/zika"), targetDir);
+		
+
+		/** run AMI-species to create results.xml as normal in ${ctree}/results/species/binomial/results.xml
+		 */ 
+		new SpeciesArgProcessor(
+				"--project "+targetDir+" -i scholarly.html --log --sp.species --sp.type binomial genus ").runAndOutput();
+		new GeneArgProcessor(
+				"--project "+targetDir+" -i scholarly.html --g.gene --context 100 --g.type human").runAndOutput();
+		new SequenceArgProcessor(
+				"--project "+targetDir+" -i scholarly.html --sq.sequence --context 35 --sq.type dna dnaprimer").runAndOutput();
+		new WordArgProcessor("--project "+targetDir+" -i scholarly.html --w.words wordFrequencies"
+						+ " --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt").runAndOutput();
+
+		/** take these results.xml files and aggregate into a single ${ctree}/wordSnippets.xml
+		 * it selects all words with a count > 20
+		 */
+		new DefaultArgProcessor("--project "+targetDir+" --log --filter file(**/species/binomial/results.xml)xpath(//result) -o binomialSnippets.xml").runAndOutput(); 
+		new DefaultArgProcessor("--project "+targetDir+" --filter file(**/species/genus/results.xml)xpath(//result) -o genusSnippets.xml").runAndOutput(); 
+		new DefaultArgProcessor("--project "+targetDir+" --filter file(**/gene/human/results.xml)xpath(//result) -o humanSnippets.xml").runAndOutput(); 
+		new DefaultArgProcessor("--project "+targetDir+" --filter file(**/sequence/dna/results.xml)xpath(//result) -o dnaSnippets.xml").runAndOutput(); 
+		new DefaultArgProcessor("--project "+targetDir+" --filter file(**/sequence/dnaprimer/results.xml)xpath(//result) -o dnaprimerSnippets.xml").runAndOutput(); 
+		new DefaultArgProcessor("--project "+targetDir+" --filter file(**/word/frequencies/results.xml)xpath(//result[@count>20]) -o wordCount.xml").runAndOutput(); 
+
+		new DefaultArgProcessor("--project "+targetDir+" --filter file(**/species/binomial/results.xml)xpath(//result[contains(@pre,'ZIKV')]) -o zikvSnippets.xml").runAndOutput(); 
+
+		/** aggregate the ${ctree}/binomialSnippets.xml to ${cproject}/binomialSnippets.xml
+		 * 
+		 * The result is a global ${cproject}/binomialSnippets.xml
+		 * 
+		 */
+		new DefaultArgProcessor("--project "+targetDir+" -i binomialSnippets.xml  --xpath //result/@match --summaryfile binomialCount.xml").runAndOutput(); 
+		new DefaultArgProcessor("--project "+targetDir+" -i genusSnippets.xml     --xpath //result/@match --summaryfile genusCount.xml").runAndOutput(); 
+		new DefaultArgProcessor("--project "+targetDir+" -i humanSnippets.xml     --xpath //result/@match --summaryfile humanCount.xml").runAndOutput(); 
+		new DefaultArgProcessor("--project "+targetDir+" -i dnaSnippets.xml       --xpath //result/@match --summaryfile dnaCount.xml").runAndOutput(); 
+		new DefaultArgProcessor("--project "+targetDir+" -i dnaprimerSnippets.xml --xpath //result/@match --summaryfile dnaprimerCount.xml").runAndOutput(); 
+		new DefaultArgProcessor("--project "+targetDir+" -i wordCount.xml         --xpath //result/@word  --summaryfile wordCount.xml").runAndOutput(); 
+
+		new DefaultArgProcessor("--project "+targetDir+" -i zikvSnippets.xml  --xpath //result/@match --summaryfile zikaCount.xml").runAndOutput(); 
+	}
 
 }

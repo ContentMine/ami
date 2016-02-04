@@ -282,6 +282,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 			}
 			for (AMISearcher searcher : searcherList) {
 				String name = searcher.getName();
+				this.TREE_LOG().info("search "+name);
 				LOG.trace("search "+name);
 				ResultsElement resultsElement = searcher.search(sectionElements, createResultsElement());
 				resultsElement.lookup(lookupInstanceByName, lookupNames);
