@@ -1,5 +1,6 @@
-<argList name="ami" version="0.2.11">
+<argList name="ami" version="0.2.12">
 
+  <p>201602-07 developed new commandline, fixed inconsistencies and bugs</p>
   <p>201602-04 added Zika examples, and Pre/Post tools</p>
   <p>201602-01 added summarization counts and Tutorial</p>
   <p>201602-01 fixed summary routines</p>
