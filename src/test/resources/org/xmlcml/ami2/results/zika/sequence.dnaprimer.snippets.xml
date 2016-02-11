@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectSnippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4654492/results/sequence/dnaprimer/results.xml">
+   <result pre=" the sodium channel voltage dependent gene (Nav). Primers used to amplify this fragment were AaNaA " exact="5’-ACAATGTGGATCGCTTCCC-3’" post="and AaNaB 5’-TGGACAAAAGCAAGGCTAAG-3’(8). The primers amplify a fragment of approximately 472 bp whi" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][5]/*[local-name()='p'][1]" name="dnaprimer"/>
+   <result pre="nt gene (Nav). Primers used to amplify this fragment were AaNaA 5’-ACAATGTGGATCGCTTCCC-3’and AaNaB " exact="5’-TGGACAAAAGCAAGGCTAAG-3’" post="(8). The primers amplify a fragment of approximately 472 bp which includes an intron of approximate" name="dnaprimer"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4671560/results/sequence/dnaprimer/results.xml">
+   <result pre="enetic diversity we observed at the COI gene. This was achieved with the 18SFHIN and CP16 primers (" exact="5’-GTAAGCTTCCTTTGTACACACCGCCCGT-3’" post=" and 5’-GCGGGTACCATGCTTAAATTTAGGGGGTA-3’, respectively) [ 46], as used by Mukwaya et al. [ 27]. To " xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][2]/*[local-name()='p'][5]" name="dnaprimer"/>
+   <result pre=" gene. This was achieved with the 18SFHIN and CP16 primers (5’-GTAAGCTTCCTTTGTACACACCGCCCGT-3’ and " exact="5’-GCGGGTACCATGCTTAAATTTAGGGGGTA-3’" post=", respectively) [ 46], as used by Mukwaya et al. [ 27]. To generate PCR products, 1 unit of high fi" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][2]/*[local-name()='p'][5]" name="dnaprimer"/>
+   <result pre="reened and colonies with inserts stored in TE buffer for PCR amplification. Universal M13 primers (" exact="5’-TGTAAAACGACGGCCAGT-3’" post=" and 5’-CAGGAAACAGCTATGAC-3’) [ 48] were used to amplify cloned ITS products in the following 13μl " xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][2]/*[local-name()='p'][5]" name="dnaprimer"/>
+   <result pre="rts stored in TE buffer for PCR amplification. Universal M13 primers (5’-TGTAAAACGACGGCCAGT-3’ and " exact="5’-CAGGAAACAGCTATGAC-3’" post=") [ 48] were used to amplify cloned ITS products in the following 13μl reaction; 1.25 units of BIOT" name="dnaprimer"/>
+  </snippets>
+ </snippetsTree>
+</projectSnippetsTree>

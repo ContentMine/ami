@@ -5,7 +5,6 @@ import java.io.IOException;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.jsoup.helper.StringUtil;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
@@ -18,6 +17,7 @@ import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.util.CMineTestFixtures;
+import org.xmlcml.norma.Norma;
 
 public class TutorialTest {
 
@@ -378,37 +378,13 @@ public class TutorialTest {
 		
 		
 //		String cmd = "species(binomial,genus)";
+//		String cmd = "gene(human)";
 		
-		
-		
-		
-		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"; 
+//		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"; 
 //		String cmd = "word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml"; //
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-				
-				
-				
-				
-//		String cmd = "sequence(dnaprimer) "
+		String cmd = "word(search)w.search:/org/xmlcml/ami2/plugins/places/wikiplaces.xml"; //
+//		String cmd = "sequence(dnaprimer) ";
 //				+ "word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml";
-				
-				
-		
-		
-		
 				
 				
 //		String cmd = "species(binomial,genus) gene(human) sequence(dnaprimer) word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml word(frequencies)xpath:@count>20~stopwords:pmcstop.txt_stopwords.txt"; 
@@ -416,8 +392,21 @@ public class TutorialTest {
 		commandProcessor.runCommands(cmd);
 
 	}
-	
-	
+
+	/** for cleaning XSLT
+	 * 
+	 * @throws IOException
+	 */
+	@Test
+	public void testCheckNorma() throws IOException {
+		String project = "zika";
+		File projectDir = new File("target/tutorial/"+project);
+		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		String args = "-i fulltext.xml -o scholarlyxx.html --transform nlm2html --project "+projectDir;
+		new Norma().run(args);
+
+	}
 	// =================
 	
 	@Test

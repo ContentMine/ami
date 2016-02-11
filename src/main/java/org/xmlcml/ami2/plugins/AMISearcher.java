@@ -183,7 +183,7 @@ public class AMISearcher extends AbstractSearcher {
 					matched = false;
 				}
 				if (!matched) {
-					LOG.trace(">> "+strings.get(stringPos));
+					LOG.trace(">> "+strings.get(stringPos - 1));
 					break;
 				}
 			}

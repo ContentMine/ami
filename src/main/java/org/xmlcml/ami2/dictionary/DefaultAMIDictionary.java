@@ -74,11 +74,13 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	/** later these should be read in from args.xml ...
 	 * 
 	 */
-	protected static final File AMI_DIR = new File("src/main/resources/org/xmlcml/ami2/plugins/");
-	protected static final File GENE_DIR = new File(AMI_DIR, "gene");
-	protected static final File SYNBIO_DIR = new File(AMI_DIR, "synbio");
-	protected static final File SPECIES_DIR = new File(AMI_DIR, "species");
-	protected static final String UTF_8 = "UTF-8";
+	protected static final File AMI_DIR        = new File("src/main/resources/org/xmlcml/ami2/plugins/");
+	protected static final File DICTIONARY_DIR = new File(AMI_DIR, "dictionary");
+	protected static final File GENE_DIR       = new File(AMI_DIR, "gene");
+	protected static final File PLACES_DIR     = new File(AMI_DIR, "places");
+	protected static final File SPECIES_DIR    = new File(AMI_DIR, "species");
+	protected static final File SYNBIO_DIR     = new File(AMI_DIR, "synbio");
+	protected static final String UTF_8        = "UTF-8";
 	
 	protected Map<DictionaryTerm, String> namesByTerm;
 	protected InputStream inputStream;
