@@ -20,7 +20,7 @@ import org.xmlcml.cmine.args.ValueElement;
 import org.xmlcml.cmine.args.VersionManager;
 import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
-import org.xmlcml.cmine.files.EuclidSource;
+import org.xmlcml.cmine.files.ResourceLocation;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 import org.xmlcml.cmine.lookup.AbstractLookup;
@@ -355,7 +355,8 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		for (String regexLocation : regexLocations) {
 			LOG.trace("RegexLocation "+regexLocation);
 			try {
-				Element rawCompoundRegex = new Builder().build(EuclidSource.getInputStream(regexLocation)).getRootElement();
+				InputStream is = new ResourceLocation().getInputStreamHeuristically(regexLocation);
+				Element rawCompoundRegex = new Builder().build(is).getRootElement();
 				List<Element> elements = XMLUtil.getQueryElements(rawCompoundRegex, ".//*[local-name()='regex']");
 				regexElementList.addAll(elements);
 			} catch (Exception e) {
@@ -376,7 +377,11 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		for (String regexLocation : regexLocations) {
 			LOG.trace("RegexLocation "+regexLocation);
 			try {
-				CompoundRegex compoundRegex = readAndCreateCompoundRegex(EuclidSource.getInputStream(regexLocation));
+				InputStream is = new ResourceLocation().getInputStreamHeuristically(regexLocation);
+				if (is == null) {
+					throw new RuntimeException("cannot find regex: "+regexLocation);
+				}
+				CompoundRegex compoundRegex = readAndCreateCompoundRegex(is);
 				compoundRegexList.add(compoundRegex);
 			} catch (Exception e) {
 				LOG.error("Cannot parse regexLocation: ("+e+")"+regexLocation);

@@ -1,5 +1,6 @@
-<argList name="ami" version="0.2.13">
+<argList name="ami" version="0.2.14">
 
+  <p>201602-11 added sdataTable analysis of spreadsheet</p>
   <p>201602-11 added spreadsheet creation after filter</p>
   <p>201602-07 developed new commandline, fixed inconsistencies and bugs</p>
   <p>201602-04 added Zika examples, and Pre/Post tools</p>

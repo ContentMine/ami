@@ -1,7 +1,8 @@
 package org.xmlcml.ami2.dictionary;
 
 import java.io.File;
-
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -165,9 +166,21 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	/** stores entries in hashMap (term, name) and also creates BloomFilter.
 	 * 
 	 * @param file
+	 * @throws FileNotFoundException 
 	 */
-	protected void readDictionary(File file) {
-		dictionaryElement = XMLUtil.parseQuietlyToDocument(file).getRootElement();
+	protected void readDictionary(File file)  {
+		FileInputStream fis = null;
+		try {
+			fis = new FileInputStream(file);
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException("Cannot read dictionary file "+file);
+		}
+		readDictionary(fis);
+		return;
+	}
+
+	private void readDictionary(InputStream is) {
+		dictionaryElement = XMLUtil.parseQuietlyToDocument(is).getRootElement();
 		namesByTerm = new HashMap<DictionaryTerm, String>();
 		rawTermSet = new HashSet<String>();
 		dictionaryTermList = new ArrayList<DictionaryTerm>();
@@ -181,7 +194,6 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 			bloomFilter.put(term);
 			rawTermSet.add(term);
 		}
-		return;
 	}
 
 	public List<DictionaryTerm> getDictionaryTermList() {

@@ -20,12 +20,10 @@ import org.xmlcml.cmine.files.ResultElement;
 import org.xmlcml.cmine.files.SnippetsTree;
 import org.xmlcml.cmine.files.XMLSnippets;
 import org.xmlcml.cmine.util.CMineUtil;
-import org.xmlcml.html.HtmlA;
+import org.xmlcml.cmine.util.DataTablesTool;
 import org.xmlcml.html.HtmlTable;
 import org.xmlcml.html.HtmlTbody;
 import org.xmlcml.html.HtmlTd;
-import org.xmlcml.html.HtmlTh;
-import org.xmlcml.html.HtmlThead;
 import org.xmlcml.html.HtmlTr;
 import org.xmlcml.xml.XMLUtil;
 
@@ -40,13 +38,22 @@ public class ResultsAnalysis {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-
-	private Map<PluginOption, ProjectSnippetsTree> projectSnippetsTreeByPluginOption;
+	
+	public Map<String, ProjectSnippetsTree> projectSnippetsTreeByPluginOption;
 	private Set<String> cTreeNameSet;
 	private List<String> cTreeNameList;
-	private List<PluginOption> pluginOptionList;
+	public List<String> pluginOptionList;
+//	public List<String> columnHeadingList;
+//	private List<String> rowHeadingList;
 	private HtmlTbody htmlTbody;
-	private HtmlThead htmlThead;
+	private DataTablesTool dataTablesTool;
+	
+	public ResultsAnalysis() {
+	}
+		
+	public ResultsAnalysis(DataTablesTool dataTablesTool) {
+		this.dataTablesTool = dataTablesTool;
+	}
 	
 	public void addSnippetsFile(File xmlFile) throws FileNotFoundException {
 		Element element = XMLUtil.parseQuietlyToDocument(new FileInputStream(xmlFile)).getRootElement();
@@ -62,16 +69,16 @@ public class ResultsAnalysis {
 		if (projectSnippetsTreeByPluginOption.containsKey(pluginOption)) {
 			throw new RuntimeException("Already has pluginOption: "+pluginOption);
 		}
-		projectSnippetsTreeByPluginOption.put(pluginOption, projectSnippetsTree);
+		projectSnippetsTreeByPluginOption.put(pluginOption.toString(), projectSnippetsTree);
 	}
 	
 	private void ensureProjectSnippetsTreeByPluginOption() {
 		if (projectSnippetsTreeByPluginOption == null) {
-			projectSnippetsTreeByPluginOption = new HashMap<PluginOption, ProjectSnippetsTree>();
+			projectSnippetsTreeByPluginOption = new HashMap<String, ProjectSnippetsTree>();
 		}
 	}
 
-	public Map<PluginOption, ProjectSnippetsTree> getProjectSnippetsTreeByPluginOption() {
+	public Map<String, ProjectSnippetsTree> getProjectSnippetsTreeByPluginOption() {
 		return projectSnippetsTreeByPluginOption;
 	}
 
@@ -79,7 +86,7 @@ public class ResultsAnalysis {
 		if (cTreeNameSet == null) {
 			cTreeNameSet = new HashSet<String>();
 			ensureProjectSnippetsTreeByPluginOption();
-			for (Map.Entry<PluginOption, ProjectSnippetsTree> entry : projectSnippetsTreeByPluginOption.entrySet()) {
+			for (Map.Entry<String, ProjectSnippetsTree> entry : projectSnippetsTreeByPluginOption.entrySet()) {
 				cTreeNameSet.addAll(entry.getValue().getCTreeNameList());
 			}
 		}
@@ -91,59 +98,6 @@ public class ResultsAnalysis {
 		cTreeNameList = Arrays.asList(cTreeNameSet.toArray(new String[0]));
 		Collections.sort(cTreeNameList);
 		return cTreeNameList;
-	}
-
-	public HtmlTable makeHtmlTable() {
-		getSortedCTreeNameList();
-		pluginOptionList = Arrays.asList(projectSnippetsTreeByPluginOption.keySet().toArray(new PluginOption[0]));
-		Collections.sort(pluginOptionList);
-		
-		HtmlTable htmlTable = new HtmlTable();
-		htmlTable.appendChild(createHtmlHead());
-		htmlTbody = new HtmlTbody();
-		htmlTable.appendChild(htmlTbody);
-		addRowsForCTrees();
-		return htmlTable;
-	}
-
-	private HtmlThead createHtmlHead() {
-		htmlThead = new HtmlThead();
-		HtmlTr htmlTr = new HtmlTr();
-		htmlThead.appendChild(htmlTr);
-		addIDColumnHeading(htmlTr);
-		addRemainingColumnHeadings(htmlTr);
-		return htmlThead;
-	}
-
-	private void addRowsForCTrees() {
-		for (String cTreeName : cTreeNameList) {
-			HtmlTr htmlTr = new HtmlTr();
-			htmlTbody.appendChild(htmlTr);
-			addHyperlinkedIDCell(cTreeName, htmlTr);
-			addCellValues(htmlTr, cTreeName);
-		}
-	}
-
-	private void addHyperlinkedIDCell(String cTreeName, HtmlTr htmlTr) {
-		HtmlTd htmlTd = new HtmlTd();
-		htmlTr.appendChild(htmlTd);
-		HtmlA htmlA = new HtmlA();
-		htmlA.appendChild(cTreeName);
-		htmlA.setHref("../../src/test/resources/org/xmlcml/ami2/zika/"+cTreeName+"/scholarly.html");
-		htmlTd.appendChild(htmlA);
-	}
-
-	private void addCellValues(HtmlTr htmlTr, String cTreeName) {
-		HtmlTd htmlTd;
-		for (PluginOption pluginOption : pluginOptionList) {
-			htmlTd = new HtmlTd();
-			htmlTr.appendChild(htmlTd);
-			ProjectSnippetsTree projectSnippetsTree = projectSnippetsTreeByPluginOption.get(pluginOption);
-			SnippetsTree snippetsTree = projectSnippetsTree.getOrCreateSnippetsTreeByCTreeName().get(cTreeName);
-			if (snippetsTree != null) {
-				addSnippetsTreeContents(snippetsTree, htmlTd);
-			}
-		}
 	}
 
 	private void addSnippetsTreeContents(SnippetsTree snippetsTree, HtmlTd htmlTd) {
@@ -158,7 +112,6 @@ public class ResultsAnalysis {
 		}
 		Multiset<String> multiset = HashMultiset.create();
 		multiset.addAll(terms);
-//		String ss = multiset.toString();
 		LOG.debug(multiset);
 		Iterable<Multiset.Entry<String>> entrys = CMineUtil.getEntriesSortedByCount(multiset);
 		String ss = entrys.toString();
@@ -167,19 +120,56 @@ public class ResultsAnalysis {
 		htmlTd.appendChild(ss);
 	}
 
-	private void addIDColumnHeading(HtmlTr htmlTr) {
-		HtmlTh htmlTh = new HtmlTh();
-		htmlTr.appendChild(htmlTh);
-		htmlTh.appendChild("EPMCID");
+	public HtmlTable makeDataTablesTable() {
+		HtmlTable table = this.makeHtmlTable(dataTablesTool, "foo", "bar", dataTablesTool.getId());
+		table.setClassAttribute(DataTablesTool.TABLE+" "+DataTablesTool.TABLE_STRIPED+" "+DataTablesTool.TABLE_BORDERED+" "+DataTablesTool.TABLE_HOVER);
+		table.setId(dataTablesTool.getId());
+		return table;
 	}
-
-	private void addRemainingColumnHeadings(HtmlTr htmlTr) {
-		for (PluginOption pluginOption : pluginOptionList) {
-			HtmlTh htmlTh = new HtmlTh();
-			htmlTr.appendChild(htmlTh);
-			htmlTh.appendChild(pluginOption.toString());
+	
+	public HtmlTable makeHtmlTable(DataTablesTool dataTablesTool, String link0, String link1, String id) {
+		dataTablesTool.setRowHeading(this.getSortedCTreeNameList());
+		Set<String> set = this.projectSnippetsTreeByPluginOption.keySet();
+		pluginOptionList = Arrays.asList(set.toArray(new String[0]));
+		Collections.sort(this.pluginOptionList);
+		dataTablesTool.setColumnHeadingList(pluginOptionList);
+		
+		HtmlTable htmlTable = new HtmlTable();
+		htmlTable.appendChild(dataTablesTool.createHtmlHead(id));
+		HtmlTbody htmlTbody = new HtmlTbody();
+		htmlTable.appendChild(htmlTbody);
+		this.addRowsForCTrees(link0, link1,  htmlTbody);
+		return htmlTable;
+	}
+	
+	private void addCellValues(HtmlTr htmlTr, String cTreeName) {
+		HtmlTd htmlTd;
+		List<String> columnHeadings = dataTablesTool.getColumnHeadingList();
+		for (String columnHeading : columnHeadings) {
+			htmlTd = new HtmlTd();
+			htmlTr.appendChild(htmlTd);
+			ProjectSnippetsTree projectSnippetsTree = projectSnippetsTreeByPluginOption.get(columnHeading);
+			SnippetsTree snippetsTree = projectSnippetsTree.getOrCreateSnippetsTreeByCTreeName().get(cTreeName);
+			if (snippetsTree != null) {
+				addSnippetsTreeContents(snippetsTree, htmlTd);
+			}
 		}
 	}
+	
+	public void addRowsForCTrees(String link0, String link1,  HtmlTbody htmlTbody) {
+		for (String rowHeading : dataTablesTool.getRowHeadingList()) {
+			HtmlTr htmlTr = new HtmlTr();
+			htmlTbody.appendChild(htmlTr);
+			String href = link0 + rowHeading + link1;
+			dataTablesTool.addHyperlinkedIDCell(href, rowHeading, htmlTr);
+			addCellValues(htmlTr, rowHeading);
+		}
+	}
+
+
+
+
+
 
 	
 }

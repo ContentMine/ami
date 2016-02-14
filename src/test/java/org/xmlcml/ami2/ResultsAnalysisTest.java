@@ -11,10 +11,11 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.xmlcml.cmine.files.ProjectSnippetsTree;
 import org.xmlcml.cmine.util.CMineTestFixtures;
+import org.xmlcml.cmine.util.DataTablesTool;
 import org.xmlcml.html.HtmlBody;
+import org.xmlcml.html.HtmlDiv;
 import org.xmlcml.html.HtmlHead;
 import org.xmlcml.html.HtmlHtml;
-import org.xmlcml.html.HtmlStyle;
 import org.xmlcml.html.HtmlTable;
 import org.xmlcml.xml.XMLUtil;
 
@@ -29,12 +30,13 @@ import nu.xom.Element;
  */
 public class ResultsAnalysisTest {
 
-	private static final File ZIKA_DIR = new File(AMIFixtures.TEST_RESULTS_DIR, "zika");
 	private static final Logger LOG = Logger.getLogger(ResultsAnalysisTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 
+	private static final File ZIKA_DIR = new File(AMIFixtures.TEST_RESULTS_DIR, "zika");
+	
 	/** summarizes counts of all terms.
 	 * @throws IOException 
 	 * 
@@ -95,28 +97,67 @@ public class ResultsAnalysisTest {
 	
 	@Test
 	public void testMakeTable() throws IOException {
-		ResultsAnalysis resultsAnalysis = createTestResultsAnalysis();
-		HtmlTable table = resultsAnalysis.makeHtmlTable();
+		DataTablesTool dataTablesTool = new DataTablesTool("Zika", "example");
+		ResultsAnalysis resultsAnalysis = createTestResultsAnalysis(dataTablesTool);
+		HtmlTable table = resultsAnalysis.makeHtmlTable(
+				dataTablesTool, "../../src/test/resources/org/xmlcml/ami2/zika/", "/scholarly.html", "EPMCID");
 		HtmlHtml html = new HtmlHtml();
 		HtmlHead head = new HtmlHead();
 		html.appendChild(head);
-		HtmlStyle style = new HtmlStyle();
-		head.appendChild(style);
-		style.setCssTypeDefault();
-		style.addCss("table, th, td {border : 1px solid black;}");
+		head.addUTF8Charset();
+		head.addCSSStylesheetLink("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
+		head.addCSSStylesheetLink("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css");
+		head.addJavascriptLink("https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js");
+		head.addJavascriptLink("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js");
+		head.addCssStyle(".bs-example{"
+				+ "margin: 20px;	"
+				+ "}");
 		HtmlBody body = new HtmlBody();
 		html.appendChild(body);
+		HtmlDiv htmlDiv = new HtmlDiv();
+		htmlDiv.setClassAttribute("bs-example table-responsive");
+		body.appendChild(htmlDiv);
+		table.setClassAttribute("table table-striped table-bordered table-hover");
 		body.appendChild(table);
 		
 		XMLUtil.debug(html, new File("target/resultsAnalysis/table.html"), 1);
 	}
 	
+	@Test
+	public void testMakeDataTable() throws IOException {
+		DataTablesTool dataTablesTool = new DataTablesTool("Zika", "example");
+		ResultsAnalysis resultsAnalysis = createTestResultsAnalysis(dataTablesTool);
+		HtmlHtml html = new HtmlHtml();
+		HtmlHead head = dataTablesTool.makeDataTableHead();
+		html.appendChild(head);
+		HtmlBody body = new HtmlBody();
+		html.appendChild(body);
+		HtmlDiv htmlDiv = new HtmlDiv();
+		htmlDiv.setClassAttribute("bs-example table-responsive");
+		body.appendChild(htmlDiv);
+		HtmlTable table = resultsAnalysis.makeDataTablesTable();
+		htmlDiv.appendChild(table);
+		XMLUtil.debug(html, new File("target/resultsAnalysis/datatable.html"), 1);
+	}
+	
+	/**
+	  <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+	  <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"> </script>
+	  <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"> </script>
+	  <script>
+	  $(function(){
+	    $("#example").dataTable();
+	  })
+	  </script>
+*/
+	
+	
 	// ============================
 	
-	private ResultsAnalysis createTestResultsAnalysis() {
-		ResultsAnalysis resultsAnalysis = new ResultsAnalysis();
+	private ResultsAnalysis createTestResultsAnalysis(DataTablesTool dataTablesTool) {
+		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
 		try {
-			resultsAnalysis.addSnippetsFile(new File(ZIKA_DIR, "search.wikiplaces.snippets.xml"));
+//			resultsAnalysis.addSnippetsFile(new File(ZIKA_DIR, "search.wikiplaces.snippets.xml"));
 			resultsAnalysis.addSnippetsFile(new File(ZIKA_DIR, "sequence.dnaprimer.snippets.xml"));
 			resultsAnalysis.addSnippetsFile(new File(ZIKA_DIR, "gene.human.snippets.xml"));
 			resultsAnalysis.addSnippetsFile(new File(ZIKA_DIR, "species.binomial.snippets.xml"));
