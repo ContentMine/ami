@@ -374,15 +374,21 @@ public class TutorialTest {
 		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
 
+		// make sure the scholarly.html exists
+		if (!new File(AMIFixtures.TEST_AMI_DIR, "PMC2570833/scholarly.html").exists()) {
+			String args = "-i fulltext.xml -o scholarly.html --transform nlm2html --project "+rawDir;
+			new Norma().run(args);
+		}
+
 		
 		
 		
 //		String cmd = "species(binomial,genus)";
 //		String cmd = "gene(human)";
 		
-//		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"; 
+		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"; 
 //		String cmd = "word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml"; //
-		String cmd = "word(search)w.search:/org/xmlcml/ami2/plugins/places/wikiplaces.xml"; //
+//		String cmd = "word(search)w.search:/org/xmlcml/ami2/plugins/places/wikiplaces.xml"; //
 //		String cmd = "sequence(dnaprimer) ";
 //				+ "word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml";
 				
@@ -403,7 +409,7 @@ public class TutorialTest {
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
-		String args = "-i fulltext.xml -o scholarlyxx.html --transform nlm2html --project "+projectDir;
+		String args = "-i fulltext.xml -o scholarly.html --transform nlm2html --project "+projectDir;
 		new Norma().run(args);
 
 	}
