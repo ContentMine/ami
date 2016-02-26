@@ -10,6 +10,7 @@
 <!--
 	<parent>
 		<groupId>uk.ac.cam.ch.wwmm</groupId>
+
 		<artifactId>wwmm-parent</artifactId>
 		<version>5-SNAPSHOT</version>
 	</parent>
@@ -17,6 +18,7 @@
 <!-- this should not be necessary -->
 <properties>
 	<guava.version>18.0</guava.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 </properties>
 
 	<!--Remove <repositories> for releases to Maven central -->
@@ -85,6 +87,10 @@
  						<program>
 							<mainClass>org.xmlcml.ami2.plugins.identifier.IdentifierPlugin</mainClass>
 							<id>ami2-identifier</id>
+						</program>
+ 						<program>
+							<mainClass>org.xmlcml.ami2.plugins.phylotree.PhyloTreePlugin</mainClass>
+							<id>ami2-phylotree</id>
 						</program>
  						<program>
 							<mainClass>org.xmlcml.ami2.plugins.regex.RegexPlugin</mainClass>
@@ -172,6 +178,12 @@
  						<data>
 							<type>link</type>
 							<symlink>true</symlink>
+							<linkName>/usr/bin/ami2-phylotree</linkName>
+							<linkTarget>/usr/share/ami-repo/bin/ami2-phylotree</linkTarget>
+						</data>
+ 						<data>
+							<type>link</type>
+							<symlink>true</symlink>
 							<linkName>/usr/bin/ami2-regex</linkName>
 							<linkTarget>/usr/share/ami-repo/bin/ami2-regex</linkTarget>
 						</data>
@@ -217,6 +229,41 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5</version>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<!-- giant jar -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+                                <version>2.4</version>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>org.xmlcml.ami2.plugins.AMIPlugin</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 		</plugins>
@@ -271,7 +318,7 @@
 			<version>4.10.3</version>
 		</dependency>
 		<!--  this should not be necessary 
-		There seems to be a rougue version of guava somewhere
+		There seems to be a rogue version of guava somewhere
 		(http://stackoverflow.com/questions/28978277/guava-multisets-copyhighestcountfirst-method-suddenly-not-working)
 		 -->
 		<dependency>
@@ -362,6 +409,21 @@
 			<!-- Prevents jar bloat in final package -->
 			<scope>provided</scope>
 		</dependency>
+				<!-- https://github.com/jayway/JsonPath/blob/master/README.md -->
+				<!--  shouldn't be needed as it's in Norma -->
+		<dependency>
+		    <groupId>com.jayway.jsonpath</groupId>
+		    <artifactId>json-path</artifactId>
+		    <version>2.0.0</version>
+		</dependency>
+		<dependency>
+		<!-- https://github.com/uniVocity/univocity-parsers -->
+		    <groupId>com.univocity</groupId>
+		    <artifactId>univocity-parsers</artifactId>
+		    <version>1.5.6</version>
+		    <type>jar</type>
+		</dependency>		
+		
 	</dependencies>
 
 </project>

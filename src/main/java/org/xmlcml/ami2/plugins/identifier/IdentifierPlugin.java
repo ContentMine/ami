@@ -33,8 +33,7 @@ public class IdentifierPlugin extends AMIPlugin {
 	}
 	
 	public static void main(String[] args) {
-		new IdentifierArgProcessor().parseArgsRunAndOutput(args);
+		new IdentifierArgProcessor(args).runAndOutput();
 	}
-
 
 }

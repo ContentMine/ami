@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="dnaprimer">
+ <result pre="used by Sweet et al, 2010; (357F) (" exact="5’-CCTACGGGAGGCAGCAG-3’" post=") and (518R) (5’ATTACCGCGGCTGCTGG-3’), a segment o" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][5]/*[local-name()='div'][4]/*[local-name()='p'][3]" name="dnaprimer"/>
+ <result pre="-CCTACGGGAGGCAGCAG-3’) and (518R) (" exact="5’ATTACCGCGGCTGCTGG-3’" post="), a segment of the bacterial 16S rRNA gene was am" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][5]/*[local-name()='div'][4]/*[local-name()='p'][3]" name="dnaprimer"/>
+ <result pre="ythell [ 18]; forward primer CilF (" exact="5’-TGGTAGTGTATTGGACWACCA-3’" post=") with a 36 bp GC clamp [ 31] attached to the 5’ e" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][5]/*[local-name()='div'][4]/*[local-name()='p'][3]" name="dnaprimer"/>
+ <result pre=" and the reverse primer CilDGGE-r (" exact="5’-TGAAAACATCCTTGGCAACTG-3’" post="). PCR reaction mixtures were made up to 10 μl vol" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][5]/*[local-name()='div'][4]/*[local-name()='p'][3]" name="dnaprimer"/>
+ <result pre="mples using the primers BrB-F-171 (" exact="5’-TCAAACCCGACTTTACGGAAG-3’" post=") and BrB-R-1721 (5’-TGCAGGTTCACCTACGGAAAC-3’) [ 3" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][5]/*[local-name()='div'][4]/*[local-name()='p'][3]" name="dnaprimer"/>
+ <result pre="CGACTTTACGGAAG-3’) and BrB-R-1721 (" exact="5’-TGCAGGTTCACCTACGGAAAC-3’" post=") [ 34]. These primers were designed to amplify th" name="dnaprimer"/>
+</results>

@@ -14,6 +14,8 @@ import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
+/** will skip Tesseract if not installed
+*/
 public class TesseractTest {
 
 	
@@ -22,8 +24,8 @@ public class TesseractTest {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	private static final File TESSERACTED_DIR = new File("examples/peterijsem/tesseracted/");
-	private static final File TESS_CLEAN_DIR = new File("examples/peterijsem/tessclean/");
+	private static final File TESSERACTED_DIR = new File("src/test/resources/org/xmlcml/ami2/word/peterijsem/tesseracted/");
+	private static final File TESS_CLEAN_DIR = new File("target/peterijsem/tessclean/");
 //	private static final Pattern SPEC_STRAIN_ACCESS = Pattern.compile("([A-Z](?:\\.|[a-z]+)\\s*(.*)\\s*\\(([A-Z]{1,2}\\d{1,6})\\)\\s*");
 	private static final Pattern SPEC_STRAIN_ACCESS = Pattern.compile("([A-Z](?:\\.|[a-z]+)\\s+[a-z]+)\\s*(.*)\\s+\\(([A-Z]{1,2}\\d{5,6})\\)\\s*");
 	private List<List<String>> linesList;
@@ -33,6 +35,10 @@ public class TesseractTest {
 	@Before
 	public void setup() throws IOException {
 		if (linesList == null) {
+			LOG.trace("setup files: TESSERACTED_DIR");
+			if (!TESSERACTED_DIR.exists()) {
+				throw new RuntimeException("File: "+TESSERACTED_DIR+" does not exist");
+			}
 			txtFiles = new ArrayList<File>(FileUtils.listFiles(TESSERACTED_DIR, new String[]{"txt"}, false));
 			linesList = new ArrayList<List<String>>();
 			for (File txtFile : txtFiles) {
@@ -79,7 +85,7 @@ public class TesseractTest {
 			for (String line : lines) {
 				Matcher matcher = SPEC_STRAIN_ACCESS.matcher(line);
 				if (matcher.matches()) {
-					LOG.debug(matcher.group(1)+"//"+matcher.group(2)+"//"+matcher.group(3));
+					LOG.trace(matcher.group(1)+"//"+matcher.group(2)+"//"+matcher.group(3));
 				}
 			}
 		}

@@ -26,16 +26,19 @@ public class SpeciesResultsElement extends ResultsElement {
 		this(SPECIES);
 	}
 
+	@Override
 	public List<String> getExactList() {
-		if (nameList == null) {
-			nameList = new ArrayList<String>();
+		if (matchList == null) {
+			matchList = new ArrayList<String>();
 			for (ResultElement resultElement : this) {
 				SpeciesResultElement speciesResultElement = (SpeciesResultElement)resultElement;
-				String name = speciesResultElement.getExact();
-				nameList.add(name);
+				String match = speciesResultElement.getExact();
+				matchList.add(match);
+				LOG.trace("match "+match);
 			}
 		}
-		return nameList;
+		LOG.trace("matchList "+matchList);
+		return matchList;
 	}
 
 	public void addMatchAttributes(List<String> matchList) {

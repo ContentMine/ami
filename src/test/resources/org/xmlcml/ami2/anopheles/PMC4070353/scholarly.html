@@ -1,0 +1,3242 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml">
+   <div xmlns="" tagxxx="article">
+      <head>
+         <meta content="BioMed Central" name="citation_publisher"></meta>
+         <meta content="10.1186/1476-072X-13-17" name="citation_doi"></meta>
+         <meta content="Modeling larval malaria vector habitat locations using landscape features and cumulative precipitation measures" name="citation_title"></meta>
+         <title>Modeling larval malaria vector habitat locations using landscape features and cumulative
+            precipitation measures
+         </title>
+         <div tagxxx="contrib-group">
+            <meta content="Robert S McCann" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="Joseph P Messina" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="David W MacFarlane" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="M Nabie Bayoh" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="John M Vulule" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="John E Gimnig" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="Edward D Walker" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+         </div>
+         <meta content="" name="email"></meta>
+         <meta content="" name="conflict"></meta>
+         <meta content="" name="contribs"></meta>
+         <meta content="2014-6-6" name="citation_pubdate"></meta>
+         <meta content="Copyright 2014: McCann et al.; licensee BioMed Central Ltd." name="citation_copyright"></meta>
+         <meta content="Licence This is an Open Access article distributed under the terms of the Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly credited. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated." name="citation_licence"></meta>
+         <meta content="" name="citation_funding"></meta>
+         <meta content="" name="citation_pagecount"></meta>
+         <meta content="" name="citation_data"></meta>
+      </head>
+      <div id="abstract" tag="abstract">
+         <div id="">
+            <h2>Background</h2>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Predictive models of malaria vector larval habitat locations may provide a basis for
+               understanding the spatial determinants of malaria transmission.
+            </p>
+         </div>
+         <div id="">
+            <h2>Methods</h2>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">We used four landscape variables (topographic wetness index [TWI], soil type, land
+               use-land cover, and distance to stream) and accumulated precipitation to model larval
+               habitat locations in a region of western Kenya through two methods: logistic regression
+               and random forest. Additionally, we used two separate data sets to account for variation
+               in habitat locations across space and over time.
+            </p>
+         </div>
+         <div id="">
+            <h2>Results</h2>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Larval habitats were more likely to be present in locations with a lower slope to
+               contributing area ratio (i.e. TWI), closer to streams, with agricultural land use
+               relative to nonagricultural land use, and in friable clay/sandy clay loam soil and
+               firm, silty clay/clay soil relative to friable clay soil. The probability of larval
+               habitat presence increased with increasing accumulated precipitation. The random forest
+               models were more accurate than the logistic regression models, especially when accumulated
+               precipitation was included to account for seasonal differences in precipitation. The
+               most accurate models for the two data sets had area under the curve (AUC) values of
+               0.864 and 0.871, respectively. TWI, distance to the nearest stream, and precipitation
+               had the greatest mean decrease in Gini impurity criteria in these models.
+            </p>
+         </div>
+         <div id="">
+            <h2>Conclusions</h2>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">This study demonstrates the usefulness of random forest models for larval malaria
+               vector habitat modeling. TWI and distance to the nearest stream were the two most
+               important landscape variables in these models. Including accumulated precipitation
+               in our models improved the accuracy of larval habitat location predictions by accounting
+               for seasonal variation in the precipitation. Finally, the sampling strategy employed
+               here for model parameterization could serve as a framework for creating predictive
+               larval habitat models to assist in larval control efforts.
+            </p>
+         </div>
+      </div>
+      <div id="">
+         <h2>Introduction</h2>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Malaria is one of the most significant infectious diseases affecting people in poverty,
+            with an estimated 219 million cases of malaria worldwide in 2010 killing 660,000 people
+            [
+            <span ref-type="bibr" rid="B1">1</span>]. An estimated 1.44 billion people in South America, Africa, and Asia lived in areas
+            with stable transmission of malaria caused by 
+            <i>Plasmodium falciparum</i> (Welch), yet the risk of 
+            <i>P. falciparum</i> transmission varies considerably across its range [
+            <span ref-type="bibr" rid="B2">2</span>]. Even at fine scales, the spatial distribution of malaria is heterogeneous, differing
+            among households within a community [
+            <span ref-type="bibr" rid="B3">3</span>-
+            <span ref-type="bibr" rid="B6">6</span>]. Of course, socioeconomic and immunological differences contribute to the spatial
+            heterogeneity of malaria [
+            <span ref-type="bibr" rid="B3">3</span>,
+            <span ref-type="bibr" rid="B4">4</span>]. Additionally, landscape factors contribute to the spatial distribution of malaria
+            [
+            <span ref-type="bibr" rid="B5">5</span>,
+            <span ref-type="bibr" rid="B7">7</span>], which is likely an indirect relationship ultimately due, in part, to the influence
+            of landscape factors on the locations of the aquatic habitats of the vector mosquito
+            larvae. The spatial distribution of the larval habitats partially determines the spatial
+            distribution of the adult malaria vectors in many landscapes [
+            <span ref-type="bibr" rid="B5">5</span>,
+            <span ref-type="bibr" rid="B8">8</span>-
+            <span ref-type="bibr" rid="B10">10</span>]. Subsequently, the heterogeneous spatial distribution of malaria vectors among households
+            coincides with the spatial distribution of malaria parasitemia in some landscapes
+            [
+            <span ref-type="bibr" rid="B5">5</span>]. Therefore, understanding the factors that determine the distribution of the larval
+            habitats facilitates our understanding of the spatial determinants of malaria transmission.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The vast majority of deaths from malaria (91%) occur in Africa [
+            <span ref-type="bibr" rid="B1">1</span>], where the primary vector mosquitoes are among the most efficient vectors of malaria
+            in the world. Two of the most widely distributed vectors in Africa are 
+            <i>Anopheles gambiae</i> s.s. Giles and 
+            <i>Anopheles arabiensis</i> Patton, which are both members of a species complex of eight closely related, morphologically
+            indistinguishable species known collectively as 
+            <i>Anopheles gambiae</i> s.l. [
+            <span ref-type="bibr" rid="B11">11</span>]. In many regions the larval habitats of 
+            <i>An. gambiae</i> s.s. and 
+            <i>An. arabiensis</i> are similar, and in fact, the two species are often found within the same larval
+            habitats [
+            <span ref-type="bibr" rid="B12">12</span>-
+            <span ref-type="bibr" rid="B14">14</span>]. These larval habitats are generally smaller, temporary bodies of standing water
+            persisting for about 20 to 40 days [
+            <span ref-type="bibr" rid="B12">12</span>,
+            <span ref-type="bibr" rid="B15">15</span>], with rain being the main source of the water.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The locations of larval 
+            <i>An. gambiae</i> s.l. habitats are associated with certain environmental features of landscapes. Previous
+            studies have found more larval habitats closer to streams [
+            <span ref-type="bibr" rid="B16">16</span>] and in locations with agricultural land uses [
+            <span ref-type="bibr" rid="B16">16</span>,
+            <span ref-type="bibr" rid="B17">17</span>]. Others have used a topographic wetness index (TWI) [
+            <span ref-type="bibr" rid="B18">18</span>] to predict the locations of larval habitats, finding more larval habitats in locations
+            having a combination of greater upslope area contributing to drainage and less slope
+            [
+            <span ref-type="bibr" rid="B19">19</span>-
+            <span ref-type="bibr" rid="B21">21</span>]. The influence of soil types on the presence of larval habitats has largely been
+            ignored, although Bøgh and colleagues [
+            <span ref-type="bibr" rid="B22">22</span>] found larval habitats exclusively in alluvial soils in The Gambia. Finally, seasonal
+            differences in rainfall likely influence the number of larval habitats on the landscape
+            [
+            <span ref-type="bibr" rid="B12">12</span>,
+            <span ref-type="bibr" rid="B16">16</span>,
+            <span ref-type="bibr" rid="B19">19</span>,
+            <span ref-type="bibr" rid="B20">20</span>,
+            <span ref-type="bibr" rid="B23">23</span>].
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The objectives of this study were to create a model for predicting larval 
+            <i>An. gambiae</i> s.l. habitat locations using landscape variables that predict the likelihood of standing
+            water bodies, and to account for seasonal changes in habitat probability based on
+            accumulated precipitation. A model for accurately predicting the locations of malaria
+            vector larval habitats has multiple utilities. First, it allowed us to investigate
+            the links between larval habitat distribution and adult malaria vector distribution
+            across a large landscape where manually mapping the larval habitats is infeasible
+            (McCann et al. 
+            <i>in preparation</i>). Additionally, such a model could be useful for malaria control programs, allowing
+            program managers to focus their efforts to areas where larval habitats are most likely
+            to occur.
+         </p>
+         <div id="">
+            <h3>Study site</h3>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The Asembo region of Rarieda District in western Kenya (Figure 
+               <span ref-type="fig" rid="F1">1</span>A) is a rural community of about 60,000 people covering about 200 km
+               <sup>2</sup>. Most of the residents are subsistence farmers, and the landscape is largely dominated
+               by small-scale agriculture. Small plots of land generally surround family-based groups
+               of houses, or compounds, further arranged into villages. While the compounds are highly
+               dispersed within villages, the boundaries between villages are often discernable only
+               by residents [
+               <span ref-type="bibr" rid="B24">24</span>] (Figure 
+               <span ref-type="fig" rid="F1">1</span>B). Asembo sits in the lowlands along the shores of Lake Victoria, with elevations
+               ranging from 1,100 m to 1,400 m above sea level and low topographic relief. Networks
+               of streams run across the region and drain into Lake Victoria. Farmland is common
+               in these low-lying drainage basins, as well as throughout the region. Houses are mostly
+               absent within 100 m of the streams. Rainfall is seasonally bimodal but may occur year
+               round, with monthly precipitation totals ranging from 7 to 490 mm and yearly totals
+               ranging from 1,100 to 1,800 mm from 2003 through 2012.
+            </p>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 1</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>Study site and survey locations. (A)</b> Map of Kenya with red square indicating location of the study region in western Kenya.
+                     
+                     <b>(B)</b> Map showing the boundaries of Asembo and the streams within the community, with black
+                     dots representing all households. 
+                     <b>(C)</b> 10 by 10 km study site shown as dashed black line with thirty-one 500 by 500 m quadrats
+                     surveyed for larval habitats shown as red boxes. 
+                     <b>(D)</b> Location of the neighboring villages of Aduoyo-Miyare and Nguka, sites of the 15
+                     monthly ground surveys for larval habitats, shown in red.
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Malaria is holoendemic in Asembo, with parasitemia rates in children under 5 being
+               around 50% in 2009 [
+               <span ref-type="bibr" rid="B25">25</span>]. Similar to rainfall patterns, malaria transmission occurs year round, with seasonal
+               peaks in May-July and October-November. The predominant species of malaria is 
+               <i>P. falciparum</i>. Two of the primary malaria vectors in the region are 
+               <i>An. gambiae</i> s.s. and 
+               <i>An. arabiensis</i>, the only two members of the 
+               <i>An. gambiae</i> s.l. species complex found here. The other primary malaria vector in the region is
+               
+               <i>Anopheles funestus</i> Giles. However, 
+               <i>An. funestus</i> and 
+               <i>An. gambiae</i> s.l. larvae do not generally occupy the same habitats, as the larval habitats of
+               
+               <i>An. funestus</i> are generally larger and more permanent than those of 
+               <i>An. gambiae</i> s.l. [
+               <span ref-type="bibr" rid="B12">12</span>]. Larval 
+               <i>An. gambiae</i> s.l. habitats are numerous and widespread in Asembo yet heterogeneously distributed
+               [
+               <span ref-type="bibr" rid="B16">16</span>]. This makes it difficult to establish a relationship between larval habitats and
+               the spatial distribution of the adult vectors or malaria prevalence in people. A 10
+               by 10 km study site was defined within Asembo to examine variation in the determinants
+               of larval habitat location across a relatively large area. Because we wanted to include
+               the lakeshore in the study site, the southern border fell largely within the lake,
+               leaving 96.43 km
+               <sup>2</sup> of actual landmass in the 10 by 10 km site.
+            </p>
+         </div>
+      </div>
+      <div id="">
+         <h2>Methods</h2>
+         <div id="">
+            <h3>Larval habitat ground surveys</h3>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The 10 by 10 km study site was divided into 500 by 500 m quadrats for larval 
+               <i>An. gambiae</i> s.l. habitat ground surveys. After excluding the quadrats that fell completely in
+               the lake, we selected quadrats for larval habitat ground surveys using spatially stratified
+               random sampling from the remaining 393 quadrats (Figure 
+               <span ref-type="fig" rid="F1">1</span>C). For spatial stratification the 10 by 10 km area was divided into 2 by 2 km blocks.
+               The 500 by 500 m quadrats were randomly selected from groups defined by the 2 by 2 km
+               blocks. Spatial stratification was implemented to avoid the problem of sampling a
+               cluster of quadrats in a certain area of the grid, assuring spatial variation in the
+               predictor variables [
+               <span ref-type="bibr" rid="B26">26</span>]. The time required for surveying a quadrat varied greatly according to the number
+               of larval habitats in the quadrat, which was not known 
+               <i>a priori</i>. Therefore, we surveyed as many quadrats as possible during the targeted time frame,
+               which was the end of the long rainy season to coincide with the peak 
+               <i>An. gambiae</i> s.l. population level [
+               <span ref-type="bibr" rid="B27">27</span>-
+               <span ref-type="bibr" rid="B29">29</span>]. Thus, 31 quadrats were surveyed exhaustively over 22 days between 17 May 2011 and
+               4 July 2011.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">All potential larval 
+               <i>An. gambiae</i> s.l. habitats found in the quadrats were georeferenced with GPS units. Six field
+               workers spaced 20 m from each other walked from one end of a quadrat to the other,
+               using ArcPad (ESRI, Redlands, CA) on a GPS unit for navigating the borders of the
+               quadrat. This was repeated until the entire quadrat was covered, usually in four to
+               five passes. This approach allowed us to say, with certainty, where habitats were
+               absent during the survey. In addition to recording the locations of each larval habitat,
+               we recorded the presence or absence of 
+               <i>Anopheles</i> larvae. Larval 
+               <i>An. gambiae</i> s.l. habitats were defined as any standing body of water, regardless of whether 
+               <i>Anopheles</i> were present on the day of the ground survey, and falling under the following categories:
+               drainage channel, burrow pit, rain pool, runoff, cluster of hoof prints, stream bed
+               pool, pond/reservoir, wet meadow, well and tire track [
+               <span ref-type="bibr" rid="B15">15</span>]. For a subset of habitats (the first five 
+               <i>Anopheles-</i>positive habitats for each of the four to five passes across each quadrat), 
+               <i>Anopheles</i> larvae and pupae were collected to confirm that the habitats were being used by 
+               <i>An. gambiae</i> s.l. All visible 
+               <i>Anopheles</i> larvae, up to a maximum of 20, were collected using a 300 ml dipper or plastic pipette
+               as appropriate according to the size of the habitat. The specimens were transported
+               to the lab for species identification. Larvae were raised to fourth-stage instars
+               for identification, while pupae were allowed to eclose as adults before identification.
+               All identifications were done according to Gillies and Coetzee [
+               <span ref-type="bibr" rid="B30">30</span>].
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">To capture variation in habitat location across time due to seasonal rainfall patterns,
+               additional ground surveys were conducted monthly in two neighboring villages, Aduoyo-Miyare
+               and Nguka, covering 6.22 km
+               <sup>2</sup> within the 10 by 10 km study site (Figure 
+               <span ref-type="fig" rid="F1">1</span>D). Two local field workers with extensive knowledge of the villages walked throughout
+               the whole of each village over the course of one to three days, depending on the number
+               of habitats encountered, each month from April 2011 through June 2012. Potential 
+               <i>An. gambiae</i> s.l. habitats were defined and recorded as above. Thus, we had the ability to say
+               where habitats were present and absent within the two villages each month.
+            </p>
+         </div>
+         <div id="">
+            <h3>Environmental data</h3>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Spatial data for soils, land use-land cover (LULC), distance to the nearest stream,
+               and TWI were created across the study site. These data were assembled in ArcGIS 10.0
+               (ESRI, Redlands, CA) in raster data structures with a spatial resolution of 20 m.
+               All four datasets were treated as constant over time. Soil data were taken from the
+               1:1,000,000 exploratory soil map of Kenya, compiled by the Kenya Soil Survey in 1980
+               [
+               <span ref-type="bibr" rid="B31">31</span>]. The three soil types in Asembo were 1) friable clay, 2) friable clay/sandy clay
+               loam, and 3) firm, silty clay/clay. Of these soil types, friable clay drains more
+               quickly, and firm, silty clay/clay drains more slowly. A satellite image from the
+               IKONOS-2 sensor was used to create the LULC classification. Briefly, unsupervised
+               classification was done using the K-means method [
+               <span ref-type="bibr" rid="B32">32</span>] in ENVI 4.8 (Exelis Visual Information Solutions, Boulder, CO). Classes were combined
+               into a binary data layer of agricultural or non-agricultural land use. All streams
+               in Asembo were mapped using GPS units, and the Euclidean distance in meters to the
+               nearest stream was calculated.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The TWI data were derived from a digital elevation model (DEM) of the study site.
+               The DEM was created using local universal kriging to interpolate 11,130 GPS elevation
+               records previously taken within Asembo [
+               <span ref-type="bibr" rid="B33">33</span>,
+               <span ref-type="bibr" rid="B34">34</span>]. The ArcGIS extension TauDEM 5.0 (Tarboton, Utah State University) was used to calculate
+               a TWI. First, slope and flow direction were calculated using the deterministic infinite-node
+               algorithm recommended by Tarboton, which is robust yet easily implemented [
+               <span ref-type="bibr" rid="B35">35</span>]. Contributing area catchments were calculated using the flow direction and slope
+               data. Finally, TWI was calculated as the ratio of the slope to the contributing area,
+               and the values were rescaled to the range by taking:
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <div tagxxx="disp-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mtable">
+                        <div tagxxx="mtr">
+                           <div tagxxx="mtd">
+                              <div tagxxx="mfenced">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">TW</div>
+                                    <div tagxxx="msub">
+                                       <div tagxxx="mi">I</div>
+                                       <div tagxxx="mi">i</div>
+                                    </div>
+                                    <div tagxxx="mo">–</div>
+                                    <div tagxxx="mi">min</div>
+                                    <div tagxxx="mfenced">
+                                       <div tagxxx="mi">TWI</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div tagxxx="mtr">
+                           <div tagxxx="mtd">
+                              <div tagxxx="mspace"></div>
+                              <div tagxxx="mo">×</div>
+                              <div tagxxx="mn">100</div>
+                              <div tagxxx="mo">/</div>
+                              <div tagxxx="mfenced">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">max</div>
+                                    <div tagxxx="mfenced">
+                                       <div tagxxx="mi">TWI</div>
+                                    </div>
+                                    <div tagxxx="mo">–</div>
+                                    <div tagxxx="mi">min</div>
+                                    <div tagxxx="mfenced">
+                                       <div tagxxx="mi">TWI</div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div tagxxx="mspace"></div>
+                              <div tagxxx="mi">for</div>
+                              <div tagxxx="mspace"></div>
+                              <div tagxxx="mi">each</div>
+                              <div tagxxx="mspace"></div>
+                              <div tagxxx="mi">i</div>
+                              <div tagxxx="mspace"></div>
+                              <div tagxxx="mi">value</div>
+                              <div tagxxx="mspace"></div>
+                              <div tagxxx="mi">of</div>
+                              <div tagxxx="mspace"></div>
+                              <div tagxxx="mi">TWI</div>
+                              <div tagxxx="mo">.</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Because the TWI was calculated as the ratio of slope to contributing area, the lowest
+               value (0) represented the wettest locations, while the highest TWI value (100) represented
+               the driest areas.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Daily precipitation totals for March 2011 to July 2012, as measured by the weather
+               station at the Kisumu Airport (about 40 km east of Asembo), were downloaded from the
+               National Climatic Data Center’s Global Summary of Day (GSoD) database (Figures 
+               <span ref-type="fig" rid="F2">2</span> and 
+               <span ref-type="fig" rid="F3">3</span>). For missing daily data at the Kisumu weather station (n = 19 of 489 days), the
+               inverse distance weighted mean of surrounding GSoD weather stations (within 250 km)
+               was used. Cumulative 
+               <i>n</i>-day precipitation totals were calculated by summing the precipitation total of a
+               given day with the previous 
+               <i>n</i> days for 
+               <i>n</i> = 0 to 30 days. Each 
+               <i>n</i>-day precipitation total had a daily temporal resolution, treated as spatially constant
+               across our study site. From the resulting 31 measures of cumulative precipitation,
+               we selected the best cumulative 
+               <i>n</i>-day total for each model based on the criteria outlined below.
+            </p>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 2</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>Precipitation data from the Kisumu airport for March 2011 through July 2012.</b> Each point along the x-axis represents one day. The vertical bars show the daily
+                     precipitation total. The solid line shows the cumulative 30-day precipitation total
+                     (i.e. the level of the line for each day represents the summation of precipitation
+                     totals over the previous 30 days), which was used in the logistic regression model
+                     for the 15-month dataset. Similarly, the dashed line shows the daily fluctuation of
+                     the cumulative 21-day total used in the random forest model of the same data. Circles
+                     and squares show the last day of ground surveys for each month in Aduoyo-Miyare and
+                     Nguka. Kisumu airport is about 40 km east of Asembo.
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 3</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>Precipitation data from the Kisumu airport for 2 May 2011 to 4 July 2012.</b> Each point along the x-axis represents one day. The vertical bars show the daily
+                     precipitation total. The solid line shows the cumulative 6-day precipitation total
+                     (i.e. the level of the line for each day represents the summation of precipitation
+                     totals over the previous 6 days), which was used in the logistic regression model
+                     of the 10 by 10 km dataset. Similarly, the dashed line shows the daily fluctuation
+                     of the cumulative 14-day precipitation total used in the random forest model of the
+                     same data. Squares and circles show the days of the ground surveys in the 31 quadrats.
+                     Kisumu airport is about 40 km east of Asembo.
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+         </div>
+         <div id="">
+            <h3>Statistical methods</h3>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">We used two approaches for modeling the distribution of larval habitats across the
+               landscape, logistic regression and 
+               <i>random forest</i>[
+               <span ref-type="bibr" rid="B36">36</span>]. Logistic regression is commonly used in species distribution modeling [
+               <span ref-type="bibr" rid="B20">20</span>,
+               <span ref-type="bibr" rid="B21">21</span>,
+               <span ref-type="bibr" rid="B37">37</span>]. Ecologists have recently started using the random forest method as well, because
+               it does not require any assumptions about the distribution of the data [
+               <span ref-type="bibr" rid="B38">38</span>,
+               <span ref-type="bibr" rid="B39">39</span>]. Random forest is a machine learning classification method that extends classification
+               and regression tree (CART) approaches, which work by recursive binary partitioning
+               of the data space into increasingly homogenous regions [
+               <span ref-type="bibr" rid="B39">39</span>,
+               <span ref-type="bibr" rid="B40">40</span>]. Random forest works by fitting and combining many CARTs to create a more accurate
+               prediction [
+               <span ref-type="bibr" rid="B36">36</span>,
+               <span ref-type="bibr" rid="B39">39</span>].
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Both methods were used separately on the two datasets (one from the 10 by 10 km area
+               and the other from the 15 monthly ground surveys in Aduoyo-Miyare and Nguka). For
+               both methods, the unit of analysis was a 20 m pixel. Because each of the 31 quadrats
+               in the 10 by 10 km area was surveyed once, each pixel in that dataset had a single
+               value for all of the variables described above (habitat presence/absence, TWI, soil,
+               LULC, distance to stream, and 31 values of 
+               <i>n</i>-day precipitation). The value of 
+               <i>n</i>-day precipitation was based on the day a given quadrat was surveyed (Figure 
+               <span ref-type="fig" rid="F3">3</span>). In the Aduoyo-Miyare and Nguka dataset, each pixel was repeated 15 times. The value
+               of 
+               <i>n</i>-day precipitation was based on the final day of ground surveys, which took only 1
+               to 3 days, each month (Figure 
+               <span ref-type="fig" rid="F2">2</span>). Habitat presence/absence was determined by the ground survey data for each month,
+               while TWI, soil, LULC and distance to stream were constant for a given pixel across
+               all 15 months.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">We built a series of candidate logistic regression models to select the most useful
+               predictor variables. To determine which 
+               <i>n</i>-day precipitation measure to use, each cumulative precipitation measure was used
+               alone as the predictor variable in separate regression models. Of these, the model
+               with the lowest BIC determined the cumulative precipitation measure used in the subsequent
+               logistic regression candidate models. The five predictor variables (TWI, soil, LULC,
+               distance to stream, and precipitation) were then used in all 31 possible combinations
+               to build candidate logistic regression models for each of the two datasets. To restrict
+               the candidate model sets to relatively simple models with easily interpretable parameters,
+               interactions among the five predictor variables were not included. The top models
+               were again selected according to the lowest BIC. While the locations of larval 
+               <i>An. gambiae</i> s.l. habitats are generally clustered, we did not account for spatial autocorrelation
+               in the logistic regression models presented here. Previous studies modeling larval
+               habitats have found similar results for logistic regression models with and without
+               parameters accounting for spatial autocorrelation [
+               <span ref-type="bibr" rid="B19">19</span>-
+               <span ref-type="bibr" rid="B21">21</span>]. The logistic regression models were implemented in the statistical software R 2.14.2
+               (R Development Core Team, Vienna, Austria).
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">We implemented the random forest approach using the R package ‘randomForest’ [
+               <span ref-type="bibr" rid="B41">41</span>]. The best cumulative precipitation measure for use in the random forest models was
+               determined by the mean decrease in the Gini impurity criterion when removing the variable
+               from the full model (TWI, soil, LULC, distance to stream, and precipitation). The
+               cumulative precipitation measure with the highest mean decrease in the Gini impurity
+               criterion was used in the final random forest models. Gini impurity criteria were
+               also used to measure variable importance in the random forest models. A greater mean
+               decrease in the Gini impurity criterion suggests a stronger association with the response
+               variable [
+               <span ref-type="bibr" rid="B36">36</span>].
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The top models from both approaches within each dataset were evaluated by determining
+               their accuracy at predicting larval habitat presence and absence for holdout data.
+               Fifty percent of each dataset was randomly selected as a holdout dataset before model
+               building. Evaluation of model accuracy required the selection of a threshold at which
+               to convert predicted probabilities into larval habitat presence or absence. Because
+               threshold specific accuracy statistics can be sensitive to the threshold used for
+               conversion, we generated an optimal threshold value by minimizing the absolute value
+               of the difference between sensitivity and specificity [
+               <span ref-type="bibr" rid="B42">42</span>]. This approach was chosen because both sensitivity and specificity were equally
+               important for the intended application of the predictive models. To assess the performance
+               of each model, we calculated the sensitivity, specificity, percent correctly classified
+               (PCC), and kappa of each approach at each of the thresholds from the methods above.
+               We also calculated the threshold-independent area under the curve (AUC) statistic
+               [
+               <span ref-type="bibr" rid="B43">43</span>] from receiver operating characteristics (ROC) plots using the R package ‘SDMTools’
+               [
+               <span ref-type="bibr" rid="B44">44</span>].
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Finally, we calculated Pearson’s correlation coefficient among the cumulative precipitation
+               measures to assess differences among the temporal-resolution/modeling-approach combinations.
+               To quantify the contribution of cumulative 30-day precipitation to variation in the
+               number of habitats found each month in Aduoyo-Miyare and Nguka, we used simple linear
+               regression.
+            </p>
+         </div>
+      </div>
+      <div id="">
+         <h2>Results</h2>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">In the 31 sampling quadrats selected from the 10 by 10 km study site, we recorded
+            the locations of 1,673 larval 
+            <i>An. gambiae</i> s.l. habitats. Six of the quadrats did not have any larval habitats, while the mean
+            number of habitats per 500 by 500 m quadrat was 54. 
+            <i>Anopheles</i> larvae were present in 921 of the 1,673 habitats on the day each habitat was recorded.
+            As detailed in the methods, 
+            <i>Anopheles</i> larvae and pupae were collected from 141 of the habitats, 77% of which were occupied
+            by 
+            <i>An. gambiae</i> s.l. on the day of collection. Most of the larvae and pupae (79%) were identified
+            as 
+            <i>An. gambiae</i> s.l. The other species collected were 
+            <i>An. funestus</i> (1.1%), 
+            <i>Anopheles coustani</i> Laveran (6.7%), 
+            <i>Anopheles rufipes</i> (Gough) (5.3%), 
+            <i>Anopheles maculipalpis</i> Giles (2.5%) and 
+            <i>Anopheles pharoensis/squamosus</i> Theobald (3.9%).
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">In 15 monthly ground surveys in Aduoyo-Miyare and Nguka, a total of 6,770 larval 
+            <i>An. gambiae</i> s.l. habitats were recorded. The number of larval habitats in this area varied by
+            month, ranging from 104 to 953 with a mean of 451. The number of larval habitats recorded
+            in the two villages each month increased with increasing cumulative 30-day precipitation
+            on the final day of ground surveys each month, though considerable variation was observed
+            (R
+            <sup>2</sup> = 0.1931, p = 0.1012; Figure 
+            <span ref-type="fig" rid="F4">4</span>).
+         </p>
+         <div tagxxx="fig">
+            <div tagxxx="label">Figure 4</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>
+                  <b>Number of larval habitats by cumulative precipitation.</b> Scatter plot of the number of habitats recorded in Aduoyo-Miyare and Nguka each month
+                  (n = 15) by the cumulative 30-day precipitation for the last day of ground surveys
+                  for that month. Line shows prediction of linear regression, R
+                  <sup>2</sup> = 0.1931, p = 0.1012. The red and blue boxes highlight variation in the residual
+                  error discussed further in the text.
+               </p>
+            </caption>
+            <div tagxxx="graphic"></div>
+         </div>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The best cumulative precipitation total to use in the models differed between the
+            datasets and between the modeling approaches. For the 15 monthly ground surveys in
+            Aduoyo-Miyare and Nguka, the logistic regression model for 30-day cumulative precipitation
+            had the lowest BIC within the precipitation candidate models (Figure 
+            <span ref-type="fig" rid="F2">2</span>), whereas the random forest model using the cumulative 21-day precipitation (Figure 
+            <span ref-type="fig" rid="F2">2</span>) had the highest mean decrease in the Gini impurity criterion. For the 10 by 10 km
+            data, the logistic regression model for 6-day cumulative precipitation had the lowest
+            BIC within the precipitation candidate models (Figure 
+            <span ref-type="fig" rid="F3">3</span>), while the random forest model using the cumulative 14-day precipitation (Figure 
+            <span ref-type="fig" rid="F3">3</span>) had the highest mean decrease in the Gini impurity criterion. Each of these precipitation
+            measures was used within its respective dataset and modeling approach moving forward.
+            However, it should be noted that these cumulative precipitation totals were moderately
+            to highly correlated with each other (Table 
+            <span ref-type="table" rid="T1">1</span>).
+         </p>
+         <div tagxxx="table-wrap">
+            <div tagxxx="label">Table 1</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>Pearson’s correlation coefficient (r) matrix of cumulative precipitation measures</p>
+            </caption>
+            <table xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">hsidesgroups1
+               <colgroup>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+               </colgroup>
+               <thead>top
+                  <tr>
+                     <div tagxxx="th"> </div>
+                     <div tagxxx="th">
+                        <b>0-day</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>6-day</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>14-day</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>21-day</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>30-day</b>
+                     </div>
+                  </tr>
+               </thead>
+               <div tagxxx="tbody">
+                  <tr>
+                     <td>6leftbottomA) 17 May - 4 July 2011 (temporal scale for 10 by 10 km dataset)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom6-Day
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.411
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom1.000
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.721
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.477
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.611
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom14-Day
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.332
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.721
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom1.000
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.794
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.578
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>6leftbottomB) April 2011 - June 2012 (temporal scale for Aduoyo-Miyare and Nguka dataset)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom21-Day
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.408
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.555
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.841
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom1.000
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.979
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>left30-Day</td>
+                     <td>left0.336</td>
+                     <td>left0.537</td>
+                     <td>left0.819</td>
+                     <td>left0.979</td>
+                     <td>left1.000</td>
+                  </tr>
+               </div>
+            </table>
+            <div tagxxx="table-wrap-foot">
+               <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">(A) For the 22 days of larval habitat ground surveys in the 10 by 10 km area from
+                  17 May to 4 July 2011, and (B) For the last day of larval habitat ground surveys each
+                  month in Aduoyo-Miyare and Nguka from April 2011 to June 2012. 0-day refers to precipitation
+                  total for the day of ground surveys, while 6-day, 14-day, 21-day, and 30-day refer
+                  to the cumulative precipitation total for the day of the ground surveys plus the previous
+                  6 days, 14 days, 21 days, or 30 days, respectively.
+               </p>
+            </div>
+         </div>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The environmental variables used in the best logistic regression models for predicting
+            the locations of larval 
+            <i>An. gambiae</i> s.l. habitats differed slightly between the datasets. For the 15-month dataset from
+            Aduoyo-Miyare and Nguka, the logistic regression model with the lowest BIC included
+            all five of the variables (Table 
+            <span ref-type="table" rid="T2">2</span>). No other model had a ΔBIC less than 20. Larval habitats were more likely to be
+            found in locations with a lower TWI (i.e. wetter because of a lower slope to contributing
+            area ratio), closer to streams, in agricultural land use, and in the friable clay/sandy
+            clay loam soil type (Table 
+            <span ref-type="table" rid="T3">3</span>). The probability of a larval habitat increased with increasing cumulative 30-day
+            precipitation (Table 
+            <span ref-type="table" rid="T3">3</span>).
+         </p>
+         <div tagxxx="table-wrap">
+            <div tagxxx="label">Table 2</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>Top four logistic regression candidate models for the 15 monthly ground surveys in
+                  Aduoyo-Miyare and Nguka
+               </p>
+            </caption>
+            <table xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">hsidesgroups1
+               <colgroup>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+               </colgroup>
+               <thead>top
+                  <tr>
+                     <div tagxxx="th">
+                        <b>Model</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>BIC</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>ΔBIC</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>
+                           <i>w</i>
+                        </b>
+                     </div>
+                  </tr>
+               </thead>
+               <div tagxxx="tbody">
+                  <tr>
+                     <td>leftbottomTWI + LULC + DS + Soil + Precip.
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom45933.1
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottomNA
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9999
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomTWI + DS + Soil + Precip.
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom45955.6
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom22.5
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom&lt;0.001
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomTWI + LULC + DS + Precip.
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom46045.5
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom112.3
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom&lt;0.001
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftTWI + DS + Precip.</td>
+                     <td>left46073.7</td>
+                     <td>left140.5</td>
+                     <td>left&lt;0.001</td>
+                  </tr>
+               </div>
+            </table>
+            <div tagxxx="table-wrap-foot">
+               <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Based on Bayesian information criterion (BIC), in order of increasing difference in
+                  BIC from the top model (ΔBIC) and decreasing BIC weight, 
+                  <i>w</i>. TWI, topographic wetness index; LULC, land use-land cover; DS, distance to the nearest
+                  stream; Precip., cumulative 30-day precipitation total; NA, not applicable.
+               </p>
+            </div>
+         </div>
+         <div tagxxx="table-wrap">
+            <div tagxxx="label">Table 3</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>Odds ratios for top logistic regression model from the Aduoyo-Miyare and Nguka data
+                  (15 monthly surveys)
+               </p>
+            </caption>
+            <table xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">hsidesgroups1
+               <colgroup>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+               </colgroup>
+               <thead>top
+                  <tr>
+                     <div tagxxx="th"> </div>
+                     <div tagxxx="th">
+                        <b>Odds ratio</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>95% lower</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>95% upper</b>
+                     </div>
+                  </tr>
+               </thead>
+               <div tagxxx="tbody">
+                  <tr>
+                     <td>leftbottom(Intercept)
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.0378
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.0334
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.0426
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomTWI
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9365
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9324
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9405
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomLULC, Ag:NonAg
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom1.3371
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom1.2096
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom1.4780
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomDS
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9980
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9978
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9981
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomSoil, Type3:Type2
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.7127
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.6715
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.7564
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftPrecip.</td>
+                     <td>left1.0033</td>
+                     <td>left1.0029</td>
+                     <td>left1.0036</td>
+                  </tr>
+               </div>
+            </table>
+            <div tagxxx="table-wrap-foot">
+               <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Odds ratios are presented with 95% CI. TWI, topographic wetness index; LULC, land
+                  use-land cover; DS, distance to the nearest stream; Precip., cumulative 30-day precipitation
+                  total; Ag:NonAg, odds ratio of agricultural to nonagricultural LULC; Type3:Type2,
+                  odds ratio of the firm, silty clay/clay soil type to the friable clay/sandy clay loam
+                  soil type.
+               </p>
+            </div>
+         </div>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">For the 10 by 10 km dataset, the logistic regression model with the lowest BIC included
+            four of the variables (TWI, distance to stream, soil type, and cumulative 6-day precipitation).
+            No other model had a ΔBIC less than 9 (Table 
+            <span ref-type="table" rid="T4">4</span>). Larval habitats were again more likely to be found in locations with a lower TWI,
+            closer to streams, and in the friable clay/sandy clay loam soil type (Table 
+            <span ref-type="table" rid="T5">5</span>). Counterintuitively, the probability of a larval habitat according to this model
+            decreased with increasing cumulative 6-day precipitation.
+         </p>
+         <div tagxxx="table-wrap">
+            <div tagxxx="label">Table 4</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>The top five logistic regression candidate models for the 10 by 10 km area</p>
+            </caption>
+            <table xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">hsidesgroups1
+               <colgroup>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+               </colgroup>
+               <thead>top
+                  <tr>
+                     <div tagxxx="th">
+                        <b>Model</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>BIC</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>ΔBIC</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>
+                           <i>w</i>
+                        </b>
+                     </div>
+                  </tr>
+               </thead>
+               <div tagxxx="tbody">
+                  <tr>
+                     <td>leftbottomTWI + DS + Soil + Precip.
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom6482.6
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9822
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomTWI + LULC + DS + Soil + Precip.
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom6491.8
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom9.3
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.0096
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomTWI + DS + Precip.
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom6492.2
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom9.6
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.0082
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomTWI + LULC + DS + Precip.
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom6502.0
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom19.4
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom&lt; 0.001
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftTWI + DS + Soil</td>
+                     <td>left6658.0</td>
+                     <td>left175.4</td>
+                     <td>left&lt; 0.001</td>
+                  </tr>
+               </div>
+            </table>
+            <div tagxxx="table-wrap-foot">
+               <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Based on Bayesian information criterion (BIC), in order of increasing difference in
+                  BIC from the top model (ΔBIC) and decreasing BIC weight, 
+                  <i>w</i>. TWI, topographic wetness index; LULC, land use-land cover; DS, distance to the nearest
+                  stream; Precip., cumulative 30-day precipitation total.
+               </p>
+            </div>
+         </div>
+         <div tagxxx="table-wrap">
+            <div tagxxx="label">Table 5</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>Odds ratios for the top logistic regression model for the 10 by 10 km area data</p>
+            </caption>
+            <table xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">hsidesgroups1
+               <colgroup>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+               </colgroup>
+               <thead>top
+                  <tr>
+                     <div tagxxx="th"> </div>
+                     <div tagxxx="th">
+                        <b>Odds ratio</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>95% lower</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>95% upper</b>
+                     </div>
+                  </tr>
+               </thead>
+               <div tagxxx="tbody">
+                  <tr>
+                     <td>leftbottom(Intercept)
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.3156
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.2472
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.4030
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomTWI
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9117
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.8988
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9248
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomDS
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9973
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9969
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.9977
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomSoil, Type2:Type1
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom1.9105
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom1.4994
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom2.4343
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomSoil, Type3:Type1
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom1.4970
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom1.2024
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom1.8639
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftPrecip.</td>
+                     <td>left0.9700</td>
+                     <td>left0.9656</td>
+                     <td>left0.9745</td>
+                  </tr>
+               </div>
+            </table>
+            <div tagxxx="table-wrap-foot">
+               <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Odds ratios are presented with 95% CI. TWI, topographic wetness index; DS, distance
+                  to the nearest stream; Precip., cumulative 6-day precipitation total; Type2:Type1,
+                  odds ratio of the friable clay/sandy clay loam soil type to the friable clay soil
+                  type; Type3:Type1, odds ratio of the firm, silty clay/clay soil type to the friable
+                  clay soil type.
+               </p>
+            </div>
+         </div>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The most accurate model for predicting larval 
+            <i>An. gambiae</i> s.l. habitat locations in the 10 by 10 km area was the random forest method with
+            all five variables (AUC = 0.864). In this model, TWI had the greatest mean decrease
+            in the Gini impurity criterion, followed by distance to stream, precipitation, soil
+            and LULC (Figure 
+            <span ref-type="fig" rid="F5">5</span>). Removing the cumulative 14-day precipitation from this model reduced the accuracy
+            of the model (Table 
+            <span ref-type="table" rid="T6">6</span>). The best logistic regression model for the 10 by 10 km area was less accurate than
+            the random forest model when evaluated against the holdout data (Table 
+            <span ref-type="table" rid="T6">6</span>). When the probabilities of larval habitat location across the entire 10 by 10 km
+            study site were estimated using the most accurate models from each method, the random
+            forest model clearly produced a more heterogeneous landscape at a fine scale than
+            that produced by the logistic regression method (Figure 
+            <span ref-type="fig" rid="F6">6</span>).
+         </p>
+         <div tagxxx="fig">
+            <div tagxxx="label">Figure 5</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>
+                  <b>Mean decrease in the Gini impurity criterion as a measure of variable importance.</b> Shown for the random forest model in the 10 by 10 km dataset. Greater decreases indicate
+                  a stronger association with the response. TWI, topographic wetness index; LULC, land
+                  use-land cover; DS, distance to the nearest stream; Precip., cumulative 14-day precipitation
+                  total.
+               </p>
+            </caption>
+            <div tagxxx="graphic"></div>
+         </div>
+         <div tagxxx="table-wrap">
+            <div tagxxx="label">Table 6</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>Comparison of models predicting the presence of larval habitats in the 10 by 10 km
+                  area
+               </p>
+            </caption>
+            <table xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">hsidesgroups1
+               <colgroup>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+               </colgroup>
+               <thead>top
+                  <tr>
+                     <div tagxxx="th">
+                        <b>Model</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>AUC</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>Sensitivity</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>Specificity</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>PCC</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>Kappa</b>
+                     </div>
+                  </tr>
+               </thead>
+               <div tagxxx="tbody">
+                  <tr>
+                     <td>leftbottomRF: TWI + DS + Soil + LULC + Precip.
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.864
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.806
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.789
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.790
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.216
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomRF: TWI + DS + Soil + LULC
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.808
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.750
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.725
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.726
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.145
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftLR: TWI + DS + Soil + Precip.</td>
+                     <td>left0.799</td>
+                     <td>left0.748</td>
+                     <td>left0.709</td>
+                     <td>left0.711</td>
+                     <td>left0.133</td>
+                  </tr>
+               </div>
+            </table>
+            <div tagxxx="table-wrap-foot">
+               <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Two random forest (RF) models are shown, with and without Precip. (the cumulative
+                  14-day precipitation total). The best logistic regression (LR) model is also shown.
+                  TWI, topographic wetness index; LULC, land use-land cover; DS, distance to the nearest
+                  stream; AUC, area under the receiver operating curve; PCC, percent correctly classified.
+               </p>
+            </div>
+         </div>
+         <div tagxxx="fig">
+            <div tagxxx="label">Figure 6</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>
+                  <b>Probability of larval habitat presence across the 10 by 10 km study site.</b> As predicted by 
+                  <b>(A)</b> the logistic regression model using TWI, distance to stream and soil type; and 
+                  <b>(B)</b> the random forest model using TWI, distance to stream, soil type and LULC.
+               </p>
+            </caption>
+            <div tagxxx="graphic"></div>
+         </div>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The most accurate model for predicting larval 
+            <i>An. gambiae</i> s.l. habitat locations over the 15 monthly surveys in Aduoyo-Miyare and Nguka was
+            the random forest method with all five variables (Table 
+            <span ref-type="table" rid="T7">7</span>). As above, removing the cumulative 21-day precipitation from the model reduced its
+            accuracy. The best logistic regression model for the 15 monthly surveys in Aduoyo-Miyare
+            and Nguka was less accurate than the random forest model when evaluated against the
+            holdout data (Table 
+            <span ref-type="table" rid="T7">7</span>).
+         </p>
+         <div tagxxx="table-wrap">
+            <div tagxxx="label">Table 7</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>Comparison of models predicting the presence of larval habitats in Aduoyo-Miyare and
+                  Nguka
+               </p>
+            </caption>
+            <table xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">hsidesgroups1
+               <colgroup>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+                  <col>left</col>
+               </colgroup>
+               <thead>top
+                  <tr>
+                     <div tagxxx="th">
+                        <b>Method of optimizing</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>AUC</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>Sensitivity</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>Specificity</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>PCC</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>Kappa</b>
+                     </div>
+                  </tr>
+               </thead>
+               <div tagxxx="tbody">
+                  <tr>
+                     <td>leftbottomRF: TWI + DS + Soil + LULC + Precip.
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.871
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.820
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.773
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.774
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.102
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomRF: TWI + DS + Soil + LULC
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.827
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.659
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.936
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.930
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>leftbottom0.268
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftLR: TWI + DS + Soil + Precip.</td>
+                     <td>left0.733</td>
+                     <td>left0.621</td>
+                     <td>left0.704</td>
+                     <td>left0.703</td>
+                     <td>left0.045</td>
+                  </tr>
+               </div>
+            </table>
+            <div tagxxx="table-wrap-foot">
+               <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Two random forest (RF) models are shown with and without Precip. (the cumulative 14-day
+                  precipitation total). The best logistic regression (LR) model is also shown. TWI,
+                  topographic wetness index; LULC, land use-land cover; DS, distance to the nearest
+                  stream; AUC, area under the receiver operating curve; PCC, percent correctly classified.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div id="">
+         <h2>Discussion</h2>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The use of models to predict the distribution of species is common in ecology [
+            <span ref-type="bibr" rid="B37">37</span>], and novel approaches to building these models such as random forest have become
+            more widely available in recent years. We used two methods to predict the probability
+            of larval 
+            <i>An. gambiae</i> s.l. habitat across the landscape and over time, and the random forest method produced
+            more accurate models than the logistic regression method. This may be due to the differences
+            in predicted heterogeneity of larval habitats at fine scales between the two methods,
+            which can be compared across the entire 10 by 10 km study site (Figure 
+            <span ref-type="fig" rid="F6">6</span>). Predictions from the random forest model are more fragmented, showing a closer
+            proximity of high-probability locations to low-probability locations, relative to
+            the estimates from the logistic regression model. The general pattern is similar for
+            the predictions of both models at broad scales (Figure 
+            <span ref-type="fig" rid="F6">6</span>). However, the fine scale heterogeneity in the random forest estimates more closely
+            reflects the nature of actual larval habitat distribution on the ground, where larval
+            
+            <i>An. gambiae</i> s.l. habitats are distributed as many small patches rather than one continuous, large
+            patch.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The most important landscape variables for predicting larval habitat presence in these
+            models were TWI and distance to the nearest stream. In the 10 by 10 km random forest
+            model, the mean decreases in the Gini impurity criteria of TWI and distance to the
+            nearest stream were much larger than those of LULC and soil (Figure 
+            <span ref-type="fig" rid="F5">5</span>), indicating a stronger association with the prediction of habitat presence [
+            <span ref-type="bibr" rid="B36">36</span>]. In general practice, high quality soil and LULC data can be difficult to acquire.
+            Given limited resources, our data suggest it is possible to build reasonably accurate
+            larval habitat models without these two landscape variables. Nonetheless, soil and
+            LULC do show an association with habitat presence according to the logistic regression
+            models presented here.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">An important question in the application of predictive larval habitat models is whether
+            models parameterized with data for habitat locations in one season are applicable
+            to another season [
+            <span ref-type="bibr" rid="B20">20</span>]. The creation of larval 
+            <i>An. gambiae</i> s.l. habitats (which are temporary, small bodies of standing water) depends on rainfall,
+            which varies seasonally across the range of the species complex. One strategy to model
+            differences between seasons is to account for variation in precipitation. In the random
+            forest models, accumulated precipitation was less important than TWI and distance
+            to the nearest stream, but it was a more important predictor variable than soil and
+            LULC (Figure 
+            <span ref-type="fig" rid="F5">5</span>). Additionally, we found more larval habitats in months with more precipitation compared
+            to the same area in months with less precipitation (Figure 
+            <span ref-type="fig" rid="F4">4</span>). Thus, including accumulated precipitation in our models improved the accuracy of
+            larval habitat location predictions. These results should be interpreted with caution
+            given the use of a single location about 40 km from the study site as the source of
+            precipitation data. Daily precipitation totals can be spatially heterogeneous at that
+            scale. Despite this limitation, it is clear from previous work that variation in precipitation
+            influences larval 
+            <i>An. gambiae</i> s.l. habitats [
+            <span ref-type="bibr" rid="B12">12</span>,
+            <span ref-type="bibr" rid="B16">16</span>,
+            <span ref-type="bibr" rid="B19">19</span>,
+            <span ref-type="bibr" rid="B20">20</span>]. However, the relationship may be more complex than it first appears. For example,
+            it may not be linear. Rather, the number of larval habitats may increase monotonically
+            with accumulated precipitation up to a threshold, after which more of the water on
+            the landscape flows as surface sheet or channeled water, which is unsuitable aquatic
+            habitat for 
+            <i>An. gambiae</i> s.l. larvae. Additionally, different habitat types may respond differently to increasing
+            accumulated precipitation. Standing water forming in drainage channels and stream
+            bed pools may be described better by a threshold relationship than the water filling
+            burrow pits, hoof prints and tire tracks, because the former develops from channel
+            and sheet water made stationary by diminished water flows, whereas the latter forms
+            from water accumulating into various catchments not associated with channels. These
+            additional factors may explain some of the uneven residual error seen in Figure 
+            <span ref-type="fig" rid="F4">4</span>, where the 4 months in the red box falling above the fitted regression line have
+            more larval habitats with a lower accumulated precipitation relative to the 3 months
+            in the blue box falling below the fitted regression line.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The 
+            <i>n</i>-day cumulative precipitation measure used for each modeling approach within each
+            dataset was selected according to the criteria outlined in the methods to maximize
+            the predictive power of each model. However, comparing across modeling approaches
+            within each dataset, the cumulative precipitation measures were highly correlated
+            (Table 
+            <span ref-type="table" rid="T1">1</span>). Thus, the choice between 21-day cumulative precipitation and 30-day cumulative
+            precipitation, for example, may be less important in general practice than using either
+            measure instead of the daily precipitation total (referred to as 0-day in Table 
+            <span ref-type="table" rid="T1">1</span>). Comparing across datasets, which differed in temporal scale, the 6-day cumulative
+            precipitation and the 30-day cumulative precipitation are only moderately correlated.
+            Their differences in terms of model fit (BIC) could reflect temporal differences in
+            hydrology on this landscape, but it may also reflect a limitation of the 10 by 10 km
+            data collection (see below).A counterintuitive result of this study was that the odds
+            of larval habitat presence decreased with increasing cumulative 6-day precipitation
+            using the best logistic regression model of the 10 by 10 km data. Most likely this
+            reflects a limitation of the 10 by 10 km data collection rather than the true influence
+            of precipitation on larval habitat presence, given the range of cumulative 6-day precipitation
+            over the 49-day period (1.5 mm – 51.1 mm; Figure 
+            <span ref-type="fig" rid="F3">3</span>). The sampling strategy for those data was designed to capture variation in landscape
+            variables over space. While precipitation varied among the days of the ground surveys,
+            we were not able to capture that variation over the full range of values for the landscape
+            variables. Instead, the effect of accumulated precipitation in this particular model
+            may be an indication of some other property differing between the quadrats sampled
+            on days of higher and lower accumulated precipitation. Alternatively, the temporal
+            scale over which larval habitats respond to variation in accumulated precipitation
+            may be closer to monthly than daily. That is, ground surveys conducted at monthly
+            intervals in the same area may be more likely to be different than daily samples within
+            a month in the same area. As noted above, this may also reflect the use of a single
+            location as the source of all precipitation data.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">In addition to the use of precipitation data from one location, there were other limitations
+            to this study. First, we did not account for spatial autocorrelation in the logistic
+            regression models. Doing so may have slightly increased the confidence intervals associated
+            with the parameters of those models, but it is unlikely to have changed the model
+            comparisons or accuracy evaluations presented here. Previous studies modeling 
+            <i>An. gambiae</i> s.l. larval habitat locations have found similar results for logistic regression
+            models with and without parameters accounting for spatial autocorrelation [
+            <span ref-type="bibr" rid="B19">19</span>-
+            <span ref-type="bibr" rid="B21">21</span>]. Second, there were additional variables we could have included in our analysis,
+            such as a model-based wetness index (MWI) or normalized difference vegetation index
+            (NDVI). MWI are similar to TWI, but MWI use simulations of distributed catchment models
+            to account for differences between groundwater gradients and surface gradients, thereby
+            creating more accurate topographic data [
+            <span ref-type="bibr" rid="B45">45</span>]. We used TWI here because it has performed well in other models of 
+            <i>Anopheles</i> larval habitats [
+            <span ref-type="bibr" rid="B19">19</span>-
+            <span ref-type="bibr" rid="B21">21</span>], and is easily implemented compared with MWI. While our models using TWI showed
+            high accuracy, further studies comparing the use of MWI and TWI in larval habitat
+            modeling are needed. NDVI has also been associated with the distribution of malaria
+            [
+            <span ref-type="bibr" rid="B46">46</span>,
+            <span ref-type="bibr" rid="B47">47</span>], although some studies have found contradicting results [
+            <span ref-type="bibr" rid="B17">17</span>,
+            <span ref-type="bibr" rid="B48">48</span>,
+            <span ref-type="bibr" rid="B49">49</span>]. NDVI is an indirect measure of available moisture, but NDVI values are additionally
+            influenced by vegetation type and phenology. Thus, we used accumulated precipitation
+            as a measure of available moisture.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Finally, the models developed here exclusively used physical and environmental factors
+            as predictor variables, but the formation of larval 
+            <i>An. gambiae</i> s.l. habitats also depends on human behavior. For example, landowners in Asembo create
+            small drainage channels around fields. Standing water left behind in the channels
+            creates habitats for 
+            <i>An. gambiae</i> s.l. larvae [
+            <span ref-type="bibr" rid="B15">15</span>]. The locations of these drainage channels are often in low-lying agricultural areas,
+            and therefore our models were able to predict the locations of most of the drainage
+            channels. However, drainage channels are not found in 100% of low-lying agricultural
+            areas, probably in part because of individual variation in landowner decision-making.
+            Larval habitats formed from burrow pits and aggregations of hoof prints are also subject
+            to variation in human behavior. While our models were able to correctly predict the
+            locations of most of these habitats, interactions between the physical landscape and
+            human behavior likely account for some of the locations identified incorrectly by
+            the models.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The sampling designs of these two datasets allowed us to address two complementary
+            goals. The monthly surveys in Aduoyo-Miyare and Nguka captured variation in precipitation
+            across both dry and rainy seasons in the same landscape. This provided a stronger
+            logical basis for inferences about the relationship between seasonal variation in
+            precipitation and variation in the location and number of larval habitats. The small
+            spatial extent of Aduoyo-Miyare and Nguka made monthly surveys more feasible, but
+            it also limited the applicability of the model results across a larger area. Conversely,
+            limiting the ground surveys of the 31 quadrats from the 10 by 10 km study site to
+            one season likely impeded our ability to infer much about the effect of precipitation
+            on these data. On the other hand, concentrating our sampling effort to increase replication
+            across space in the 31 quadrats captured more variation in landscape variables, allowing
+            us to apply the results of models based on these data to a larger area.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">As a general application, the spatially stratified sampling strategy used in the 10
+            by 10 km site could serve as a framework for creating predictive larval habitat models
+            for larval control. Targeted larval control is often cited as a useful application
+            of predictive larval habitat models [
+            <span ref-type="bibr" rid="B20">20</span>,
+            <span ref-type="bibr" rid="B21">21</span>], and we agree that there is potential for this application. For example, malaria
+            control programs could identify areas suited to environmental management such as filling
+            in burrow pits and engineering drainage channels to drain more completely. Additionally,
+            allowing larvicide application crews to focus on areas with a higher probability of
+            larval habitat presence would reduce the time, and therefore the cost, of larviciding.
+            However, models fitted to data from a single geographic location may have limited
+            generalizability [
+            <span ref-type="bibr" rid="B50">50</span>]. Malaria control programs could overcome this limitation by using spatially stratified
+            random samples, repeated across a variable landscape, to build models that are useful
+            over larger areas.
+         </p>
+      </div>
+      <div id="">
+         <h2>Competing interests</h2>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The authors declare that they have no competing interests.</p>
+      </div>
+      <div id="">
+         <h2>Authors’ contributions</h2>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">RSM, MNB, JMV, JEG and EDW designed the study and implemented the data collection.
+            RSM, JPM and DWM analyzed the data and assessed the models. All authors participated
+            in the preparation of the manuscript, and read and approved the final manuscript.
+         </p>
+      </div>
+      <div tagxxx="back">
+         <div id="">
+            <h2>Acknowledgements</h2>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">We thank George Olang’ and Maurice Ombok for logistical support; Richard Owerah, Jared
+               Sudhe, Evans Owino, Peter Owera and Michael Nyonga for assistance with field work;
+               Nicole Smith for assistance with DEM interpolation; Saul Daniel Ddumba and Nathan
+               Moore for advice about the GSoD precipitation data; the staff from the KEMRI/CDC field
+               station in Kisian for support in organizing field work and for assistance with mosquito
+               identification; and the residents of Asembo for their cooperation during field surveys.
+               We also thank four anonymous reviewers for constructive criticisms of an earlier version
+               of the manuscript. This work is published with the permission of the Director of the
+               Kenya Medical Research Institute. This study was supported by a National Science Foundation
+               Ecology of Infectious Diseases grant (grant no. EF- 0723770) with additional support
+               from the Rhodes Thompson Memorial Fellowship Fund.
+            </p>
+            <div id="">
+               <h3>Disclaimer</h3>
+               <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The opinions expressed by the authors of this article do not necessarily reflect the
+                  opinions of the U.S. Centers for Disease Control and Prevention.
+               </p>
+            </div>
+         </div>
+         <div tag="ref-list">
+            <ul>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="collab">World Health Organization</div>
+                     <span tagx="source">World Malaria Report 2012</span>
+                     <span tagx="year">2012</span>
+                     <div tagxxx="publisher-name">Geneva: World Health Organization</div>
+                     <span tagx="fpage">1</span>
+                     <span tagx="lpage">276</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Gething</span>
+                        <span tagx="given-names">PW</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Patil</span>
+                        <span tagx="given-names">AP</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Smith</span>
+                        <span tagx="given-names">DL</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Guerra</span>
+                        <span tagx="given-names">CA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Elyazar</span>
+                        <span tagx="given-names">IR</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Johnston</span>
+                        <span tagx="given-names">GL</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Tatem</span>
+                        <span tagx="given-names">AJ</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Hay</span>
+                        <span tagx="given-names">SI</span>
+                     </div>
+                     <span tagx="article-title">A new world malaria map: 
+                        <i>Plasmodium falciparum</i> endemicity in 2010
+                     </span>
+                     <span tagx="source">Malar J</span>
+                     <span tagx="year">2011</span>
+                     <span tagx="volume">10</span>
+                     <span tagx="fpage">378</span>
+                     <div tagxxx="pub-id">10.1186/1475-2875-10-378</div>
+                     <div tagxxx="pub-id">22185615</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Greenwood</span>
+                        <span tagx="given-names">BM</span>
+                     </div>
+                     <span tagx="article-title">The microepidemiology of malaria and its importance to malaria control</span>
+                     <span tagx="source">Trans R Soc Trop Med Hyg</span>
+                     <span tagx="year">1989</span>
+                     <span tagx="volume">83</span>
+                     <div tagxxx="issue">Suppl</div>
+                     <span tagx="fpage">25</span>
+                     <span tagx="lpage">29</span>
+                     <div tagxxx="pub-id">2576161</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Gamage-Mendis</span>
+                        <span tagx="given-names">AC</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Carter</span>
+                        <span tagx="given-names">R</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Mendis</span>
+                        <span tagx="given-names">C</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">De Zoysa</span>
+                        <span tagx="given-names">AP</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Herath</span>
+                        <span tagx="given-names">PR</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Mendis</span>
+                        <span tagx="given-names">KN</span>
+                     </div>
+                     <span tagx="article-title">Clustering of malaria infections within an endemic population: risk of malaria associated
+                        with the type of housing construction
+                     </span>
+                     <span tagx="source">Am J Trop Med Hyg</span>
+                     <span tagx="year">1991</span>
+                     <span tagx="volume">45</span>
+                     <span tagx="fpage">77</span>
+                     <span tagx="lpage">85</span>
+                     <div tagxxx="pub-id">1867350</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Trape</span>
+                        <span tagx="given-names">J-F</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Lefebvre-Zante</span>
+                        <span tagx="given-names">E</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Legros</span>
+                        <span tagx="given-names">F</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Ndiaye</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Bouganali</span>
+                        <span tagx="given-names">H</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Druilhe</span>
+                        <span tagx="given-names">P</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Salem</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <span tagx="article-title">Vector density gradients and the epidemiology of urban malaria in Dakar, Senegal</span>
+                     <span tagx="source">Am J Trop Med Hyg</span>
+                     <span tagx="year">1992</span>
+                     <span tagx="volume">47</span>
+                     <span tagx="fpage">181</span>
+                     <span tagx="lpage">189</span>
+                     <div tagxxx="pub-id">1354414</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Clark</span>
+                        <span tagx="given-names">TD</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Greenhouse</span>
+                        <span tagx="given-names">B</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Njama Meya</span>
+                        <span tagx="given-names">D</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Nzarubara</span>
+                        <span tagx="given-names">B</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Maiteki Sebuguzi</span>
+                        <span tagx="given-names">C</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Staedke</span>
+                        <span tagx="given-names">SG</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Seto</span>
+                        <span tagx="given-names">E</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Kamya</span>
+                        <span tagx="given-names">MR</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Rosenthal</span>
+                        <span tagx="given-names">PJ</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Dorsey</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <span tagx="article-title">Factors determining the heterogeneity of malaria incidence in children in Kampala,
+                        Uganda
+                     </span>
+                     <span tagx="source">J Infect Dis</span>
+                     <span tagx="year">2008</span>
+                     <span tagx="volume">198</span>
+                     <span tagx="fpage">393</span>
+                     <span tagx="lpage">400</span>
+                     <div tagxxx="pub-id">10.1086/589778</div>
+                     <div tagxxx="pub-id">18522503</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Cohen</span>
+                        <span tagx="given-names">JM</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Ernst</span>
+                        <span tagx="given-names">KC</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Lindblade</span>
+                        <span tagx="given-names">KA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Vulule</span>
+                        <span tagx="given-names">JM</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">John</span>
+                        <span tagx="given-names">CC</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Wilson</span>
+                        <span tagx="given-names">ML</span>
+                     </div>
+                     <span tagx="article-title">Local topographic wetness indices predict household malaria risk better than land-use
+                        and land-cover in the western Kenya highlands
+                     </span>
+                     <span tagx="source">Malar J</span>
+                     <span tagx="year">2010</span>
+                     <span tagx="volume">9</span>
+                     <span tagx="fpage">328</span>
+                     <div tagxxx="pub-id">10.1186/1475-2875-9-328</div>
+                     <div tagxxx="pub-id">21080943</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Zhou</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Minakawa</span>
+                        <span tagx="given-names">N</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Githeko</span>
+                        <span tagx="given-names">AK</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Yan</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <span tagx="article-title">Spatial distribution patterns of malaria vectors and sample size determination in
+                        spatially heterogeneous environments: a case study in the West Kenyan highland
+                     </span>
+                     <span tagx="source">J Med Entomol</span>
+                     <span tagx="year">2004</span>
+                     <span tagx="volume">41</span>
+                     <span tagx="fpage">1001</span>
+                     <span tagx="lpage">1009</span>
+                     <div tagxxx="pub-id">10.1603/0022-2585-41.6.1001</div>
+                     <div tagxxx="pub-id">15605637</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Bogh</span>
+                        <span tagx="given-names">C</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Lindsay</span>
+                        <span tagx="given-names">SW</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Clarke</span>
+                        <span tagx="given-names">SE</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Dean</span>
+                        <span tagx="given-names">A</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Jawara</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Pinder</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Thomas</span>
+                        <span tagx="given-names">CJ</span>
+                     </div>
+                     <span tagx="article-title">High spatial resolution mapping of malaria transmission risk in the Gambia, west Africa,
+                        using LANDSAT TM satellite imagery
+                     </span>
+                     <span tagx="source">Am J Trop Med Hyg</span>
+                     <span tagx="year">2007</span>
+                     <span tagx="volume">76</span>
+                     <span tagx="fpage">875</span>
+                     <span tagx="lpage">881</span>
+                     <div tagxxx="pub-id">17488908</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Ribeiro</span>
+                        <span tagx="given-names">JMC</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Seulu</span>
+                        <span tagx="given-names">F</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Abose</span>
+                        <span tagx="given-names">T</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Kidane</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Teklehaimanot</span>
+                        <span tagx="given-names">A</span>
+                     </div>
+                     <span tagx="article-title">Temporal and spatial distribution of anopheline mosquitos in an Ethiopian village:
+                        implications for malaria control strategies
+                     </span>
+                     <span tagx="source">Bull World Health Organ</span>
+                     <span tagx="year">1996</span>
+                     <span tagx="volume">74</span>
+                     <span tagx="fpage">299</span>
+                     <span tagx="lpage">305</span>
+                     <div tagxxx="pub-id">8789928</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Coetzee</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Hunt</span>
+                        <span tagx="given-names">RH</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Wilkerson</span>
+                        <span tagx="given-names">RC</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Torre della</span>
+                        <span tagx="given-names">A</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Coulibaly</span>
+                        <span tagx="given-names">MB</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Besansky</span>
+                        <span tagx="given-names">NJ</span>
+                     </div>
+                     <span tagx="article-title">
+                        <i>Anopheles coluzzii</i> and 
+                        <i>Anopheles amharicus</i>, new members of the 
+                        <i>Anopheles gambiae</i> complex
+                     </span>
+                     <span tagx="source">Zootaxa</span>
+                     <span tagx="year">2013</span>
+                     <span tagx="volume">3619</span>
+                     <span tagx="fpage">246</span>
+                     <span tagx="lpage">274</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Gimnig</span>
+                        <span tagx="given-names">JE</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Ombok</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Kamau</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Hawley</span>
+                        <span tagx="given-names">WA</span>
+                     </div>
+                     <span tagx="article-title">Characteristics of larval anopheline (Diptera: Culicidae) habitats in western Kenya</span>
+                     <span tagx="source">J Med Entomol</span>
+                     <span tagx="year">2001</span>
+                     <span tagx="volume">38</span>
+                     <span tagx="fpage">282</span>
+                     <span tagx="lpage">288</span>
+                     <div tagxxx="pub-id">10.1603/0022-2585-38.2.282</div>
+                     <div tagxxx="pub-id">11296836</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Minakawa</span>
+                        <span tagx="given-names">N</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Mutero</span>
+                        <span tagx="given-names">CM</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Githure</span>
+                        <span tagx="given-names">JI</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Beier</span>
+                        <span tagx="given-names">JC</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Yan</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <span tagx="article-title">Spatial distribution and habitat characterization of anopheline mosquito larvae in
+                        western Kenya
+                     </span>
+                     <span tagx="source">Am J Trop Med Hyg</span>
+                     <span tagx="year">1999</span>
+                     <span tagx="volume">61</span>
+                     <span tagx="fpage">1010</span>
+                     <span tagx="lpage">1016</span>
+                     <div tagxxx="pub-id">10674687</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Charlwood</span>
+                        <span tagx="given-names">JD</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Edoh</span>
+                        <span tagx="given-names">D</span>
+                     </div>
+                     <span tagx="article-title">Polymerase chain reaction used to describe larval habitat use by 
+                        <i>Anopheles gambiae</i> complex (Diptera: Culicidae) in the environs of Ifakara, Tanzania
+                     </span>
+                     <span tagx="source">J Med Entomol</span>
+                     <span tagx="year">1996</span>
+                     <span tagx="volume">33</span>
+                     <span tagx="fpage">202</span>
+                     <span tagx="lpage">204</span>
+                     <div tagxxx="pub-id">8742521</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Mutuku</span>
+                        <span tagx="given-names">FM</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Alaii</span>
+                        <span tagx="given-names">JA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Bayoh</span>
+                        <span tagx="given-names">MN</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Gimnig</span>
+                        <span tagx="given-names">JE</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Vulule</span>
+                        <span tagx="given-names">JM</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Walker</span>
+                        <span tagx="given-names">ED</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Kabiru</span>
+                        <span tagx="given-names">E</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Hawley</span>
+                        <span tagx="given-names">WA</span>
+                     </div>
+                     <span tagx="article-title">Distribution, description, and local knowledge of larval habitats of 
+                        <i>Anopheles gambiae</i> s.l. in a village in western Kenya
+                     </span>
+                     <span tagx="source">Am J Trop Med Hyg</span>
+                     <span tagx="year">2006</span>
+                     <span tagx="volume">74</span>
+                     <span tagx="fpage">44</span>
+                     <span tagx="lpage">53</span>
+                     <div tagxxx="pub-id">16407345</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Mutuku</span>
+                        <span tagx="given-names">F</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Bayoh</span>
+                        <span tagx="given-names">MN</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Hightower</span>
+                        <span tagx="given-names">A</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Vulule</span>
+                        <span tagx="given-names">JM</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Gimnig</span>
+                        <span tagx="given-names">JE</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Mueke</span>
+                        <span tagx="given-names">J</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Amimo</span>
+                        <span tagx="given-names">F</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Walker</span>
+                        <span tagx="given-names">ED</span>
+                     </div>
+                     <span tagx="article-title">A supervised land cover classification of a western Kenya lowland endemic for human
+                        malaria: associations of land cover with larval 
+                        <i>Anopheles</i> habitats
+                     </span>
+                     <span tagx="source">Int J Health Geogr</span>
+                     <span tagx="year">2009</span>
+                     <span tagx="volume">8</span>
+                     <span tagx="fpage">19</span>
+                     <div tagxxx="pub-id">10.1186/1476-072X-8-19</div>
+                     <div tagxxx="pub-id">19371425</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Mushinzimana</span>
+                        <span tagx="given-names">E</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Munga</span>
+                        <span tagx="given-names">S</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Minakawa</span>
+                        <span tagx="given-names">N</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Li</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Feng</span>
+                        <span tagx="given-names">C-C</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Bian</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Kitron</span>
+                        <span tagx="given-names">U</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Schmidt</span>
+                        <span tagx="given-names">C</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Beck</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Zhou</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Githeko</span>
+                        <span tagx="given-names">AK</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Yan</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <span tagx="article-title">Landscape determinants and remote sensing of anopheline mosquito larval habitats in
+                        the western Kenya highlands
+                     </span>
+                     <span tagx="source">Malar J</span>
+                     <span tagx="year">2006</span>
+                     <span tagx="volume">5</span>
+                     <span tagx="fpage">13</span>
+                     <div tagxxx="pub-id">10.1186/1475-2875-5-13</div>
+                     <div tagxxx="pub-id">16480523</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Beven</span>
+                        <span tagx="given-names">KJ</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Kirkby</span>
+                        <span tagx="given-names">MJ</span>
+                     </div>
+                     <span tagx="article-title">A physically based, variable contributing area model of basin hydrology</span>
+                     <span tagx="source">Hydrol Sci Bull</span>
+                     <span tagx="year">1979</span>
+                     <span tagx="volume">24</span>
+                     <span tagx="fpage">43</span>
+                     <span tagx="lpage">69</span>
+                     <div tagxxx="pub-id">10.1080/02626667909491834</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Clennon</span>
+                        <span tagx="given-names">JA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Kamanga</span>
+                        <span tagx="given-names">A</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Musapa</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Shiff</span>
+                        <span tagx="given-names">C</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Glass</span>
+                        <span tagx="given-names">GE</span>
+                     </div>
+                     <span tagx="article-title">Identifying malaria vector breeding habitats with remote sensing data and terrain-based
+                        landscapeindices in Zambia
+                     </span>
+                     <span tagx="source">Int J Health Geogr</span>
+                     <span tagx="year">2010</span>
+                     <span tagx="volume">9</span>
+                     <span tagx="fpage">58</span>
+                     <div tagxxx="pub-id">10.1186/1476-072X-9-58</div>
+                     <div tagxxx="pub-id">21050496</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Li</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Bian</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Yakob</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Zhou</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Yan</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <span tagx="article-title">Analysing the generality of spatially predictive mosquito habitat models</span>
+                     <span tagx="source">Acta Trop</span>
+                     <span tagx="year">2011</span>
+                     <span tagx="volume">119</span>
+                     <span tagx="fpage">30</span>
+                     <span tagx="lpage">37</span>
+                     <div tagxxx="pub-id">10.1016/j.actatropica.2011.04.003</div>
+                     <div tagxxx="pub-id">21527240</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Nmor</span>
+                        <span tagx="given-names">JC</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Sunahara</span>
+                        <span tagx="given-names">T</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Goto</span>
+                        <span tagx="given-names">K</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Futami</span>
+                        <span tagx="given-names">K</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Sonye</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Akweywa</span>
+                        <span tagx="given-names">P</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Dida</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Minakawa</span>
+                        <span tagx="given-names">N</span>
+                     </div>
+                     <span tagx="article-title">Topographic models for predicting malaria vector breeding habitats: potential tools
+                        for vector control managers
+                     </span>
+                     <span tagx="source">Parasit Vectors</span>
+                     <span tagx="year">2013</span>
+                     <span tagx="volume">6</span>
+                     <span tagx="fpage">14</span>
+                     <div tagxxx="pub-id">10.1186/1756-3305-6-14</div>
+                     <div tagxxx="pub-id">23324389</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Bogh</span>
+                        <span tagx="given-names">C</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Clarke</span>
+                        <span tagx="given-names">SE</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Jawara</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Thomas</span>
+                        <span tagx="given-names">CJ</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Lindsay</span>
+                        <span tagx="given-names">SW</span>
+                     </div>
+                     <span tagx="article-title">Localized breeding of the Anopheles gambiae complex (Diptera: Culicidae) along the
+                        River Gambia, West Africa
+                     </span>
+                     <span tagx="source">Bull Entomol Res</span>
+                     <span tagx="year">2003</span>
+                     <span tagx="volume">93</span>
+                     <span tagx="fpage">279</span>
+                     <span tagx="lpage">287</span>
+                     <div tagxxx="pub-id">12908913</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Munga</span>
+                        <span tagx="given-names">S</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Yakob</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Mushinzimana</span>
+                        <span tagx="given-names">E</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Zhou</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Ouna</span>
+                        <span tagx="given-names">T</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Minakawa</span>
+                        <span tagx="given-names">N</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Githeko</span>
+                        <span tagx="given-names">AK</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Yan</span>
+                        <span tagx="given-names">G</span>
+                     </div>
+                     <span tagx="article-title">Land use and land cover changes and spatiotemporal dynamics of anopheline larval habitats
+                        during a four-year period in a highland community of Africa
+                     </span>
+                     <span tagx="source">Am J Trop Med Hyg</span>
+                     <span tagx="year">2009</span>
+                     <span tagx="volume">81</span>
+                     <span tagx="fpage">1079</span>
+                     <span tagx="lpage">1084</span>
+                     <div tagxxx="pub-id">10.4269/ajtmh.2009.09-0156</div>
+                     <div tagxxx="pub-id">19996440</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Phillips-Howard</span>
+                        <span tagx="given-names">PA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Nahlen</span>
+                        <span tagx="given-names">BL</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Alaii</span>
+                        <span tagx="given-names">JA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">ter FO</span>
+                        <span tagx="given-names">K</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Gimnig</span>
+                        <span tagx="given-names">JE</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Terlouw</span>
+                        <span tagx="given-names">DJ</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Kachur</span>
+                        <span tagx="given-names">SP</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Hightower</span>
+                        <span tagx="given-names">AW</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Lal</span>
+                        <span tagx="given-names">AA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Schoute</span>
+                        <span tagx="given-names">E</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Oloo</span>
+                        <span tagx="given-names">AJ</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Hawley</span>
+                        <span tagx="given-names">WA</span>
+                     </div>
+                     <span tagx="article-title">The efficacy of permethrin-treated bed nets on child mortality and morbidity in western
+                        Kenya I: development of infrastructure and description of study site
+                     </span>
+                     <span tagx="source">Am J Trop Med Hyg</span>
+                     <span tagx="year">2003</span>
+                     <span tagx="volume">68</span>
+                     <span tagx="fpage">3</span>
+                     <span tagx="lpage">9</span>
+                     <div tagxxx="pub-id">12749479</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Hamel</span>
+                        <span tagx="given-names">MJ</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Adazu</span>
+                        <span tagx="given-names">K</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Obor</span>
+                        <span tagx="given-names">D</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Sewe</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Vulule</span>
+                        <span tagx="given-names">JM</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Williamson</span>
+                        <span tagx="given-names">JM</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Slutsker</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Feikin</span>
+                        <span tagx="given-names">DR</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Laserson</span>
+                        <span tagx="given-names">KF</span>
+                     </div>
+                     <span tagx="article-title">A reversal in reductions of child mortality in western Kenya, 2003-2009</span>
+                     <span tagx="source">Am J Trop Med Hyg</span>
+                     <span tagx="year">2011</span>
+                     <span tagx="volume">85</span>
+                     <span tagx="fpage">597</span>
+                     <span tagx="lpage">605</span>
+                     <div tagxxx="pub-id">10.4269/ajtmh.2011.10-0678</div>
+                     <div tagxxx="pub-id">21976557</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Hurlbert</span>
+                        <span tagx="given-names">SH</span>
+                     </div>
+                     <span tagx="article-title">Pseudoreplication and the design of ecological field experiments</span>
+                     <span tagx="source">Ecol Monogr</span>
+                     <span tagx="year">1984</span>
+                     <span tagx="volume">54</span>
+                     <span tagx="fpage">187</span>
+                     <span tagx="lpage">211</span>
+                     <div tagxxx="pub-id">10.2307/1942661</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Taylor</span>
+                        <span tagx="given-names">KA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Koros</span>
+                        <span tagx="given-names">JK</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Nduati</span>
+                        <span tagx="given-names">J</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Copeland</span>
+                        <span tagx="given-names">RS</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Collins</span>
+                        <span tagx="given-names">FH</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Brandling-Bennett</span>
+                        <span tagx="given-names">AD</span>
+                     </div>
+                     <span tagx="article-title">
+                        <i>Plasmodium falciparum</i> infection rates in 
+                        <i>Anopheles gambiae</i>, 
+                        <i>An. arabiensis</i>, and 
+                        <i>An. funestus</i> in western Kenya
+                     </span>
+                     <span tagx="source">Am J Trop Med Hyg</span>
+                     <span tagx="year">1990</span>
+                     <span tagx="volume">43</span>
+                     <span tagx="fpage">124</span>
+                     <span tagx="lpage">129</span>
+                     <div tagxxx="pub-id">2202222</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Beier</span>
+                        <span tagx="given-names">JC</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Perkins</span>
+                        <span tagx="given-names">PV</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Onyango</span>
+                        <span tagx="given-names">FK</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Gargan</span>
+                        <span tagx="given-names">TP</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Oster</span>
+                        <span tagx="given-names">CN</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Whitmire</span>
+                        <span tagx="given-names">RE</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Koech</span>
+                        <span tagx="given-names">DK</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Roberts</span>
+                        <span tagx="given-names">CR</span>
+                     </div>
+                     <span tagx="article-title">Characterization of malaria transmission by 
+                        <i>Anopheles</i> (Diptera: Culicidae) in western Kenya in preparation for malaria vaccine trials
+                     </span>
+                     <span tagx="source">J Med Entomol</span>
+                     <span tagx="year">1990</span>
+                     <span tagx="volume">27</span>
+                     <span tagx="fpage">570</span>
+                     <span tagx="lpage">577</span>
+                     <div tagxxx="pub-id">2388233</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Odiere</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Bayoh</span>
+                        <span tagx="given-names">MN</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Gimnig</span>
+                        <span tagx="given-names">JE</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Vulule</span>
+                        <span tagx="given-names">JM</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Irungu</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Walker</span>
+                        <span tagx="given-names">ED</span>
+                     </div>
+                     <span tagx="article-title">Sampling outdoor, resting 
+                        <i>Anopheles gambiae</i> and other mosquitoes (Diptera: Culicidae) in western Kenya with clay pots
+                     </span>
+                     <span tagx="source">J Med Entomol</span>
+                     <span tagx="year">2007</span>
+                     <span tagx="volume">44</span>
+                     <span tagx="fpage">14</span>
+                     <span tagx="lpage">22</span>
+                     <div tagxxx="pub-id">10.1603/0022-2585(2007)44[14:SORAGA]2.0.CO;2</div>
+                     <div tagxxx="pub-id">17294916</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Gillies</span>
+                        <span tagx="given-names">MT</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Coetzee</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <span tagx="source">A Supplement to the Anophelinae of Africa South of the Sahara (Afrotropical Region)</span>
+                     <span tagx="year">1987</span>
+                     <div tagxxx="publisher-name">Johannesburg, South Africa: South African Institute for Medical Research</div>
+                     <span tagx="fpage">1</span>
+                     <span tagx="lpage">143</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Sombroek</span>
+                        <span tagx="given-names">WG</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Braun</span>
+                        <span tagx="given-names">HMH</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">van der Pouw</span>
+                        <span tagx="given-names">BJA</span>
+                     </div>
+                     <span tagx="source">Exploratory Soil Map and Agro-Climatic Zone Map of Kenya, 1980. Scale 1: 1,000,000</span>
+                     <span tagx="year">1982</span>
+                     <div tagxxx="publisher-name">Nairobi, Kenya: Kenya Soil Survey</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">MacQueen</span>
+                        <span tagx="given-names">J</span>
+                     </div>
+                     <span tagx="article-title">Some methods for classification and analysis of multivariate observations</span>
+                     <span tagx="source">Proceedings of the fifth Berkeley symposium on mathematical statistics and probability,
+                        Volume 1
+                     </span>
+                     <span tagx="year">1967</span>
+                     <span tagx="fpage">281</span>
+                     <span tagx="lpage">297</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Hightower</span>
+                        <span tagx="given-names">AW</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Ombok</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Otieno</span>
+                        <span tagx="given-names">R</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Odhiambo</span>
+                        <span tagx="given-names">R</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Oloo</span>
+                        <span tagx="given-names">AJ</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Lal</span>
+                        <span tagx="given-names">AA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Nahlen</span>
+                        <span tagx="given-names">BL</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Hawley</span>
+                        <span tagx="given-names">WA</span>
+                     </div>
+                     <span tagx="article-title">A geographic information system applied to a malaria field study in western Kenya</span>
+                     <span tagx="source">Am J Trop Med Hyg</span>
+                     <span tagx="year">1998</span>
+                     <span tagx="volume">58</span>
+                     <span tagx="fpage">266</span>
+                     <span tagx="lpage">272</span>
+                     <div tagxxx="pub-id">9546401</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Ombok</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Adazu</span>
+                        <span tagx="given-names">K</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Odhiambo</span>
+                        <span tagx="given-names">F</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Bayoh</span>
+                        <span tagx="given-names">MN</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Kiriinya</span>
+                        <span tagx="given-names">R</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Slutsker</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Hamel</span>
+                        <span tagx="given-names">MJ</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Williamson</span>
+                        <span tagx="given-names">J</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Hightower</span>
+                        <span tagx="given-names">A</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Laserson</span>
+                        <span tagx="given-names">KF</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Feikin</span>
+                        <span tagx="given-names">DR</span>
+                     </div>
+                     <span tagx="article-title">Geospatial distribution and determinants of child mortality in rural western Kenya
+                        2002-2005
+                     </span>
+                     <span tagx="source">Trop Med Int Health</span>
+                     <span tagx="year">2010</span>
+                     <span tagx="volume">15</span>
+                     <span tagx="fpage">423</span>
+                     <span tagx="lpage">433</span>
+                     <div tagxxx="pub-id">10.1111/j.1365-3156.2010.02467.x</div>
+                     <div tagxxx="pub-id">20409294</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Tarboton</span>
+                        <span tagx="given-names">DG</span>
+                     </div>
+                     <span tagx="article-title">A new method for the determination of flow directions and upslope areas in grid digital
+                        elevation models
+                     </span>
+                     <span tagx="source">Water Resour Res</span>
+                     <span tagx="year">1997</span>
+                     <span tagx="volume">33</span>
+                     <span tagx="fpage">309</span>
+                     <span tagx="lpage">319</span>
+                     <div tagxxx="pub-id">10.1029/96WR03137</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Breiman</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <span tagx="article-title">Random forests</span>
+                     <span tagx="source">Mach Learn</span>
+                     <span tagx="year">2001</span>
+                     <span tagx="volume">45</span>
+                     <span tagx="fpage">5</span>
+                     <span tagx="lpage">32</span>
+                     <div tagxxx="pub-id">10.1023/A:1010933404324</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Guisan</span>
+                        <span tagx="given-names">A</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Zimmermann</span>
+                        <span tagx="given-names">NE</span>
+                     </div>
+                     <span tagx="article-title">Predictive habitat distribution models in ecology</span>
+                     <span tagx="source">Ecol Model</span>
+                     <span tagx="year">2000</span>
+                     <span tagx="volume">135</span>
+                     <span tagx="fpage">147</span>
+                     <span tagx="lpage">186</span>
+                     <div tagxxx="pub-id">10.1016/S0304-3800(00)00354-9</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Hernández</span>
+                        <span tagx="given-names">J</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Núñez</span>
+                        <span tagx="given-names">I</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Bacigalupo</span>
+                        <span tagx="given-names">A</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Cattan</span>
+                        <span tagx="given-names">PE</span>
+                     </div>
+                     <span tagx="article-title">Modeling the spatial distribution of Chagas disease vectors using environmental variables
+                        and people's knowledge
+                     </span>
+                     <span tagx="source">Int J Health Geogr</span>
+                     <span tagx="year">2013</span>
+                     <span tagx="volume">12</span>
+                     <span tagx="fpage">29</span>
+                     <div tagxxx="pub-id">10.1186/1476-072X-12-29</div>
+                     <div tagxxx="pub-id">23724993</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Bisrat</span>
+                        <span tagx="given-names">SA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">White</span>
+                        <span tagx="given-names">MA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Beard</span>
+                        <span tagx="given-names">KH</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Richard Cutler</span>
+                        <span tagx="given-names">D</span>
+                     </div>
+                     <span tagx="article-title">Predicting the distribution potential of an invasive frog using remotely sensed data
+                        in Hawaii
+                     </span>
+                     <span tagx="source">Divers Distrib</span>
+                     <span tagx="year">2011</span>
+                     <span tagx="volume">18</span>
+                     <span tagx="fpage">648</span>
+                     <span tagx="lpage">660</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Breiman</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Friedman</span>
+                        <span tagx="given-names">JH</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Olshen</span>
+                        <span tagx="given-names">RA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Stone</span>
+                        <span tagx="given-names">CJ</span>
+                     </div>
+                     <span tagx="source">Classification and Regression Trees (CART)</span>
+                     <span tagx="year">1984</span>
+                     <div tagxxx="publisher-name">Belmont, CA, USA: Wadsworth International Group</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Liaw</span>
+                        <span tagx="given-names">A</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Wiener</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <span tagx="article-title">Classification and regression by randomForest</span>
+                     <span tagx="source">R News</span>
+                     <span tagx="year">2002</span>
+                     <span tagx="volume">2</span>
+                     <span tagx="fpage">18</span>
+                     <span tagx="lpage">22</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Liu</span>
+                        <span tagx="given-names">C</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Berry</span>
+                        <span tagx="given-names">PM</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Dawson</span>
+                        <span tagx="given-names">TP</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Pearson</span>
+                        <span tagx="given-names">RG</span>
+                     </div>
+                     <span tagx="article-title">Selecting thresholds of occurrence in the prediction of species distributions</span>
+                     <span tagx="source">Ecography</span>
+                     <span tagx="year">2005</span>
+                     <span tagx="volume">28</span>
+                     <span tagx="fpage">385</span>
+                     <span tagx="lpage">393</span>
+                     <div tagxxx="pub-id">10.1111/j.0906-7590.2005.03957.x</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Swets</span>
+                        <span tagx="given-names">JA</span>
+                     </div>
+                     <span tagx="article-title">Measuring the accuracy of diagnostic systems</span>
+                     <span tagx="source">Science</span>
+                     <span tagx="year">1988</span>
+                     <span tagx="volume">240</span>
+                     <span tagx="fpage">1285</span>
+                     <span tagx="lpage">1293</span>
+                     <div tagxxx="pub-id">10.1126/science.3287615</div>
+                     <div tagxxx="pub-id">3287615</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <span tagx="article-title">Package “SDMTools”</span>
+                     <div tagxxx="comment">
+                        <div tagxxx="ext-link">http://cran.r-project.org/web/packages/SDMTools/SDMTools.pdf</div>
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Grabs</span>
+                        <span tagx="given-names">T</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Seibert</span>
+                        <span tagx="given-names">J</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Bishop</span>
+                        <span tagx="given-names">K</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Laudon</span>
+                        <span tagx="given-names">H</span>
+                     </div>
+                     <span tagx="article-title">Modeling spatial patterns of saturated areas: a comparison of the topographic wetness
+                        index and a dynamic distributed model
+                     </span>
+                     <span tagx="source">J Hydrol</span>
+                     <span tagx="year">2009</span>
+                     <span tagx="volume">373</span>
+                     <span tagx="fpage">15</span>
+                     <span tagx="lpage">23</span>
+                     <div tagxxx="pub-id">10.1016/j.jhydrol.2009.03.031</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Amek</span>
+                        <span tagx="given-names">N</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Bayoh</span>
+                        <span tagx="given-names">MN</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Hamel</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Lindblade</span>
+                        <span tagx="given-names">KA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Gimnig</span>
+                        <span tagx="given-names">JE</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Odhiambo</span>
+                        <span tagx="given-names">F</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Laserson</span>
+                        <span tagx="given-names">KF</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Slutsker</span>
+                        <span tagx="given-names">L</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Smith</span>
+                        <span tagx="given-names">TA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Vounatsou</span>
+                        <span tagx="given-names">P</span>
+                     </div>
+                     <span tagx="article-title">Spatial and temporal dynamics of malaria transmission in rural Western Kenya</span>
+                     <span tagx="source">Parasit Vectors</span>
+                     <span tagx="year">2012</span>
+                     <span tagx="volume">5</span>
+                     <span tagx="fpage">1</span>
+                     <div tagxxx="pub-id">10.1186/1756-3305-5-1</div>
+                     <div tagxxx="pub-id">22212459</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Omumbo</span>
+                        <span tagx="given-names">JA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Hay</span>
+                        <span tagx="given-names">SI</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Snow</span>
+                        <span tagx="given-names">RW</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Tatem</span>
+                        <span tagx="given-names">AJ</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Rogers</span>
+                        <span tagx="given-names">DJ</span>
+                     </div>
+                     <span tagx="article-title">Modelling malaria risk in East Africa at high-spatial resolution</span>
+                     <span tagx="source">Trop Med Int Health</span>
+                     <span tagx="year">2005</span>
+                     <span tagx="volume">10</span>
+                     <span tagx="fpage">557</span>
+                     <span tagx="lpage">566</span>
+                     <div tagxxx="pub-id">10.1111/j.1365-3156.2005.01424.x</div>
+                     <div tagxxx="pub-id">15941419</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Moiroux</span>
+                        <span tagx="given-names">N</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Djènontin</span>
+                        <span tagx="given-names">A</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Bio-Bangana</span>
+                        <span tagx="given-names">AS</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Chandre</span>
+                        <span tagx="given-names">F</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Corbel</span>
+                        <span tagx="given-names">V</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Guis</span>
+                        <span tagx="given-names">H</span>
+                     </div>
+                     <span tagx="article-title">Spatio-temporal analysis of abundances of three malaria vector species in southern
+                        Benin using zero-truncated models
+                     </span>
+                     <span tagx="source">Parasit Vectors</span>
+                     <span tagx="year">2014</span>
+                     <span tagx="volume">7</span>
+                     <span tagx="fpage">1</span>
+                     <span tagx="lpage">11</span>
+                     <div tagxxx="pub-id">10.1186/1756-3305-7-1</div>
+                     <div tagxxx="pub-id">24411014</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Jacob</span>
+                        <span tagx="given-names">BG</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Muturi</span>
+                        <span tagx="given-names">E</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Halbig</span>
+                        <span tagx="given-names">P</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Mwangangi</span>
+                        <span tagx="given-names">J</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Wanjogu</span>
+                        <span tagx="given-names">RK</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Mpanga</span>
+                        <span tagx="given-names">E</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Funes</span>
+                        <span tagx="given-names">J</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Shililu</span>
+                        <span tagx="given-names">JI</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Githure</span>
+                        <span tagx="given-names">J</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Regens</span>
+                        <span tagx="given-names">JL</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Novak</span>
+                        <span tagx="given-names">RJ</span>
+                     </div>
+                     <span tagx="article-title">Environmental abundance of 
+                        <i>Anopheles</i> (Diptera: Culicidae) larval habitats on land cover change sites in Karima Village,
+                        Mwea Rice Scheme, Kenya
+                     </span>
+                     <span tagx="source">Am J Trop Med Hyg</span>
+                     <span tagx="year">2007</span>
+                     <span tagx="volume">76</span>
+                     <span tagx="fpage">73</span>
+                     <span tagx="lpage">80</span>
+                     <div tagxxx="pub-id">17255233</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Strauss</span>
+                        <span tagx="given-names">B</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Biedermann</span>
+                        <span tagx="given-names">R</span>
+                     </div>
+                     <span tagx="article-title">Evaluating temporal and spatial generality: how valid are species–habitat relationship
+                        models?
+                     </span>
+                     <span tagx="source">Ecol Model</span>
+                     <span tagx="year">2007</span>
+                     <span tagx="volume">204</span>
+                     <span tagx="fpage">104</span>
+                     <span tagx="lpage">114</span>
+                     <div tagxxx="pub-id">10.1016/j.ecolmodel.2006.12.027</div>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</html>

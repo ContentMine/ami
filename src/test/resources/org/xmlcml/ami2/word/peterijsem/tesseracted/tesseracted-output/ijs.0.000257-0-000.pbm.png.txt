@@ -1,0 +1,224 @@
+ 
+
+0.0
+
+59
+
+1
+
+84
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+96 — Sphfngomonas yabuuchiae GTC 868T (ABO71955)
+Sphingomonas roseiﬂava MK341T (D84520)
+Sphingomonas parapaucimobilis IFO 15100T (D13724)
+Sphingomonas pseudosanguinis G1 ~2T (AM412238)
+— Sphingomonas sanguinis IFO 13937T (D84529)
+97 — Sphingomonas paucimobilis GIFU 2395T (D16144)
+— Sphingomonas adhaesiva GIFU 11458T (084527)
+— Sphingomonas phyllosphaerae FA1 (AY563441)
+100 — Sphingomonas yunnanensis YIM 003T (AY894691)
+— Sphingornonas desiccabi/is CP1DT (AJ871435)
+Sphfngomonas molluscorum An 18T (ABZ48285)
+Strain NxozY (DQ789172)
+- Sphingomonas pituitosa EDIVT (AJ243751)
+_LSphingomonas trueperi LMG 2142T (X97776)
+99 Sphingomonas azotiﬁgens NBRC 15497T (AB217471)
+7 Sphingomonas panni 052T (AJ575818)
+89 Sphingomonas mucosissima CP173-2T (AM229669)
+— Sphingomonas dokdonensis DS-4T (DQ178975)
+Sphingomonas koreensis JSSZBT (AF131296)
+— Sphingomonas soli T5-04T (AB166883)
+91 Sphingomonas mali IFO 15500T (Y09638)
+80 Sphingomonas pruni IFO 15498T (Y09637)
+— Sphingomonas asaccharolytica IFO 15499T (Y09639)
+
+64
+99
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+74
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+95
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+71
+
+ 
+
+ 
+
+ 
+
+100
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Sphingomonas insu/ae DS-28T (EF363714)
+— Sphingomonas abaci C42T (AJ575817)
+
+[Sphingomonas aquatilis JSS7T (AF131295)
+100 Sphingnmnnas melon/s DAPP-PG 224T (A3055863)
+
+_‘_— Sphingomonas echinaides ATCC 14820T (ABO21370)
+9
+
+7 Sphingomonas oligophenolica 8213'r (ABO18439)
+Sphingomonas aemlata NW12T (AJ429240)
+
+ 
+
+71
+
+ 
+
+ 
+
+100 Sphingomonas aurantiaca MA101bT (AJ429236)
+
+‘39 Sphingomonas faeni MA—olkiT (AJ429239)
+Sphingomonas jaspsi TDMA-16T (A8264131)
+
+ 
+
+53
+
+ 
+
+ 
+
+Sphingomonas kaistensis PB56T (AY769083)
+
+96 —
+91 Sphingomonas haloaromaticamans A175T (X94101)
+
+91
+
+ 
+
+ 
+
+ 
+
+ 
+
+Sphingomonas wittichii DSM 6014T (ABOZ1492)
+— Sphingomonas fennica K101T (AJ009706)
+— Sphingobium yanoikuyae NBRC 15102T (D13728)
+
+ 
+
+ 
+
+100—: Sphingobium herbicidovorans NBRC 16415T (ABO42233)
+99
+
+Sphingobium chlorophenolicum ATCC 33790T (X87161)
+— Sphingosinicella soli KSL-125T (DQOB7403)
+
+ 
+
+ 
+
+100
+
+Sphingosinicella microcystinivorans MDBZ (ABZ19940)
+99
+
+Sphingosinicella xenopeptidilytica 3»2W4T (AY950663)
+
+— Novosphingobium rose IAM 14222T (013945)
+
+ 
+
+ 
+
+ 
+
+69
+
+ 
+
+89
+
+Novosphingobium capsulatum GIFU 11526T (D16147)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+99 Novosphingnbium subterraneum SMCC 30478T (U20773)
+Novosphingobium aromatic/vorans SMCC B0695 (U20755)
+
+99 Novosphingobium aromaticivorans SMCC F199T (U20756)
+
+ 
+
+— Sphingopyxis terrae NBRC 15098T (D13727)
+— Sphingopyxis macrogoltabida EY-1 (A8255383)
+
+Sphingopyxis baekryungensis SW-150T (AY608604)
+
+Erythrobacter Iongus DSM 6997T (AF465835)
+

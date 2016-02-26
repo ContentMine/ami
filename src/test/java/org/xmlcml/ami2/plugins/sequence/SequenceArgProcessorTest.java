@@ -11,12 +11,10 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.Fixtures;
+import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public class SequenceArgProcessorTest {
-
-	
 	
 	private static final Logger LOG = Logger.getLogger(SequenceArgProcessorTest.class);
 	static {
@@ -27,7 +25,7 @@ public class SequenceArgProcessorTest {
 	@Ignore // mend the test
 	public void testSequenceArgProcessor() throws Exception {
 		File newDir = new File("target/plosone/sequences/");
-		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
+		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--sq.sequence --sq.length {6,20} --context 35 50 --sq.type dna prot -q "+newDir+" -i scholarly.html"; 
 		DefaultArgProcessor sequenceArgProcessor = new SequenceArgProcessor(args);
 		sequenceArgProcessor.runAndOutput();
@@ -59,13 +57,13 @@ public class SequenceArgProcessorTest {
 	@Test
 	public void testSequenceHarness() throws Exception {
 		// SHOWCASE
-		String cmd = "--sq.sequence --context 35 50 --sq.type dna prot -q target/plosone/sequences/ -i scholarly.html"; 
-		Fixtures.runStandardTestHarness(
-				Fixtures.TEST_PLOSONE_SEQUENCE_0121780, 
+		String cmd = "--sq.sequence --context 35 50 --sq.type dnaprimer prot1 -q target/plosone/sequences/ -i scholarly.html"; 
+		AMIFixtures.runStandardTestHarness(
+				AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, 
 				new File("target/plosone/sequences/"), 
 				new SequencePlugin(),
 				cmd,
-				"sequence/dna/", "sequence/prot/");
+				"sequence/dnaprimer/", "sequence/prot1/");
 	}
 
 

@@ -1,0 +1,60 @@
+7
+
+0.01
+
+87
+
+88
+85
+
+89
+
+99
+
+93
+
+A. Iuteof/uorescens IFO 13057T (U49008)
+A. coeru/ea IFO 14679T (U49002)
+A. verrucospora IFO 14100T (U49011)
+A. citrea IFO 14678T (U49001)
+A. glauciﬂava AS41202T (AF153881)
+A. macra IFO 14102T (U49009)
+A. madurae JCM 7436T (U58527)
+A. formosensis JCM 7474T (AF002263)
+
+A. pellet/er] JCM 3388T(AF163119)
+100 A. cremea subsp. cremea JCM 3308T(AF134067)
+
+A. cremea subsp. rifamycini IFO 14183T(U49003)
+A. catellat/spora AS41522T (AF154127)
+
+A. livida JCM 3387T (AF163116)
+A. yumaensis JCM 3369T (AF163122)
+
+A. vinacea JCM 3325T (AF134070)
+A. Viridis IFO 15238T (D85467)
+
+Thermomonospora sun/eta JCM 3096T
+A. umbrina JCM 68377 (AF163121) (AF002262)
+A. echinospora IFO 14042T (U49004)
+A. spadix JCM 3146T (AF163120)
+Spiri/Iospora rubra JCM 6875T(AF163123)
+A. fibrosa ATCC 49459T (AF1631 14)
+A. nitrit/genes DSM 44137T (AYO35999)
+Spiri/lospora albida IFO 12248T (D85498)
+A. Iatina DSM 43382T (AY035998)
+A. rugatobispora IFO 14382T (U49010)
+A. fulvescens IFO 14347T (U49005)
+A. atramentaria IFO 14695T(U49000)
+100 A. rubrobrunea IFO 14622 (AF134069)
+A. viridi/utea IFO 14480T (D86943)
+BC 44T-5T (EF116925)
+A. oligospora ATCC 43269T (AF163118)
+
+99
+
+A. hibisca JCM 9627T (AF163115)
+A. kijaniata IFO 14229T (U49006)
+
+Actinocora/lia herbida IFO 15485T (D85473)
+

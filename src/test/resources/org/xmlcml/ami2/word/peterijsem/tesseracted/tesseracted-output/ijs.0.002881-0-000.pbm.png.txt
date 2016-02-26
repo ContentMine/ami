@@ -1,0 +1,186 @@
+ 
+
+0.02
+
+ 
+
+ 
+
+ 
+
+ 
+
+72
+
+73 ‘Candidatus Devosia euplotis’ L|V5 (AJ548825)
+1°04‘Candidatus Devosia euplotis’ co (AJ548823)
+_ ‘Candidatus Devosia euplotis’ CAMP4.4 (AJ548824)
+Devosia Iimi LMG 22951T (AJ786801)
+Devosia neptuniae J1 T (AF469072)
+
+Devosia subaequoris HST3-14T (AM293857)
+— Devosia riboﬂavina ATCC 9526T (D49423)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+98
+
+ 
+
+ 
+
+ 
+
+ 
+
+99
+
+100
+
+ 
+
+ 
+
+ 
+
+96
+
+—.
+
+ 
+
+75
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+100
+
+ 
+
+o
+99 — Devosia soli GH2—10T (DQ303125)
+
+ 
+
+ 
+
+i ‘Devosia ginsengisolf Gsoil 326 (AB271045)
+100 — Devosia insulae DS-56T (EF012357)
+Devosia geojensis BD-c194T (EF575560)
+Cucumibacter marinus CL-GR60T (EF21 1830)
+Strain CL-SK30T (EF988631)
+Ancalomicrob/um adetum DSM 4722T (ABO95950)
+
+100 Angulomicrobium amanitiforme NCIMB 1785T (AJ535709)
+
+A Angulomicrobium tetraedrale DSM 5895T (AJ535708)
+
+Methylorhabdus multivorans DM13T (AF004845)
+
+ 
+
+100
+
+ 
+
+100 i Blastochloris sulfoviridis DSM 729T (D86514 )
+
+ 
+
+—o
+96
+
+ 
+
+—o
+
+—o
+
+— Blastoch/oris viridis ATCC 19567T (D25314)
+— Rhodoplanes elegans AS130T (D25311)
+
+ 
+
+100 — Rhodoplanes rose-us 941T (D25313)
+Prosthecomicrobium pneumaticum ATCC 23633T (ABO17203)
+
+ 
+
+ 
+
+100
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+—o
+97
+
+ 
+
+100 '4+* Pedomicrobium americanum ACM 3090T (X97692)
+
+Rhodomicrobium vannie/ii DSM 162T (M34127)
+78 — Hyphomicrobium chloromethanicum CM2T (AF198623)
+
+ 
+
+ 
+
+71 — Hyphomicrobium facile IFAM H-526T (Y14309)
+
+ 
+
+ 
+
+7 Hyphomicrobium methylovorum KM 146T (Y14307)
+— Hyphomicrobium denitriﬁcans TK 0145T (Y14308)
+
+ 
+
+# Hyphomicrobium vulgare IFAM MC-750T (Y14302)
+— Hyphomicrobium zavarzinii IFAM ZV-622T (Y14305)
+—. — Hyphomicrobium aestuarii DSM 1564T (Y14304)
+
+7 Hyphomicrobium ho/landicum IFAM KB-677T (Y14303)
+
+Filomicrobium fusiforme DSM 5304T (Y14313)
+Hyphomicrobium sulfonivorans S1T (AF235089)
+
+— Pedomicrobium manganicum ACM 3038T (X97691)
+
+— Pedomicrobium ferrugineum DSM 1540T (X97690)
+
+ 
+
+100 Pedomicrobium australicum ATCC 43611T (X97693)
+
+ 
+
+Escherichia coli K12T (U00096)
+

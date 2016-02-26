@@ -6,26 +6,30 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import nu.xom.Builder;
-import nu.xom.Document;
-import nu.xom.Element;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.lookups.AbstractLookup;
+import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
 import org.xmlcml.ami2.plugins.regex.CompoundRegex;
 import org.xmlcml.ami2.plugins.regex.CompoundRegexList;
 import org.xmlcml.ami2.plugins.regex.RegexComponent;
+import org.xmlcml.ami2.plugins.word.WordCollectionFactory;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.args.ValueElement;
+import org.xmlcml.cmine.args.VersionManager;
+import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
-import org.xmlcml.cmine.files.DefaultSearcher;
-import org.xmlcml.cmine.files.EuclidSource;
+import org.xmlcml.cmine.files.ResourceLocation;
 import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.html.HtmlP;
+import org.xmlcml.cmine.lookup.DefaultStringDictionary;
+import org.xmlcml.cmine.lookup.AbstractLookup;
+import org.xmlcml.norma.NormaArgProcessor;
 import org.xmlcml.xml.XMLUtil;
+
+import nu.xom.Builder;
+import nu.xom.Document;
+import nu.xom.Element;
 
 /** 
  * Processes commandline arguments.
@@ -40,25 +44,36 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
+	private static final String AMI = "ami";
 	private static final String ARG_PROCESSOR = "ArgProcessor";
-	public static final String RESULTS = "results";
 	protected static String RESOURCE_NAME_TOP = "/org/xmlcml/ami2";
 	protected static String PLUGIN_RESOURCE = RESOURCE_NAME_TOP+"/plugins";
 	private static String ARGS_RESOURCE = PLUGIN_RESOURCE+"/"+"args.xml";
+	public static final VersionManager AMI_PLUGIN_VERSION_MANAGER = new VersionManager();
 
 	protected static final String NAME = "name";
 	private Integer[] contextCount = new Integer[] {98, 98};
 	private List<String> params;
 	
-	private XPathProcessor xPathProcessor;
 	private String plugin;
     Map<String,AbstractLookup> lookupInstanceByName;
 	protected CompoundRegexList compoundRegexList;
 	protected List<Element> regexElementList;
+	protected List<? extends Element> sectionElements;
+	protected List<String> lookupNames;
+	public WordCollectionFactory wordCollectionFactory;
+	protected HashMap<String, AMISearcher> searcherByNameMap; // req
+	// searching
+	protected List<AMISearcher> searcherList; // req
+	protected DefaultAMIDictionary currentDictionary;
 	
 	public AMIArgProcessor() {
 		super();
 		readArgsResourcesIntoOptions();
+	}
+
+	protected static VersionManager getVersionManager() {
+		return AMI_PLUGIN_VERSION_MANAGER;
 	}
 
 	private void readArgsResourcesIntoOptions() {
@@ -73,10 +88,21 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		parseArgs(args);
 	}
 	
+	public AMIArgProcessor(String cmd) {
+		this(cmd.split("\\s+"));
+	}
+
 	protected String createPluginArgsResourceName() {
 		String clazz = this.getClass().getSimpleName();
 		plugin = clazz.replace(ARG_PROCESSOR, "").toLowerCase();
-		return AMIArgProcessor.PLUGIN_RESOURCE + "/"+plugin+"/"+ARGS_XML;
+		String resourceName = null;
+		if (plugin.equals(AMI)) {
+			// no ami/ subdirectory
+			resourceName = AMIArgProcessor.PLUGIN_RESOURCE + "/"+ARGS_XML;
+		} else {
+			resourceName = AMIArgProcessor.PLUGIN_RESOURCE + "/"+plugin+"/"+ARGS_XML;
+		}
+		return resourceName;
 	}
 
 	// ============= METHODS =============
@@ -117,34 +143,35 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		LOG.debug("The test strings are..."+tokens+"; override this if you want to use your own parseTest()");
 	}
 
-	public void parseXpath(ArgumentOption option, ArgIterator argIterator) {
-		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
-		if (tokens.size() == 0) {
-//			LOG.debug(XPATH_OPTION).getHelp());
-		} else if (tokens.size() > 1) {
-			LOG.debug("Exactly one xpath required");
-		} else {
-			xPathProcessor = new XPathProcessor(tokens.get(0));
-		}
-	}
-
 	public void parseLookup(ArgumentOption option, ArgIterator argIterator) {
-		List<String> lookupNames = argIterator.getStrings(option);
+		lookupNames = argIterator.getStrings(option);
 		loadLookupClassesFromArgValues(option);
 	}
 
 	public void finalLookup(ArgumentOption option) {
-		LOG.debug("final lookup");
+		LOG.debug("final lookup NYI; please add code or override: names are: "+lookupNames+"; override");
 	}
 
 
-	// =============transformations=============
+	// =============run=============
+	@Override
+	/** In AMI we can split the document by Xpath string which allows per-section searching.
+	 * 
+	 */
+	public void runRunMethodsOnChosenArgOptions() {
+		ensureSectionElements();
+		super.runRunMethodsOnChosenArgOptions();
+	}
 
 	// ============output options==============
 
 	// ==========================
 
-	
+	protected  void printVersion() {
+		getVersionManager().printVersion();
+		NormaArgProcessor.getVersionManager().printVersion();
+	}
+
 	public List<String> getParams() {
 		return params;
 	}
@@ -157,19 +184,13 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		return contextCount;
 	}
 
-//	@Override
-//	/** parse args and resolve their dependencies.
-//	 * 
-//	 * (don't run any argument actions)
-//	 * 
-//	 */
-//	public void parseArgs(String[] args) {
-//		super.parseArgs(args);
-//	}
-
-	public void parseArgsRunAndOutput(String[] args) {
-		this.parseArgs(args);
-		this.runAndOutput();
+	public List<? extends Element> ensureSectionElements() {
+		if (xPathProcessor != null) {
+			sectionElements = currentCTree.extractSectionsFromScholarlyHtml(xPathProcessor.getXPath());
+		} else {
+			sectionElements = extractPSectionElements(currentCTree);
+		}
+		return sectionElements;
 	}
 
 	public String getPlugin() {
@@ -178,12 +199,12 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 
 	private void loadLookupClassesFromArgValues(ArgumentOption option) {
 		getOrCreateLookupInstanceByName();
-		List<Element> values = option.getOrCreateValues();
-		for (Element value : values) {
-			String name = value.getAttributeValue(ArgumentOption.NAME);
-			String className = value.getAttributeValue(ArgumentOption.CLASSNAME);
+		List<ValueElement> valueElements = option.getOrCreateValueElements();
+		for (ValueElement valueElement : valueElements) {
+			String name = valueElement.getName();
+			String className = valueElement.getClassName();
 			if (name == null || className == null) {
-				LOG.error("Missing name or class: "+value.toXML());
+				LOG.error("Missing name or class: "+valueElement.toXML());
 				continue;
 			}
 			Class<? extends AbstractLookup> lookupClass;
@@ -193,17 +214,15 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 				LOG.error("Cannot find class, skipping: "+className);
 				continue;
 			}
-			AbstractLookup lookup;
+			AbstractLookup lookupInstance;
 			try {
-				lookup = (AbstractLookup) lookupClass.newInstance();
-			} catch (InstantiationException e) {
+				lookupInstance = (AbstractLookup) lookupClass.newInstance();
+				LOG.debug("lookup "+lookupInstance);
+			} catch (Exception e) {
 				LOG.error("Cannot instantiate, skipping: "+lookupClass+"; "+e.getMessage());
 				continue;
-			} catch (IllegalAccessException e) {
-				LOG.error("Cannot access, skipping: "+lookupClass+"; "+e.getMessage());
-				continue;
 			}
-			lookupInstanceByName.put(name, lookup);
+			lookupInstanceByName.put(name, lookupInstance);
 		}
 	}
 
@@ -223,9 +242,15 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	 * @param namedPattern may be null for non-regex-based searchers
 	 * @return subclassed Plugin
 	 */
-	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
+	protected AMISearcher createSearcher(NamedPattern namedPattern) {
+		AMISearcher amiSearcher = new AMISearcher(this);
+		amiSearcher.setNamedPattern(namedPattern);
+		return amiSearcher;
+	}
+
+	protected AMISearcher createSearcher(DefaultStringDictionary dictionary) {
 		AMISearcher defaultSearcher = new AMISearcher(this);
-		defaultSearcher.setNamedPattern(namedPattern);
+		defaultSearcher.setDictionary(dictionary);
 		return defaultSearcher;
 	}
 
@@ -233,9 +258,9 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		ensureSearcherBySearcherNameMap();
 		ensureSearcherList();
 		for (String name : names) {
-			DefaultSearcher optionSearcher = (DefaultSearcher) searcherByNameMap.get(name);
+			AMISearcher optionSearcher = (AMISearcher) searcherByNameMap.get(name);
 			if (optionSearcher == null) {
-				LOG.error("unknown optionType: "+name+"; skipped");
+				LOG.error("unknown optionType: "+name+"; allowed: "+searcherByNameMap);
 			} else {
 				searcherList.add(optionSearcher);
 			}
@@ -244,28 +269,45 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 
 	private void ensureSearcherBySearcherNameMap() {
 		if (searcherByNameMap == null) {
-			searcherByNameMap = new HashMap<String, DefaultSearcher>();
+			searcherByNameMap = new HashMap<String, AMISearcher>();
 		}
 	}
 
-	protected void searchHtmlParaElements() {
-		List<HtmlP> pElements = currentCMDir.extractPElements();
-//		resultsBySearcherNameMap = new HashMap<String, ResultsElement>();
-		for (DefaultSearcher searcher : searcherList) {
-			String name = searcher.getName();
-			ResultsElement resultsElement = searcher.search(pElements);
-			resultsElement.setAllResultElementNames(name);
-			currentCMDir.putInContentProcessor(name, resultsElement);
+	protected void searchSectionElements() {
+		if (currentCTree != null) {
+			ensureSectionElements();
+			if (searcherList == null) {
+				throw new RuntimeException("No searchers created");
+			}
+			for (AMISearcher searcher : searcherList) {
+				String name = searcher.getName();
+				this.TREE_LOG().info("search "+name);
+				LOG.trace("search "+name);
+				ResultsElement resultsElement = searcher.search(sectionElements, createResultsElement());
+				resultsElement.lookup(lookupInstanceByName, lookupNames);
+				LOG.trace("exactList "+resultsElement.getExactList());
+				resultsElement.setAllResultElementNames(name);
+				currentCTree.putInContentProcessor(name, resultsElement);
+			}
 		}
 	}
+
+	/** normally overridden
+	 * 
+	 * @return
+	 */
+	protected ResultsElement createResultsElement() {
+		return new ResultsElement();
+	}
+	
 
 	protected void createAndStoreNamedSearchers(ArgumentOption option) {
-		List<Element> values = option.getOrCreateValues();
+		List<ValueElement> values = option.getOrCreateValueElements();
 		createNamedSearchers(values);
 	}
 
-	protected void createNamedSearchers(List<Element> values) {
-		for (Element valueElement : values) {
+	protected void createNamedSearchers(List<ValueElement> values) {
+		for (ValueElement valueElement : values) {
 			try {
 				if (RegexComponent.REGEX.equals(valueElement.getLocalName())) {
 					NamedPattern namedPattern = NamedPattern.createFromRegexElement(valueElement);
@@ -282,27 +324,22 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	}
 
 	public void createSearcherAndAddToMap(Element valueElement) {
-		ensureSearcherByNameMap();
 		NamedPattern namedPattern = NamedPattern.createFromValueElement(valueElement);
-		if (namedPattern != null) {
-			LOG.trace("added named pattern "+namedPattern);
-			DefaultSearcher searcher = createSearcher(namedPattern);
-			searcherByNameMap.put(namedPattern.getName(), searcher);
-		}
+		createSearcherAndAddToMap(namedPattern);
 	}
 
 	public void createSearcherAndAddToMap(NamedPattern namedPattern) {
 		if (namedPattern != null) {
 			ensureSearcherByNameMap();
 			LOG.trace("added named pattern "+namedPattern);
-			DefaultSearcher searcher = createSearcher(namedPattern);
+			AMISearcher searcher = createSearcher(namedPattern);
 			searcherByNameMap.put(namedPattern.getName(), searcher);
 		}
 	}
 
 	private void ensureSearcherByNameMap() {
 		if (searcherByNameMap == null) {
-			searcherByNameMap = new HashMap<String, DefaultSearcher>();
+			searcherByNameMap = new HashMap<String, AMISearcher>();
 		}
 	}
 
@@ -317,7 +354,8 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		for (String regexLocation : regexLocations) {
 			LOG.trace("RegexLocation "+regexLocation);
 			try {
-				Element rawCompoundRegex = new Builder().build(EuclidSource.getInputStream(regexLocation)).getRootElement();
+				InputStream is = new ResourceLocation().getInputStreamHeuristically(regexLocation);
+				Element rawCompoundRegex = new Builder().build(is).getRootElement();
 				List<Element> elements = XMLUtil.getQueryElements(rawCompoundRegex, ".//*[local-name()='regex']");
 				regexElementList.addAll(elements);
 			} catch (Exception e) {
@@ -338,7 +376,11 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		for (String regexLocation : regexLocations) {
 			LOG.trace("RegexLocation "+regexLocation);
 			try {
-				CompoundRegex compoundRegex = readAndCreateCompoundRegex(EuclidSource.getInputStream(regexLocation));
+				InputStream is = new ResourceLocation().getInputStreamHeuristically(regexLocation);
+				if (is == null) {
+					throw new RuntimeException("cannot find regex: "+regexLocation);
+				}
+				CompoundRegex compoundRegex = readAndCreateCompoundRegex(is);
 				compoundRegexList.add(compoundRegex);
 			} catch (Exception e) {
 				LOG.error("Cannot parse regexLocation: ("+e+")"+regexLocation);
@@ -372,12 +414,40 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		return new CompoundRegex(this, rootElement);
 	}
 
-	public CMDir getCurrentCMDir() {
-		return currentCMDir;
+	public CTree getCurrentCTree() {
+		return currentCTree;
 	}
 
-	protected ContentProcessor getOrCreateContentProcessor() {
-		return (currentCMDir == null) ? null : currentCMDir.getOrCreateContentProcessor();
+	public ContentProcessor getOrCreateContentProcessor() {
+		return (currentCTree == null) ? null : currentCTree.getOrCreateContentProcessor();
 	}
+
+	public void addResultsElement(ResultsElement resultsElement) {
+		if (resultsElement != null) {
+			getOrCreateContentProcessor().addResultsElement(resultsElement);
+		}
+	}
+
+	protected WordCollectionFactory ensureWordCollectionFactory() {
+		if (wordCollectionFactory == null) {
+			this.wordCollectionFactory = new WordCollectionFactory(this);
+		}
+		return wordCollectionFactory;
+	}
+
+	protected void ensureSearcherList() {
+		if (searcherList == null) {
+			searcherList = new ArrayList<AMISearcher>();
+		}
+	}
+
+	public List<AMISearcher> getSearcherList() {
+		return searcherList;
+	}
+
+	public DefaultAMIDictionary getOrCreateCurrentDictionary() {
+		return currentDictionary;
+	}
+
 
 }

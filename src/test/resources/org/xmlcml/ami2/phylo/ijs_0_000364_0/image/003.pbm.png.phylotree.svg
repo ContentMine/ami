@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="800.0" width="700.0" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <g>
+   <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="32.0" cy="430.0" r="2.0"/>
+   <line stroke="black" stroke-width="1.0" x1="32.0" y1="430.0" x2="32.0" y2="430.0"/>
+   <g>
+    <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="32.0" cy="430.0" r="2.0"/>
+    <line stroke="black" stroke-width="1.0" x1="32.0" y1="430.0" x2="42.0" y2="218.0"/>
+    <g>
+     <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="42.0" cy="218.0" r="2.0"/>
+     <line stroke="black" stroke-width="1.0" x1="42.0" y1="218.0" x2="54.0" y2="161.0"/>
+     <g>
+      <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="54.0" cy="161.0" r="2.0"/>
+      <line stroke="black" stroke-width="1.0" x1="54.0" y1="161.0" x2="185.0" y2="119.0"/>
+      <g>
+       <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="185.0" cy="119.0" r="2.0"/>
+       <line stroke="black" stroke-width="1.0" x1="185.0" y1="119.0" x2="271.0" y2="92.0"/>
+       <g>
+        <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="271.0" cy="92.0" r="2.0"/>
+        <line stroke="black" stroke-width="1.0" x1="271.0" y1="92.0" x2="466.0" y2="73.0"/>
+        <g>
+         <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="466.0" cy="73.0" r="2.0"/>
+        </g>
+        <line stroke="black" stroke-width="1.0" x1="271.0" y1="92.0" x2="406.0" y2="109.0"/>
+        <g>
+         <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="406.0" cy="109.0" r="2.0"/>
+        </g>
+       </g>
+       <line stroke="black" stroke-width="1.0" x1="185.0" y1="119.0" x2="486.0" y2="146.0"/>
+       <g>
+        <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="486.0" cy="146.0" r="2.0"/>
+       </g>
+      </g>
+      <line stroke="black" stroke-width="1.0" x1="54.0" y1="161.0" x2="160.0" y2="200.0"/>
+      <g>
+       <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="160.0" cy="200.0" r="2.0"/>
+       <line stroke="black" stroke-width="1.0" x1="160.0" y1="200.0" x2="411.0" y2="219.0"/>
+       <g>
+        <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="411.0" cy="219.0" r="2.0"/>
+       </g>
+       <line stroke="black" stroke-width="1.0" x1="160.0" y1="200.0" x2="524.0" y2="182.0"/>
+       <g>
+        <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="524.0" cy="182.0" r="2.0"/>
+       </g>
+      </g>
+     </g>
+     <line stroke="black" stroke-width="1.0" x1="42.0" y1="218.0" x2="200.0" y2="273.0"/>
+     <g>
+      <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="200.0" cy="273.0" r="2.0"/>
+      <line stroke="black" stroke-width="1.0" x1="200.0" y1="273.0" x2="423.0" y2="293.0"/>
+      <g>
+       <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="423.0" cy="293.0" r="2.0"/>
+      </g>
+      <line stroke="black" stroke-width="1.0" x1="200.0" y1="273.0" x2="533.0" y2="256.0"/>
+      <g>
+       <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="533.0" cy="256.0" r="2.0"/>
+      </g>
+     </g>
+    </g>
+    <line stroke="black" stroke-width="1.0" x1="32.0" y1="430.0" x2="41.0" y2="642.0"/>
+    <g>
+     <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="41.0" cy="642.0" r="2.0"/>
+     <line stroke="black" stroke-width="1.0" x1="41.0" y1="642.0" x2="47.0" y2="679.0"/>
+     <g>
+      <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="47.0" cy="679.0" r="2.0"/>
+      <line stroke="black" stroke-width="1.0" x1="47.0" y1="679.0" x2="488.0" y2="660.0"/>
+      <g>
+       <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="488.0" cy="660.0" r="2.0"/>
+      </g>
+      <line stroke="black" stroke-width="1.0" x1="47.0" y1="679.0" x2="58.0" y2="847.0"/>
+      <g>
+       <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="58.0" cy="847.0" r="2.0"/>
+       <line stroke="black" stroke-width="1.0" x1="58.0" y1="847.0" x2="66.0" y2="917.0"/>
+       <g>
+        <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="66.0" cy="917.0" r="2.0"/>
+        <line stroke="black" stroke-width="1.0" x1="66.0" y1="917.0" x2="87.0" y2="973.0"/>
+        <g>
+         <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="87.0" cy="973.0" r="2.0"/>
+         <line stroke="black" stroke-width="1.0" x1="87.0" y1="973.0" x2="382.0" y2="917.0"/>
+         <g>
+          <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="382.0" cy="917.0" r="2.0"/>
+         </g>
+         <line stroke="black" stroke-width="1.0" x1="87.0" y1="973.0" x2="143.0" y2="1029.0"/>
+         <g>
+          <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="143.0" cy="1029.0" r="2.0"/>
+          <line stroke="black" stroke-width="1.0" x1="143.0" y1="1029.0" x2="221.0" y2="1086.0"/>
+          <g>
+           <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="221.0" cy="1086.0" r="2.0"/>
+           <line stroke="black" stroke-width="1.0" x1="221.0" y1="1086.0" x2="245.0" y2="1128.0"/>
+           <g>
+            <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="245.0" cy="1128.0" r="2.0"/>
+            <line stroke="black" stroke-width="1.0" x1="245.0" y1="1128.0" x2="308.0" y2="1155.0"/>
+            <g>
+             <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="308.0" cy="1155.0" r="2.0"/>
+             <line stroke="black" stroke-width="1.0" x1="308.0" y1="1155.0" x2="448.0" y2="1174.0"/>
+             <g>
+              <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="448.0" cy="1174.0" r="2.0"/>
+             </g>
+             <line stroke="black" stroke-width="1.0" x1="308.0" y1="1155.0" x2="472.0" y2="1137.0"/>
+             <g>
+              <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="472.0" cy="1137.0" r="2.0"/>
+             </g>
+            </g>
+            <line stroke="black" stroke-width="1.0" x1="245.0" y1="1128.0" x2="410.0" y2="1101.0"/>
+            <g>
+             <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="410.0" cy="1101.0" r="2.0"/>
+            </g>
+           </g>
+           <line stroke="black" stroke-width="1.0" x1="221.0" y1="1086.0" x2="276.0" y2="1047.0"/>
+           <g>
+            <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="276.0" cy="1047.0" r="2.0"/>
+            <line stroke="black" stroke-width="1.0" x1="276.0" y1="1047.0" x2="459.0" y2="1027.0"/>
+            <g>
+             <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="459.0" cy="1027.0" r="2.0"/>
+            </g>
+            <line stroke="black" stroke-width="1.0" x1="276.0" y1="1047.0" x2="461.0" y2="1064.0"/>
+            <g>
+             <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="461.0" cy="1064.0" r="2.0"/>
+            </g>
+           </g>
+          </g>
+          <line stroke="black" stroke-width="1.0" x1="143.0" y1="1029.0" x2="248.0" y2="973.0"/>
+          <g>
+           <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="248.0" cy="973.0" r="2.0"/>
+           <line stroke="black" stroke-width="1.0" x1="248.0" y1="973.0" x2="434.0" y2="954.0"/>
+           <g>
+            <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="434.0" cy="954.0" r="2.0"/>
+           </g>
+           <line stroke="black" stroke-width="1.0" x1="248.0" y1="973.0" x2="442.0" y2="991.0"/>
+           <g>
+            <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="442.0" cy="991.0" r="2.0"/>
+           </g>
+          </g>
+         </g>
+        </g>
+        <line stroke="black" stroke-width="1.0" x1="66.0" y1="917.0" x2="173.0" y2="863.0"/>
+        <g>
+         <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="173.0" cy="863.0" r="2.0"/>
+         <line stroke="black" stroke-width="1.0" x1="173.0" y1="863.0" x2="452.0" y2="843.0"/>
+         <g>
+          <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="452.0" cy="843.0" r="2.0"/>
+         </g>
+         <line stroke="black" stroke-width="1.0" x1="173.0" y1="863.0" x2="475.0" y2="881.0"/>
+         <g>
+          <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="475.0" cy="881.0" r="2.0"/>
+         </g>
+        </g>
+       </g>
+       <line stroke="black" stroke-width="1.0" x1="58.0" y1="847.0" x2="113.0" y2="780.0"/>
+       <g>
+        <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="113.0" cy="780.0" r="2.0"/>
+        <line stroke="black" stroke-width="1.0" x1="113.0" y1="780.0" x2="300.0" y2="753.0"/>
+        <g>
+         <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="300.0" cy="753.0" r="2.0"/>
+         <line stroke="black" stroke-width="1.0" x1="300.0" y1="753.0" x2="489.0" y2="771.0"/>
+         <g>
+          <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="489.0" cy="771.0" r="2.0"/>
+         </g>
+         <line stroke="black" stroke-width="1.0" x1="300.0" y1="753.0" x2="491.0" y2="733.0"/>
+         <g>
+          <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="491.0" cy="733.0" r="2.0"/>
+         </g>
+        </g>
+        <line stroke="black" stroke-width="1.0" x1="113.0" y1="780.0" x2="456.0" y2="807.0"/>
+        <g>
+         <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="456.0" cy="807.0" r="2.0"/>
+        </g>
+       </g>
+      </g>
+      <line stroke="black" stroke-width="1.0" x1="47.0" y1="679.0" x2="544.0" y2="697.0"/>
+      <g>
+       <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="544.0" cy="697.0" r="2.0"/>
+      </g>
+     </g>
+     <line stroke="black" stroke-width="1.0" x1="41.0" y1="642.0" x2="52.0" y2="522.0"/>
+     <g>
+      <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="52.0" cy="522.0" r="2.0"/>
+      <line stroke="black" stroke-width="1.0" x1="52.0" y1="522.0" x2="64.0" y2="577.0"/>
+      <g>
+       <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="64.0" cy="577.0" r="2.0"/>
+       <line stroke="black" stroke-width="1.0" x1="64.0" y1="577.0" x2="412.0" y2="550.0"/>
+       <g>
+        <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="412.0" cy="550.0" r="2.0"/>
+       </g>
+       <line stroke="black" stroke-width="1.0" x1="64.0" y1="577.0" x2="269.0" y2="605.0"/>
+       <g>
+        <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="269.0" cy="605.0" r="2.0"/>
+        <line stroke="black" stroke-width="1.0" x1="269.0" y1="605.0" x2="393.0" y2="586.0"/>
+        <g>
+         <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="393.0" cy="586.0" r="2.0"/>
+        </g>
+        <line stroke="black" stroke-width="1.0" x1="269.0" y1="605.0" x2="436.0" y2="624.0"/>
+        <g>
+         <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="436.0" cy="624.0" r="2.0"/>
+        </g>
+       </g>
+      </g>
+      <line stroke="black" stroke-width="1.0" x1="52.0" y1="522.0" x2="84.0" y2="466.0"/>
+      <g>
+       <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="84.0" cy="466.0" r="2.0"/>
+       <line stroke="black" stroke-width="1.0" x1="84.0" y1="466.0" x2="568.0" y2="513.0"/>
+       <g>
+        <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="568.0" cy="513.0" r="2.0"/>
+       </g>
+       <line stroke="black" stroke-width="1.0" x1="84.0" y1="466.0" x2="106.0" y2="418.0"/>
+       <g>
+        <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="106.0" cy="418.0" r="2.0"/>
+        <line stroke="black" stroke-width="1.0" x1="106.0" y1="418.0" x2="139.0" y2="457.0"/>
+        <g>
+         <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="139.0" cy="457.0" r="2.0"/>
+         <line stroke="black" stroke-width="1.0" x1="139.0" y1="457.0" x2="399.0" y2="477.0"/>
+         <g>
+          <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="399.0" cy="477.0" r="2.0"/>
+         </g>
+         <line stroke="black" stroke-width="1.0" x1="139.0" y1="457.0" x2="459.0" y2="440.0"/>
+         <g>
+          <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="459.0" cy="440.0" r="2.0"/>
+         </g>
+        </g>
+        <line stroke="black" stroke-width="1.0" x1="106.0" y1="418.0" x2="197.0" y2="376.0"/>
+        <g>
+         <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="197.0" cy="376.0" r="2.0"/>
+         <line stroke="black" stroke-width="1.0" x1="197.0" y1="376.0" x2="218.0" y2="349.0"/>
+         <g>
+          <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="218.0" cy="349.0" r="2.0"/>
+          <line stroke="black" stroke-width="1.0" x1="218.0" y1="349.0" x2="375.0" y2="330.0"/>
+          <g>
+           <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="375.0" cy="330.0" r="2.0"/>
+          </g>
+          <line stroke="black" stroke-width="1.0" x1="218.0" y1="349.0" x2="399.0" y2="366.0"/>
+          <g>
+           <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="399.0" cy="366.0" r="2.0"/>
+          </g>
+         </g>
+         <line stroke="black" stroke-width="1.0" x1="197.0" y1="376.0" x2="349.0" y2="403.0"/>
+         <g>
+          <circle stroke="black" stroke-width="0.5" fill="#aaffff" cx="349.0" cy="403.0" r="2.0"/>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

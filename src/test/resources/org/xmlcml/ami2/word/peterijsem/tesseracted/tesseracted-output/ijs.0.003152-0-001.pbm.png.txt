@@ -1,0 +1,44 @@
+100
+
+0.05
+
+100 Chelativorans oligotrophicus LPM-4T (EF457242)
+56 Che/ativorans multitrophicus DSM 9103T(EF457243)
+BNC1 (NC_008254)
+Aminobacter aminovorans DSM 7048T (A101 1 759)
+69 Aminobacter aminovorans DSM 6450 (AJ01 1762)
+64 Aminobacter ciceronei IMB-1T (AF034798)
+100 Aminobacter aganoens/s DSM 7051 T (AJO1 1760)
+53 Aminobacter niigataensis DSM 7050T (AJO1 1 761)
+Aminobacter lissarensis CC495T (AF107722)
+Mesorhizobium chacoense PR5T (AJ278249)
+9 Mesorhizobium Ciceri UPM-Ca7T (U07934)
+Mesorhizobium loti ATCC 33669T (D14514)
+73 Mesorhizobium temperatum SDWO18T (AF508208)
+Mesorhizobium mediterraneum UPM-Ca36T (L38825)
+Mesorhizobium tianshanense A-1 BST (U71 O79)
+_ I Mesorhizobium huakuii NBRC 15243T (D13431)
+65 Mesorhizob/um plur/farium LMG 1 1892T (Y14158)
+72 Mesorhizobium septentriona/e SDW014T (AF508207)
+100 Mesorhizobium amorphae ACCC 19665T (AFO41442)
+Mesorhizobium albiziae CCBAU 61 1 58T (D0100066)
+Mesorh/zobium thiogangeticum SJTT (AJ864462)
+97 Pseudaminobacter defluvii THI O51T (D32248)
+87 Pseudam/nobacter salicy/atoxidans BN1 2T (AFO72542)
+100 Def/uvibacter lusatiensis DSM 1 1099T (AJ132378)
+Aquamicrobium def/uvii DSM 1 1603T (Y15403)
+100 Sinorhizobium fred/i ATCC 35423T (D14516)
+S/norhizobium americanum CFNEI 156T (AF506513)
+Agrobacter/um tumefaciens C4 (AF508093)
+Rhizobium ga/egae ATCC 43677T (D1 1343)
+100 Rhizobium tropici CIAT 899T (U89832)
+100 Rhizobium leguminosarum ATCC 10004T (AY509899)
+Rhizobium et/i CFN 42 (U28916)
+100 Azospiri/lum lipoferum ATCC 29707 (M59061)
+Azosp/ri/lum bras/lense ATCC 29145 (AY3241 10)
+
+98
+
+89
+65
+

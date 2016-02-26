@@ -116,7 +116,6 @@ public class ClinicalTrialsDemo {
     "trialstemp/http_www.trialsjournal.com_content_16_1_9/",
 	"--w.words", WordArgProcessor.WORD_FREQUENCIES,
 	"--w.stopwords", STOPWORDS_TXT,
-	"--w.wordlengths", "2", "12",
 	"--w.wordtypes", "acronym",
 		};
 		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
@@ -137,7 +136,7 @@ public class ClinicalTrialsDemo {
 	private static void runRegex() throws IOException {
 //		FileUtils.copyDirectory(new File("trialsdata/"), new File("trialstemp/"));
 		String[] args = {
-				"-q", "trialstemp/", // contains 86 CMDir files
+				"-q", "trialstemp/", // contains 86 CTree files
 				"-i", "scholarly.html",
 				"-o", "results.xml",
 				"--context", "40", "40",

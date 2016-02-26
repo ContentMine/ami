@@ -2,11 +2,15 @@ package org.xmlcml.ami2.plugins.species;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
+import org.xmlcml.ami2.dictionary.gene.HGNCDictionary;
+import org.xmlcml.ami2.dictionary.species.TaxDumpGenusDictionary;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.DefaultSearcher;
+import org.xmlcml.cmine.files.ResultsElement;
 
 /** 
  * Processes commandline arguments.
@@ -18,7 +22,6 @@ public class SpeciesArgProcessor extends AMIArgProcessor {
 	
 	public static final Logger LOG = Logger.getLogger(SpeciesArgProcessor.class);
 	private Boolean expandAbbreviations;
-	
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -51,18 +54,24 @@ public class SpeciesArgProcessor extends AMIArgProcessor {
 	}
 
 	public void runExtractSpecies(ArgumentOption option) {
-		searchHtmlParaElements();
+		searchSectionElements();
 	}
 
 	public void outputSpecies(ArgumentOption option) {
-		getOrCreateContentProcessor().outputResultElements(option, this);
+		getOrCreateContentProcessor().outputResultElements(option.getName(), this);
 	}
 	
 	public void parseSummary(ArgumentOption option, ArgIterator argIterator) {
 //		summaryMethods = argIterator.getStrings(option);
 		LOG.debug("summary methods not yet written");
 	}
-	
+
+	@Override
+	public void finalLookup(ArgumentOption option) {
+		LOG.debug("final species lookup NYI; please add code: names are: "+lookupNames+"; override");
+	}
+
+
 	public void finalSummary(ArgumentOption option) {
 		LOG.debug("final summary not yet written");
 	}
@@ -78,10 +87,25 @@ public class SpeciesArgProcessor extends AMIArgProcessor {
 	 * @param namedPattern 
 	 * @return subclassed Plugin
 	 */
-	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
+	protected AMISearcher createSearcher(NamedPattern namedPattern) {
 		return new SpeciesSearcher(this, namedPattern);
 	}
 
+	@Override
+	protected ResultsElement createResultsElement() {
+		return new SpeciesResultsElement();
+	}
+
+	/** currently only HGNC hardcoded but will allow dictionary choice later
+	 * 
+	 * @return
+	 */
+	public DefaultAMIDictionary getOrCreateCurrentDictionary() {
+		if (currentDictionary == null) {
+			currentDictionary = new TaxDumpGenusDictionary();
+		}
+		return currentDictionary;
+	}
 
 
 }

@@ -50,11 +50,11 @@ public class SequenceArgProcessor extends AMIArgProcessor {
 	}
 
 	public void runExtractSequences(ArgumentOption option) {
-		searchHtmlParaElements();
+		searchSectionElements();
 	}
 
 	public void outputSequences(ArgumentOption option) {
-		getOrCreateContentProcessor().outputResultElements(option, this);
+		getOrCreateContentProcessor().outputResultElements(option.getName(), this);
 	}
 	
 	public void parseSummary(ArgumentOption option, ArgIterator argIterator) {

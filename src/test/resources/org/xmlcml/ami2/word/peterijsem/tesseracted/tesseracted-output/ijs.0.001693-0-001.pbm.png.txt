@@ -1,0 +1,166 @@
+80
+
+0.01
+
+100
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+100
+
+ 
+
+ 
+
+100
+
+ 
+
+  
+ 
+  
+ 
+  
+ 
+
+_— Methy/obacterium zatmam'i NCIMB 12243T (L20804)
+Methylobacterium podarium FM4T (AF514774)
+Methy/obacterium chloromethanicum CM4T (AF198624)
+
+Methy/obacterium Iusitanum RXMT (AY009403)
+
+LMethy/obacterium populi BJ001T (AY251818)
+Methylobacterium thiocyanatum ALL/SCN-PT (U58018)
+
+Methy/obacterium aminovorans CCM 4612T (AJ851086)
+
+— Methy/obacterium extorquens JCM 2802T (D32224)
+
+— Methylobacterium rhodes/anum JCM 2810 (D32228)
+
+Methylobacterium suomiense F20T (AY009404)
+
+Methy/obacterium salsuginis MRT (EF015478)
+
+Methylobacterlum dichloromethanicum DM4T (AF227128)
+
+Methylobacterium rhodinum JCM 2811T (D32229)
+
+99 — Methylobacterium adhaesivum AR27T (AM040156)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Methy/obacterium iners 53173-33T (EF174497)
+
+— Methylobacterium organophilum JCM 2833T (D32226)
+
+ 
+
+ 
+
+Methy/obacterium jeotgali SZROGl-QT (DQ471331)
+
+ 
+
+59
+
+ 
+
+ 
+
+ 
+
+ 
+
+Methy/obacterium h/spanicum GP34T (AJ635304)
+52 Methy/obacterium aero/atum 54133-11T (EF174498)
+
+64 Methy/obacterium mesophi/icum JCM 2829T (D32225)
+86 Methylobacterium fujisawaense DSM 5686T (AJ250801)
+
+85 Methylobacterium radioto/erans JCM 2831T (D32227)
+Methylobacterium phyllosphaerae CBMB27T (EF126746)
+54 Methylobacterium oryzae CBMBZOT (AY683045)
+
+Methylobacterium variabi/e GR3T (AJ851087)
+7 Methy/obacterium aquat/cum GR16T (AJ635303)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+88
+
+ 
+
+ 
+
+100
+
+ 
+
+ 
+
+— Methy/obacterium platani PMBOZT (EF426729)
+
+— Methy/obacterium isbi/iense AR24T (AJ888239)
+
+Methylobacterium nodulans ORS 2060T (AF220783)
+Methylorhabdus multlvorans DM13T (AF004845)
+Albibacter methy/ovorans DM10T (AF273213)
+
+Methylopi/a capsu/ata |M1T (AF004844)
+
+Methy/ocystis parvus OBBPT (M29026)
+Methy/osinus trichosporium OBSbT (M29024)
+

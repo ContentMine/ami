@@ -1,0 +1,60 @@
+0.01
+
+97
+
+100
+
+96
+53
+
+91
+
+99
+
+88
+
+100
+
+73 A. gerencseriae DSM 6844T (X80414)
+
+51 A. israelii CIP 103259T (X82450)
+A. massiliensis 4401292T (EF558367)
+57 A. on'cola CCUG 46090T (AJ507295)
+81 A. dental/s R18165T (AJ697609)
+82 A. ruminicola B71T (DQO72005)
+
+A. denticolens NCTC 11490T (X80412)
+A. catuli CCUG 41709T (AJ276805)
+A. howe/lii NCTC 11636T(X80411)
+A. slackii CCUG 32792T (AJ234066)
+
+1. A. bowdenii CCUG 37421T (AJ234039)
+
+— A. naeslundii DSM 43013T (X53226)
+100 — A. viscosus DSM 43327T (M33908)
+A. urogenitalis CCUG 28744 (AJ243893)
+A. Davis NCTC 11535T (X81061)
+A. radicidentis CCUG 36733T (AJ251986)
+A. graevenitzii CCUG 27294T (AJ540309)
+A. nasicola CCUG 46092T (AJ508455)
+A. hongkongensis HKU8T (AF433168)
+A. marimammalium CCUG 41710T (AJ276405)
+A. canis CCUG 41706T (AJ243891)
+A. radingae APL1T (X78719)
+A. georgiae DSM 6843T (X80413)
+A. odontolyticus CCUG 20536T (AJ234040)
+A. cardiffensis CCUG 44997T (AJ421779)
+A. vaccimaxillae R10176T (AJ427451)
+A. tun'censis APL10T (X78720)
+A. funkei CCUG 42773T (AJ404889)
+A. hyovaginalis NCFB 2983T (X69616)
+A. suimastitidis CCUG 3927GT (AJ277385)
+A. coleocanis CCUG 41708T (AJ249326)
+A. europaeus CCUG 32789 N (AM084230)
+
+ 
+
+A. neuii subsp. anitratus DSM 8577T (AM084229)
+100 A. neuii subsp. neuii DSM 85761(AM084228)
+Varibaculum cambn'ense CCUG 44998T (AM084231)
+

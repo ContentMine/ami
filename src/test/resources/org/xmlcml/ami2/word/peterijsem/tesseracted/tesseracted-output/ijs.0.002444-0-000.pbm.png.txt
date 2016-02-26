@@ -1,0 +1,51 @@
+98
+
+76
+
+0.02
+
+73
+
+86
+
+100
+
+ 
+
+ 
+
+Hymenobacter riguiWPCB131T (DQ089669)
+
+   
+   
+  
+  
+ 
+
+Hymenobacter Xinjiangensis X2-1gT(D0888329)
+Hymenobacter gelipurpurascens Txg1T(Y18836)
+Hymenobacter actinosc/erus CCUG 39621 T (Y1 7356)
+Hymenobacter aerophi/us |/26-Cor1 T (AJ276901)
+Hymenobacter roseosalivan‘us AA—718T(Y18833)
+Hymenobacter norwichensis NS/SOT (AJ 549285)
+Hymenobacter chitin/vorans Txc1 T (Y18837)
+Hymenobacter daecheongensis Dae14T (EU370958)
+Hymenobacter soli PB17T (AB251884)
+
+K—Hymenobacter ocel/atus Txo1 T (Y18838)
+
+100
+
+Adhaeribacter aquaticus MBRG1.5T(AJ626894)
+Persicobacter diff/uens NCIMB 1402T (D12660)
+Reichenbachie/Ia agariperforans KMM 3525T (AB058919)
+Dyadobacter fermentans NS114T(AF137029)
+Rune/la slithyformis ATCC 2593GT (M62786)
+Flectobacil/us major ATCC 29496T (M62787)
+Flexibacter ﬂex/[is ATCC 23079T (M62794)
+Cytophaga hutchinsonii DSM 1761 T (D12663)
+Sporocytophaga myxococcoides DSM 11118T (AJ310654)
+Pedobacter heparinus DSM 2366T (AJ438172)
+Sphingobacterium spiritivorum DSM 2582 (AJ459411)
+Flavobacterium aquatile ATCC 11947T (M62797)
+

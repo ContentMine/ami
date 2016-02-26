@@ -1,15 +1,17 @@
 package org.xmlcml.ami2.plugins.word;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
-
-import nu.xom.Attribute;
-import nu.xom.IllegalCharacterDataException;
+import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.tokens.LuceneUtils;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ResultElement;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.cmine.files.ResultsElementList;
@@ -19,6 +21,9 @@ import com.google.common.collect.ImmutableSortedMultiset;
 import com.google.common.collect.Multiset;
 import com.google.common.collect.Multiset.Entry;
 import com.google.common.collect.Multisets;
+
+import nu.xom.Attribute;
+import nu.xom.IllegalCharacterDataException;
 
 public class WordCollectionFactory {
 	private static final Logger LOG = Logger.getLogger(WordCollectionFactory.class);
@@ -44,8 +49,7 @@ public class WordCollectionFactory {
 	private static final int DEFAULT_MAX_RAW_WORD_LENGTH = 99999;
 	
 	private WordSetWrapper stopwords;
-	private List<String> currentWords;
-	private WordArgProcessor wordArgProcessor;
+	private AMIArgProcessor amiArgProcessor;
 	private List<String> abbreviations;
 	private List<String> capitalized;
 	private int minCountInSet;
@@ -58,8 +62,8 @@ public class WordCollectionFactory {
 	private WordResultsElement aggregatedFrequenciesElement;
 	private WordResultsElement booleanFrequenciesElement;
 
-	protected WordCollectionFactory(WordArgProcessor wordArgProcessor) {
-		this.wordArgProcessor = wordArgProcessor;
+	public WordCollectionFactory(AMIArgProcessor argProcessor) {
+		this.amiArgProcessor = argProcessor;
 		setDefaults();
 	}
 
@@ -70,51 +74,83 @@ public class WordCollectionFactory {
 	}
 
 	void extractWords() {
-		createWordSets();
-		if (wordArgProcessor.getChosenMethods().contains(WordArgProcessor.WORD_LENGTHS)) {
-			wordArgProcessor.addResultsElement(createWordLengthsResultsElement());
+		List<String> words = createWordList();
+		if (words == null) {
+			amiArgProcessor.TREE_LOG().warn("no words found to extract");
+			System.err.print("!");
+			return;
 		}
-		if (wordArgProcessor.getChosenMethods().contains(WordArgProcessor.WORD_FREQUENCIES)) {
-			wordArgProcessor.addResultsElement(getWordFrequencies());
+		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
+		List<String> chosenMethods = wordArgProcessor.getChosenMethods();
+//		LOG.debug("chosen methods: "+chosenMethods);
+		if (chosenMethods.contains(WordArgProcessor.WORD_LENGTHS)) {
+			ResultsElement resultsElement = createWordLengthsResultsElement(words);
+			wordArgProcessor.addResultsElement(resultsElement);
 		}
+		if (chosenMethods.contains(WordArgProcessor.WORD_FREQUENCIES) || chosenMethods.contains(WordArgProcessor.FREQUENCIES)) {
+			ResultsElement resultsElement = getWordFrequencies(words);
+			wordArgProcessor.addResultsElement(resultsElement);
+		}
+//		if (chosenMethods.contains(WordArgProcessor.WORD_SEARCH) || chosenMethods.contains(WordArgProcessor.SEARCH)) {
+//			ResultsElement resultsElement = runSearch(words);
+//			wordArgProcessor.addResultsElement(resultsElement);
+//		}
 	}
 
-	private void createWordSets() {
-		CMDir currentCMDir = wordArgProcessor.getCurrentCMDir();
+	public List<String> createWordList() {
+		CTree currentCTree = amiArgProcessor.getCurrentCTree();
 		List<String> rawWords = null;
-		if (currentCMDir != null) {
-			if (currentCMDir.hasScholarlyHTML()) {
-				rawWords = currentCMDir.extractWordsFromScholarlyHtml();
-			} else if (currentCMDir.hasFulltextPDFTXT()) {
-				rawWords = currentCMDir.extractWordsFromPDFTXT();
+		if (currentCTree != null) {
+			if (currentCTree.hasScholarlyHTML()) {
+				rawWords = currentCTree.extractWordsFromScholarlyHtml();
+			} else if (currentCTree.hasFulltextPDFTXT()) {
+				rawWords = currentCTree.extractWordsFromPDFTXT();
 			} else {
-				LOG.warn("No scholarlyHtml or PDFTXT: "+currentCMDir.getDirectory());
+				String msg = "No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory();
+				amiArgProcessor.TREE_LOG().warn(msg);
+				System.err.print("!");
 			}
 		}
-		createCurrentWords(rawWords);
+		return createTransformedWords(rawWords);
 	}
 
-	private void createCurrentWords(List<String> rawWords) {
+	private List<String> createTransformedWords(List<String> rawWords) {
+		LOG.trace("REFACTOR createTransformedWords");
+		List<String> transformedWords = null;
 		if (rawWords != null) {
-			currentWords = rawWords;
-			if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.ABBREVIATION)) {
-				currentWords = createAbbreviations();
-			} else if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.CAPITALIZED)) {
-				currentWords = createCapitalized();
+			transformedWords = rawWords;
+			if (!(amiArgProcessor instanceof WordArgProcessor)) {
+				LOG.trace("must develop TokenStream for : "+amiArgProcessor);
 			} else {
-				if (wordArgProcessor.getWordCaseList().contains(WordArgProcessor.IGNORE)) {
-					currentWords = toLowerCase(currentWords);
-				}
-			}
-			for (WordSetWrapper stopwordSet : wordArgProcessor.getStopwordSetList()) {
-				currentWords = applyStopwordFilter(stopwordSet, currentWords);
+				transformedWords = transformWordStream(transformedWords);
 			}
 		}
+		return transformedWords;
 	}
 
-	private List<String> createAbbreviations() {
+	private List<String> transformWordStream(List<String> transformedWords) {
+		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
+		if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.ABBREVIATION)) {
+			transformedWords = createAbbreviations(transformedWords);
+		}
+		if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.CAPITALIZED)) {
+			transformedWords = createCapitalized(transformedWords);
+		} 
+		if (wordArgProcessor.getWordCaseList().contains(WordArgProcessor.IGNORE)) {
+			transformedWords = toLowerCase(transformedWords);
+		}
+		for (WordSetWrapper stopwordSet : wordArgProcessor.getStopwordSetList()) {
+			transformedWords = applyStopwordFilter(stopwordSet, transformedWords);
+		}
+		if (wordArgProcessor.getStemming()) {
+			transformedWords = LuceneUtils.applyPorterStemming(transformedWords);
+		}
+		return transformedWords;
+	}
+
+	private List<String> createAbbreviations(List<String> inputWords) {
 		abbreviations = new ArrayList<String>();
-		for (String word : currentWords) {
+		for (String word : inputWords) {
 			if (isAbbreviation(word)) {
 				abbreviations.add(word);
 			}
@@ -122,9 +158,9 @@ public class WordCollectionFactory {
 		return abbreviations;
 	}
 
-	private List<String> createCapitalized() {
+	private List<String> createCapitalized(List<String> inputWords) {
 		capitalized = new ArrayList<String>();
-		for (String word : currentWords) {
+		for (String word : inputWords) {
 			if (isCapitalized(word)) {
 				capitalized.add(word);
 			}
@@ -183,15 +219,15 @@ public class WordCollectionFactory {
 	}
 
 	private List<String> applyStopwordFilter(WordSetWrapper stopwords, List<String> rawWords) {
-		currentWords = new ArrayList<String>();
+		List<String> transformedWords = new ArrayList<String>();
 		for (String word : rawWords) {
 			word = word.trim();
 			if (!stopwords.contains(word.toLowerCase())) {
-				currentWords.add(word);
+				transformedWords.add(word);
 			}
 		}
-		LOG.trace("stopwords "+stopwords.size()+"; current words: "+currentWords.size());
-		return currentWords;
+		LOG.trace("stopwords "+stopwords.size()+"; current words: "+transformedWords.size());
+		return transformedWords;
 	}
 	
 	private List<String> toLowerCase(List<String> words) {
@@ -202,9 +238,9 @@ public class WordCollectionFactory {
 		return newList;
 	}
 
-	private WordResultsElement createWordLengthsResultsElement() {
+	private WordResultsElement createWordLengthsResultsElement(List<String> words) {
 		Multiset<Integer> lengthSet = HashMultiset.create();
-		for (String word : currentWords) {
+		for (String word : words) {
 			lengthSet.add(word.length());
 		}
 		return getWordLengths(lengthSet);
@@ -221,13 +257,13 @@ public class WordCollectionFactory {
 		return lengthsElement;
 	}
 	
-	private WordResultsElement getWordFrequencies() {
+	private WordResultsElement getWordFrequencies(List<String> words) {
 		Multiset<String> wordSet = HashMultiset.create();
-		if (currentWords == null) {
+		if (words == null) {
 			LOG.warn("No current words ");
 			frequenciesElement = null;
 		} else {
-			for (String rawWord : currentWords) {
+			for (String rawWord : words) {
 	//			rawWord = rawWord.toLowerCase(); // normalize case
 				rawWord = rawWord.replaceAll("[\\d+]", ""); // remove numbers
 	//			if (!stopwords.contains(rawWord.toLowerCase()) 
@@ -236,6 +272,7 @@ public class WordCollectionFactory {
 					wordSet.add(rawWord);
 				}
 			}		
+			// these are not completely sorted because several words may have same frequency
 			entriesSortedByCount = getEntriesSortedByCount(wordSet);
 			entriesSortedByValue = getEntriesSortedByValue(wordSet);
 			Iterable<Multiset.Entry<String>> sortedEntries = getSortedEntries();
@@ -248,6 +285,7 @@ public class WordCollectionFactory {
 	private WordResultsElement createFrequenciesElement(
 			Iterable<Multiset.Entry<String>> sortedEntries) {
 		frequenciesElement = new WordResultsElement(FREQUENCIES_ATT);
+		List<WordResultElement> frequenciesElementList = new ArrayList<WordResultElement>();
 		for (Entry<String> entry : sortedEntries) {
 			int count = +entry.getCount();
 			if (count < minCountInSet) continue;
@@ -259,9 +297,59 @@ public class WordCollectionFactory {
 				continue;
 			}
 			frequencyElement.addAttribute(new Attribute(WordResultElement.COUNT_ATT, String.valueOf(count)));
+			frequenciesElementList.add(frequencyElement);
+		}
+		if (COUNT2.equals(sortControl)) {
+			frequenciesElementList = sortByValue(frequenciesElementList);
+		}
+		for (WordResultElement frequencyElement : frequenciesElementList) {
+//			LOG.debug(frequencyElement.toXML());
 			frequenciesElement.appendChild(frequencyElement);
 		}
 		return frequenciesElement;
+	}
+
+	private List<WordResultElement> sortByValue(List<WordResultElement> frequenciesElementList) {
+		// assume already sorted by count
+		List<WordResultElement> newList = new ArrayList<WordResultElement>();
+		int lastCount = -1;
+		List<List<WordResultElement>> sameCountListList = new ArrayList<List<WordResultElement>>();
+		List<WordResultElement> sameCountList = null;
+		for (WordResultElement wordResultElement : frequenciesElementList) {
+			int count = wordResultElement.getCount();
+			if (count != lastCount) {
+				sameCountList = new ArrayList<WordResultElement>();
+				sameCountListList.add(sameCountList);
+				lastCount = count;
+			} 
+			sameCountList.add(wordResultElement);
+		}
+		for (List<WordResultElement> sameCountList0 : sameCountListList) {
+			sameCountList0 = sortByValue0(sameCountList0);
+//			LOG.debug("count: "+sameCountList0.size()+": freq "+sameCountList0.get(0).getCount());
+			for (WordResultElement resultElement : sameCountList0) {
+//				LOG.debug(">adding> "+resultElement.toXML());
+				newList.add(resultElement);
+			}
+		}
+		return newList;
+	}
+
+	private List<WordResultElement> sortByValue0(List<WordResultElement> sameCountList0) {
+		List<WordResultElement> newList = new ArrayList<WordResultElement>();
+		Map<String, WordResultElement> sameCountElementByValue = new HashMap<String, WordResultElement>();
+		List<String> words = new ArrayList<String>();
+		for (WordResultElement sameCountElement : sameCountList0) {
+			String word = sameCountElement.getWord();
+			words.add(word);
+			sameCountElementByValue.put(word, sameCountElement);
+		}
+		Collections.sort(words);
+		for (String word : words) {
+			WordResultElement resultElement = sameCountElementByValue.get(word);
+			newList.add(resultElement);
+		}
+		return newList;
 	}
 
 	/** convenience method (for my memory!) */
@@ -275,6 +363,10 @@ public class WordCollectionFactory {
 		return Multisets.copyHighestCountFirst(wordSet).entrySet();
 	}
 
+	/** sort by count or value, depends on sortControl
+	 * 
+	 * @return
+	 */
 	private Iterable<Multiset.Entry<String>> getSortedEntries() {
 		Iterable<Multiset.Entry<String>> sortedEntries = null;
 		if (sortControl.equals(COUNT2)) {
@@ -282,7 +374,6 @@ public class WordCollectionFactory {
 		} else if (sortControl.equals(VALUE)) {
 			sortedEntries = entriesSortedByValue;
 		}
-//		Iterable<Multiset.Entry<String>> sortedEntries = entriesSortedByValue;
 		return sortedEntries;
 	}
 
@@ -314,9 +405,9 @@ public class WordCollectionFactory {
 		return stopwords;
 	}
 
-	public List<String> getCurrentWords() {
-		return currentWords;
-	}
+//	public List<String> getCurrentWords() {
+//		return currentWords;
+//	}
 
 	public List<String> getAbbreviations() {
 		return abbreviations;

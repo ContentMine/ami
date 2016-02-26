@@ -1,0 +1,23 @@
+<nexml xmlns="http://www.nexml.org/2009" xmlns:nex="http://www.nexml.org/2009"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<otus>
+		<otu id="id4" />
+		<otu id="id5" />
+		<otu id="id6" />
+		<otu id="id7" />
+	</otus>
+	<trees>
+		<tree>
+			<node id="node1" />
+			<node id="node2" />
+			<node id="node3" />
+			<node id="node4" otu="id4" />
+			<node id="node5" otu="id5" />
+			<node id="node6" otu="id6" />
+			<edge source="node1" target="node2" id="edge12" />
+			<edge source="node2" target="node4" id="edge24" />
+			<edge source="node2" target="node5" id="edge25" />
+			<edge target="node6" id="edge36" source="node1" />
+		</tree>
+	</trees>
+</nexml>

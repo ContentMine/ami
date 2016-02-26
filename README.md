@@ -1,5 +1,7 @@
 # AMI
 
+[2015-09-23: This is the current active repository, but will move to https://github.com/ContentMine/ami/ in the near future ].
+
 AMI provides a generic infrastructure where plugins can search, index or transform structured documents on a high-through basis. The typical input is structured, normalized, tagged XHTML, possibly containing (or linked to) SVG and PNG files. The plugins are designed to analyse text or graphics or a combination according to the discipline. 
 
 ## Historical note and obsoletion

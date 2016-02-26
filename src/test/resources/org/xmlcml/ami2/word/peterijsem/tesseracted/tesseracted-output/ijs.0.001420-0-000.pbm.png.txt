@@ -1,0 +1,84 @@
+0.005
+
+75
+
+5‘1
+100
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+85
+
+ 
+
+ 
+
+ 
+
+ 
+
+67
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+98
+
+ 
+
+73
+
+ 
+
+P. chlororaphis IAM 12354T (084011)
+P. ﬂuorescens DSM 50090T (276662)
+P. syringae LMG 1247T (276669)
+
+P. putida DSM 291T (276667)
+
+_|_—P. parafu/va AJ 2129T (ABO60132)
+P. p/ecoglossicida FPC 951T (AB009457)
+
+P. nitroreducens IAM 1439T (084021)
+
+P. stutzeri IAM 12668T (D84024)
+
+P. aeruginosa LMG 1242T (276651)
+
+P. Iuteo/a IAM 13000T (D84002)
+P. pohangensis H3—R18T (D0339144)
+P. pachastreI/ae KMM 330T (AB125366)
+
+99
+
+ 
+
+Strain 83-3T (EU286805)
+‘P. denitriﬂcans‘ IAM 12023 (ABOZ1419)
+P. pertucinogena IFO 14163T (AB021380)
+

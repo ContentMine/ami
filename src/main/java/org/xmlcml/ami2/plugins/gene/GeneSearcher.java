@@ -1,23 +1,17 @@
 package org.xmlcml.ami2.plugins.gene;
 
-import java.util.List;
-
-import nu.xom.Element;
-
 import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.ResultElement;
-import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.html.HtmlP;
+import org.xmlcml.cmine.lookup.DefaultStringDictionary;
+
+import nu.xom.Element;
 
 public class GeneSearcher extends AMISearcher {
 
 	
-	public static final Logger LOG = Logger.getLogger(GeneSearcher.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -26,7 +20,12 @@ public class GeneSearcher extends AMISearcher {
 		super(argProcessor, namedPattern);
 	}
 
+	public GeneSearcher(AMIArgProcessor argProcessor, DefaultStringDictionary dictionary) {
+		super(argProcessor, dictionary);
+	}
+
 	@Override 
+	// this will probably disappear
 	public String getValue(Element xomElement) {
 		String xmlString = xomElement.toXML();
 		// this is ucky, but since we know the HTML is normalized it's probably OK
@@ -44,26 +43,6 @@ public class GeneSearcher extends AMISearcher {
 		xmlString = xmlString.replaceAll("<div>", "");
 		xmlString = xmlString.replaceAll("</div>", "");
 		return xmlString;
-	}
-
-	@Override
-	public ResultsElement search(List<HtmlP> pElements) {
-		ResultsElement resultsElement = new GeneResultsElement();
-		for (HtmlP pElement : pElements) {
-			String xmlString = getValue(pElement);
-			LOG.trace(xmlString);
-			List<ResultElement> resultElementList = this.search(xmlString);
-			for (ResultElement resultElement : resultElementList) {
-				resultsElement.appendChild(resultElement);
-			}
-		}
-		List<String> exactList = resultsElement.getExactList();
-//		LinneanNamer linneanNamer = new LinneanNamer();
-//		List<String> matchList = linneanNamer.expandAbbreviations(exactList);
-//		LOG.trace("EXACT "+exactList+"; MATCH "+matchList);
-//		resultsElement.addMatchAttributes(matchList);
-		
-		return resultsElement;
 	}
 
 	/**

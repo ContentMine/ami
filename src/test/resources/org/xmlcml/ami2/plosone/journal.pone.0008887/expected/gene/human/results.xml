@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <results title="human">
- <result pre="the hepatocyte nuclear factor 4α ( " exact="HNF4A" post=") gene, a well-known diabetes candidate gene not p" name="human"/>
- <result pre="utero, and other loci encoding " exact="HNF4A" post="-interacting proteins. " name="human"/>
- <result pre="at multiple sites within the known " exact="IGF2" post=" differentially methylated region (DMR) [25]. Simi" name="human"/>
- <result pre="ylation in subjects with IUGR (the " exact="IGF2" post=" differentially-methylated region (DMR), the H1" name="human"/>
- <result pre="&gt; DMR and promoter region, and the " exact="KCNQ1" post=" DMR) [25], [45] but found no detectable differenc" name="human"/>
- <result pre="on the hepatic nuclear factor 4α ( " exact="HNF4A" post="), a transcription factor that has been strongly i" name="human"/>
- <result pre=" factors and growth hormones (e.g. " exact="NCOR2" post=", GH1, TGFβ1, HNF4A), and " name="human"/>
- <result pre="rowth hormones (e.g. NCOR2, " exact="GH1" post=", TGFβ1, HNF4A), and TP53 whi" name="human"/>
- <result pre="OR2, GH1, TGFβ1, " exact="HNF4A" post="), and TP53 which shows altered DNA methyla" name="human"/>
- <result pre=", TGFβ1, HNF4A), and " exact="TP53" post=" which shows altered DNA methylation in renal tiss" name="human"/>
- <result pre="n was suspected. We focused on the " exact="HNF4A" post=" locus, where HELP data showed evidence for change" name="human"/>
- <result pre="ferences in DNA methylation at the " exact="HNF4A" post=" promoter were confirmed by MassArray, with the in" name="human"/>
- <result pre="y in this pathway analysis was the " exact="HNF4A" post=" gene, already implicated in T2DM [49], but not pr" name="human"/>
- <result pre="lation targeted to only one of the " exact="HNF4A" post=" promoters, supporting a model of isoform variatio" name="human"/>
- <result pre="ound to be related functionally to " exact="HNF4A" post=" and also include ATG5 and TADA3L, w" name="human"/>
- <result pre="y to HNF4A and also include " exact="ATG5" post=" and TADA3L, which may have roles in mediat" name="human"/>
- <result pre="&gt; and also include ATG5 and " exact="TADA3L" post=", which may have roles in mediating susceptibility" name="human"/>
- <result pre="g susceptibility to later disease. " exact="ATG5" post=" is an essential component of autophagy that, when" name="human"/>
- <result pre="ced cell death [55]. We found that " exact="ATG5" post=" is relatively methylated in IUGR at a CpG island-" name="human"/>
- <result pre="death. Transcriptional adaptor 3 ( " exact="TADA3L" post=") is associated with and is required for full p53 " name="human"/>
- <result pre=", and p53-mediated apoptosis [56]. " exact="TADA3L" post=" isoforms are highly expressed in CD34+ stem cells" name="human"/>
+ <result pre="the hepatocyte nuclear factor 4α ( " exact="HNF4A" post=") gene, a well-known diabetes candidate gene not p" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="utero, and other loci encoding " exact="HNF4A" post="-interacting proteins. " xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="at multiple sites within the known " exact="IGF2" post=" differentially methylated region (DMR) [25]. Simi" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="ylation in subjects with IUGR (the " exact="IGF2" post=" differentially-methylated region (DMR), the H1" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="&gt; DMR and promoter region, and the " exact="KCNQ1" post=" DMR) [25], [45] but found no detectable differenc" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="on the hepatic nuclear factor 4α ( " exact="HNF4A" post="), a transcription factor that has been strongly i" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre=" factors and growth hormones (e.g. " exact="NCOR2" post=", GH1, TGFβ1, HNF4A), and " xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="rowth hormones (e.g. NCOR2, " exact="GH1" post=", TGFβ1, HNF4A), and TP53 whi" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="OR2, GH1, TGFβ1, " exact="HNF4A" post="), and TP53 which shows altered DNA methyla" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre=", TGFβ1, HNF4A), and " exact="TP53" post=" which shows altered DNA methylation in renal tiss" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="n was suspected. We focused on the " exact="HNF4A" post=" locus, where HELP data showed evidence for change" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="ferences in DNA methylation at the " exact="HNF4A" post=" promoter were confirmed by MassArray, with the in" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="y in this pathway analysis was the " exact="HNF4A" post=" gene, already implicated in T2DM [49], but not pr" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="lation targeted to only one of the " exact="HNF4A" post=" promoters, supporting a model of isoform variatio" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="ound to be related functionally to " exact="HNF4A" post=" and also include ATG5 and TADA3L, w" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="y to HNF4A and also include " exact="ATG5" post=" and TADA3L, which may have roles in mediat" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="&gt; and also include ATG5 and " exact="TADA3L" post=", which may have roles in mediating susceptibility" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="g susceptibility to later disease. " exact="ATG5" post=" is an essential component of autophagy that, when" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="ced cell death [55]. We found that " exact="ATG5" post=" is relatively methylated in IUGR at a CpG island-" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre="death. Transcriptional adaptor 3 ( " exact="TADA3L" post=") is associated with and is required for full p53 " xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
+ <result pre=", and p53-mediated apoptosis [56]. " exact="TADA3L" post=" isoforms are highly expressed in CD34+ stem cells" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]" name="human"/>
  <result pre=" stem cells [57], but we find that " exact="TADA3L" post=" is relatively methylated in IUGR at a CpG island-" name="human"/>
 </results>
+

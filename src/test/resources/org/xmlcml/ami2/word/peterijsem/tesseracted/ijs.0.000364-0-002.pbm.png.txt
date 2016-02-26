@@ -1,0 +1,80 @@
+ 
+ 
+   
+ 
+   
+   
+  
+   
+  
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+    
+ 
+   
+ 
+  
+
+Human strain ADV244 (EF468686)
+
+100 Pyramidobacter piscolens W5455T (EU309492)
+Human strain ADV746 (EF468688)
+
+Oral clone BA121 (AY005444)
+
+Orangutan faecal clone orang2_aai66011 (EU462629)
+Sheep rumen clone 196.B09 (DQ308572)
+
+Bovine rumen clone P5_M14 (EU382030)
+
+Naked mole—rat faecal clone molerat_aai69f04 (EU463081)
+Swine intestine clone p—4292-4Wa3 (AF371930)
+Human strain ADV403 (EF468687)
+
+Human strain RMA 14551 (DQ412722)
+Anaerobic digestor clone vadinBBO2 (U81658)
+
+Hoatzin crop clone hoa61_11f11 (EU344711)
+100 Oral strain E3_33 (AF481216)
+
+Jonquete/la anthropi ADV 126T (EF436500)
+
+100 Dethiosu/fovibrio russensis DSM 12577 (AF234543)
+Dethiosulfovibrio peptidovorans DSM 11002T (U52817)
+Synergistes jonesii ATCC 49833T (L08066)
+
+100 Anaerobaculum mobile DSM 13181T (AJ243189)
+Anaerobacu/um thermoterrenum DSM 13490T (U50711)
+Thermovirga lien/'1' Ca560314T (DQ071273)
+
+Thermanaerovibrio acidaminovorans DSM 6589T (AF071414)
+Aminomonas paucivovorans DSM 12260T (AFO72581)
+Aminobacterium colombiense DSM 12261T (AF069287)
+Aminobacterium mobile DSM 12262T (AFO73521)
+
+100 Oral clone W028 (AF125202)
+
+Oral clone MCE3_120 (AF481215)
+
+Oral clone D084 (AF125200)
+Oral clone BH007 (AY005447)
+
+Oral clone MCE7_5 (AF481214)
+92 Oral clone 33062 (AY005445)
+
+100
+
+57
+
+  
+
+'—' 100
+0.05
+

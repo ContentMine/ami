@@ -7,12 +7,11 @@ import java.util.Map;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.CMDir;
 import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.html.HtmlP;
 
 /** 
  * Processes commandline arguments.
@@ -58,7 +57,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	}
 
 	public void outputResultElements(ArgumentOption option) {
-		outputResultElementsx(option);
+		outputResultElements(option.getName());
 	}
 
 	// =========================
@@ -73,35 +72,39 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	 * @param compoundRegex
 	 * @return subclassed Plugin
 	 */
-	public RegexSearcher createSearcher(AMIArgProcessor argProcessor, CompoundRegex compoundRegex) {
+	public AMISearcher createSearcher(AMIArgProcessor argProcessor, CompoundRegex compoundRegex) {
 		RegexSearcher regexSearcher = RegexSearcher.createSearcher(argProcessor);
 		regexSearcher.setCompoundRegex(compoundRegex);
 		return regexSearcher;
 	}
 
 
-	/** might need to refactor option to use its name.
+	/** .
 	 * 
-	 * @param option
+	 * @param name of option
 	 */
-	private void outputResultElementsx(ArgumentOption option) {
-		ContentProcessor currentContentProcessor = currentCMDir.getOrCreateContentProcessor();
+	private void outputResultElements(String name) {
+		ContentProcessor currentContentProcessor = currentCTree.getOrCreateContentProcessor();
 		currentContentProcessor.clearResultsElementList();
+		if (resultsByCompoundRegex == null) {
+			LOG.warn("have not run regex (runRegex)");
+			return;
+		}
 		for (CompoundRegex compoundRegex : compoundRegexList) {
 			String regexTitle = compoundRegex.getTitle();
 			ResultsElement resultsElement = resultsByCompoundRegex.get(regexTitle);
 			resultsElement.setTitle(regexTitle);
 			currentContentProcessor.addResultsElement(resultsElement);
 		}
-		currentContentProcessor.createResultsDirectoriesAndOutputResultsElement(option, CMDir.RESULTS_XML);
+		currentContentProcessor.createResultsDirectoriesAndOutputResultsElement(name);
 	}
 
 	private void runRegex() {
-		List<HtmlP> pElements = currentCMDir.extractPElements();
+		ensureSectionElements();
 		resultsByCompoundRegex = new HashMap<String, ResultsElement>();
 		for (CompoundRegex compoundRegex : compoundRegexList) {
-			RegexSearcher regexSearcher = createSearcher(this, compoundRegex);
-			ResultsElement resultsElement = regexSearcher.search(pElements);
+			AMISearcher regexSearcher = createSearcher(this, compoundRegex);
+			ResultsElement resultsElement = regexSearcher.search(sectionElements, createResultsElement());
 			resultsByCompoundRegex.put(compoundRegex.getTitle(), resultsElement);
 		}
 	}

@@ -2,16 +2,14 @@ package org.xmlcml.ami2.plugins.identifier;
 
 import java.util.List;
 
-import nu.xom.Element;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.DefaultSearcher;
+
+import nu.xom.Element;
 
 /** 
  * Processes commandline arguments.
@@ -65,21 +63,13 @@ public class IdentifierArgProcessor extends AMIArgProcessor {
 	}
 
 	public void runExtractIdentifiers(ArgumentOption option) {
-		searchHtmlParaElements();
+		searchSectionElements();
 	}
 
 	public void outputIdentifiers(ArgumentOption option) {
-		getOrCreateContentProcessor().outputResultElements(option, this);
+		getOrCreateContentProcessor().outputResultElements(option.getName(), this);
 	}
 	
 	// =============================
-
-	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
-		AMISearcher defaultSearcher = new AMISearcher(this);
-		defaultSearcher.setNamedPattern(namedPattern);
-		return defaultSearcher;
-	}
-
-
 
 }

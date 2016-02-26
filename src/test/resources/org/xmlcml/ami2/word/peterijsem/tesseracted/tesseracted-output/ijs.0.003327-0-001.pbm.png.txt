@@ -1,0 +1,143 @@
+7%
+
+ 
+
+ 
+
+ 
+
+ 
+
+1000
+
+ 
+
+ 
+
+ 
+
+784
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+994
+
+ 
+
+ 
+
+01
+
+(b)
+
+959
+
+767 Mesorhizobium metallidurans STM 3297 (AM930387)
+993 Mesorhizobium metallidurans STM 3295 (AM930386)
+Mesorhizobium metallidurans STM 3294 (AM930385)
+Mesorhizobium metallidurans STM 3292 (AM930383)
+, Mesorhizobium metallidurans STM 3293 (AM930384)
+Mesorhizobium metallidurans STM 2683T (AM930382)
+7 Mesorhizobium tianshanense USDA 3592T (AJ294368)
+7 Mesorhizobium mediterraneum USDA 3392T (AJ294369)
+Mesorhizobium ciceri USDA 3383T (AJ294367)
+
+ 
+
+ 
+
+7 Mesorhizobium huakuf/ USDA 4779T (AJ294370)
+7 Mesorhizobium amorphae ICMP 15022T (AY494816)
+
+Mesorhizobium Ioti USDA 3471T (AJ294371)
+Mesorhizobium plurifarium ICMP 1364GT (AY494824)
+Mesorhizobium chacoense ICMP 14,587T (AY494825)
+Agrobacterium tumefaciens NCPPB 2437T (AJ294377)
+
+Phyllobacterium myrsinacearum ATCC 43590T (AJ294365)
+Sinorhizob/‘um meliloti USDA 1002T (AJ294382)
+
+Sinorhizobium saheli HAMBI 217 (AJ294380)
+
+Azorhizob/‘um caulinodans USDA 4892T (AJ294363)
+
+Bradyrhizobium japonicum DSM 30131T(AY591555)
+
+1000 Mesorhizobium metallidurans STM 3297 (AM930389)
+753 Mesorhizobium metallidurans STM 3294 (AM930393)
+Mesorhizobium metallidurans STM 3292 (AM930392)
+Mesorhizabium metallidurans STM 3293 (AM930390)
+840 Mesorhizobium metallidurans STM 3310 (AM930391)
+Mesorhizobium metallidurans STM 2683Y (AM930388)
+Mesorhizobium plurifar/um ORS 1032T (AY785350)
+— Mesorhizobium mediterraneum USDA 3392T (AJ294391)
+7 Mesorhizobium lianshanense USDA 3592T (AJ294392)
+Mesorhizobium huakuii USDA 4779T (AJ294394)
+
+  
+ 
+  
+
+770
+
+ 
+
+ 
+
+ 
+
+728
+
+ 
+
+ 
+
+ 
+
+812
+
+Mesorhizobium chacoense STM 2154T (AY785351)
+Mesorhizobium ciceri USDA 3383T (AJ294395)
+Mesorh/zobium amorphae STM 291T (AY785352)
+
+Mesorhizobium Ioti USDA 3471T (AJ294393)
+Sinorhizobium me/i/oti USDA 1002T (AJ294400)
+7 Sinorhizobium saheli HAMBI 217 (AJ294399)
+
+ 
+
+810
+
+ 
+
+859
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+7 Agmbacterium tumefaciens ORS 1351 T (AY785348)
+Phyllobacterium myrsinacearum ATCC 43590T (AJ294387)
+
+ 
+
+Bradyrhizobium japonicum USDA 6T (AJ294388)
+
+0.1
+
+Azorhizobium cau/inodans USDA 4892T (AJ294389)
+
