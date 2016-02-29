@@ -8,6 +8,13 @@ AMI provides a generic infrastructure where plugins can search, index or transfo
 
 AMI has been through 2 major revisions, and most recently has been split into two parts (a) ``Norma`` which processes legacy documents and normalizes HTML (NHTML) and (b) AMI which runs plugins over the NHTML. AMI currently processes PDF, XML, HTML, etc but these will be obsoleted in favour of the output from ``Norma``. 
 
+## Building
+```
+mvn package
+```
+
+After the build, shell scripts and batch files to run plugins are in `target/appassembler/bin/`.  Further documentation is in `docs/`.
+
 ## Plugins
 
 AMI has a plugin architecture where each problem or community has its own plugin. Examples are "species", "sequence", "regex" and soon some chemistry.
