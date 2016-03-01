@@ -20,7 +20,7 @@ import org.xmlcml.cmine.args.ValueElement;
 import org.xmlcml.cmine.args.VersionManager;
 import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
-import org.xmlcml.cmine.files.EuclidSource;
+import org.xmlcml.cmine.files.ResourceLocation;
 import org.xmlcml.cmine.files.ResultsElement;
 import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 import org.xmlcml.cmine.lookup.AbstractLookup;
@@ -46,7 +46,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	
 	private static final String AMI = "ami";
 	private static final String ARG_PROCESSOR = "ArgProcessor";
-//	public static final String RESULTS = "results";
 	protected static String RESOURCE_NAME_TOP = "/org/xmlcml/ami2";
 	protected static String PLUGIN_RESOURCE = RESOURCE_NAME_TOP+"/plugins";
 	private static String ARGS_RESOURCE = PLUGIN_RESOURCE+"/"+"args.xml";
@@ -56,7 +55,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	private Integer[] contextCount = new Integer[] {98, 98};
 	private List<String> params;
 	
-	private XPathProcessor xPathProcessor;
 	private String plugin;
     Map<String,AbstractLookup> lookupInstanceByName;
 	protected CompoundRegexList compoundRegexList;
@@ -143,17 +141,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	public void parseTest(ArgumentOption option, ArgIterator argIterator) {
 		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
 		LOG.debug("The test strings are..."+tokens+"; override this if you want to use your own parseTest()");
-	}
-
-	public void parseXpath(ArgumentOption option, ArgIterator argIterator) {
-		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
-		if (tokens.size() == 0) {
-//			LOG.debug(XPATH_OPTION).getHelp());
-		} else if (tokens.size() > 1) {
-			LOG.debug("Exactly one xpath required");
-		} else {
-			xPathProcessor = new XPathProcessor(tokens.get(0));
-		}
 	}
 
 	public void parseLookup(ArgumentOption option, ArgIterator argIterator) {
@@ -294,6 +281,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 			}
 			for (AMISearcher searcher : searcherList) {
 				String name = searcher.getName();
+				this.TREE_LOG().info("search "+name);
 				LOG.trace("search "+name);
 				ResultsElement resultsElement = searcher.search(sectionElements, createResultsElement());
 				resultsElement.lookup(lookupInstanceByName, lookupNames);
@@ -366,7 +354,8 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		for (String regexLocation : regexLocations) {
 			LOG.trace("RegexLocation "+regexLocation);
 			try {
-				Element rawCompoundRegex = new Builder().build(EuclidSource.getInputStream(regexLocation)).getRootElement();
+				InputStream is = new ResourceLocation().getInputStreamHeuristically(regexLocation);
+				Element rawCompoundRegex = new Builder().build(is).getRootElement();
 				List<Element> elements = XMLUtil.getQueryElements(rawCompoundRegex, ".//*[local-name()='regex']");
 				regexElementList.addAll(elements);
 			} catch (Exception e) {
@@ -387,7 +376,11 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		for (String regexLocation : regexLocations) {
 			LOG.trace("RegexLocation "+regexLocation);
 			try {
-				CompoundRegex compoundRegex = readAndCreateCompoundRegex(EuclidSource.getInputStream(regexLocation));
+				InputStream is = new ResourceLocation().getInputStreamHeuristically(regexLocation);
+				if (is == null) {
+					throw new RuntimeException("cannot find regex: "+regexLocation);
+				}
+				CompoundRegex compoundRegex = readAndCreateCompoundRegex(is);
 				compoundRegexList.add(compoundRegex);
 			} catch (Exception e) {
 				LOG.error("Cannot parse regexLocation: ("+e+")"+regexLocation);

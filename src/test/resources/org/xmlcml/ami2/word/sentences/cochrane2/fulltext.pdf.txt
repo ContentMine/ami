@@ -1,0 +1,1460 @@
+SIGN 144 • Glaucoma referral and safe discharge
+A national clinical guideline                                        March 2015
+Evidence   
+KEY TO EVIDENCE STATEMENTS AND RECOMMENDATIONS
+LEVELS OF EVIDENCE
+1++ High-quality meta-analyses, systematic reviews of RCTs, or RCTs with a very low risk of bias
+1+ Well-conducted meta-analyses, systematic reviews, or RCTs with a low risk of bias
+1 - Meta-analyses, systematic reviews, or RCTs with a high risk of bias
+H igh-quality systematic reviews of case-control or cohort studies
+2++  High-quality case-control or cohort studies with a very low risk of confounding or bias and a high probability that the 
+relationship is causal
+2+ Well-conducted case-control or cohort studies with a low risk of confounding or bias and a moderate probability that the relationship is causal
+2 -  Case-control or cohort studies with a high risk of confounding or bias and a significant risk that the relationship is not causal
+3 Non-analytic studies, eg case reports, case series
+4 Expert opinion
+RECOMMENDATIONS
+Some recommendations can be made with more certainty than others. The wording used in the recommendations in this guideline 
+denotes the certainty with which the recommendation is made (the ‘strength’ of the recommendation).
+The ‘strength’ of a recommendation takes into account the quality (level) of the evidence. Although higher-quality evidence is more 
+likely to be associated with strong recommendations than lower-quality evidence, a particular level of quality does not automatically 
+lead to a particular strength of recommendation.
+Other factors that are taken into account when forming recommendations include: relevance to the NHS in Scotland; applicability 
+of published evidence to the target population; consistency of the body of evidence, and the balance of benefits and harms of the 
+options.
+R For ‘strong’ recommendations on interventions that ‘should’ be used, the guideline development group is confident that, for the vast majority of people, the intervention (or interventions) will do more good than harm.
+For ‘conditional’ recommendations on interventions that should be ‘considered’, the guideline development group is confident 
+R that the intervention will do more good than harm for most patients. The choice of intervention is therefore more likely to vary depending on a person’s values and preferences, and so the healthcare professional should spend more time discussing the 
+options with the patient.
+GOOD-PRACTICE POINTS
+  Recommended best practice based on the clinical experience of the guideline development group
+NHS Evidence has accredited the process used by Scottish Intercollegiate Guidelines 
+Network to produce guidelines. Accreditation is applicable to guidance produced 
+using the processes described in SIGN 50: a guideline developer’s handbook, 2008 
+edition (www.sign.ac.uk/guidelines/fulltext/50/index.html). More information on 
+accreditation can be viewed at www.evidence.nhs.uk
+Healthcare Improvement Scotland (HIS) is committed to equality and diversity and assesses all its publications for likely impact on the 
+six equality groups defined by age, disability, gender, race, religion/belief and sexual orientation.
+SIGN guidelines are produced using a standard methodology that has been equality impact assessed to ensure that these equality 
+aims are addressed in every guideline. This methodology is set out in the current version of SIGN 50, our guideline manual, which 
+can be found at www.sign.ac.uk/guidelines/fulltext/50/index.html. The EQIA assessment of the manual can be seen at www.
+sign.ac.uk/pdf/sign50eqia.pdf. The full report in paper form and/or alternative format is available on request from the Healthcare 
+Improvement Scotland Equality and Diversity Officer.
+Every care is taken to ensure that this publication is correct in every detail at the time of publication. However, in the event of errors 
+or omissions corrections will be published in the web version of this document, which is the definitive version at all times. This version 
+can be found on our web site www.sign.ac.uk.
+          This document is produced from elemental chlorine-free material and is sourced from sustainable forests.
+Scottish Intercollegiate Guidelines Network
+Glaucoma referral and safe discharge
+A national clinical guideline
+March 2015
+Glaucoma referral and safe discharge
+Scottish Intercollegiate Guidelines Network 
+Gyle Square, 1 South Gyle Crescent 
+Edinburgh EH12 9EB
+www.sign.ac.uk
+First published March 2015
+ISBN 978 1 909103 36 8
+Citation text
+Scottish Intercollegiate Guidelines Network (SIGN).  
+Glaucoma referral and safe discharge. Edinburgh: SIGN; 2015. 
+(SIGN publication no. 144). [March 2015]. Available from URL: http://www.sign.ac.uk
+SIGN consents to the photocopying of this guideline for the purpose  
+of implementation in NHSScotland.
+Glaucoma referral and safe discharge Contents
+Contents
+1 Introduction ......................................................................................................................................................................1
+1.1 The need for a guideline ...................................................................................................................................................................... 1
+1.2 Remit of the guideline .......................................................................................................................................................................... 1
+1.3 Statement of intent ................................................................................................................................................................................ 2
+2 Key recommendations ....................................................................................................................................................4
+2.1 Measurement of intraocular pressure ............................................................................................................................................. 4
+2.2 Optic disc assessment ........................................................................................................................................................................... 4
+2.3 Visual field assessment ......................................................................................................................................................................... 4
+2.4 Criteria for referral to secondary-eye-care services .................................................................................................................... 5
+2.5 Discharge from secondary-eye-care services ............................................................................................................................... 5
+2.6 Monitoring  patients with ocular hypertension ........................................................................................................................... 6
+3 Risk factors for primary glaucoma................................................................................................................................7
+3.1 Introduction .............................................................................................................................................................................................. 7
+3.2 Demographic and non-ocular risk factors ..................................................................................................................................... 7
+3.3 Ocular risk factors ................................................................................................................................................................................... 8
+4  Primary-care examination and assessment of patients with  
+ocular hypertension or suspected glaucoma .............................................................................................................10
+4.1 Good practice ........................................................................................................................................................................................... 10
+4.2 Measurement of intraocular pressure ............................................................................................................................................. 10
+4.3 Measurement of central corneal thickness ................................................................................................................................... 11
+4.4 Assessment of anterior chamber angle .......................................................................................................................................... 11
+4.5 Optic disc assessment ........................................................................................................................................................................... 12
+4.6 Visual field assessment ......................................................................................................................................................................... 14
+5 Criteria for referral to secondary-eye-care services ..................................................................................................15
+6 Discharge from secondary-eye-care services.............................................................................................................16
+6.1 Facilitating safe discharge ................................................................................................................................................................... 16
+6.2 Discharge criteria .................................................................................................................................................................................... 17
+7 Monitoring at-risk groups ..............................................................................................................................................18
+7.1 Patients with family history of glaucoma ....................................................................................................................................... 18
+7.2 Patients with ocular hypertension .................................................................................................................................................... 18
+7.3 Patients who have had prophylactic iridotomy secondary to primary angle closure ................................................... 18
+7.4 Patients with pseudoexfoliation ........................................................................................................................................................ 19
+7.5 Patients with pigment dispersion syndrome ................................................................................................................................ 19
+7.6 Patients  with  optic disc anomalies ................................................................................................................................................. 19
+8 Provision of information.................................................................................................................................................21
+8.1 Introduction .............................................................................................................................................................................................. 21
+8.2 Key messages from patients with glaucoma ................................................................................................................................ 21
+8.3 Checklist for provision of information ............................................................................................................................................. 21
+8.4 Sources of further information .......................................................................................................................................................... 23
+9 Implementing the guideline ..........................................................................................................................................24
+9.1 Implementation strategy ..................................................................................................................................................................... 24
+9.2 Resource implications of key recommendations  ....................................................................................................................... 24
+9.3 Auditing current practice ..................................................................................................................................................................... 24
+Glaucoma referral and safe discharge
+10 The evidence base  ..........................................................................................................................................................25
+10.1 Systematic literature review ................................................................................................................................................................ 25
+10.2 Recommendations for research......................................................................................................................................................... 25
+10.3 Review and updating ............................................................................................................................................................................ 25
+11 Development of the guideline ......................................................................................................................................26
+11.1 Introduction .............................................................................................................................................................................................. 26
+11.2 The guideline development group .................................................................................................................................................. 26
+11.3 Consultation and peer review ............................................................................................................................................................ 27
+Abbreviations ................................................................................................................................................................................29
+Annexes ..........................................................................................................................................................................................30
+References......................................................................................................................................................................................36
+Glaucoma referral and safe discharge 1 •  Introduction 
+1 Introduction
+1.1 THE NEED foR A GuIDElINE
+Glaucoma is an eye disease characterised by a progressive optic neuropathy and associated visual field loss 
+(VFL). Glaucoma is the leading cause of irreversible blindness worldwide.1  In the UK glaucoma is the second 
+most common cause of visual impairment.2 
+Glaucoma can be classified anatomically according to the width of the anterior chamber angle in the eye, 
+and is either a primary condition or secondary to another systemic or ocular condition.3
+The incidence of glaucoma in the UK increases with age and glaucoma accounts for up to 20% of referrals to 
+secondary-eye-care services, the vast majority of which come via community optometrists. Since glaucoma 
+is associated with advancing age, the number of patients requiring management of the condition is rising 
+as life expectancy increases.4
+Early identification and referral of patients with ophthalmic pathology, and prompt secondary-care response 
+facilitates timely management with the aim of limiting visual disability.3, 5, 6 
+In one study in England around a third of referrals from optometrists without special interest in glaucoma 
+resulted in discharge at first visit.4 The Scottish General Ophthalmic Services (GOS) arrangements are unique 
+to Scotland and were implemented in 2006 to facilitate  identification of ophthalmic pathology at the earliest 
+opportunity.7 The arrangements can be found in Annex 1. The accuracy of the referral of patients with 
+suspected glaucoma from the community to secondary-eye-care services has improved since introduction 
+of the GOS although there are continuing issues around variation in practice.8 
+The current Scottish GOS arrangements offer a consistently wider range of clinical tests than are available 
+elsewhere in the UK. They mandate glaucoma-detection strategies but do not incorporate guidance on which 
+patient groups require referral from primary to secondary care, and this may result in variation in referral 
+practice. Additionally, there is currently no guidance on which patient groups can be safely monitored in the 
+community or discharged from secondary to primary care taking into account the existing clinical support 
+services within the Scottish GOS arrangements.
+1.2 REMIT of THE GuIDElINE
+1.2.1 OVERALL OBjECTIVES
+This guideline provides recommendations based on current evidence for best practice in the primary-care 
+assessment and referral of patients with suspected glaucoma of any subtype, from the community into 
+secondary-eye-care services and the safe discharge of patients from secondary-eye-care services back into 
+the community.
+Recommendations are provided on the investigations required, the frequency of examinations and 
+communication and notification of all the healthcare providers involved in the patient pathway.
+The guideline also makes recommendations on identifying which patients can be safely followed up in the 
+community maximising the potential of the existing GOS arrangements and the electronic interface between 
+community optometry and NHS health boards through the Eyecare Integration Project.9
+The key questions on which the guideline is based can be found in Annex 2.
+The guideline excludes treatment of ocular hypertension (OHT) and glaucoma which is covered by 
+National Institute for Health and Care Excellence (NICE) Clinical Guideline (CG) 85 Glaucoma: diagnosis and 
+management of chronic open-angle glaucoma and ocular hypertension.10
+| 1
+Glaucoma referral and safe discharge
+1.2.2 TARGET USERS OF THE GUIDELINE
+This guideline will be of particular interest to community optometrists, general practitioners and hospital-
+based healthcare professionals involved in glaucoma care, including ophthalmologists, optometrists, specialist 
+nurses and orthoptists. It will also be of interest to patients and carers.
+1.3 STATEMENT of INTENT
+This guideline is not intended to be construed or to serve as a standard of care. Standards of care are 
+determined on the basis of all clinical data available for an individual case and are subject to change 
+as scientific knowledge and technology advance and patterns of care evolve. Adherence to guideline 
+recommendations will not ensure a successful outcome in every case, nor should they be construed as 
+including all proper methods of care or excluding other acceptable methods of care aimed at the same 
+results. The ultimate judgement must be made by the appropriate healthcare professional(s) responsible 
+for clinical decisions regarding a particular clinical procedure or treatment plan. This judgement should only 
+be arrived at following discussion of the options with the patient, covering the diagnostic and treatment 
+choices available. It is advised, however, that significant departures from the national guideline or any local 
+guidelines derived from it should be fully documented in the patient’s case notes at the time the relevant 
+decision is taken.
+1.3.1 PATIENT VERSION
+A patient version of this guideline is available from the SIGN website, www.sign.ac.uk 
+1.3.2 PRESCRIBING OF LICENSED MEDICINES OUTWITH THEIR MARKETING AUTHORISATION 
+Recommendations within this guideline are based on the best clinical evidence. Some recommendations 
+may be for medicines prescribed outwith the marketing authorisation (MA) also known as product licence. 
+This is known as ‘off label’ use.
+Medicines may be prescribed off label in the following circumstances:
+y for an indication not specified within the marketing authorisation
+y for administration via a different route
+y for administration of a different dose
+y for a different patient population.
+An unlicensed medicine is a medicine which does not have MA for medicinal use in humans. 
+Generally ‘off label’ prescribing of medicines becomes necessary if the clinical need cannot be met by licensed 
+medicines within the marketing authorisation. Such use should be supported by appropriate evidence and 
+experience.11
+“Prescribing medicines outside the conditions of their marketing authorisation alters (and probably increases) 
+the prescribers’ professional responsibility and potential liability.”11
+The General Medical Council (GMC) recommends that when prescribing a medicine ‘off label’, doctors should:
+y  be satisfied that such use would better serve the patient’s needs than an authorised alternative (if one 
+exists)
+y  be satisfied that there is sufficient evidence/experience of using the medicine to show its safety and 
+efficacy, seeking the necessary information from appropriate sources
+y  record in the patient’s clinical notes the medicine prescribed and, when not following common practice, 
+the reasons for the choice
+y  take responsibility for prescribing the medicine and for overseeing the patient’s care, including monitoring 
+the effects of the medicine.
+2 |
+Glaucoma referral and safe discharge 1 •  Introduction 
+Non-medical prescribers should ensure that they are familiar with the legislative framework and their own 
+professional prescribing standards.
+Prior to any prescribing, the licensing status of a medication should be checked in the summary of product 
+characteristics (www.medicines.org.uk). The prescriber must be competent, operate within the professional 
+code of ethics of their statutory bodies and the prescribing practices of their employers.12
+1.3.3 ADDITIONAL ADVICE TO NHSSCOTLAND FROM HEALTHCARE IMPROVEMENT SCOTLAND AND THE 
+SCOTTISH MEDICINES CONSORTIUM
+Healthcare Improvement Scotland processes multiple technology appraisals (MTAs) for NHSScotland that 
+have been produced by the National Institute for Health and Care Excellence (NICE) in England and Wales.
+The Scottish Medicines Consortium (SMC) provides advice to NHS boards and their Area Drug and Therapeutics 
+Committees about the status of all newly licensed medicines and any major new indications for established 
+products.
+No SMC advice relevant to this guideline was identified.
+| 3
+Glaucoma referral and safe discharge
+2 Key recommendations
+The following recommendations and good-practice points were highlighted by the guideline development 
+group as those that should be prioritised for implementation.
+2.1 MEASuREMENT of INTRAoCulAR PRESSuRE
+R  for patients with ocular hypertension or suspected glaucoma a reliable baseline measure of 
+intraocular pressure is required. A minimum of two intraocular pressure readings on a single 
+occasion using the same tonometer is recommended. The type of tonometer and the time of 
+measurement should be specified in any referral to secondary-eye-care services.
+2.2 oPTIC DISC ASSESSMENT
+R  The narrowest rim/disc ratio and disc size should be recorded and considered alongside additional 
+indicators of glaucoma, such as optic disc nerve fibre layer haemorrhage and cup/disc ratio 
+asymmetry, when assessing the need for referral to secondary-eye-care services.
+  Patients with the following optic disc parameters should be considered for referral to secondary-
+eye-care services:
+•  small discs (<1.5 mm • m edium discs (1.5–2.0 •  large discs (>2.0 mm 
+in diameter) where the mm in diameter) where in diameter) where 
+narrowest rim/disc ratio the narrowest rim/disc the narrowest rim/
+is <0.3 ratio is <0.2 disc ratio is <0.1
+ 
+ 
+	 	
+	 	 These parameters correspond to Spaeth’s disc damage likelihood scale stage 4 or greater.  
+2.3 vISuAl fIElD ASSESSMENT
+ A minimum of two visual field tests with consistent findings is recommended before referral to 
+secondary-eye-care services. One test may suffice if the result is unequivocal. 
+4 |
+Glaucoma referral and safe discharge 2 • Key recommendations
+2.4 CRITERIA foR REfERRAl To SECoNDARy-EyE-CARE SERvICES
+ Irrespective of intraocular pressure, patients with one or more of the following findings should be 
+referred to secondary-eye-care services:
+y optic disc signs consistent with glaucoma in either eye
+y a reproducible visual field defect consistent with glaucoma in either eye
+y risk of angle closure (occludable angle)
+-	  using Van Herick technique, if the peripheral anterior chamber width is one quarter or less of 
+the corneal thickness
+-	 using gonioscopy, if ≥270 degrees of posterior pigmented trabecular meshwork is not visible.
+ Patients who have ocular hypertension with intraocular pressure >25 mm Hg may be considered for 
+referral to secondary-eye-care services irrespective of central corneal thickness.
+  Patients who have ocular hypertension with intraocular pressure <26 mm Hg and central corneal 
+thickn ess <555 micrometers should be referred to secondary-eye-care services if they are aged ≤65.
+  Patients who have ocular hypertension with intraocular pressure <26 mm Hg and central corneal 
+thickness ≥555 micrometers may be monitored in the community. 
+2.5 DISCHARGE fRoM SECoNDARy-EyE-CARE SERvICES
+ When a patient is discharged from secondary-eye-care services the responsibility for patient care is 
+transferred to the optometrist.
+ Local arrangements for follow up and monitoring in the community should include protocols 
+for communicating with patients who do not attend, or do not respond to invitations to make 
+appointments, and for liaison with general practice and secondary-eye-care services. 
+ The following groups may be considered for discharge from secondary-eye-care services where 
+robust local arrangements are in place for follow up and monitoring in the community. Patients with:
+y  untreated ocular hypertension where intraocular pressure is <26 mmHg, CCT is ≥555 micrometers 
+and ocular examination is otherwise normal
+y  untreated ocular hypertension with intraocular pressure >25 mm Hg with otherwise normal ocular 
+examination and a low lifetime risk of glaucomatous visual disability
+y  treated ocular hypertension where re-referral criteria are documented.
+ Patients with primary angle closure who have had  prophylactic iridotomy may be considered for 
+discharge from secondary-eye-care services if they:
+y have confirmed open angle
+y are not on topical medication
+y have no evidence of glaucoma.
+ Patients with treated glaucoma should normally be monitored in secondary-eye-care services
+Discharge to a locally accredited glaucoma optometrist may be considered at the discretion of the 
+consultant ophthalmologist where this is in the best interests of the patient. Robust local arrangements 
+for follow up and monitoring should be in place and the frequency of monitoring and criteria for re-
+referral should be individualised.
+| 5
+Glaucoma referral and safe discharge
+2.6 MoNIToRING  PATIENTS wITH oCulAR HyPERTENSIoN
+R f or patients with ocular hypertension, treated or untreated, a reliable baseline based on repeated 
+measurement of IoP and perimetry should be established. Repeat glaucoma testing every two 
+years is recommended.
+6 |
+Glaucoma referral and safe discharge 3 • Risk factors for primary glaucoma
+3 Risk factors for primary glaucoma
+3.1 INTRoDuCTIoN
+A detailed history including relevant medical, family and ocular history is undertaken as part of a primary 
+eye examination.7
+ When referring a patient with suspected glaucoma to secondary-eye-care services, the optometrist 
+should highlight the presence of any glaucoma risk factors. 
+3.2 DEMoGRAPHIC AND NoN-oCulAR RISK fACToRS
+Meta-analyses of the epidemiology of glaucoma highlight the major demographic and non-ocular risk 
+factors for open-angle glaucoma as increasing age (from age 40), black ethnicity, family history in a first-
+++
+degree relative, and comorbid diabetes, hypertension and peripheral vascular disease (see Table 1).1, 13 Key 2
+demographic risk factors for angle-closure glaucoma identified in a meta-analysis include increasing age (from 
+age 40),  female sex and eastern Asian ethnicity (see Table 2).14 Estimates vary owing to study inclusion criteria.
+Table 1: Risk factors associated with primary open-angle glaucoma 
+Estimates from key meta-analyses (95% CI)
+Age % Prevalence1 Age % Prevalence13
+≥80 7.8 (5.2–12)
+70–79 5.1 (3.6–7.2) 70 3.3 (2.5–4.0)
+60–69 3.7 (2.7–5.0) 60 1.4 (1.0–1.9)
+50–59 2.2 (1.6–3.0) 50 0.9 (0.6–1.3)
+40–49 1.3 (0.9–1.9) 40 0.3 (0.1–0.5)
+30–39 1.6 (0.7–3.8)
+Black ethnicity Age-adjusted Odds ratio1 Relative risk 
+prevalence %1 Over 40 years13
+7.5 (6.8–8.4) 2.9 (1.4–5.9) 3.8 (2.56–5.64)
+Family history in a Age-adjusted odds ratio1 Age-adjusted 
+first-degree relative relative risk13
+3.3  (2.0–5.6) 3.14 (2.32–4.25)
+Diabetes Odds ratio1 Relative risk13
+1.8 (1.4–2.4) 1.93 (1.38–2.69)
+Hypertension Odds ratio1
+1.8 (1.4–2.3)
+Peripheral vascular Odds ratio1
+disease 2.1 (0.83–5.3)
+| 7
+Glaucoma referral and safe discharge
+Table 2: Risk factors associated with primary angle-closure glaucoma 
+Estimates from key meta-analyses (95% CI)
+Age % Prevalence14
+≥70 0.94 (0.63–1.35)
+60–69 0.20 (0.06–0.42)
+50–59 0.60 (0.27–1.00)
+40–49 0.02 (0.00–0.08)
+Female sex Female to male ratio14
+3.25:1 (1.76–5.94)
+Primary angle-closure glaucoma prevalence is higher in people of Asian 
+Eastern Asian ethnicity
+and east Asian descent compared with European descent14
+3.3 oCulAR RISK fACToRS
+3.3.1 RAISED INTRAOCULAR PRESSURE
+Ocular hypertension is defined as intraocular pressure (IOP) consistently greater than 21 mm Hg (in at least 
+one eye) and the absence of clinical signs of glaucoma.15
+The risk of developing glaucoma increases with increasing IOP.13 Having a raised IOP, outside the generally 
+agreed population normal range (10–21 mm Hg) is considered to be the most important glaucoma risk factor, 2++
+as it is the only one that can be treated. People with an IOP within the normal range can develop glaucoma. 
+Multifactorial risk prediction models can be used to quantify the risk of disease.
+For the most common type of glaucoma (primary open-angle glaucoma (POAG), three models combining 
+risk factors have been used to derive risk prediction equations for development of the disease.16 These 
+are based on data from the Ocular Hypertension Treatment Study (OHTS)17 and the European Glaucoma 
+Prevention Study (EGPS).18 The OHTS/EGPS risk model is an equation for predicting the five-year risk of 2++
+POAG in adult patients with ocular hypertension. All of the variables included in the model can be routinely 
+collected in clinical practice: age; IOP; central corneal thickness (CCT); vertical cup-to-disc (C/D) ratio and 
+pattern standard deviation (PSD). A simple calculator based on the model and freely available online enables 
+estimation of the five-year risk of a patient with OHT developing POAG in at least one eye (http://ohts.wustl.
+edu/risk/calculator.html).
+The clinical utility of the tool is perceived to be limited as the C/D ratio is subjective and not easily 
+quantified. Also, findings from participants included in research studies may not be generalisable to the 
+general population. However, in an independent validation of this model in four independent cohorts, the 
+++
+discriminative ability, that is the ability of the equation to distinguish between individuals who developed 2
+POAG in five years and those who did not, was good. In calibration analyses, however, the equation generally 
+overestimated the observed risk of POAG.15 Based on these data, further research to update the tool to 
+be more applicable for use in clinical care was recommended. The NICE guideline on glaucoma stratifies 
+glaucoma risk based on age, IOP and CCT.10
+3.3.2 MyOPIA
+Myopia is an important risk factor for open-angle glaucoma. A meta-analysis of 11 cross-sectional studies 
+found that individuals with myopia have around double the risk of glaucoma compared to individuals who 
+2+ 
+do not have myopia, odds ratio (OR) 1.92 (95% CI 1.54 to 2.38).19  In a meta-analysis, the OR for the presence 3
+of glaucoma in high myopia (≥6 diopters) was 5.7 (95% CI 3.1 to 11). There is no linear association between 
+the risk of glaucoma and degree of myopia.1, 19 
+8 |
+Glaucoma referral and safe discharge 3 • Risk factors for primary glaucoma
+3.3.3 ANTERIOR CHAMBER DEPTH AND HyPERMETROPIA
+A narrative review notes that patients with angle-closure glaucoma are more likely to be hypermetropic.3 4
+3.3.4 ExFOLIATION SyNDROME AND PIGMENT DISPERSION SyNDROME
+Narrative reviews note associations between pseudoexfoliation and glaucoma and between pigment 
+4
+dispersion syndrome and glaucoma (see sections 7.4 and 7.5).21,22 
+| 9
+Glaucoma referral and safe discharge
+4 Primary-care examination and assessment of patients 
+with ocular hypertension or suspected glaucoma
+4.1 GooD PRACTICE
+ When referring a patient with suspected glaucoma to secondary-eye-care services the optometrist 
+should indicate findings of tonometry, examination by slit-lamp biomicroscopy to include anterior 
+segment and optic disc, and visual field assessment.
+  Advanced pathology requires urgent referral, which should not be delayed in order to undertake 
+repeat examinations.
+  Offer patients the opportunity to discuss their diagnosis, prognosis and treatment, and provide them 
+with relevant information in an accessible format at initial and subsequent visits.
+4.2 MEASuREMENT of INTRAoCulAR PRESSuRE
+A range of tonometers are used in clinical practice. Goldmann applanation tonometry (GAT) is the currently 
+accepted reference-standard technique for measuring IOP.
+No studies were identified comparing GAT with other technologies in terms of referral accuracy or diagnostic 
+accuracy for features suggestive of glaucoma.
+A meta-analysis of 99 studies comparing tonometers identified heterogeneity of effect which was, in part, 
+attributed to variability in the reference standard. There was substantial IOP measurement variability for all 
+tonometers including GAT, both within and between studies. Non-contact tonometers (NCT) (4 studies) and 2++
+hand-held applanation tonometers (HAT) (26 studies) achieved the measurements closest to the GAT with 
+around 59% and 66% within 2 mm Hg respectively and 79% and 85% of measurements within 3 mm Hg 
+respectively.15
+A Health Technology Assessment (HTA) examined the degree of within-patient variability in IOP measurement, 
+using models based on untreated ocular hypertension, and suggested that measurement ‘noise’ of the 2++
+order of 3 mm Hg could be reduced by taking the average of two or three measurements at a single visit. 
+Measurement at similar times of day on repeat visits may reduce the impact of diurnal variation.15
+An HTA did not identify any good quality evidence assessing the value of examining the degree of short- or 2++
+long-term IOP fluctuation as a risk factor for the development or progression of glaucoma.22
+An HTA did not identify any good quality evidence for the use of a diurnal tension curve (multiple IOP 
+measurements over a minimum eight-hour period) in patients with suspected glaucoma who had single 2++
+IOP measurements within the normal range.22
+ R   for patients with ocular hypertension or suspected glaucoma a reliable baseline measure of 
+intraocular pressure is required. A minimum of two intraocular pressure readings on a single 
+occasion using the same tonometer is recommended. The type of tonometer and the time of 
+measurement should be specified in any referral to secondary-eye-care services.
+ To promote consistency between primary and secondary care, tonometry should be performed with 
+Goldmann or Perkins type tonometers.
+ Protocols should be in place for regularly checking calibration to ensure tonometer accuracy.
+10 |
+Glaucoma referral and safe discharge 4 • Primary-care examination and assessment of patients with ocular hypertension or suspected glaucoma
+4.3 MEASuREMENT of CENTRAl CoRNEAl THICKNESS
+No evidence was identified to show whether or not referral accuracy is improved when CCT measurements 
+are provided in addition to IOP measurements in patients with ocular hypertension.
+A high-quality systematic review and meta-analysis identified strong evidence, that in a multivariate model, 
+2++
+CCT is a risk factor for progression of ocular hypertension to POAG.15
+A moderate-quality systematic review reported inconsistent findings about the relationship between CCT 
+and glaucoma prevalence or glaucoma progression but identified consistent evidence that CCT is a risk 2+
+factor for progression of ocular hypertension to glaucomatous optic neuropathy.23
+An evidence-based guideline notes that CCT can act as a confounder of IOP measurement and is therefore of 
+value in interpreting IOP measurements.10 There is, however, no verified algorithm to apply to the relationship 2++
+between CCT and IOP.23
+R  Central corneal thickness should be measured in patients with ocular hypertension or suspected 
+glaucoma and reported alongside the measured intraocular pressure results when referring to 
+secondary-eye-care services.
+ Repeat measurements should be taken on a single occasion. This is an inherent feature of ultrasound 
+pachymeters which provide a final reading based on an average of measurements. Mean and standard 
+deviation should be recorded and provided in any referral.
+ The type of pachymeter used should be stated on patient records and referrals.
+4.4 ASSESSMENT of ANTERIoR CHAMBER ANGlE
+Gonioscopy is the reference standard for assessment of the anterior chamber angle in patients with suspected 
+glaucoma or OHT. It is not currently practised by all optometrists and requires experience to interpret the 
+angle appearance. Gonioscopy is unsuitable for some patients particularly where there are anxiety or mobility 
+difficulties.
+No systematic reviews of studies comparing methods for anterior chamber angle assessment were identified.
+All of the primary studies identified were carried out in entirely or predominantly non-Caucasian groups 
+including Indian, Korean, Chinese and Malay populations, all of which have higher rates of angle closure 
+than Caucasians. Studies were carried out in research settings, where the tests were conducted almost 
+exclusively by glaucoma specialist ophthalmologists, and therefore the results may not be directly applicable 
+to community optometrists.
+Where the sensitivity and specificity for detection of narrow angles were reported in comparisons of optical 
+coherence tomography (OCT) with gonioscopy, there was generally high sensitivity (84–100%) but low 
+specificity (41–69%).24-33  There was variation in the scanning protocols used and issues around the ability of 2+
+operators to identify the scleral spur as a reference point in the technique. Significant interobserver variability 3
+was reported in the identification of angle closure by OCT. In one study the level of agreement between 
+raters was described as poor to fair for Cirrus™ whilst for iVue® it was described as fair.32
+OCT is an evolving technology in terms of assessment of anterior angle and is not currently available to all 
+optometrists.
+In one study comparing a Van Herick grading method with gonioscopy there was high sensitivity (84.9%) and 
+high specificity (89.6%) for the identification of narrow angle.34 A second study reported 61.9% sensitivity and 
+89.3% specificity.35 In studies reporting level of agreement one (n=148) reported good agreement between 2
++
+3
+Van Herick and gonioscopy for identification of narrow angles,29 whilst a smaller study in African patients 
+(n=36) noted poor correlation between the methods.36
+| 11
+Glaucoma referral and safe discharge
+R  Depending on practitioner’s preference and clinical competence, either the van Herick method 
+or gonioscopy may be used to detect narrow anterior chamber angles in patients with ocular 
+hypertension or suspected angle closure.
+ Due to the low specificity of optical coherence tomography, referral to secondary-eye-care services 
+should not be based on the results of anterior chamber OCT measurements alone.
+4.5 oPTIC DISC ASSESSMENT
+4.5.1 OPHTHALMOSCOPy
+In a meta-analysis of five studies examining the accuracy of ophthalmoscopy for screening for open-angle 
+glaucoma, the pooled sensitivity was 60% (95% credible interval (CrI) 34 to 82) and the pooled specificity 2++
+was 94% (95% CrI 76 to 99).13
+4.5.2 OPTIC DISC ASSESSMENT
+A systematic review of the parameters of optic disc assessment reported that for a C/D ratio of ≥0.7 (four 
+studies), the likelihood ratio (LR) for POAG was 14 (95% CI 5.3 to 39). For a C/D ratio asymmetry ≥0.3 (three 2+
+studies) the LR was 7.3 (95% CI 3.3 to 16). The LR associated with the presence of disc haemorrhage (five 
+studies) was 12 (95% CI 2.9 to 48).1
+While the systematic reviews did not specifically address clinical assessment of optic disc size and morphology, 
+evidence from primary research papers confirmed the importance of disc size measurement in the 
+interpretation of the C/D ratio.37, 38 The size of the disc can be rapidly assessed during slit-lamp biomicroscopy 2+
+and when this is combined with an assessment of the neuroretinal rim morphology, as in Spaeth’s disc damage 3
+likelihood scale (DDLS, see Annex 3 ), it allows discrimination between glaucomatous and normal discs and 
+compares favourably with Heidelberg Retina Tomograph II disc assessment.39-45
+The clinical utility of the ISNT rule (inferior, superior, nasal and temporal) in the diagnosis of glaucomatous 3
+neuropathy has been called into question by a number of studies.46-49
+R  for patients with suspected glaucoma the optic discs should be examined by slit-lamp 
+biomicroscopy. The vertical optic disc diameter should be measured using the slit beam height. 
+This should be corrected for the magnification of the condensing lens, and the disc categorised 
+as small, medium or large.
+ For optic disc examination in patients with suspected glaucoma, the pupil should be dilated unless 
+there is a high risk of angle-closure.
+R  The narrowest rim/disc ratio and disc size should be recorded and considered alongside additional 
+indicators of glaucoma, such as optic disc nerve fibre layer haemorrhage and cup/disc ratio 
+asymmetry, when assessing the need for referral to secondary-eye-care services.
+12 |
+Glaucoma referral and safe discharge 4 • Primary-care examination and assessment of patients with ocular hypertension or suspected glaucoma
+  Patients with the following optic disc parameters should be considered for referral to secondary-
+eye-care services:
+•  small discs (<1.5 mm •  medium discs (1.5–2.0 •  large discs (>2.0 mm 
+in diameter) where the mm in diameter) where in diameter) where 
+narrowest rim/disc ratio the narrowest rim/disc the narrowest rim/
+is <0.3 ratio is <0.2 disc ratio is <0.1
+ 
+ 
+	 	
+These parameters correspond to Spaeth’s disc damage likelihood scale stage 4 or greater.  
+ Referral should not be made solely on the basis of apparent violation of the ISNT rule.
+   Patients with an optic disc nerve fibre layer haemorrhage should be referred irrespective of other 
+signs of glaucoma.
+4.5.3 OPTIC DISC PHOTOGRAPHy
+In a meta-analysis of six studies examining the accuracy of optic disc photography for screening for open-
+angle glaucoma the pooled sensitivity was 73% (95% CrI 61 to 83) and the pooled specificity was 89% (95% 2++
+CrI 50 to 99).13  
+R  The optic discs should be photographed and the images transmitted with the electronic referral 
+letter. 
+  Where available, use of stereophotography should be considered.
+4.5.4 IMAGING DEVICES
+In a meta-analysis of three studies examining the accuracy of the Heidelberg Retina Tomograph II for 
+screening for open-angle glaucoma the pooled sensitivity was 86% (CrI 55 to 97) and the pooled specificity 2++
+was 89% (95% CrI  66 to 98). No studies of optical coherence tomography or scanning laser polarimetry (GDx 
+instrument) for imaging of the nerve fibre layer met the inclusion criteria.13
+A systematic review compared a range of imaging devices for assessment of the optic disc in diagnosis of 
+glaucoma, including confocal scanning laser ophthalmoscopy, OCT, and scanning laser polarimetry. Nearly 
+++
+all of the studies identified included patients with visual field loss and the review concluded that they did 2
+not therefore evaluate the ability of such devices to detect disease in patients with suspected glaucoma. 
+The review also concluded that no one device was superior to any other.50
+There is insufficient evidence supporting additional clinical benefit of OCT or scanning laser polarimetry in 
+the diagnosis of glaucoma to make any recommendation for the primary-care setting.
+| 13
+Glaucoma referral and safe discharge
+4.6 vISuAl fIElD ASSESSMENT
+No systematic reviews were identified comparing visual field assessment technologies with the outcome of 
+referral accuracy in patients suspected of having glaucoma.
+A systematic review of studies published up to November 2005 exploring the accuracy of screening tests for 
+open-angle glaucoma reported the sensitivities and specificities of frequency doubling technology (FDT), 
+oculokinetic perimetry (OKP) and standard automated perimetry (SAP). Table 3 summarises the pooled 
+sensitivity and specificity of the visual function tests (perimetry), combining all available studies. There were 2++
+few good- quality studies for each test and the inclusion of SAP as part of the reference standard introduced 
+potential bias in some cases. In a subgroup of the studies which assessed early/moderate stage glaucoma 
+the sensitivity of OKP was 25% compared with 97% for SAP. Oculokinetic perimetry, although promising in 
+a screening setting, may not be sufficiently sensitive for case detection in an optometric setting. Two studies 
+in the review directly compared SAP with FDT C-20-5, with both reporting that FDT had superior sensitivity 
+but poorer specificity than SAP.13, 51 
+Table 3: Sensitivity and specificity of visual function tests for detection of open-angle glaucoma13, 51
+Studies/high-quality Pooled sensitivity (%) Pooled specificity (%) 
+studies (95%  CrI) (95% CrI)
+FDT C-20-1 3/1 92 (65–99) 94 (73–99)
+FDT C-20-5 5/2 78 (19–99) 75 (57–87)
+OKP 4/1 86 (29–100) 90 (79–96)
+SAP full threshold 5/2 88 (65–97) 80 (55–93)
+SAP supra-threshold 9/1 71 (51–86) 85 (73–93)
+A narrative review of the effectiveness of visual function tests in diagnosis and monitoring of patients with 
+glaucoma was based on a systematic, but limited, literature search which identified 85 studies. The review 2+
+concluded that algorithms, such as the Swedish Interactive Thresholding Algorithm (SITA), have led to visual 
+field tests which provide more reliable information than full-threshold SAP testing in this patient group.52
+R  for patients with ocular hypertension or suspected glaucoma, standard automated perimetry is 
+recommended for visual field testing. frequency doubling technology is also acceptable.
+  A minimum of two visual field tests with consistent findings is recommended before referral to 
+secondary-eye-care services. One test may suffice if the result is unequivocal.
+ T he use of the same technology in the community and secondary-eye-care services has benefit in 
+allowing direct comparisons to be made between the visual field plots.
+14 |
+Glaucoma referral and safe discharge 5 • Criteria for referral to secondary-eye-care services
+5 Criteria for referral to secondary-eye-care services
+No systematic reviews were identified exploring the clinical effectiveness of different referral criteria.
+The following good-practice points for referral are based on the expertise of the SIGN guideline development 
+group informed by the NICE guideline on the diagnosis and management of glaucoma,10 subsequent joint 
+guidance from the College of Optometrists and the Royal College of Ophthalmologists,53 and an HTA on 
+surveillance for ocular hypertension.15
+Development of the criteria has taken account of the views of the eye-care community in Scotland expressed 
+during open consultation and the expertise of invited peer reviewers from within and beyond Scotland.
+ Irrespective of intraocular pressure, patients with one or more of the following findings should be 
+referred to secondary-eye-care services:
+y optic disc signs consistent with glaucoma in either eye
+y a reproducible visual field defect consistent with glaucoma in either eye
+y risk of angle closure (occludable angle)
+-	  using Van Herick technique, if the peripheral anterior chamber width is one quarter or less of 
+the corneal thickness
+-	 using gonioscopy, if ≥270 degrees of posterior pigmented trabecular meshwork is not visible.
+  Patients who have ocular hypertension with intraocular pressure >25 mm Hg may be considered for 
+referral to secondary-eye-care services irrespective of central corneal thickness.
+ Patients who have ocular hypertension with intraocular pressure <26 mm Hg and central corneal 
+thickness <555 micrometers should be referred to secondary-eye-care services if they are aged ≤65.
+  Patients who have ocular hypertension with intraocular pressure <26 mm Hg and central corneal 
+thickness ≥555 micrometers may be monitored in the community.
+The current NHSScotland glaucoma referral form can be found in Annex 4.
+| 15
+Glaucoma referral and safe discharge
+6 Discharge from secondary-eye-care services
+6.1 fACIlITATING SAfE DISCHARGE
+  When deciding if a patient should be discharged from secondary eye-care-services, there should be 
+discussion with the patient to identify and take account of their preferences.  
+  When a patient is discharged from secondary-eye-care services the responsibility for patient care is 
+transferred to the optometrist.
+ Local arrangements for follow up and monitoring in the community should include protocols 
+for communicating with patients who do not attend, or do not respond to invitations to make 
+appointments, and for liaison with general practice and secondary-eye-care services.
+6.1.1 DISCHARGE LETTERS
+ Discharge letters should include: patient age, diagnosis/condition, visual acuity, central corneal 
+thickness, intraocular pressure, last visual field test, descriptor of optic nerve head, measurement 
+of anterior chamber angle, current medication and information on allergies or adverse reactions to 
+medication.
+  Letters should include instructions on specific indications for re-referral to secondary-eye-care services, 
+such as defined intraocular pressure and should include contact details for direct re-referral.
+  Discharge letters should be addressed to a specified optometrist, which will normally be the referring 
+optometrist, and copied to the patient and to their general practitioner.
+A sample discharge letter adapted from NHS Grampian can be found in Annex 5.
+6.1.2 PATIENT-HELD RECORD
+No systematic reviews were identified on the effectiveness of providing a patient-held record to individuals 
+diagnosed with or at risk of glaucoma.
+Three systematic reviews were identified from other healthcare contexts. One of these, pertaining to maternity 
+care, was considered not applicable, particularly owing to the older age group of patients with or at risk of 
+glaucoma.54
+One systematic review of patient-held records in cancer care was identified. This included seven randomised 1++
+controlled trials and found an absence of effect, although most patients welcomed the intervention.55
+A third review identified 14, mainly poor-quality, studies across a range of chronic conditions including 
+diabetes, rheumatoid arthritis and stroke and found no clear evidence of benefit in introducing a patient- 2++
+held record. Both clinical and process outcomes were examined.56
+There is no evidence on which to base a recommendation for practice.
+6.1.3 NAMED OPTOMETRIST
+No applicable systematic reviews were identified on the effectiveness of specifying a named optometrist 
+when discharging individuals diagnosed with or at risk of glaucoma from secondary-eye-care services.
+Evidence from a synthesis of qualitative studies suggests that patients with chronic conditions value continuity 
+3
+of care providers.57 
+16 |
+Glaucoma referral and safe discharge 6 • Discharge from secondary-eye-care services
+6.2 DISCHARGE CRITERIA
+A systematic review of the organisation of eye-care services summarised descriptive studies of shared and 
+delegated-care schemes and identified one RCT (n=403) reporting a high level of diagnostic and management 
++
+clinical concordance between highly specialist accredited optometrists and consultant ophthalmologists 2
+during two years of follow up of patients with glaucoma or suspected glaucoma.58 This finding may be limited 
+in its applicability to routine optometry practice in the community.59
+No systematic reviews were identified exploring the clinical effectiveness of different discharge criteria.
+The following good-practice points for discharge are based on the expertise of the SIGN guideline development 
+group applied within the provisions of the GOS arrangements and are informed by the NICE guideline on 
+the diagnosis and management of  glaucoma,10 subsequent joint guidance from the College of Optometrists 
+and the Royal College of Ophthalmologists53 and an HTA on surveillance for ocular hypertension.15
+Development of the criteria has taken account of the views of the eye-care community in Scotland expressed 
+during open consultation and the expertise of invited peer reviewers from within and beyond Scotland.
+6.2.1 PATIENTS WITH OCULAR HyPERTENSION
+ The following groups may be considered for discharge from secondary-eye-care services where 
+robust local arrangements are in place for follow up and monitoring in the community. Patients with:
+y  untreated ocular hypertension where intraocular pressure is <26 mm Hg, CCT is ≥555 micrometers 
+and ocular examination is otherwise normal
+y  untreated ocular hypertension with intraocular pressure >25 mm Hg with otherwise normal ocular 
+examination and a low lifetime risk of glaucomatous visual disability
+y treated ocular hypertension where re-referral criteria are documented.
+6.2.2 PATIENTS WHO HAVE HAD IRIDOTOMy 
+ Patients with primary angle closure who have had prophylactic iridotomy may be considered for 
+discharge from secondary-eye-care services if they:
+y have confirmed open angle
+y are not on topical medication
+y have no evidence of glaucoma.
+6.2.3 PATIENTS WITH TREATED GLAUCOMA
+ Patients with treated glaucoma should normally be monitored in secondary-eye-care services.
+Discharge to a locally accredited glaucoma optometrist may be considered at the discretion of the 
+consultant ophthalmologist where this is in the best interests of the patient. Robust local arrangements 
+for follow up and monitoring should be in place and the frequency of monitoring and criteria for re-
+referral should be individualised.
+| 17
+Glaucoma referral and safe discharge
+7 Monitoring at-risk groups
+7.1 PATIENTS wITH fAMIly HISToRy of GlAuCoMA
+   Where family history of glaucoma in a first-degree relative is the sole risk factor identified at routine 
+eye examination, the patient should be recalled for review at least every two years. If additional 
+risk factors are present the patient should be reviewed annually or more frequently depending on 
+clinical judgement.
+7.2 PATIENTS wITH oCulAR HyPERTENSIoN
+The NICE guideline on the diagnosis and management of glaucoma did not identify any clinical or economic 
+evidence on the optimal monitoring interval for patients with ocular hypertension and recommended, based 4
+on expert opinion, that monitoring should be based on risk of conversion to glaucoma.10
+An evidence synthesis and economic evaluation explored optimal monitoring pathways for people with ocular 
+hypertension. A survey of public preferences for a monitoring service identified the importance of keeping 
+any side effects of treatment to a minimum and highlighted the value of good communication between 
+patients and healthcare professionals. Analysis of the survey also found that patient understanding of the 
+monitoring and testing process was an important predictor of the perceived value of a monitoring service.15 2++
+Modelling suggests that once reliable baseline measures (IOP (treated or untreated) and visual fields) are 
+ascertained there is no clear benefit in intensive monitoring to detect glaucoma. Limited data were available 
+on the long-term variability of visual field parameters. Biennial monitoring, by practitioners experienced in 
+glaucoma, was more cost effective than more frequent monitoring.15
+R  for patients with ocular hypertension, treated or untreated, a reliable baseline based on repeated 
+measurement of IoP and perimetry should be established. Repeat glaucoma testing every two 
+years is recommended.
+ Documentation of baseline optic nerve status is recommended.
+ The testing process and, if applicable, potential side effects related to treatment should be fully 
+explained to patients.
+7.3 PATIENTS wHo HAvE HAD PRoPHylACTIC IRIDoToMy SECoNDARy To PRIMARy ANGlE 
+CloSuRE
+Primary angle closure (PAC) is diagnosed as occludable angle, normal optic discs and visual fields and any of 
+the following: peripheral anterior synechiae, elevated intraocular pressure, iris whirling, ‘glaucomflecken’ lens 
+opacities, or excessive pigment deposition on the trabecular surface. Primary angle closure with evidence 
+of glaucoma is primary angle closure glaucoma (PACG).60
+In one observational study conducted in Scotland, PACG accounted for approximately 23% of all newly 
+diagnosed cases of glaucoma.61
+No systematic reviews or meta-analyses were identified on the monitoring of patients with PAC after iridotomy 
+with healthy discs and full visual field.
+Three observational studies; a retrospective study from Canada and two small prospective studies from India 
+were identified which provided information on the risk of glaucoma in this patient group. 
+18 |
+Glaucoma referral and safe discharge 7 • Monitoring at-risk groups
+A retrospective single-cohort study (n=257, 469 eyes) examined the risk of IOP elevation and requirement 
+for intervention in patients with iridotrabecular contact or peripheral anterior synechiae who had peripheral 
+iridotomy carried out. Clock hour of apposition of the angle was not recorded and indentation gonioscopy 3
+was not performed. At mean follow up of 8.5 years, 38.7% of the eyes had increased IOP and 17.3% required 
+antiglaucoma treatment.62
+A small (n=72) prospective single-cohort study reported 36.1% of patients with raised IOP and 11.1% with 
+PACG after mean follow up of 6.89 years. This study also reported increased risk of raised IOP/glaucoma in 3
+older patients, those with higher baseline IOP and longer follow up. 63 
+Another small (n=28) prospective single-cohort study reported that at five years, 28% of patients had 
+3
+progressed to glaucoma, with or without medications.64
+No evidence was identified on which to base recommendations on follow-up interval or on the most 
+appropriate healthcare setting for monitoring.
+ Patients with primary angle closure or suspected primary angle closure who have undergone successful 
+iridotomy require lifelong monitoring which can be carried out in primary care. Monitoring should 
+include measurement of intraocular pressure and visual fields as well as assessment of optic discs 
+and anterior chamber depth.
+7.4 PATIENTS wITH PSEuDoExfolIATIoN
+Pseudoexfoliation is one of the most common identifiable causes of glaucoma and pseudoexfoliation 
+glaucoma is more severe and difficult to manage than primary open-angle glaucoma.65 Around 30–50% 4 
+of patients with pseudoexfoliation will develop glaucoma.66 It is also reported to be associated with angle- 3
+closure glaucoma.67
+No studies were identified which investigated the monitoring interval for this group of patients.
+ Individuals with signs of pseudoexfoliation require ongoing monitoring owing to their increased risk 
+of developing glaucoma. If there are no clinical signs of ocular hypertension or glaucoma the patient 
+can be monitored in the community.
+7.5 PATIENTS wITH PIGMENT DISPERSIoN SyNDRoME 
+Patients with pigment dispersion syndrome have an increased risk of developing glaucoma.21 The reported 
+risk of conversion of pigment dispersion syndrome to pigmentary glaucoma varies widely from 15% in 15 4 
+3
+years to 50% in four years, with IOP at presentation being a predictive factor.68
+No studies were identified which investigated the monitoring interval for this group of patients.
+ Individuals with pigment dispersion syndrome require ongoing monitoring owing to the increased 
+risk of developing glaucoma. If there are no clinical signs of ocular hypertension or glaucoma at 
+presentation the patient can be monitored in the community. 
+7.6 PATIENTS  wITH  oPTIC DISC ANoMAlIES
+7.6.1 INTRODUCTION
+There are a number of common non-glaucomatous optic nerve head anomalies which can resemble 
+glaucomatous disease. Optometrists should follow the relevant clinical guidelines and protocols in keeping 
+with each of these conditions and exercise clinical judgement with regard to ongoing monitoring or referral. 
+It is considered good practice to use digital image capture to monitor morphological change.
+| 19
+Glaucoma referral and safe discharge
+7.6.2 MyOPIC DISCS
+No studies were identified which investigated the monitoring interval for this group of patients.
+ Individuals with myopic discs require ongoing monitoring owing to the increased risk of developing 
+glaucoma. If there are no clinical signs of ocular hypertension or glaucoma at presentation the patient 
+can be monitored in the community.
+7.6.3 TILTED OPTIC DISC
+A review with a limited literature search concluded that tilted optic disc is not associated with any increased 
+risk of developing glaucoma.69 Tilted disc can mimic various types of visual field defect suggestive of normal 
+-tension glaucoma in the absence of raised intraocular pressure. Careful interpretation of visual fields is 3
+necessary to avoid incorrect diagnosis.70 The sensitivity and specificity of newer technologies that image 
+the optic nerve head and retinal nerve fibre layer in diagnosis of glaucoma in tilted optic disc are reported 
+to be very low.69
+No studies were identified which investigated the monitoring interval for this group of patients.
+ Healthcare practitioners should be aware that tilted optic disc is not associated with any increased 
+risk of glaucoma. Visual field defect mimicking glaucoma is common in patients with tilted optic disc, 
+but, in contrast to glaucomatous optic damage, the defect is non-progressive, located temporally, 
+and not dense.
+7.6.4 OPTIC DISC DRUSEN
+Optic nerve head drusen (ONHD) can be associated with VFL. A small retrospective cohort study (n=60, 103 
+eyes) compared rates of VFL in patients with ONHD with and without ocular hypertension. While 90.9% of 3
+eyes with OHT had VFL,  66.7% of normotensive eyes had VFL (p=0.03). At the same intraocular pressure, eyes 
+with grade III ONHD are at increased risk for VFL when compared with eyes with grade I ONHD.71
+No studies were identified which investigated the monitoring interval for this group of patients.
+ Patients with optic nerve head drusen who are normotensive and show no evidence of glaucoma 
+can be followed up by community optometrists. Patients with optic nerve head drusen, with ocular 
+hypertension and/or a visual field defect require more frequent follow up owing to the increased risk 
+of developing glaucoma and should be referred to secondary-eye-care services.
+20 |
+Glaucoma referral and safe discharge 8 • Provision of information
+8 Provision of information
+8.1 INTRoDuCTIoN
+Glaucoma and its risk factors are not well understood, neither by the general public nor among patients. 
+This makes early detection and ongoing management of this condition challenging. The lack of knowledge 
+and understanding means that patients with this disease, and their carers, are often unable to contribute 
+fully to the management of their glaucoma. This is a critical factor in ensuring that patients retain functional 
+vision and quality of life for as long as possible. It is important that patients understand their condition and 
+its management at the point of diagnosis and into the future. The ideal situation is that patients and carers 
+are well informed and fully participate in the decision-making process with their clinical teams to ensure 
+the best outcomes through their lifetime of care.
+Patient-friendly information delivered at appropriate points in the patient journey, with time given for 
+counselling, helps to promote understanding. Educating patients about their condition and  helping them 
+manage their eye-drop routines improves patient adherence to  therapy and thereby enhances the chance 
+of a successful outcome in the long term.72 
+Some groups, for example older people, people with learning disabilities and those in remote areas may 
+require mobile facilities to provide access to eye-care services and formal and informal carers may benefit 
+from training in eye health and eye care for these individuals.
+This section reflects the issues likely to be of most concern to patients and their carers. These points are 
+provided for use by healthcare professionals when discussing glaucoma with patients and carers and in 
+guiding the production of locally-produced information materials.
+8.2 KEy MESSAGES fRoM PATIENTS wITH GlAuCoMA 
+A focus group was held with patients who have glaucoma in September 2013. The aim of the focus group 
+was to hear about their experiences of services in relation to information provision. Eight people took part, 
+six men and two women. The key messages are highlighted in the checklist below,  which also incorporates 
+relevant points from the NICE guideline on glaucoma diagnosis and management.10 
+8.3 CHECKlIST foR PRovISIoN of INfoRMATIoN
+This section gives examples of the information patients and carers may find helpful at the key stages of the 
+patient journey. The checklist is neither exhaustive nor exclusive.
+General 
+y Emphasise the importance of regular eye tests for all individuals.
+y  At all times consider language and communication support needs to ensure that people with English 
+as a second language, those with learning disability/cognitive impairment and people with visual loss 
+receive good-quality accessible information throughout their patient journey.
+Initial presentation and referral
+y Advise patients of the need for referral to a specialist and of expected waiting times.
+y Explain what glaucoma is and what to expect at the appointment with the specialist.
+y  Reassure the patient that if the diagnosis is confirmed early, intervention can help preserve useful sight 
+and that with effective treatments patients are able to enjoy a good quality of life.
+y Highlight the importance of attending the appointment.
+y  Advise patients not to drive to the appointment owing to the likelihood of pupil dilation and to take 
+along a carer/friend/family member with them if possible.
+y Suggest that patients note down any questions and concerns they may wish to discuss at the meeting.
+| 21
+Glaucoma referral and safe discharge
+Secondary-eye-care services
+y  Explain procedures to the patient using appropriate language and level of detail and ensure 
+comprehension.
+y  Discuss the importance of monitoring progression of glaucoma risk factors and emphasise that although 
+sight lost with glaucoma cannot be recovered, adherence to treatment can preserve remaining sight.
+y Provide information on or referral to local sight support services where appropriate.
+y Allow sufficient time for answering any questions patients and carers may have eg:
+– what does glaucoma mean?
+– what type of glaucoma do I have?
+– will I go blind?
+– will I need to stay in hospital?
+– can I still drive?
+y  Where appropriate advise patients of their rights and responsibilities in line with current DVLA 
+requirements.
+y Where appropriate explain the Certificate of Blindness or Defective Vision and its implications.
+y Consolidate verbal information on glaucoma and medication use with written information.
+y Consider describing how the medication works to prevent further damage to the optic nerve.
+y  Point out that glaucoma often runs in families and that close family members aged over 40 should be 
+encouraged to book an appointment at their local optometrist to receive an NHS-funded eye-health 
+check. Early detection and treatment of the condition can preserve useful sight and quality of life well 
+into old age.
+Discharge into the community
+y  Provide patients with a copy of their discharge letter and clear information on who to contact should 
+they have any concerns.
+y Provide patients with written information on their condition.
+y Allow sufficient time to discuss the following:
+– cleansing eyes and general eye hygiene
+– how and when to take medication
+– t uition and practice in the most appropriate instillation technique including punctal occlusion and 
+use of devices and eye-drop  aids where necessary
+– side effects from medication
+– storing medication.
+y Advise self carers of the local support available and how to access this.
+y  Provide patients with information on issues regarding driving with glaucoma, explaining DVLA 
+requirements.
+y Emphasise the importance of attending follow-up appointments.
+y Provide patients with information on eye hygiene.
+y  Advise patients to make a note of any questions they have and take it with them to follow-up 
+appointments.
+22 |
+Glaucoma referral and safe discharge 8 • Provision of information
+8.4 SouRCES of fuRTHER INfoRMATIoN
+IGA - International Glaucoma Association 
+Woodcote House, 15 Highpoint Business Village, Henwood, Ashford, Kent, TN24 8DH 
+Helpline: 01233 648170 
+www.glaucoma-association.com • Email: info@iga.org.uk 
+A UK charity which works to prevent glaucoma blindness by providing information and advice.
+NHS Inform 
+www.nhsinform.co.uk
+The organisation provides quality-assured health information for the public.
+Royal College of ophthalmologists 
+www.rcophth.ac.uk/patients/
+The Royal College of Ophthalmologists produces a range of patient booklets which may be downloaded
+Royal National Institute of Blind People (RNIB) 
+Helpline Tel: 0303 123 9999 
+www.rnib.org.uk • Email: helpline@rnib.org.uk
+The RNIB provides practical and emotional support for people affected by sight loss.
+Sightline 
+www.sightlinedirectory.org.uk 
+Sightline is an online directory of services and organisations that help blind and partially sighted people 
+in the UK.
+| 23
+Glaucoma referral and safe discharge
+9 Implementing the guideline 
+9.1 IMPlEMENTATIoN STRATEGy
+Implementation of national clinical guidelines is the responsibility of each NHS board and is an essential 
+part of clinical governance. Mechanisms should be in place to review care provided against the guideline 
+recommendations. The reasons for any differences should be assessed and addressed where appropriate. 
+Local arrangements should then be made to implement the national guideline in individual hospitals, units 
+and practices. 
+9.2 RESouRCE IMPlICATIoNS of KEy RECoMMENDATIoNS 
+The guideline development group identified the following resource implications:
+y  Requirement for optometrists to purchase pachymeters where these are not currently in use. These will 
+cost around £1,500 to £2,000 per item.
+y Provision of training for optometrists in use of the DDLS and time out of practice to accommodate this.
+y  Primary-care costs associated with developing robust arrangements for follow up and monitoring of 
+patients with or at risk of glaucoma following their discharge from secondary-eye-care services. 
+y  Secondary-care costs associated with establishing and maintaining discharge protocols. These may 
+include the development of a glaucoma register at a national or local level and a hospital-based glaucoma 
+co-ordinator to manage referrals to community practitioners and audit referral, discharges and recall 
+frequency. 
+9.3 AuDITING CuRRENT PRACTICE
+A first step in implementing a clinical practice guideline is to gain an understanding of current clinical 
+practice. Audit tools designed around guideline recommendations can assist in this process. Audit tools 
+should be comprehensive but not time consuming to use. Successful implementation and audit of guideline 
+recommendations requires good communication between staff and multidisciplinary team working.
+The guideline development group has identified the following as key points to audit to assist with the 
+implementation of this guideline:
+y  The proportion of referrals from community optometrists to secondary-eye-care services with complete 
+information on IOP, visual fields and optic nerve head assessment.
+y The number of patients with IOP <26 mm Hg who are referred to secondary-eye-care services.
+y The proportion of false positive glaucoma referrals/overall referral accuracy.
+y  The number of patients who are discharged from secondary-eye-care services to the community and 
+proportion of these who are subsequently re-referred.
+y The number of blind/partial sight registrations due to glaucoma.
+24 |
+Glaucoma referral and safe discharge 10 • The evidence base
+10  The evidence base
+10.1  SySTEMATIC lITERATuRE REvIEw
+The evidence base for this guideline was synthesised in accordance with SIGN methodology. A systematic 
+review of the literature was carried out using an explicit search strategy devised by a SIGN Evidence and 
+Information Scientist. Databases searched include Medline and the Cochrane Library. The year range covered 
+was 2007–2014. The main searches were supplemented by material identified by individual members of the 
+development group. Each of the selected papers was evaluated by two members of the group using standard 
+SIGN methodological checklists before conclusions were considered as evidence.
+10.2  RECoMMENDATIoNS foR RESEARCH
+The guideline development group was not able to identify sufficient evidence to answer all of the key 
+questions asked in this guideline (see Annex 2). The following areas for further research have been identified:
+y A comparison of alternative tonometers with investigation of all factors influencing IOP measurements.
+y  Studies assessing the level of agreement in CCT readings between currently available devices and a 
+reference standard measure.
+y Studies assessing the reliability of CCT and need for repeated measures.
+y Investigation of the accuracy of referrals based solely on visual field defects.
+y Intra- and inter-observer variability in DDLS assessment by optometrist before and after targeted training.
+y  Comparisons of agreement and reliability of anterior chamber angle assessment (Van Herick method and 
+OCT) in community practice with gonioscopy conducted in the hospital eye service.
+y  An update of the OHTS/EGPS five-year glaucoma risk-prediction model to be more applicable for use 
+in clinical care.
+y  Studies assessing risk of primary angle closure postiridotomy converting into primary angle closure 
+glaucoma requiring long-term topical medication or surgical intervention.
+y  The comparative effectiveness of alternative monitoring intervals for patients with primary angle-closure 
+postiridotomy.
+y  The comparative effectiveness of optometry-led versus ophthalmology-led follow up for patients with 
+ocular hypertension or glaucoma, to include clinical outcomes and patients’ satisfaction.
+y  Cohort data to determine the optimal frequency of monitoring, for those with glaucoma or at risk of 
+glaucoma, to detect glaucoma progression.
+y Studies assessing the feasibility of a national glaucoma register.
+y  Studies assessing components of glaucoma accreditation/qualification for managing patients with or 
+at risk of glaucoma in primary care.
+10.3 REvIEw AND uPDATING
+This guideline was published in 2015 and will be considered for review in three years. Any updates to the 
+guideline in the interim period will be noted on the SIGN website: www.sign.ac.uk
+| 25
+Glaucoma referral and safe discharge
+11 Development of the guideline
+11.1 INTRoDuCTIoN
+SIGN is a collaborative network of clinicians, other healthcare professionals and patient organisations and 
+is part of Healthcare Improvement Scotland. SIGN guidelines are developed by multidisciplinary groups of 
+practising clinicians using a standard methodology based on a systematic review of the evidence. Further 
+details about SIGN and the guideline development methodology are contained in ‘SIGN 50: A Guideline 
+Developer’s Handbook’, available at www.sign.ac.uk
+11.2 THE GuIDElINE DEvEloPMENT GRouP
+Dr Roshini Sanders (Chair) Consultant in Ophthalmology, Queen Margaret Hospital, Dunfermline
+Dr Pankaj Agarwal   Consultant in Ophthalmology (Glaucoma Specialist), Princess Alexandra Eye  
+    Pavilion, Edinburgh
+Ms Gillian Bruce    Optometrist, Edinburgh
+Dr jennifer Burr    Reader, University of St Andrews
+Mr Peter Carson    Optometrist, Optometry Scotland, Glasgow
+Mr Ian Clement    Lay Representative, Edinburgh
+Mrs Lisa Cowan    Senior Postgraduate Optometry Tutor, NHS Education for Scotland, Glasgow
+Dr Alastair Glennie   General Practitioner, Kemnay
+Mr john Hughes    Development Manager (Scotland), International Glaucoma Association 
+Dr Manjula Kumarasamy Consultant in Ophthalmology (Glaucoma Specialist), Aberdeen Royal   
+    Infirmary
+Mrs Lorna McKay   Highly Specialist Orthoptist, Southern General Hospital, Glasgow  
+Ms Shirley Miller    Ophthalmic Glaucoma Nurse Practitioner, Queen Margaret Hospital,   
+    Dunfermline
+Dr Donald Montgomery  Consultant in Ophthalmology (Glaucoma Specialist), Glasgow Royal   
+    Infirmary
+Mr Frank Munro    Chair, NHS Education for Scotland Optometric Advisory Committee
+Mr Hal Rollason    Optometrist, College of Optometrists, London
+Dr Carolyn Sleith    Evidence and Information Scientist, SIGN
+Dr Andreas Syrogiannis   Specialty Registrar in Ophthalmology, Ninewells Hospital, Dundee 
+Dr Lorna Thompson   Programme Manager, SIGN
+The membership of the guideline development group was confirmed following consultation with the member 
+organisations of SIGN. All members of the guideline development group made declarations of interest. A 
+register of interests is available in the supporting material section for this guideline at www.sign.ac.uk
+Guideline development and literature review expertise, support and facilitation were provided by the SIGN 
+Executive. All members of the SIGN Executive make yearly declarations of interest. A register of interests is 
+available on the contacts page of the SIGN website www.sign.ac.uk
+Mr Euan Bremner   Project Officer
+Mrs Lesley Forsyth   Events Co-ordinator
+Mrs Karen Graham   Patient Involvement Officer
+Ms Karen King    Distribution and Office Co-ordinator
+Mr Stuart Neville    Publications Designer
+Miss Gaynor Rattray    Guideline Co-ordinator
+26 |
+Glaucoma referral and safe discharge 11 • Development of the guideline
+11.3 CoNSulTATIoN AND PEER REvIEw
+11.3.1 NATIONAL OPEN MEETING
+A national open meeting is the main consultative phase of SIGN guideline development, at which the 
+guideline development group presents its draft recommendations for the first time. The national open 
+meeting for this guideline was held on 20 March 2014 and was attended by 131 representatives of all the 
+key specialties relevant to the guideline. The draft guideline was also available on the SIGN website for a 
+limited period at this stage to allow those unable to attend the meeting to contribute to the development 
+of the guideline. 
+11.3.2 SPECIALIST REVIEWERS INVITED TO COMMENT ON THIS DRAFT
+This guideline was also reviewed in draft form by the following independent expert referees, who were 
+asked to comment primarily on the comprehensiveness and accuracy of interpretation of the evidence 
+base supporting the recommendations in the guideline. The guideline group addresses every comment 
+made by an external reviewer, and must justify any disagreement with the reviewers’ comments. All expert 
+referees made declarations of interest and further details of these are available on request from the SIGN 
+Executive. 
+SIGN is very grateful to all of these experts for their contribution to the guideline.
+Mrs Chigozie joe Adigwe  Senior Preventions Officer, Royal National Institute of Blind People  
+     Scotland, Glasgow
+Dr Balkishan Agrawal    Sessional GP and Expert Member of South East Scotland Research  
+     Ethics Committee 02 and  Member of ACCORD University of   
+     Edinburgh Research Ethics Committee, Edinburgh
+Professor Augusto Azuara-Blanco Professor of Ophthalmology, Queen’s University Belfast
+Dr Caroline Cobb    Consultant Ophthalmologist, Ninewells Hospital, Dundee
+Miss Rebecca Daly    Independent Prescribing Optometrist, Edinburgh
+Dr Amit Datta     Consultant Ophthalmologist, Hairmyres Hospital, East Kilbride 
+Ms Cecelia Fenerty    Consultant Ophthalmologist, Manchester Royal Eye Hospital
+Dr Alasdair Fern     Consultant Ophthalmologist, Hairmyres Hospital, East Kilbride 
+Professor Brian Fleck    Consultant Paediatric Ophthalmologist, Royal Hospital for Sick   
+     Children, Edinburgh 
+Ms Mary Gallagher    Emergency Ophthalmic Nurse Practitioner, Princess Alexandra Eye  
+     Pavilion, Edinburgh 
+Mrs Heather Goodare    Lay Representative, Edinburgh
+Dr Robert Harper    Optometrist Consultant, Manchester Royal Eye Hospital 
+Dr Ross Munro Henderson  Independent Prescribing Optometrist and Optometric Adviser (NHS  
+     Tayside), Perth 
+Ms Samara Hodi     Optometrist Principal, Raigmore Hospital, Inverness
+Ms Angela james    Ophthalmic Pharmacist, Princess Alexandra Eye Pavilion,   
+     Edinburgh 
+Mr Ian jarvis     Community Optometrist, Dundee
+Dr Gunter Loffler     Programme Organiser, Glasgow Caledonian University
+Professor Caroline MacEwen  Consultant Ophthalmologist, Ninewells Hospital, Dundee
+Mrs Kirsty MacFarlane    Principal Pharmacist, Scottish Medicines Consortium, Glasgow
+Ms Pam McClean    NES Senior Postgraduate Optometry Tutor, NHS Education for   
+     Scotland, Edinburgh
+Mr Stephen McPherson    Optometrist, Aberdeen   
+| 27
+Glaucoma referral and safe discharge
+Mrs Lorraine North   Lead of Glaucoma and  Retinal Disease Special Interest Groups for   
+    British and Irish Orthoptic Society, Frimley Park Hospital, Surrey 
+Mr Derek Ogle    Lay Representative, Bo’ness 
+Dr janet Pooley    Programme Director (Optometry), NHS Education for Scotland, Edinburgh
+Dr Alan Rotchford   Consultant Ophthalmologist, The Tennent Institute of Ophthalmology,   
+    Glasgow 
+Ms Mary Shaw    Senior Lecturer, Manchester Royal Eye Hospital, Manchester 
+Dr George Spaeth   Esposito Research Professor, Wills Eye Hospital/Jefferson Medical College,  
+    Philadelphia
+Professor john Sparrow   Consultant Opthalmologist, Honorary Professor of Ophthalmic Health   
+    Services Research and Applied Epidemiology, University of Bristol
+Dr Niall Strang    Subject Lead in Visual Science, Glasgow Caledonian University 
+Professor Steven Taylor   Optometry Advisor, Dorset
+Dr Prem Venkatesh   Consultant Ophthalmologist, Inverclyde Royal Hospital, Greenock
+Professor Stephen Vernon Honorary Professor of Ophthalmology and Consultant Glaucoma Specialist,  
+    University Hospital, Nottingham
+Dr David Wardrop   Consultant Ophthalmologist, Falkirk Community Hospital
+    Association of Optometrists 
+    The College of Optometrists, London 
+    International Glaucoma Association, Ashford, Kent 
+    Scottish Optometric Advisers Group
+11.3.3 SIGN EDITORIAL GROUP
+As a final quality control check, the guideline is reviewed by an editorial group comprising the relevant 
+specialty representatives on SIGN Council to ensure that the specialist reviewers’ comments have been 
+addressed adequately and that any risk of bias in the guideline development process as a whole has been 
+minimised. All members of SIGN Council make yearly declarations of interest. A register of interests is available 
+on the SIGN Council Membership page of the SIGN website www.sign.ac.uk. The editorial group for this 
+guideline was as follows:
+Dr Michael Gavin   SIGN Council Representative, Royal College of Ophthalmologists
+Dr Roberta james   SIGN Programme Lead; Co-Editor
+Professor john Kinsella   Chair of SIGN; Co-Editor
+28 |
+Glaucoma referral and safe discharge Abbreviations
+Abbreviations
+CCT  central corneal thickness
+C/D  cup-to-disc
+CG  clinical guideline 
+CI  confidence interval
+CrI  credible interval
+DDlS  disc damage likelihood scale
+DvlA  Driver and Vehicle Licensing Agency
+EGPS  European Glaucoma Prevention Study
+fDT  frequency doubling technology
+GAT  Goldmann applanation tonometry 
+GoS  General Ophthalmic Services
+GMC  General Medical Council
+HAT  hand-held applanation tonometer 
+HTA  health technology assessment
+IoP  intraocular pressure
+ISNT  inferior, superior, nasal and temporal
+lR  likelihood ratio
+MA  marketing authorisation
+MTA  multiple technology appraisal
+NCT  non-contact tonometry
+NICE  National Institute for Health and Care Excellence
+oCT  optical coherence tomography
+oHT  ocular hypertension
+oHTS  Ocular Hypertension Treatment Study
+oKP  oculokinetic perimetry
+oNHD  optic nerve head drusen
+oR  odds ratio
+PACG  primary angle-closure glaucoma
+PoAG  primary open-angle glaucoma
+PSD  pattern standard deviation
+SAP  standard automated perimetry
+SIGN  Scottish Intercollegiate Guidelines Network 
+SITA  Swedish Interactive Thresholding Algorithm
+SMC  Scottish Medicines Consortium
+vfl  visual field loss
+| 29
+Glaucoma referral and safe discharge
+Annex 1
+The Scottish general ophthalmic arrangements
+The NHS (General Ophthalmic Services) (Scotland) amendment regulations specify the following patient categories 
+and associated tests in relation to eye examination for suspected glaucoma.
+The NHS (General Ophthalmic Services) (Scotland) amendment regulations 2010.  
+www.aop.org.uk/uploads/regulatory/Scotland/scottish_gos_regulations_2014.pdf 
+Maximum frequency of primary eye examinations
+Patients aged 40 years or over with a close family* Annually
+history of glaucoma
+*father, mother, brother, sister, son, daughter
+The additional tests and procedures to be undertaken as part of a primary eye examination depending on the 
+presenting signs and symptoms of the patient
+Intraocular pressure measurement, automated supra-
+Adults aged 40 years and over who have a family 
+threshold visual field tests, and assessment of the optic 
+history of glaucoma
+nerve head
+Patients with suspect glaucoma or ocular hypertensives Intraocular pressure measurement by non-contact or 
+applanation tonometry as appropriate, automated supra-
+threshold visual field tests, and assessment of the optic 
+nerve head  
+The tests and procedures to be undertaken as part of a supplementary eye examination depending on the 
+circumstances of the patient
+Suspect glaucoma, unusual optic disc appearance, or To include, as required:
+where other retinal or choroidal abnormalities have been Repeat of automated visual field assessment by full 
+detected during the primary eye examination threshold visual fields
+Repeat tonometry by contact applanation 
+Repeat internal examination of the eyes appropriate to 
+the relevant detected or suspected eye abnormality, for 
+example using slit-lamp biomicroscopy with condensing 
+lens, repeat digital imaging or scanning which may 
+include mydriasis
+30 |
+Glaucoma referral and safe discharge Annexes
+Annex 2
+Key questions used to develop the guideline
+This guideline is based on a series of structured key questions that define the target population, the intervention, 
+diagnostic test, or exposure under investigation, the comparison(s) used and the outcomes used to measure efficacy, 
+effectiveness, or risk. These questions form the basis of the systematic literature search.
+Key question See guideline 
+section
+1.  In adult patients where the optometrist suspects glaucomatous disease at eye examination, 4.5
+which optic disc assessment techniques and parameters are associated with the greatest 
+referral accuracy or diagnostic accuracy for symptoms suggestive of glaucoma?
+Consider: fundoscopy versus fundoscopy with dilation versus digital imaging (including 
+stereophotography, monophotography, optical coherence tomography, scanning laser 
+polarimeter, Heidelberg retinal tomograph scanning laser ophthalmoscopy/retinal nerve fibre 
+imaging).
+2.  In adult patients where the optometrist suspects glaucomatous disease at eye examination, 4.2
+which techniques for assessment of intraocular pressure are associated with greatest 
+referral accuracy? 
+Consider: Goldmann applanation tonometer,  non-contact tonometry, hand-held applanation 
+tonometers, Perkins. Single readings versus repeat. Diurnal variation and variation within 
+settings.
+3.  In adult patients where the optometrist suspects ocular hypertension at eye examination, 4.3
+does measurement and reporting of central corneal thickness improve referral accuracy when 
+provided in addition to intraocular pressure? Which method of pachymetry should be used?
+4.  In adult patients where the optometrist suspects glaucomatous disease at eye examination, 4.6
+which visual field assessment techniques are associated with the greatest referral accuracy 
+or diagnostic accuracy for symptoms suggestive of glaucoma?
+Consider: threshold automated perimetry, repeated testing, standard automated perimetry, 
+short-wavelength automated perimetry, matrix frequency doubling technology,  Swedish 
+Interactive Thresholding Algorithm, Dicon, Henson, Humphrey.
+5.  In adult patients where the optometrist suspects ocular hypertension at eye examination, 4.4
+does measurement and reporting of angle width improve the referral accuracy? Which 
+method of angle-width assessment should be used?
+Consider: Gonioscopy,  Van Herick,  Redmond Smith, anterior segment optical coherence 
+tomography.
+| 31
+Glaucoma referral and safe discharge
+6.  At what interval and in which setting should monitoring of the following patients groups 7
+be conducted:
+a. Patients diagnosed with glaucoma     
+b. Patients with family history of glaucoma in first degree relative
+c. Patients with ocular hypertension
+d. Patients postprophylactic iridotomy
+e. Patients with isolated field defects
+f. Patients with myopia
+g. Patients with optic disc drusen
+h. Patients with tilted discs
+Consider: Risk of glaucoma diagnosis, progression of disease, waiting times, patients 
+satisfaction, healthcare professional satisfaction.
+7.  In adult patients discharged from secondary care what is the evidence for the following 6.1.2 
+interventions in facilitating safe discharge 6.1.3
+a. Provision of a patient-held record
+b. Identification of a named optometrist 
+Consider: progression of disease, patient satisfaction, healthcare professional satisfaction.
+32 |
+Glaucoma referral and safe discharge Annexes
+Annex 3
+Spaeth’s disc damage likelihood scale. Figure adapted from DDLS supplied by Dr Spaeth
+1. Measure vertical disc diameter using slit beam height. Categorise as small, medium or large. 
+2. Describe narrowest rim width as ratio to disc diameter in same meridian.
+THE DISC DAMAGE LIKELIHOOD SCALE
+Narrowest width of rim (rim/disc ratio) Examples
+For small disc  For medium DDLS Stage size disc For large disc  1.25 mm  1.75 mm  2.25 mm  <1.50 mm  1.50 -2.00 mm >2.00 mm optic nerve optic nerve optic nerve
+1 .5 .4 or more .3 or more
+2 .4 to .49 .3 to .39 .2 to .29
+3 .3 to .39 .2 to .29 .1 to .19
+4 .2 to .29 .1 to .19 less than .1
+5 .1 to .19 less than .1 0 for less than 45°
+6 less than .1 0 for less than 45° 0 for 46° to 90°
+7 0 for less than 0 for 91° to 45° 0 for 46° to 90° 180°
+8 0 for 46° to 90° 0 for 91° to 0 for 181° to 180° 270°
+9 0 for 91° to 0 for 181° to 0 for more than 180° 270° 270°
+10 0 for more than 0 for more than 180° 270°
+Magnification correction factors for condensing lenses
+volk 60D   x0.88 Nikon 60D x1.03
+volk 66D   x1.0 Nikon 90D x1.63
+volk 78D   x1.2
+volk 90D   x1.33
+| 33
+Glaucoma referral and safe discharge
+Annex 4 
+NHSScotland glaucoma referral form
+34 |
+Glaucoma referral and safe discharge Annexes
+Annex 5  Sample discharge letter 
+NHSScotland glaucoma discharge form
+Dear Optometrist,       Date: ....... /......./.20.....
+Name: DOB:                    CHI Number
+Address: Tel:
+Email: 
+The above named patient has been discharged from ..............................................................................................................................
+The findings from their last examination (date….......................…) are:
+Right eye Left eye
+Diagnosis and date of diagnosis
+visual acuity
+ocular medication
+Central corneal thickness 
+Gonioscopy Open  Closed  Open  Closed 
+Intraocular pressure (mm Hg (average of 2 
+measures), time; tonometer type)
+Glaucoma surgery or laser procedures (pro-
+cedure and date) 
+ optic nerve (Disc Damage likelihood Scale) 
+Consider including digital images
+visual fields (date, technology and Global  
+Index) 
+Consider including visual field plots
+Comments eg medication allergies/adverse reactions
+I would be grateful if you could monitor this patient at the following review interval;.............................................................. 
+Please re-refer if:
+y intraocular pressure exceeds ..............................mm Hg (repeatable)
+y change in optic disc appearance or
+y a new repeatable visual field defect.
+If you require any further information (or if at a future date you feel further glaucoma assessment is necessary) 
+please contact ...............................................................................................................................................(add tel and email)
+yours sincerely,
+Discharge clinician (contact details – tel, email)
+cc General Practitioner, patient
+| 35
+Glaucoma referral and safe discharge
+References 16.  Gordon MO, Kass MA, Torri V, Miglior S, Beiser jA, Floriani I, et al. The accuracy and clinical application of predictive models for 
+primary open-angle glaucoma in ocular hypertensive individuals. 
+Ophthalmology 2008;115(11):2030-6.
+1.  Hollands H, johnson D, Hollands S, Simel DL, jinapriya D, Sharma 17.  Kass MA, Heuer DK, Higginbotham Ej, johnson CA, Keltner jL, Miller 
+S. Do findings on routine examination identify patients at risk for jP, et al. The Ocular Hypertension Treatment Study: a randomized 
+primary open-angle glaucoma? The rational clinical examination trial determines that topical ocular hypotensive medication delays 
+systematic review. jAMA 2013;309(19):2035-42. or prevents the onset of primary open-angle glaucoma. Arch 
+Ophthalmol 2002;120(6):701-13.
+2.  Bunce C, xing W, Wormald R. Causes of blind and partial sight 
+certifications in England and Wales: April 2007-March 2008. Eye 18.  Miglior S, Zeyen T, Pfeiffer N, Cunha-Vaz j, Torri V, Adamsons I. Results 
+(Lond) 2010;24(11):1692-9. of the European Glaucoma Prevention Study. Ophthalmology 
+2005;112(3):366-75.
+3.  King A, Azuara-Blanco A, Tuulonen A. Glaucoma. BMj 
+2013;346:f3518. 19.  Marcus MW, de Vries MM, junoy Montolio FG, jansonius NM. 
+Myopia as a risk factor for open-angle glaucoma: a systematic 
+4.  Ratnarajan G, Newsom W, French K, Kean j, Chang L, Parker M, et review and meta-analysis. Ophthalmology 2011;118(10):1989-94.
+al. The impact of glaucoma referral refinement criteria on referral 
+to, and first-visit discharge rates from, the hospital eye service: the 20.  Desai MA, Lee RK. The medical and surgical management of 
+Health Innovation & Education Cluster (HIEC) Glaucoma Pathways pseudoexfoliation glaucoma. Int Ophthalmol Clin 2008;48(4):95-
+project. Ophthalmic Physiol Opt 2013;33(2):183-9. 113.
+5.  Imrie F, Blaikie A, Cobb C, Sinclair A, Wilson D, Dobson S, et al. 21.  Niyadurupola N, Broadway DC. Pigment dispersion syndrome 
+Glaucoma electronic patient record--design, experience and study and pigmentary glaucoma--a major review. Clin Experiment 
+of high-risk patients. Eye (Lond) 2005;19(9):956-62. Ophthalmol 2008;36(9):868-82.
+6.  Prior M, Francis jj, Azuara-Blanco A, Anand N, Burr jM. Why do 22.  Health Quality Ontario. Diurnal tension curves for assessing the 
+people present late with advanced glaucoma? A qualitative development or progression of glaucoma: an evidence-based 
+interview study. Br j Ophthalmol 2013;97(12):1574-8. analysis. Ont Health Technol Assess Ser 2011;11(2):1-40.
+7.  The Scottish Government. NHS (General Ophthalmic Services) 23.  Dueker DK, Singh K, Lin SC, Fechtner RD, Minckler DS, Samples 
+(Scotland) Regulations 2006;. Edinburgh: The Scottish Government; jR, et al. Corneal thickness measurement in the management of 
+2010. [cited 27 Nov 2014]. Available from url: http://www.sehd. primary open-angle glaucoma: a report by the American Academy 
+scot.nhs.uk/pca/PCA2010(O)01.pdf of Ophthalmology. Ophthalmology 2007;114(9):1779-87.
+8.  Ang GS, Ng WS, Azuara-Blanco A. The influence of the new general 24.  Grewal DS, Brar GS, jain R, Grewal SP. Comparison of Scheimpflug 
+ophthalmic services (GOS) contract in optometrist referrals for imaging and spectral domain anterior segment optical coherence 
+glaucoma in Scotland. Eye (Lond) 2009;23(2):351-5. tomography for detection of narrow anterior chamber angles. Eye 
+(Lond) 2011;25(5):603-11.
+9.  The Scottish Government. Eyecare integration project. [cited 27 
+Nov 2014]. Available from url: http://www.scotland.gov.uk/Topics/ 25.  Khor WB, Sakata LM, Friedman DS, Narayanaswamy A, Lavanya R, 
+Health/Services/Eyecare/Integration Perera SA, et al. Evaluation of scanning protocols for imaging the 
+anterior chamber angle with anterior segment-optical coherence 
+10.  NICE (National Institute for Health and Care Excellence). Glaucoma: tomography. j Glaucoma 2010;19(6):365-8.
+Diagnosis and management of chronic open angle glaucoma 
+and ocular hypertension. NICE; 2009. (CG85). [cited 27 Nov 2014]. 26.  Lavanya R, Foster Pj, Sakata LM, Friedman DS, Kashiwagi K, Wong 
+Available from url: http://www.nice.org.uk/guidance/cg85/ Ty, et al. Screening for narrow angles in the Singapore population: 
+resources/guidance-glaucoma-pdf evaluation of new noncontact screening methods. Ophthalmology 
+2008;115(10):1720-7.
+11.  Guidance on prescribing. In:  The British National Formulary No. 
+66. London: British Medical Association and Royal Pharmaceutical 27.  Narayanaswamy A, Sakata LM, He MG, Friedman DS, Chan yH, 
+Society of Great Britain; 2013. Lavanya R, et al. Diagnostic performance of anterior chamber angle 
+measurements for detecting eyes with narrow angles: an anterior 
+12.  Medicines and Healthcare products Regulatory Agency. Off-label segment OCT study. Arch Ophthalmol 2010;128(10):1321-7.
+or unlicensed use of medicines: prescribers’ responsibilities. Drug 
+Safety Update 2009;2(9):6-7. 28.  Nolan WP, See jL, Chew PT, Friedman DS, Smith SD, Radhakrishnan 
+S, et al. Detection of primary angle closure using anterior segment 
+13.  Burr jM, Mowatt G, Hernandez R, Siddiqui MAR, Cook j, Lourenco T, optical coherence tomography in Asian eyes. Ophthalmology 
+et al. The clinical effectiveness and cost-effectiveness of screening 2007;114(1):33-9.
+for open angle glaucoma: a systematic review and economic 
+evaluation. Health Technol Assess 2007;11(41):iii-iv, ix-x, 1-190. 29.  Park SB, Sung KR, Kang Sy, jo jW, Lee KS, Kook MS. Assessment of 
+narrow angles by gonioscopy, Van Herick method and anterior 
+14.  Day AC, Baio G, Gazzard G, Bunce C, Azuara-Blanco A, Munoz B, et segment optical coherence tomography. jpn j Ophthalmol 
+al. The prevalence of primary angle closure glaucoma in European 2011;55(4):343-50.
+derived populations: a systematic review. Br j Ophthalmol 
+2012;96(9):1162-7. 30.  Wong HT, Chua jL, Sakata LM, Wong MH, Aung HT, Aung T. 
+Comparison of slitlamp optical coherence tomography and 
+15.  Burr jM, Botello-Pinzon P, Takwoingi y, Hernandez R, Vazquez- scanning peripheral anterior chamber depth analyzer to evaluate 
+Montes M, Elders A, et al. Surveillance for ocular hypertension: angle closure in Asian eyes. Arch Ophthalmol 2009;127(5):599-603.
+an evidence synthesis and economic evaluation. Health Technol 
+Assess 2012;16(29):1-271, iii-iv.
+36 |
+Glaucoma referral and safe discharge References
+31.  Perera SA, Ho CL, Aung T, Baskaran M, Ho H, Tun TA, et al. Imaging 46.  Arvind H, George R, Raju P, Ve RS, Mani B, Kannan P, et al. Neural 
+of the iridocorneal angle with the RTVue spectral domain optical rim characteristics of healthy South Indians: the Chennai Glaucoma 
+coherence tomography. Invest Ophthalmol Vis Sci 2012;53(4):1710- Study. Invest Ophthalmol Vis Sci 2008;49(8):3457-64.
+3.
+47.  Morgan jE, Bourtsoukli I, Rajkumar KN, Ansari E, Cunliffe IA, North 
+32.  Quek DT, Narayanaswamy AK, Tun TA, Htoon HM, Baskaran M, RV, et al. The accuracy of the inferior>superior>nasal>temporal 
+Perera SA, et al. Comparison of two spectral domain optical neuroretinal rim area rule for diagnosing glaucomatous optic disc 
+coherence tomography devices for angle-closure assessment. damage. Ophthalmology 2012;119(4):723-30.
+Invest Ophthalmol Vis Sci 2012;53(9):5131-6.
+48.  Wang y, xu L, jonas jB. Shape of the neuroretinal rim and its 
+33.  Sakata LM, Lavanya R, Friedman DS, Aung HT, Gao H, Kumar RS, et al. correlations with ocular and general parameters in adult chinese: 
+Comparison of gonioscopy and anterior segment ocular coherence the Beijing eye study. Am j Ophthalmol 2007;144(3):462-4.
+tomography in detecting angle closure in different quadrants of 
+the anterior chamber angle. Ophthalmology 2008;115(5):769-74. 49.  Harizman N, Oliveira C, Chiang A, Tello C, Marmor M, Ritch R, et al. 
+The ISNT rule and differentiation of normal from glaucomatous 
+34.  Baskaran M, Oen FT, Chan yH, Hoh ST, Ho CL, Kashiwagi K, et al. eyes. Arch Ophthalmol 2006;124(11):1579-83.
+Comparison of the scanning peripheral anterior chamber depth 
+analyzer and the modified van Herick grading system in the 50.  Lin SC, Singh K, jampel HD, Hodapp EA, Smith SD, Francis BA, et 
+assessment of angle closure. Ophthalmology 2007;114(3):501-6. al. Optic nerve head and retinal nerve fiber layer analysis: a report 
+by the American Academy of Ophthalmology. Ophthalmology 
+35.  Thomas R, George T, Braganza A, Muliyil j. The flashlight test and 2007;114(10):1937-49.
+van Herick’s test are poor predictors for occludable angles. Aust 
+N Z j Ophthalmol 1996;24(3):251-6. 51.  Mowatt G, Burr jM, Cook jA, Siddiqui MA, Ramsay C, Fraser 
+C, et al. Screening tests for detecting open-angle glaucoma: 
+36.  Bhartiya S, Shaarawy T. Evaluation of the van Herick technique for systematic review and meta-analysis. Invest Ophthalmol Vis Sci 
+screening for occludable angles in an African population. j Curr 2008;49(12):5373-85.
+Glaucoma Pract 2013;7(2):88-90.
+52.  jampel HD, Singh K, Lin SC, Chen TC, Francis BA, Hodapp E, 
+37.  Garway-Heath DF, Ruben ST, Viswanathan A, Hitchings RA. et al. Assessment of visual function in glaucoma: a report by 
+Vertical cup/disc ratio in relation to optic disc size: its value the American Academy of Ophthalmology. Ophthalmology 
+in the assessment of the glaucoma suspect. Br j Ophthalmol 2011;118(5):986-1002.
+1998;82(10):1118-24.
+53.  The College of Optometrists, The Royal College of Ophthalmologists. 
+38.  jonas jB, Bergua A, Schmitz-Valckenberg P, Papastathopoulos Guidance on the referral of Glaucoma suspects by community 
+KI, Budde WM. Ranking of optic disc variables for detection of optometrists. 2010. [cited 27 Nov 2014]. Available from url: http://
+glaucomatous optic nerve damage. Invest Ophthalmol Vis Sci www.college-optometrists.org/en/utilities/document-summary.
+2000;41(7):1764-73. cfm/B7251E0C-2436-455A-B15F1E43B6594206
+39.  Spaeth GL, Henderer j, Liu C, Kesen M, Altangerel U, Bayer A, et 54.  Brown HC, Smith Hj. Giving women their own case notes to carry 
+al. The disc damage likelihood scale: reproducibility of a new during pregnancy. Cochrane Database of Systematic Reviews 2004, 
+method of estimating the amount of optic nerve damage caused Issue 2. 
+by glaucoma. Trans Am Ophthalmol Soc 2002;100:181-5.
+55.  Gysels M, Richardson A, Higginson Ij. Does the patient-held 
+40.  Hornova j, Kuntz Navarro jB, Prasad A, Freitas DG, Nunes CM. record improve continuity and related outcomes in cancer care: a 
+Correlation of Disc Damage Likelihood Scale, visual field, and systematic review. Health Expect 2007;10(1):75-91.
+Heidelberg Retina Tomograph II in patients with glaucoma. Eur j 
+Ophthalmol 2008;18(5):739-47. 56.  Ko H, Turner T, jones C, Hill C. Patient-held medical records for 
+patients with chronic disease: a systematic review (Structured 
+41.  Abdul Majid AS, Kwag jH, jung SH, yim HB, Kim yD, Kang abstract). Qual Saf Health Care 2010;19(5):e41.
+KD. Correlation between disc damage likelihood scale and 
+optical coherence tomography in the diagnosis of glaucoma. 57.  Waibel S, Henao D, Aller MB, Vargas I, Vazquez ML. What do we know 
+Ophthalmologica 2010;224(5):274-82. about patients’ perceptions of continuity of care? A meta-synthesis 
+of qualitative studies. Int j Qual Health Care 2012;24(1):39-48.
+42.  Bayer A, Harasymowycz P, Henderer jD, Steinmann WG, Spaeth GL. 
+Validity of a new disk grading scale for estimating glaucomatous 58.  Hawley C, Albrow H, j S, Mason L. UK Eye Care Services Project: 
+damage: correlation with visual field damage. Am j Ophthalmol Phase one: Systematic Review of the Organisation of UK Eye Care 
+2002;133(6):758-63. Services. University of Warwick: Warwick Medical School; 2010. 
+[cited 27 Nov 2014]. Available from url: http://www.college-
+43.  Danesh-Meyer HV, Gaskin Bj, jayusundera T, Donaldson M, Gamble optometrists.org/en/utilities/document-summary.cfm/4783B5BD-
+GD. Comparison of disc damage likelihood scale, cup to disc ratio, 51D2-4C3E-916EE02F6230CB21
+and Heidelberg retina tomograph in the diagnosis of glaucoma. 
+Br j Ophthalmol 2006;90(4):437-41. 59.  Spry PG, Spencer IC, Sparrow jM, Peters Tj, Brookes ST, Gray S, et al. 
+The Bristol Shared Care Glaucoma Study: reliability of community 
+44.  Henderer j, Wang y, Bayer A, Altangerel U, Schwartz L, Schmidt C. optometric and hospital eye service test measures. Br j Ophthalmol 
+Evaluating a new disc staging scale for glaucomatous damage: 1999;83(6):707-12.
+the ability to detect change over time. Eur j Ophthalmol 
+2009;19(3):404-10. 60.  Foster Pj, Buhrmann R, Quigley HA, johnson Gj. The definition and 
+classification of glaucoma in prevalence surveys. Br j Ophthalmol 
+45.  Richman j, Lorenzana LL, Lankaranian D, Dugar j, Mayer j, Wizov 2002;86(2):238-42.
+SS, et al. Importance of visual acuity and contrast sensitivity in 
+patients with glaucoma. Arch Ophthalmol 2010;128(12):1576-82. 61.  Ng WS, Ang GS, Azuara-Blanco A. Primary angle closure glaucoma: 
+a descriptive study in Scottish Caucasians. Clin Experiment 
+Ophthalmol 2008;36(9):847-51.
+| 37
+Glaucoma referral and safe discharge
+62.  Blondeau P, jaworski L, Turcotte P-C. Follow-up of angle closure 
+glaucoma suspects after laser iridotomy in Caucasians with normal 
+intraocular pressure at diagnosis. Can j Ophthalmol 2011;46(3):247-
+53.
+63.  Sihota R, Rao A, Gupta V, Srinivasan G, Sharma A. Progression in 
+primary angle closure eyes. j Glaucoma 2010;19(9):632-6.
+64.  Thomas R, Parikh R, Muliyil j, Kumar RS. Five-year risk of progression 
+of primary angle closure to primary angle closure glaucoma: a 
+population-based study. Acta Ophthalmol Scand 2003;81(5):480-5.
+65.  Ritch R. Exfoliation syndrome-the most common identifiable cause 
+of open-angle glaucoma. j Glaucoma 1994;3(2):176-7.
+66.  Karger RA, jeng SM, johnson DH, Hodge DO, Good MS. 
+Estimated incidence of pseudoexfoliation syndrome and 
+pseudoexfoliation glaucoma in Olmsted County, Minnesota. j 
+Glaucoma 2003;12(3):193-7.
+67.  Ritch R. Exfoliation syndrome and occludable angles. Trans Am 
+Ophthalmol Soc 1994;92:845-944.
+68.  Siddiqui y, Ten Hulzen RD, Cameron jD, Hodge DO, johnson DH. 
+What is the risk of developing pigmentary glaucoma from pigment 
+dispersion syndrome? Am j Ophthalmol 2003;135(6):794-9.
+69.  Witmer MT, Margo CE, Drucker M. Tilted optic disks. Surv 
+Ophthalmol 2010;55(5):403-28.
+70.  Vuori ML, Mantyjarvi M. Tilted disc syndrome may mimic false 
+visual field deterioration. Acta Ophthalmol 2008;86(6):622-5.
+71.  Grippo TM, Shihadeh WA, Schargus M, Gramer E, Tello C, Liebmann 
+jM, et al. Optic nerve head drusen and visual field loss in 
+normotensive and hypertensive eyes. j Glaucoma 2008;17(2):100-4.
+72.  Gray TA, Orton LC, Henson D, Harper R, Waterman H. Interventions 
+for improving adherence to ocular hypotensive therapy. Cochrane 
+Database of Systematic Reviews 2009, Issue 2. 
+38 |
+ISBN 978 1 909103 36 8
+www.sign.ac.uk
+www.healthcareimprovementscotland.org
+Edinburgh Office | Gyle Square |1 South Gyle Crescent | Edinburgh | EH12 9EB 
+Telephone 0131 623 4300 Fax 0131 623 4299
+Glasgow Office | Delta House | 50 West Nile Street | Glasgow | G1 2NP
+Telephone 0141 225 6999 Fax 0141 248 3776
+The Healthcare Environment Inspectorate, the Scottish Health Council, the Scottish Health Technologies Group, the Scottish 
+Intercollegiate Guidelines Network (SIGN) and the Scottish Medicines Consortium are key components of our organisation. 

@@ -183,7 +183,7 @@ public class AMISearcher extends AbstractSearcher {
 					matched = false;
 				}
 				if (!matched) {
-					LOG.trace(">> "+strings.get(stringPos));
+					LOG.trace(">> "+strings.get(stringPos - 1));
 					break;
 				}
 			}
@@ -315,14 +315,16 @@ public class AMISearcher extends AbstractSearcher {
 
 	public ResultsElement searchWithDictionary(List<String> strings) {
 		ResultsElement resultsElement = new ResultsElement();
-		for (int pos = 0; pos < strings.size(); pos++) {
-			String firstword = strings.get(pos);
-			List<List<String>> trailingListList = dictionary.getTrailingWords(firstword);
-			if (trailingListList != null) {
-				int trailingOffset = canFitTrailing(trailingListList, strings, pos);
-				if (trailingOffset != -1) {
-					ResultElement resultElement = createResultElement(strings, pos, trailingOffset);
-					resultsElement.appendChild(resultElement);
+		if (strings != null) {
+			for (int pos = 0; pos < strings.size(); pos++) {
+				String firstword = strings.get(pos);
+				List<List<String>> trailingListList = dictionary.getTrailingWords(firstword);
+				if (trailingListList != null) {
+					int trailingOffset = canFitTrailing(trailingListList, strings, pos);
+					if (trailingOffset != -1) {
+						ResultElement resultElement = createResultElement(strings, pos, trailingOffset);
+						resultsElement.appendChild(resultElement);
+					}
 				}
 			}
 		}
@@ -395,7 +397,9 @@ public class AMISearcher extends AbstractSearcher {
 	protected void postProcessResultsElement(ResultsElement resultsElement) {
 		// no-op
 	}
-	
 
+	public void setName(String name) {
+		this.name = name;
+	}
 
 }

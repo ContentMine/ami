@@ -1,0 +1,3244 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml">
+   <div xmlns="" tagxxx="article">
+      <head>
+         <meta content="BioMed Central" name="citation_publisher"></meta>
+         <meta content="10.1186/1756-3305-7-264" name="citation_doi"></meta>
+         <meta content="Factors influencing U.S. canine heartworm (Dirofilaria immitis) prevalence" name="citation_title"></meta>
+         <title>Factors influencing U.S. canine heartworm (Dirofilaria immitis) prevalence</title>
+         <div tagxxx="contrib-group">
+            <meta content="Dongmei Wang" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="Dwight D Bowman" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="Heidi E Brown" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="Laura C Harrington" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="Phillip E Kaufman" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="Tanja McKay" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="Charles Thomas Nelson" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="Julia L Sharp" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+            <meta content="Robert Lund" name="citation_author"></meta>
+            <meta content="" name="citation_author_institution_ref"></meta>
+         </div>
+         <meta content="" name="email"></meta>
+         <meta content="" name="conflict"></meta>
+         <meta content="" name="contribs"></meta>
+         <meta content="2014-6-6" name="citation_pubdate"></meta>
+         <meta content="Copyright 2014: Wang et al.; licensee BioMed Central Ltd." name="citation_copyright"></meta>
+         <meta content="Licence This is an Open Access article distributed under the terms of the Creative Commons Attribution License (http://creativecommons.org/licenses/by/2.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly credited. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated." name="citation_licence"></meta>
+         <meta content="" name="citation_funding"></meta>
+         <meta content="" name="citation_pagecount"></meta>
+         <meta content="" name="citation_data"></meta>
+      </head>
+      <div id="abstract" tag="abstract">
+         <div id="">
+            <h2>Background</h2>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">This paper examines the individual factors that influence prevalence rates of canine
+               heartworm in the contiguous United States. A data set provided by the Companion Animal
+               Parasite Council, which contains county-by-county results of over nine million heartworm
+               tests conducted during 2011 and 2012, is analyzed for predictive structure. The goal
+               is to identify the factors that are important in predicting high canine heartworm
+               prevalence rates.
+            </p>
+         </div>
+         <div id="">
+            <h2>Methods</h2>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The factors considered in this study are those envisioned to impact whether a dog
+               is likely to have heartworm. The factors include climate conditions (annual temperature,
+               precipitation, and relative humidity), socio-economic conditions (population density,
+               household income), local topography (surface water and forestation coverage, elevation),
+               and vector presence (several mosquito species). A baseline heartworm prevalence map
+               is constructed using estimated proportions of positive tests in each county of the
+               United States. A smoothing algorithm is employed to remove localized small-scale variation
+               and highlight large-scale structures of the prevalence rates. Logistic regression
+               is used to identify significant factors for predicting heartworm prevalence.
+            </p>
+         </div>
+         <div id="">
+            <h2>Results</h2>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">All of the examined factors have power in predicting heartworm prevalence, including
+               median household income, annual temperature, county elevation, and presence of the
+               mosquitoes 
+               <i>Aedes trivittatus</i>, 
+               <i>Aedes sierrensis</i> and 
+               <i>Culex quinquefasciatus</i>. Interactions among factors also exist.
+            </p>
+         </div>
+         <div id="">
+            <h2>Conclusions</h2>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The factors identified are significant in predicting heartworm prevalence. The factor
+               list is likely incomplete due to data deficiencies. For example, coyotes and feral
+               dogs are known reservoirs of heartworm infection. Unfortunately, no complete data
+               of their populations were available. The regression model considered is currently
+               being explored to forecast future values of heartworm prevalence.
+            </p>
+         </div>
+      </div>
+      <div id="">
+         <h2>Background</h2>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The Companion Animal Parasite Council (CAPC) has compiled a data set of over nine
+            million heartworm antigen tests performed on dogs in the United States during 2011
+            and 2012[
+            <span ref-type="bibr" rid="B1">1</span>]. These data are test results taken from dogs that visited veterinary clinics throughout
+            the United States. From this data, our goal is to quantify the environmental, socio-economic,
+            and vector factors that influence canine heartworm prevalence rates. Brown 
+            <i>et al.</i>[
+            <span ref-type="bibr" rid="B2">2</span>] describe the data and list factors posited to influence canine heartworm prevalence
+            rates (these are discussed fully below). This paper quantitatively assesses which
+            of the factors are important (or unimportant) and in what direction the factors impact
+            (increase or decrease) heartworm prevalence rates.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The data will be used to estimate the probability that a dog entering a veterinary
+            clinic will test positive for heartworm. Although prevalence rates increase if a dog
+            is from an area with a high heartworm transmission rate, the raw data do not describe
+            transmission, but rather the risk that a dog’s infection is detected if it enters
+            a clinic within the United States and is tested for heartworm for any reason whatsoever.
+            The most common reasons for testing a dog are: assessing the negative status of a
+            dog before it begins heartworm prevention, annual testing of dogs on preventive prophylaxis
+            to verify that the dog has been protected, and assessing whether or not a dog with
+            clinical signs suggestive of heartworm disease is indeed infected. In many areas of
+            the United States, dogs are kept on prophylaxis year round; however, in some areas,
+            veterinarians utilize heartworm prevention seasonally. Here, annual testing verifies
+            whether or not infection occurred during the period when preventives were not taken.
+            To assess true transmission rates, it would be more appropriate to follow dogs or
+            other canines, specifically coyotes, that are not receiving any form of prophylaxis
+            [
+            <span ref-type="bibr" rid="B3">3</span>,
+            <span ref-type="bibr" rid="B4">4</span>]— these are not the canines studied here. According to the unpublished abstract of
+            Pulaski 
+            <i>et al</i>. for the 58th Annual Meeting of the American Association of Veterinary Parasitologists
+            and the unpublished presentation of Blagburn 
+            <i>et al.</i> at The Triennial Symposium of the American Heartworm Society in 2013, in parts of
+            the United States, resistance to heartworm preventatives has been recognized. Thus,
+            future data may help detect preventive failure.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">A spatial logistic regression model will be fitted to the CAPC county-by-county heartworm
+            test results and related to factor measurements. Logistic regression methods are used
+            in lieu of ordinary regression techniques because prevalence probabilities, which
+            must lie in the interval [0,1], are being modeled. A significant technical challenge
+            involves the large number of counties reporting a small number of tests (often this
+            count is zero). Small sample sizes from isolated counties can adversely impact results
+            if not properly handled. Therefore, methods are developed that account for sample
+            size issues. The head-banging algorithm, a method for smoothing the county-by-county
+            prevalence rates, will be used to extract general spatial structure in the prevalence
+            estimates; this procedure is adept at dealing with outlying observations and boundary
+            (edge) features.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Our results are useful in a variety of contexts. First and foremost, predicting heartworm
+            prevalence rates alerts the pet owner to high-risk areas. This will be evident from
+            the baseline risk maps constructed in Section "Construction of the baseline heartworm
+            prevalence map". Second, pinpointing the factors accompanying high heartworm prevalence
+            rates provides an opportunity to target those factors in mosquito and heartworm control
+            programs. Third, our results provide a quantitative analysis of canine heartworm across
+            the entire country, allowing us to confirm that cases do occur in the Western United
+            States. Finally, the fitted regression model can be used to forecast future prevalence
+            levels of heartworm or its response to climate change.
+         </p>
+      </div>
+      <div id="">
+         <h2>Methods</h2>
+         <div id="">
+            <h3>The data and factors</h3>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">This section describes the data provided by CAPC and lists the factors considered
+               by our analysis.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The raw test results were supplied by the Antech and IDEXX corporations
+               [
+               <span ref-type="bibr" rid="B5">5</span>,
+               <span ref-type="bibr" rid="B6">6</span>] and report whether each performed test was positive or negative — no uncertainty
+               margin is supplied for the results. While individual tests are reported by zip-code
+               of the testing clinic, the raw data were aggregated into the number of positive tests
+               and the total number of tests conducted over each calendar year in each county of
+               the conterminous United States. Since only two calendar years of records are available,
+               no attempt is made to include seasonal structure. The IDEXX samples represent both
+               the results of pet-side heartworm antigen test kit and results from an IDEXX capture
+               system [Heartworm RT and the 4Dx Plus (and originally 4Dx tests)] along with tests
+               run by the IDEXX diagnostic laboratories [Heartworm Antigen by ELISA-Canine*]. Antech
+               tests were performed at Antech Laboratories and utilized the Dirochek Assay and the
+               AccuPlex4 heartworm antigen detection assay. Over 2011 and 2012, there were 9,580,719
+               total tests performed by either method, of which 111,259 were positive. Rudimentary
+               statistical checks do not show vast differences between Antech and IDEXX samples.In
+               most of the southeastern United States, veterinarians assume that outdoor dogs are
+               at risk of heartworm infection, and thus, recommend that clients place their dogs
+               on preventive protection. This may not be practical for all pet owners due to costs.
+               In the CAPC data, many counties in the eastern United States report a small number
+               (say less than 20) of tests. This is likely because tests are not being reported or
+               are incommensurate with CAPC protocols, not because they are uncommonly performed.
+               Tests from such counties are likely performed for the same reasons as other southeastern
+               counties reporting a greater number of tests. In other areas of the United States,
+               such as Montana or Idaho, testing is likely only performed if dogs have signs suggestive
+               of heartworm disease and the veterinarian requires a confirmative test. Sometimes,
+               veterinarians are aware that dogs travel to heartworm endemic areas for part of the
+               year. These dogs may be tested annually when they return to their home state. Also,
+               as is evident from Figures
+               
+               <span ref-type="fig" rid="F1">1</span> and
+               
+               <span ref-type="fig" rid="F2">2</span>, it is now fairly obvious that heartworm occurs in much of the Western United States.
+               In some of these areas, heartworm testing is probably conducted for the same reasons
+               as more prevalent areas. Overall, while it is understood that there may be some sampling
+               biases in certain areas of the United States, the CAPC data seems fairly reflective
+               of a true random sample for many counties in the United States.
+            </p>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 1</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>Raw reported heartworm prevalence rates for 2011 and 2012.</p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 2</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>Head-banging smoothed heartworm prevalence rates for 2011 and 2012.</p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Other data aspects are worth illuminating. First, heartworm infections are not detectable
+               by almost all testing methods until about 6 or 7 months after the dogs have become
+               infected; this is how long it takes for either microfilariae or antigen to appear
+               in the blood after infection. Thus, many of the detected infections likely commenced
+               the year prior to a positive test result. Because no travel information exists, it
+               cannot be known where a dog acquires infection. However, it is suspected that the
+               majority of infected dogs were infected close to home. Second, it is not known if
+               a dog has been tested more than once. Dogs may be tested more than once annually to
+               verify the need for treatment, to verify successful treatment, or annually tested
+               after the infection is first identified.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The factors chosen for inclusion in this study are those envisioned to impact whether
+               a dog is likely to have heartworm. These factors are a subset of those listed in Brown
+               
+               <i>et al.</i>[
+               <span ref-type="bibr" rid="B2">2</span>] and contain climate variables (annual temperature, precipitation, and relative humidity;
+               Figures
+               
+               <span ref-type="fig" rid="F3">3</span>,
+               
+               <span ref-type="fig" rid="F4">4</span>,
+               
+               <span ref-type="fig" rid="F5">5</span>); geographic factors (elevation, forest coverage, surface water coverage; Figures
+               
+               <span ref-type="fig" rid="F6">6</span>,
+               
+               <span ref-type="fig" rid="F7">7</span>,
+               
+               <span ref-type="fig" rid="F8">8</span>); societal factors (human population density and household income; Figures
+               
+               <span ref-type="fig" rid="F9">9</span> and
+               
+               <span ref-type="fig" rid="F10">10</span>); and the presence or absence of 
+               <i>Aedes aegypti</i>, 
+               <i>Aedes albopictus</i> and six other mosquito species (Figures
+               
+               <span ref-type="fig" rid="F11">11</span>,
+               
+               <span ref-type="fig" rid="F12">12</span>,
+               
+               <span ref-type="fig" rid="F13">13</span>,
+               
+               <span ref-type="fig" rid="F14">14</span>,
+               
+               <span ref-type="fig" rid="F15">15</span>,
+               
+               <span ref-type="fig" rid="F16">16</span>,
+               
+               <span ref-type="fig" rid="F17">17</span>,
+               
+               <span ref-type="fig" rid="F18">18</span>). Presence or absence of mosquito species was used because abundance data are not
+               available. Table
+               
+               <span ref-type="table" rid="T1">1</span> lists all considered factors. Many (but not all) of the factors are available on
+               a county-by-county basis across the United States. Our methods do not 
+               <i>a priori</i> assume that all factors significantly influence heartworm prevalence rates, but rather
+               seek to determine which factors significantly influence prevalence.
+            </p>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 3</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>2011 U.S. annual average temperature (Degrees F).</b> The temperature data included in this study were annual in nature and were aggregated
+                     by the National Climatic Data Center (NCDC)
+                     [
+                     <span ref-type="bibr" rid="B7">7</span>] by climate region
+                     [
+                     <span ref-type="bibr" rid="B8">8</span>]. These data are not county-by-county — all counties within a climate region are
+                     assigned the same annual temperature. For example, the state of Alabama has 67 counties
+                     and 8 climate regions. Annual temperatures for 2011 were used to generate this graphic.
+                     Temperature dependence on latitude is clear.
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 4</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>2011 U.S. annual total precipitation (Inches).</b> The precipitation data were also obtained from the NCDC and has the same spatial
+                     resolution as the temperature data. Data used in this figure are for 2011. One sees
+                     a relatively dry Southwestern United States and higher precipitation in the southeastern
+                     United States.
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 5</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>2011 U.S. annual relative humidities (Percent).</b> Our humidity data were relative (and not absolute) humidities. Relative humidity
+                     is not measured directly, but can be estimated from temperature and dew point (dew
+                     point is measured) via 
+                  </p>
+                  <p>
+                     <div tagxxx="disp-formula">
+                        <div tagxxx="math">
+                           <div tagxxx="mtext">RH</div>
+                           <div tagxxx="mo">=</div>
+                           <div tagxxx="mfrac">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mo">exp</div>
+                                 <div tagxxx="mfenced">
+                                    <div tagxxx="mrow">
+                                       <div tagxxx="mfrac">
+                                          <div tagxxx="mrow">
+                                             <div tagxxx="mn">17.27</div>
+                                             <div tagxxx="mo">(</div>
+                                             <div tagxxx="mi">D</div>
+                                             <div tagxxx="mo">-</div>
+                                             <div tagxxx="mn">32</div>
+                                             <div tagxxx="mo">)</div>
+                                             <div tagxxx="mn">5</div>
+                                             <div tagxxx="mo">/</div>
+                                             <div tagxxx="mn">9</div>
+                                          </div>
+                                          <div tagxxx="mrow">
+                                             <div tagxxx="mo">(</div>
+                                             <div tagxxx="mi">D</div>
+                                             <div tagxxx="mo">-</div>
+                                             <div tagxxx="mn">32</div>
+                                             <div tagxxx="mo">)</div>
+                                             <div tagxxx="mn">5</div>
+                                             <div tagxxx="mo">/</div>
+                                             <div tagxxx="mn">9</div>
+                                             <div tagxxx="mo">+</div>
+                                             <div tagxxx="mn">237.3</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mo">exp</div>
+                                 <div tagxxx="mfenced">
+                                    <div tagxxx="mrow">
+                                       <div tagxxx="mfrac">
+                                          <div tagxxx="mrow">
+                                             <div tagxxx="mn">17.27</div>
+                                             <div tagxxx="mo">(</div>
+                                             <div tagxxx="mi">T</div>
+                                             <div tagxxx="mo">-</div>
+                                             <div tagxxx="mn">32</div>
+                                             <div tagxxx="mo">)</div>
+                                             <div tagxxx="mn">5</div>
+                                             <div tagxxx="mo">/</div>
+                                             <div tagxxx="mn">9</div>
+                                          </div>
+                                          <div tagxxx="mrow">
+                                             <div tagxxx="mo">(</div>
+                                             <div tagxxx="mi">T</div>
+                                             <div tagxxx="mo">-</div>
+                                             <div tagxxx="mn">32</div>
+                                             <div tagxxx="mo">)</div>
+                                             <div tagxxx="mn">5</div>
+                                             <div tagxxx="mo">/</div>
+                                             <div tagxxx="mn">9</div>
+                                             <div tagxxx="mo">+</div>
+                                             <div tagxxx="mn">237.3</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div tagxxx="mn">100</div>
+                           <div tagxxx="mi">%</div>
+                           <div tagxxx="mo">,</div>
+                        </div>
+                     </div>
+                  </p>
+                  <p>where 
+                     <i>T</i> is annual temperature, 
+                     <i>D</i> is annual dew point, and exp is the exponential function
+                     [
+                     <span ref-type="bibr" rid="B9">9</span>]. As expected, the Southeast is the most humid region in the United States.
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 6</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>U.S. county elevations (Feet).</b> Elevation data were obtained on a county-by-county
+                     [
+                     <span ref-type="bibr" rid="B10">10</span>] basis, with height of the highest point in each county used to produce this figure.
+                     Data containing average county elevations would be preferable to use but were not
+                     readily available. Of course, any biases should be minor in the eastern United States
+                     where most counties are homogeneous in elevation. However, the western States are
+                     less homogeneous. For example, Inyo County in California contains both the highest
+                     (Mount Whitney, 14,505 ft.) and lowest points (Death Valley, -282 ft.) in the conterminous
+                     United States. These limitations aside, elevation is a potentially important factor
+                     for heartworm prevalence as higher elevations are often associated with drier conditions.
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 7</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>2007 U.S. county forestion coverage (Percent).</b> County forest coverage was obtained from the United States Department of Agriculture
+                     (USDA)
+                     [
+                     <span ref-type="bibr" rid="B11">11</span>]. Total county area was obtained from the Census Bureau
+                     [
+                     <span ref-type="bibr" rid="B12">12</span>]. Percentages of forest coverage were calculated by dividing the forest coverage
+                     area by county area (times 100%). The definition of forest coverage here is restricted
+                     to agriculture woodland, which means land supporting trees capable of producing timber
+                     or other wood products, including but not limited to logs, lumber, posts, and firewood.
+                     This data are updated by the USDA every five years. However, the 2012 data is not
+                     available yet; hence, the 2007 data were used to generate the graph.
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 8</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>2007 U.S. county water coverage (Percent).</b> County surface water coverage was obtained from the Census Bureau
+                     [
+                     <span ref-type="bibr" rid="B12">12</span>] and was calculated by dividing the surface water area by total county area reported
+                     in the Census Bureau
+                     [
+                     <span ref-type="bibr" rid="B12">12</span>]. The surface water coverage data were last updated in 2011, which were used in our
+                     analysis.
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 9</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>2010 U.S. population density (100 people per square mile).</b> Population densities were calculated by dividing the number of 100 people in each
+                     county by the county area. The county populations and areas were taken from the most
+                     recent (2010) census data (Census Bureau
+                     [
+                     <span ref-type="bibr" rid="B13">13</span>]).
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 10</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>2011 U.S. median household income (Dollars).</b> Median household incomes were obtained from the Census Bureau (2010 census). These
+                     data were adjusted for inflation based on 2010 dollars; the Census Bureau adjusts
+                     by multiplying 2011 median household income by the ratio of the Consumer Price Index
+                     of 2010 and 2011
+                     [
+                     <span ref-type="bibr" rid="B14">14</span>].
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 11</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>Presence of</b> 
+                     <b>
+                        <i>Aedes aegypti</i>
+                     </b>
+                     <b>.</b>
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 12</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>Presence of</b> 
+                     <b>
+                        <i>Aedes albopictus</i>
+                     </b>
+                     <b>.</b>
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 13</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>Presence of</b> 
+                     <b>
+                        <i>Aedes canadensis</i>
+                     </b>
+                     <b>.</b>
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 14</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>Presence of</b> 
+                     <b>
+                        <i>Aedes sierrensis</i>
+                     </b>
+                     <b>.</b>
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 15</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>Presence of</b> 
+                     <b>
+                        <i>Aedes trivittatus</i>
+                     </b>
+                     <b>.</b>
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 16</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>Presence of</b> 
+                     <b>
+                        <i>Anopheles punctipennis</i>
+                     </b>
+                     <b>.</b>
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 17</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>Presence of</b> 
+                     <b>
+                        <i>Anopheles quadrimaculatus</i>
+                     </b>
+                     <b>.</b>
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="fig">
+               <div tagxxx="label">Figure 18</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>
+                     <b>Presence of </b>
+                     <b>
+                        <i>Culex quinquefasciatus </i>
+                     </b>
+                     <b>.</b>
+                  </p>
+               </caption>
+               <div tagxxx="graphic"></div>
+            </div>
+            <div tagxxx="table-wrap">
+               <div tagxxx="label">Table 1</div>
+               <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <p>Heartworm factors considered for inclusion in the study</p>
+               </caption>
+               <table xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">hsidesgroups1
+                  <colgroup>
+                     <col>left</col>
+                     <col>center</col>
+                     <col>center</col>
+                     <col>center</col>
+                     <col>center</col>
+                  </colgroup>
+                  <thead>top
+                     <tr>
+                        <div tagxxx="th"> </div>
+                        <div tagxxx="th">
+                           <b>Factors</b>
+                        </div>
+                        <div tagxxx="th">
+                           <b>Data available period</b>
+                        </div>
+                        <div tagxxx="th">
+                           <b>Scale</b>
+                        </div>
+                        <div tagxxx="th">
+                           <b>Source</b>
+                        </div>
+                     </tr>
+                  </thead>
+                  <div tagxxx="tbody">
+                     <tr>
+                        <td>3leftbottomClimate factors
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomAnnual temperature
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2011 and 2012
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomDivision
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomNational Climate Data Center (NCDC)
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>centerbottomAnnual precipitation
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2011 and 2012
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomDivision
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomNCDC
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>centerbottomAnnual relative humidity
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2011 and 2012
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomStation
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomNCDC
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>3leftbottomGeographic factors
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomElevation
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2012
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomCounty
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom
+                           <div tagxxx="ext-link">http://www.cohp.org/</div>
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>centerbottomPercentage forest coverage
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2007
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomCounty
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomUnited States Department of Agriculture (USDA)
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>centerbottomPercentage surface water coverage
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2010
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomCounty
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomU.S. Census Bureau
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>2leftbottomSocietal factors
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomPopulation density
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2010
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomCounty
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomU.S. Census Bureau
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>centerbottomMedian household income
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2011
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomCounty
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomU.S. Census Bureau
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>8leftMosquito species</td>
+                        <td>centerbottom
+                           <i>Aedes aegypti</i>
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2008
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomCounty
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomMoore, CG.
+                           [
+                           <span ref-type="bibr" rid="B15">15</span>]
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>centerbottom
+                           <i>Aedes albopictus</i>
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2012
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomCounty
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomHynes NA
+                           [
+                           <span ref-type="bibr" rid="B16">16</span>]
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>centerbottom
+                           <i>Aedes canadensis</i>
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2004
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomCounty
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomRF Darsie, Jr. and RA Ward
+                           [
+                           <span ref-type="bibr" rid="B17">17</span>]
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>centerbottom
+                           <i>Aedes sierrensis</i>
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2004
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomCounty
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomRF Darsie, Jr. and RA Ward
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>centerbottom
+                           <i>Aedes trivittatus</i>
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2004
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomCounty
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomRF Darsie, Jr. and RA Ward
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>centerbottom
+                           <i>Anopheles punctipennis</i>
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2004
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomCounty
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomRF Darsie, Jr. and RA Ward
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>centerbottom
+                           <i>Anopheles quadrimaculatus</i>
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottom2004
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomCounty
+                           <div tagxxx="hr"></div>
+                        </td>
+                        <td>centerbottomRF Darsie, Jr. and RA Ward
+                           <div tagxxx="hr"></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>center
+                           <i>Culex quinquefasciatus</i>
+                        </td>
+                        <td>center2004</td>
+                        <td>centerCounty</td>
+                        <td>centerRF Darsie, Jr. and RA Ward</td>
+                     </tr>
+                  </div>
+               </table>
+            </div>
+         </div>
+         <div id="">
+            <h3>Construction of the baseline heartworm prevalence map</h3>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">We first construct a baseline heartworm prevalence map. This is done on an annual
+               basis as there is too little data to consider seasonal effects. As will become apparent,
+               this analysis is a necessary precursor to assess factor importance — informative factors
+               should be able to reproduce the structure of our baseline prevalence map. For the
+               years 2011 and 2012, all data were combined into a single sample.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">For a county 
+               <i>s</i>, let 
+               <i>p</i>(
+               <i>s</i>) denote the probability that a single dog tests heartworm positive. For notation,
+               
+               <i>n</i>(
+               <i>s</i>) is the number of tests in county 
+               <i>s</i> and 
+               <i>k</i>(
+               <i>s</i>) is the number of positive tests at county 
+               <i>s</i>. For example, if county 
+               <i>s</i> has 3 positive tests out of 100 during 2011 and eight positive tests out of 200 during
+               2012, then 
+               <i>k</i>(
+               <i>s</i>) = 11, 
+               <i>n</i>(
+               <i>s</i>) = 300, and
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">p</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                     <div tagxxx="mo">=</div>
+                     <div tagxxx="mn">11</div>
+                     <div tagxxx="mo">/</div>
+                     <div tagxxx="mn">300</div>
+                  </div>
+               </div> (a hat over a quantity indicates it is an estimate). Figure
+               
+               <span ref-type="fig" rid="F1">1</span> displays county-by-county values of
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">p</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div>. This figure indicates that heartworm is most problematic in the Lower Mississippi
+               Valley. The role of factors in explaining the prevalence rates will be discussed in
+               Section "Factor quantification". No factors are involved in the calculation of
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">p</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div>.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Since the number of dogs tested in distinct counties greatly varies, the raw values
+               of
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">p</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div> need to be weighted. Estimated values of 
+               <i>p</i>(
+               <i>s</i>) are more accurate for a sample of 100 dogs than for a sample of 10 dogs. To quantify
+               this, the classical standard error is used. In particular, the estimated variance
+               of
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">p</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div> is
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <div tagxxx="disp-formula">
+                  <div tagxxx="label">(1)</div>
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mtext">Var</div>
+                           <div tagxxx="mo">(</div>
+                           <div tagxxx="mover">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">p</div>
+                              </div>
+                              <div tagxxx="mo">^</div>
+                           </div>
+                           <div tagxxx="mo">(</div>
+                           <div tagxxx="mi">s</div>
+                           <div tagxxx="mo">)</div>
+                           <div tagxxx="mo">)</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">=</div>
+                     <div tagxxx="mfrac">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mover">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">p</div>
+                              </div>
+                              <div tagxxx="mo">^</div>
+                           </div>
+                           <div tagxxx="mo">(</div>
+                           <div tagxxx="mi">s</div>
+                           <div tagxxx="mo">)</div>
+                           <div tagxxx="mo">(</div>
+                           <div tagxxx="mn">1</div>
+                           <div tagxxx="mo">-</div>
+                           <div tagxxx="mover">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">p</div>
+                              </div>
+                              <div tagxxx="mo">^</div>
+                           </div>
+                           <div tagxxx="mo">(</div>
+                           <div tagxxx="mi">s</div>
+                           <div tagxxx="mo">)</div>
+                           <div tagxxx="mo">)</div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">n</div>
+                           <div tagxxx="mo">(</div>
+                           <div tagxxx="mi">s</div>
+                           <div tagxxx="mo">)</div>
+                        </div>
+                     </div>
+                     <div tagxxx="mi">.</div>
+                  </div>
+               </div>
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The estimated standard error of
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">p</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div> is the square root of (1). We weight the values of
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">p</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div> inversely proportional to this standard error. Before doing this, an adjustment was
+               made to the values of
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">p</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div> for small sample sizes.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Technically, counties where all tests are positive or negative have
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mtext">Var</div>
+                     <div tagxxx="mfenced">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mover">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">p</div>
+                              </div>
+                              <div tagxxx="mo">^</div>
+                           </div>
+                           <div tagxxx="mo">(</div>
+                           <div tagxxx="mi">s</div>
+                           <div tagxxx="mo">)</div>
+                        </div>
+                     </div>
+                     <div tagxxx="mo">=</div>
+                     <div tagxxx="mn">0</div>
+                  </div>
+               </div> (hence, its reciprocal is infinite), which could adversely impact our ensuing smoothing
+               methods. To combat this, the Wilson estimator that adds two to numerator counts and
+               four to denominator counts is used in lieu of
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">p</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div>:
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <div tagxxx="disp-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mrow">
+                        <div tagxxx="msub">
+                           <div tagxxx="mrow">
+                              <div tagxxx="mover">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">p</div>
+                                 </div>
+                                 <div tagxxx="mo">^</div>
+                              </div>
+                           </div>
+                           <div tagxxx="mrow">
+                              <div tagxxx="mi">W</div>
+                           </div>
+                        </div>
+                        <div tagxxx="mo">(</div>
+                        <div tagxxx="mi">s</div>
+                        <div tagxxx="mo">)</div>
+                        <div tagxxx="mo">=</div>
+                        <div tagxxx="mfrac">
+                           <div tagxxx="mrow">
+                              <div tagxxx="mi">k</div>
+                              <div tagxxx="mo">(</div>
+                              <div tagxxx="mi">s</div>
+                              <div tagxxx="mo">)</div>
+                              <div tagxxx="mo">+</div>
+                              <div tagxxx="mn">2</div>
+                           </div>
+                           <div tagxxx="mrow">
+                              <div tagxxx="mi">n</div>
+                              <div tagxxx="mo">(</div>
+                              <div tagxxx="mi">s</div>
+                              <div tagxxx="mo">)</div>
+                              <div tagxxx="mo">+</div>
+                              <div tagxxx="mn">4</div>
+                           </div>
+                        </div>
+                        <div tagxxx="mi">.</div>
+                     </div>
+                  </div>
+               </div>
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML"> This estimator has desirable sampling properties and cannot be zero or unity
+               [
+               <span ref-type="bibr" rid="B18">18</span>]. Of course, for large 
+               <i>k</i>(
+               <i>s</i>) and 
+               <i>n</i>(
+               <i>s</i>),
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">p</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div> and
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="msub">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mover">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">p</div>
+                              </div>
+                              <div tagxxx="mo">^</div>
+                           </div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">W</div>
+                        </div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div> are approximately equivalent.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The raw values of
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="msub">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mover">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">p</div>
+                              </div>
+                              <div tagxxx="mo">^</div>
+                           </div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">W</div>
+                        </div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div> greatly vary across counties. Even counties in close proximity to one another often
+               have highly different prevalence estimates. This said, some spatial structure clearly
+               exists in Figure
+               
+               <span ref-type="fig" rid="F1">1</span>. Our next goal is to extract and explore this structure. To accomplish this, the
+               weighted head-banging spatial smoothing algorithm was applied to the county-by-county
+               values of
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="msub">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mover">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">p</div>
+                              </div>
+                              <div tagxxx="mo">^</div>
+                           </div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">W</div>
+                        </div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div>. This procedure serves to remove localized small-scale variations due to random chance,
+               illuminating large-scale structures that are actual features of the prevalence rates.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">While we will not delve into the details of weighted head-banging procedures, the
+               technique is a median-based algorithm proposed by Tukey and Tukey
+               [
+               <span ref-type="bibr" rid="B19">19</span>] for smoothing spatial data. One needs to input the longitude and latitude of the
+               centroid of each county, the county value to be smoothed, and the corresponding weights.
+               Mungiole 
+               <i>et al.</i>[
+               <span ref-type="bibr" rid="B20">20</span>] discuss the algorithm in detail. Head-banging takes its name from a child’s game,
+               where the child presses their face against pins protruding from a board that are of
+               various lengths. The result leaves an impression of the child’s face, smoothing the
+               lengths of adjacent nails but leaving the general structure of the face’s impression.
+               Head-banging techniques are very effective for down-weighting or removing noisy ‘spikes’
+               while preserving edge structures. A spike is an isolated observation that lacks confirmation
+               from nearby data. Because of different testing practices from county to county, many
+               spikes exist in the heartworm prevalence estimates. An edge occurs where data changes
+               significantly in pattern — perhaps due to a mountain range. Edges are informative
+               as they often demarcate distinct data regions.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">To run the weighted head-banging algorithm, a parameter called the number of triples
+               must be selected and the weights need to be specified. At each county where data is
+               present, a set of triples (a triple for a county is represented by the county itself
+               and two nearby counties) were selected based on the criteria proposed by Hansen
+               [
+               <span ref-type="bibr" rid="B21">21</span>]. The weight of county 
+               <i>s</i>, denoted by 
+               <i>w</i>(
+               <i>s</i>), comes from the inverse of the standard error of
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">p</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div>, with
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="msub">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mover">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">p</div>
+                              </div>
+                              <div tagxxx="mo">^</div>
+                           </div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">W</div>
+                        </div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div> replacing
+               
+               <div tagxxx="inline-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">p</div>
+                        </div>
+                        <div tagxxx="mo">^</div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                  </div>
+               </div>:
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <div tagxxx="disp-formula">
+                  <div tagxxx="math">
+                     <div tagxxx="mrow">
+                        <div tagxxx="mi">w</div>
+                        <div tagxxx="mo">(</div>
+                        <div tagxxx="mi">s</div>
+                        <div tagxxx="mo">)</div>
+                        <div tagxxx="mo">=</div>
+                        <div tagxxx="msqrt">
+                           <div tagxxx="mrow">
+                              <div tagxxx="mfrac">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">n</div>
+                                    <div tagxxx="mo">(</div>
+                                    <div tagxxx="mi">s</div>
+                                    <div tagxxx="mo">)</div>
+                                 </div>
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mfrac">
+                                       <div tagxxx="mrow">
+                                          <div tagxxx="mi">k</div>
+                                          <div tagxxx="mo">(</div>
+                                          <div tagxxx="mi">s</div>
+                                          <div tagxxx="mo">)</div>
+                                          <div tagxxx="mo">+</div>
+                                          <div tagxxx="mn">2</div>
+                                       </div>
+                                       <div tagxxx="mrow">
+                                          <div tagxxx="mi">n</div>
+                                          <div tagxxx="mo">(</div>
+                                          <div tagxxx="mi">s</div>
+                                          <div tagxxx="mo">)</div>
+                                          <div tagxxx="mo">+</div>
+                                          <div tagxxx="mn">4</div>
+                                       </div>
+                                    </div>
+                                    <div tagxxx="mfenced">
+                                       <div tagxxx="mrow">
+                                          <div tagxxx="mn">1</div>
+                                          <div tagxxx="mo">-</div>
+                                          <div tagxxx="mfrac">
+                                             <div tagxxx="mrow">
+                                                <div tagxxx="mi">k</div>
+                                                <div tagxxx="mo">(</div>
+                                                <div tagxxx="mi">s</div>
+                                                <div tagxxx="mo">)</div>
+                                                <div tagxxx="mo">+</div>
+                                                <div tagxxx="mn">2</div>
+                                             </div>
+                                             <div tagxxx="mrow">
+                                                <div tagxxx="mi">n</div>
+                                                <div tagxxx="mo">(</div>
+                                                <div tagxxx="mi">s</div>
+                                                <div tagxxx="mo">)</div>
+                                                <div tagxxx="mo">+</div>
+                                                <div tagxxx="mn">4</div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div tagxxx="mi">.</div>
+                     </div>
+                  </div>
+               </div>
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Figure
+               
+               <span ref-type="fig" rid="F2">2</span> shows our smoothed prevalence rates based on the weighted head-banging procedure.
+               The larger the triple parameter is, the smoother (less rough) the resulting map will
+               be. We have intentionally left the graphic slightly under-smoothed. This is because
+               it is easy to visually smooth variabilities away with the eye, but impossible to recover
+               true fluctuations that are erroneously smoothed away. Thirty triples were used to
+               produce this graphic.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Figure
+               
+               <span ref-type="fig" rid="F2">2</span> has interesting implications. First and foremost, heartworm is most prevalent in
+               the Lower Mississippi Valley. While the northern latitudes show less activity, places
+               where the prevalence rates were relatively higher do exist. Michigan, Vermont, and
+               Northwest Washington, for example, show greater heartworm disease prevalence than
+               some of the other states at the same latitude. The Northern Rockies perhaps show the
+               least heartworm disease prevalence. While many inferences can be made from Figure
+               
+               <span ref-type="fig" rid="F2">2</span>, we caution the reader not to over-interpret minutia. The map is constructed from
+               only two years of data and there are variations in the results that may be spurious.
+               For example, two very close locations — say Baton Rouge and New Orleans, Louisiana
+               — might be shaded different colors on the map, but should not be expected to have
+               radically different prevalence rates. As additional years of data are collected, we
+               expect our baseline to become more accurate. Another issue involves dispersal of the
+               disease: there is no 
+               <i>a priori</i> reason to think that prevalence rates are static in time. With only two years of
+               observations, time trends will be difficult to discern and are not explored herein.
+            </p>
+         </div>
+         <div id="">
+            <h3>Factor quantification</h3>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">This section examines the significance of the individual factors presented in Table
+               
+               <span ref-type="table" rid="T1">1</span> in predicting heartworm prevalence. A logistic regression model was created using
+               data from 2011 and 2012. Logistic regression methods (as opposed to ordinary regression
+               methods)
+               [
+               <span ref-type="bibr" rid="B22">22</span>] are specifically designed for cases involving a binary outcome that can be summarized
+               by a probability, and hence limited to take values in the interval [0,1]. Our goal
+               is to reproduce the structure in Figure
+               
+               <span ref-type="fig" rid="F2">2</span>.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Let 
+               <i>X</i>(
+               <i>s</i>) = (
+               <i>f</i>
+               <div tagxxx="sub">1</div>(
+               <i>s</i>),…,
+               <i>f</i>
+               <div tagxxx="sub">8</div>(
+               <i>s</i>);1
+               <div tagxxx="sub">1</div>(
+               <i>s</i>),…,1
+               <div tagxxx="sub">8</div>(
+               <i>s</i>))
+               <sup>′</sup> be the collection of all predictive factors at county 
+               <i>s</i>. The logistic regression model attempts to explain spatial variations in 
+               <i>p</i>(
+               <i>s</i>) from the factors via
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <div tagxxx="disp-formula">
+                  <div tagxxx="label">(2)</div>
+                  <div tagxxx="math">
+                     <div tagxxx="mi">p</div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                     <div tagxxx="mo">=</div>
+                     <div tagxxx="mfrac">
+                        <div tagxxx="mrow">
+                           <div tagxxx="msup">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">e</div>
+                              </div>
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">g</div>
+                                 <div tagxxx="mo">(</div>
+                                 <div tagxxx="mi">X</div>
+                                 <div tagxxx="mo">(</div>
+                                 <div tagxxx="mi">s</div>
+                                 <div tagxxx="mo">)</div>
+                                 <div tagxxx="mo">)</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mn">1</div>
+                           <div tagxxx="mo">+</div>
+                           <div tagxxx="msup">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">e</div>
+                              </div>
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">g</div>
+                                 <div tagxxx="mo">(</div>
+                                 <div tagxxx="mi">X</div>
+                                 <div tagxxx="mo">(</div>
+                                 <div tagxxx="mi">s</div>
+                                 <div tagxxx="mo">)</div>
+                                 <div tagxxx="mo">)</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div tagxxx="mo">,</div>
+                  </div>
+               </div>
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">where 
+               <i>g</i>(
+               <i>X</i>(
+               <i>s</i>)) has form
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <div tagxxx="disp-formula">
+                  <div tagxxx="label">(3)</div>
+                  <div tagxxx="math">
+                     <div tagxxx="mtable">
+                        <div tagxxx="mtr">
+                           <div tagxxx="mtd">
+                              <div tagxxx="mspace"></div>
+                              <div tagxxx="mi">g</div>
+                              <div tagxxx="mo">(</div>
+                              <div tagxxx="mi">X</div>
+                              <div tagxxx="mo">(</div>
+                              <div tagxxx="mi">s</div>
+                              <div tagxxx="mo">)</div>
+                              <div tagxxx="mo">)</div>
+                           </div>
+                           <div tagxxx="mtd">
+                              <div tagxxx="mo">=</div>
+                              <div tagxxx="mtext">logit</div>
+                              <div tagxxx="mo">(</div>
+                              <div tagxxx="mi">p</div>
+                              <div tagxxx="mo">(</div>
+                              <div tagxxx="mi">s</div>
+                              <div tagxxx="mo">)</div>
+                              <div tagxxx="mo">)</div>
+                              <div tagxxx="mo">=</div>
+                              <div tagxxx="mo">ln</div>
+                              <div tagxxx="mfenced">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mfrac">
+                                       <div tagxxx="mrow">
+                                          <div tagxxx="mi">p</div>
+                                          <div tagxxx="mo">(</div>
+                                          <div tagxxx="mi">s</div>
+                                          <div tagxxx="mo">)</div>
+                                       </div>
+                                       <div tagxxx="mrow">
+                                          <div tagxxx="mn">1</div>
+                                          <div tagxxx="mo">-</div>
+                                          <div tagxxx="mi">p</div>
+                                          <div tagxxx="mo">(</div>
+                                          <div tagxxx="mi">s</div>
+                                          <div tagxxx="mo">)</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div tagxxx="mtr">
+                           <div tagxxx="mtd"></div>
+                           <div tagxxx="mtd">
+                              <div tagxxx="mo">=</div>
+                              <div tagxxx="msub">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">β</div>
+                                 </div>
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mn">0</div>
+                                 </div>
+                              </div>
+                              <div tagxxx="mo">+</div>
+                              <div tagxxx="munderover">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">∑</div>
+                                 </div>
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">i</div>
+                                    <div tagxxx="mo">=</div>
+                                    <div tagxxx="mn">1</div>
+                                 </div>
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mn">8</div>
+                                 </div>
+                              </div>
+                              <div tagxxx="msub">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">β</div>
+                                 </div>
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">i</div>
+                                 </div>
+                              </div>
+                              <div tagxxx="msub">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">f</div>
+                                 </div>
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">i</div>
+                                 </div>
+                              </div>
+                              <div tagxxx="mo">(</div>
+                              <div tagxxx="mi">s</div>
+                              <div tagxxx="mo">)</div>
+                              <div tagxxx="mo">+</div>
+                              <div tagxxx="munderover">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">∑</div>
+                                 </div>
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">i</div>
+                                    <div tagxxx="mo">=</div>
+                                    <div tagxxx="mn">1</div>
+                                 </div>
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mn">8</div>
+                                 </div>
+                              </div>
+                              <div tagxxx="msub">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">γ</div>
+                                 </div>
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">i</div>
+                                 </div>
+                              </div>
+                              <div tagxxx="msub">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mn">1</div>
+                                 </div>
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="mi">i</div>
+                                 </div>
+                              </div>
+                              <div tagxxx="mo">(</div>
+                              <div tagxxx="mi">s</div>
+                              <div tagxxx="mo">)</div>
+                              <div tagxxx="mi">.</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Clarifying terms, ln denotes natural logarithm and logit(
+               <i>x</i>) = ln(
+               <i>x</i>)- ln(1 - 
+               <i>x</i>). Notice that 
+               <i>e</i>
+               <sup>
+                  <i>g</i>(
+                  <i>X</i>(
+                  <i>s</i>))
+               </sup>/(1 + 
+               <i>e</i>
+               <sup>
+                  <i>g</i>(
+                  <i>X</i>(
+                  <i>s</i>))
+               </sup>) ∈ [0,1] for any value of 
+               <i>g</i>(
+               <i>X</i>(
+               <i>s</i>)). This guarantees that all predicted prevalence rates lie between zero and unity.
+               The overall location parameter, 
+               <i>β</i>
+               <div tagxxx="sub">0</div>, is common to all counties while 
+               <i>β</i>
+               <div tagxxx="sub">1</div>,…,
+               <i>β</i>
+               <div tagxxx="sub">8</div>, are regression coefficients for the eight non-mosquito factors, and 
+               <i>γ</i>
+               <div tagxxx="sub">1</div>,…,
+               <i>γ</i>
+               <div tagxxx="sub">8</div>, are regression coefficients for the eight mosquito species. The notation 1
+               <div tagxxx="sub">
+                  <i>i</i>
+               </div>(
+               <i>s</i>),1 ≤ 
+               <i>i</i> ≤ 8, are zero-one indicators: 1
+               <div tagxxx="sub">
+                  <i>i</i>
+               </div>(
+               <i>s</i>) is taken as unity if the 
+               <i>i</i>th mosquito type is present in county 
+               <i>s</i> and zero otherwise.
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">To estimate the parameters 
+               <i>β</i>
+               <div tagxxx="sub">0</div>, 
+               <b>β</b>
+               <div tagxxx="sub">
+                  <i>i</i>
+               </div>,1 ≤ 
+               <i>i</i> ≤ 8, and 
+               <b>γ</b>
+               <div tagxxx="sub">
+                  <i>i</i>
+               </div>,1 ≤ 
+               <i>i</i> ≤ 8, from the data, the classical method of maximum likelihood
+               [
+               <span ref-type="bibr" rid="B23">23</span>] is used. Once the logistic regression parameters are estimated, an estimate of 
+               <i>p</i>(
+               <i>s</i>) based upon the fitted model is computed via
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <div tagxxx="disp-formula">
+                  <div tagxxx="label">(4)</div>
+                  <div tagxxx="math">
+                     <div tagxxx="msub">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mover">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">p</div>
+                              </div>
+                              <div tagxxx="mo">^</div>
+                           </div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mtext">Logistic</div>
+                        </div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                     <div tagxxx="mo">=</div>
+                     <div tagxxx="mfrac">
+                        <div tagxxx="mrow">
+                           <div tagxxx="msup">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">e</div>
+                              </div>
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">ĝ</div>
+                                 <div tagxxx="mo">(</div>
+                                 <div tagxxx="mi">X</div>
+                                 <div tagxxx="mo">(</div>
+                                 <div tagxxx="mi">s</div>
+                                 <div tagxxx="mo">)</div>
+                                 <div tagxxx="mo">)</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mn">1</div>
+                           <div tagxxx="mo">+</div>
+                           <div tagxxx="msup">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">e</div>
+                              </div>
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">ĝ</div>
+                                 <div tagxxx="mo">(</div>
+                                 <div tagxxx="mi">X</div>
+                                 <div tagxxx="mo">(</div>
+                                 <div tagxxx="mi">s</div>
+                                 <div tagxxx="mo">)</div>
+                                 <div tagxxx="mo">)</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div tagxxx="mo">,</div>
+                  </div>
+               </div>
+            </p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">where quantities in (4) are estimated by</p>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <div tagxxx="disp-formula">
+                  <div tagxxx="label">(5)</div>
+                  <div tagxxx="math">
+                     <div tagxxx="mi">ĝ</div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">X</div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                     <div tagxxx="mo">)</div>
+                     <div tagxxx="mo">=</div>
+                     <div tagxxx="msub">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mover">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">β</div>
+                              </div>
+                              <div tagxxx="mo">^</div>
+                           </div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mn">0</div>
+                        </div>
+                     </div>
+                     <div tagxxx="mo">+</div>
+                     <div tagxxx="munderover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">∑</div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">i</div>
+                           <div tagxxx="mo">=</div>
+                           <div tagxxx="mn">1</div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mn">8</div>
+                        </div>
+                     </div>
+                     <div tagxxx="msub">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mover">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">β</div>
+                              </div>
+                              <div tagxxx="mo">^</div>
+                           </div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">i</div>
+                        </div>
+                     </div>
+                     <div tagxxx="msub">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">f</div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">i</div>
+                        </div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                     <div tagxxx="mo">+</div>
+                     <div tagxxx="munderover">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">∑</div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">i</div>
+                           <div tagxxx="mo">=</div>
+                           <div tagxxx="mn">1</div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mn">8</div>
+                        </div>
+                     </div>
+                     <div tagxxx="msub">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mover">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mi">γ</div>
+                              </div>
+                              <div tagxxx="mo">^</div>
+                           </div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">i</div>
+                        </div>
+                     </div>
+                     <div tagxxx="msub">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mn">1</div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mi">i</div>
+                        </div>
+                     </div>
+                     <div tagxxx="mo">(</div>
+                     <div tagxxx="mi">s</div>
+                     <div tagxxx="mo">)</div>
+                     <div tagxxx="mi">.</div>
+                  </div>
+               </div>
+            </p>
+         </div>
+      </div>
+      <div id="">
+         <h2>Results and discussion</h2>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Figure
+            
+            <span ref-type="fig" rid="F19">19</span> shows the results from a fitted logistic regression model after smoothing the
+            
+            <div tagxxx="inline-formula">
+               <div tagxxx="math">
+                  <div tagxxx="msub">
+                     <div tagxxx="mrow">
+                        <div tagxxx="mover">
+                           <div tagxxx="mrow">
+                              <div tagxxx="mi">p</div>
+                           </div>
+                           <div tagxxx="mo">^</div>
+                        </div>
+                     </div>
+                     <div tagxxx="mrow">
+                        <div tagxxx="mtext">Logistic</div>
+                     </div>
+                  </div>
+                  <div tagxxx="mo">(</div>
+                  <div tagxxx="mi">s</div>
+                  <div tagxxx="mo">)</div>
+               </div>
+            </div> estimates with the weighted head-banging algorithm with 30 triples. The results reproduce
+            the rough structure of Figure
+            
+            <span ref-type="fig" rid="F2">2</span>. The overall implication is that canine heartworm seems to be reasonably quantifiable.
+         </p>
+         <div tagxxx="fig">
+            <div tagxxx="label">Figure 19</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>Predicted heartworm prevalence from all factors.</p>
+            </caption>
+            <div tagxxx="graphic"></div>
+         </div>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Clarifying details, in the head-banging procedure, the inverse of the standard deviation
+            of
+            
+            <div tagxxx="inline-formula">
+               <div tagxxx="math">
+                  <div tagxxx="msub">
+                     <div tagxxx="mrow">
+                        <div tagxxx="mover">
+                           <div tagxxx="mrow">
+                              <div tagxxx="mi">p</div>
+                           </div>
+                           <div tagxxx="mo">^</div>
+                        </div>
+                     </div>
+                     <div tagxxx="mrow">
+                        <div tagxxx="mtext">Logistic</div>
+                     </div>
+                  </div>
+                  <div tagxxx="mo">(</div>
+                  <div tagxxx="mi">s</div>
+                  <div tagxxx="mo">)</div>
+               </div>
+            </div> is used as the weight. For any factor, if both 2011 and 2012 data are available (such
+            as temperature and precipitation) then the average of the observations from the two
+            years is used in equation 5. Otherwise, the most recent measurement is used.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The individual factors and their predictive significance are worth discussing. Table
+            
+            <span ref-type="table" rid="T2">2</span> lists estimates of each logistic model parameter, standard errors, odds ratios, and
+            95
+            <i>%</i> confidence intervals for the odds ratios. Elaborating, the standard error is the
+            square root of the estimated variability of the regression coefficient. Smaller standard
+            errors imply greater precision for the parameter estimate. All 
+            <i>p</i>-values for the hypothesis test that the parameter is zero are less than 0.0001. If
+            the parameter for a factor is in truth zero, it is not a good predictor of prevalence
+            rates. A positive/negative parameter estimator means that the corresponding factor
+            is judged to increase/decrease heartworm prevalance as the factor increases. Since
+            the mosquito factors are only presence/absence indicators, a positive regression coefficient
+            estimate means that prevalence is higher when the mosquito species is present, and
+            lower when absent. Exp (
+            <i>β</i>) is interpreted as the odds of a dog being heartworm positive relative to the odds
+            of the dog being negative when the corresponding predictor increases by one unit.
+            For mosquito factors, Exp (
+            <i>β</i>) is interpreted directly as the odds of a dog testing heartworm positive when the
+            corresponding mosquito species is present relative to the odds of the dog testing
+            negative when this mosquito species is absent. Hence, if Exp (
+            <i>β</i>) is larger than unity, then heartworm prevalence is increased by the corresponding
+            factor, and vice versa. The units for the elevation regression coefficient estimator
+            are in thousands of feet; the estimated coefficient for median household income is
+            in thousands of dollars.
+         </p>
+         <div tagxxx="table-wrap">
+            <div tagxxx="label">Table 2</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>Significance of factors**</p>
+            </caption>
+            <table xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">hsidesgroups1
+               <colgroup>
+                  <col>left</col>
+                  <col>center</col>
+                  <col>center</col>
+                  <col>center</col>
+                  <col>center</col>
+               </colgroup>
+               <thead>top
+                  <tr>
+                     <div tagxxx="th">
+                        <b>Effect</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>Estimate</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>Standard error</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>Exp(</b>
+                        <b>
+                           <i>β</i>
+                        </b>
+                        <b>)</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>95% Wald CI</b>
+                     </div>
+                  </tr>
+               </thead>
+               <div tagxxx="tbody">
+                  <tr>
+                     <td>leftbottomIntercept
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom-8.0610
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0819
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom 
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom 
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomTemperature
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0720
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0011
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom1.075
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(1.072, 1.077)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomMedian household income
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom-0.0227
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0003
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.978
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(0.977, 0.978)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomPopulation density
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom-0.0175
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0004
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.983
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(0.982, 0.984)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomPrecipitation
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0982
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0049
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom1.103
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(1.093, 1.114)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomElevation
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom-0.0605
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0030
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.941
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(0.936, 0.947)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomRelative humidity
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom-0.0147
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0008
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.985
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(0.984, 0.987)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomForest coverage
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom1.2493
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.1156
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom3.448
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(2.781, 4.375)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomSurface water coverage
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.1054
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0265
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom1.111
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(1.055, 1.170)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Aedes trivittatus</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.9987
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0153
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom2.715
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(2.634, 2.797)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Culex quinquefasciatus</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.4063
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0152
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom1.501
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(1.457, 1.547)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Aedes sierrensis</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.6947
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0293
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom2.003
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(1.892, 2.121)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Anopheles punctipennis</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.4132
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0182
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom1.512
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(1.459, 1.567)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Anopheles quadrimaculatus</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom-0.1663
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0185
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.847
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(0.817, 0.878)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Aedes aegypti</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom-0.1232
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0112
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.884
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(0.865, 0.904)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Aedes canadensis</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.1481
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom0.0143
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom1.160
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>centerbottom(1.128, 1.192)
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>left
+                        <i>Aedes albopictus</i>
+                     </td>
+                     <td>center-0.0894</td>
+                     <td>center0.0112</td>
+                     <td>center0.915</td>
+                     <td>center(0.895, 0.935)</td>
+                  </tr>
+               </div>
+            </table>
+            <div tagxxx="table-wrap-foot">
+               <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <sup>**</sup>All factors are significant at level 0.01.
+               </p>
+            </div>
+         </div>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The model results in a fairly good fit: McFadden’s pseudo 
+            <i>R</i>
+            <sup>2</sup> = 0.62
+            [
+            <span ref-type="bibr" rid="B24">24</span>]. All predictors were significant predictors of heartworm prevalence rates at level
+            0.0001. Higher temperatures are associated with higher prevalence – heartworm is generally
+            more prevalent in warmer temperatures. Higher median household incomes are associated
+            with lower prevalence rates. Logically, higher income pet owners can more easily afford
+            heartworm preventives. Not surprisingly, heartworm prevalence decreases with increasing
+            population density and elevation. It is surprising to see that prevalence declines
+            with higher humidities. One explanation for this may lie with the high correlations
+            among elevation, relative humidity, and temperature. This will be explored further
+            below when a model that allows the factors to interact is examined.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Presence of 
+            <i>Culex quinquefasciatus</i>, 
+            <i>Aedes sierrensis</i>, 
+            <i>Anopheles punctipennis</i>, 
+            <i>Anopheles quadrimaculatus</i>, and 
+            <i>Aedes canadensis</i> are associated with higher heartworm prevalence. The other three mosquito species
+            are estimated to decrease prevalence rates. The reader should not 
+            <i>a priori</i> believe that presence of any mosquito species acts to increase prevalences in the
+            model: the 16 factors are being "judged" in tandem.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">It is perhaps remarkable that every factor considered is judged to influence prevalence
+            rates with a significance level of 0.0001. It leaves an unsettling feeling that other
+            important factors may have been omitted. We reiterate that this study is exploratory
+            and will hopefully be improved in the future. We should also mention the usual regression
+            caveat: (3) presupposes a linear relationship on the factors that may not be realistic
+            at all factor levels. This drawback is not germane to this study; linear regression
+            models, of course, serve as rudimentary guidance.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The above results, often called a main effects analysis, can be improved by adding
+            interaction terms into the regression. An interaction term between factors 
+            <i>i</i> and 
+            <i>j</i> adds an additional regression term of form 
+            <i>ξ</i>
+            <div tagxxx="sub">
+               <i>i</i>,
+               <i>j</i>
+            </div>
+            <i>f</i>
+            <div tagxxx="sub">
+               <i>i</i>
+            </div>(
+            <i>s</i>) 
+            <i>f</i>
+            <div tagxxx="sub">
+               <i>j</i>
+            </div>(
+            <i>s</i>) into equation 3. Table
+            
+            <span ref-type="table" rid="T3">3</span> reports a logistic regression model fit with most non-mosquito factors allowed to
+            pairwise interact. The notation Temperature*Elevation, for example, refers to temperature
+            and elevation interaction. There are
+            
+            <div tagxxx="inline-formula">
+               <div tagxxx="math">
+                  <div tagxxx="mfenced">
+                     <div tagxxx="mfrac">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mn">8</div>
+                        </div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mn">2</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div tagxxx="mo">=</div>
+                  <div tagxxx="mn">28</div>
+               </div>
+            </div> possible interacting pairs. However, only 16 interaction pairs were considered due
+            to practical constraints. For example, interaction between elevation and temperature
+            is plausible since heartworm prevalence at higher elevations may differ according
+            to temperature. However, median household income and temperature could not be sensibly
+            allowed to interact since heartworm prevalence for dog owners with high salaries does
+            not depend on the temperature where he/she lives, and vice-versa. The mosquito factors
+            were not allowed to interact with other factors because they are simply presence/absence
+            variables. All insignificant factors and interactions were eliminated at the 5% level
+            with a standard backward elimination regression procedure
+            [
+            <span ref-type="bibr" rid="B25">25</span>]. Clarifying, we first fitted a model with all individual factors and 16 interactions.
+            The term with the largest 
+            <i>p</i>-value in the regression was eliminated if its 
+            <i>p</i>-value exceeded 0.05 and the model was refitted. This procedure was repeated until
+            all insignificant factors were eliminated at the 5% level.
+         </p>
+         <div tagxxx="table-wrap">
+            <div tagxxx="label">Table 3</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>Significance factors and interactions*</p>
+            </caption>
+            <table xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">hsidesgroups1
+               <colgroup>
+                  <col>left</col>
+                  <col>right</col>
+                  <col>right</col>
+               </colgroup>
+               <thead>top
+                  <tr>
+                     <div tagxxx="th">
+                        <b>Effect</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>Estimate</b>
+                     </div>
+                     <div tagxxx="th">
+                        <b>Standard error</b>
+                     </div>
+                  </tr>
+               </thead>
+               <div tagxxx="tbody">
+                  <tr>
+                     <td>leftbottomIntercept
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom-8.4312
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0993
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomMedian household income
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom-0.0267
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0004
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomTemperature
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0655
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0015
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomElevation
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.5609
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0171
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomPopulation density
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom-0.0444
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0015
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomTemperature*Elevation
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom-0.0087
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0003
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomTemperature*Forest coverage
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.4840
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0195
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomTemperature*Surface water coverage
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom-0.0345
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0034
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomElevation*Relative humidity
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom-0.0041
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0002
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomForest coverage
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom-36.5371
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom2.1127
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomPopulation density*Median household
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0005
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom&lt;0.0001
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomincome
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom 
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom 
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomForest coverage*Surface water coverage
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom-18.1276
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom1.5896
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomPrecipitation
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.3049
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0278
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomPrecipitation*Surface water coverage
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom-0.3247
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0299
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomPrecipitation*Elevation
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0196
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0020
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomPrecipitation*Relative humidity
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom-0.0032
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0004
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomElevation*Surface water coverage
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.2472
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0342
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomElevation*Woodland coverage
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.7325
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.1019
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomForest coverage*Relative humidity
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0903
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0234
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomSurface water coverage*Relative humidity
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0281
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0075
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottomSurface water coverage
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom1.1773
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.5507
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Aedes trivittatus</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom1.0682
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0158
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Aedes sierrensis</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom1.1311
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0313
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Culex quinquefasciatus</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.5483
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0163
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Anopheles punctipennis</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.3948
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0191
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Aedes canadensis</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.1567
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0151
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Aedes albopictus</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom-0.0976
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0116
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>leftbottom
+                        <i>Aedes aegypti</i>
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom-0.0879
+                        <div tagxxx="hr"></div>
+                     </td>
+                     <td>rightbottom0.0126
+                        <div tagxxx="hr"></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>left
+                        <i>Anopheles quadrimaculatus</i>
+                     </td>
+                     <td>right-0.1084</td>
+                     <td>right0.0163</td>
+                  </tr>
+               </div>
+            </table>
+            <div tagxxx="table-wrap-foot">
+               <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <sup>*</sup>All factors and their interactions are significant at level 0.01, except for that
+                  surface water coverage is significant at level 0.05.
+               </p>
+            </div>
+         </div>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Including interactions increased McFadden‘s pseudo 
+            <i>R</i>
+            <sup>2</sup> to 0.65. Table
+            
+            <span ref-type="table" rid="T3">3</span> summarizes the results of this procedure. In this table, Exp(
+            <i>β</i>) and their confidence intervals were not included. This is because when factor interactions
+            are included, the value of Exp(
+            <i>β</i>) depends not only on the coefficient of this factor, but also on all the other factors
+            that interact with the factor. All listed factors are significant with a significance
+            level of 0.0001, except the surface water coverage*relative humidity interaction (
+            <i>p</i>-value of 0.0002) and surface water coverage (
+            <i>p</i>-value of 0.0327). Differences from the Table
+            
+            <span ref-type="table" rid="T2">2</span> results exist, but are not radical. Relative humidity, for example, is not itself
+            significant but interacts with several other factors. All other individual factors
+            remain significant predictors. The parameter estimates of the main effects are slightly
+            different from those in Table
+            
+            <span ref-type="table" rid="T2">2</span> since interactions are now included. For example, the parameter estimates of both
+            median household income and population density are smaller than those in Table
+            
+            <span ref-type="table" rid="T2">2</span> and their interaction is significant. The significant interaction indicates that
+            the changes of heartworm prevalence as median household income changes are conditional
+            on the value of population density, and vice versa.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Figure
+            
+            <span ref-type="fig" rid="F20">20</span> presents an analogous graphic to Figure
+            
+            <span ref-type="fig" rid="F19">19</span> when interactions were included in the logistic regression model and predictions
+            are made from the fitted model in Table
+            
+            <span ref-type="table" rid="T3">3</span>. Results allow for interactions and a backward selection was used to eliminate any
+            insignificant factors and their interactions. The results are comparable to those
+            in Figure
+            
+            <span ref-type="fig" rid="F19">19</span>.
+         </p>
+         <div tagxxx="fig">
+            <div tagxxx="label">Figure 20</div>
+            <caption xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+               <p>Predicted heartworm prevalence from significant factors and interactions.</p>
+            </caption>
+            <div tagxxx="graphic"></div>
+         </div>
+      </div>
+      <div id="">
+         <h2>Conclusions</h2>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Our factor list in Table
+            
+            <span ref-type="table" rid="T1">1</span> is likely incomplete; however, it should serve as a starting point. Several important
+            factors that were discussed in Brown 
+            <i>et al.</i>[
+            <span ref-type="bibr" rid="B2">2</span>] could not be included in the analysis due to data deficiencies. For example, coyotes
+            and feral dogs are known reservoirs of heartworm infection. Unfortunately, no complete
+            data of their populations were available. Additionally, mosquito vector abundance
+            data were unavailable. Should information regarding coyote counts and vector abundance
+            be consistently collected in the future and incorporated in the methods discussed
+            herein, the model would improve in power and practical implications.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">Some of the factors could be refined. For example, it is frequently posited that heartworm
+            degree units for temperature likely influence prevalence rates
+            [
+            <span ref-type="bibr" rid="B26">26</span>]. Such units are typically measured from 14 degree Celsius (57 degrees Fahrenheit),
+            below which it is difficult to have high heartworm transmission. We have not looked
+            at temperature departures above 14 degree Celsius because our data are annual. Also,
+            subtracting 14 from the annual temperatures would reparametrize the value of 
+            <i>β</i>
+            <div tagxxx="sub">0</div>, but would not change the overall regression fit.
+         </p>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The fitted regression model is currently being explored to forecast future values
+            of heartworm prevalence. Indeed, many of the predictive factors vary with time (temperature
+            and precipitation, for example). From a forecast of these factors — say a year in
+            advance — and our fitted logistic regression model, predictions of prevalence rates
+            can be made. This can inform the pet owner and practitioner in advance of a potentially
+            bad heartworm season. The results can also be used to assess prevalence rate changes
+            due to climate change. For example, if annual temperatures are expected to increase
+            by one degree F, one could add one degree to the temperature in the fitted logistic
+            regression model to predict the change.
+         </p>
+      </div>
+      <div id="">
+         <h2>Competing interests</h2>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The authors have no competing interests relative to the work presented in this report.</p>
+      </div>
+      <div id="">
+         <h2>Authors’ contributions</h2>
+         <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">All authors were responsible for identifying candidate factors. DW, JS, and RL were
+            responsible for the statistical analysis and the production of figures and tables.
+            RL and DDB wrote the draft document. All authors revised the paper and agreed with
+            its final version.
+         </p>
+      </div>
+      <div tagxxx="back">
+         <div id="">
+            <h2>Acknowledgements</h2>
+            <p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">The authors would like to thank the Companion Animal Parasite Council for providing
+               the data and supporting this study financially.
+            </p>
+         </div>
+         <div tag="ref-list">
+            <ul>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <span tagx="article-title">CAPC parasite prevalence maps heartworm</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://www.capcvet.org/parasite-prevalence-maps</div>]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Brown</span>
+                        <span tagx="given-names">HE</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Harrington</span>
+                        <span tagx="given-names">LC</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Kaufman</span>
+                        <span tagx="given-names">PE</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">McKay</span>
+                        <span tagx="given-names">T</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Bowman</span>
+                        <span tagx="given-names">DD</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Nelson</span>
+                        <span tagx="given-names">CT</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Wang</span>
+                        <span tagx="given-names">D</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Lund</span>
+                        <span tagx="given-names">R</span>
+                     </div>
+                     <span tagx="article-title">Key factors influencing canine heartworm, Dirofilaria immitis, in the United States</span>
+                     <span tagx="source">Parasites Vectors</span>
+                     <span tagx="year">2012</span>
+                     <span tagx="volume">5</span>
+                     <span tagx="fpage">245</span>
+                     <div tagxxx="pub-id">10.1186/1756-3305-5-245</div>
+                     <div tagxxx="pub-id">23111089</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Sacks</span>
+                        <span tagx="given-names">BN</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Woodward</span>
+                        <span tagx="given-names">DL</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Colwell</span>
+                        <span tagx="given-names">AE</span>
+                     </div>
+                     <span tagx="article-title">A long-term study of non-native-heartworm transmission among coyotes in a Mediterranean
+                        ecosystem
+                     </span>
+                     <span tagx="source">Oikos</span>
+                     <span tagx="year">2003</span>
+                     <span tagx="volume">102</span>
+                     <span tagx="fpage">478</span>
+                     <span tagx="lpage">490</span>
+                     <div tagxxx="pub-id">10.1034/j.1600-0706.2003.12590.x</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Levy</span>
+                        <span tagx="given-names">JK</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Lappin</span>
+                        <span tagx="given-names">MR</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Glaser</span>
+                        <span tagx="given-names">AL</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Birkenheuer</span>
+                        <span tagx="given-names">AJ</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Anderson</span>
+                        <span tagx="given-names">TC</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Edinboro</span>
+                        <span tagx="given-names">CH</span>
+                     </div>
+                     <span tagx="article-title">Prevalence of infectious disease in cats and dogs rescued following Hurricane Katrina</span>
+                     <span tagx="source">J Am Vet Med Assoc</span>
+                     <span tagx="year">2011</span>
+                     <span tagx="volume">238</span>
+                     <span tagx="fpage">311</span>
+                     <span tagx="lpage">317</span>
+                     <div tagxxx="pub-id">10.2460/javma.238.3.311</div>
+                     <div tagxxx="pub-id">21281213</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <span tagx="article-title">ANTECH Diagnostics</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://www.antechdiagnostics.com/Main/Home.aspx</div>]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <span tagx="article-title">IDEXX Laboratories</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://www.idexx.com/view/xhtml/en_us/corporate/home.jsf</div>]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <span tagx="article-title">National climatic data center</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://www7.ncdc.noaa.gov/CDO/cdoselect.cmd?datasetabbv=GSOD&amp;countryabbv=&amp;georegionabbv</div>]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <span tagx="article-title">National climatic data center</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://www.ncdc.noaa.gov/monitoring-references/maps/us-climate-divisions.php</div>]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <span tagx="article-title">Paroscientific, Inc</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://www.paroscientific.com/dewpoint.htm</div>]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <span tagx="article-title">Peakbagger.com</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://peakbagger.com</div>]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <span tagx="article-title">United States department of agriculture</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://quickstats.nass.usda.gov/</div>]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <span tagx="article-title">Census bureau</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://www.census.gov/support/USACdataDownloads.html</div>\#LND]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <span tagx="article-title">Census bureau</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://factfinder2.census.gov/faces/nav/jsf/pages/searchresults.xhtml?refresh=t</div>]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <span tagx="article-title">Bureau of labor statistics, U.S. Department of labor</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://www.bls.gov/cpi</div>]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Moore</span>
+                        <span tagx="given-names">CG</span>
+                     </div>
+                     <span tagx="article-title">Exotic mosquitoes in the USA: updates and trends</span>
+                     <span tagx="source">27th Biennial State Public Health Vector Control Conference</span>
+                     <span tagx="year">March 25–26, 2008</span>
+                     <div tagxxx="publisher-name">Fort Collins, Colorado</div>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://www.cdc.gov/ncidod/dvbid/westnile/conf/27thbiennialVectorControl/index.htm</div>]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Hynes</span>
+                        <span tagx="given-names">NA</span>
+                     </div>
+                     <span tagx="article-title">Dengue: a reemerging concern for travelers</span>
+                     <span tagx="source">Clevel Clin J Med</span>
+                     <span tagx="year">2012</span>
+                     <span tagx="volume">79</span>
+                     <div tagxxx="issue">7</div>
+                     <span tagx="fpage">474</span>
+                     <span tagx="lpage">482</span>
+                     <div tagxxx="pub-id">10.3949/ccjm.79a.11048</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Darsie</span>
+                        <span tagx="given-names">RF</span>
+                        <div tagxxx="suffix">Jr</div>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Ward</span>
+                        <span tagx="given-names">RA</span>
+                     </div>
+                     <span tagx="source">Identification and Geographical Distribution of the Mosquitoes of North America, North
+                        of Mexico
+                     </span>
+                     <span tagx="year">2004:384</span>
+                     <div tagxxx="publisher-name">Gainseville: University Press of Florida</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Wilson</span>
+                        <span tagx="given-names">EB</span>
+                     </div>
+                     <span tagx="article-title">Probable inference, the law of succession, and statistical inference</span>
+                     <span tagx="source">J Am Stat Assoc</span>
+                     <span tagx="year">1927</span>
+                     <span tagx="volume">22</span>
+                     <span tagx="fpage">209</span>
+                     <span tagx="lpage">212</span>
+                     <div tagxxx="pub-id">10.1080/01621459.1927.10502953</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Tukey</span>
+                        <span tagx="given-names">PA</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Tukey</span>
+                        <span tagx="given-names">JW</span>
+                     </div>
+                     <span tagx="source">Graphical Display of Data Sets in 3 or More Dimensions, Interpreting Multivariate
+                        Data
+                     </span>
+                     <span tagx="year">1981</span>
+                     <div tagxxx="publisher-name">New York: Wiley</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Mungiole</span>
+                        <span tagx="given-names">M</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Pickle</span>
+                        <span tagx="given-names">LW</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Simonson</span>
+                        <span tagx="given-names">KH</span>
+                     </div>
+                     <span tagx="article-title">Application of a weighted head-banging algorithm to mortality data maps</span>
+                     <span tagx="source">Stat Med</span>
+                     <span tagx="year">1999</span>
+                     <span tagx="volume">18</span>
+                     <span tagx="fpage">3201</span>
+                     <span tagx="lpage">3209</span>
+                     <div tagxxx="pub-id">10.1002/(SICI)1097-0258(19991215)18:23&lt;3201::AID-SIM310&gt;3.0.CO;2-U</div>
+                     <div tagxxx="pub-id">10602145</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Hansen</span>
+                        <span tagx="given-names">KM</span>
+                     </div>
+                     <span tagx="article-title">Head-banging: robust smoothing in the plane</span>
+                     <span tagx="source">IEEE Trans Geosci Remote Sensing</span>
+                     <span tagx="year">1991</span>
+                     <span tagx="volume">29</span>
+                     <span tagx="fpage">369</span>
+                     <span tagx="lpage">378</span>
+                     <div tagxxx="pub-id">10.1109/36.79427</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Pohlman</span>
+                        <span tagx="given-names">JT</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Leitner</span>
+                        <span tagx="given-names">DW</span>
+                     </div>
+                     <span tagx="article-title">A comparison of ordinary least squares and logistic regression</span>
+                     <span tagx="source">Ohio J Sci</span>
+                     <span tagx="year">2003</span>
+                     <span tagx="volume">103</span>
+                     <div tagxxx="issue">n5</div>
+                     <span tagx="fpage">118</span>
+                     <span tagx="lpage">125</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Czepiel</span>
+                        <span tagx="given-names">SA</span>
+                     </div>
+                     <span tagx="article-title">Maximum likelihood estimation of logistic regression models: theory and implementation</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://czep.net/contact.html</div>]
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">McFadden</span>
+                        <span tagx="given-names">D</span>
+                     </div>
+                     <div tagxxx="person-group">Zarembka P</div>
+                     <span tagx="article-title">Conditional logit analysis of qualitative choice behavior</span>
+                     <span tagx="source">Frontiers In Econometrics</span>
+                     <span tagx="year">1973</span>
+                     <div tagxxx="publisher-name">New York: Academic Press</div>
+                     <span tagx="fpage">105</span>
+                     <span tagx="lpage">142</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Hosmer</span>
+                        <span tagx="given-names">DW</span>
+                     </div>
+                     <div tagxxx="name">
+                        <span tagx="surname">Lemeshow</span>
+                        <span tagx="given-names">S</span>
+                     </div>
+                     <span tagx="article-title">Model-building strategies and methods for logistic regression</span>
+                     <span tagx="source">Applied Logistic Regression, 2nd Edition</span>
+                     <span tagx="year">2000</span>
+                     <div tagxxx="publisher-name">New Jersey: John Wiley &amp; Sons, Inc.</div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <div tagxxx="mixed-citation">
+                     <div tagxxx="name">
+                        <span tagx="surname">Shearer</span>
+                        <span tagx="given-names">P</span>
+                     </div>
+                     <span tagx="article-title">Literature review - heartworm disease</span>
+                     <span tagx="source">Banfield Appl Res &amp; Knowl Team</span>
+                     <span tagx="year">2011</span>
+                     <span tagx="fpage">1</span>
+                     <span tagx="lpage">16</span>
+                     <div tagxxx="comment">[
+                        
+                        <div tagxxx="ext-link">http://www.banfield.com/getmedia/e456eec3-77f2-46f1-b302-87a17a8fba0a/5906a327-4e82-49f7-9432-e7da7fc568a9-pdf0</div>]
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</html>

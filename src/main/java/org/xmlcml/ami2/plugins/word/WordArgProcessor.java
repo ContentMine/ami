@@ -36,13 +36,17 @@ public class WordArgProcessor extends AMIArgProcessor {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
+	public final static String FREQUENCIES = "frequencies";
 	public final static String WORD_LENGTHS = "wordLengths";
-	public final static String WORD_FREQUENCIES = "wordFrequencies";
-	public final static String WORD_SEARCH = "wordSearch";
+	public final static String WORD_FREQUENCIES = "wordFrequencies"; // deprecated
+	public final static String SEARCH = "search";					
+	public final static String WORD_SEARCH = "wordSearch";			// deprecated
 	public final static List<String> ANALYSIS_METHODS = Arrays.asList(
 		new String[]{
+				FREQUENCIES,
 				WORD_FREQUENCIES,
 				WORD_LENGTHS,
+				SEARCH,
 				WORD_SEARCH
 		});
 	
@@ -64,8 +68,6 @@ public class WordArgProcessor extends AMIArgProcessor {
 				ABBREVIATION,
 				PRESERVE
 		});
-
-	public static final String FREQUENCIES = "frequencies";
 
 	private static final String TFIDF = "tfidf";
 	private static final String TFIDF_XML = "tfidf.xml";
@@ -190,6 +192,7 @@ public class WordArgProcessor extends AMIArgProcessor {
 		for (DefaultStringDictionary dictionary : this.getDictionaryList()) {
 			AMISearcher wordSearcher = new WordSearcher(this, dictionary);
 			searcherList.add(wordSearcher);
+			wordSearcher.setName(dictionary.getTitle());
 		}
 //		wordSearcher.setDictionaryList(this.getDictionaryList());
 	}

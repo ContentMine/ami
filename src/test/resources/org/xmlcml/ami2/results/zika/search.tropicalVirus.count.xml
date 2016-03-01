@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="966">ZIKV</result>
+ <result title="frequency" count="723">DENV</result>
+ <result title="frequency" count="718">Zika</result>
+ <result title="frequency" count="428">CHIKV</result>
+ <result title="frequency" count="416">Dengue</result>
+ <result title="frequency" count="343">West Nile</result>
+ <result title="frequency" count="262">WNV</result>
+ <result title="frequency" count="209">YFV</result>
+ <result title="frequency" count="189">Chikungunya</result>
+ <result title="frequency" count="48">Yellow fever</result>
+ <result title="frequency" count="26">HPV</result>
+ <result title="frequency" count="6">West Nile,</result>
+ <result title="frequency" count="2">Yellow fever,</result>
+</results>

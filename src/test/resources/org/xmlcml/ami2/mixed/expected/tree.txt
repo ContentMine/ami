@@ -1,0 +1,221 @@
+.
+├── file0
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   ├── geneFiles.xml
+│   ├── geneSnippets.xml
+│   ├── genegeneSnippets.xml
+│   ├── results
+│   │   ├── gene
+│   │   │   └── human
+│   │   │       └── results.xml
+│   │   ├── sequence
+│   │   │   └── dnaprimer
+│   │   │       └── empty.xml
+│   │   ├── species
+│   │   │   ├── binomial
+│   │   │   │   └── empty.xml
+│   │   │   └── genus
+│   │   │       └── results.xml
+│   │   └── word
+│   │       └── frequencies
+│   │           ├── results.html
+│   │           └── results.xml
+│   ├── scholarly.html
+│   ├── sequenceFiles.xml
+│   ├── sequenceSnippets.xml
+│   ├── speciesFiles.xml
+│   ├── speciesSnippets.xml
+│   ├── wordFiles.xml
+│   └── wordSnippets.xml
+├── file1
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   ├── geneFiles.xml
+│   ├── geneSnippets.xml
+│   ├── genegeneSnippets.xml
+│   ├── results
+│   │   ├── gene
+│   │   │   └── human
+│   │   │       └── empty.xml
+│   │   ├── sequence
+│   │   │   └── dnaprimer
+│   │   │       └── empty.xml
+│   │   ├── species
+│   │   │   ├── binomial
+│   │   │   │   └── results.xml
+│   │   │   └── genus
+│   │   │       └── empty.xml
+│   │   └── word
+│   │       └── frequencies
+│   │           ├── results.html
+│   │           └── results.xml
+│   ├── scholarly.html
+│   ├── sequenceFiles.xml
+│   ├── sequenceSnippets.xml
+│   ├── speciesFiles.xml
+│   ├── speciesSnippets.xml
+│   ├── wordFiles.xml
+│   └── wordSnippets.xml
+├── file2
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   ├── geneFiles.xml
+│   ├── geneSnippets.xml
+│   ├── genegeneSnippets.xml
+│   ├── results
+│   │   ├── gene
+│   │   │   └── human
+│   │   │       └── empty.xml
+│   │   ├── sequence
+│   │   │   └── dnaprimer
+│   │   │       └── empty.xml
+│   │   ├── species
+│   │   │   ├── binomial
+│   │   │   │   └── results.xml
+│   │   │   └── genus
+│   │   │       └── empty.xml
+│   │   └── word
+│   │       └── frequencies
+│   │           ├── results.html
+│   │           └── results.xml
+│   ├── scholarly.html
+│   ├── sequenceFiles.xml
+│   ├── sequenceSnippets.xml
+│   ├── speciesFiles.xml
+│   ├── speciesSnippets.xml
+│   ├── wordFiles.xml
+│   └── wordSnippets.xml
+├── file3
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   ├── geneFiles.xml
+│   ├── geneSnippets.xml
+│   ├── genegeneSnippets.xml
+│   ├── results
+│   │   ├── gene
+│   │   │   └── human
+│   │   │       └── empty.xml
+│   │   ├── sequence
+│   │   │   └── dnaprimer
+│   │   │       └── empty.xml
+│   │   ├── species
+│   │   │   ├── binomial
+│   │   │   │   └── results.xml
+│   │   │   └── genus
+│   │   │       └── results.xml
+│   │   └── word
+│   │       └── frequencies
+│   │           ├── results.html
+│   │           └── results.xml
+│   ├── scholarly.html
+│   ├── sequenceFiles.xml
+│   ├── sequenceSnippets.xml
+│   ├── speciesFiles.xml
+│   ├── speciesSnippets.xml
+│   ├── wordFiles.xml
+│   └── wordSnippets.xml
+├── file4
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   ├── geneFiles.xml
+│   ├── geneSnippets.xml
+│   ├── genegeneSnippets.xml
+│   ├── results
+│   │   ├── gene
+│   │   │   └── human
+│   │   │       └── results.xml
+│   │   ├── sequence
+│   │   │   └── dnaprimer
+│   │   │       └── empty.xml
+│   │   ├── species
+│   │   │   ├── binomial
+│   │   │   │   └── results.xml
+│   │   │   └── genus
+│   │   │       └── results.xml
+│   │   └── word
+│   │       └── frequencies
+│   │           ├── results.html
+│   │           └── results.xml
+│   ├── scholarly.html
+│   ├── sequenceFiles.xml
+│   ├── sequenceSnippets.xml
+│   ├── speciesFiles.xml
+│   ├── speciesSnippets.xml
+│   ├── wordFiles.xml
+│   └── wordSnippets.xml
+├── file5
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   ├── geneFiles.xml
+│   ├── geneSnippets.xml
+│   ├── genegeneSnippets.xml
+│   ├── results
+│   │   ├── gene
+│   │   │   └── human
+│   │   │       └── empty.xml
+│   │   ├── sequence
+│   │   │   └── dnaprimer
+│   │   │       └── empty.xml
+│   │   ├── species
+│   │   │   ├── binomial
+│   │   │   │   └── results.xml
+│   │   │   └── genus
+│   │   │       └── results.xml
+│   │   └── word
+│   │       └── frequencies
+│   │           ├── results.html
+│   │           └── results.xml
+│   ├── scholarly.html
+│   ├── sequenceFiles.xml
+│   ├── sequenceSnippets.xml
+│   ├── speciesFiles.xml
+│   ├── speciesSnippets.xml
+│   ├── wordFiles.xml
+│   └── wordSnippets.xml
+├── file6
+│   ├── fulltext.html
+│   ├── fulltext.pdf
+│   ├── fulltext.xml
+│   ├── geneFiles.xml
+│   ├── geneSnippets.xml
+│   ├── genegeneSnippets.xml
+│   ├── results
+│   │   ├── gene
+│   │   │   └── human
+│   │   │       └── empty.xml
+│   │   ├── sequence
+│   │   │   └── dnaprimer
+│   │   │       └── empty.xml
+│   │   ├── species
+│   │   │   ├── binomial
+│   │   │   │   └── results.xml
+│   │   │   └── genus
+│   │   │       └── results.xml
+│   │   └── word
+│   │       └── frequencies
+│   │           ├── results.html
+│   │           └── results.xml
+│   ├── results.json
+│   ├── scholarly.html
+│   ├── sequenceFiles.xml
+│   ├── sequenceSnippets.xml
+│   ├── speciesFiles.xml
+│   ├── speciesSnippets.xml
+│   ├── wordFiles.xml
+│   └── wordSnippets.xml
+├── geneFiles.xml
+├── geneSnippets.xml
+├── genegeneSnippets.xml
+├── sequenceFiles.xml
+├── sequenceSnippets.xml
+├── speciesFiles.xml
+├── speciesSnippets.xml
+├── wordFiles.xml
+└── wordSnippets.xml

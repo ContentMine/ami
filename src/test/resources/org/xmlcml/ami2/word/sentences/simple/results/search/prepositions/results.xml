@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="prepositions">
+ <result pre="is a new sentence. And so is this one. And" exact="from" post="the people by the people with the people."/>
+ <result pre="sentence. And so is this one. And from the people" exact="by" post="the people with the people."/>
+ <result pre="is this one. And from the people by the people" exact="with" post="the people."/>
+</results>

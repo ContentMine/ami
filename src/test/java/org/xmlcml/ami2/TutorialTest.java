@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.CommandProcessor;
 import org.xmlcml.ami2.plugins.gene.GeneArgProcessor;
 import org.xmlcml.ami2.plugins.identifier.IdentifierArgProcessor;
 import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
@@ -16,6 +17,7 @@ import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.util.CMineTestFixtures;
+import org.xmlcml.norma.Norma;
 
 public class TutorialTest {
 
@@ -215,28 +217,217 @@ public class TutorialTest {
 		new GeneArgProcessor(args).runAndOutput();
 		
 		LOG.debug("file files");
-		args = "--project "+targetDir+" --analyze file(**/gene/human/results.xml) -o geneFiles.xml" ;
+		args = "--project "+targetDir+" --filter file(**/gene/human/results.xml) -o geneFiles.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/species/**/results.xml) -o speciesFiles.xml" ;
+		args = "--project "+targetDir+" --filter file(**/species/**/results.xml) -o speciesFiles.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/sequence/**/results.xml) -o sequenceFiles.xml" ;
+		args = "--project "+targetDir+" --filter file(**/sequence/**/results.xml) -o sequenceFiles.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/word/**/results.xml) -o wordFiles.xml" ;
+		args = "--project "+targetDir+" --filter file(**/word/**/results.xml) -o wordFiles.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
 		
 		LOG.debug("snippets files");
-		args = "--project "+targetDir+" --analyze file(**/gene/human/results.xml)xpath(//result) -o geneSnippets.xml" ;
+		args = "--project "+targetDir+" --filter file(**/gene/human/results.xml)xpath(//result) -o geneSnippets.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/gene/human/results.xml)xpath(//result[contains(@pre,'genotype')]) -o genegeneSnippets.xml" ;
+		args = "--project "+targetDir+" --filter file(**/gene/human/results.xml)xpath(//result[contains(@pre,'genotype')]) -o genegeneSnippets.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/species/**/results.xml)xpath(//result) -o speciesSnippets.xml" ;
+		args = "--project "+targetDir+" --filter file(**/species/**/results.xml)xpath(//result) -o speciesSnippets.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/sequence/**/results.xml)xpath(//result) -o sequenceSnippets.xml" ;
+		args = "--project "+targetDir+" --filter file(**/sequence/**/results.xml)xpath(//result) -o sequenceSnippets.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
-		args = "--project "+targetDir+" --analyze file(**/word/**/results.xml)xpath(//result[@count>20]) -o wordSnippets.xml" ;
+		args = "--project "+targetDir+" --filter file(**/word/**/results.xml)xpath(//result[@count>20]) -o wordSnippets.xml" ;
 		new DefaultArgProcessor(args).runAndOutput(); 
 		LOG.debug("end");
 
 	}
 	
+	@Test
+	/** this tutorial shows how to aggregate from results.xml files.
+	 * first we run a word frequency which generates bagOfWordsWithCounts in results.xml
+	 * These are then aggregated to a single wordSnippets file for each cTree.
+	 * These are then aggregated to give a summary file for the cProject
+	 */
+	public void testSummarizeCounts() throws IOException {
+		/** create a clean version in target/
+		 * there are 6 ctrees
+		 */
+		String args;
+		File projectDir = new File("target/tutorial/patents/summary");
+		CMineTestFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_PATENTS_DIR, "US08979"), projectDir);
+		
+
+		/** run AMI-words to create a bagofwords as normal in ${ctree}/results/word/frequencies/results.xml
+		 */ 
+		args = "--project "+projectDir+" -i scholarly.html"
+				+ " --w.words wordFrequencies --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt ";
+		new WordArgProcessor(args).runAndOutput();
+		
+		/** take these results.xml files and aggregate into a single ${ctree}/wordSnippets.xml
+		 * it selects all words with a count > 20
+		 */
+		args = "--project "+projectDir+" --filter file(**/word/**/results.xml)xpath(//result[@count>20]) -o wordSnippets.xml" ;
+		new DefaultArgProcessor(args).runAndOutput(); 
+
+		/** aggregate the ${ctree}/wordSnippets.xml to ${cproject}/wordSnippets.xml
+		 * 
+		 * because the wordSnippets holds its value in the "word" attribute, we use an xpath that
+		 * returns the attribute. The software will then look for a sibling "count" attribute
+		 * and use this. (messy, and we'll mend it)
+		 * 
+		 * The result is a global ${cproject}/wordCount.xml
+		 * 
+		 */
+		args = "--project "+projectDir+" -i wordSnippets.xml --xpath //result/@word --summaryfile wordCount.xml";
+		DefaultArgProcessor argProcessor = new DefaultArgProcessor(args); 
+		argProcessor.runAndOutput(); 
+	}
+	
+	
+	@Test
+	/** this tutorial shows how to aggregate from results.xml files.
+	 * Files are all getpapers with "anopheles" query 
+	 * first we run ami-species which generates results.xml
+	 * These are then aggregated to a single speciesSnippets.xml file for each cTree.
+	 * These are then aggregated to give a summary speciesSnippets.xml for the cProject
+	 */
+	public void testSummarizeAnopheles() throws IOException {
+//		/** create a clean version in target/
+//		 * there are 20+ ctrees
+//		 */
+//		String args;
+//		File projectDir = new File("target/tutorial/anopheles");
+//		CMineTestFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_AMI_DIR, "anopheles"), projectDir);
+//		
+//		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+//		/** run AMI-species to create results.xml as normal in ${ctree}/results/species/binomial/results.xml
+//		 */ 
+//		new SpeciesArgProcessor(
+//				"--project "+projectDir+" -i scholarly.html --sp.species --sp.type binomial genus ").runAndOutput();
+//		commandProcessor.runSpecies("binomial genus");
+//		commandProcessor.runGene("human");
+//		commandProcessor.runSequence("dna");
+//		new WordArgProcessor("--project "+projectDir+" -i scholarly.html --w.words wordFrequencies"
+//						+ " --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt").runAndOutput();
+//
+//		/** take these results.xml files and aggregate into a single ${ctree}/wordSnippets.xml
+//		 * it selects all words with a count > 20
+//		 */
+//		commandProcessor.runFilterResultsXMLOptions("species/binomial species/genus gene/human sequence/dna sequence/dnaprimer"); 
+//		new DefaultArgProcessor("--project "+projectDir+" --filter file(**/word/frequencies/results.xml)xpath(//result[@count>20]) -o wordCount.xml").runAndOutput(); 
+//
+//		new DefaultArgProcessor("--project "+projectDir+" -i wordCount.xml         --xpath //result/@word  --summaryfile wordCount.xml").runAndOutput(); 
+//
+	}
+	
+	@Test
+	// ADVERT
+	
+	/** this tutorial shows how to aggregate from results.xml files.
+	 * Files are all getpapers with "Zika" query 
+	 * first we run ami-species which generates results.xml
+	 * These are then aggregated to a single speciesSnippets.xml file for each cTree.
+	 * These are then aggregated to give a summary speciesSnippets.xml for the cProject
+	 */
+	public void testSummarizeZika() throws IOException {
+//		/** create a clean version in target/
+//		 * there are 20+ ctrees
+//		 */
+//		File projectDir = new File("target/tutorial/zika");
+//		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, "zika");
+//		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+//		CommandProcessor commandProcessor = new CommandProcessor(rawDir);
+//		commandProcessor.runNormaIfNecessary();
+//
+//		/** run AMI-species to create results.xml as normal in ${ctree}/results/species/binomial/results.xml
+//		 */ 
+//		commandProcessor.runSpecies("binomial genus");
+//		commandProcessor.runGene("human");
+//		commandProcessor.runSequence("dna dnaprimer");
+//		new WordArgProcessor("--project "+projectDir+" -i scholarly.html --w.words wordFrequencies"
+//						+ " --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt").runAndOutput();
+//
+//		/** take these results.xml files and aggregate into a single ${ctree}/wordSnippets.xml
+//		 * it selects all words with a count > 20
+//		 */
+//		commandProcessor.runFilterResultsXMLOptions("species/binomial species/genus gene/human sequence/dna sequence/dnaprimer"); 
+//		
+//		commandProcessor.runFilterResultsXML("word", "frequencies", "//result[@count>20]"); 
+//		commandProcessor.runFilterResultsXML("species", "binomial", "//result[contains(@pre,'ZIKV')]", "zikvSnippets.xml"); 
+//
+//		/** aggregate the ${ctree}/binomialSnippets.xml to ${cproject}/binomialSnippets.xml
+//		 * 
+//		 * The result is a global ${cproject}/binomialSnippets.xml
+//		 * 
+//		 */
+//		commandProcessor.runSummaryAndCountOptions("binomial genus human dna dnaprimer"); 
+//		
+//		new DefaultArgProcessor("--project "+projectDir+" -i frequenciesSnippets.xml --xpath //result/@word  --summaryfile frequenciesCount.xml").runAndOutput(); 
+//
+//		new DefaultArgProcessor("--project "+projectDir+" -i zikvSnippets.xml  --xpath //result/@match --summaryfile zikvCount.xml").runAndOutput(); 
+		
+	}
+
+	@Test
+	public void testNewCommands() throws IOException {
+		String project = "zika";
+		File projectDir = new File("target/tutorial/"+project);
+		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+
+		// make sure the scholarly.html exists
+		if (!new File(AMIFixtures.TEST_AMI_DIR, "PMC2570833/scholarly.html").exists()) {
+			String args = "-i fulltext.xml -o scholarly.html --transform nlm2html --project "+rawDir;
+			new Norma().run(args);
+		}
+
+		
+		
+		
+//		String cmd = "species(binomial,genus)";
+//		String cmd = "gene(human)";
+		
+		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"; 
+//		String cmd = "word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml"; //
+//		String cmd = "word(search)w.search:/org/xmlcml/ami2/plugins/places/wikiplaces.xml"; //
+//		String cmd = "sequence(dnaprimer) ";
+//				+ "word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml";
+				
+				
+//		String cmd = "species(binomial,genus) gene(human) sequence(dnaprimer) word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml word(frequencies)xpath:@count>20~stopwords:pmcstop.txt_stopwords.txt"; 
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.runCommands(cmd);
+
+	}
+
+	/** for cleaning XSLT
+	 * 
+	 * @throws IOException
+	 */
+	@Test
+	public void testCheckNorma() throws IOException {
+		String project = "zika";
+		File projectDir = new File("target/tutorial/"+project);
+		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		String args = "-i fulltext.xml -o scholarly.html --transform nlm2html --project "+projectDir;
+		new Norma().run(args);
+
+	}
+	// =================
+	
+	@Test
+	@Ignore // PMR only
+	public void testMicrocephaly()  throws IOException {
+		String project = "microcephaly";
+		File projectDir = new File("target/tutorial/"+project);
+		File rawDir = new File("/Users/pm286/workspace/projects/", project);
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+//		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"; 
+		String cmd = "sequence(dnaprimer) gene(human) "
+		+ "word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml";
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.runCommands(cmd);
+
+	}
+
 }

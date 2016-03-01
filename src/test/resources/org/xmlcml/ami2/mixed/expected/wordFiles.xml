@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cTreeFilesTree project="target/tutorial/mixed">
+ <cTreeFiles cTree="target/tutorial/mixed/file0">
+  <file name="target/tutorial/mixed/file0/results/word/frequencies/results.xml"/>
+ </cTreeFiles>
+ <cTreeFiles cTree="target/tutorial/mixed/file1">
+  <file name="target/tutorial/mixed/file1/results/word/frequencies/results.xml"/>
+ </cTreeFiles>
+ <cTreeFiles cTree="target/tutorial/mixed/file2">
+  <file name="target/tutorial/mixed/file2/results/word/frequencies/results.xml"/>
+ </cTreeFiles>
+ <cTreeFiles cTree="target/tutorial/mixed/file3">
+  <file name="target/tutorial/mixed/file3/results/word/frequencies/results.xml"/>
+ </cTreeFiles>
+ <cTreeFiles cTree="target/tutorial/mixed/file4">
+  <file name="target/tutorial/mixed/file4/results/word/frequencies/results.xml"/>
+ </cTreeFiles>
+ <cTreeFiles cTree="target/tutorial/mixed/file5">
+  <file name="target/tutorial/mixed/file5/results/word/frequencies/results.xml"/>
+ </cTreeFiles>
+ <cTreeFiles cTree="target/tutorial/mixed/file6">
+  <file name="target/tutorial/mixed/file6/results/word/frequencies/results.xml"/>
+ </cTreeFiles>
+</cTreeFilesTree>

@@ -1,7 +1,8 @@
 package org.xmlcml.ami2.dictionary;
 
 import java.io.File;
-
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -74,11 +75,13 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	/** later these should be read in from args.xml ...
 	 * 
 	 */
-	protected static final File AMI_DIR = new File("src/main/resources/org/xmlcml/ami2/plugins/");
-	protected static final File GENE_DIR = new File(AMI_DIR, "gene");
-	protected static final File SYNBIO_DIR = new File(AMI_DIR, "synbio");
-	protected static final File SPECIES_DIR = new File(AMI_DIR, "species");
-	protected static final String UTF_8 = "UTF-8";
+	protected static final File AMI_DIR        = new File("src/main/resources/org/xmlcml/ami2/plugins/");
+	protected static final File DICTIONARY_DIR = new File(AMI_DIR, "dictionary");
+	protected static final File GENE_DIR       = new File(AMI_DIR, "gene");
+	protected static final File PLACES_DIR     = new File(AMI_DIR, "places");
+	protected static final File SPECIES_DIR    = new File(AMI_DIR, "species");
+	protected static final File SYNBIO_DIR     = new File(AMI_DIR, "synbio");
+	protected static final String UTF_8        = "UTF-8";
 	
 	protected Map<DictionaryTerm, String> namesByTerm;
 	protected InputStream inputStream;
@@ -109,7 +112,7 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 			return false;
 		} else {
 //			Set<DictionaryTerm> termSet = namesByTerm.keySet();
-			return rawTermSet.contains(string);
+			return (rawTermSet == null) ? false : rawTermSet.contains(string);
 		}
 	}
 
@@ -163,9 +166,21 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	/** stores entries in hashMap (term, name) and also creates BloomFilter.
 	 * 
 	 * @param file
+	 * @throws FileNotFoundException 
 	 */
-	protected void readDictionary(File file) {
-		dictionaryElement = XMLUtil.parseQuietlyToDocument(file).getRootElement();
+	protected void readDictionary(File file)  {
+		FileInputStream fis = null;
+		try {
+			fis = new FileInputStream(file);
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException("Cannot read dictionary file "+file);
+		}
+		readDictionary(fis);
+		return;
+	}
+
+	private void readDictionary(InputStream is) {
+		dictionaryElement = XMLUtil.parseQuietlyToDocument(is).getRootElement();
 		namesByTerm = new HashMap<DictionaryTerm, String>();
 		rawTermSet = new HashSet<String>();
 		dictionaryTermList = new ArrayList<DictionaryTerm>();
@@ -179,7 +194,6 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 			bloomFilter.put(term);
 			rawTermSet.add(term);
 		}
-		return;
 	}
 
 	public List<DictionaryTerm> getDictionaryTermList() {

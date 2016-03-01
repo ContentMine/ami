@@ -84,6 +84,11 @@ public class WordSetWrapper {
 	
 	private static Set<String> getStopwords(String stopwordsResource) {
 		Set<String> stopwords0 = new HashSet<String>();
+		if (!stopwordsResource.contains("/")) {
+			String packagex = WordSetWrapper.class.getPackage().toString().replaceAll("\\.", "/").replace("package ", "");
+			stopwordsResource = "/"+packagex+"/"+stopwordsResource;
+			LOG.trace(stopwordsResource);
+		}
 		InputStream stopwordsStream = AMIArgProcessor.class.getResourceAsStream(stopwordsResource);
 		if (stopwordsStream == null) {
 			LOG.debug("Cannot read stopword stream: "+stopwordsResource);

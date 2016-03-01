@@ -76,7 +76,9 @@ public class WordCollectionFactory {
 	void extractWords() {
 		List<String> words = createWordList();
 		if (words == null) {
-			LOG.warn("no words found to extract");
+			amiArgProcessor.TREE_LOG().warn("no words found to extract");
+			System.err.print("!");
+			return;
 		}
 		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
 		List<String> chosenMethods = wordArgProcessor.getChosenMethods();
@@ -85,11 +87,11 @@ public class WordCollectionFactory {
 			ResultsElement resultsElement = createWordLengthsResultsElement(words);
 			wordArgProcessor.addResultsElement(resultsElement);
 		}
-		if (chosenMethods.contains(WordArgProcessor.WORD_FREQUENCIES)) {
+		if (chosenMethods.contains(WordArgProcessor.WORD_FREQUENCIES) || chosenMethods.contains(WordArgProcessor.FREQUENCIES)) {
 			ResultsElement resultsElement = getWordFrequencies(words);
 			wordArgProcessor.addResultsElement(resultsElement);
 		}
-//		if (chosenMethods.contains(WordArgProcessor.WORD_SEARCH)) {
+//		if (chosenMethods.contains(WordArgProcessor.WORD_SEARCH) || chosenMethods.contains(WordArgProcessor.SEARCH)) {
 //			ResultsElement resultsElement = runSearch(words);
 //			wordArgProcessor.addResultsElement(resultsElement);
 //		}
@@ -104,7 +106,9 @@ public class WordCollectionFactory {
 			} else if (currentCTree.hasFulltextPDFTXT()) {
 				rawWords = currentCTree.extractWordsFromPDFTXT();
 			} else {
-				LOG.warn("No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory());
+				String msg = "No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory();
+				amiArgProcessor.TREE_LOG().warn(msg);
+				System.err.print("!");
 			}
 		}
 		return createTransformedWords(rawWords);

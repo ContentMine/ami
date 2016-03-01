@@ -35,7 +35,8 @@ The `[xyz]` construct is common and means either x or y or z. Here it means "a" 
   <regex fields="random">[Rr]andom~</regex>
 ```
 A combination of `Random` and `random` followed by an optional suffix.
-</compoundRegex>...
+```
+</compoundRegex>
 ```
 Regexes can get very complex and unreadable, and they are also modified by the system so you are well advised to start with exact words, test wherever possible and only add new constructs when necessary. If you aren't sure, put in all the optionas explicitly , e.g. :
 ```
