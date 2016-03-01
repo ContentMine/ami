@@ -133,9 +133,13 @@ public class AMISearcher extends AbstractSearcher {
 		} else {
 			for (ResultElement resultElement : resultsElementToAdd) {
 				resultElement.detach();
-				String xpath = new XPathGenerator(elementToSearch).getXPath();
+				LOG.trace(">>> "+resultElement.toXML());
+				XPathGenerator xPathGenerator = new XPathGenerator(elementToSearch);
+				xPathGenerator.setShort(true);
+				String xpath = xPathGenerator.getXPath();
 				resultsElement.setXPath(xpath);
 				resultsElement.appendChild(resultElement);
+				LOG.trace("XPATH added "+resultsElement.toXML());
 			}
 		}
 	}

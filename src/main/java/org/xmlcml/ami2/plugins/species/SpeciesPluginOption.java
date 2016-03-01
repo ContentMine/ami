@@ -9,7 +9,7 @@ import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public class SpeciesPluginOption extends PluginOption {
 
-	public static final String SPECIES = "species";
+	public static final String TAG = "species";
 	private static final Logger LOG = Logger.getLogger(SpeciesPluginOption.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -17,7 +17,7 @@ public class SpeciesPluginOption extends PluginOption {
 	
 	
 	public SpeciesPluginOption(List<String> options, List<String> flags) {
-		super(SPECIES, options, flags);
+		super(TAG, options, flags);
 	}
 
 	public void run() {

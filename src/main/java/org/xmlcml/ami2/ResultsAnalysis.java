@@ -3,6 +3,7 @@ package org.xmlcml.ami2;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -15,6 +16,7 @@ import java.util.Set;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.cmine.files.CProject;
 import org.xmlcml.cmine.files.PluginOption;
 import org.xmlcml.cmine.files.ProjectSnippetsTree;
 import org.xmlcml.cmine.files.ResultElement;
@@ -22,8 +24,12 @@ import org.xmlcml.cmine.files.SnippetsTree;
 import org.xmlcml.cmine.files.XMLSnippets;
 import org.xmlcml.cmine.util.CMineUtil;
 import org.xmlcml.cmine.util.CellCalculator;
-import org.xmlcml.cmine.util.DataTablesTool;
 import org.xmlcml.cmine.util.CellRenderer;
+import org.xmlcml.cmine.util.DataTablesTool;
+import org.xmlcml.html.HtmlBr;
+import org.xmlcml.html.HtmlDiv;
+import org.xmlcml.html.HtmlElement;
+import org.xmlcml.html.HtmlSpan;
 import org.xmlcml.html.HtmlTable;
 import org.xmlcml.html.HtmlTd;
 import org.xmlcml.html.HtmlTr;
@@ -38,45 +44,75 @@ import nu.xom.Element;
 public class ResultsAnalysis implements CellCalculator {
 
 	private static final Logger LOG = Logger.getLogger(ResultsAnalysis.class);
+
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	public static final String COMMONEST = "commonest";
-	public static final String COUNT = "count";
-	public static final String ENTRIES = "entries";
+	public enum CellType {
+		COMMONEST("commonest"),
+		COUNT("count"),
+		ENTRIES("entries"),
+		FULL("full");
+		String type;
+		private CellType(String type) {
+			this.type = type;
+		}
+		public String toString() {
+			return type;
+		}
+	}
+	
+	public static final String SCHOLARLY_HTML = "/scholarly.html";
+	protected static final String SNIPPETS_XML = "snippets.xml";
+	static List<CellType> CELL_TYPES = 
+		Arrays.asList(new CellType[]{CellType.COMMONEST, CellType.COUNT, CellType.ENTRIES, CellType.FULL});
 	
 	public Map<String, ProjectSnippetsTree> projectSnippetsTreeByPluginOption;
 	private Set<String> cTreeNameSet;
 	public List<String> cTreeNameList;
 	public List<String> pluginOptionList;
 	private DataTablesTool dataTablesTool;
-	private String link0;
-	private String link1;
 	private String rowHeadingName;
 
-	private List<String> cellContentFlags;
+	@Deprecated
+	private List<CellType> cellContentFlags;
+	private CellType cellContentFlag;
 	
 	public ResultsAnalysis() {
 	}
 		
 	public ResultsAnalysis(DataTablesTool dataTablesTool) {
 		this.dataTablesTool = dataTablesTool;
+		dataTablesTool.setCellCalculator(this);
 	}
 	
-	public void addSnippetsFile(File xmlFile) throws FileNotFoundException {
-		Element element = XMLUtil.parseQuietlyToDocument(new FileInputStream(xmlFile)).getRootElement();
+	public void addSnippetsFile(File xmlFile) {
+		
+		if (xmlFile == null) {
+			LOG.error("Null XML file");
+			return;
+		}
+		Element element = null;
+		try {
+			element = XMLUtil.parseQuietlyToDocument(new FileInputStream(xmlFile)).getRootElement();
+		} catch (FileNotFoundException e) {
+			LOG.error("Non-existent XML file: "+xmlFile);
+			return;
+		}
 		ProjectSnippetsTree projectSnippetsTree = ProjectSnippetsTree.createProjectSnippetsTree(element);
 		if (projectSnippetsTree == null) {
-			throw new RuntimeException("Cannot create ProjectSnippetsTree: "+xmlFile);
+			LOG.warn("Cannot create ProjectSnippetsTree: "+xmlFile);
+			return;
 		}
 		ensureProjectSnippetsTreeByPluginOption();
 		PluginOption pluginOption = projectSnippetsTree.getPluginOption();
 		if (pluginOption == null) {
-			throw new RuntimeException("Null pluginOption");
+			LOG.warn("Null pluginOption");
+			return;
 		}
 		if (projectSnippetsTreeByPluginOption.containsKey(pluginOption)) {
-			throw new RuntimeException("Already has pluginOption: "+pluginOption);
+			LOG.warn("Already has pluginOption: "+pluginOption);
 		}
 		projectSnippetsTreeByPluginOption.put(pluginOption.toString(), projectSnippetsTree);
 	}
@@ -109,31 +145,74 @@ public class ResultsAnalysis implements CellCalculator {
 		return cTreeNameList;
 	}
 
-	public String createSnippetsTreeContents(SnippetsTree snippetsTree) {
-		String ss = "";
+	public HtmlElement createSnippetsTreeContents(SnippetsTree snippetsTree) {
+		HtmlElement htmlElement = null;
 		List<XMLSnippets> list = snippetsTree.getOrCreateSnippetsList();
 		List<String> terms = createTerms(list);
-		Multiset<String> multiset = HashMultiset.create();
-		multiset.addAll(terms);
-		LOG.trace(multiset);
+		Multiset<String> multiset = createMultisetOmittingNullEntries(terms);
 		Iterable<Multiset.Entry<String>> entrys = CMineUtil.getEntriesSortedByCount(multiset);
 		Iterator<Entry<String>> iterator = entrys.iterator();
-		if (cellContentFlags == null) {
-			ss = entrys.toString();
-			ss = ss.substring(1, Math.min(50, ss.length()));
-			ss = terms.size()+": "+ss;
-		} else if (cellContentFlags.contains(COMMONEST)) {
-			if (iterator.hasNext()) {
-				ss += iterator.next().getElement();
+		if (cellContentFlag == null) {
+			LOG.warn("no cell content flag");
+		} else if (cellContentFlag.equals(CellType.FULL)) {
+			htmlElement = new HtmlDiv();
+			htmlElement.setTitle(String.valueOf(terms.size()));
+			int maxCount = 4;
+			for (Entry<String> entry : entrys) {
+				HtmlElement td = createSpan(entry);
+				htmlElement.appendChild(td);
+				if (maxCount-- <= 0) {
+					break;
+				}
+				htmlElement.appendChild(new HtmlBr());
 			}
-		} else if (cellContentFlags.contains(COUNT)) {
-			ss = String.valueOf(multiset.size());
-		} else if (cellContentFlags.contains(ENTRIES)) {
-			ss = String.valueOf(multiset.entrySet().size());
+		} else if (cellContentFlag.equals(CellType.COMMONEST)) {
+			if (iterator.hasNext()) {
+				Entry<String> entry = iterator.next();
+				htmlElement = createSpan(entry);
+			}
+		} else if (cellContentFlag.equals(CellType.COUNT)) {
+			htmlElement = createSpan(multiset.size());
+		} else if (cellContentFlag.equals(CellType.ENTRIES)) {
+			htmlElement = createSpan(multiset.entrySet().size());
 		} else {
-			LOG.warn("Unknown flags: "+cellContentFlags);
+			LOG.warn("Unknown flag: "+cellContentFlag);
 		}
-		return ss;
+		return htmlElement;
+	}
+
+	private Multiset<String> createMultisetOmittingNullEntries(List<String> terms) {
+		Multiset<String> multiset = HashMultiset.create();
+		LOG.debug(terms);
+		for (String term : terms) {
+			if (term == null) {
+				term = "NULL";
+			}
+			multiset.add(term);
+		}
+//		multiset.addAll(terms);
+		LOG.debug(multiset);
+		return multiset;
+	}
+
+	private HtmlElement createSpan(int size) {
+		HtmlElement htmlElement;
+		String ss = String.valueOf(size);
+		htmlElement = new HtmlSpan();
+		htmlElement.appendChild(ss);
+		return htmlElement;
+	}
+
+	private HtmlElement createSpan(Entry<String> entry) {
+		HtmlElement htmlSpan = new HtmlSpan();
+		if (entry.getCount() == 1) {
+			// omit the "1" count
+			htmlSpan.appendChild(entry.getElement().toString());
+		} else {
+			// add the count
+			htmlSpan.appendChild(entry.toString());
+		}
+		return htmlSpan;
 	}
 
 	private List<String> createTerms(List<XMLSnippets> list) {
@@ -149,6 +228,7 @@ public class ResultsAnalysis implements CellCalculator {
 	}
 
 	public HtmlTable makeHtmlDataTable() {
+		ensureProjectSnippetsTreeByPluginOption();
 		Set<String> set = this.projectSnippetsTreeByPluginOption.keySet();
 		pluginOptionList = Arrays.asList(set.toArray(new String[0]));
 		Collections.sort(this.pluginOptionList);
@@ -168,22 +248,24 @@ public class ResultsAnalysis implements CellCalculator {
 		return htmlTable;
 	}
 
-	public CellCalculator setLink0(String link0) {
-		this.link0 = link0;
+	public CellCalculator setLocalLink0(String link0) {
+		dataTablesTool.setLocalLink0(link0);
 		return this;
 	}
 
-	public String getLink0() {
-		return link0;
-	}
-
-	public CellCalculator setLink1(String link1) {
-		this.link1 = link1;
+	public CellCalculator setLocalLink1(String link1) {
+		dataTablesTool.setLocalLink1(link1);
 		return this;
 	}
 
-	public String getLink1() {
-		return link1;
+	public CellCalculator setRemoteLink0(String link0) {
+		dataTablesTool.setRemoteLink0(link0);
+		return this;
+	}
+
+	public CellCalculator setRemoteLink1(String link1) {
+		dataTablesTool.setRemoteLink1(link1);
+		return this;
 	}
 
 	public ResultsAnalysis setRowHeadingName(String rowHeadingName) {
@@ -201,10 +283,11 @@ public class ResultsAnalysis implements CellCalculator {
 
 	public void addCellValues(List<CellRenderer> columnHeadingList, HtmlTr htmlTr, int iRow) {
 		for (int iCol = 0; iCol < columnHeadingList.size(); iCol++) {
-			String ss = createCellContents(iRow, iCol);
-			ss = (ss == null) ? "" : ss;
-			HtmlTd htmlTd = new HtmlTd();
-			htmlTd.appendChild(ss);
+			HtmlElement htmlElement = createCellContents(iRow, iCol);
+			HtmlElement htmlTd = new HtmlTd();
+			if (htmlElement != null) {
+				htmlTd.appendChild(htmlElement);
+			}
 			htmlTr.appendChild(htmlTd);
 		}
 	}
@@ -217,23 +300,42 @@ public class ResultsAnalysis implements CellCalculator {
 		return cTreeNameList;
 	}
 
-	public String createCellContents(int iRow, int iCol) {
+	public HtmlElement createCellContents(int iRow, int iCol) {
 		String columnHeadingx = getColumnHeadingList().get(iCol);
 		ProjectSnippetsTree projectSnippetsTree = this.projectSnippetsTreeByPluginOption.get(columnHeadingx);
 		String rowHeading = getRowHeadingList().get(iRow);
 		SnippetsTree snippetsTree = projectSnippetsTree.getOrCreateSnippetsTreeByCTreeName().get(rowHeading);
-		String contents =  (snippetsTree == null) ? null : this.createSnippetsTreeContents(snippetsTree);
+		HtmlElement contents =  (snippetsTree == null) ? null : this.createSnippetsTreeContents(snippetsTree);
 		return contents;
 	}
 
-	public void setCellContentFlags(String flagString) {
-		cellContentFlags = Arrays.asList(flagString.split("\\s+"));
+	public void setCellContentFlags(List<CellType> flags) {
+		cellContentFlags = flags;
 	}
 
+	public void setCellContentFlag(CellType flag) {
+		cellContentFlag = flag;
+	}
 
-
-
-
-
+	public void addDefaultSnippets(File projectDir) {
+		File[] snippetsFiles = projectDir.listFiles(new FilenameFilter() {
+			
+			public boolean accept(File dir, String name) {
+				return name != null && name.endsWith(SNIPPETS_XML);
+			}
+		});
+		if (snippetsFiles != null) {
+			for (File file : snippetsFiles) {
+				this.addSnippetsFile(file);
+			}
+		}
+				
+//		this.addSnippetsFile(new File(projectDir, CProject.REGEX_STATISTICS_SNIPPETS_XML));
+//		this.addSnippetsFile(new File(projectDir, CProject.SEQUENCE_DNAPRIMER_SNIPPETS_XML));
+//		this.addSnippetsFile(new File(projectDir, CProject.GENE_HUMAN_SNIPPETS_XML));
+//		this.addSnippetsFile(new File(projectDir, CProject.SPECIES_BINOMIAL_SNIPPETS_XML));
+//		this.addSnippetsFile(new File(projectDir, CProject.SPECIES_GENUS_SNIPPETS_XML));
+//		this.addSnippetsFile(new File(projectDir, CProject.WORD_FREQUENCIES_SNIPPETS_XML));
+	}
 	
 }

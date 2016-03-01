@@ -11,6 +11,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.jsoup.helper.StringUtil;
 import org.xmlcml.ami2.plugins.gene.GenePluginOption;
+import org.xmlcml.ami2.plugins.regex.RegexPluginOption;
 import org.xmlcml.ami2.plugins.sequence.SequencePluginOption;
 import org.xmlcml.ami2.plugins.species.SpeciesPluginOption;
 import org.xmlcml.ami2.plugins.word.WordPluginOption;
@@ -18,6 +19,9 @@ import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public abstract class PluginOption {
 
+	private static final String WORD = "word";
+	private static final String SPECIES = "species";
+	private static final String SEQUENCE = "sequence";
 	private static final Logger LOG = Logger.getLogger(PluginOption.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -59,13 +63,15 @@ public abstract class PluginOption {
 		
 		PluginOption pluginOption = null;
 		if (false) {
-		} else if (command.equals("gene")) {
+		} else if (command.equals(GenePluginOption.TAG)) {
 			pluginOption = new GenePluginOption(options,flags);
-		} else if (command.equals("sequence")) {
+		} else if (command.equals(RegexPluginOption.TAG)) {
+			pluginOption = new RegexPluginOption(options,flags); 
+		} else if (command.equals(SequencePluginOption.TAG)) {
 			pluginOption = new SequencePluginOption(options,flags); 
-		} else if (command.equals("species")) {
+		} else if (command.equals(SpeciesPluginOption.TAG)) {
 			pluginOption = new SpeciesPluginOption(options,flags);
-		} else if (command.equals("word")) {
+		} else if (command.equals(WordPluginOption.TAG)) {
 			pluginOption = new WordPluginOption(options,flags);
 		} else {
 			LOG.error("unknown command: "+command);
@@ -99,7 +105,7 @@ public abstract class PluginOption {
 	
 	private void runFilterResultsXMLOptions(String option) {
 		String filterCommandString = createFilterCommandString(option);
-		LOG.debug("filter: "+filterCommandString);
+		System.out.println("filter: "+filterCommandString);
 		new DefaultArgProcessor(filterCommandString).runAndOutput();
 	}
 
@@ -108,7 +114,7 @@ public abstract class PluginOption {
 		String xpathFlags = createXpathQualifier();
 		cmd += " --filter file(**/"+getPlugin(plugin)+"/"+getOption(option)+"/results.xml)xpath("+resultXPathBase+xpathFlags+") ";
 		cmd += " -o "+createSnippetsFilename(option)+"  ";
-		LOG.debug("runFilterResultsXMLOptions: >>>> "+cmd);
+		System.out.println("runFilterResultsXMLOptions: "+cmd);
 		return cmd;
 	}
 
@@ -153,11 +159,17 @@ public abstract class PluginOption {
 	}
 
 	protected void runMatchSummaryAndCount(String option) {
-		String cmd = "--project "+projectDir+" -i "+createSnippetsFilename(option)+"  "
-				+ "--xpath //result/"+resultXPathAttribute+" --summaryfile "+createCountFilename(option);
-		LOG.debug("runMatchSummaryAndCount: "+cmd);
+		String cmd = "--project "+projectDir
+				+ " -i "+createSnippetsFilename(option)
+				+ " --xpath //result/"+resultXPathAttribute
+				+ " --summaryfile "+createCountFilename(option)
+				+ " --dffile "+createDocumentCountFilename(option)
+				;
+		System.out.println("runMatchSummaryAndCount: "+cmd);
 		new DefaultArgProcessor(cmd).runAndOutput();
 	}
+	
+
 
 	// analyze optionSnippets
 	public void runSummaryAndCountOptions() {
@@ -176,6 +188,10 @@ public abstract class PluginOption {
 
 	protected String createCountFilename(String option) {
 		return plugin+"."+getOption(option)+".count.xml";
+	}
+	
+	protected String createDocumentCountFilename(String option) {
+		return plugin+"."+getOption(option)+".documents.xml";
 	}
 	
 	protected String getOption(String option) {

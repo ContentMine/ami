@@ -2,11 +2,14 @@ package org.xmlcml.ami2;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.xmlcml.ami2.ResultsAnalysis.CellType;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.CommandProcessor;
 import org.xmlcml.ami2.plugins.gene.GeneArgProcessor;
@@ -16,9 +19,15 @@ import org.xmlcml.ami2.plugins.sequence.SequenceArgProcessor;
 import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.files.CProject;
 import org.xmlcml.cmine.util.CMineTestFixtures;
+import org.xmlcml.cmine.util.DataTablesTool;
+import org.xmlcml.html.HtmlHtml;
+import org.xmlcml.html.HtmlTable;
 import org.xmlcml.norma.Norma;
+import org.xmlcml.xml.XMLUtil;
 
+@Ignore
 public class TutorialTest {
 
 	;
@@ -336,7 +345,6 @@ public class TutorialTest {
 //		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, "zika");
 //		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
 //		CommandProcessor commandProcessor = new CommandProcessor(rawDir);
-//		commandProcessor.runNormaIfNecessary();
 //
 //		/** run AMI-species to create results.xml as normal in ${ctree}/results/species/binomial/results.xml
 //		 */ 
@@ -373,13 +381,6 @@ public class TutorialTest {
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
-
-		// make sure the scholarly.html exists
-		if (!new File(AMIFixtures.TEST_AMI_DIR, "PMC2570833/scholarly.html").exists()) {
-			String args = "-i fulltext.xml -o scholarly.html --transform nlm2html --project "+rawDir;
-			new Norma().run(args);
-		}
-
 		
 		
 		
@@ -397,6 +398,48 @@ public class TutorialTest {
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
 		commandProcessor.runCommands(cmd);
 
+	}
+	
+	@Test
+	public void testCommandProcessor() throws IOException {
+		String project = "zika";
+		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
+		File projectDir = new File("target/tutorial/zika");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.runCommands(""
+				+ "species(binomial,genus) "
+				+ " gene(human)"
+				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
+				+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml"
+				+ " word(search)w.search:/org/xmlcml/ami2/plugins/places/wikiplaces.xml"
+				+ " sequence(dnaprimer) ");
+	}
+
+	
+	private void runDefault(String project) throws IOException {
+		File rawDir = new File("../projects/"+project);
+		File projectDir = new File("target/tutorial/"+project+"/");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.runCommands(""
+				+ "species(binomial,genus) "
+				+ " gene(human)"
+				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
+				+ " sequence(dnaprimer) ");
+		DataTablesTool dataTablesTool = new DataTablesTool();
+		dataTablesTool.setTitle(project);
+		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
+		resultsAnalysis.addDefaultSnippets(projectDir);
+		resultsAnalysis.setRowHeadingName("EPMCID");
+		for (CellType cellType : ResultsAnalysis.CELL_TYPES) {
+			resultsAnalysis.setCellContentFlag(cellType);
+			HtmlTable table = resultsAnalysis.makeHtmlDataTable();
+			HtmlHtml html = dataTablesTool.createHtmlWithDataTable(table);
+			File outfile = new File(projectDir, cellType.toString()+"."+CProject.DATA_TABLES_HTML);
+			XMLUtil.debug(html, outfile, 1);
+		}
 	}
 
 	/** for cleaning XSLT

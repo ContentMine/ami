@@ -47,7 +47,9 @@ public class GeneArgProcessorTest {
 		argProcessor.parseArgs(cmd);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
-				"<results title=\"human\"><result pre=\"the hepatocyte nuclear factor 4α ( \" exact=\"HNF4A\" post=\") gene, a well-known diabetes candidate gene not p\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][4]\""
+				"<results title=\"human\"><result pre=\"the hepatocyte nuclear factor 4α"
+				+ " ( \" exact=\"HNF4A\" post=\") gene, a well-known diabetes candidate gene not"
+				+ " p\" xpath=\"/html[1]/body[1]/div[1]/div[7]/p[4]\""
 				);
 	}
 
@@ -61,7 +63,9 @@ public class GeneArgProcessorTest {
 		GeneArgProcessor argProcessor = new GeneArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
-				"<results title=\"hgnc\"><result pre=\"Theodore Columbus OH US Agents Agent: [addressbook]: Patterson &amp;amp; Sheridan,\" exact=\"LLP\" post=\"unknown Assignees Assignee: [addressbook]: Fater S.p.A. 03 Pescara IT\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local"
+				"<results title=\"hgnc\"><result pre=\"Theodore Columbus OH US Agents Agent: [addressbook]:"
+				+ " Patterson &amp;amp; Sheridan,\" exact=\"LLP\" post=\"unknown Assignees Assignee: [addressbook]:"
+				+ " Fater S.p.A. 03 Pescara IT\" xpath=\"/html[1]/body[1]/div[1]/"
 				);
 
 	}
@@ -97,7 +101,9 @@ public class GeneArgProcessorTest {
 		AMIArgProcessor argProcessor = new GeneArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
-				"<results title=\"human\"><result pre=\"This is \" exact=\"BRCA1\" post=\" and BRCA2, not FOOBAR.\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='p'][3]\" name=\"human\" /><result pre=\"This is BRCA1 and \" exact=\"BRCA2\" post=\", not FOOBAR.\" xpath=\"/*[local-name()='html'][1]/*[local-"
+				"<results title=\"human\"><result pre=\"This is \" exact=\"BRCA1\" post=\" and"
+				+ " BRCA2, not FOOBAR.\" xpath=\"/html[1]/body[1]/p[3]\" name=\"human\" /><result"
+				+ " pre=\"This is BRCA1 and \" exact=\"BRCA2\" post=\", not FOOBAR.\" xpath=\"/html[1]/"
 				);
 	}
 

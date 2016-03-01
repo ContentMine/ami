@@ -60,7 +60,7 @@ public class RRIDTest {
 				"<results title=\"rrid.ab\">"
 				+ "<result pre=\" receptor α2 (catalog #600-401-D45 \" exact=\"RRID:AB_11182018\" "
 				+ "post=\"; Rockland Immunochemicals), α5 (catalog #AB9678 R\" "
-				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][3]/*[local-name()='div'][3]/*[local");
+				+ "xpath=\"/html[1]/body[1]/div[1]/div[3]/div[3]/");
 	    Assert.assertTrue("exists", rridDir.exists());
 	    File resultsXml = new File(rridDir, "q4415/results/identifier/rrid.ab/results.xml");
 	    Assert.assertTrue("results", resultsXml.exists());

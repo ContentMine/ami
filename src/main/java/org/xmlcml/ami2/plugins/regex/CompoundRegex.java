@@ -3,11 +3,12 @@ package org.xmlcml.ami2.plugins.regex;
 import java.util.ArrayList;
 import java.util.List;
 
-import nu.xom.Element;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+
+import nu.xom.Attribute;
+import nu.xom.Element;
 
 /** Container for many smaller regexes.
  * 
@@ -32,12 +33,18 @@ public class CompoundRegex {
 	private static final String TITLE = "title";
 	
 	private List<RegexComponent> regexComponentList;
-	private Element root;
+	private Element compoundRegexElement;
 	private String title;
 	private AMIArgProcessor regexArgProcessor;
 
+	public CompoundRegex(String title) {
+		this.title = title;
+		getOrCreateCompoundRegexElement();
+		compoundRegexElement.addAttribute(new Attribute(TITLE, title));
+	}
+	
 	public CompoundRegex(AMIArgProcessor regexArgProcessor, Element rootElement) {
-		this.root = rootElement;
+		this.compoundRegexElement = rootElement;
 		this.regexArgProcessor = regexArgProcessor;
 		this.title = rootElement.getAttributeValue(TITLE);
 	}
@@ -70,7 +77,7 @@ public class CompoundRegex {
 	public List<RegexComponent> getOrCreateRegexComponentList() {
 		if (regexComponentList == null) {
 			regexComponentList = new ArrayList<RegexComponent>();
-			if (COMPOUND_REGEX.equals(root.getLocalName())) {
+			if (COMPOUND_REGEX.equals(compoundRegexElement.getLocalName())) {
 				createRegexElementsAndAddToThis();
 			} else {
 				throw new RuntimeException("regex file does not have root: "+COMPOUND_REGEX);
@@ -80,8 +87,8 @@ public class CompoundRegex {
 	}
 
 	private void createRegexElementsAndAddToThis() {
-		for (int i = 0; i < root.getChildElements().size(); i++) {
-			Element regexElement = root.getChildElements().get(i);
+		for (int i = 0; i < compoundRegexElement.getChildElements().size(); i++) {
+			Element regexElement = compoundRegexElement.getChildElements().get(i);
 			RegexComponent regexComponent = this.createRegexComponent(regexArgProcessor, regexElement);
 			if (regexComponent != null) {
 				regexComponentList.add(regexComponent);
@@ -130,6 +137,13 @@ public class CompoundRegex {
 			regexComponent.expandAddDefaultsAndVerifyRegex();
 		}
 		return regexComponent;
+	}
+
+	public Element getOrCreateCompoundRegexElement() {
+		if (this.compoundRegexElement == null) {
+			this.compoundRegexElement = new Element(COMPOUND_REGEX);
+		}
+		return compoundRegexElement;
 	}
 
 

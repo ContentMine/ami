@@ -14,12 +14,12 @@ public class WordPluginOption extends PluginOption {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	public static final String WORD = "word";
+	public static final String TAG = "word";
 	private String searchDictionary;
 	private String dictionary;
 
 	public WordPluginOption(List<String> options, List<String> flags) {
-		super(WORD, options, flags);
+		super(TAG, options, flags);
 	}
 
 	protected void run() {
@@ -33,7 +33,7 @@ public class WordPluginOption extends PluginOption {
 			plugin = "search";
 			dictionary = getOption(null);
 		}
-		LOG.debug(">>>>>>>"+commandString);
+		LOG.debug("WORD "+commandString);
 		new WordArgProcessor(commandString.toString()).runAndOutput();
 	}
 
@@ -74,7 +74,5 @@ public class WordPluginOption extends PluginOption {
 			new DefaultArgProcessor(cmd).runAndOutput();
 		}
 	}
-
-
 
 }

@@ -35,7 +35,7 @@ public class IdentifierArgProcessorTest {
 		IdentifierArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(identifierArgProcessor, 3, 0, 
-				"<results title=\"bio.ena\"><result pre=\"ecies. (GenBank accession numbers; \" exact=\"GQ906358\" post=\", NR102976 and KC954171), 3 Arcobacter species (NR\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][4]/*[local-name()="
+				"<results title=\"bio.ena\"><result pre=\"ecies. (GenBank accession numbers; \" exact=\"GQ906358\" post=\", NR102976 and KC954171), 3 Arcobacter species (NR\" xpath=\"/html[1]/body[1]/div[1]/div[6]/div[4]/"
 				);
 		AMIFixtures.checkResultsElementList(identifierArgProcessor, 3, 1, 
 				"<results title=\"bio.pdb\" />"
@@ -101,7 +101,7 @@ public class IdentifierArgProcessorTest {
 		IdentifierArgProcessor identifierArgProcessor = new IdentifierArgProcessor(args);
 		identifierArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(identifierArgProcessor, 1, 0, 
-				"<results title=\"bio.ena\"><result pre=\"ecies. (GenBank accession numbers; \" exact=\"GQ906358\" post=\", NR102976 and KC954171), 3 Arcobacter species (NR\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][4]/*[local-name()="
+				"<results title=\"bio.ena\"><result pre=\"ecies. (GenBank accession numbers; \" exact=\"GQ906358\" post=\", NR102976 and KC954171), 3 Arcobacter species (NR\" xpath=\"/html[1]/body[1]/div[1]/div[6]/div[4]/"
 				);
 
 	}

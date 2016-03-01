@@ -32,6 +32,7 @@ public class CommandProcessor {
 
 	private List<PluginOption> pluginOptions;
 	private File projectDir = null;
+	private List<String> cmdList = new ArrayList<String>();
 	
 	private CommandProcessor() {
 		
@@ -70,11 +71,11 @@ public class CommandProcessor {
 	public void runCommands() {
 		runNormaIfNecessary();
 		for (PluginOption pluginOption : pluginOptions) {
-			LOG.debug("running: "+pluginOption);
+			System.out.println("running: "+pluginOption);
 			pluginOption.run();
-			LOG.debug("filter: "+pluginOption);
+			System.out.println("filter: "+pluginOption);
 			pluginOption.runFilterResultsXMLOptions();
-			LOG.debug("summary: "+pluginOption);
+			System.out.println("summary: "+pluginOption);
 			pluginOption.runSummaryAndCountOptions(); 
 		}
 		LOG.trace(pluginOptions);
@@ -86,6 +87,36 @@ public class CommandProcessor {
 			LOG.debug("running NORMA "+args);
 			new Norma().run(args);
 		}
+	}
+
+	public void addCommand(String cmd) {
+		cmdList.add(cmd);
+	}
+
+	public void setDefaultCommands(String cmds) {
+		setDefaultCommands(cmds.split("\\s+"));
+	}
+
+	public void setDefaultCommands(String[] cmds) {
+		String commands = "";
+		boolean start = true;
+		for (String cmd : cmds) {
+			String command = lookup(cmd);
+			if (command == null) {
+				LOG.warn("abbreviation ignored: "+cmd);
+				continue;
+			}
+			if (!start) {
+				commands += " ";
+			}
+			start = false;
+			commands += command;
+		}
+		this.runCommands(commands);
+	}
+
+	private String lookup(String cmd) {
+		return null;
 	}
 
 }

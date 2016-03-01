@@ -1,6 +1,8 @@
 package org.xmlcml.ami2.plugins.regex;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
@@ -165,7 +167,7 @@ public class RegexPluginTest {
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
 				"<results title=\"consort0\"><result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" "
 				+ "post=\"based on exclusion of a specific cause o\" "
-				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][16]/*[local-name()='div'][2]/*[local-name()='div'][9]/*[local-name()"
+				+ "xpath=\"/html[1]/body[1]/div[16]/div[2]/div[9]"
 				);
 
 	}
@@ -178,12 +180,12 @@ public class RegexPluginTest {
 		RegexArgProcessor argProcessor = new RegexArgProcessor(cmd);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
-				"<results title=\"consort0\"><result pre=\"ety  3 . Approximately 90% of patients with LBP are labelled as having non-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause or pathology  4 . A wide range of health interventions for p\" xpath=\"/*[local-n");
+				"<results title=\"consort0\"><result pre=\"ety  3 . Approximately 90% of patients with LBP are labelled as having non-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause or pathology  4 . A wide range of health interventions for p\" xpath=\"/html[1]/b");
 		
 		File resultsFile = new File("target/consort0/15_1_511_test/results/regex/consort0/results.xml");
 		Assert.assertEquals("results without xpath", 8,  
 				XMLUtil.getQueryElements(XMLUtil.parseQuietlyToDocument(resultsFile).getRootElement(), 
-						"//*[local-name()='result']").size());
+						"//result").size());
 		cmd = "-q target/consort0/15_1_511_test/ -i scholarly.html --xpath //*[@tagx='title']/* --r.regex regex/consort0.xml";
 		argProcessor = new RegexArgProcessor(cmd);
 		argProcessor.runAndOutput();
@@ -191,16 +193,16 @@ public class RegexPluginTest {
 				"<results title=\"consort0\">"
 				+ "<result pre=\"r pattern of improvement following a wide range of primary care treatments: a systematic review of \" "
 				+ "name0=\"random\" value0=\"randomized\" post=\"clinical trials \" "
-				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][16]/*[local-name()="
+				+ "xpath=\"/html[1]/body[1]/div[16]/"
 				);
 		resultsFile = new File("target/consort0/15_1_511_test/results/regex/consort0/results.xml");
 		Assert.assertEquals("results with xpath", 2,  
 				XMLUtil.getQueryElements(XMLUtil.parseQuietlyToDocument(resultsFile).getRootElement(), 
-						"//*[local-name()='result']").size());
+						"//result").size());
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
 				"<results title=\"consort0\"><result pre=\"r pattern of improvement following a wide range "
 				+ "of primary care treatments: a systematic review of \" name0=\"random\" value0=\"randomized\" "
-				+ "post=\"clinical trials \" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][16]/*[local-name()=");
+				+ "post=\"clinical trials \" xpath=\"/html[1]/body[1]/div[16]/");
 
 
 	}
@@ -208,13 +210,13 @@ public class RegexPluginTest {
 
 	@Test
 	// TESTED 2016-01-12
-	public void testRegexPluginExtractNumbers() throws IOException {
+	public void testRegexPluginConsort0() throws IOException {
 		String args = "-q target/bmc/regex/15_1_511_test -i scholarly.html -o results.xml --context 25 40 "
 				+ "--r.regex regex/consort0.xml";
 		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
-				"<results title=\"consort0\"><result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][16]/*[local-name()='div'][2]/*[local-name()='div'][9]/*[local-name()"
+				"<results title=\"consort0\"><result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" xpath=\"/html[1]/body[1]/div[16]/div[2]/div[9]/"
 				);
 	}
 	
@@ -232,5 +234,91 @@ public class RegexPluginTest {
 
 	}
 	
+	@Test
+	public void testBracketRegex0() throws IOException {
+//String testXML = "<p> the study ( N = 300 ) was conducted p &lt; 0.01 and more</p>";
+		String testXML = "<div>"
+				+ "<p> LINE 1 Several matches with Q = 300 and  n = 123 and the study n = 250 was conducted </p>"
+				+ "</div>";
+		File test = new File("target/regex/brackets0/scholarly.html");
+		FileUtils.write(test, testXML);
+		Assert.assertTrue("test exists", test.exists());
+		String args = "-q target/regex/brackets0/ -i scholarly.html -o results.xml  --r.regex regex/statistics.xml";
+		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
+		argProcessor.runAndOutput();
+	}
+	@Test
+	public void testBracketRegex() throws IOException {
+//String testXML = "<p> the study ( N = 300 ) was conducted p &lt; 0.01 and more</p>";
+		String testXML = "<div>"
+				+ "<p> LINE 1 Several matches with Q = 300 and  n = 123 and the study n = 250 was conducted </p>"
+				+ "<p> LINE 2 try p &lt; 0.01 a match if we get the regex right</p>"
+				+ "<p> LINE 3 another match Q = 123 complete </p>"
+				+ "<p> LINE 4 this a match Q = 23 to test </p>"
+				+ "<p> LINE 5 this is another nonmatching </p>"
+				+ "</div>";
+		File test = new File("target/regex/brackets/scholarly.html");
+		FileUtils.write(test, testXML);
+		Assert.assertTrue("test exists", test.exists());
+		String args = "-q target/regex/brackets/ -i scholarly.html -o results.xml  --r.regex regex/statistics.xml";
+		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
+		argProcessor.runAndOutput();
+	}
+	
+	@Test
+	public void testExtractFields() throws IOException {
+		File targetDir = new File("target/regex/brackets/");
+		createTestDocument(targetDir, 				
+				"<div>"
+				+ "<p> PARA 1 Several matches with Q = 300 and  n = 123 and the study n = 250 was conducted </p>"
+				+ "</div>"
+				);
+		File regexFile = createRegexFile(targetDir, "testme", "qqq", "Q");
+		String args = "-q "+targetDir+" -i scholarly.html -o results.xml  --r.regex "+regexFile;
+		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
+		argProcessor.runAndOutput();
+	}
 
+	@Test
+	public void testExtractFields1() throws IOException {
+		File targetDir = new File("target/regex/brackets/");
+		createTestDocument(targetDir, 				
+				"<div>"
+				+ "<p> PARA 1 Several matches with Q = 300 and  n = 123 and the study n = 250 was conducted </p>"
+				+ "</div>"
+				);
+		File regexFile = createRegexFile(targetDir, "testme1", "qqq", "[Qn]\\s*=\\s*[0-9]+");
+		String args = "-q "+targetDir+" -i scholarly.html -o results.xml  --r.regex "+regexFile;
+		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
+		argProcessor.runAndOutput();
+	}
+
+	private File createRegexFile(File targetDir, String title, String field, String rawRegex) {
+		File regexFile = new File(targetDir, "regex.xml");
+		CompoundRegex compoundRegex = createCompoundRegex(title, field, rawRegex);
+		try {
+			XMLUtil.debug(compoundRegex.getOrCreateCompoundRegexElement(), new FileOutputStream(regexFile), 1);
+		} catch (IOException e) {
+			throw new RuntimeException("Cannot write compoundRegex ", e);
+		}
+		return regexFile;
+	}
+
+
+
+	private CompoundRegex createCompoundRegex(String title, String fields, String rawRegex) {
+		CompoundRegex compoundRegex = new CompoundRegex(title);
+		RegexComponent regexComponent = new RegexComponent(compoundRegex);
+		regexComponent.setField(fields);
+		regexComponent.setValue(rawRegex);
+		return compoundRegex;
+	}
+
+
+
+	private void createTestDocument(File targetDir, String testXML) throws IOException {
+		File test = new File(targetDir, "scholarly.html");
+		FileUtils.write(test, testXML);
+		Assert.assertTrue("test exists", test.exists());
+	}
 }

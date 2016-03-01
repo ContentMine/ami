@@ -13,22 +13,16 @@ public class SequencePluginOption extends PluginOption {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	public static final String SEQUENCE = "sequence";
+	public static final String TAG = "sequence";
 
 	public SequencePluginOption(List<String> options, List<String> flags) {
-		super(SEQUENCE, options, flags);
+		super(TAG, options, flags);
 	}
 	
 	protected void run() {
 		String cmd = "--project "+projectDir+" -i scholarly.html --sq.sequence --sq.type "+optionString;
 		new SequenceArgProcessor(cmd).runAndOutput();
 	}
-
-	// default works
-//	protected void runMatchSummaryAndCount(String option) {
-//		resultXPathAttribute = "@match";
-//		super.runMatchSummaryAndCount(option);
-//	}
 
 
 

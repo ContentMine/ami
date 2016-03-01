@@ -21,6 +21,9 @@ public class DictionaryTerm implements Comparable<DictionaryTerm> {
 	private TermPhrase lowerCaseTermPhrase;
 	private TermPhrase stemmedTermPhrase;
 	private TermPhrase lowerCaseStemmedTermPhrase;
+	private String name;
+	private String url;
+	private String wikidata;
 	
 	public DictionaryTerm(String termString) {
 		termPhrase = TermPhrase.createTermPhrase(termString);
@@ -66,6 +69,18 @@ public class DictionaryTerm implements Comparable<DictionaryTerm> {
 		return lowerCaseStemmedTermPhrase;
 	}
 	
+	public void setName(String value) {
+		this.name = getNonNullValue(value);
+	}
+
+	public void setURL(String value) {
+		this.url = getNonNullValue(value);
+	}
+
+	public void setWikidata(String value) {
+		this.wikidata = getNonNullValue(value);
+	}
+
 	public String toString() {
 		return termPhrase.toString();
 	}
@@ -92,6 +107,10 @@ public class DictionaryTerm implements Comparable<DictionaryTerm> {
 			}
 		}
 		return result;
+	}
+
+	private String getNonNullValue(String value) {
+		return (value == null || value.trim().length() == 0) ? null : value;
 	}
 	
 }

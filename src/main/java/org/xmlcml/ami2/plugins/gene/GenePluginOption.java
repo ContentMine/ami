@@ -13,10 +13,11 @@ public class GenePluginOption extends PluginOption {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	public final static String GENE = "gene";
+	public final static String TAG = "gene";
+//	private static final String GENE = "gene";
 	
 	public GenePluginOption(List<String> options, List<String> flags) {
-		super(GENE, options, flags);
+		super(TAG, options, flags);
 	}
 
 	protected void run() {
