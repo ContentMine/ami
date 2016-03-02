@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4093116/results/species/binomial/results.xml">
+  <result pre=" " exact="Coloured breeds" xpath="/html[1]/body[1]/div[1]/div[4]/div[2]/p[12]" match="Coloured breeds" post=" are kept in numerous countries to produce meat for own consumption or special markets. Some colour" name="binomial"/>
+  <result pre=" " exact="Intensive breeds" xpath="/html[1]/body[1]/div[1]/div[4]/div[2]/p[12]" match="Intensive breeds" post=" are suitable for medium and large farms due to their good reproductive and productive performance." name="binomial"/>
+  <result pre=" " exact="Synthetic breeds" xpath="/html[1]/body[1]/div[1]/div[4]/div[2]/p[12]" match="Synthetic breeds" post=" originated from the crossing of two or more intensive breeds to introduce higher reproductive and " name="binomial"/>
+  <result pre=" " exact="Restricted feeding" xpath="/html[1]/body[1]/div[1]/div[4]/div[2]/p[12]" match="Restricted feeding" post=": Feed restriction increases the length of life of rats and other laboratory rodents considerably (" name="binomial"/>
+  <result pre=" " exact="Fibrous diet" match="Fibrous diet" post=": Not only restriction, but also ad libitum feeding with a fibrous diet may serve the purpos" name="binomial"/>
+ </snippets>
+</snippetsTree>

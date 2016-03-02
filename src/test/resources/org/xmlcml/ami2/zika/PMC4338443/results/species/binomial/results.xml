@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="binomial">
+ <result pre="Previous studies have documented the presence of " exact="Aedes aegypti" xpath="/html[1]/body[1]/div[1]/div[6]/p[4]" match="Aedes aegypti" post=" (L), Ae. simpsoni (Theo.) and Ae. luteocephalus (Newst.) and Ae. Africanus.[ " name="binomial"/>
+ <result pre="Previous studies have documented the presence of Aedes aegypti (L), " exact="Ae. simpsoni" xpath="/html[1]/body[1]/div[1]/div[6]/p[4]" match="Ae. simpsoni" post=" (Theo.) and Ae. luteocephalus (Newst.) and Ae. Africanus.[ 4 " name="binomial"/>
+ <result pre=" studies have documented the presence of Aedes aegypti (L), Ae. simpsoni (Theo.) and " exact="Ae. luteocephalus" match="Ae. luteocephalus" post=" (Newst.) and Ae. Africanus.[ 4 ] The control of these mosquit" name="binomial"/>
+</results>

@@ -11,7 +11,8 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.ResultsAnalysis.CellType;
+import org.xmlcml.ami2.plugins.ResultsAnalysis;
+import org.xmlcml.ami2.plugins.ResultsAnalysis.SummaryType;
 import org.xmlcml.cmine.files.CProject;
 import org.xmlcml.cmine.files.ProjectSnippetsTree;
 import org.xmlcml.cmine.util.CMineTestFixtures;
@@ -136,7 +137,7 @@ public class ResultsAnalysisTest {
 		resultsAnalysis.setRemoteLink0("../../src/test/resources/org/xmlcml/ami2/zika/");
 		resultsAnalysis.setRemoteLink1("/scholarly.html");
 		resultsAnalysis.setRowHeadingName("EPMCID");
-		resultsAnalysis.setCellContentFlag(CellType.COMMONEST);
+		resultsAnalysis.setCellContentFlag(SummaryType.COMMONEST);
 		HtmlTable table = resultsAnalysis.makeHtmlDataTable();
 		HtmlHtml html = dataTablesTool.createHtmlWithDataTable(table);
 		XMLUtil.debug(html, new File("target/resultsAnalysis/datatable.html"), 1);
@@ -157,8 +158,8 @@ public class ResultsAnalysisTest {
 //		analyzeResults(ZIKA_DIR, CellType.ENTRIES, new File("target/resultsAnalysis/entrieestable.html"));
 //	}
 //	
-	private void analyzeResults(File projectDir, CellType cellType, File outfile) throws IOException {
-		List<CellType> cellTypes = Arrays.asList(new CellType[]{CellType.COMMONEST});
+	private void analyzeResults(File projectDir, SummaryType cellType, File outfile) throws IOException {
+		List<SummaryType> cellTypes = Arrays.asList(new SummaryType[]{SummaryType.COMMONEST});
 		DataTablesTool dataTablesTool = new DataTablesTool();
 		dataTablesTool.setTitle("Zika");
 		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);

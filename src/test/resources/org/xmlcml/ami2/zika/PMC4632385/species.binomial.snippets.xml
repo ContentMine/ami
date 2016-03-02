@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4632385/results/species/binomial/results.xml">
+  <result pre=" 8 ]. Dengue is spread between people by the mosquitoes " exact="Aedes aegypti" xpath="/html[1]/body[1]/div[1]/div[3]/p[2]" match="Aedes aegypti" post=" and Aedes albopictus, through a human-to-mosquito-to-human cycle of transmission [ &lt;" name="binomial"/>
+  <result pre="s-07-02877&quot;&gt;8 ]. Dengue is spread between people by the mosquitoes Aedes aegypti and " exact="Aedes albopictus" match="Aedes albopictus" post=", through a human-to-mosquito-to-human cycle of transmission [ &lt;a href=&quot;#B9-viruses-07-02877" name="binomial"/>
+ </snippets>
+</snippetsTree>

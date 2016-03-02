@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4193187/results/species/genus/results.xml">
+  <result pre=" To the Editor: Chikungunya virus (CHIKV) is an emerging arthropodborne alphavirus of the family " exact="Togaviridae" match="Togaviridae" post=" ( 1 ). The most common clinical manifestations of infection with CHIKV" name="genus"/>
+ </snippets>
+</snippetsTree>

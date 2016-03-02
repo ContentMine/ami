@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4395659/results/species/binomial/results.xml">
+  <result pre=" their migration to warmer regions. 14 Alternatively, " exact="Aedes aegypti" xpath="/html[1]/body[1]/div[1]/div[9]/p[1]" match="Aedes aegypti" post=" has adapted to the urban environment whereas Aedes albopictus occurs more commonly in semi-" name="binomial"/>
+  <result pre="14 Alternatively, Aedes aegypti has adapted to the urban environment whereas " exact="Aedes albopictus" xpath="/html[1]/body[1]/div[1]/div[9]/p[1]" match="Aedes albopictus" post=" occurs more commonly in semi-urban or rural areas. However, these are not hard and fast rules. For" name="binomial"/>
+  <result pre="However, these are not hard and fast rules. For example, on the French island of La Reunion, where " exact="Aedes aegypti" xpath="/html[1]/body[1]/div[1]/div[9]/p[1]" match="Aedes aegypti" post=" was not recognizably present, CHIKV was simultaneously epidemic in both rural and urban environmen" name="binomial"/>
+  <result pre="as simultaneously epidemic in both rural and urban environments, and was primarily associated with " exact="Aedes albopictus" xpath="/html[1]/body[1]/div[1]/div[9]/p[1]" match="Aedes albopictus" post=". 15 " name="binomial"/>
+  <result pre=" prevalent in India, Central and Southeast Asia, largely due to the prevalence of highly competent " exact="Culex tritaeniorhynchus" xpath="/html[1]/body[1]/div[1]/div[9]/p[1]" match="Culex tritaeniorhynchus" post=" mosquito species and intensely farmed pigs which act as amplifying hosts for the virus and, import" name="binomial"/>
+  <result pre="creased its capacity to infect, reproduce and be transmitted by the striped Asian &quot;Tiger&quot; mosquito " exact="Aedes albopictus" xpath="/html[1]/body[1]/div[1]/div[9]/p[1]" match="Aedes albopictus" post=". 36 Coincidentally this mosquito species has graduall" name="binomial"/>
+  <result pre=" the tropics, sub-tropics and southern temperate regions, can generally be attributed to human and " exact="Aedes aegypti" match="Aedes aegypti" post=" population density increase during the past century, resulting from intensive urbanization and the" name="binomial"/>
+ </snippets>
+</snippetsTree>

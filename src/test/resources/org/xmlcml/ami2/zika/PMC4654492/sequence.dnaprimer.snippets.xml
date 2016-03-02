@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4654492/results/sequence/dnaprimer/results.xml">
+  <result pre=" the sodium channel voltage dependent gene (Nav). Primers used to amplify this fragment were AaNaA " exact="5’-ACAATGTGGATCGCTTCCC-3’" post="and AaNaB 5’-TGGACAAAAGCAAGGCTAAG-3’(8). The primers amplify a fragment of approximately 472 bp whi" xpath="/html[1]/body[1]/div[1]/div[6]/div[5]/p[1]" name="dnaprimer"/>
+  <result pre="nt gene (Nav). Primers used to amplify this fragment were AaNaA 5’-ACAATGTGGATCGCTTCCC-3’and AaNaB " exact="5’-TGGACAAAAGCAAGGCTAAG-3’" post="(8). The primers amplify a fragment of approximately 472 bp which includes an intron of approximate" name="dnaprimer"/>
+ </snippets>
+</snippetsTree>

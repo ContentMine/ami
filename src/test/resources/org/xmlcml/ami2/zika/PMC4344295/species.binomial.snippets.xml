@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4344295/results/species/binomial/results.xml">
+  <result pre=" To the Editor: " exact="Zika virus" match="Zika virus" post=" (ZIKV), a member of the family Flaviviridae, genus Flavivirus, was first isolated fr" name="binomial"/>
+ </snippets>
+</snippetsTree>

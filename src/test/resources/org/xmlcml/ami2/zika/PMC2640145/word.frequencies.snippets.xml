@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC2640145/results/word/frequencies/results.xml">
+  <result title="frequency" word="virus" count="62"/>
+  <result title="frequency" word="health" count="49"/>
+  <result title="frequency" word="human" count="49"/>
+  <result title="frequency" word="Gabon" count="41"/>
+  <result title="frequency" word="diseases" count="40"/>
+  <result title="frequency" word="Human" count="33"/>
+  <result title="frequency" word="therapy" count="32"/>
+  <result title="frequency" word="zoonotic" count="30"/>
+  <result title="frequency" word="Supportive" count="29"/>
+  <result title="frequency" word="fever" count="29"/>
+  <result title="frequency" word="endemic" count="28"/>
+  <result title="frequency" word="wildlife" count="28"/>
+  <result title="frequency" word="public" count="26"/>
+  <result title="frequency" word="Africa" count="24"/>
+  <result title="frequency" word="Endemic" count="24"/>
+  <result title="frequency" word="infectious" count="24"/>
+  <result title="frequency" word="potentially" count="24"/>
+  <result title="frequency" word="Central" count="23"/>
+  <result title="frequency" word="Health" count="22"/>
+  <result title="frequency" word="areas" count="22"/>
+ </snippets>
+</snippetsTree>

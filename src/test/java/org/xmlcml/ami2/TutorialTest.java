@@ -9,9 +9,10 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.ResultsAnalysis.CellType;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.CommandProcessor;
+import org.xmlcml.ami2.plugins.ResultsAnalysis;
+import org.xmlcml.ami2.plugins.ResultsAnalysis.SummaryType;
 import org.xmlcml.ami2.plugins.gene.GeneArgProcessor;
 import org.xmlcml.ami2.plugins.identifier.IdentifierArgProcessor;
 import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
@@ -396,7 +397,7 @@ public class TutorialTest {
 				
 //		String cmd = "species(binomial,genus) gene(human) sequence(dnaprimer) word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml word(frequencies)xpath:@count>20~stopwords:pmcstop.txt_stopwords.txt"; 
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
-		commandProcessor.runCommands(cmd);
+		commandProcessor.processCommands(cmd);
 
 	}
 	
@@ -407,7 +408,7 @@ public class TutorialTest {
 		File projectDir = new File("target/tutorial/zika");
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
-		commandProcessor.runCommands(""
+		commandProcessor.processCommands(""
 				+ "species(binomial,genus) "
 				+ " gene(human)"
 				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
@@ -423,7 +424,7 @@ public class TutorialTest {
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
 		
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
-		commandProcessor.runCommands(""
+		commandProcessor.processCommands(""
 				+ "species(binomial,genus) "
 				+ " gene(human)"
 				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
@@ -433,7 +434,7 @@ public class TutorialTest {
 		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
 		resultsAnalysis.addDefaultSnippets(projectDir);
 		resultsAnalysis.setRowHeadingName("EPMCID");
-		for (CellType cellType : ResultsAnalysis.CELL_TYPES) {
+		for (SummaryType cellType : ResultsAnalysis.SUMMARY_TYPES) {
 			resultsAnalysis.setCellContentFlag(cellType);
 			HtmlTable table = resultsAnalysis.makeHtmlDataTable();
 			HtmlHtml html = dataTablesTool.createHtmlWithDataTable(table);
@@ -469,7 +470,7 @@ public class TutorialTest {
 		String cmd = "sequence(dnaprimer) gene(human) "
 		+ "word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml";
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
-		commandProcessor.runCommands(cmd);
+		commandProcessor.processCommands(cmd);
 
 	}
 

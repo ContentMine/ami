@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="6">Plasmodium knowlesi</result>
+ <result title="frequency" count="2">Schistosoma japonicum</result>
+ <result title="frequency" count="1">Ascaris lumbricoides</result>
+ <result title="frequency" count="1">B. hominis</result>
+ <result title="frequency" count="1">Trichuris trichiura</result>
+ <result title="frequency" count="1">Schistosoma mekongi</result>
+ <result title="frequency" count="1">Leishmania siamensis</result>
+ <result title="frequency" count="1">Plasmodium falciparum</result>
+ <result title="frequency" count="1">Plasmodium vivax</result>
+ <result title="frequency" count="1">Salmonella enterica</result>
+ <result title="frequency" count="1">Burkholderia pseudomallei</result>
+ <result title="frequency" count="1">Rickettsia typhi</result>
+ <result title="frequency" count="1">Orientia tsutsugamushi</result>
+ <result title="frequency" count="1">Ancylostoma ceylanicum</result>
+</results>

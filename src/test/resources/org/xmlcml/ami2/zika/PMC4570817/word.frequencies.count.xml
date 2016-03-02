@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="50">symptoms</result>
+ <result title="frequency" count="50">patients</result>
+ <result title="frequency" count="46">diagnostic</result>
+ <result title="frequency" count="38">travelers</result>
+ <result title="frequency" count="36">virus;</result>
+ <result title="frequency" count="32">travel</result>
+ <result title="frequency" count="28">arbovirus</result>
+ <result title="frequency" count="27">arboviral</result>
+ <result title="frequency" count="22">Fig</result>
+ <result title="frequency" count="22">requests</result>
+ <result title="frequency" count="21">DENV</result>
+ <result title="frequency" count="21">Dutch</result>
+</results>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC3749491/results/word/frequencies/results.xml">
+  <result title="frequency" word="CIITA" count="149"/>
+  <result title="frequency" word="Tax-" count="88"/>
+  <result title="frequency" word="HTLV-" count="84"/>
+  <result title="frequency" word="Tax" count="82"/>
+  <result title="frequency" word="M.," count="67"/>
+  <result title="frequency" word="A.," count="56"/>
+  <result title="frequency" word="virus" count="56"/>
+  <result title="frequency" word="S.," count="55"/>
+  <result title="frequency" word="human" count="52"/>
+  <result title="frequency" word="type" count="51"/>
+  <result title="frequency" word="viral" count="44"/>
+  <result title="frequency" word="C.," count="43"/>
+  <result title="frequency" word="J.," count="43"/>
+  <result title="frequency" word="transcription" count="42"/>
+  <result title="frequency" word="class" count="41"/>
+  <result title="frequency" word="Tosi" count="40"/>
+  <result title="frequency" word="G.," count="39"/>
+  <result title="frequency" word="R.," count="38"/>
+  <result title="frequency" word="T-cell" count="38"/>
+  <result title="frequency" word="expression" count="36"/>
+  <result title="frequency" word="MHC-II" count="32"/>
+  <result title="frequency" word="cell" count="32"/>
+  <result title="frequency" word="transcriptional" count="32"/>
+  <result title="frequency" word="gene" count="31"/>
+  <result title="frequency" word="interaction" count="29"/>
+  <result title="frequency" word="L.," count="28"/>
+  <result title="frequency" word="cells" count="28"/>
+  <result title="frequency" word="leukemia" count="28"/>
+  <result title="frequency" word="F.," count="27"/>
+  <result title="frequency" word="factors" count="27"/>
+  <result title="frequency" word="function" count="27"/>
+  <result title="frequency" word="K.," count="26"/>
+  <result title="frequency" word="Biol." count="25"/>
+  <result title="frequency" word="N.," count="25"/>
+  <result title="frequency" word="Virol." count="25"/>
+  <result title="frequency" word="complex" count="25"/>
+  <result title="frequency" word="factor" count="24"/>
+  <result title="frequency" word="D.," count="23"/>
+  <result title="frequency" word="nuclear" count="22"/>
+  <result title="frequency" word="Y.," count="21"/>
+  <result title="frequency" word="protein" count="21"/>
+  <result title="frequency" word="transactivator" count="21"/>
+ </snippets>
+</snippetsTree>

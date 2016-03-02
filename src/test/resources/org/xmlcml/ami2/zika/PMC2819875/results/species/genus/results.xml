@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="genus">
+ <result pre="n of patient 1 fluctuated between 10°C and 31°C, only Ae. vexans mosquitoes of the subgenus " exact="Aedimorphus" xpath="/html[1]/body[1]/div[1]/div[4]/p[2]" match="Aedimorphus" post=" are commonly captured on the northern Colorado Front Range, and known tropical ZIKV vectors are mo" name="genus"/>
+ <result pre="on the northern Colorado Front Range, and known tropical ZIKV vectors are mostly from the subgenus " exact="Stegomyia" xpath="/html[1]/body[1]/div[1]/div[4]/p[2]" match="Stegomyia" post=" ( 4 ). Mosquito sampling around the home of patients 1 and 3 at the ti" name="genus"/>
+ <result pre="nts 1 and 3 at the time yielded only 7 Ae. vexans mosquitoes and 11 other mosquitoes of the " exact="Culex" xpath="/html[1]/body[1]/div[1]/div[4]/p[2]" match="Culex" post=" and Culiseta genera. " name="genus"/>
+ <result pre="e time yielded only 7 Ae. vexans mosquitoes and 11 other mosquitoes of the Culex and " exact="Culiseta" match="Culiseta" post=" genera. " name="genus"/>
+</results>

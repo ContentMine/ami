@@ -4,10 +4,11 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.plugins.PluginOption;
+import org.xmlcml.ami2.plugins.AMIPluginOption;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.util.CellRenderer;
 
-public class SpeciesPluginOption extends PluginOption {
+public class SpeciesPluginOption extends AMIPluginOption {
 
 	public static final String TAG = "species";
 	private static final Logger LOG = Logger.getLogger(SpeciesPluginOption.class);
@@ -15,7 +16,12 @@ public class SpeciesPluginOption extends PluginOption {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
+
+	public SpeciesPluginOption() {
+		super(TAG);
+	}
 	
+
 	public SpeciesPluginOption(List<String> options, List<String> flags) {
 		super(TAG, options, flags);
 	}
@@ -31,5 +37,13 @@ public class SpeciesPluginOption extends PluginOption {
 		super.runMatchSummaryAndCount(option);
 	}
 
+	@Override
+	public CellRenderer getNewCellRenderer() {
+		CellRenderer cellRenderer = super.getNewCellRenderer();
+		cellRenderer.setHref0(AMIPluginOption.WIKIPEDIA_HREF0);
+		cellRenderer.setHref1(AMIPluginOption.WIKIPEDIA_HREF1);
+		cellRenderer.setUseHrefWords(2, "_");
+		return cellRenderer;
+	}
 
 }

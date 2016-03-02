@@ -81,6 +81,10 @@
 
 					<programs>
  						<program>
+							<mainClass>org.xmlcml.ami2.plugins.CommandProcessor</mainClass>
+							<id>cmine</id>
+						</program>
+ 						<program>
 							<mainClass>org.xmlcml.ami2.plugins.gene.GenePlugin</mainClass>
 							<id>ami2-gene</id>
 						</program>
@@ -163,6 +167,12 @@
 							</mapper>
 						</data>
 -->
+ 						<data>
+							<type>link</type>
+							<symlink>true</symlink>
+							<linkName>/usr/bin/cmine</linkName>
+							<linkTarget>/usr/share/ami-repo/bin/cmine</linkTarget>
+						</data>
  						<data>
 							<type>link</type>
 							<symlink>true</symlink>

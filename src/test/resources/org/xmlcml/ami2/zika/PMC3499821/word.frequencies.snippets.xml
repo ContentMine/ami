@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC3499821/results/word/frequencies/results.xml">
+  <result title="frequency" word="virus" count="90"/>
+  <result title="frequency" word="Human" count="72"/>
+  <result title="frequency" word="/Gabon" count="46"/>
+  <result title="frequency" word="Ebola" count="34"/>
+  <result title="frequency" word="CIRMF" count="23"/>
+  <result title="frequency" word="Ebolavirus/Ebola" count="23"/>
+ </snippets>
+</snippetsTree>

@@ -1,5 +1,6 @@
-<argList name="ami" version="0.2.17">
+<argList name="ami" version="0.2.19">
 
+  <p>201603-02 cell rendering </p>
   <p>201602-23 fixed tests </p>
   <p>201602-23 more dataTablers </p>
   <p>201602-19 added CellRenderer </p>

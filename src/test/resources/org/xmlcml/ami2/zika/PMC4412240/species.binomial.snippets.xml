@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4412240/results/species/binomial/results.xml">
+  <result pre=" ( 1 ). The virus, which was initially isolated from a rhesus monkey ( " exact="Macaca mulatta" xpath="/html[1]/body[1]/div[1]/p[5]" match="Macaca mulatta" post=") in 1947 in Uganda, has come to attention recently after a large outbreak occurred in the western " name="binomial"/>
+  <result pre="me infected in Keningau or surrounding villages, in northern Borneo. Although ZIKV was detected in " exact="Ae. aegypti" xpath="/html[1]/body[1]/div[1]/p[5]" match="Ae. aegypti" post=" mosquitoes in peninsular Malaysia in 1969 ( 7 ) and antibodies against" name="binomial"/>
+  <result pre="opositivity was demonstrated in a native Bornean, 2 migrants to Borneo, and 2 Bornean orangutans ( " exact="Pongo pygmaeus" match="Pongo pygmaeus" post=") ( 9 ). A later study found an additional 8 Bornean orangutans to be s" name="binomial"/>
+ </snippets>
+</snippetsTree>

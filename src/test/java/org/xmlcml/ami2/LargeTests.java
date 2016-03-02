@@ -2,28 +2,17 @@ package org.xmlcml.ami2;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.ResultsAnalysis.CellType;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.CommandProcessor;
 import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordTest;
-import org.xmlcml.cmine.files.CProject;
 import org.xmlcml.cmine.util.CMineTestFixtures;
-import org.xmlcml.cmine.util.CellRenderer;
-import org.xmlcml.cmine.util.DataTablesTool;
-import org.xmlcml.html.HtmlHtml;
-import org.xmlcml.html.HtmlTable;
-import org.xmlcml.html.HtmlTd;
 import org.xmlcml.norma.NormaArgProcessor;
-import org.xmlcml.norma.biblio.json.EPMCConverter;
-import org.xmlcml.xml.XMLUtil;
 
 @Ignore
 public class LargeTests {
@@ -133,6 +122,12 @@ public class LargeTests {
 
 	@Test
 //	@Ignore
+	public void testApelin2015() throws IOException {
+		runDefault("apelin2015");
+	}
+
+	@Test
+//	@Ignore
 	public void testSTD() throws IOException {
 		runDefault("std");
 	}
@@ -198,6 +193,12 @@ public class LargeTests {
 	}
 
 	@Test
+//	@Ignore
+	public void testBombus() throws IOException {
+		runDefault("bombus");
+	}
+
+	@Test
 	@Ignore
 	public void testAyeAye() throws IOException {
 		runDefault("ayeaye");
@@ -213,13 +214,13 @@ public class LargeTests {
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
 		
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
-		commandProcessor.runCommands(""
+		commandProcessor.processCommands(""
 				+ "species(binomial,genus) "
 				+ " gene(human)"
 				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
 				+ " sequence(dnaprimer) "
 				+ "");
-		createDataTables(project, projectDir);
+		commandProcessor.createDataTables();
 	}
 
 	private void runStatisticsDefault(String project) throws IOException {
@@ -232,41 +233,12 @@ public class LargeTests {
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
 		
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
-		commandProcessor.runCommands(""
+		commandProcessor.processCommands(""
 				+ "regex(regex/statistics.xml)"
 //				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
 				+ " word(search)w.search:/org/xmlcml/ami2/plugins/statistics/statistics.xml"
 				+ "");
-		createDataTables(project, projectDir);
-	}
-
-	private void createDataTables(String project, File projectDir) throws IOException {
-		DataTablesTool dataTablesTool = new DataTablesTool();
-		dataTablesTool.setTitle(project);
-		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
-		resultsAnalysis.addDefaultSnippets(projectDir);
-		resultsAnalysis.setRemoteLink0(EPMCConverter.HTTP_EUROPEPMC_ORG_ARTICLES);
-		resultsAnalysis.setRemoteLink1("");
-		resultsAnalysis.setLocalLink0("");
-		resultsAnalysis.setLocalLink1(ResultsAnalysis.SCHOLARLY_HTML);
-		resultsAnalysis.setRowHeadingName("EPMCID");
-		for (CellType cellType : ResultsAnalysis.CELL_TYPES) {
-			resultsAnalysis.setCellContentFlag(cellType);
-			HtmlTable table = resultsAnalysis.makeHtmlDataTable();
-			HtmlHtml html = dataTablesTool.createHtmlWithDataTable(table);
-			File outfile = new File(projectDir, cellType.toString()+"."+CProject.DATA_TABLES_HTML);
-			XMLUtil.debug(html, outfile, 1);
-		}
-		List<HtmlTd> footerList = new ArrayList<HtmlTd>();
-		for (CellRenderer head : dataTablesTool.columnHeadingList) {
-			HtmlTd td = new HtmlTd();
-			td.appendChild(head.getValue());
-			footerList.add(td);
-		}
-		HtmlTd caption = new HtmlTd();
-		caption.appendChild("coun-ts");
-		dataTablesTool.setFooterCaption(caption);
-		dataTablesTool.setFooterCells(footerList);
+		commandProcessor.createDataTables();
 	}
 
 

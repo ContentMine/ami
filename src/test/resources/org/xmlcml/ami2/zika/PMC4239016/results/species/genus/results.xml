@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="genus">
+ <result pre="at belongs to the genus Flavivirus, family Flaviviridae. The virus is transmitted by " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[6]/p[2]" match="Aedes" post=" ( Stegomyia) mosquitoes and is classified into four antigenically distinct but closely rela" name="genus"/>
+ <result pre="re S1). Additionally, on IFA, mAb D3 344/H1 bound the recombinant E protein of DENV-3 expressed on " exact="Drosophila" match="Drosophila" post=" S2 cells, suggesting that it is directed to a conformational epitope of the E protein ( Figure S2)" name="genus"/>
+</results>
