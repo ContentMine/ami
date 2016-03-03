@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4375606/results/word/frequencies/results.xml">
+  <result title="frequency" word="land" count="162"/>
+  <result title="frequency" word="HANPP" count="124"/>
+  <result title="frequency" word="use" count="64"/>
+  <result title="frequency" word="Fig." count="45"/>
+  <result title="frequency" word="NPP" count="43"/>
+  <result title="frequency" word="South" count="39"/>
+  <result title="frequency" word="change" count="38"/>
+  <result title="frequency" word="harv" count="37"/>
+  <result title="frequency" word="North" count="32"/>
+  <result title="frequency" word="productivity" count="32"/>
+  <result title="frequency" word="agricultural" count="31"/>
+  <result title="frequency" word="biomass" count="31"/>
+  <result title="frequency" word="levels" count="31"/>
+  <result title="frequency" word="Italian" count="30"/>
+  <result title="frequency" word="Italy" count="28"/>
+  <result title="frequency" word="level" count="28"/>
+  <result title="frequency" word="cropland" count="26"/>
+  <result title="frequency" word="socio-economic" count="24"/>
+  <result title="frequency" word="production" count="22"/>
+  <result title="frequency" word="increased" count="21"/>
+ </snippets>
+</snippetsTree>

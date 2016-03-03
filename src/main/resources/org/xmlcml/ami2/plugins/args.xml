@@ -1,7 +1,9 @@
-<argList name="ami" version="0.2.15">
+<argList name="ami" version="0.2.19">
 
+  <p>201603-02 cell rendering </p>
+  <p>201602-23 fixed tests </p>
+  <p>201602-23 more dataTablers </p>
   <p>201602-19 added CellRenderer </p>
-  <p>201602-11 added sdataTable analysis of spreadsheet</p>
   <p>201602-11 added sdataTable analysis of spreadsheet</p>
   <p>201602-07 developed new commandline, fixed inconsistencies and bugs</p>
   <p>201602-04 added Zika examples, and Pre/Post tools</p>

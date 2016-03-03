@@ -11,15 +11,12 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
-import org.xmlcml.ami2.plugins.species.LinneanNamer;
-import org.xmlcml.ami2.plugins.species.SpeciesResultsElement;
 import org.xmlcml.ami2.plugins.word.WordCollectionFactory;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.AbstractSearcher;
 import org.xmlcml.cmine.files.ResultElement;
 import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 import org.xmlcml.cmine.lookup.AbstractLookup;
+import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 import org.xmlcml.xml.XPathGenerator;
 
 import nu.xom.Attribute;
@@ -133,9 +130,13 @@ public class AMISearcher extends AbstractSearcher {
 		} else {
 			for (ResultElement resultElement : resultsElementToAdd) {
 				resultElement.detach();
-				String xpath = new XPathGenerator(elementToSearch).getXPath();
+				LOG.trace(">>> "+resultElement.toXML());
+				XPathGenerator xPathGenerator = new XPathGenerator(elementToSearch);
+				xPathGenerator.setShort(true);
+				String xpath = xPathGenerator.getXPath();
 				resultsElement.setXPath(xpath);
 				resultsElement.appendChild(resultElement);
+				LOG.trace("XPATH added "+resultsElement.toXML());
 			}
 		}
 	}

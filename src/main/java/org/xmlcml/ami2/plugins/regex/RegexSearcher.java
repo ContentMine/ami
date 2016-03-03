@@ -5,6 +5,7 @@ import java.util.List;
 import nu.xom.Element;
 
 import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.MatcherResult;
@@ -13,7 +14,7 @@ import org.xmlcml.cmine.files.ResultsElement;
 
 public class RegexSearcher extends AMISearcher {
 
-	
+	private static final Logger LOG = Logger.getLogger(RegexSearcher.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -44,10 +45,15 @@ public class RegexSearcher extends AMISearcher {
 		List<RegexComponent> regexComponents = compoundRegex.getOrCreateRegexComponentList();
 		ResultsElement resultsElement = new ResultsElement();
 		String xomValue = xomElement.getValue();
+		LOG.trace("XOM "+xomValue);
 		for (RegexComponent regexComponent : regexComponents) {
+			LOG.trace("RGXCOMP "+regexComponent);
 			MatcherResult matcherResult = regexComponent.searchWithPattern(xomValue); // crude to start with
 			ResultsElement resultsElementToAdd = matcherResult.createResultsElement();
-			addXpathAndAddtoResultsElement(xomElement, resultsElement, resultsElementToAdd);
+			if (resultsElementToAdd != null) {
+				LOG.trace("RESELEM "+resultsElementToAdd);
+				addXpathAndAddtoResultsElement(xomElement, resultsElement, resultsElementToAdd);
+			}
 		}
 		return resultsElement;
 	}

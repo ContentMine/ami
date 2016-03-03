@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4193187/results/species/binomial/results.xml">
+  <result pre="g its inclusion in the Asian lineage. A blood sample from the patient was inoculated into Vero and " exact="Aedes albopictus" xpath="/html[1]/body[1]/div[1]/p[7]" match="Aedes albopictus" post=" C6/36 cells. Cells were incubated for 6 days, after which time both supernatants were removed and " name="binomial"/>
+  <result pre="CHIKV is transmitted by mosquitoes of the Aedes species, especially " exact="Ae. aegypti" xpath="/html[1]/body[1]/div[1]/p[7]" match="Ae. aegypti" post=" and Ae. albopictus ( 1 , 2 ). The r" name="binomial"/>
+  <result pre="CHIKV is transmitted by mosquitoes of the Aedes species, especially Ae. aegypti and " exact="Ae. albopictus" xpath="/html[1]/body[1]/div[1]/p[7]" match="Ae. albopictus" post=" ( 1 , 2 ). The risk for emergence of a chi" name="binomial"/>
+  <result pre="a chikungunya outbreak in French Polynesia is high because of the presence of 2 potential vectors: " exact="Ae. aegypti" xpath="/html[1]/body[1]/div[1]/p[7]" match="Ae. aegypti" post=" mosquitoes, vectors of CHIKV in New Caledonia ( 3 ) and in Guadeloupe " name="binomial"/>
+  <result pre="ledonia ( 3 ) and in Guadeloupe ( 2 ), and " exact="Ae. polynesiensis" match="Ae. polynesiensis" post=" mosquitoes, potential CHIKV as suggested by experimental infections ( 10 &lt;/s" name="binomial"/>
+ </snippets>
+</snippetsTree>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="genus">
+ <result pre=") serotypes (designated 1 to 4). DENV has a positive-stranded RNA genome and belongs to the family " exact="Flaviviridae" xpath="/html[1]/body[1]/div[1]/div[6]/div[2]/p[1]" match="Flaviviridae" post=" and the genus Flavivirus. The geographical areas in which DENV circulates have expanded in " name="genus"/>
+ <result pre="rains H-87 and 3140/09), DENV-4 (strains H-241 and 3274/09), other human pathogenic members of the " exact="Flaviviridae" xpath="/html[1]/body[1]/div[1]/div[6]/div[2]/p[1]" match="Flaviviridae" post=" family (Japanese encephalitis virus [JEV; strain Nakayama], tick-borne encephalitis virus [TBEV; s" name="genus"/>
+ <result pre="w fever virus [YFV; strain Asibi]), and six non-flaviviruses representing the three virus families " exact="Togaviridae" xpath="/html[1]/body[1]/div[1]/div[6]/div[2]/p[1]" match="Togaviridae" post=" (chikungunya virus [CHIKV; strains 23161 and Malaysia], Areanaviridae (Lassa virus [LASV; s" name="genus"/>
+ <result pre="he three virus families Togaviridae (chikungunya virus [CHIKV; strains 23161 and Malaysia], " exact="Areanaviridae" xpath="/html[1]/body[1]/div[1]/div[6]/div[2]/p[1]" match="Areanaviridae" post=" (Lassa virus [LASV; strain Josiah]), and Bunyaviridae (Rift Valley fever virus [RVFV; strai" name="genus"/>
+ <result pre="[CHIKV; strains 23161 and Malaysia], Areanaviridae (Lassa virus [LASV; strain Josiah]), and " exact="Bunyaviridae" match="Bunyaviridae" post=" (Rift Valley fever virus [RVFV; strain ZH548], Dobrava virus [DOBV; strain H119/99], Hantaan virus" name="genus"/>
+</results>

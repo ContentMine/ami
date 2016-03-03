@@ -36,11 +36,14 @@ public class SpeciesArgProcessorTest {
 		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
-				"<results title=\"binomial\"><result pre=\"This is \" exact=\"Homo sapiens\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='p'][5]\" match=\"Homo sapiens\" post=\" at a terminal.\" name=\"binomial\" /><result pre=\"I can refer to me as \" exact=\"H. sapiens\" xpath=\"/*[local-name()='html'"
+				"<results title=\"binomial\"><result pre=\"This is \" exact=\"Homo sapiens\""
+				+ " xpath=\"/html[1]/body[1]/p[5]\" match=\"Homo sapiens\" post=\" at a terminal.\""
+				+ " name=\"binomial\" /><result pre=\"I can refer to me as \" exact=\"H. sapiens\" xpath=\"/html"
 				);
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
 				"<results title=\"genus\">"
-				+ "<result pre=\"I belong to genus \" exact=\"Homo\" match=\"Homo\" post=\" ; my ancestors may be Homo sp.\" name=\"genus\" />"
+				+ "<result pre=\"I belong to genus \" exact=\"Homo\" match=\"Homo\" post=\" ; my"
+				+ " ancestors may be Homo sp.\" name=\"genus\" />"
 				+ "</results>");
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 2, 
 				"<results title=\"genussp\"><result pre=\" Homo ; my ancestors may be \" "
@@ -60,7 +63,7 @@ public class SpeciesArgProcessorTest {
 				"<results title=\"binomial\">"
 				+ "<result pre=\"2]. Outside of sub-Saharan Africa, \" "
 				+ "exact=\"Plasmodium vivax\" "
-				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][3]/*[local-name()='p'][1]\" "
+				+ "xpath=\"/html[1]/body[1]/div[1]/div[3]/p[1]\" "
 				+ "match=\"Plasmodium vivax\" post=\" infections present unique and add");
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
 				"<results title=\"genus\" />");
@@ -79,17 +82,17 @@ public class SpeciesArgProcessorTest {
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
 				"<results title=\"binomial\">"
 				+ "<result pre=\"ntimicrobial activity (assessed on \" exact=\"Vibrio harveyi\" "
-				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][7]\" "
+				+ "xpath=\"/html[1]/body[1]/div[1]/div[7]/p[7]\" "
 				+ "match=\"Vibrio harveyi\" post=\" cultures) was limited in both H and W");
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
 				"<results title=\"genus\">"
 				+ "<result pre=\"-1. This indicates that \" exact=\"Vibrio\" "
-				+ "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][6]\" "
+				+ "xpath=\"/html[1]/body[1]/div[1]/div[7]/p[6]\" "
 				+ "match=\"Vibrio\" post=\" may not be harmful in lower densities, only becom\" name=\"genus\" />");
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 2, 
 		         "<results title=\"genussp\">"
 		         + "<result pre=\" treated (WST) samples. Although 3 \" exact=\"Vibrio spp\" "
-		         + "xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][7]\" "
+		         + "xpath=\"/html[1]/body[1]/div[1]/div[7]/p[7]\" "
 		         + "match=\"Vibrio spp\" post=\" were found in WS-affected samples, two of thes");
 		
 	}
@@ -125,14 +128,18 @@ public class SpeciesArgProcessorTest {
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
 				"<results title=\"binomial\">"
 				+ "<result pre=\"porozoite protein ( csp) of \" exact=\"P. falciparum\""
-				+ " xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][7]/*[local-name()='p'][1]\""
-				+ " match=\"P. falciparum\" post=\" and P. vivax populations to examine the pa\"");
+				+ " xpath=\"/html[1]/body[1]/article[1]/div[7]/p[1]"
+//				+ " match=\"P. falciparum\""
+//				+ " post=\" and P. vivax populatio"
+				);
+
 
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
 				"<results title=\"genus\">"
 				+ "<result pre=\"g the transmission and movement of \" exact=\"Plasmodium\""
-				+ " xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='p'][3]\""
-				+ " match=\"Plasmodium\" post=\" parasites is crucial for malaria elimination and");
+				+ " xpath=\"/html[1]/body[1]/article[1]/div[6]/p[3]"
+//				+ " match=\"Plasmodium\" post=\" parasites is crucial for malaria elimination and"
+				);
 		AMIFixtures.checkResultsElementList(argProcessor, 3, 2, 
 				"<results title=\"genussp\" />");
 	}

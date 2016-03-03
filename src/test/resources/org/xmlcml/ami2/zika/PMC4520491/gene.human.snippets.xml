@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4520491/results/gene/human/results.xml">
+  <result pre="pone.0133602.ref079&quot;&gt;79 ]. Of note, barcoding involves comparison of short sequences of the " exact="COI" post=" mitochondrial gene, producing distance measures that are only useful for delineating and different" xpath="/html[1]/body[1]/div[1]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="ineating and differentiating species-level taxa, not for estimating their relationships. Combining " exact="COI" post=" and COII mitochondrial genes from 17 aedine species in western Africa [ &lt;a href=&quot;#po" xpath="/html[1]/body[1]/div[1]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="fferentiating species-level taxa, not for estimating their relationships. Combining COI and " exact="COII" post=" mitochondrial genes from 17 aedine species in western Africa [ &lt;a href=&quot;#pone.0133602.ref08" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+ </snippets>
+</snippetsTree>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4651505/results/word/frequencies/results.xml">
+  <result title="frequency" word="CHIKV" count="82"/>
+  <result title="frequency" word="(.)" count="71"/>
+  <result title="frequency" word="DENV" count="40"/>
+  <result title="frequency" word="individuals" count="39"/>
+  <result title="frequency" word="confirmed" count="36"/>
+  <result title="frequency" word="pain" count="36"/>
+  <result title="frequency" word="using" count="36"/>
+  <result title="frequency" word="doi:" count="35"/>
+  <result title="frequency" word="infection" count="35"/>
+  <result title="frequency" word="positive" count="30"/>
+  <result title="frequency" word="blood" count="29"/>
+  <result title="frequency" word="Chikungunya" count="28"/>
+  <result title="frequency" word="RT-qPCR" count="28"/>
+  <result title="frequency" word="patients" count="28"/>
+  <result title="frequency" word="(%)" count="27"/>
+  <result title="frequency" word="count" count="26"/>
+  <result title="frequency" word="virus" count="24"/>
+  <result title="frequency" word="Trinidad" count="23"/>
+  <result title="frequency" word="cell" count="23"/>
+  <result title="frequency" word="reported" count="21"/>
+ </snippets>
+</snippetsTree>

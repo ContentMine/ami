@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="65">real-time</result>
+ <result title="frequency" count="59">YFV</result>
+ <result title="frequency" count="45">RT-RPA</result>
+ <result title="frequency" count="36">detection</result>
+ <result title="frequency" count="33">assay</result>
+ <result title="frequency" count="32">virus</result>
+ <result title="frequency" count="29">RPA</result>
+ <result title="frequency" count="29">RNA</result>
+ <result title="frequency" count="22">fever</result>
+ <result title="frequency" count="21">amplification</result>
+</results>

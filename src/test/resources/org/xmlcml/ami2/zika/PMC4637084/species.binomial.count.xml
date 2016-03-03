@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="2">Trypanosoma cruzi</result>
+ <result title="frequency" count="1">Giardia lamblia</result>
+ <result title="frequency" count="1">Helicobacter pylori</result>
+ <result title="frequency" count="1">Pneumocystis jiroveci</result>
+ <result title="frequency" count="1">Enterocytozoon bieneusi</result>
+ <result title="frequency" count="1">Dirofilaria repens</result>
+</results>

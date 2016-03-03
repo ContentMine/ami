@@ -81,7 +81,7 @@ public class RegressionDemoTest {
 		RegexArgProcessor regexArgProcessor = new RegexArgProcessor(cmd);
 		regexArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(regexArgProcessor, 1, 0, 
-				"<results title=\"consort0\"><result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" xpath=\"/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][16]/*[local-name()='div'][2]/*[local-name()='div'][9]/*[local-name()"
+				"<results title=\"consort0\"><result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" xpath=\"/html[1]/body[1]/div[16]/div[2]/div[9]/"
 				);
 	}
 	

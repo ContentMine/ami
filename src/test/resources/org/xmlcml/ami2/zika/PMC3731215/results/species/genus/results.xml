@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="genus">
+ <result pre="007. Although the virus has a wide geographic distribution, most of the known vectors are sylvatic " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[4]/p[4]" match="Aedes" post=" mosquitoes from Africa where the virus was first isolated. Presently, Ae. aegypti is the on" name="genus"/>
+ <result pre="ti1&quot;&gt;[10] , [11] . It is a member of the genus " exact="Flavivirus" xpath="/html[1]/body[1]/div[1]/div[4]/p[4]" match="Flavivirus" post=" of the Family Flaviviridae [12] . The virus is a posit" name="genus"/>
+ <result pre="To date, only " exact="Aedes" match="Aedes" post=" mosquitoes have been known to transmit ZIKV. In Africa, the virus was isolated from both sylvatic " name="genus"/>
+</results>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4527740/results/word/frequencies/results.xml">
+  <result title="frequency" word="Ae." count="97"/>
+  <result title="frequency" word="CHIKV" count="54"/>
+  <result title="frequency" word="albopictus" count="47"/>
+  <result title="frequency" word="species" count="45"/>
+  <result title="frequency" word="Aedes" count="42"/>
+  <result title="frequency" word="aegypti" count="39"/>
+  <result title="frequency" word="transmission" count="39"/>
+  <result title="frequency" word="vector" count="38"/>
+  <result title="frequency" word="virus" count="37"/>
+  <result title="frequency" word="doi:" count="34"/>
+  <result title="frequency" word="potential" count="31"/>
+  <result title="frequency" word="feeding" count="30"/>
+  <result title="frequency" word="Australia" count="27"/>
+  <result title="frequency" word="host" count="27"/>
+  <result title="frequency" word="Australian" count="26"/>
+  <result title="frequency" word="mosquito" count="25"/>
+  <result title="frequency" word="human" count="24"/>
+ </snippets>
+</snippetsTree>

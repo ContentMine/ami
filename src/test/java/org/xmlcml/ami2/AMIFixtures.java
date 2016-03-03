@@ -11,10 +11,12 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
+import org.xmlcml.ami2.plugins.CommandProcessor;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
 import org.xmlcml.cmine.files.ResultsElementList;
+import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.xml.XMLUtil;
 
 public class AMIFixtures {
@@ -63,6 +65,7 @@ public class AMIFixtures {
 	public static final String RESULTS_XML = "results.xml";
 	private static final String RESULTS_DIR = "results/";
 	private static final String EXPECTED_DIR = "expected/";
+	private static final String TARGET_TEST = "target/test/";
 
 
 	/** runs tests and compares expected and actual output.
@@ -143,6 +146,15 @@ public class AMIFixtures {
 				Assert.fail("results assertion failure: starts with: "+ss);
 			}
 		}
+	}
+
+	public static CommandProcessor createDefaultDirectoriesAndProcessor(String projectName) {
+		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, projectName);
+		File projectDir = new File(AMIFixtures.TARGET_TEST, projectName);
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		LOG.debug("wrote clean copy: "+projectDir);
+		return commandProcessor;
 	}
 
 	

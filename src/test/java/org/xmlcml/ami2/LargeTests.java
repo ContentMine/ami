@@ -1,18 +1,20 @@
 package org.xmlcml.ami2;
 
 import java.io.File;
-
+import java.io.IOException;
 
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.CommandProcessor;
 import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordTest;
+import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.norma.NormaArgProcessor;
 
-//@Ignore
+@Ignore
 public class LargeTests {
 	
 	File large = new File("../patents/US08979");
@@ -99,6 +101,148 @@ public class LargeTests {
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
 				"<results title=\"synbioPhrases\" />");
 	}
+	
+	@Test
+	@Ignore
+	public void testArmillaria() throws IOException {
+		runDefault("armillaria");
+	}
+
+	@Test
+	@Ignore
+	public void testMicrobiome() throws IOException {
+		runDefault("microbiome");
+	}
+
+	@Test
+//	@Ignore
+	public void testQuoll() throws IOException {
+		runDefault("quoll");
+	}
+
+	@Test
+//	@Ignore
+	public void testApelin2015() throws IOException {
+		runDefault("apelin2015");
+	}
+
+	@Test
+//	@Ignore
+	public void testSTD() throws IOException {
+		runDefault("std");
+	}
+
+	@Test
+//	@Ignore
+	public void testWolbachia() throws IOException {
+		runDefault("wolbachia2015");
+	}
+
+	@Test
+//	@Ignore
+	public void testTasman() throws IOException {
+		runDefault("tasman");
+	}
+	
+	@Test
+//	@Ignore
+	public void testOettinger() throws IOException {
+		runDefault("oettinger");
+	}
+
+	@Test
+//	@Ignore
+	public void testZika() throws IOException {
+		runDefault("zika2");
+	}
+
+	@Test
+//	@Ignore
+	public void testSemipartial() throws IOException {
+		runStatisticsDefault("semipartial");
+	}
+
+	@Test
+//	@Ignore
+	public void testTerrorism() throws IOException {
+		runDefault("terrorism2015");
+	}
+
+	@Test
+//	@Ignore
+	public void ngfpoly() throws IOException {
+		runDefault("ngfpoly");
+	}
+
+	@Test
+//	@Ignore
+	public void testApelin() throws IOException {
+		runDefault("apelin2015");
+	}
+
+	@Test
+//	@Ignore
+	public void testZika10() throws IOException {
+		runBioscienceDefault("zika10", new File("src/test/resources/org/xmlcml/ami2/zika10/"));
+	}
+
+	@Test
+//	@Ignore
+	public void testKakadu() throws IOException {
+		runDefault("kakadu");
+	}
+
+	@Test
+//	@Ignore
+	public void testBombus() throws IOException {
+		runDefault("bombus");
+	}
+
+	@Test
+	@Ignore
+	public void testAyeAye() throws IOException {
+		runDefault("ayeaye");
+	}
+	
+	private void runDefault(String project) throws IOException {
+		File rawDir = new File("../projects/"+project);
+		runBioscienceDefault(project, rawDir);
+	}
+
+	private void runBioscienceDefault(String project, File rawDir) throws IOException {
+		File projectDir = new File("target/tutorial/"+project+"/");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.processCommands(""
+				+ "species(binomial,genus) "
+				+ " gene(human)"
+				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
+				+ " sequence(dnaprimer) "
+				+ "");
+		commandProcessor.createDataTables();
+	}
+
+	private void runStatisticsDefault(String project) throws IOException {
+		File rawDir = new File("../projects/"+project);
+		runStatisticsDefault(project, rawDir);
+	}
+
+	private void runStatisticsDefault(String project, File rawDir) throws IOException {
+		File projectDir = new File("target/tutorial/"+project+"/");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.processCommands(""
+				+ "regex(regex/statistics.xml)"
+//				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
+				+ " word(search)w.search:/org/xmlcml/ami2/plugins/statistics/statistics.xml"
+				+ "");
+		commandProcessor.createDataTables();
+	}
+
+
+
 	
 
 }
