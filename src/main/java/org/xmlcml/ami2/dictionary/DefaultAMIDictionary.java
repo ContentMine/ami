@@ -71,6 +71,7 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	private static final String TERM = "term";
 	public static final String TITLE = "title";
 	private static final String URL = "url";
+	private static final String WIKIDATA = "wikidata";
 
 	/** later these should be read in from args.xml ...
 	 * 
@@ -187,10 +188,17 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		Elements elements = dictionaryElement.getChildElements();
 		bloomFilter = BloomFilter.create(stringFunnel, elements.size());
 		for (int i = 0; i < elements.size(); i++) {
-			String term = elements.get(i).getAttributeValue(TERM);
+			Element element = elements.get(i);
+			String term = element.getAttributeValue(TERM);
 			DictionaryTerm dictionaryTerm = new DictionaryTerm(term);
+			String name = element.getAttributeValue(NAME);
+			dictionaryTerm.setName(name);
+			String url = element.getAttributeValue(URL);
+			dictionaryTerm.setURL(url);
+			String wikidata = element.getAttributeValue(WIKIDATA);
+			dictionaryTerm.setWikidata(wikidata);
 			dictionaryTermList.add(dictionaryTerm);
-			namesByTerm.put(dictionaryTerm, elements.get(i).getAttributeValue(NAME));
+			namesByTerm.put(dictionaryTerm, name);
 			bloomFilter.put(term);
 			rawTermSet.add(term);
 		}

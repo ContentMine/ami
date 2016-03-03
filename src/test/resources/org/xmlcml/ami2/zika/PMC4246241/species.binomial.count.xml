@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="43">Aedes albopictus</result>
+ <result title="frequency" count="35">Aedes aegypti</result>
+ <result title="frequency" count="6">A. albopictus</result>
+ <result title="frequency" count="1">Serratia odorifera</result>
+ <result title="frequency" count="1">A. aegypti</result>
+ <result title="frequency" count="1">Drosophila melanogaster</result>
+</results>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC3810876/results/word/frequencies/results.xml">
+  <result title="frequency" word="forest" count="140"/>
+  <result title="frequency" word="forests" count="81"/>
+  <result title="frequency" word="species" count="70"/>
+  <result title="frequency" word="fragments" count="44"/>
+  <result title="frequency" word="Forest" count="29"/>
+  <result title="frequency" word="size" count="28"/>
+  <result title="frequency" word="tree" count="26"/>
+  <result title="frequency" word="changes" count="25"/>
+  <result title="frequency" word="°′E" count="22"/>
+  <result title="frequency" word="°′N," count="22"/>
+  <result title="frequency" word="Table" count="21"/>
+  <result title="frequency" word="area" count="21"/>
+  <result title="frequency" word="tropical" count="21"/>
+ </snippets>
+</snippetsTree>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4580713/results/word/frequencies/results.xml">
+  <result title="frequency" word="meaning" count="181"/>
+  <result title="frequency" word="life" count="127"/>
+  <result title="frequency" word=".***" count="111"/>
+  <result title="frequency" word="coping" count="98"/>
+  <result title="frequency" word="religious" count="87"/>
+  <result title="frequency" word="negative" count="48"/>
+  <result title="frequency" word="personal" count="48"/>
+  <result title="frequency" word="well-being" count="42"/>
+  <result title="frequency" word="PWB" count="41"/>
+  <result title="frequency" word="positive" count="41"/>
+  <result title="frequency" word="religion" count="39"/>
+  <result title="frequency" word="presence" count="29"/>
+  <result title="frequency" word="PWB." count="28"/>
+  <result title="frequency" word="psychological" count="25"/>
+  <result title="frequency" word="relations" count="25"/>
+  <result title="frequency" word="relation" count="23"/>
+  <result title="frequency" word="sense" count="22"/>
+  <result title="frequency" word="dimensions" count="21"/>
+ </snippets>
+</snippetsTree>

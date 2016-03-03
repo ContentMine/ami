@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4637084/results/species/genus/results.xml">
+  <result pre=" most common origin countries and the diseases most frequently involved, including Chagas disease, " exact="Balamuthia" xpath="/html[1]/body[1]/div[1]/div[6]/p[3]" match="Balamuthia" post=" amebic meningoencephalitis, giardiasis, microsporidiosis, hepatitis, measles, pertussis, tuberculo" name="genus"/>
+  <result pre="es, though it is not frequently transmitted naturally in the US due to lower exposure to competent " exact=" Anopheles" xpath="/html[1]/body[1]/div[1]/div[6]/p[3]" match="Anopheles" post=" mosquito vectors. The United States accepts an average of 50,000–70,000 refugees each year, and th" name="genus"/>
+  <result pre="Although not identified in international adoptees, per se, " exact=" Balamuthia" xpath="/html[1]/body[1]/div[1]/div[6]/p[3]" match="Balamuthia" post=" amebic encephalitis is of concern as demonstrated by Hispanic Americans in California. Seven cases" name="genus"/>
+  <result pre="sus estimating the Hispanic American population to be over 15% as of 2010, the potential influx of " exact=" Balamuthia" xpath="/html[1]/body[1]/div[1]/div[6]/p[3]" match="Balamuthia" post=" encephalitis, due to the refugee or the adopted population, could put Hispanic Americans at a heig" name="genus"/>
+  <result pre="mericans at a heightened risk. However, since Balamuthia, like other opportunistic amoebae " exact=" Naegleria" xpath="/html[1]/body[1]/div[1]/div[6]/p[3]" match="Naegleria" post=" and Acanthamoeba, is generally acquired from natural environmental sources and is present " name="genus"/>
+  <result pre="If this importation of " exact=" Giardia" xpath="/html[1]/body[1]/div[1]/div[6]/p[3]" match="Giardia" post=" does not remain in check, the endemic level could be heightened within the United States borders a" name="genus"/>
+  <result pre="rdiasis within Sweden. Data taken from the Swedish national database confirmed that 4,151 cases of " exact=" Giardia" xpath="/html[1]/body[1]/div[1]/div[6]/p[3]" match="Giardia" post=" in newly arrived immigrants and refugees and 455 cases in internationally adopted children were im" name="genus"/>
+  <result pre="ted within the country's borders [ 24 ]. This substantial transfer of " exact=" Giardia" xpath="/html[1]/body[1]/div[1]/div[6]/p[3]" match="Giardia" post=" resulted in a substantially greater calculated risk for being diagnosed with giardiasis. According" name="genus"/>
+  <result pre="ially in Eastern Europe [ 30 , 31 ]. The " exact=" Aedes" match="Aedes" post=" mosquito vectors of this disease and diverse canid reservoirs are present in areas of the United S" name="genus"/>
+ </snippets>
+</snippetsTree>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC3323869/results/species/binomial/results.xml">
+  <result pre="&gt;2004 ). Cell surface located NOX enzymes have also been shown to be responsible for ESP in " exact="C. marina" xpath="/html[1]/body[1]/div[1]/div[6]/div[3]/p[3]" match="C. marina" post=" (Kim et al., 2000 ), the fungus A. nidulans (Lara-Ortíz et al." name="binomial"/>
+  <result pre="sponsible for ESP in C. marina (Kim et al., 2000 ), the fungus " exact="A. nidulans" xpath="/html[1]/body[1]/div[1]/div[6]/div[3]/p[3]" match="A. nidulans" post=" (Lara-Ortíz et al., 2003 ) and numerous other fungi and yeasts (Aguir" name="binomial"/>
+  <result pre=" 1998 ; Sagi and Fluhr, 2001 ), and the coral " exact="Stylophora pistillata" xpath="/html[1]/body[1]/div[1]/div[6]/div[3]/p[3]" match="Stylophora pistillata" post=" and its symbiont Symbiodinium sp. (Saragosti et al., 2010 ). " name="binomial"/>
+  <result pre="hibitor of NOX enzymes, has also been shown to dramatically inhibit ESP in cultures of the diatoms " exact="Thalassiosira weissflogii" xpath="/html[1]/body[1]/div[1]/div[6]/div[3]/p[3]" match="Thalassiosira weissflogii" post=" and T. pseudonana (Kustka et al., 2005 ). BLAST searches of se" name="binomial"/>
+  <result pre=" shown to dramatically inhibit ESP in cultures of the diatoms Thalassiosira weissflogii and " exact="T. pseudonana" xpath="/html[1]/body[1]/div[1]/div[6]/div[3]/p[3]" match="Thalassiosira pseudonana" post=" (Kustka et al., 2005 ). BLAST searches of sequenced genomes reveal th" name="binomial"/>
+  <result pre="m of Gram negative bacteria) or producing extracellular microenvironments (e.g., the glycocalyx of " exact="C. marina" match="C. marina" post="), SOD may not be able to access the site(s) of extracellular " name="binomial"/>
+ </snippets>
+</snippetsTree>

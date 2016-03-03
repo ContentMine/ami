@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4447349/results/word/frequencies/results.xml">
+  <result title="frequency" word="amino" count="83"/>
+  <result title="frequency" word="diabetic" count="79"/>
+  <result title="frequency" word="BCAA" count="74"/>
+  <result title="frequency" word="blastocysts" count="58"/>
+  <result title="frequency" word="acid" count="54"/>
+  <result title="frequency" word="rabbits" count="46"/>
+  <result title="frequency" word="acids" count="40"/>
+  <result title="frequency" word="embryos" count="35"/>
+  <result title="frequency" word="maternal" count="32"/>
+  <result title="frequency" word="concentrations" count="31"/>
+  <result title="frequency" word="stage" count="30"/>
+  <result title="frequency" word="protein" count="27"/>
+  <result title="frequency" word="diabetes" count="25"/>
+  <result title="frequency" word="insulin" count="25"/>
+  <result title="frequency" word="levels" count="25"/>
+  <result title="frequency" word="increased" count="24"/>
+  <result title="frequency" word="plasma" count="24"/>
+  <result title="frequency" word="Amino" count="23"/>
+  <result title="frequency" word="Bcat" count="23"/>
+  <result title="frequency" word="Fig" count="23"/>
+  <result title="frequency" word="gastrulation" count="22"/>
+  <result title="frequency" word="tissue" count="21"/>
+ </snippets>
+</snippetsTree>

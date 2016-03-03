@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC3766601/results/species/binomial/results.xml">
+  <result pre="irus species, the most known virus-transmitting arthropods (vectors) are mosquitoes (mostly female " exact="Aedes aegypti" xpath="/html[1]/body[1]/div[1]/div[7]/p[1]" match="Aedes aegypti" post=" and Aedes albopictus), ticks, midges, and sandflies. Humans are usually dead-end hosts, as " name="binomial"/>
+  <result pre="own virus-transmitting arthropods (vectors) are mosquitoes (mostly female Aedes aegypti and " exact="Aedes albopictus" xpath="/html[1]/body[1]/div[1]/div[7]/p[1]" match="Aedes albopictus" post="), ticks, midges, and sandflies. Humans are usually dead-end hosts, as they do not develop the high" name="binomial"/>
+  <result pre="demics have occasionally been described, such as YFV plus CHIKV, DENV plus CHIKV, or more recently " exact="Plasmodium falciparum" match="Plasmodium falciparum" post=" malaria plus DENV1 and CHIKV on Madagascar's east coast [ 1 ]. " name="binomial"/>
+ </snippets>
+</snippetsTree>

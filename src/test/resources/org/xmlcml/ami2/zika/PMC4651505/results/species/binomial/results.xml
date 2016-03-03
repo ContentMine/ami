@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="binomial">
+ <result pre=" to adaptive mutations in the E1 and E2 envelope glycoproteins that provide a fitness advantage in " exact="Aedes albopictus" xpath="/html[1]/body[1]/div[1]/div[8]/p[2]" match="Aedes albopictus" post=" without reducing fitness in A. aegypti [ 6 ] a" name="binomial"/>
+ <result pre="coproteins that provide a fitness advantage in Aedes albopictus without reducing fitness in " exact="A. aegypti" xpath="/html[1]/body[1]/div[1]/div[8]/p[2]" match="Aedes aegypti" post=" [ 6 ] and permit rapid lineage diversification [ &lt;su" name="binomial"/>
+ <result pre="tic re-emergence of CHIKV in Asia, the intensity of global travel and the widespread prevalence of " exact="A. aegypti" xpath="/html[1]/body[1]/div[1]/div[8]/p[2]" match="Aedes aegypti" post=" and A. albopictus, the emergence of CHIKV in the Americas was long anticipated [ &lt;a " name="binomial"/>
+ <result pre="IKV in Asia, the intensity of global travel and the widespread prevalence of A. aegypti and " exact="A. albopictus" xpath="/html[1]/body[1]/div[1]/div[8]/p[2]" match="Aedes albopictus" post=", the emergence of CHIKV in the Americas was long anticipated [ &lt;a href=&quot;#pntd.0004199.ref00" name="binomial"/>
+ <result pre="gistic adaptive mutations in E2/E3 (R198Q/S18F) that confer a fitness advantage for IOL strains in " exact="A. albopictus" xpath="/html[1]/body[1]/div[1]/div[8]/p[2]" match="Aedes albopictus" post=" [ 6 , 8 " name="binomial"/>
+ <result pre=" these corresponded to known adaptive mutations that confer a fitness advantage for IOL strains in " exact="A. albopictus" match="Aedes albopictus" post=" [ 6 , 8 " name="binomial"/>
+</results>

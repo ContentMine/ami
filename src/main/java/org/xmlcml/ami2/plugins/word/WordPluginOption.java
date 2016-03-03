@@ -4,22 +4,28 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.plugins.PluginOption;
+import org.xmlcml.ami2.plugins.AMIPluginOption;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.util.CellRenderer;
 
-public class WordPluginOption extends PluginOption {
+public class WordPluginOption extends AMIPluginOption {
 
 	private static final Logger LOG = Logger.getLogger(WordPluginOption.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	public static final String WORD = "word";
+	public static final String TAG = "word";
+	private static final String SEARCH = "search";
 	private String searchDictionary;
 	private String dictionary;
 
+	public WordPluginOption() {
+		super(TAG);
+	}
+
 	public WordPluginOption(List<String> options, List<String> flags) {
-		super(WORD, options, flags);
+		super(TAG, options, flags);
 	}
 
 	protected void run() {
@@ -33,7 +39,7 @@ public class WordPluginOption extends PluginOption {
 			plugin = "search";
 			dictionary = getOption(null);
 		}
-		LOG.debug(">>>>>>>"+commandString);
+		LOG.debug("WORD "+commandString);
 		new WordArgProcessor(commandString.toString()).runAndOutput();
 	}
 
@@ -73,6 +79,23 @@ public class WordPluginOption extends PluginOption {
 			LOG.debug("runMatchSummaryAndCount: "+cmd);
 			new DefaultArgProcessor(cmd).runAndOutput();
 		}
+	}
+	
+	@Override
+	public CellRenderer getNewCellRenderer() {
+		CellRenderer cellRenderer = super.getNewCellRenderer();
+		cellRenderer.setHref0(AMIPluginOption.WIKIPEDIA_HREF0);
+		cellRenderer.setHref1(AMIPluginOption.WIKIPEDIA_HREF1);
+		cellRenderer.setUseHrefWords(1, "_");
+		return cellRenderer;
+	}
+
+	protected boolean matches(String pluginOptionName) {
+		String pluginOptionTag0 = pluginOptionName.split(":")[0];
+		String pluginOptionTag1 = pluginOptionName.split(":")[1];
+		LOG.trace("TAG "+pluginOptionTag0+" : "+pluginOptionName);
+		boolean ok = SEARCH.equals(pluginOptionTag0) || TAG.equals(pluginOptionTag0);
+		return ok;
 	}
 
 

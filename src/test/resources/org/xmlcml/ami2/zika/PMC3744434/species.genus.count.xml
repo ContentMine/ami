@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="9">Flavivirus</result>
+ <result title="frequency" count="7">Phlebovirus</result>
+ <result title="frequency" count="6">Alphavirus</result>
+ <result title="frequency" count="5">Orthobunyavirus</result>
+ <result title="frequency" count="3">Culex</result>
+ <result title="frequency" count="1">Bunyaviridae</result>
+</results>
