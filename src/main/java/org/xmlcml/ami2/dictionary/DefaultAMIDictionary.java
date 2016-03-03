@@ -180,7 +180,7 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		return;
 	}
 
-	private void readDictionary(InputStream is) {
+	protected void readDictionary(InputStream is) {
 		dictionaryElement = XMLUtil.parseQuietlyToDocument(is).getRootElement();
 		namesByTerm = new HashMap<DictionaryTerm, String>();
 		rawTermSet = new HashSet<String>();
