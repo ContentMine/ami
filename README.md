@@ -1,12 +1,15 @@
 # AMI
-
-[2015-09-23: This is the current active repository, but will move to https://github.com/ContentMine/ami/ in the near future ].
-
 AMI provides a generic infrastructure where plugins can search, index or transform structured documents on a high-through basis. The typical input is structured, normalized, tagged XHTML, possibly containing (or linked to) SVG and PNG files. The plugins are designed to analyse text or graphics or a combination according to the discipline. 
 
-## Historical note and obsoletion
+## Running
+There are binaries provided with releases which enable running of ami's plugins; shell and batch scripts are provided to make running these easier. Detailed tutorials of these can be found in the ContentMine software tutorials.
 
-AMI has been through 2 major revisions, and most recently has been split into two parts (a) ``Norma`` which processes legacy documents and normalizes HTML (NHTML) and (b) AMI which runs plugins over the NHTML. AMI currently processes PDF, XML, HTML, etc but these will be obsoleted in favour of the output from ``Norma``. 
+Run on a CTree which contains scholarly.html files of the papers you are analysing. This can be made using Norma.
+
+Schema
+```ami2-<pluginname> --project <foldername> <plugin option> <options relating to plugin>
+ami2-gene --project zika --g.gene --g.type human
+``` 
 
 ## Building
 ```
