@@ -58,7 +58,6 @@ public class HGNCDictionary extends DefaultAMIDictionary {
 	private void readHGNCXML() {
 		ClassLoader cl = getClass().getClassLoader();
 		InputStream HGNC_XML_RES = cl.getResourceAsStream("org/xmlcml/ami2/plugins/gene/hgnc/hgnc.xml");
-		LOG.debug("hgnc xml res: " + HGNC_XML_RES);
 		readDictionary(HGNC_XML_RES);
 	}
 
