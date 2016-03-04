@@ -51,7 +51,7 @@ public class JAXDictionary extends DefaultAMIDictionary {
 
 	private void readJAX_XML() {
 		ClassLoader cl = getClass().getClassLoader();
-		InputStream JAX_XML_RES = cl.getResourceAsStream("org/xmlcml/ami2/plugins/genes/jax/jax.xml");
+		InputStream JAX_XML_RES = cl.getResourceAsStream("org/xmlcml/ami2/plugins/gene/jax/jax.xml");
 		readDictionary(JAX_XML_RES);
 	}
 
