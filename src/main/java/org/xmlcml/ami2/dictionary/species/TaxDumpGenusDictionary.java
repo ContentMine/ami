@@ -1,6 +1,7 @@
 package org.xmlcml.ami2.dictionary.species;
 
 import java.io.File;
+import java.io.InputStream;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -33,14 +34,9 @@ public class TaxDumpGenusDictionary extends DefaultAMIDictionary {
 	}
 
 	private void readTAXDUMPXML() {
-		if (!TAXDUMP_XML_FILE.exists()) {
-			// read text file
-//			readTAXDUMPJson();
-//			createDictionaryElementFromHashMap(TAXDUMP);
-//			writeXMLFile(TAXDUMP_XML_FILE);
-		} else {
-			readDictionary(TAXDUMP_XML_FILE);
-		}
+		ClassLoader cl = getClass().getClassLoader();
+		InputStream TAXDUMP_XML_RES = cl.getResourceAsStream("org/xmlcml/ami2/plugins/species/taxdump/taxdumpGenus.xml");
+		readDictionary(TAXDUMP_XML_RES);
 	}
 
 

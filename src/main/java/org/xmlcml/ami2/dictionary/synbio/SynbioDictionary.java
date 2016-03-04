@@ -1,6 +1,7 @@
 package org.xmlcml.ami2.dictionary.synbio;
 
 import java.io.File;
+import java.io.InputStream;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -24,7 +25,9 @@ public class SynbioDictionary extends DefaultAMIDictionary {
 	}
 	
 	private void init() {
-		readDictionary(SYNBIO_XML_FILE);
+		ClassLoader cl = getClass().getClassLoader();
+		InputStream SYNBIORES = cl.getResourceAsStream("org/xmlcml/ami2/plugins/synbio/synbio.xml");
+		readDictionary(SYNBIORES);
 	}
 
 

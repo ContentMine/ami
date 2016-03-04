@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 
@@ -49,13 +50,9 @@ public class JAXDictionary extends DefaultAMIDictionary {
 	}
 
 	private void readJAX_XML() {
-		if (!JAX_XML_FILE.exists()) {
-			readJAXTSV(JAX_TSV_FILE);
-			dictionaryElement = createDictionaryElementFromHashMap("jax");
-			writeXMLFile(JAX_XML_FILE);
-		} else {
-			readDictionary(JAX_XML_FILE);
-		}
+		ClassLoader cl = getClass().getClassLoader();
+		InputStream JAX_XML_RES = cl.getResourceAsStream("org/xmlcml/ami2/plugins/genes/jax/jax.xml");
+		readDictionary(JAX_XML_RES);
 	}
 
 	private void readJAXTSV(File file) {

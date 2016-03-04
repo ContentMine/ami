@@ -3,6 +3,7 @@ package org.xmlcml.ami2.dictionary.gene;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -55,18 +56,15 @@ public class HGNCDictionary extends DefaultAMIDictionary {
 	}
 
 	private void readHGNCXML() {
-		if (!HGNC_XML_FILE.exists()) {
-			readHGNCJson();
-			createDictionaryElementFromHashMap(HGNC);
-			writeXMLFile(HGNC_XML_FILE);
-		} else {
-			readDictionary(HGNC_XML_FILE);
-		}
+		ClassLoader cl = getClass().getClassLoader();
+		InputStream HGNC_XML_RES = cl.getResourceAsStream("org/xmlcml/ami2/plugins/gene/hgnc/hgnc.xml");
+		LOG.debug("hgnc xml res: " + HGNC_XML_RES);
+		readDictionary(HGNC_XML_RES);
 	}
 
 	private void readHGNCJson() {
 		try {
-			createFromInputStream(HGNC, new FileInputStream(HGNC_JSON_FILE));
+			createFromInputStream(HGNC, this.getClass().getClassLoader().getResourceAsStream("org/xmlcml/ami2/plugins/gene/hgnc/hgnc_complete_set.json"));
 			String resultsJsonString = IOUtils.toString(inputStream, UTF_8);
 		    JsonParser parser = new JsonParser();
 		    hgncJson = (JsonObject) parser.parse(resultsJsonString);
