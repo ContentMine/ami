@@ -77,7 +77,7 @@ public class PhyloArgProcessorTest {
 	 * 
 	 * @throws Exception
 	 */
-	@Ignore("requires tesseract")
+//	@Ignore("requires tesseract")
 	public void testFullCommandLine() throws Exception {
 		String name = "ijs_0_000364_0"; 
 		String img = "003";
@@ -96,9 +96,9 @@ public class PhyloArgProcessorTest {
 				"";
 		PhyloTreeArgProcessor argProcessor = new PhyloTreeArgProcessor(cmd);
 		argProcessor.runAndOutput();
-		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
-				"<results title=\"mend me\">"
-				);
+//		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+//				"<results title=\"mend me\">"
+//				);
 	}
 
 	@Test

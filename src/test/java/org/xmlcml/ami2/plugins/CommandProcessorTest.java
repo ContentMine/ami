@@ -38,7 +38,7 @@ public class CommandProcessorTest {
 	}
 
 	@Test
-	@Ignore
+	//@Ignore
 	// runs defaults
 	public void testCommandLineShortEmpty() throws IOException {
 		String project = "zika10";

@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIPluginOption;
+import org.xmlcml.ami2.plugins.phylotree.ArgProcessorRunnable;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.util.CellRenderer;
 
@@ -39,7 +40,8 @@ public class WordPluginOption extends AMIPluginOption {
 			plugin = "search";
 			dictionary = getOption(null);
 		}
-		LOG.debug("WORD "+commandString);
+		DefaultArgProcessor.CM_LOG.debug("WORD "+commandString);
+		System.out.print("WS: "+projectDir+"  ");
 		new WordArgProcessor(commandString.toString()).runAndOutput();
 	}
 
@@ -64,7 +66,7 @@ public class WordPluginOption extends AMIPluginOption {
 		option = (dictionary != null) ? dictionary : option;
 		cmd += " --filter file(**/"+getPlugin(plugin)+"/"+option+"/results.xml)xpath("+resultXPathBase+xpathFlags+") ";
 		cmd += " -o "+createSnippetsFilename(option)+"  ";
-		LOG.debug("runFilterResultsXMLOptions: >>>> "+cmd);
+		LOG.trace("runFilterResultsXMLOptions: >>>> "+cmd);
 		return cmd;
 	}
 
@@ -76,7 +78,7 @@ public class WordPluginOption extends AMIPluginOption {
 		} else {
 			String cmd = "--project "+projectDir+" -i "+createSnippetsFilename(dictionary)+"  "
 					+ "--xpath //result/"+resultXPathAttribute+" --summaryfile "+createCountFilename(dictionary);
-			LOG.debug("runMatchSummaryAndCount: "+cmd);
+			DefaultArgProcessor.CM_LOG.debug("runMatchSummaryAndCount: "+cmd);
 			new DefaultArgProcessor(cmd).runAndOutput();
 		}
 	}

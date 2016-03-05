@@ -184,7 +184,7 @@ public class RegressionDemoTest {
 			cmd += " "+copyFile+" ";
 		}
 		cmd += cmd1;
-		LOG.debug(cmd);
+//		LOG.debug(cmd);
 //		cmd = "--sp.species --context 35 50 --sp.type binomial genus genussp -q target/plosone/species/malaria target/plosone/species/malaria -i scholarly.html"; 
 //		cmd = "--sp.species --context 35 50 --sp.type binomial genus genussp -q target/plosone/species/malaria -i scholarly.html";
 		String[] args = cmd.split("\\s+");

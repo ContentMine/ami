@@ -4,22 +4,25 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import nu.xom.Element;
-
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
+
+import nu.xom.Element;
 
 public class AMIPluginTest {
 
 	@Test
+	@Ignore // outputs heklp
 	public void testAMIPlugin() {
 		String[] args = {"regex"};
 		AMIPlugin.main(args);
 	}
 	
 	@Test
+	@Ignore // avoid help output
 	public void testAMIPluginHelp() {
 		String[] args = {"regex", "--help"};
 		AMIPlugin.main(args);

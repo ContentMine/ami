@@ -102,35 +102,6 @@ public class LargeTests {
 				"<results title=\"synbioPhrases\" />");
 	}
 	
-	@Test
-	@Ignore
-	public void testArmillaria() throws IOException {
-		runDefault("armillaria");
-	}
-
-	@Test
-	@Ignore
-	public void testMicrobiome() throws IOException {
-		runDefault("microbiome");
-	}
-
-	@Test
-//	@Ignore
-	public void testQuoll() throws IOException {
-		runDefault("quoll");
-	}
-
-	@Test
-//	@Ignore
-	public void testApelin2015() throws IOException {
-		runDefault("apelin2015");
-	}
-
-	@Test
-//	@Ignore
-	public void testSTD() throws IOException {
-		runDefault("std");
-	}
 
 	@Test
 //	@Ignore
@@ -138,23 +109,6 @@ public class LargeTests {
 		runDefault("wolbachia2015");
 	}
 
-	@Test
-//	@Ignore
-	public void testTasman() throws IOException {
-		runDefault("tasman");
-	}
-	
-	@Test
-//	@Ignore
-	public void testOettinger() throws IOException {
-		runDefault("oettinger");
-	}
-
-	@Test
-//	@Ignore
-	public void testZika() throws IOException {
-		runDefault("zika2");
-	}
 
 	@Test
 //	@Ignore
@@ -164,46 +118,10 @@ public class LargeTests {
 
 	@Test
 //	@Ignore
-	public void testTerrorism() throws IOException {
-		runDefault("terrorism2015");
-	}
-
-	@Test
-//	@Ignore
-	public void ngfpoly() throws IOException {
-		runDefault("ngfpoly");
-	}
-
-	@Test
-//	@Ignore
-	public void testApelin() throws IOException {
-		runDefault("apelin2015");
-	}
-
-	@Test
-//	@Ignore
 	public void testZika10() throws IOException {
 		runBioscienceDefault("zika10", new File("src/test/resources/org/xmlcml/ami2/zika10/"));
 	}
 
-	@Test
-//	@Ignore
-	public void testKakadu() throws IOException {
-		runDefault("kakadu");
-	}
-
-	@Test
-//	@Ignore
-	public void testBombus() throws IOException {
-		runDefault("bombus");
-	}
-
-	@Test
-	@Ignore
-	public void testAyeAye() throws IOException {
-		runDefault("ayeaye");
-	}
-	
 	private void runDefault(String project) throws IOException {
 		File rawDir = new File("../projects/"+project);
 		runBioscienceDefault(project, rawDir);

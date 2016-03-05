@@ -11,6 +11,7 @@ import nu.xom.Attribute;
 import nu.xom.Element;
 
 import org.apache.log4j.Logger;
+import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.euclid.Int2;
 import org.xmlcml.graphics.svg.SVGElement;
 import org.xmlcml.graphics.svg.SVGG;
@@ -156,7 +157,7 @@ public class NexmlTree extends NexmlElement {
 
 	public NexmlNode getRootNode() {
 		if (rootNexmlNode == null) {
-			LOG.error("No root Node ... looking ");
+			DefaultArgProcessor.CM_LOG.error("No root Node ... looking ");
 			getNodeListAndMap();
 			for (NexmlNode nexmlNode : nodeList) {
 				if (NexmlFactory.TRUE.equals(nexmlNode.getRootValue())) {
@@ -179,12 +180,11 @@ public class NexmlTree extends NexmlElement {
 				if (node.getParentNexmlNode() == null) {
 					NexmlNode parentNode = addParent(node);
 					if (parentNode == null /*|| true*/) {
-//						LOG.debug(node);
 						rootList.add(node);
 					}
 				}
 			}
-			LOG.debug("rootList "+rootList.size());
+			LOG.trace("rootList "+rootList.size());
 		}
 		return rootList;
 	}
@@ -265,7 +265,7 @@ public class NexmlTree extends NexmlElement {
 				if (getNode(id) == null) {
 					this.appendChild(node);
 				} else {
-					LOG.error("Already a node with id: "+id);
+					DefaultArgProcessor.CM_LOG.error("Already a node with id: "+id);
 				}
 			}
 		}

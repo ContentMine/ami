@@ -295,7 +295,6 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		if (regexString == null) {
 			LOG.warn("cannot find regex");
 		} else {
-			LOG.debug(regexString);
 			Pattern pattern = Pattern.compile(regexString);
 			if (dictionaryTermList != null) {
 				for (DictionaryTerm term : dictionaryTermList) {

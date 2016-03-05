@@ -93,7 +93,7 @@ public abstract class AMIPluginOption {
 			pluginOption = new WordPluginOption(options,flags);
 		} else {
 			LOG.error("unknown command: "+command);
-			LOG.info("commands: "+COMMANDS);
+//			LOG.info("commands: "+COMMANDS);
 		}
 		if (pluginOption != null) {
 			pluginOption.setOptionFlags(optionFlags);
@@ -124,7 +124,8 @@ public abstract class AMIPluginOption {
 	
 	private void runFilterResultsXMLOptions(String option) {
 		String filterCommandString = createFilterCommandString(option);
-		System.out.println("filter: "+filterCommandString);
+		DefaultArgProcessor.CM_LOG.debug("filter: "+filterCommandString);
+		System.out.print(option);
 		new DefaultArgProcessor(filterCommandString).runAndOutput();
 	}
 
@@ -133,7 +134,8 @@ public abstract class AMIPluginOption {
 		String xpathFlags = createXpathQualifier();
 		cmd += " --filter file(**/"+getPlugin(plugin)+"/"+getOption(option)+"/results.xml)xpath("+resultXPathBase+xpathFlags+") ";
 		cmd += " -o "+createSnippetsFilename(option)+"  ";
-		System.out.println("runFilterResultsXMLOptions: "+cmd);
+		DefaultArgProcessor.CM_LOG.debug("runFilterResultsXMLOptions: "+cmd);
+		System.out.print(option);
 		return cmd;
 	}
 
@@ -188,7 +190,8 @@ public abstract class AMIPluginOption {
 				+ " --summaryfile "+createCountFilename(option)
 				+ " --dffile "+createDocumentCountFilename(option)
 				;
-		System.out.println("runMatchSummaryAndCount: "+cmd);
+		DefaultArgProcessor.CM_LOG.debug("runMatchSummaryAndCount: "+cmd);
+		System.out.print("C: "+option);
 		new DefaultArgProcessor(cmd).runAndOutput();
 	}
 	

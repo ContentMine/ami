@@ -77,7 +77,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 
 	public void parseNewickFile(ArgumentOption option, ArgIterator argIterator) {
 		phyloCore.nexmlProcessor.setNewickFilename(argIterator.getString(option));
-		CORE_LOG().info("newick file");
+		PROJECT_LOG().info("newick file");
 	}
 	
 
@@ -109,7 +109,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	 * @param option
 	 */
 	public void runPhylo(ArgumentOption option) {
-		LOG.debug("runPhylo on: "+inputList+"; not yet working");
+		LOG.warn("runPhylo on: "+inputList+"; looks invalid strategy");
 		for (String input : inputList) {
 			File inputFile = new File(currentCTree.getDirectory(), input);
 			getPhyloCore().createTree(inputFile);
@@ -127,7 +127,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 	}
 	
 	public void summarize(ArgumentOption option) {
-		LOG.trace(CORE_LOG().toXML());
+		LOG.trace(PROJECT_LOG().toXML());
 	}
 	
 	// =============================

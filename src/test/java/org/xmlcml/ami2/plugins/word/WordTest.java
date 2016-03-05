@@ -134,7 +134,9 @@ public class WordTest {
 	public void testSummarizeDocumentFrequencies() throws IOException {
 		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
 		String args = 
-			"-q "+AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+STOPWORDS_TXT+" "+CLINICAL_STOPWORDS_TXT+" --w.case ignore --w.summary booleanFrequency --summaryfile target/examples/	--w.wordcount {3,*}";
+			"-q "+AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1.toString()+" --w.words "+WordArgProcessor.WORD_FREQUENCIES
+			+ " --w.stopwords "+STOPWORDS_TXT+" "+CLINICAL_STOPWORDS_TXT+" --w.case ignore --w.summary booleanFrequency"
+			+ " --summaryfile target/examples/	--w.wordcount {3,*}";
 		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, "<results title=\"frequencies\"><result title=\"frequency\" word=\"smoking\" count=\"71\"");

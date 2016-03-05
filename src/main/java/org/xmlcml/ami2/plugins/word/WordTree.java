@@ -73,7 +73,7 @@ public class WordTree extends Element {
 	public void trimInsignificantSingletons() {
 		String xpath = "//word[@count=1]/word[@count=1]";
 		List<Element> insignificants = XMLUtil.getQueryElements(this, xpath);
-		LOG.debug("> "+insignificants.size());
+		LOG.trace("> "+insignificants.size());
 		for (Element insignificant : insignificants) {
 			insignificant.detach();
 		}

@@ -222,10 +222,20 @@ public class AMISearcher extends AbstractSearcher {
 	public ResultElement createResultElement(List<String> strings, int pos, int offset) {
 		this.stringList = strings;
 		ResultElement resultElement = new ResultElement();
-		resultElement.addAttribute(new Attribute(PRE, StringUtils.join(createPreStringList(pos).iterator(), " ")));
-		resultElement.addAttribute(new Attribute(EXACT, StringUtils.join(createExactStringList(pos, offset).iterator(), " ")));
-		resultElement.addAttribute(new Attribute(POST, StringUtils.join(createPostStringList(pos + offset).iterator(), " ")));
+		addAttribute(resultElement, PRE, StringUtils.join(createPreStringList(pos).iterator(), " "));
+		addAttribute(resultElement, EXACT, StringUtils.join(createExactStringList(pos, offset).iterator(), " "));
+		addAttribute(resultElement, POST, StringUtils.join(createPostStringList(pos + offset).iterator(), " "));
 		return resultElement;
+	}
+
+	private void addAttribute(ResultElement resultElement, String name, String value) {
+		try {
+			resultElement.addAttribute(new Attribute(name, value));
+		} catch (Exception e) {
+			// get rid of this later
+			value = value.replaceAll(String.valueOf((char)23), "");
+			resultElement.addAttribute(new Attribute(name, value));
+		}
 	}
 
 	protected ResultElement createResultElement(String value, DefaultStringDictionary dictionary) {
