@@ -14,7 +14,7 @@ import org.xmlcml.ami2.plugins.word.WordTest;
 import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.norma.NormaArgProcessor;
 
-@Ignore
+//@Ignore
 public class LargeTests {
 	
 	File large = new File("../patents/US08979");
@@ -104,14 +104,20 @@ public class LargeTests {
 	
 
 	@Test
-//	@Ignore
+	@Ignore
 	public void testWolbachia() throws IOException {
 		runDefault("wolbachia2015");
 	}
 
+	@Test
+	@Ignore
+	public void testZika() throws IOException {
+		runDefault("zika");
+	}
+
 
 	@Test
-//	@Ignore
+	@Ignore
 	public void testSemipartial() throws IOException {
 		runStatisticsDefault("semipartial");
 	}

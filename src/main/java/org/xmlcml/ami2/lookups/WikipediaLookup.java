@@ -95,6 +95,7 @@ Mar 14 (9 days ago)
 	@Override
 	public String lookup(String speciesName) throws IOException {
 		if (speciesName != null) {
+			LOG.debug("WPSP: "+speciesName);
 			IntArray wikidataIntArray = getWikidataIDsAsIntArray(speciesName);
 			String result = wikidataIntArray.toString();
 			// remove all brackets
