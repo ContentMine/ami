@@ -1,0 +1,368 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1d3 20150301//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:ali="http://www.niso.org/schemas/ali/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.0 20120330//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 1.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Mem Inst Oswaldo Cruz</journal-id><journal-id journal-id-type="iso-abbrev">Mem. Inst. Oswaldo Cruz</journal-id><journal-title-group><journal-title>Mem&#x000f3;rias do Instituto Oswaldo Cruz</journal-title></journal-title-group><issn pub-type="ppub">0074-0276</issn><issn pub-type="epub">1678-8060</issn><publisher><publisher-name>Instituto Oswaldo Cruz, Minist&#x000e9;rio da Sa&#x000fa;de</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4569826</article-id><article-id pub-id-type="pmid">26200711</article-id><article-id pub-id-type="doi">10.1590/0074-02760150103</article-id><article-categories><subj-group subj-group-type="heading"><subject>Articles</subject></subj-group></article-categories><title-group><article-title>Biocontrol evaluation of extracts and a major component, clusianone, from<italic>Clusia fluminensis</italic> Planch. &#x00026; Triana against <italic>Aedes
+aegypti</italic>
+</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Anholeti</surname><given-names>Maria C</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Duprat</surname><given-names>Rodrigo C</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Figueiredo</surname><given-names>Maria R</given-names></name><xref ref-type="aff" rid="aff4">
+<sup>4</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Kaplan</surname><given-names>Maria AC</given-names></name><xref ref-type="aff" rid="aff5">
+<sup>5</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Santos</surname><given-names>Marcelo Guerra</given-names></name><xref ref-type="aff" rid="aff6">
+<sup>6</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Gonzalez</surname><given-names>Marcelo S</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Ratcliffe</surname><given-names>Norman A</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref><xref ref-type="aff" rid="aff7">
+<sup>7</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Feder</surname><given-names>Denise</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Paiva</surname><given-names>Selma R</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Mello</surname><given-names>Cicero B</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref><xref ref-type="corresp" rid="c01">
+<sup>+</sup>
+</xref></contrib></contrib-group><aff id="aff1"><label>1</label>Universidade Federal do Rio de Janeiro, Instituto de Pesquisas de
+Produtos Naturais, Programa de P&#x000f3;s-Gradua&#x000e7;&#x000e3;o em Qu&#x000ed;mica de Produtos Naturais, Rio de
+Janeiro, RJ, Brasil</aff><aff id="aff2"><label>2</label>Universidade Federal Fluminense, Instituto de Biologia, Laborat&#x000f3;rio de
+Bot&#x000e2;nica Estrutural e Funcional, Niter&#x000f3;i, RJ, Brasil</aff><aff id="aff3"><label>3</label>Universidade Federal Fluminense, Laborat&#x000f3;rio de Biologia de Insetos,
+Niter&#x000f3;i, RJ, Brasil</aff><aff id="aff4"><label>4</label>Funda&#x000e7;&#x000e3;o Oswaldo Cruz, Farmanguinhos, Laborat&#x000f3;rio de Qu&#x000ed;mica de Produtos
+Naturais, Rio de Janeiro, RJ, Brasil</aff><aff id="aff5"><label>5</label>Universidade Federal do Rio de Janeiro, Instituto de Pesquisas de
+Produtos Naturais, Rio de Janeiro, RJ, Brasil</aff><aff id="aff6"><label>6</label>Universidade do Estado do Rio de Janeiro, Faculdade de Forma&#x000e7;&#x000e3;o de
+Professores, Departamento de Ci&#x000ea;ncias, Rio de Janeiro, RJ, Brasil</aff><aff id="aff7"><label>7</label>Swansea University, College of Science, Department of Biosciences,
+Swansea, UK</aff><author-notes><corresp id="c01"><label>+</label> Corresponding author: <email>cicerobrasileiro@globo.com</email></corresp><fn fn-type="con"><p>MCA and RCD contributed equally to this work.</p></fn></author-notes><pub-date pub-type="epub-ppub"><month>8</month><year>2015</year></pub-date><!--Fake ppub date generated by PMC from publisher
+							pub-date/@pub-type='epub-ppub' --><pub-date pub-type="ppub"><month>8</month><year>2015</year></pub-date><volume>110</volume><issue>5</issue><fpage>629</fpage><lpage>635</lpage><history><date date-type="received"><day>15</day><month>3</month><year>2015</year></date><date date-type="accepted"><day>24</day><month>6</month><year>2015</year></date></history><permissions><license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by-nc/4.0/"><license-p>This is an Open Access article distributed under the terms of the Creative
+Commons Attribution Non-Commercial License, which permits unrestricted
+non-commercial use, distribution, and reproduction in any medium, provided the
+original work is properly cited.</license-p></license></permissions><abstract><p>Studies evaluated the effects of hexanic extracts from the fruits and flowers
+of<italic>Clusia fluminensis</italic> and the main component of the flower
+extract, a purified benzophenone (clusianone), against <italic>Aedes
+aegypti</italic>. The treatment of larvae with the crude fruit or flower extracts
+from <italic>C. fluminensis</italic> did not affect the survival of<italic>Ae.
+aegypti</italic> (50 mg/L), however, the flower extracts significantly delayed
+development of Ae. aegypti. In contrast, the clusianone (50 mg/L) isolate from the
+flower extract, representing 54.85% of this sample composition, showed a highly
+significant inhibition of survival, killing 93.3% of the larvae and completely
+blocking development of Ae. aegypti. The results showed, for the first time, high
+activity of clusianone against Ae. aegypti that both killed and inhibited mosquito
+development. Therefore, clusianone has potential for development as a biopesticide
+for controlling insect vectors of tropical diseases. Future work will elucidate the
+mode of action of clusianone isolated from <italic>C. fluminensis</italic>.</p></abstract><kwd-group><kwd>clusianone</kwd><kwd>larvicidal</kwd><kwd>Clusia fluminensis</kwd><kwd>Aedes aegypti</kwd></kwd-group><counts><fig-count count="4"/><table-count count="0"/><equation-count count="0"/><ref-count count="44"/><page-count count="7"/></counts></article-meta></front><body><p>Many insecticides, including the organochlorines, organophosphates and carbamates, persist
+in the environment as toxic waste (<xref rid="B31" ref-type="bibr">Miresmailli &#x00026; Isman
+2014</xref>) and are neurotoxic not only to humans, but to livestock too (<xref rid="B33" ref-type="bibr">Narahashi 2000</xref>, <xref rid="B6" ref-type="bibr">Biondi
+et al. 2012)</xref>. Furthermore, the redundant mode of action of insecticides may
+accelerate the emergence of cross-resistance to other pesticides (<xref rid="B25" ref-type="bibr">Georghiou 1972</xref>, <xref rid="B31" ref-type="bibr">Miresmailli &#x00026; Isman
+2014)</xref>. Therefore, new approaches for insect control need evaluating, including
+substances from natural sources that may have less of an environmental impact (<xref rid="B27" ref-type="bibr">Isman 2006)</xref>.</p><p>One example of a pest species that is a major vector of human diseases, including urban
+yellow fever, dengue, Chikungunya and Zika virus is <italic>Aedes aegypti,</italic> for
+which there are also many reports of populations developing resistance to different
+insecticides (<xref rid="B10" ref-type="bibr">Braga et al. 2004</xref>, Vontas et
+al<italic>.</italic> 2012). <italic>Ae. aegypti</italic> has a cosmopolitan
+distribution, is highly domesticated and anthropophilic (<xref rid="B26" ref-type="bibr">Gubler 2011</xref>, <xref rid="B38" ref-type="bibr">Powell &#x00026; Tabachnick
+2013</xref>). It is estimated that 3.6 billion people live in areas at risk from dengue
+infection and 390-500 million cases occur in 124-128 countries worldwide each year (<xref rid="B2" ref-type="bibr">Beatty et al. 2010</xref>, <xref rid="B9" ref-type="bibr">Brady
+et al. 2012</xref>, <xref rid="B5" ref-type="bibr">Bhatt et al. 2013)</xref>. In Brazil,
+the current distribution of <italic>Ae. aegypti</italic>extends to almost the whole country
+(<xref rid="B11" ref-type="bibr">Braga &#x00026; Valle 2007)</xref>, causing cyclic
+outbreaks of dengue fever in various regions, in which there are four main serotypes of the
+virus in circulation (<xref rid="B1" ref-type="bibr">Bastos et al. 2012</xref>, <xref rid="B21" ref-type="bibr">Dick et al. 2012)</xref>. There is neither a vaccine nor
+specific treatment for dengue (<xref rid="B5" ref-type="bibr">Bhatt et al. 2013)</xref>, so
+that combating the virus is limited to elimination of the mosquito vector (<xref rid="B2" ref-type="bibr">Beatty et al. 2010</xref>, <xref rid="B21" ref-type="bibr">Dick
+et al. 2012)</xref>. Therefore, the search for new alternative strategies and increased
+vigilance for vector resistance have become essential for the control of this disease
+(<xref rid="B29" ref-type="bibr">Maciel-de-Freitas et al. 2014)</xref>.</p><p>Many plant natural products have been tested as insecticides against mosquitoes (<xref rid="B15" ref-type="bibr">Carvalho 2011</xref>, <xref rid="B31" ref-type="bibr">Miresmailli &#x00026; Isman 2014</xref>, <xref rid="B40" ref-type="bibr">Reegan et al.
+2014)</xref> as they are nontoxic to mammals and are promising candidates to replace
+conventional insecticides to which insects are becoming more resistant (Braga et al. 2004,
+<xref rid="B42" ref-type="bibr">Shaalan et al. 2005</xref>, <xref rid="B14" ref-type="bibr">Cantrell et al. 2012</xref>, <xref rid="B44" ref-type="bibr">Vontas et al.
+2012)</xref>. In the majority of these studies, although larvicidal activity has been
+described for the extracts and the presence of a range of compounds sometimes detected,
+very few have actually identified the compounds responsible for activity together with
+their structure (<xref rid="B34" ref-type="bibr">Navarro et al. 2015)</xref>. Some of the
+compounds identified have been shown to disrupt the insect endocrine system, acting as
+agonists or antagonists of insect hormones, killing or even preventing them reaching the
+adult stage (<xref rid="B8" ref-type="bibr">Bowers et al. 1976</xref>, <xref rid="B24" ref-type="bibr">Garcia et al. 1986)</xref>. One group of such natural plant
+insecticides includes the terpenes, that are related to terpenoids with insect juvenile
+hormone (JH) analogue activity and have been commercially used successfully as substitutes
+for classical insecticides in areas where insect resistance has been detected (Braga et al.
+2005a,b). Apparently, no cross-resistance occurs between JH analogues and the pyrethroids
+which are generally used for the control of <italic>Ae. aegypti</italic> (<xref rid="B12" ref-type="bibr">Braga et al. 2005a</xref>).</p><p>Scientists, however, need to increase the number of alternative natural insecticides
+available for the control of <italic>Ae. aegypti</italic> in order to build up an arsenal
+of natural products able to counter the resilience of these mosquitoes to develop
+resistance. Thus, another group of natural pesticides derived from plants with potential as
+insect control agents are the benzophenones. Many derivatives of these compounds with
+different structures and a multiplicity of functions have been described (Beerhues &#x00026;Liu
+2009, <xref rid="B28" ref-type="bibr">Li et al. 2014)</xref>. Very few of these compounds
+have been investigated as potential insect control agents, although the insecticidal
+activity of benzophenones has been known for many years (<xref rid="B30" ref-type="bibr">Middleton &#x00026; Chadds 1973</xref>). Only recently has their mosquito larvicidal
+activity been realised with synthetic benzophenone indole analogues (<xref rid="B39" ref-type="bibr">Ranganatha et al. 2013)</xref> and with the benzophenones, cariphenone A and
+cariphenone B, isolated from a <italic>Hypericum carinatum</italic> (da Silva et al.
+2013a). In addition, a commercial preparation of benzophenones used in ultraviolet (UV)
+filters has been shown to disrupt the endocrine system, activating hormonal genes and
+altering embryonic development of<italic>Chironomus riparius</italic> (<xref rid="B36" ref-type="bibr">Oz&#x000e1;ez et al. 2014)</xref>.</p><p>One source of benzophenones is <italic>Clusia fluminensis </italic>(Planch. &#x00026; Triana)
+(Clusiaceae), a native species from the Brazilian coast, commonly used as an ornamental
+plant because of its evergreen leaves and high tolerance to dehydration. Significantly,
+these leaves rarely show signs of herbivory, which are always undamaged and bright (<xref rid="B7" ref-type="bibr">Bittrich 2010</xref>). In 2000, Porto et al. identified and
+quantified, by high performance liquid chromatography, polyisoprenylated benzophenones,
+including clusianone and spiritone, in resins obtained from the male flowers of <italic>C.
+fluminensis</italic>. Recently, clusianone from male flowers of<italic>C.
+fluminensis</italic> was also isolated and structurally characterised (<xref rid="B43" ref-type="bibr">Silva et al. 2012</xref>).</p><p>In the quest for alternative natural biological control agents against mosquito larvae, the
+present paper reports on the larvicidal activity of hexanic extracts from <italic>C.
+fluminensis</italic> against <italic>Ae. aegypti </italic>(Linnaeus) (Diptera:
+Culicidae). Subsequently, a benzophenone (clusianone) was isolated, structurally elucidated
+and investigated as the source of the larvicidal activity.</p><sec sec-type="materials|methods"><title>MATERIALS AND METHODS</title><p>
+<italic>Insect colonies</italic> - Eggs of <italic>Ae. aegypti,</italic> Rockefeller
+strain, were provided by Dr Jos&#x000e9; Bento Pereira Lima [Brazilian Army Biology Institute,
+Oswaldo Cruz Foundation (Fiocruz), state of Rio de Janeiro (RJ), Brazil]. They hatched
+in the rearing water after about 1 h and groups of 500 newly hatched larvae were placed
+in plastic bowls (25 x 15 x 7 cm) containing 500 mL of dechlorinated water and 500 mg of
+fish feed flakes (Tetramin<sup>&#x000ae;</sup> Tropical Flakes). The larvae were kept in
+incubators BOD at 26 &#x000b1; 1&#x000b0;C until third instars emerged after approximately 72 h.</p><p>
+<italic>Plant material</italic> - Flowers from male and fruits from female <italic>C.
+fluminensis </italic>were collected, with the permission of the Brazilian Army, in a
+rocky outcrop at Forte Bar&#x000e3;o do Imbuhy, in the city of Niter&#x000f3;i, RJ. Flowers and fruits
+were available in the summer of 2006 and autumn of 2007, respectively. The plant
+material was identified by Dr Marcelo Guerra Santos and a voucher specimen was deposited
+at the herbarium of the Faculty of Teacher Education, Rio de Janeiro State University
+(licence 9213).</p><p>
+<italic>Preparation of plant extracts </italic>- Fruits of <italic>C.
+fluminensis</italic>were dried in an oven at 40&#x000b0;C and subsequently fragmented while
+whole flowers were used while still partially fresh. The crude extracts were prepared by
+macerating plant organs with analytical grade hexane as a solvent at room temperature.
+The solvent was renewed every seven days and then evaporated under reduced pressure.</p><p>
+<italic>Chemical analysis of crude extracts - Gas chromatography coupled with mass
+spectrometry (GC-MS)</italic> - The crude extracts obtained from flowers of<italic>C.
+flumi-nensis </italic>were analysed by GC-MS performed on an Agilent model 6890N gas
+chromatograph equipped with a mass selective detector, model 5973N. A volume of 1 &#x000b5;L of
+the solution with a concentration 1 mg/mL was injected. The following conditions were
+utilised: carrier gas, helium at 2.0 mLmin<sup>-1</sup>, split ratio 5:1, injector
+temperature 300&#x000ba;C and ion source temperature 230&#x000ba;C. The oven temperature was programmed
+from 150-300&#x000ba;C at 10&#x000ba;C min<sup>-1</sup> and held at 300&#x000ba;C for 15 min. Sample injection
+volume was 1 &#x000b5;L. The mass spectra of the major components of <italic>C.
+fluminensis</italic> flowers were analysed and compared with the Wiley mass spectral
+databases and the literature data.</p><p>
+<italic>Nuclear magnetic resonance (NMR) analysis &#x02013; </italic>The NMR spectra were
+acquired using a BRUKER DRX 400 spectrometer operating at 400 MHz for <sup>1</sup>H and
+100 MHz for <sup>13</sup>C. Chemical shifts were measured relatively to an internal
+tetramethylsilane reference. Spectral data of clusianone was published for our group
+previously in <xref rid="B43" ref-type="bibr">Silva et al. (2012)</xref>and the
+purification and identification of lanosterol in <xref rid="B35" ref-type="bibr">Oliveira et al. (2014)</xref>. The structure of lanosterol was confirmed by MS
+compared to the equipment&#x02019;s database (Wiley Database) and NMR.</p><p>
+<italic>Isolation of clusianone</italic> - The polyisoprenylated benzophenone,
+clusianone, was isolated as a tautomeric pair from the crude hexanic extract of flowers
+of <italic>C. flumi-nensis</italic> by countercurrent chromatography using the solvent
+system n-hexane-acetonitrile-methanol (2:1.25:0.5, v/v/v), as described by <xref rid="B43" ref-type="bibr">Silva et al. (2012)</xref>. The material under study is
+endotoxin free.</p><p>
+<italic>Insect bioassays </italic>- <italic>Ae. aegypti</italic> larvae were used three
+days after hatching and were formed into groups of 10 larvae in the third instar with
+six replicates. The groups were placed in 300 mL disposable plastic cups containing 50
+mL of dechlorinated water. The cups were then randomly allocated to groups, with the aid
+of the pwgen (Windows Phone) program. The dried extracts and isolates were weighed and
+solubilised with 0.1% dimethyl sulfoxide (DMSO) to make up to 50 &#x003bc;L, with a final
+concentration of 50 mg/L in the water test. These substances were thoroughly mixed in
+the water test to minimise the possibility of adhesion of particles to the hydrophobic
+plastic surfaces. The control groups were untreated and the solvent controls (SC) were
+treated solely with 0.1% DMSO used to dissolve the samples. During the tests, larvae
+were fed with 30 mg per cup of hamster food (Alcon<sup>&#x000ae;</sup>, Brazil), immediately
+after completion of the tests and three days later. The results are derived from the
+media of the percentage of each replicate.</p><p>All experiments were followed until the death or emergence of all insects in control
+group. All insects remained in the BOD incubators, at 26 &#x000b1; 1 &#x000b0;C. Counts were made daily
+to evaluate dead insects and developmental stages. All experiments were repeated at
+least twice.</p><p>
+<italic>Data and statistical analysis - </italic>All graphs were created with GraphPad
+Prism 6.01 software (GraphPad Software, USA). The graphics analysed the survival (and
+mortality) and the developmental course of juvenile forms and adults. The
+Gehan-Breslow-Wilcoxon test compared the whole survival curves and larval and adult
+development (GraphPad Prism 6.01 software). No corrections for multiple comparisons were
+made (<xref rid="B41" ref-type="bibr">Rothman 1990</xref>). The Barnard&#x02019;s test (Barnard
+package v.1.3) (<xref rid="B22" ref-type="bibr">Erguler 2012</xref>, <xref rid="B17" ref-type="bibr">R Development Core Team 2014</xref>) was used to analyse
+the development of <italic>Ae. aegypti</italic>pupae, comparing the mean values only in
+a representative day indicated by an arrow in graphs. In all experiments, only p values
+&#x0003c; 0.05 were considered statistically significant.</p><p>
+<italic>Ethics </italic>- Eggs of <italic>Ae. aegypti </italic>were provided by Dr Jos&#x000e9;
+Bento Pereira Lima from insects treated according to the Ethical Principles in Animal
+Experimentation approved by the Ethical Committee in Animal Experimentation (Fiocruz).
+The protocol is from National Council for the Control of Animal Experimentation/Ministry
+of Science, Technology and Innovation (cobea.org.br), which is associated with the
+American Association for Animal Science, Federation of European Laboratory Animal
+Science Associations, International Council for Animal Science and Association for
+Assessment and Accreditation of Laboratory Animal Care International. The authors
+declare that they have no competing interests. The funders, from Brazilian Govern, had
+no role in study design, data collection and analysis, decision to publish or
+preparation of the paper.</p></sec><sec sec-type="results"><title>RESULTS</title><p>The bioassays with the hexanic extract of <italic>C. flumi-nensis</italic> fruit showed
+that in the treated groups there were no effects on the survival rates or development of
+<italic>Ae. aegypti</italic> (<xref ref-type="fig" rid="f01">Fig. 1 A-D</xref>).</p><p>
+<fig id="f01" orientation="portrait" position="float"><label>Fig. 1:</label><caption><title>effects of extracts of fruit from <italic>Clusia fluminensis</italic>
+(FR) on survival (A) and development of larvae (B), pupae (C) and adult (D) of
+<italic>Aedes aegypti</italic> at different days after experimental
+treatment (FR) compared with the solvent control (SC) that was compared with
+untreated control (UC). Each point represents the mean of at least six
+replicates with 10 insects and bars show standard error. Third instar
+<italic>Ae. aegypti</italic>larvae received 50 mg/L extract in the test
+water. Statistical analyses (under the graphs) with the Barnard&#x02019;s test were
+used (C) on a representative day indicated by an arrow and the
+Gehan-Breslow-Wilcoxon test was used (A, B, D) to compare the entire curve
+between the groups (FR x SC and SC x C). Significant differences (p value &#x0003c;
+0.05) are in bold.</title></caption><graphic xlink:href="0074-0276-mioc-110-5-0629-gf01"/></fig>
+</p><p>The bioassays with the hexanic extract of <italic>C. flumi- nensis</italic> flowers (FL)
+showed no significant effect on <italic>Ae. aegypti</italic> survival in comparison with
+the SC (p = 0.1797) (<xref ref-type="fig" rid="f02">Fig. 2A</xref>). In contrast, the
+analyses of the effects of FL on the development of larvae to pupae and pupae to adults
+showed significant delays in molting (p &#x02264; 0.0001) between the FL-treated and SC groups
+(<xref ref-type="fig" rid="f02">Fig. 2B-D</xref>). Thus, on the fifth day, 88.3% of
+the SC group had molted to pupae, while 93.3% of the FL group were still in the larval
+stage (<xref ref-type="fig" rid="f02">Fig. 2B</xref>,<xref ref-type="fig" rid="f02">C</xref>). Furthermore, on day 7, 81.7% of the SC had reached adults, while none of
+the FL group had reached this stage (<xref ref-type="fig" rid="f02">Fig. 2D</xref>).</p><p>
+<fig id="f02" orientation="portrait" position="float"><label>Fig. 2:</label><caption><title>effects of extracts of flower from <italic>Clusia fluminensis</italic>
+(FL) on survival (A) and development of larvae (B), pupae (C) and adult (D) of
+<italic>Aedes aegypti</italic> at different days after experimental
+treatment (FL) compared with the solvent control (SC) that was compared with
+untreated control (UC). The assays were executed and analysed as in the Fig. 1
+legend and Materials and Methods.</title></caption><graphic xlink:href="0074-0276-mioc-110-5-0629-gf02"/></fig>
+</p><p>Since only the flower extract affected the development of <italic>Ae. aegypti</italic>,
+this alone was submitted to GC-MS. The chromatogram obtained for the hexanic extract of
+flowers of <italic>C. fluminensis</italic> showed that the major component (retention
+time: 18.424 min) was the benzophenone, clusianone. This substance was identified by
+comparison of the mass fragmentation pattern with the data provided by <xref rid="B20" ref-type="bibr">Delle Monache et al. (1991)</xref> and represented 54.85%
+of the hexane extract (<xref rid="f03" ref-type="fig">Fig. 3</xref>). In addition,
+lanosterol was also detected (retention time: 19.155 min) in the same extract and
+contributed to 9.74% of the sample composition (<xref rid="f03" ref-type="fig">Fig.
+3</xref>).</p><p>
+<fig id="f03" orientation="portrait" position="float"><label>Fig. 3:</label><caption><title>chromatogram obtained for the hexanic extract of male flowers
+of<italic>Clusia fluminensis</italic> by gas chromatography coupled with
+mass spectrometry showing the benzophenone/clusianone and the triterpene
+lanosterol as major components.</title></caption><graphic xlink:href="0074-0276-mioc-110-5-0629-gf03"/></fig>
+</p><p>The purification protocols and chemical structures of clusianone from the flowers
+of<italic>C. fluminensis</italic> have been described previously (<xref rid="B43" ref-type="bibr">Silva et al. 2012</xref>). Subsequently, bioassays with
+this purified substance were performed against <italic>Ae. aegypti</italic>.</p><p>Bioassays with clusianone showed a significant reduced survival of the <italic>Ae.
+aegypti</italic> (p &#x0003c; 0.0001) (<xref ref-type="fig" rid="f04">Fig. 4A</xref>), so
+that by the first day of treatment 20% of larvae had already died compared with the SC
+group (<xref ref-type="fig" rid="f04">Fig. 4A</xref>). In the clusianone-treated group,
+by the last day (12th) of treatment, 93.3% of insects were dead, while more than 93%
+were still alive in the SC group (<xref ref-type="fig" rid="f04">Fig. 4A</xref>). The
+few specimens of <italic>Ae. aegypti</italic>that survived the treatment with clusianone
+remained as larval instars (<xref ref-type="fig" rid="f04">Fig. 4B</xref>), with none
+molting to pupae or adults (<xref ref-type="fig" rid="f04">Fig. 4C</xref>, <xref ref-type="fig" rid="f04">D</xref>).</p><p>
+<fig id="f04" orientation="portrait" position="float"><label>Fig. 4:</label><caption><title>effects of clusianone (CL) isolated from <italic>Clusia
+fluminensis</italic> on survival (A) and development of larvae (B), pupae
+(C) and adult (D) of <italic>Aedes aegypti</italic> at different days after
+experimental treatment (CL) compared with the solvent control (SC) that was
+compared with untreated control (UC). The assays were executed and analysed as
+in the Fig. 1 legend and Materials and Methods.</title></caption><graphic xlink:href="0074-0276-mioc-110-5-0629-gf04"/></fig>
+</p><p>In contrast with the effect of clusianone, no activity was detected by the isolated
+lanosterol on the survival or development of<italic> Ae. aegypti</italic> larvae in the
+bioassays (results not showed).</p></sec><sec sec-type="discussion"><title>DISCUSSION</title><p>In this present study, clusianone was further identified and purified from FL<italic>,
+</italic>following the original protocols described by <xref rid="B43" ref-type="bibr">Silva et al. (2012)</xref>. Clusianone is the major component from the flowers of
+<italic>C. fluminensis</italic>, representing almost 55% of the crude extract
+composition.</p><p>Crude fruit extracts of <italic>C. fluminensis</italic> had no activity on the survival
+or development of <italic>Ae. aegypti</italic> and preliminary results showed that
+clusianone is not present in these extracts, in which lanosterol is the main compound.
+FL also had no effects on survival, but delayed the development of<italic>Ae. aegypti.
+</italic>In addition, the purified clusianone not only caused high larval mortality and
+delayed development, but also completely blocked the molting of surviving
+treated-insects. These results show four important facts. Firstly, the value of
+analysing not only mortality, but also the effect on development in the evaluation of
+plant extracts activities against insects. Secondly, that fractionated and purified
+components may show enhanced activities in bioassays in comparison with those of crude
+extracts. Thirdly, the necessity of assaying different regions of the plant tissue for
+activity, when testing plant extracts for insecticide properties. Fourthly, they report
+the first description of clusianone&#x02019;s larvicidal activity against <italic>Ae.
+aegypti</italic> larvae.</p><p>The clusianone effects, however, seem to have similar characteristics to those found
+with synthesised benzophenone tagged indole derivatives that resulted in mortality in
+<italic>Culex quinquefasciatus</italic> larvae (<xref rid="B39" ref-type="bibr">Ranganatha et al. 2013</xref>), as well as those reported for extracts from species
+of <italic>Hypericum</italic> against culicids (<xref rid="B16" ref-type="bibr">Cetin et
+al. 2011</xref>). A fraction of <italic>H. carinatum</italic>enriched with the
+benzophenones, cariphenone A and cariphenone B has also shown to have larvicidal
+activity against <italic>Ae. aegypti</italic>, but at a lower concentration than that
+used in our experiments with clusianone (<xref rid="B18" ref-type="bibr">da Silva et al.
+2013a</xref>). The genus<italic>Hypericum </italic>is often considered to be a member
+of the family Clusiaceae.</p><p>Benzophenyl and benzopyran compounds, although not benzophenones, have also recently
+been reported to have similar effects to clusianone against mosquitoes. For example,
+benzophenyl urea compounds may disrupt chitin, causing changes in development or even
+mortality in <italic>Culex</italic> and <italic>Aedes</italic> mosquitoes in low doses
+(<xref rid="B23" ref-type="bibr">Fontoura et al. 2012</xref>, <xref rid="B4" ref-type="bibr">Belinato et al. 2013</xref>). Additionally, benzopyrans, present mostly in a
+<italic>Hypericum polyanthemum</italic> lipophilic extract, showed larvicidal
+activity against <italic>Ae. aegypti</italic> in high concentrations, while in sublethal
+levels exhibited growth-inhibiting activity to prevent pupae formation and adult
+emergence (da Silva et al. 2013b). This last effect was also detected with clusianone
+against <italic>Ae. aegypti</italic> in the present study, where the few survivors
+remained as larvae. This result is very important for the evaluation of the potential
+use of these compounds as insecticides, because <italic>Ae. aegypti</italic> treated
+with a successful commercial analogue of JH (methoprene) also remained as larvae or died
+as pupae, without emerging as adults (<xref rid="B12" ref-type="bibr">Braga et al.
+2005a</xref>,<xref rid="B13" ref-type="bibr">b</xref>).</p><p>Finally, the tetranortriterpenoid, azadirachtin, purified from <italic>Azadirachta
+indica</italic> A. (Juss.) (Meliaceae) acts on the insect neurosecretory cells.
+Juvenile forms after contact with this product remain irreversibly in the larval stage
+(<xref rid="B24" ref-type="bibr">Garcia et al. 1986</xref>, <xref rid="B32" ref-type="bibr">Mulla &#x00026; Su 1999</xref>), as similarly observed after <italic>Ae.
+aegypti</italic> treatment with clusianone isolated from<italic>C.
+fluminensis</italic>. Likewise, benzophenone-3 used in UV filters affects
+embryogenesis by delaying hatching and mimicking the action of ecdysone, thereby
+disrupting the insect endocrinological equilibrium (<xref rid="B36" ref-type="bibr">Oz&#x000e1;ez et al. 2014)</xref>. Therefore, evidence from previous studies and for
+clusianone indicates that many naturally-occurring plant insect control agents affect
+the pest endocrine homeostasis to kill, delay or interrupt the development of their
+target species.</p><p>In conclusion, the present research shows, for the first time, the insecticidal activity
+of the benzophenone, clusianone, against mosquitoes and represents a promising start for
+the development of natural plant products for the control of insect vectors of tropical
+diseases.</p></sec></body><back><ack><title>ACKNOWLEDGEMENTS</title><p>To Felipe Leite and Jefferson OC de Oliveira (UFF), for technical assistance, and to the
+command of Forte Bar&#x000e3;o do Imbuhy (21st Group of Field Artillery), for permission to
+collect <italic>C. fluminensis</italic>.</p></ack><fn-group><fn fn-type="supported-by"><p>Financial support: PROPPI-UFF, CNPq, FAPERJ</p></fn></fn-group><ref-list><title>REFERENCES</title><ref id="B1"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Bastos</surname><given-names>MS</given-names></name><name><surname>Figueiredo</surname><given-names>RMP</given-names></name><name><surname>Ramasawmy</surname><given-names>R</given-names></name><name><surname>Itapirema</surname><given-names>E</given-names></name><name><surname>Gimaque</surname><given-names>JBL</given-names></name><name><surname>Santos</surname><given-names>LO</given-names></name><name><surname>Figueiredo</surname><given-names>LTM</given-names></name><name><surname>Mour&#x000e3;o</surname><given-names>MPG</given-names></name></person-group><year>2012</year><article-title>Simultaneous circulation of all four dengue serotypes in
+Manaus, state of Amazonas, Brazil in 2011</article-title><source>Rev Soc Bras Med Trop</source><volume>45</volume><fpage>393</fpage><lpage>394</lpage><pub-id pub-id-type="pmid">22760143</pub-id></element-citation></ref><ref id="B2"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Beatty</surname><given-names>ME</given-names></name><name><surname>Stone</surname><given-names>A</given-names></name><name><surname>Fitzsimons</surname><given-names>DW</given-names></name><name><surname>Hanna</surname><given-names>JN</given-names></name><name><surname>Lam</surname><given-names>SK</given-names></name><name><surname>Vong</surname><given-names>S</given-names></name><name><surname>Guzman</surname><given-names>MG</given-names></name><name><surname>Mendez-Ganvan</surname><given-names>JF</given-names></name><name><surname>Halstead</surname><given-names>SB</given-names></name><name><surname>Letson</surname><given-names>GW</given-names></name><name><surname>Kuritsky</surname><given-names>J</given-names></name><name><surname>Mahoney</surname><given-names>R</given-names></name><name><surname>Margplis</surname><given-names>HS</given-names></name></person-group><year>2010</year><article-title>Best practices in dengue surveillance: a report from the
+Asia-Pacific and Americas dengue prevention boards</article-title><source>PLoS Negl Trop Dis</source><issue-id pub-id-type="doi">10.1371/journal.pntd.0000890.</issue-id></element-citation></ref><ref id="B3"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Beerhues</surname><given-names>L</given-names></name><name><surname>Liu</surname><given-names>B</given-names></name></person-group><year>2009</year><article-title>Biosynthesis of biphenyls and benzophenones - Evolution
+of benzoic acid-specific type III polyketide synthases in plants</article-title><source>Phytochemistry</source><volume>70</volume><fpage>1719</fpage><lpage>1727</lpage><pub-id pub-id-type="pmid">19699497</pub-id></element-citation></ref><ref id="B4"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Belinato</surname><given-names>TA</given-names></name><name><surname>Martins</surname><given-names>AJ</given-names></name><name><surname>Lima</surname><given-names>JBP</given-names></name><name><surname>Valle</surname><given-names>D</given-names></name></person-group><year>2013</year><article-title>Effect of triflumuron, a chitin synthesis inhibitor on
+Aedes aegypti, Aedes albopictus and Culex quinquefasciatus under laboratory
+conditions</article-title><source>Parasites &#x00026; Vectors</source><issue-id pub-id-type="doi">10.1186/1756-3305-6-83.</issue-id></element-citation></ref><ref id="B5"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Bhatt</surname><given-names>S</given-names></name><name><surname>Gething</surname><given-names>PW</given-names></name><name><surname>Brady</surname><given-names>OJ</given-names></name><name><surname>Messina</surname><given-names>JP</given-names></name><name><surname>Farlow</surname><given-names>AW</given-names></name><name><surname>Moyes</surname><given-names>CL</given-names></name><name><surname>Drake</surname><given-names>JM</given-names></name><name><surname>Brownstein</surname><given-names>JS</given-names></name><name><surname>Hoen</surname><given-names>AJ</given-names></name><name><surname>Sankoh</surname><given-names>O</given-names></name><name><surname>Myers</surname><given-names>MF</given-names></name><name><surname>George</surname><given-names>DB</given-names></name><name><surname>Jaenisch</surname><given-names>T</given-names></name><name><surname>Wint</surname><given-names>GRW</given-names></name><name><surname>Simmons</surname><given-names>CP</given-names></name><name><surname>Scott</surname><given-names>TW</given-names></name><name><surname>Farrar</surname><given-names>JJ</given-names></name><name><surname>Hay</surname><given-names>SI</given-names></name></person-group><year>2013</year><article-title>The global distribution and burden of
+dengue</article-title><source>Nature</source><volume>496</volume><fpage>504</fpage><lpage>507</lpage><pub-id pub-id-type="pmid">23563266</pub-id></element-citation></ref><ref id="B6"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Biondi</surname><given-names>A</given-names></name><name><surname>Mommaerts</surname><given-names>V</given-names></name><name><surname>Smagghe</surname><given-names>G</given-names></name><name><surname>Vi&#x000f1;uela</surname><given-names>E</given-names></name><name><surname>Zappal&#x000e0;</surname><given-names>L</given-names></name><name><surname>Desneux</surname><given-names>N</given-names></name></person-group><year>2012</year><article-title>The non-target impact of spinosyns on beneficial
+arthropods</article-title><source>Pest Manag Sci</source><volume>68</volume><fpage>1523</fpage><lpage>1536</lpage><pub-id pub-id-type="pmid">23109262</pub-id></element-citation></ref><ref id="B7"><element-citation publication-type="report"><person-group person-group-type="author"><name><surname>Bittrich</surname><given-names>V</given-names></name></person-group><year>2010</year><source xml:lang="pt">Clusiaceae. Lista de esp&#x000e9;cies da flora do Brasil. Jardim
+Bot&#x000e2;nico do Rio de Janeiro</source><comment><ext-link ext-link-type="uri" xlink:href="http://www.floradobrasil.jbrj.gov.br/2010/FB000089">floradobrasil.jbrj.gov.br/2010/FB000089</ext-link></comment></element-citation></ref><ref id="B8"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Bowers</surname><given-names>WS</given-names></name><name><surname>Ohta</surname><given-names>T</given-names></name><name><surname>Cleere</surname><given-names>JS</given-names></name><name><surname>Marsella</surname><given-names>PA</given-names></name></person-group><year>1976</year><article-title>Discovery of insect anti-juvenile hormones in
+plants</article-title><source>Science</source><volume>193</volume><fpage>542</fpage><lpage>547</lpage><pub-id pub-id-type="pmid">986685</pub-id></element-citation></ref><ref id="B9"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Brady</surname><given-names>OJ</given-names></name><name><surname>Gething</surname><given-names>PW</given-names></name><name><surname>Bhatt</surname><given-names>S</given-names></name><name><surname>Messina</surname><given-names>JP</given-names></name><name><surname>Brownstein</surname><given-names>JS</given-names></name><name><surname>Hoen</surname><given-names>AJ</given-names></name><name><surname>Moyes</surname><given-names>CL</given-names></name><name><surname>Farlow</surname><given-names>AW</given-names></name><name><surname>Scott</surname><given-names>TW</given-names></name><name><surname>Hay</surname><given-names>SI</given-names></name></person-group><year>2012</year><article-title>Refining the global spatial limits of dengue virus
+transmission by evidence-based consensus</article-title><source>PLoS Neglect Trop Dis</source><issue-id pub-id-type="doi">10.1371/journal.pntd.0001760.</issue-id></element-citation></ref><ref id="B10"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Braga</surname><given-names>IA</given-names></name><name><surname>Lima</surname><given-names>JBP</given-names></name><name><surname>Soares</surname><given-names>SS</given-names></name><name><surname>Vale</surname><given-names>D</given-names></name></person-group><year>2004.</year><article-title>Aedes aegypti resistance to temephos during 2001 in
+several municipalities in the states of Rio de Janeiro, Sergipe and Alagoas,
+Brazil</article-title><source>Mem Inst Oswaldo Cruz</source><volume>99</volume><fpage>199</fpage><lpage>203</lpage><pub-id pub-id-type="pmid">15250476</pub-id></element-citation></ref><ref id="B11"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Braga</surname><given-names>IA</given-names></name><name><surname>Valle</surname><given-names>D</given-names></name></person-group><year>2007</year><article-title>Aedes aegypti: surveillance, resistance monitoring and
+control alternatives in Brazil</article-title><source>Epidemiol Serv Saude</source><volume>16</volume><fpage>295</fpage><lpage>302</lpage></element-citation></ref><ref id="B12"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Braga</surname><given-names>IM</given-names></name><name><surname>Mello</surname><given-names>CB</given-names></name><name><surname>Montella</surname><given-names>IR</given-names></name><name><surname>Lima</surname><given-names>JBP</given-names></name><name><surname>Martins</surname><given-names>AJ</given-names></name><name><surname>Medeiros</surname><given-names>PFV</given-names></name><name><surname>Valle</surname><given-names>D</given-names></name></person-group><year>2005a</year><article-title>Effectiveness of methoprene, an insect growth regulator,
+against temephos-resistant Aedes aegypti populations from different Brazilian
+localities, under laboratory conditions</article-title><source>J Med Entomol</source><volume>42</volume><fpage>830</fpage><lpage>837</lpage><pub-id pub-id-type="pmid">16363168</pub-id></element-citation></ref><ref id="B13"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Braga</surname><given-names>IM</given-names></name><name><surname>Mello</surname><given-names>CB</given-names></name><name><surname>Peixoto</surname><given-names>AA</given-names></name><name><surname>Valle</surname><given-names>D</given-names></name></person-group><year>2005b</year><article-title>Evaluation of methoprene effect on Aedes aegypti
+(Diptera: Culicidae) development in laboratory conditions</article-title><source>Mem Inst Oswaldo Cruz</source><volume>100</volume><fpage>435</fpage><lpage>440</lpage><pub-id pub-id-type="pmid">16113894</pub-id></element-citation></ref><ref id="B14"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Cantrell</surname><given-names>CL</given-names></name><name><surname>Dayan</surname><given-names>FE</given-names></name><name><surname>Duke</surname><given-names>SO</given-names></name></person-group><year>2012</year><article-title>Natural products as sources for new
+pesticides</article-title><source>J Nat Prod</source><volume>75</volume><fpage>1231</fpage><lpage>1242</lpage><pub-id pub-id-type="pmid">22616957</pub-id></element-citation></ref><ref id="B15"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Carvalho</surname><given-names>AFU</given-names></name></person-group><year>2011</year><article-title>Toxicity of Brazilian plant seed extracts to two strains
+of Aedes aegypti (Diptera: Culicidae) and non-target animals</article-title><source>J Med Entomol</source><volume>48</volume><fpage>846</fpage><lpage>851</lpage><pub-id pub-id-type="pmid">21845944</pub-id></element-citation></ref><ref id="B16"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Cetin</surname><given-names>H</given-names></name><name><surname>Yanikoglu</surname><given-names>A</given-names></name><name><surname>Cilek</surname><given-names>JE</given-names></name></person-group><year>2011</year><article-title>Larvicidal activity of selected plant hydrodistillate
+extracts against the house mosquito, Culex pipiens, an West Nile virus
+vector</article-title><source>Parasitol Res</source><volume>108</volume><fpage>943</fpage><lpage>948</lpage><pub-id pub-id-type="pmid">21053014</pub-id></element-citation></ref><ref id="B17"><element-citation publication-type="report"><person-group person-group-type="author"><collab>R Development Core Team</collab></person-group><year>2014</year><source>R: a language and environment for statistical
+computing</source><comment><ext-link ext-link-type="uri" xlink:href="http://www.R-project.org/">R-project.org/</ext-link></comment></element-citation></ref><ref id="B18"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>da Silva</surname><given-names>FC</given-names></name><name><surname>de Barros</surname><given-names>FMC</given-names></name><name><surname>Prophiro</surname><given-names>JS</given-names></name><name><surname>da Silva</surname><given-names>OS</given-names></name><name><surname>Pereira</surname><given-names>TN</given-names></name><name><surname>Bordignon</surname><given-names>SAL</given-names></name><name><surname>Eifler-Lima</surname><given-names>VL</given-names></name><name><surname>von Poser</surname><given-names>GL</given-names></name></person-group><year>2013a</year><article-title>Larvicidal activity of lipophilic extract of Hypericum
+carinatum (Clusiaceae) against Aedes aegypti (Diptera: Culicidae) and
+benzophenones determination</article-title><source>Parasitol Res</source><volume>112</volume><fpage>2367</fpage><lpage>2371</lpage><pub-id pub-id-type="pmid">23559380</pub-id></element-citation></ref><ref id="B19"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>da Silva</surname><given-names>OS</given-names></name><name><surname>da Silva</surname><given-names>FC</given-names></name><name><surname>de Barros</surname><given-names>FMC</given-names></name><name><surname>da Silva</surname><given-names>JLR</given-names></name><name><surname>Bordignond</surname><given-names>SAL</given-names></name><name><surname>Eifler-Limab</surname><given-names>VL</given-names></name><name><surname>von Poserb</surname><given-names>GK</given-names></name><name><surname>Prophiroc</surname><given-names>JS</given-names></name></person-group><year>2013b</year><article-title>Larvicidal and growth-inhibiting activities of extract
+and benzopyrans from Hypericum polyanthemum (Guttiferae) against Aedes aegypti
+(Diptera: Culicidae)</article-title><source>Ind Crop Prod</source><volume>45</volume><fpage>236</fpage><lpage>239</lpage></element-citation></ref><ref id="B20"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Delle Monache</surname><given-names>F</given-names></name><name><surname>Delle Monache</surname><given-names>G</given-names></name><name><surname>G&#x000e1;cs-Baitz</surname><given-names>E</given-names></name></person-group><year>1991</year><article-title>Prenylated benzophenones from Clusia
+sandinensis</article-title><source>Phytochemistry</source><volume>30</volume><fpage>2003</fpage><lpage>2005</lpage></element-citation></ref><ref id="B21"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Dick</surname><given-names>OB</given-names></name><name><surname>San Mart&#x000ed;n</surname><given-names>JL</given-names></name><name><surname>Montoya</surname><given-names>RH</given-names></name><name><surname>Diego</surname><given-names>J</given-names></name><name><surname>Zambrano</surname><given-names>B</given-names></name><name><surname>Dayan</surname><given-names>GH</given-names></name></person-group><year>2012</year><article-title>The history of dengue outbreaks in the
+Americas</article-title><source>Am J Trop Med Hyg</source><volume>87</volume><fpage>584</fpage><lpage>593</lpage><pub-id pub-id-type="pmid">23042846</pub-id></element-citation></ref><ref id="B22"><element-citation publication-type="report"><person-group person-group-type="author"><name><surname>Erguler</surname><given-names>K</given-names></name></person-group><year>2012</year><source>Barnard: Barnard&#x02019;s Unconditional Test. R package version
+1.3</source><email>erguler.kamil@ucy.ac.cy.</email></element-citation></ref><ref id="B23"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Fontoura</surname><given-names>NG</given-names></name><name><surname>Bellinato</surname><given-names>DF</given-names></name><name><surname>Valle</surname><given-names>D</given-names></name><name><surname>Lima</surname><given-names>JBP</given-names></name></person-group><year>2012</year><article-title>The efficacy of a chitin synthesis inhibitor against
+field populations of organophosphate-resistant Aedes aegypti in
+Brazil</article-title><source>Mem Inst Oswaldo Cruz</source><volume>107</volume><fpage>387</fpage><lpage>395</lpage><pub-id pub-id-type="pmid">22510835</pub-id></element-citation></ref><ref id="B24"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Garcia</surname><given-names>ES</given-names></name><name><surname>Uhl</surname><given-names>M</given-names></name><name><surname>Rembold</surname><given-names>H</given-names></name></person-group><year>1986</year><article-title>Azadirachtin, a chemical probe for the study of moulting
+processes in Rhodnius prolixus</article-title><source>Z Naturf</source><volume>41</volume><fpage>771</fpage><lpage>775</lpage></element-citation></ref><ref id="B25"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Georghiou</surname><given-names>GP</given-names></name></person-group><article-title>The evolution of resistance to
+pesticides</article-title><source>Annu Rev Ecol Syst</source><year>1972</year><volume>3</volume><fpage>133</fpage><lpage>168</lpage></element-citation></ref><ref id="B26"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Gubler</surname><given-names>DJ</given-names></name></person-group><year>2011</year><article-title>Dengue, urbanization and globalization: the unholy
+trinity of the 21st century</article-title><source>Trop Med Int Health</source><volume>39</volume><fpage>3</fpage><lpage>11</lpage></element-citation></ref><ref id="B27"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Isman</surname><given-names>NB</given-names></name></person-group><year>2006</year><article-title>Botanical insecticides, deterrents and repellents in
+modern agriculture and an increasingly regulated world</article-title><source>Annu Rev Entomol</source><volume>51</volume><fpage>45</fpage><lpage>66</lpage><pub-id pub-id-type="pmid">16332203</pub-id></element-citation></ref><ref id="B28"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Li</surname><given-names>WQ</given-names></name><name><surname>Zhang</surname><given-names>ZJ</given-names></name><name><surname>Nan</surname><given-names>X</given-names></name><name><surname>Liu</surname><given-names>YQ</given-names></name><name><surname>Hu</surname><given-names>GF</given-names></name><name><surname>Yu</surname><given-names>HT</given-names></name><name><surname>Zhao</surname><given-names>XB</given-names></name><name><surname>Wua</surname><given-names>D</given-names></name><name><surname>Yana</surname><given-names>LT</given-names></name></person-group><year>2014</year><article-title>Design, synthesis and bioactivity evaluation of novel
+benzophenone hydrazone derivatives</article-title><source>Pest Manag Sci</source><volume>70</volume><fpage>667</fpage><lpage>673</lpage><pub-id pub-id-type="pmid">23861305</pub-id></element-citation></ref><ref id="B29"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Maciel-de-Freitas</surname><given-names>R</given-names></name><name><surname>Avendanho</surname><given-names>FC</given-names></name><name><surname>Santos</surname><given-names>R</given-names></name><name><surname>Sylvestre</surname><given-names>G</given-names></name><name><surname>Ara&#x000fa;jo</surname><given-names>SC</given-names></name><name><surname>Lima</surname><given-names>JBP</given-names></name><name><surname>Martins</surname><given-names>AJ</given-names></name><name><surname>Coelho</surname><given-names>GE</given-names></name><name><surname>Valle</surname><given-names>D</given-names></name></person-group><year>2014</year><article-title>Undesirable consequences of insecticide resistance
+following Aedes aegypti control activities due to a dengue
+outbreak</article-title><source>PloS One</source><issue-id pub-id-type="doi">10.1371/journal.pone.0092424.</issue-id></element-citation></ref><ref id="B30"><element-citation publication-type="report"><person-group person-group-type="author"><name><surname>Middleton</surname><given-names>WJ</given-names></name><name><surname>Chadds</surname><given-names>F</given-names></name><role>inventors</role></person-group><article-title>Benzophenone hydrazones containing peruoroalkyl,
+peruoroalkoxy and peruoroalkylthio substituents</article-title><source>United States patent US</source><pub-id pub-id-type="other">3732307</pub-id><year>1970</year><month>9</month><day>24</day><comment>1973 May 8</comment></element-citation></ref><ref id="B31"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Miresmailli</surname><given-names>S</given-names></name><name><surname>Isman</surname><given-names>MB</given-names></name></person-group><year>2014</year><article-title>Botanical insecticides inspired by plant-herbivore
+chemical interactions</article-title><source>Trends Plant Sci</source><volume>19</volume><fpage>29</fpage><lpage>35</lpage><pub-id pub-id-type="pmid">24216132</pub-id></element-citation></ref><ref id="B32"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Mulla</surname><given-names>MS</given-names></name><name><surname>Su</surname><given-names>T</given-names></name></person-group><year>1999</year><article-title>Activity of biological effects of neem products against
+arthropods of medical and veterinary importance</article-title><source>J Am Mosq Control Assoc</source><volume>15</volume><fpage>133</fpage><lpage>152</lpage><pub-id pub-id-type="pmid">10412110</pub-id></element-citation></ref><ref id="B33"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Narahashi</surname><given-names>T</given-names></name></person-group><year>2000</year><article-title>Neuroreceptors and ion channels as the basis for drug
+action: past, present and future</article-title><source>J Pharmacol Exp Ther</source><volume>294</volume><fpage>1</fpage><lpage>26</lpage><pub-id pub-id-type="pmid">10871290</pub-id></element-citation></ref><ref id="B34"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Navarro</surname><given-names>DMAF</given-names></name><name><surname>Silva</surname><given-names>PCB</given-names></name><name><surname>Silva</surname><given-names>MFR</given-names></name><name><surname>Napoleao</surname><given-names>TH</given-names></name><name><surname>Paiva</surname><given-names>PMG</given-names></name></person-group><year>2015</year><article-title>Larvicidal activity of plant and algae extracts,
+essential oils and isolated chemical constituents against Aedes
+aegypti</article-title><source>Nat Prod J</source><volume>3</volume><fpage>268</fpage><lpage>291</lpage></element-citation></ref><ref id="B35"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Oliveira</surname><given-names>EC</given-names></name><name><surname>Anholeti</surname><given-names>MC</given-names></name><name><surname>Domingos</surname><given-names>TF</given-names></name><name><surname>Faioli</surname><given-names>CN</given-names></name><name><surname>Sanchez</surname><given-names>EF</given-names></name><name><surname>Paiva</surname><given-names>SR</given-names></name><name><surname>Fuly</surname><given-names>AL</given-names></name></person-group><year>2014</year><article-title>Inhibitory effect of the plant Clusia fluminensis
+against biological activities of Bothrops jararaca snake venom</article-title><source>Nat Prod Commun</source><volume>9</volume><fpage>21</fpage><lpage>25</lpage><pub-id pub-id-type="pmid">24660453</pub-id></element-citation></ref><ref id="B36"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Oz&#x000e1;ez</surname><given-names>I</given-names></name><name><surname>Mart&#x000ed;nez-Guitarte</surname><given-names>JL</given-names></name><name><surname>Morcillo</surname><given-names>G</given-names></name></person-group><year>2014</year><article-title>The UV filter benzophenone 3 (BP-3) activates hormonal
+genes mimicking the action of ecdysone and alters embryo development in the insect
+Chironomus riparius (Diptera)</article-title><source>Environ Pollut</source><volume>192</volume><fpage>19</fpage><lpage>26</lpage><pub-id pub-id-type="pmid">24878782</pub-id></element-citation></ref><ref id="B37"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Porto</surname><given-names>ALM</given-names></name><name><surname>Machado</surname><given-names>SMF</given-names></name><name><surname>Oliveira</surname><given-names>CMA</given-names></name><name><surname>Bittrich</surname><given-names>V</given-names></name><name><surname>Amaral</surname><given-names>MDCE</given-names></name><name><surname>Marsaioli</surname><given-names>AJ</given-names></name></person-group><year>2000</year><article-title>Polyisoprenylated benzophenones from Clusia floral
+resins</article-title><source>Phytochemistry</source><volume>55</volume><fpage>755</fpage><lpage>768</lpage><pub-id pub-id-type="pmid">11190392</pub-id></element-citation></ref><ref id="B38"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Powell</surname><given-names>JR</given-names></name><name><surname>Tabachnick</surname><given-names>WJ</given-names></name></person-group><year>2013</year><article-title>History of domestication and spread of Aedes aegypti - A
+Review</article-title><source>Mem Inst Oswaldo Cruz</source><volume>108</volume><issue>Suppl. I</issue><fpage>11</fpage><lpage>17</lpage><pub-id pub-id-type="pmid">24473798</pub-id></element-citation></ref><ref id="B39"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Ranganatha</surname><given-names>VL</given-names></name><name><surname>Begum</surname><given-names>AB</given-names></name><name><surname>Prashanth</surname><given-names>T</given-names></name><name><surname>Gurupadaswamy</surname><given-names>HD</given-names></name><name><surname>Madhu</surname><given-names>SK</given-names></name><name><surname>Shivakumar</surname><given-names>S</given-names></name><name><surname>Khanum</surname><given-names>SA</given-names></name></person-group><year>2013</year><article-title>Synthesis and larvicidal properties of benzophenone
+comprise indole analogues against Culex quinquefasciatus</article-title><source>Drug Invent Today</source><volume>5</volume><fpage>275</fpage><lpage>280</lpage></element-citation></ref><ref id="B40"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Reegan</surname><given-names>AD</given-names></name><name><surname>Gandhi</surname><given-names>MR</given-names></name><name><surname>Paulraj</surname><given-names>MG</given-names></name><name><surname>Ignacimuthu</surname><given-names>S</given-names></name></person-group><year>2014</year><article-title>Larvicidal activity of medicinal plant extracts against
+Culex quinquefasciatus Say and Aedes aegypti mosquitoes (Diptera:
+Culicidae)</article-title><source>Int J Pure Appl Zool</source><volume>2</volume><fpage>205</fpage><lpage>210</lpage></element-citation></ref><ref id="B41"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Rothman</surname><given-names>KJ</given-names></name></person-group><year>1990</year><article-title>No adjustments are needed for multiple
+comparisons</article-title><source>Epidemiology</source><volume>1</volume><fpage>43</fpage><lpage>46</lpage><pub-id pub-id-type="pmid">2081237</pub-id></element-citation></ref><ref id="B42"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Shaalan</surname><given-names>EAS</given-names></name><name><surname>Canyon</surname><given-names>D</given-names></name><name><surname>Younes</surname><given-names>MWF</given-names></name><name><surname>Abdel-Wahab</surname><given-names>H</given-names></name><name><surname>Mansour</surname><given-names>AH</given-names></name></person-group><year>2005</year><article-title>A review of botanical phytochemicals with mosquitocidal
+potential</article-title><source>Environ Int</source><volume>31</volume><fpage>1149</fpage><lpage>1166</lpage><pub-id pub-id-type="pmid">15964629</pub-id></element-citation></ref><ref id="B43"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Silva</surname><given-names>MCA</given-names></name><name><surname>Heringer</surname><given-names>AP</given-names></name><name><surname>Figueiredo</surname><given-names>MR</given-names></name><name><surname>Paiva</surname><given-names>SR</given-names></name></person-group><year>2012</year><article-title>Separation of clusianone from Clusia fluminensis Planch.
+and Triana (Clusiaceae) by high speed counter-current chromatography
+(HSCCC)</article-title><source>J Liq Chromatogr Relat Technol</source><volume>35</volume><fpage>2313</fpage><lpage>2321</lpage></element-citation></ref><ref id="B44"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Vontas</surname><given-names>J</given-names></name><name><surname>Kioulos</surname><given-names>E</given-names></name><name><surname>Pavlidi</surname><given-names>N</given-names></name><name><surname>Morou</surname><given-names>E</given-names></name><name><surname>Della Torre</surname><given-names>A</given-names></name><name><surname>Ranson</surname><given-names>H</given-names></name></person-group><year>2012</year><article-title>Insecticide resistance in the major dengue vectors Aedes
+albopictus and Aedes aegypti</article-title><source>Pestic Biochem Phys</source><volume>104</volume><fpage>126</fpage><lpage>131</lpage></element-citation></ref></ref-list></back></article>

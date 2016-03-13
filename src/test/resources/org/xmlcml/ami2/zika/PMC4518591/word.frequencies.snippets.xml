@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC4518591/results/word/frequencies/results.xml">
-  <result title="frequency" word="HCN" count="24"/>
-  <result title="frequency" word="cyanide" count="23"/>
-  <result title="frequency" word="smoke" count="22"/>
-  <result title="frequency" word="cigarette" count="21"/>
- </snippets>
-</snippetsTree>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC3810876/results/species/genus/results.xml">
-  <result pre="me gardens (1), human settlement (8), tourism development (1), and exotic tree plantations, mainly " exact="Eucalyptus" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[3]" match="Eucalyptus" post=" and Cupressus for timber and firewood (1). This is congruent with East Africa's rapid expan" name="genus"/>
-  <result pre="settlement (8), tourism development (1), and exotic tree plantations, mainly Eucalyptus and " exact="Cupressus" match="Cupressus" post=" for timber and firewood (1). This is congruent with East Africa's rapid expansion of privately own" name="genus"/>
- </snippets>
-</snippetsTree>

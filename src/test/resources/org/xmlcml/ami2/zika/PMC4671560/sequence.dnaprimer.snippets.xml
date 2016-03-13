@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC4671560/results/sequence/dnaprimer/results.xml">
-  <result pre="enetic diversity we observed at the COI gene. This was achieved with the 18SFHIN and CP16 primers (" exact="5’-GTAAGCTTCCTTTGTACACACCGCCCGT-3’" post=" and 5’-GCGGGTACCATGCTTAAATTTAGGGGGTA-3’, respectively) [ 46 ], as used by Mukwaya et al. [ 27" xpath="/html[1]/body[1]/div[1]/div[6]/div[2]/p[5]" name="dnaprimer"/>
-  <result pre=" gene. This was achieved with the 18SFHIN and CP16 primers (5’-GTAAGCTTCCTTTGTACACACCGCCCGT-3’ and " exact="5’-GCGGGTACCATGCTTAAATTTAGGGGGTA-3’" post=", respectively) [ 46 ], as used by Mukwaya et al. [ 27 ]. To generate PCR products, 1 unit of" xpath="/html[1]/body[1]/div[1]/div[6]/div[2]/p[5]" name="dnaprimer"/>
-  <result pre="reened and colonies with inserts stored in TE buffer for PCR amplification. Universal M13 primers (" exact="5’-TGTAAAACGACGGCCAGT-3’" post=" and 5’-CAGGAAACAGCTATGAC-3’) [ 48 ] were used to amplify cloned ITS products in the following 1" xpath="/html[1]/body[1]/div[1]/div[6]/div[2]/p[5]" name="dnaprimer"/>
-  <result pre="rts stored in TE buffer for PCR amplification. Universal M13 primers (5’-TGTAAAACGACGGCCAGT-3’ and " exact="5’-CAGGAAACAGCTATGAC-3’" post=") [ 48 ] were used to amplify cloned ITS products in the following 13μl reaction; 1.25 units of " name="dnaprimer"/>
- </snippets>
-</snippetsTree>

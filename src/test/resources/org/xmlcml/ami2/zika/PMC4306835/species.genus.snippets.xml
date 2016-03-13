@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC4306835/results/species/genus/results.xml">
-  <result pre="The genus " exact="Flavivirus" xpath="/html[1]/body[1]/div[1]/div[8]/p[2]" match="Flavivirus" post=" of family Flaviviridae is composed of more than 70 viruses. Among them, Japanese encephalit" name="genus"/>
-  <result pre="The genus Flavivirus of family " exact="Flaviviridae" xpath="/html[1]/body[1]/div[1]/div[8]/p[2]" match="Flaviviridae" post=" is composed of more than 70 viruses. Among them, Japanese encephalitis virus (JEV), West Nile viru" name="genus"/>
-  <result pre="een used to explore the genetic relationship among flaviviruses. In 2004, a phylogeny of the genus " exact="Flavivirus" match="Flavivirus" post=" was established including one African (SouthAfrica-1959) and one European (Vienna-2001) strain of " name="genus"/>
- </snippets>
-</snippetsTree>

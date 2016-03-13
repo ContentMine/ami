@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC4501423/results/species/genus/results.xml">
-  <result pre="Zika virus (ZIKV) is an emerging arthropod borne virus (arbovirus) transmitted by " exact="Aedes" match="Aedes" post=" ( Stegomyia) mosquitoes. The virus belongs to the genus Flavivirus, family Flaviviridae, an" name="genus"/>
- </snippets>
-</snippetsTree>

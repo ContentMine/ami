@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC3854913/results/species/genus/results.xml">
-  <result pre="Zika virus (ZIKV) is a mosquito-transmitted virus in the family " exact="Flaviviridae" match="Flaviviridae" post=" and genus Flavivirus. It was initially isolated in 1947 from blood of a febrile sentinel rh" name="genus"/>
- </snippets>
-</snippetsTree>

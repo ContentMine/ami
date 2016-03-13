@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC3715421/results/species/genus/results.xml">
+  <result pre="Ilheus virus (ILHV) was first described in 1944, when it was isolated from " exact="Aedes" match="Aedes" post=" and Psorophora spp. mosquitoes during an epidemiological investigation of yellow fever in t" name="genus"/>
+ </snippets>
+</snippetsTree>

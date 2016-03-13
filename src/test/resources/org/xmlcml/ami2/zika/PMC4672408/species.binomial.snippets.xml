@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC4672408/results/species/binomial/results.xml">
-  <result pre="articularly because of the risk for concurrent transmission of DENV and CHIKV by the same vectors, " exact="Ae. aegypti" xpath="/html[1]/body[1]/div[1]/p[9]" match="Ae. aegypti" post=" and Ae. albopictus mosquitoes, which are abundant throughout tropical and subtropical regio" name="binomial"/>
-  <result pre="the risk for concurrent transmission of DENV and CHIKV by the same vectors, Ae. aegypti and " exact="Ae. albopictus" match="Ae. albopictus" post=" mosquitoes, which are abundant throughout tropical and subtropical regions. To date, the largest o" name="binomial"/>
- </snippets>
-</snippetsTree>

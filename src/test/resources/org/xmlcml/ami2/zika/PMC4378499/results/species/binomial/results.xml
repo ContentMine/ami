@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<results title="binomial">
- <result pre="e, genus Alphavirus, is transmitted by mosquitoes of the Aedes genus, especially " exact="Ae. aegypti" xpath="/html[1]/body[1]/div[1]/p[9]" match="Ae. aegypti" post=" and Ae. albopictus ( 1 ). The main clinical manifestations of C" name="binomial"/>
- <result pre="rus, is transmitted by mosquitoes of the Aedes genus, especially Ae. aegypti and " exact="Ae. albopictus" xpath="/html[1]/body[1]/div[1]/p[9]" match="Ae. albopictus" post=" ( 1 ). The main clinical manifestations of CHIKV infections are sudden" name="binomial"/>
- <result pre=" naive for CHIKV infection. Second, 2 potential vectors for CHIKV are present in French Polynesia: " exact="Ae. aegypti" xpath="/html[1]/body[1]/div[1]/p[9]" match="Ae. aegypti" post=" ( 1 ) and Ae. polynesiensis mosquitoes ( 9" name="binomial"/>
- <result pre="or CHIKV are present in French Polynesia: Ae. aegypti ( 1 ) and " exact="Ae. polynesiensis" match="Ae. polynesiensis" post=" mosquitoes ( 9 ). Third, in French Polynesia the hot and rainy season " name="binomial"/>
-</results>

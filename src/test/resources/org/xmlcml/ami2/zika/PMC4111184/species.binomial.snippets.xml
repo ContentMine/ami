@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC4111184/results/species/binomial/results.xml">
-  <result pre=" onset) would not be high enough for efficient transmission of ZIKV to susceptible vectors such as " exact="Aedes aegypti" xpath="/html[1]/body[1]/div[1]/p[7]" match="Aedes aegypti" post=" or Ae. albopictus mosquitoes (S. Becker, pers. comm.). This finding is consistent with prev" name="binomial"/>
-  <result pre="h enough for efficient transmission of ZIKV to susceptible vectors such as Aedes aegypti or " exact="Ae. albopictus" xpath="/html[1]/body[1]/div[1]/p[7]" match="Ae. albopictus" post=" mosquitoes (S. Becker, pers. comm.). This finding is consistent with previously reported findings " name="binomial"/>
-  <result pre="ed findings of ZIKV RNA loads of 930–728,800 copies/mL ( 2 ). However, " exact="Ae. aegypti" xpath="/html[1]/body[1]/div[1]/p[7]" match="Ae. aegypti" post=" and Ae. albopictus mosquitoes are not present in Norway; thus, transmission in Norway seems" name="binomial"/>
-  <result pre=" loads of 930–728,800 copies/mL ( 2 ). However, Ae. aegypti and " exact="Ae. albopictus" match="Ae. albopictus" post=" mosquitoes are not present in Norway; thus, transmission in Norway seems unlikely. ZIKV infection " name="binomial"/>
- </snippets>
-</snippetsTree>

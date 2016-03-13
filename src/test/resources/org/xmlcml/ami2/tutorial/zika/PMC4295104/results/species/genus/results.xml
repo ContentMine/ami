@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="genus">
+ <result pre=" " exact="Xenopus" xpath="/html[1]/body[1]/div[1]/div[9]/div[2]/p[1]" match="Xenopus" post=" oocytes are naturally impermeable to water and thereby are an ideal model system to study the wate" name="genus"/>
+ <result pre=" mosquito AQP was cloned from Ae. aegypti, AeaAQP or AaAQP 1, which is a close homologue of " exact="Drosophila" xpath="/html[1]/body[1]/div[1]/div[9]/div[2]/p[1]" match="Drosophila" post=" DRIP. AaAQP 1 is localized in the tracheolar cells that are associated with MTs, and it is strictl" name="genus"/>
+ <result pre=" that are associated with MTs, and it is strictly a water channel when expressed heterologously in " exact="Xenopus" xpath="/html[1]/body[1]/div[1]/div[9]/div[2]/p[1]" match="Xenopus" post=" oocytes 22 23 . A homologous gene, AgAQ" name="genus"/>
+ <result pre="p&gt; 23 . A homologous gene, AgAQP 1 has also been cloned and characterized in " exact="Anopheles" xpath="/html[1]/body[1]/div[1]/div[9]/div[2]/p[1]" match="Anopheles" post=" gambiae. AgAQP 1 transports water but not glycerol and is expressed in the MG, OV and MTs a" name="genus"/>
+ <result pre="insect desiccation resistance and cold hardiness. For example, RNAi-mediated knockdown of AQP 1 in " exact="Anopheles" xpath="/html[1]/body[1]/div[1]/div[9]/div[2]/p[1]" match="Anopheles" post=" gambiae resulted in significantly longer survival of the knockdown group compared with the " name="genus"/>
+ <result pre="Expression was assayed using qPCR. The data represent relative quantification of " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[9]/div[2]/p[1]" match="Aedes" post=" AQPs which were normalized by qPCR analysis of ribosomal protein S7 (rpS7) mRNA levels in the cDNA" name="genus"/>
+ <result pre="he supplementary information (see Supplementary Fig. S1). (b) Effect of heterologous expression of " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[9]/div[2]/p[1]" match="Aedes" post=" AQPs on water permeability of Xenopus oocytes. The light-shaded columns represent oocytes t" name="genus"/>
+ <result pre="tary Fig. S1). (b) Effect of heterologous expression of Aedes AQPs on water permeability of " exact="Xenopus" match="Xenopus" post=" oocytes. The light-shaded columns represent oocytes that were pre- treated with HgCl " name="genus"/>
+</results>

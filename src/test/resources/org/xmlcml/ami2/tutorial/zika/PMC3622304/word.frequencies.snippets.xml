@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC3622304/results/word/frequencies/results.xml">
+  <result title="frequency" word="disorder" count="56"/>
+  <result title="frequency" word="protein" count="56"/>
+  <result title="frequency" word="proteins" count="43"/>
+  <result title="frequency" word="virus" count="42"/>
+  <result title="frequency" word="disordered" count="34"/>
+  <result title="frequency" word="conformational" count="33"/>
+  <result title="frequency" word="evolutionary" count="32"/>
+  <result title="frequency" word="structural" count="26"/>
+  <result title="frequency" word="regions" count="25"/>
+  <result title="frequency" word="sites" count="21"/>
+ </snippets>
+</snippetsTree>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC3944877/results/species/genus/results.xml">
-  <result pre="cute, febrile, viral disease caused by Rift Valley fever virus (RVFV), a phlebovirus of the family " exact="Bunyaviridae" xpath="/html[1]/body[1]/div[1]/p[2]" match="Bunyaviridae" post=" that is endemic to sub-Saharan Africa. RVF mortality and abortion rates among young domesticated r" name="genus"/>
-  <result pre="ref=&quot;#R2&quot;&gt;2 ). Heavy rainfall and flooding create conditions for emergence of RVF vectors ( " exact="Aedes" match="Aedes" post=" and Culex spp. mosquitoes), and dispersion of this disease into new areas is linked to migr" name="genus"/>
- </snippets>
-</snippetsTree>

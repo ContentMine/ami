@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC4313662/results/species/genus/results.xml">
-  <result pre="izations, and 12,500 deaths worldwide ( 1 ). DENV belongs to the genus " exact="Flavivirus" xpath="/html[1]/body[1]/div[1]/p[3]" match="Flavivirus" post=" and is transmitted by Aedes spp. mosquitoes. There are 4 distinct serotypes (DENV-1 to DENV" name="genus"/>
-  <result pre="Zika virus (ZIKV) is an emerging mosquito-borne virus that belongs to the genus " exact="Flavivirus" match="Flavivirus" post=" and was first isolated in Uganda ( 4 ). ZIKV is believed to be transmi" name="genus"/>
- </snippets>
-</snippetsTree>

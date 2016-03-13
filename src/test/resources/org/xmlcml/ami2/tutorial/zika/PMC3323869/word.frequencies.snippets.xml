@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC3323869/results/word/frequencies/results.xml">
+  <result title="frequency" word="III" count="94"/>
+  <result title="frequency" word="Fe(II)" count="82"/>
+  <result title="frequency" word="reduction" count="81"/>
+  <result title="frequency" word="Fe(III)" count="68"/>
+  <result title="frequency" word="natural" count="66"/>
+  <result title="frequency" word="superoxide" count="60"/>
+  <result title="frequency" word="production" count="52"/>
+  <result title="frequency" word="range" count="46"/>
+  <result title="frequency" word="species" count="46"/>
+  <result title="frequency" word="M.," count="45"/>
+  <result title="frequency" word="concentrations" count="45"/>
+  <result title="frequency" word="complexes" count="44"/>
+  <result title="frequency" word="organic" count="41"/>
+  <result title="frequency" word="redox" count="39"/>
+  <result title="frequency" word="waters" count="39"/>
+  <result title="frequency" word="iron" count="38"/>
+  <result title="frequency" word="extracellular" count="37"/>
+  <result title="frequency" word="(A)" count="35"/>
+  <result title="frequency" word="A.," count="34"/>
+  <result title="frequency" word="L.," count="34"/>
+  <result title="frequency" word="reduced" count="34"/>
+  <result title="frequency" word="Chem." count="33"/>
+  <result title="frequency" word="steady-state" count="33"/>
+  <result title="frequency" word="uptake" count="33"/>
+  <result title="frequency" word="D.," count="32"/>
+  <result title="frequency" word="rate" count="32"/>
+  <result title="frequency" word="relatively" count="32"/>
+  <result title="frequency" word="T.," count="31"/>
+  <result title="frequency" word="Rose" count="30"/>
+  <result title="frequency" word="oxidation" count="30"/>
+  <result title="frequency" word="reactions" count="30"/>
+  <result title="frequency" word="concentration" count="29"/>
+  <result title="frequency" word="complex" count="28"/>
+  <result title="frequency" word="constants" count="28"/>
+  <result title="frequency" word="Waite" count="27"/>
+  <result title="frequency" word="rates" count="27"/>
+  <result title="frequency" word="red" count="27"/>
+  <result title="frequency" word="J.," count="26"/>
+  <result title="frequency" word="conditions" count="26"/>
+  <result title="frequency" word="formation" count="26"/>
+  <result title="frequency" word="marine" count="26"/>
+  <result title="frequency" word="red,inorg" count="26"/>
+  <result title="frequency" word="Sci." count="24"/>
+  <result title="frequency" word="cell" count="24"/>
+  <result title="frequency" word="surface" count="24"/>
+  <result title="frequency" word="Environ." count="23"/>
+  <result title="frequency" word="aquatic" count="23"/>
+  <result title="frequency" word="biological" count="23"/>
+  <result title="frequency" word="red,org" count="23"/>
+  <result title="frequency" word="ESP" count="22"/>
+  <result title="frequency" word="electron" count="22"/>
+  <result title="frequency" word="increase" count="22"/>
+  <result title="frequency" word="ligand" count="22"/>
+  <result title="frequency" word="potential" count="22"/>
+  <result title="frequency" word="role" count="22"/>
+  <result title="frequency" word="constant" count="21"/>
+  <result title="frequency" word="log" count="21"/>
+  <result title="frequency" word="oxygen" count="21"/>
+ </snippets>
+</snippetsTree>

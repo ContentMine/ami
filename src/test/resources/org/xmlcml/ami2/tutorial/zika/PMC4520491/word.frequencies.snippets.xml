@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4520491/results/word/frequencies/results.xml">
+  <result title="frequency" word="Aedes" count="149"/>
+  <result title="frequency" word="Ochlerotatus" count="107"/>
+  <result title="frequency" word="Ochlerotatus)" count="78"/>
+  <result title="frequency" word="(Theobald)" count="69"/>
+  <result title="frequency" word="species" count="62"/>
+  <result title="frequency" word="&amp;amp;" count="61"/>
+  <result title="frequency" word="doi:" count="42"/>
+  <result title="frequency" word="genus" count="40"/>
+  <result title="frequency" word="classification" count="38"/>
+  <result title="frequency" word="'Ochlerotatus'" count="35"/>
+  <result title="frequency" word="(Diptera:" count="35"/>
+  <result title="frequency" word="Aedini" count="33"/>
+  <result title="frequency" word="RH&amp;amp;K" count="33"/>
+  <result title="frequency" word="WNV" count="33"/>
+  <result title="frequency" word="unassigned)" count="31"/>
+  <result title="frequency" word="'Ochlerotatus')" count="29"/>
+  <result title="frequency" word="(subgenus" count="29"/>
+  <result title="frequency" word="mosquitoes" count="29"/>
+  <result title="frequency" word="Stegomyia" count="26"/>
+  <result title="frequency" word="new" count="26"/>
+  <result title="frequency" word="Entomol" count="25"/>
+  <result title="frequency" word="genera" count="25"/>
+  <result title="frequency" word="subgenera" count="25"/>
+  <result title="frequency" word="(Coquillett)" count="23"/>
+  <result title="frequency" word="Fig" count="23"/>
+  <result title="frequency" word="characters" count="23"/>
+  <result title="frequency" word="data" count="23"/>
+  <result title="frequency" word="support" count="23"/>
+  <result title="frequency" word="Culicidae)" count="22"/>
+  <result title="frequency" word="Finlaya)" count="22"/>
+  <result title="frequency" word="Knab)" count="22"/>
+  <result title="frequency" word="Med" count="21"/>
+  <result title="frequency" word="parsimony" count="21"/>
+ </snippets>
+</snippetsTree>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<results title="genus">
- <result pre="&gt;1 ]. DENV is an enveloped, single-stranded, positive-strand RNA virus, member of the genus " exact=" Flavivirus" xpath="/html[1]/body[1]/div[1]/div[4]/div[5]/p[3]" match="Flavivirus" post=" in the Flaviviridae family. It is transmitted from human to human through the bite of mosquitoes o" name="genus"/>
- <result pre="iviridae family. It is transmitted from human to human through the bite of mosquitoes of the genus " exact=" Aedes" xpath="/html[1]/body[1]/div[1]/div[4]/div[5]/p[3]" match="Aedes" post=" [ 2 ]. DENV transmission by transfused blood is rare; however it indee" name="genus"/>
- <result pre="larval indices for population monitoring has been questioned because their relationship with adult " exact=" Aedes" xpath="/html[1]/body[1]/div[1]/div[4]/div[5]/p[3]" match="Aedes" post=" densities heavily depends on larval mortality [ 106 , &lt;a href" name="genus"/>
- <result pre="eding sites. Insecticide application [ 52 ] and monitoring systems of " exact=" Aedes" xpath="/html[1]/body[1]/div[1]/div[4]/div[5]/p[3]" match="Aedes" post=" larvae and eggs, as well as mosquito adults, have also been used [ 108 &lt;/su" name="genus"/>
- <result pre="Currently, a new vector control strategy has been developed, which consists of the introduction of " exact=" Wolbachia" match="Wolbachia" post=" bacteria into target vector populations, which directly inhibits the ability of several pathogens " name="genus"/>
-</results>

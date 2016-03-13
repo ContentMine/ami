@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC4530765/results/species/binomial/results.xml">
-  <result pre="f=&quot;#R1&quot;&gt;1 after being isolated from a sentinel rhesus macaque monkey in 1947 and a pool of " exact="Aedes africanus" xpath="/html[1]/body[1]/div[1]/div[7]/div[1]/div[2]/div[4]/p[1]" match="Aedes africanus" post=" mosquitoes in 1948 from the Zika forest in Uganda. Since it was first reported, only a small numbe" name="binomial"/>
-  <result pre="ositive or equivocal for ZIKV by PCR were sent for virus isolation by intrathoracic inoculation of " exact="Toxorhynchites splendens" xpath="/html[1]/body[1]/div[1]/div[7]/div[1]/div[2]/div[4]/p[1]" match="Toxorhynchites splendens" post=" mosquitoes followed by inoculation of mosquito-derived C6/36 cells. Typing ELISA using the univers" name="binomial"/>
-  <result pre="Virus for sequencing was isolated from this sample by intrathoracic inoculation of " exact="Toxorhynchites splendens" match="Toxorhynchites splendens" post=" mosquitoes from the serum followed by inoculation of C6/36 cells. " name="binomial"/>
- </snippets>
-</snippetsTree>

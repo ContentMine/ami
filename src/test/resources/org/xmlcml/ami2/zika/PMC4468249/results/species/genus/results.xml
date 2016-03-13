@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<results title="genus">
- <result pre="V consists of four serotypes (DENV1-4) each comprising multiple genotypes and belongs to the genus " exact="Flavivirus" xpath="/html[1]/body[1]/div[1]/div[4]/p[1]" match="Flavivirus" post=" of the family Flaviviridae [ 2 ]. " name="genus"/>
- <result pre="NV1-4) each comprising multiple genotypes and belongs to the genus Flavivirus of the family " exact="Flaviviridae" match="Flaviviridae" post=" [ 2 ]. " name="genus"/>
-</results>

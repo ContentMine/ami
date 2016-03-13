@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<results title="binomial">
- <result pre=" related to the Spondweni virus and is transmitted by many Aedes spp. mosquitoes, including " exact="Ae. africanus" xpath="/html[1]/body[1]/div[1]/p[1]" match="Ae. africanus" post=", Ae. luteocephalus, Ae. hensilli, and Ae. aegypti. The virus was identified i" name="binomial"/>
- <result pre="eni virus and is transmitted by many Aedes spp. mosquitoes, including Ae. africanus, " exact="Ae. luteocephalus" xpath="/html[1]/body[1]/div[1]/p[1]" match="Ae. luteocephalus" post=", Ae. hensilli, and Ae. aegypti. The virus was identified in rhesus monkeys during sy" name="binomial"/>
- <result pre="ed by many Aedes spp. mosquitoes, including Ae. africanus, Ae. luteocephalus, " exact="Ae. hensilli" xpath="/html[1]/body[1]/div[1]/p[1]" match="Ae. hensilli" post=", and Ae. aegypti. The virus was identified in rhesus monkeys during sylvatic yellow fever s" name="binomial"/>
- <result pre="pp. mosquitoes, including Ae. africanus, Ae. luteocephalus, Ae. hensilli, and " exact="Ae. aegypti" match="Ae. aegypti" post=". The virus was identified in rhesus monkeys during sylvatic yellow fever surveillance in the Zika " name="binomial"/>
-</results>

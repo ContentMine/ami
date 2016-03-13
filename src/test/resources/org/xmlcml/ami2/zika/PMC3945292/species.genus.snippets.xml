@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC3945292/results/species/genus/results.xml">
-  <result pre="Yellow fever (YF) is an acute viral hemorrhagic disease transmitted by " exact="Aedes" match="Aedes" post=" mosquitoes. The causative agent, the yellow fever virus (YFV), is found in tropical and subtropica" name="genus"/>
- </snippets>
-</snippetsTree>

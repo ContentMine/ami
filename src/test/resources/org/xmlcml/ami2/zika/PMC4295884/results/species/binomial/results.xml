@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<results title="binomial">
- <result pre="Murine typhus is endemic to Indonesia, with the prevalence of positive " exact="Rickettsia typhi" xpath="/html[1]/body[1]/div[1]/div[4]/p[4]" match="Rickettsia typhi" post=" antibody levels in humans being one of the highest in the world [ &lt;a href=&quot;#pntd.0003351.re" name="binomial"/>
- <result pre="dwide [ 4 ]. Arthropod vectors, commonly the rat flea " exact="Xenopsylla cheopis" xpath="/html[1]/body[1]/div[1]/div[4]/p[4]" match="Xenopsylla cheopis" post=", are responsible for the transmission of murine typhus to humans from an animal reservoir [ " name="binomial"/>
- <result pre="llness. The gold standard for diagnosis is a 4-fold rise on the immunofluorescence assay detecting " exact="R. typhi" match="Rickettsia typhi" post=" IgM and IgG antibodies [ 7 ]. The preferred treatment" name="binomial"/>
-</results>

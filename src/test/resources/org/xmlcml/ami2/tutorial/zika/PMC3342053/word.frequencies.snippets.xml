@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC3342053/results/word/frequencies/results.xml">
+  <result title="frequency" word="sylvatic" count="41"/>
+  <result title="frequency" word="DENV-" count="25"/>
+ </snippets>
+</snippetsTree>

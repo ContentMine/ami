@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC4654492/results/species/genus/results.xml">
-  <result pre="Transcriptomic tools such as the &quot; " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[8]/p[5]" match="Aedes" post=" detox chip&quot; [ 12 ] are useful to identify detoxificat" name="genus"/>
-  <result pre="r pyrethroid selected AE. AEGYPTI populations distributed worldwide and analysed with the &quot; " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[8]/p[5]" match="Aedes" post=" detox&quot; microarray [ 12 , &lt;a href=&quot;#pntd.000422" name="genus"/>
-  <result pre=" † Genes up-regulated 2 fold in &quot; " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[8]/p[5]" match="Aedes" post=" detox&quot; microarrays; " name="genus"/>
-  <result pre="as demonstrated (50). Therefore, opposite results are observed for the same gene family within the " exact="Culicidae" match="Culicidae" post=" family. Serine proteases are key enzymes in mosquito metabolism and play a role in pyrethroid degr" name="genus"/>
- </snippets>
-</snippetsTree>

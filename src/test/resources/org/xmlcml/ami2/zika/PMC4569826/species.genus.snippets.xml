@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC4569826/results/species/genus/results.xml">
-  <result pre="ref=&quot;#B39&quot;&gt;Ranganatha et al. 2013 ), as well as those reported for extracts from species of " exact="Hypericum" xpath="/html[1]/body[1]/div[1]/div[5]/p[4]" match="Hypericum" post=" against culicids ( Cetin et al. 2011 ). A fraction of H. carinatu" name="genus"/>
-  <result pre="benzophenyl urea compounds may disrupt chitin, causing changes in development or even mortality in " exact="Culex" xpath="/html[1]/body[1]/div[1]/div[5]/p[4]" match="Culex" post=" and Aedes mosquitoes in low doses ( Fontoura et al. 2012 , &lt;s" name="genus"/>
-  <result pre="compounds may disrupt chitin, causing changes in development or even mortality in Culex and " exact="Aedes" match="Aedes" post=" mosquitoes in low doses ( Fontoura et al. 2012 , &lt;a href=&quot;#B4&quot;" name="genus"/>
- </snippets>
-</snippetsTree>

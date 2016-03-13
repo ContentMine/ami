@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<results title="genus">
- <result pre="h appear to be mosquitoes and ticks. Approximately 300 types of mosquito can transmit arboviruses. " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[9]/p[1]" match="Aedes" post=" and Culex mosquitoes are the species most frequently associated with arbovirus transmission" name="genus"/>
- <result pre="squitoes and ticks. Approximately 300 types of mosquito can transmit arboviruses. Aedes and " exact="Culex" xpath="/html[1]/body[1]/div[1]/div[9]/p[1]" match="Culex" post=" mosquitoes are the species most frequently associated with arbovirus transmission (115 and 105 typ" name="genus"/>
- <result pre="ransmit arboviruses. In addition, 25 midge species have been shown to transmit arboviruses, mainly " exact="Culicoides" xpath="/html[1]/body[1]/div[1]/div[9]/p[1]" match="Culicoides" post=" (24 types) and Lasiohelea. Sandflies, blackflies, stinkbugs, lice, mites, gadfly, and bedbu" name="genus"/>
- <result pre="ses, amplified from mosquitoes, belonging to the culicine genera Culex, Aedimorphus, " exact="Ochlerotatus" xpath="/html[1]/body[1]/div[1]/div[9]/p[1]" match="Ochlerotatus" post=" and/or Stegomyia. Many of these sequences may represent DNA integrations into mosquito geno" name="genus"/>
- <result pre=" 34 Moreover, sRNAs related to WNV in apparently uninfected " exact="Culex" xpath="/html[1]/body[1]/div[1]/div[9]/p[1]" match="Culex" post=" mosquitoes have also been identified. 35 Whilst there" name="genus"/>
- <result pre="NV, throughout North America, over a period of five years was primarily birds and their associated " exact="Culex" match="Culex" post=" mosquito species. 36 The dispersal and increasing epi" name="genus"/>
-</results>

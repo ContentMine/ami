@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="genus">
+ <result pre="Zika virus is an arthropod-borne " exact="Flavivirus" xpath="/html[1]/body[1]/div[1]/div[3]/p[1]" match="Flavivirus" post=" member of the Spondweni serocomplex, transmitted by Aedes mosquitoes. We report here the co" name="genus"/>
+ <result pre=" virus is an arthropod-borne Flavivirus member of the Spondweni serocomplex, transmitted by " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[3]/p[1]" match="Aedes" post=" mosquitoes. We report here the complete coding sequence of a Zika virus strain belonging to the As" name="genus"/>
+ <result pre="us) is an arbovirus originally transmitted in Africa through a sylvatic cycle involving mainly " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[3]/p[1]" match="Aedes" post=" vectors and nonhuman primates, with humans being occasional hosts ( 1 " name="genus"/>
+ <result pre="osts ( 1 ). Epidemic transmission in a dengue-like Aedes-human- " exact="Aedes" match="Aedes" post=" cycle has been increasingly reported in recent years ( 2 ), with nonsp" name="genus"/>
+</results>

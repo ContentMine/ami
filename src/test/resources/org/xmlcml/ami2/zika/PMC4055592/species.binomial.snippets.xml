@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC4055592/results/species/binomial/results.xml">
-  <result pre="imported case of Zika virus infection into northern Queensland where the potential mosquito vector " exact="Aedes aegypti" xpath="/html[1]/body[1]/div[1]/div[3]/p[3]" match="Aedes aegypti" post=" is present and only the second such reported case diagnosed within Australia. " name="binomial"/>
-  <result pre="fected mosquito and predominantly involves the Aedes species, including the domestic vector " exact="Aedes aegypti" xpath="/html[1]/body[1]/div[1]/div[3]/p[3]" match="Aedes aegypti" post=" 1 . Primarily maintained in a zoonotic cycle involving non-human pri" name="binomial"/>
-  <result pre="tentially compounds disease detection and constitutes a major public health concern. Additionally, " exact="Aedes aegypti" xpath="/html[1]/body[1]/div[1]/div[3]/p[3]" match="Aedes aegypti" post=" mosquitoes are currently only found in Queensland and the Torres Strait which are already under re" name="binomial"/>
-  <result pre="lready under regular threat from sporadic DENV outbreaks. Another implicated ZIKV mosquito vector, " exact="Aedes albopictus" match="Aedes albopictus" post=" has been identified in the Torres Strait and could potentially become established on the mainland " name="binomial"/>
- </snippets>
-</snippetsTree>

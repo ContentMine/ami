@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<snippetsTree>
- <snippets file="target/tutorial/zika/PMC4381565/results/species/genus/results.xml">
-  <result pre="s consistent with the recent introduction of a few founder females or may be related to ubiquitous " exact="Wolbachia" xpath="/html[1]/body[1]/div[1]/div[4]/div[6]/p[1]" match="Wolbachia" post=" infection in populations of this species, as suggested by Armbruster et al. [ &lt;a href=&quot;#CR4" name="genus"/>
-  <result pre="t diseases to humans). Unfortunately, few studies have shown effective, sustainable control of the " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[4]/div[6]/p[1]" match="Aedes" post=" mosquitoes with these methods [ 5 ]. Meanwhile, biological control, u" name="genus"/>
-  <result pre=" methods [ 5 ]. Meanwhile, biological control, using copepod in genus " exact="Mesocyclops" match="Mesocyclops" post=" has allowed eliminating immature stage of Ae. aegypti in water storage containers in Vietna" name="genus"/>
- </snippets>
-</snippetsTree>
