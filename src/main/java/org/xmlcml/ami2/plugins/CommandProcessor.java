@@ -49,7 +49,10 @@ public class CommandProcessor {
 	}
 
 	public void processCommands(String commandString) {
-		processCommands(Arrays.asList(commandString.split("\\s+")));
+		if (commandString == null) {
+			throw new RuntimeException("Null command");
+		}
+		processCommands(Arrays.asList(commandString.trim().split("\\s+")));
 	}
 
 	public void processCommands(List<String> cmds) {
@@ -146,9 +149,9 @@ public class CommandProcessor {
 		}
 		LOG.trace(dataTablesTool.columnHeadingList);
 		List<HtmlTd> footerList = new ArrayList<HtmlTd>();
-		for (CellRenderer head : dataTablesTool.columnHeadingList) {
+		for (CellRenderer cellRenderer : dataTablesTool.columnHeadingList) {
 			HtmlTd td = new HtmlTd();
-			td.appendChild(head.getValue());
+			td.appendChild(cellRenderer.getHeading());
 			footerList.add(td);
 		}
 		HtmlTd caption = new HtmlTd();

@@ -16,9 +16,11 @@ import org.xmlcml.ami2.plugins.sequence.SequencePluginOption;
 import org.xmlcml.ami2.plugins.species.SpeciesPluginOption;
 import org.xmlcml.ami2.plugins.word.WordPluginOption;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.files.OptionFlag;
+import org.xmlcml.cmine.files.PluginOption;
 import org.xmlcml.cmine.util.CellRenderer;
 
-public abstract class AMIPluginOption {
+public abstract class AMIPluginOption extends PluginOption {
 
 	private static final String WORD = "word";
 	private static final String SPECIES = "species";
@@ -42,15 +44,6 @@ public abstract class AMIPluginOption {
 	public final static String WIKIPEDIA_HREF0 = "http://en.wikipedia.org/wiki/";
 	public final static String WIKIPEDIA_HREF1 = "";
 	
-	protected String plugin;
-	protected List<String> options;
-	protected List<String> flags;
-	protected File projectDir;
-	protected String optionString;
-	protected String resultXPathAttribute;
-	protected String resultXPathBase;
-	private List<OptionFlag> optionFlags;
-
 	protected AMIPluginOption(String tag) {
 		this.plugin = tag;
 	}
@@ -68,7 +61,9 @@ public abstract class AMIPluginOption {
 
 	public static AMIPluginOption createPluginOption(String cmd) {
 		Matcher matcher = COMMAND.matcher(cmd);
-		if (!matcher.matches()) {
+		if (cmd == null || cmd.trim().equals("")) {
+			throw new RuntimeException("Null/empty command");
+		} else if (!matcher.matches()) {
 			throw new RuntimeException("Command found: "+cmd+" must fit: "+matcher+""
 					+ "...  plugin(option1[,option2...])[_flag1[_flag2...]]");
 		}
@@ -78,6 +73,7 @@ public abstract class AMIPluginOption {
 		flagString = flagString.replaceAll("_",  " ");
 		List<String>flags = Arrays.asList(flagString.split("~"));
 		List<OptionFlag> optionFlags = OptionFlag.createOptionFlags(flags);
+		LOG.trace("option flags: "+optionFlags);
 		
 		AMIPluginOption pluginOption = null;
 		if (false) {
@@ -231,7 +227,7 @@ public abstract class AMIPluginOption {
 	}
 	
 	public CellRenderer getNewCellRenderer() {
-		CellRenderer cellRenderer = new CellRenderer(this.plugin);
+		CellRenderer cellRenderer = new CellRenderer(this);
 		return cellRenderer;
 	}
 

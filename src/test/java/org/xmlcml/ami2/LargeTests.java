@@ -110,9 +110,30 @@ public class LargeTests {
 	}
 
 	@Test
-	@Ignore
-	public void testZika() throws IOException {
-		runDefault("zika");
+//	@Ignore
+	public void testCurrent() throws IOException {
+//		runDefault("zika");
+		runDefault("brcancer");
+	}
+
+	@Test
+//	@Ignore
+	public void testDictionary() throws IOException {
+		String project = "brcancer";
+		File rawDir = new File("../projects/"+project);
+		File projectDir = new File("target/tutorial/"+project+"/");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.processCommands(""
+//				+ "species(binomial,genus) "
+				+ "gene(human)"
+//				+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/inn.xml_/org/xmlcml/ami2/plugins/dictionary/cochrane.xml"
++ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/disease.xml"
++ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/inn.xml"
++ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/cochrane.xml"
+				+ "");
+		commandProcessor.createDataTables();
+		
 	}
 
 
@@ -127,6 +148,17 @@ public class LargeTests {
 	public void testZika10() throws IOException {
 		runBioscienceDefault("zika10", new File("src/test/resources/org/xmlcml/ami2/zika10/"));
 	}
+
+	@Test
+	public void runBespokeDictionary() throws IOException {
+		File projectDir = new File("target/tutorial/zika10");
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.processCommands(""
+				+ "word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/inn.xml"
+				+ "");
+		commandProcessor.createDataTables();
+	}
+
 
 	private void runDefault(String project) throws IOException {
 		File rawDir = new File("../projects/"+project);

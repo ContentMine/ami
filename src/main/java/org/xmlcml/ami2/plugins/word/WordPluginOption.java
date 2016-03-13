@@ -39,6 +39,7 @@ public class WordPluginOption extends AMIPluginOption {
 			commandString.append(searchDictionary);
 			plugin = "search";
 			dictionary = getOption(null);
+			optionString = dictionary;
 		}
 		DefaultArgProcessor.CM_LOG.debug("WORD "+commandString);
 		System.out.print("WS: "+projectDir+"  ");
@@ -66,7 +67,7 @@ public class WordPluginOption extends AMIPluginOption {
 		option = (dictionary != null) ? dictionary : option;
 		cmd += " --filter file(**/"+getPlugin(plugin)+"/"+option+"/results.xml)xpath("+resultXPathBase+xpathFlags+") ";
 		cmd += " -o "+createSnippetsFilename(option)+"  ";
-		LOG.trace("runFilterResultsXMLOptions: >>>> "+cmd);
+		LOG.debug("runFilterResultsXMLOptions: >>>> "+cmd);
 		return cmd;
 	}
 
