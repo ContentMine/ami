@@ -14,16 +14,16 @@ import org.xmlcml.ami2.plugins.word.WordTest;
 import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.norma.NormaArgProcessor;
 
-//@Ignore
+@Ignore
 public class LargeTests {
 	
-	File large = new File("../patents/US08979");
+	File patentsLarge = new File("../patents/US08979");
 
 	@Before
 	public void setUp() {
-		if (!large.exists()) return; // only on PMR machine
-		if (!new File(large, "US08979000-20150317/scholarly.html").exists()) {
-			String args = "-i fulltext.xml  --transform uspto2html -o scholarly.html --project "+large;
+		if (!patentsLarge.exists()) return; // only on PMR machine
+		if (!new File(patentsLarge, "US08979000-20150317/scholarly.html").exists()) {
+			String args = "-i fulltext.xml  --transform uspto2html -o scholarly.html --project "+patentsLarge;
 			NormaArgProcessor argProcessor = new NormaArgProcessor(args);
 		}
 	}
@@ -32,8 +32,8 @@ public class LargeTests {
 	// TESTED 2016-01-12
 	@Ignore
 	public void testLargeWordFrequencies() {
-		if (!large.exists()) return; // only on PMR machine
-		String args = "-i scholarly.html  --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+WordTest.STOPWORDS_TXT+" --project "+large;
+		if (!patentsLarge.exists()) return; // only on PMR machine
+		String args = "-i scholarly.html  --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+WordTest.STOPWORDS_TXT+" --project "+patentsLarge;
 		WordArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
@@ -50,7 +50,7 @@ public class LargeTests {
 	// expensive
 	@Ignore
 	public void testLargeConsortRegex() {
-		String args = "-i scholarly.html  --context 25 40 --r.regex regex/synbio.xml --project "+large; 
+		String args = "-i scholarly.html  --context 25 40 --r.regex regex/synbio.xml --project "+patentsLarge; 
 		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
@@ -126,11 +126,12 @@ public class LargeTests {
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
 		commandProcessor.processCommands(""
 //				+ "species(binomial,genus) "
-				+ "gene(human)"
 //				+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/inn.xml_/org/xmlcml/ami2/plugins/dictionary/cochrane.xml"
++ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/funders.xml"
 + " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/disease.xml"
 + " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/inn.xml"
 + " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/cochrane.xml"
++ " gene(human)"
 				+ "");
 		commandProcessor.createDataTables();
 		
@@ -138,11 +139,30 @@ public class LargeTests {
 
 
 	@Test
-	@Ignore
+//	@Ignore
 	public void testSemipartial() throws IOException {
 		runStatisticsDefault("semipartial");
 	}
-
+	
+	@Test
+	@Ignore  // very large
+	public void testTrialsLarge() throws IOException {
+		String project = "trials/trialsjournal";
+		File rawDir = new File("../projects/"+project);
+		File projectDir = new File("target/tutorial/"+project+"/");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.processCommands(""
+				+ "species(binomial,genus) "
+//				+ "gene(human)"
++ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/disease.xml"
++ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/inn.xml"
++ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/cochrane.xml"
+				+ "");
+		commandProcessor.createDataTables();
+		
+	}
+		
 	@Test
 //	@Ignore
 	public void testZika10() throws IOException {
@@ -159,6 +179,7 @@ public class LargeTests {
 		commandProcessor.createDataTables();
 	}
 
+	// =============== private support ==============
 
 	private void runDefault(String project) throws IOException {
 		File rawDir = new File("../projects/"+project);
