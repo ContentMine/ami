@@ -7,9 +7,17 @@ centermiddle
 topcenter
 centerbottom.
 topcenter.
+Fig.
+Figure
+margin
+&amp;
 left−/−
+//.
+(Fig.
+doi:
 -s.-
 middleleft
+{background
 (−)
 leftPOS/yes
 &amp;amp;

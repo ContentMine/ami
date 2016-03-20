@@ -14,7 +14,7 @@ import org.xmlcml.ami2.plugins.word.WordTest;
 import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.norma.NormaArgProcessor;
 
-@Ignore
+//@Ignore
 public class LargeTests {
 	
 	File patentsLarge = new File("../patents/US08979");
@@ -120,6 +120,31 @@ public class LargeTests {
 //	@Ignore
 	public void testDictionary() throws IOException {
 		String project = "brcancer";
+		File rawDir = new File("../projects/"+project);
+		File projectDir = new File("target/tutorial/"+project+"/");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.processCommands(""
+//				+ "species(binomial,genus) "
+//				+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/inn.xml_/org/xmlcml/ami2/plugins/dictionary/cochrane.xml"
++ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/funders.xml"
++ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/disease.xml"
++ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/inn.xml"
++ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/cochrane.xml"
+//+ " word(search)w.search:funders"
+//+ " word(search)w.search:disease"
+//+ " word(search)w.search:inn"
+//+ " word(search)w.search:cochrane"
++ " gene(human)"
+				+ "");
+		commandProcessor.createDataTables();
+		
+	}
+
+	@Test
+//	@Ignore
+	public void testNano() throws IOException {
+		String project = "nano";
 		File rawDir = new File("../projects/"+project);
 		File projectDir = new File("target/tutorial/"+project+"/");
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
