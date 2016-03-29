@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.tokens;
+package org.xmlcml.ami2.wordutil;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,6 +13,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
+import org.xmlcml.ami2.wordutil.LuceneUtils;
 import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.xml.XMLUtil;

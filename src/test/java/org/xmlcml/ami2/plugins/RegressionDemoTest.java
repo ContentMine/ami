@@ -14,6 +14,7 @@ import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.ami2.plugins.sequence.SequencePlugin;
 import org.xmlcml.ami2.plugins.species.SpeciesPlugin;
 import org.xmlcml.ami2.plugins.word.WordPlugin;
+import org.xmlcml.ami2.wordutil.WordSetWrapper;
 import org.xmlcml.cmine.files.CTree;
 
 /** collection of archetypal tests from each plugin.
@@ -128,7 +129,8 @@ public class RegressionDemoTest {
 	@Test
 	public void testWordHarness() throws IOException {
 		// SHOWCASE
-		String cmd = "-q target/word/16_1_1_test/ -i scholarly.html --context 25 40 --w.words wordLengths wordFrequencies --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
+		String cmd = "-q target/word/16_1_1_test/ -i scholarly.html --context 25 40 --w.words wordLengths wordFrequencies"
+				+ " --w.stopwords "+WordSetWrapper.COMMON_ENGLISH_STOPWORDS_TXT;
 		AMIFixtures.runStandardTestHarness(
 				new File("src/test/resources/org/xmlcml/ami2/regressiondemos/http_www.trialsjournal.com_content_16_1_1"), 
 				new File("target/word/16_1_1_test/"), 

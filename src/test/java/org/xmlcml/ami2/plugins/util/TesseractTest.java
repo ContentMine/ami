@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.plugins.word;
+package org.xmlcml.ami2.plugins.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +14,11 @@ import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
-/** will skip Tesseract if not installed
+/** OCR using Tesseract
+ * 
+ * I think this was to support phylo
+ * 
+ *  will skip Tesseract if not installed
 */
 public class TesseractTest {
 

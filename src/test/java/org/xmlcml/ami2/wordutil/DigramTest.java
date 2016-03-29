@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.plugins.word;
+package org.xmlcml.ami2.wordutil;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,6 +16,7 @@ import org.eclipse.jetty.util.log.Log;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.xmlcml.ami2.plugins.word.WordCollectionFactory;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;

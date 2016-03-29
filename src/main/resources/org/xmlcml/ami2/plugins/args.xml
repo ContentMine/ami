@@ -1,5 +1,6 @@
-<argList name="ami" version="0.2.23">
+<argList name="ami" version="0.2.24">
 
+  <p>201603-29 separated search from word statistics (some bugs might remain)</p>
   <p>201603-20 minor fixes following norma sections</p>
   <p>201603-15 can use multiple dictionaries in cmine</p>
   <p>201603-05 added output of nlm2html to zika10</p>
@@ -116,6 +117,55 @@
 		A dummy parameter to test conformance
 		</help>
 	</arg>	
+
+	<arg name="stopwords" 
+		long="--w.stopwords"
+		args="location [location...]"
+		countRange="{0,*}"
+		parseMethod="parseStopwords"
+		>
+		<help>
+		
+			STOPWORDS:
+			select sets of stopwords. Locations are given by resource locations.
+			
+			
+		</help>
+	</arg>	
+	
+	
+	<arg name="case" 
+		long="--w.case"
+		args="options"
+		countRange="{1,*}"
+		class="java.lang.String"
+		parseMethod="parseCase"
+		>
+		<help>
+			CASE
+			respects or ignores case:
+			* default is to respect case
+			* ignore = ignore case (everything is internally lowercased)
+			* respectCamel = don't lowercase anything with midWord uppercase (URL, eBook,)
+			
+		</help>
+	</arg>	
+	
+	<arg name="stemming" 
+		long="--w.stem"
+		args=""
+		countRange="{1,1}"
+		class="java.lang.Boolean"
+		default="false"
+		parseMethod="parseStem"
+		>
+		<help>
+		STEM
+		Stemming removes computable suffixes from words (e.g. walks, walked => walk)
+		Uses the Porter Stemming algorithm in Lucene.
+		</help>
+	</arg>	
+	
 	
 </argList>
 			

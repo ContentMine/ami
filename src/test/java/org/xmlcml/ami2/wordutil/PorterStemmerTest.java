@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.tokens;
+package org.xmlcml.ami2.wordutil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
-import org.xmlcml.ami2.tokens.PorterStemmer;
+import org.xmlcml.ami2.wordutil.PorterStemmer;
 
 
 public class PorterStemmerTest {

@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.plugins.word;
+package org.xmlcml.ami2.wordutil;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
+import org.xmlcml.ami2.wordutil.WordTree;
 import org.xmlcml.xml.XMLUtil;
 
 import nu.xom.Element;

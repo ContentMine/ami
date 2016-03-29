@@ -24,15 +24,31 @@ public class CommandProcessorTest {
 	}
 	
 	@Test
+	public void testCommandLineSearch() throws IOException {
+		String project = "zika10";
+		File projectDir = new File("target/tutorial1/"+project);
+		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		String cmd = ""
+				+ " search(tropicalVirus)"
+				+ " search(inn)"
+				+ " search(disease)"
+	    ;
+		String[] args = (projectDir+" "+cmd).split("\\s+");
+		CommandProcessor.main(args);
+	}
+
+	@Test
 	public void testCommandLineShort() throws IOException {
 		String project = "zika10";
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
-		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
+		String cmd = ""
+		+ "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
 		+ " sequence(dnaprimer)"
 		+ " gene(human) "
-		+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml"
+		+ " search(tropicalVirus)"
 	    ;
 		CommandProcessor.main((projectDir+" "+cmd).split("\\s+"));
 	}

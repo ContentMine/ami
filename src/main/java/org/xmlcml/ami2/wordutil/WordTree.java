@@ -1,5 +1,8 @@
-package org.xmlcml.ami2.plugins.word;
+package org.xmlcml.ami2.wordutil;
 
+/** creates an XMLTree for pre- and post- words 
+ * 
+ */
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

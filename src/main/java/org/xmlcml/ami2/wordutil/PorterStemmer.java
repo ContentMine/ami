@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.tokens;
+package org.xmlcml.ami2.wordutil;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

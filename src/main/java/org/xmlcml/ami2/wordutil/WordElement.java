@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.plugins.word;
+package org.xmlcml.ami2.wordutil;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;

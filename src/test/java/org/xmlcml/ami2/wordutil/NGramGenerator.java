@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.plugins.word;
+package org.xmlcml.ami2.wordutil;
 
 import java.io.IOException;
 import java.io.InputStream;

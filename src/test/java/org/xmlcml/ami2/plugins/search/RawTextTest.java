@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.plugins.word;
+package org.xmlcml.ami2.plugins.search;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,27 +22,27 @@ public class RawTextTest {
 	@Test
 	public void testSplitSentences() {
 		File test = new File(AMIFixtures.TEST_AMI_DIR, "word/sentences");
-		String cmd = "--ctree "+test.toString()+" -i simple.txt --w.search "
+		String cmd = "--ctree "+test.toString()+" -i simple.txt --sr.search "
 				+ "searchwords/prepositions.xml -o junk.txt";
-		WordArgProcessor argProcessor = new WordArgProcessor(cmd);
+		SearchArgProcessor argProcessor = new SearchArgProcessor(cmd);
 		argProcessor.runAndOutput();
 	}
 	
 	@Test
 	public void testSearchCochrane() {
 		File test = new File(AMIFixtures.TEST_AMI_DIR, "word/sentences/cochrane1");
-		String cmd = "--ctree "+test.toString()+" -i fulltext.pdf.txt --w.search "
+		String cmd = "--ctree "+test.toString()+" -i fulltext.pdf.txt --sr.search "
 				+ "searchwords/cochrane.xml -o junk.txt";
-		WordArgProcessor argProcessor = new WordArgProcessor(cmd);
+		SearchArgProcessor argProcessor = new SearchArgProcessor(cmd);
 		argProcessor.runAndOutput();
 	}
 	
 	@Test
 	public void testSearchCochraneProject() {
 		File test = new File(AMIFixtures.TEST_AMI_DIR, "word/sentences");
-		String cmd = "--project "+test.toString()+" -i fulltext.pdf.txt --w.search "
+		String cmd = "--project "+test.toString()+" -i fulltext.pdf.txt --sr.search "
 				+ "searchwords/cochrane.xml -o junk.txt";
-		WordArgProcessor argProcessor = new WordArgProcessor(cmd);
+		SearchArgProcessor argProcessor = new SearchArgProcessor(cmd);
 		argProcessor.runAndOutput();
 	}
 	
@@ -60,9 +60,9 @@ public class RawTextTest {
 		norma = new Norma();
 		norma.run(cmd);
 		
-		cmd = "--project "+project+" -i fulltext.pdf.txt --w.search "
+		cmd = "--project "+project+" -i fulltext.pdf.txt --sr.search "
 				+ "searchwords/cochrane.xml -o junk.txt";
-		WordArgProcessor argProcessor = new WordArgProcessor(cmd);
+		SearchArgProcessor argProcessor = new SearchArgProcessor(cmd);
 		argProcessor.runAndOutput();
 	}
 	

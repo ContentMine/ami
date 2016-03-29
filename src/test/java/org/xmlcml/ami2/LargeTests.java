@@ -10,7 +10,7 @@ import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.CommandProcessor;
 import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
-import org.xmlcml.ami2.plugins.word.WordTest;
+import org.xmlcml.ami2.wordutil.WordSetWrapper;
 import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.norma.NormaArgProcessor;
 
@@ -33,8 +33,8 @@ public class LargeTests {
 	@Ignore
 	public void testLargeWordFrequencies() {
 		if (!patentsLarge.exists()) return; // only on PMR machine
-		String args = "-i scholarly.html  --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+WordTest.STOPWORDS_TXT+" --project "+patentsLarge;
-		WordArgProcessor argProcessor = new WordArgProcessor(args);
+		String args = "-i scholarly.html  --w.words "+WordArgProcessor.WORD_FREQUENCIES+" --w.stopwords "+WordSetWrapper.COMMON_ENGLISH_STOPWORDS_TXT+" --project "+patentsLarge;
+		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
 				"<results title=\"frequencies\">"
@@ -66,7 +66,7 @@ public class LargeTests {
 //		runNorma(large);
 		// word frequencies
 		String argsx = "-i scholarly.html  --w.words "+WordArgProcessor.WORD_FREQUENCIES+
-				" --w.stopwords "+WordTest.STOPWORDS_TXT+" --w.case ignore --w.stem true --project "+large;
+				" --w.stopwords "+WordSetWrapper.COMMON_ENGLISH_STOPWORDS_TXT+" --w.case ignore --w.stem true --project "+large;
 		AMIArgProcessor argProcessor = new WordArgProcessor(argsx);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
@@ -76,11 +76,12 @@ public class LargeTests {
 
 	@Test
 	// TESTED 2016-01-12
+	@Ignore // PMR only
 	public void testSynbio() {
 		File large = new File("../patents/US08979");
 		if (!large.exists()) return; // only on PMR machine
 //		runNorma(large);
-		String args = "-i scholarly.html --clean results/* --w.search /org/xmlcml/ami2/plugins/synbio/synbio.xml --project "+large;
+		String args = "-i scholarly.html --clean results/* --sr.search /org/xmlcml/ami2/plugins/synbio/synbio.xml --project "+large;
 		AMIArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
@@ -110,14 +111,14 @@ public class LargeTests {
 	}
 
 	@Test
-//	@Ignore
+	@Ignore // too long
 	public void testCurrent() throws IOException {
 //		runDefault("zika");
 		runDefault("brcancer");
 	}
 
 	@Test
-//	@Ignore
+	@Ignore // too long and PMR
 	public void testDictionary() throws IOException {
 		String project = "brcancer";
 		File rawDir = new File("../projects/"+project);
@@ -142,7 +143,7 @@ public class LargeTests {
 	}
 
 	@Test
-//	@Ignore
+	@Ignore //large
 	public void testNano() throws IOException {
 		String project = "nano";
 		File rawDir = new File("../projects/"+project);
@@ -164,7 +165,7 @@ public class LargeTests {
 
 
 	@Test
-//	@Ignore
+	@Ignore // too long
 	public void testSemipartial() throws IOException {
 		runStatisticsDefault("semipartial");
 	}

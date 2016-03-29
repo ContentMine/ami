@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.plugins.word;
+package org.xmlcml.ami2.wordutil;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,7 +31,7 @@ public class WordSetWrapper {
 	}
 	
 	private static WordSetWrapper COMMON_ENGLISH_STOPWORDS;
-	public static final String COMMON_ENGLISH_STOPWORDS_TXT = AMIPlugin.ORG_XMLCML_AMI_PLUGIN+"word/stopwords.txt";
+	public static final String COMMON_ENGLISH_STOPWORDS_TXT = "/org/xmlcml/ami2/wordutil/stopwords.txt";
 	
 	private Set<String> wordSet;
 	private Multiset<String> multiset;
@@ -87,11 +87,11 @@ public class WordSetWrapper {
 		if (!stopwordsResource.contains("/")) {
 			String packagex = WordSetWrapper.class.getPackage().toString().replaceAll("\\.", "/").replace("package ", "");
 			stopwordsResource = "/"+packagex+"/"+stopwordsResource;
-			LOG.trace(stopwordsResource);
+			LOG.debug("symbol expands to: "+stopwordsResource);
 		}
 		InputStream stopwordsStream = AMIArgProcessor.class.getResourceAsStream(stopwordsResource);
 		if (stopwordsStream == null) {
-			LOG.debug("Cannot read stopword stream: "+stopwordsResource);
+			LOG.warn("Cannot read stopword stream: "+stopwordsResource);
 		} else if (stopwordsResource.endsWith(XML)){
 		} else {
 			try {

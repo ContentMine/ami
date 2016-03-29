@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.cmine.files.CTree;
 
+@Ignore("requires tesseract")
 public class PhyloArgProcessorTest {
 	
 	private static final Logger LOG = Logger.getLogger(PhyloArgProcessorTest.class);

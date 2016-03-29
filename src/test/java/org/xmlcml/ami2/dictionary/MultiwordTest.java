@@ -8,7 +8,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
-import org.xmlcml.ami2.tokens.LuceneUtils;
+import org.xmlcml.ami2.wordutil.LuceneUtils;
 
 /** multiword phrases in dictionary.
  * 

@@ -1,4 +1,4 @@
-package org.xmlcml.ami2.tokens;
+package org.xmlcml.ami2.wordutil;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.ami2.tokens.LuceneUtils;
+import org.xmlcml.ami2.wordutil.LuceneUtils;
 
 
 public class StemmingAndHashingTest {
