@@ -96,7 +96,7 @@ public class WordResultsElement extends ResultsElement {
 		return fontSizeIntArray;
 	}
 
-	void writeResultsElementAsHTML(File outputFile, AMIArgProcessor wordArgProcessor) {
+	public void writeResultsElementAsHTML(File outputFile, AMIArgProcessor wordArgProcessor) {
 		IntArray fontSizeIntArray = createOrderedFontSizeArray();
 		if (fontSizeIntArray != null) {
 			Set<Integer> fontSizeSet = fontSizeIntArray.createIntegerSet();

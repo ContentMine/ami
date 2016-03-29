@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectSnippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC2685134/results/species/genus/results.xml">
+   <result pre=" " exact="Design" match="Design" post=" : Parallel group pragmatic cluster randomised trial. " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC2743680/results/species/genus/results.xml">
+   <result pre=" " exact="Dose" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[2]/p[18]" match="Dose" post=" j : j-th dose group (j = 0: placebo, 1: 5 mg, 2: 10 mg) " name="genus"/>
+   <result pre=" " exact="Diabtreat" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[2]/p[18]" match="Diabtreat" post=" k : number of previously used antidiabetic drugs (k = 0: no treatment, 1: one " name="genus"/>
+   <result pre=" " exact="Drug" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[2]/p[18]" match="Drug" post=" j : j-th treatment group (j = 1:5 mg, 2:10 mg, 3:voglibose) " name="genus"/>
+   <result pre=" " exact="Diabtreat" match="Diabtreat" post=" k : number of previously used antidiabetic drugs (k = 0:no treatment, 1:one an" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC2804679/results/species/genus/results.xml">
+   <result pre=" " exact="Queensland" xpath="/html[1]/body[1]/div[3]/div[1]/p[25]" match="Queensland" post=" : " name="genus"/>
+   <result pre=" " exact="Victoria" match="Victoria" post=" : " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC2902456/results/species/genus/results.xml">
+   <result pre=" " exact="Lithium" xpath="/html[1]/body[1]/div[2]/div[2]/div[4]/p[6]" match="Lithium" post=" : Starting at 600 mg daily, dose weekly adjusted according to blood serum level (0,6 -1,2mEq/l), e" name="genus"/>
+   <result pre=" " exact="Carbamazepine" match="Carbamazepine" post=" : Starting at 200 mg daily and getting 600 mg daily at the end of the first week. Dose weekly adju" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC2972263/results/species/genus/results.xml">
+   <result pre=" " exact="Randomisation " match="Randomisation" post=" will use permuted block randomisation using computer generated quasi-random numbers. Randomisation" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3033352/results/species/genus/results.xml">
+   <result pre=" 2. " exact="Pain " xpath="/html[1]/body[1]/div[2]/div[5]/div[2]/p[8]" match="Pain" post=" will be measured with a numeric rating scale (NRS) that asks on a scale of 0 (no pain) to" name="genus"/>
+   <result pre=" 3. " exact="Mood " xpath="/html[1]/body[1]/div[2]/div[5]/div[2]/p[8]" match="Mood" post=" will be evaluated using the Brief Symptom Inventory 18 (BSI-18) [ 62]. Res" name="genus"/>
+   <result pre=" 8. " exact="Mindfulness " match="Mindfulness" post=" will be assessed using the Five Factor Mindfulness Questionnaire (FFMQ) [ 71, &lt;a hr" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3033835/results/species/genus/results.xml">
+   <result pre=" 5. " exact="Mindfulness " match="Mindfulness" post=" will be assessed using the Mindfulness Attention Awareness Scale (MAAS) [ " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3048554/results/species/genus/results.xml">
+   <result pre="• " exact="Bronchodilation" xpath="/html[1]/body[1]/div[2]/div[2]/div[3]/p[3]" match="Bronchodilation" post=" . To accomplish both bronchodilated conditions, patients receive either a combination of potent br" name="genus"/>
+   <result pre="• " exact="Smoking" match="Smoking" post=" . Smoking occurs according to well controlled protocols. To neutralise the effect on smoking patte" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3061924/results/species/genus/results.xml">
+   <result pre="e self-efficacy and self-management in people with stable CHF. The rationale for this approach is " exact="Firstly" xpath="/html[1]/body[1]/div[2]/div[1]/div[3]/p[1]" match="Firstly" post=" , this approach seeks to promote physical activity-any bodily movement produced by skeletal muscle" name="genus"/>
+   <result pre="esult in energy expenditure[ 13] using a method that is accurate and reproducible. " exact="Secondly" match="Secondly" post=" , it provides a measurement tool whereby individuals and their clinicians can monitor their condit" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3113991/results/species/genus/results.xml">
+   <result pre="1. " exact="Adherence " match="Adherence" post=" to recommended therapies, use of additional therapies, and medication use will be evaluated using " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3286387/results/species/genus/results.xml">
+   <result pre=" White, Peter Keston, Andrew Farrell, Zoe Morris, Hector Miranda. National Co-ordinating centres: " exact="Italy " xpath="/html[1]/body[1]/div[3]/div[1]/div[7]/p[1]" match="Italy" post=" (up to September 2008) Maria Grazia Celani, Enrico Righetti (after September 2008) Silvia Cenciare" name="genus"/>
+   <result pre="ber 2008) Silvia Cenciarelli, Tatiana Mazzoli Central Follow up for Italy: Teresa Anna Cantisani. " exact="Poland " xpath="/html[1]/body[1]/div[3]/div[1]/div[7]/p[1]" match="Poland" post=" Jan Bembenek Sweden Eva Isaakson. Norway Eivind Berge, Karsten Bruins Slot. " name="genus"/>
+   <result pre=" Tatiana Mazzoli Central Follow up for Italy: Teresa Anna Cantisani. Poland Jan Bembenek " exact="Sweden " xpath="/html[1]/body[1]/div[3]/div[1]/div[7]/p[1]" match="Sweden" post=" Eva Isaakson. Norway Eivind Berge, Karsten Bruins Slot. " name="genus"/>
+   <result pre="w up for Italy: Teresa Anna Cantisani. Poland Jan Bembenek Sweden Eva Isaakson. " exact="Norway " match="Norway" post=" Eivind Berge, Karsten Bruins Slot. " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3439687/results/species/genus/results.xml">
+   <result pre="gs was first submitted to Diabetic Medicine on March 11, 2002 and after it was rejected, to " exact="Diabetologia" xpath="/html[1]/body[1]/div[2]/div[3]/div[3]/div[4]/p[2]" match="Diabetologia" post=" on October 22, 2002. Peer reviewers for both journals expressed concerns related to the methodolog" name="genus"/>
+   <result pre=" 1: Figure S11). Findings from this study were subsequently published in the journal " exact="Pain" match="Pain" post=" with a smaller circulation (listed as 7,660) [ 24]. " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3441257/results/species/genus/results.xml">
+   <result pre="Leishmaniasis is a group of diseases caused by parasites from the " exact="Leishmania" xpath="/html[1]/body[1]/div[2]/div[2]/div[7]/p[2]" match="Leishmania" post=" genus. It is transmitted by female insects from the Lutzomyia genus in America and Phleboto" name="genus"/>
+   <result pre="caused by parasites from the Leishmania genus. It is transmitted by female insects from the " exact="Lutzomyia" xpath="/html[1]/body[1]/div[2]/div[2]/div[7]/p[2]" match="Lutzomyia" post=" genus in America and Phlebotomus in the Old World, affecting humans and domestic and wild mammals " name="genus"/>
+   <result pre="e Cpb gene. Due to the partial degree of variability of the Cpb sequence between the " exact="Viannia" match="Viannia" post=" and Leishmania subgenus, Cpb-specific primers were designed using the primer3plus so" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3488505/results/species/genus/results.xml">
+   <result pre="Guidelines for the Surgical Management of Traumatic Brain Injury were published in 2006 in " exact="Neurosurgery" match="Neurosurgery" post=" (2006, 58:S2-1-62). These confirm that studies in this area have been observational and there is a" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3489822/results/species/genus/results.xml">
+   <result pre="ully by contacting the team every 2 months. Additionally, all professionals and representatives of " exact="Freya" match="Freya" post=" are invited to participate in an online study community. This community will be a platform for pro" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3495905/results/species/genus/results.xml">
+   <result pre="Therefore, the " exact="Leipzig " match="Leipzig" post=" EX er CI se &lt;di" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3502592/results/species/genus/results.xml">
+   <result pre=", journal editors might also consider asking for the raw data as a condition for publication, like " exact="Science" xpath="/html[1]/body[1]/div[2]/div[4]/p[8]" match="Science" post=" and the Nature journals require [ 23] and preferably make such data availabl" name="genus"/>
+   <result pre=" also consider asking for the raw data as a condition for publication, like Science and the " exact="Nature" match="Nature" post=" journals require [ 23] and preferably make such data available at public websites. " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3502599/results/species/genus/results.xml">
+   <result pre="2. " exact="Genotyping" match="Genotyping" post=" – Blood samples will be obtained from all individuals in ethylenediaminetetraacetic acid (EDTA) an" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3502604/results/species/genus/results.xml">
+   <result pre=" non-participating practices will be compared using available practice characteristic data. " exact="Adoption" xpath="/html[1]/body[1]/div[2]/div[2]/div[14]/p[1]" match="Adoption" post=" will be measured using a quantified assessment of engagement with the education outreach based on " name="genus"/>
+   <result pre="nd the follow-up survey collecting additional data on collective action and reflective monitoring. " exact="Reach" xpath="/html[1]/body[1]/div[2]/div[2]/div[14]/p[1]" match="Reach" post=" will be measured as the proportion of patients identified by the informatics tool who are actually" name="genus"/>
+   <result pre="on who decide to continue with gastric protection and the proportion who decide to stop the drug). " exact="Maintenance" xpath="/html[1]/body[1]/div[2]/div[2]/div[14]/p[1]" match="Maintenance" post=" will be measured in terms of how reach changes over time. Effectiveness will be measured in" name="genus"/>
+   <result pre="de to stop the drug). Maintenance will be measured in terms of how reach changes over time. " exact="Effectiveness" match="Effectiveness" post=" will be measured in terms of the trial primary outcome (the high risk NSAID/antiplatelet composite" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3503622/results/species/genus/results.xml">
+   <result pre=" Example of minimization (adapted from " exact="Scott " match="Scott" post=" et al. 2002 )[ 46] " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3519696/results/species/genus/results.xml">
+   <result pre="t in an effective, odourless protection against many biting arthropods including Anopheles, " exact="Culex" xpath="/html[1]/body[1]/div[2]/div[1]/p[6]" match="Culex" post=" and Aedes mosquitoes [ 14- 16], ticks [ 17, &lt;a" name="genus"/>
+   <result pre=", odourless protection against many biting arthropods including Anopheles, Culex and " exact="Aedes" xpath="/html[1]/body[1]/div[2]/div[1]/p[6]" match="Aedes" post=" mosquitoes [ 14- 16], ticks [ 17, 18]," name="genus"/>
+   <result pre="5&quot;&gt;15]. Studies have shown that wearing permethrin-treated clothing led to reduced biting rates of " exact="Aedes" match="Aedes" post=" mosquitoes by &amp;amp;gt;90% in the areas covered by the clothing [ 21]. Although perm" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3519814/results/species/genus/results.xml">
+   <result pre="bdominal breathing for 5 minutes; patients breathe rhythmically to slow Korean folk rhythms called " exact="Jinyangjo" match="Jinyangjo" post=" played by Daegum, a kind of traditional Korean flute. The purpose during this portion of th" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3526393/results/species/genus/results.xml">
+   <result pre="of them on smoking cessation, and is assistant editor of two of the leading journals in the field: " exact="Addiction" match="Addiction" post=" and Nicotine &amp;amp;amp; Tobacco Research. He has an extensive experience in conducting rando" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3533738/results/species/genus/results.xml">
+   <result pre="lation factor has been calculated by the formula ( Deff = 1 + ( m–1) ρ) where " exact="Deff" match="Deff" post=" is inflation factor for design effect, m is the size of each cluster, which is 30 and ρ&lt;" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3543221/results/species/genus/results.xml">
+   <result pre="investigator, author of the initial protocol, contributor to patient recruitment and author of the " exact="Trials" xpath="/html[1]/body[1]/div[2]/div[7]/p[1]" match="Trials" post=" journal version article of the protocol. RR is a major contributor to patient recruitment over the" name="genus"/>
+   <result pre="cruitment over the last three years, obtained a support grant for the trial and contributed to the " exact="Trials" xpath="/html[1]/body[1]/div[2]/div[7]/p[1]" match="Trials" post=" journal article version of the protocol. YS is author of the first protocol for the trial, recruit" name="genus"/>
+   <result pre="col for the trial, recruited patients to the trial during the first 2 years and contributed to the " exact="Trials" xpath="/html[1]/body[1]/div[2]/div[7]/p[1]" match="Trials" post=" journal article version of the protocol. ZA contributed to the trial protocol and general running " name="genus"/>
+   <result pre="the trial at all times, contributed to the writing of the original protocol and contributed to the " exact="Trials" match="Trials" post=" journal article version of the protocol. All authors read and approved the final manuscript. " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3543336/results/species/genus/results.xml">
+   <result pre="sed on 15 August 2012 by which time 601 patients had been recruited. The protocol was published in " exact="Trials" xpath="/html[1]/body[1]/div[2]/div[1]/div[3]/div[3]/p[5]" match="Trials" post=" ( http://www.trialsjournal.com/content/12" name="genus"/>
+   <result pre="&gt;P = 0.089, Pearson’s chi-squared = 0.070). Using the prognostic-based outcome reported in the " exact="Lancet" match="Lancet" post=" paper [3] gives 41% favourable outcome overall (49% in the ES group and 33% in the ICT group). " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3545957/results/species/genus/results.xml">
+   <result pre=" self-psychology object relations, and relational aspects [ 13- 18]. " exact="Transference" xpath="/html[1]/body[1]/div[2]/div[1]/p[7]" match="Transference" post=" is a key concept in dynamic psychotherapy, and analysis of the transference distinguishes this tre" name="genus"/>
+   <result pre=" " exact="Gender" match="Gender" post=" has not been found to be a general predictor in psychotherapy [ 28]. Few studies of" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3551833/results/species/genus/results.xml">
+   <result pre="nt and other intermediate outcomes as predictors of future loss to follow-up [ 55]. " exact="Stata" xpath="/html[1]/body[1]/div[2]/div[2]/div[9]/p[1]" match="Stata" post=" will be used for these main analyses. Secondary analyses to investigate putative meditational mech" name="genus"/>
+   <result pre="bles problem that is, hidden confounding [ 55- 58]. MPlus and " exact="Stata" match="Stata" post=" will be used for these analyses. " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3563448/results/species/genus/results.xml">
+   <result pre="se in an older age category, making the cessation of diarrhoeal symptoms more difficult to assess. " exact="Diarrhoea" xpath="/html[1]/body[1]/div[2]/div[3]/p[5]" match="Diarrhoea" post=" in this study is defined according to the criteria of the World Health Organisation (WHO): the pas" name="genus"/>
+   <result pre="a-analysis by Van Niel et al. suggested a positive linear association between the dosage of " exact="Lactobacillus" xpath="/html[1]/body[1]/div[2]/div[3]/p[5]" match="Lactobacillus" post=" and the reduction in diarrhoea duration, when the results from eight studies reporting reduction i" name="genus"/>
+   <result pre="on, when the results from eight studies reporting reduction in diarrhoea as the outcome, comparing " exact="Lactobacillus" match="Lactobacillus" post=" treatment to placebo, were analysed [ 43]. In this trial, we will use just a single" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3570452/results/species/genus/results.xml">
+   <result pre="or this individual intervention, the existing manual in German, &quot; Binge Eating and Obesity: " exact="Cognitive" match="Cognitive" post=" Behavioral Therapy Manual for Binge Eating Disorder&quot; by Hilbert and Tuschen-Caffier [ &lt;a hr" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3575361/results/species/genus/results.xml">
+   <result pre="ime and frequency for a range of physical activities for commute and leisure [ 31]. " exact="Stress" match="Stress" post=" will be determined using the Perceived Stress Scale-4 (PSS-4, [ 32]. The PSS-4 is a" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3576332/results/species/genus/results.xml">
+   <result pre=" by passive case detection in selected facilities and entomological monitoring of larval and adult " exact="Anopheles" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[1]" match="Anopheles" post=" populations. " name="genus"/>
+   <result pre="es on a weekly basis, all of which will be included in the intervention. Spot-checks for surviving " exact="Anopheline" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[1]" match="Anopheline" post=" larvae and pupae will be made on a weekly basis. " name="genus"/>
+   <result pre="ng a randomly selected transect will be mapped and the presence or absence of early and late stage " exact="Anopheline" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[1]" match="Anopheline" post=" larvae and pupae will be assessed using a 250 ml mosquito dipper. Five dips will be made in sites " name="genus"/>
+   <result pre="rger than 5 m 2. This will be carried out at two-weekly intervals. Adult collections of " exact="Anopheline" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[1]" match="Anopheline" post=" will be carried out at the same time in 36 randomly selected houses in each cluster selected in cr" name="genus"/>
+   <result pre=" abundance at intervals throughout the night. Vector abundance, parity rates and the proportion of " exact="Anopheline" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[1]" match="Anopheline" post=" females unfed, fed, gravid, and infected will be determined for each species [ 37] " name="genus"/>
+   <result pre="based on previous data from PSC studies carried out by the project where the mean number of female " exact="Anophelines" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[1]" match="Anophelines" post=" caught per house was 0.36. To detect an 80% reduction in mean number of female Anophelines " name="genus"/>
+   <result pre=" Anophelines caught per house was 0.36. To detect an 80% reduction in mean number of female " exact="Anophelines" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[1]" match="Anophelines" post=" caught by PSC in intervention houses compared with control houses at 80% power and a significance " name="genus"/>
+   <result pre="led in each arm. Data from light-trap studies carried out to date have shown a mean of 1.12 female " exact="Anophelines" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[1]" match="Anophelines" post=" caught indoors per trap per night and so to detect an 80% reduction in mean number of female An" name="genus"/>
+   <result pre="s caught indoors per trap per night and so to detect an 80% reduction in mean number of female " exact="Anophelines" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[1]" match="Anophelines" post=" compared with control houses at 80% power and a 5% significance level, 81 traps would have to be s" name="genus"/>
+   <result pre=" (GEE), adjusting for correlations between observations from the same compound. Indoor and outdoor " exact="Anopheles" match="Anopheles" post=" densities will be compared between study arms using GEE models and Poisson or negative binomial di" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3582494/results/species/genus/results.xml">
+   <result pre="n relation to human population (number of Ae. aegypti pupae/person) are the most important. " exact="Aedes" xpath="/html[1]/body[1]/div[2]/div[3]/p[2]" match="Aedes" post=" pupal productivity survey methodology allows for identification of the most epidemiologically impo" name="genus"/>
+   <result pre="ion in incidence. Hence we have chosen a dengue vector endpoint, specifically the density of adult " exact="Aedes" xpath="/html[1]/body[1]/div[2]/div[3]/p[2]" match="Aedes" post=" mosquitoes, this being more proximally related to disease than the Stegomyia indices used i" name="genus"/>
+   <result pre="e density of adult Aedes mosquitoes, this being more proximally related to disease than the " exact="Stegomyia" match="Stegomyia" post=" indices used in some previous trials. " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3586343/results/species/genus/results.xml">
+   <result pre="rrent or recent (in the 4-months before study enrolment) lower-airway infection by a member of the " exact="Pseudomonas" match="Pseudomonas" post=" genus of gram-negative bacteria; receipt of beta-lactam or macrolide antibiotics within the 3 week" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3598995/results/species/genus/results.xml">
+   <result pre="of product characteristics (namely, epilepsy, circumstances that may cause high urinary pH such as " exact="Proteus" match="Proteus" post=" urinary infection, renal tubular acidosis or vegetarian diet, recent myocardial infarction, conges" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3614534/results/species/genus/results.xml">
+   <result pre=" using medical stability criteria [ 46] and biopsychosocial and functional scores ( " exact="Selbstpflegeindex" match="Selbstpflegeindex" post=" (SPI) self-care index [ 45, 47]) and is used to assess the suitabili" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3655825/results/species/genus/results.xml">
+   <result pre="d randomization (minimization) to ensure allocation concealment. The protocol has been published ( " exact="Trials" match="Trials" post=" 2012, 13:26) and is available in full at: http://www.clotstria" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3660180/results/species/genus/results.xml">
+   <result pre="er and patient recruitment strategy for the COINCIDE study. The original protocol was published in " exact="Trials" match="Trials" post=" ( http://www.trialsjournal" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3691619/results/species/genus/results.xml">
+   <result pre=" transplant patients and physicians as they have become the standard of care for the prevention of " exact="Cytomegalovirus" xpath="/html[1]/body[1]/div[2]/div[2]/div[4]/p[1]" match="Cytomegalovirus" post=" (CMV) [ 17] and Pneumocystis infection [ 18]. Quinolone antib" name="genus"/>
+   <result pre="e the standard of care for the prevention of Cytomegalovirus (CMV) [ 17] and " exact="Pneumocystis" xpath="/html[1]/body[1]/div[2]/div[2]/div[4]/p[1]" match="Pneumocystis" post=" infection [ 18]. Quinolone antibiotics are safe, commonly used medications [ &lt;a hre" name="genus"/>
+   <result pre="is jirovecii infection prophylaxis. All participants are receiving prophylaxis against CMV and " exact="Pneumocystis" match="Pneumocystis" post=" based on established guidelines [ 29, 30]. Consistent with current c" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3691846/results/species/genus/results.xml">
+   <result pre=" 5]. Of trials published in the British Medical Journal ( BMJ) and the " exact="Lancet" match="Lancet" post=" between 2000 and 2001, 51% of multicentered trials reported difficulties in recruitment [ &lt;a href=" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3700747/results/species/genus/results.xml">
+   <result pre="ints Jing-jiaji (EX-B2.C5), Jing-jiaji (EX-B2.C6), Jing-jiaji (EX-B2.C7), and " exact="Jianzhongshu" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[1]" match="Jianzhongshu" post=" (Sl15) on both sides of the body [ 22]. Sterile single-use acupuncture needles (40 " name="genus"/>
+   <result pre="from Jing-jiaji (EX-B2.C5), Jing-jiaji (EX-B2.C6), Jing-jiaji (EX-B2.C7), and " exact="Jianzhongshu" match="Jianzhongshu" post=" (Sl15), and the depth of the inserted needles will be controlled within 15 mm. The operation of el" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3708777/results/species/genus/results.xml">
+   <result pre="ed bioinformatics analysis. Targeted RT-PCR will also be used to examine bacterial species such as " exact="Enterobacteria" xpath="/html[1]/body[1]/div[2]/div[3]/p[1]" match="Enterobacteria" post=" and Bifdobacteria relative to the universal bacterial primer set. Pyrosequencing and RT-PCR" name="genus"/>
+   <result pre=". Targeted RT-PCR will also be used to examine bacterial species such as Enterobacteria and " exact="Bifdobacteria" xpath="/html[1]/body[1]/div[2]/div[3]/p[1]" match="Bifdobacteria" post=" relative to the universal bacterial primer set. Pyrosequencing and RT-PCR will be performed in a s" name="genus"/>
+   <result pre=" evaluation in recent years. Probiotic bacteria (with the best documented strains being species of " exact="Lactobacillus" xpath="/html[1]/body[1]/div[2]/div[3]/p[1]" match="Lactobacillus" post=" or Bifidobacterium) inhibit the growth of pathogenic bacteria by acidifying the gut lumen, " name="genus"/>
+   <result pre="=&quot;#B34&quot;&gt;34- 43]. The guts of obese human subjects appear to have reduced numbers of " exact="Bacteroidetes" xpath="/html[1]/body[1]/div[2]/div[3]/p[1]" match="Bacteroidetes" post=" and increased numbers of Firmicutes compared with lean people [ 36]. During " name="genus"/>
+   <result pre="ese human subjects appear to have reduced numbers of Bacteroidetes and increased numbers of " exact="Firmicutes" xpath="/html[1]/body[1]/div[2]/div[3]/p[1]" match="Firmicutes" post=" compared with lean people [ 36]. During a 1-year intervention trial in obese humans" name="genus"/>
+   <result pre=" 1-year intervention trial in obese humans on a hypocaloric diet, an increased proportion of fecal " exact="Bacteroidetes" xpath="/html[1]/body[1]/div[2]/div[3]/p[1]" match="Bacteroidetes" post=" was observed to parallel weight loss [ 36]. Diet-induced obesity in animal models m" name="genus"/>
+   <result pre="weight loss [ 36]. Diet-induced obesity in animal models may also lead to increased " exact="Mollicutes" match="Mollicutes" post=" (a class of Firmicutes), a response which appears to be reversible with dietary manipulatio" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3717037/results/species/genus/results.xml">
+   <result pre="The use of the modules depends on the personal situation of the parent. For example, the " exact="Relationship" match="Relationship" post=" module includes a focus on improving communication in intimate relationships. It also includes sec" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3721993/results/species/genus/results.xml">
+   <result pre="tion planning), Natural consequences (specific BCT: information about health consequences), " exact="Regulation" xpath="/html[1]/body[1]/div[2]/div[2]/div[7]/div[2]/p[1]" match="Regulation" post=" (specific BCT: pharmacological support), and Feedback and Monitoring (specific BCTs: self-m" name="genus"/>
+   <result pre=" be used, depending on the personalized elements of the intervention, are part of the clusters of: " exact="Regulation" xpath="/html[1]/body[1]/div[2]/div[2]/div[7]/div[2]/p[1]" match="Regulation" post=" (BCT: social support), Antecedents (BCTs: restructuring the physical environment; restructu" name="genus"/>
+   <result pre="lements of the intervention, are part of the clusters of: Regulation (BCT: social support), " exact="Antecedents" xpath="/html[1]/body[1]/div[2]/div[2]/div[7]/div[2]/p[1]" match="Antecedents" post=" (BCTs: restructuring the physical environment; restructuring the social environment) and Associ" name="genus"/>
+   <result pre="dents (BCTs: restructuring the physical environment; restructuring the social environment) and " exact="Associations" match="Associations" post=" (BCT: prompts/cues). Table 1 shows the output from this exercise and how the BCTs ar" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3726337/results/species/genus/results.xml">
+   <result pre=" primary objective is to verify the effects of continuous Japanese massage therapy, referred to as " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" therapy, for cancer survivors. The secondary objective is to confirm the immediate effects of a si" name="genus"/>
+   <result pre="apy, for cancer survivors. The secondary objective is to confirm the immediate effects of a single " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session for cancer survivors. " name="genus"/>
+   <result pre="s. In the coordinating office, they are randomly allocated to two groups ( n = 30 each): an " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage group receiving a 40-min Anma massage session once weekly over a 2-month interventi" name="genus"/>
+   <result pre="mly allocated to two groups ( n = 30 each): an Anma massage group receiving a 40-min " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session once weekly over a 2-month intervention period (total of eight Anma massage" name="genus"/>
+   <result pre=" 40-min Anma massage session once weekly over a 2-month intervention period (total of eight " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage sessions) and a control group being followed by medical doctors and receiving no Anma&lt;/" name="genus"/>
+   <result pre="&gt;Anma massage sessions) and a control group being followed by medical doctors and receiving no " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage sessions. The primary end point is the severity of physical subjective symptoms that cance" name="genus"/>
+   <result pre=" findings of this trial, medical professionals should be able to explain the benefits conferred by " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage to cancer survivors and provide higher-quality information to better inform patients regar" name="genus"/>
+   <result pre="Japanese massage therapy, known as " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" therapy (hereinafter Anma massage therapy), is one of the most popular complementary and al" name="genus"/>
+   <result pre="Japanese massage therapy, known as Anma therapy (hereinafter " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy), is one of the most popular complementary and alternative therapies in Japan. It " name="genus"/>
+   <result pre="he aim of improving or alleviating physical and psychological symptoms. With high expectations for " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy, we previously conducted a preliminary study to assess whether Anma massage" name="genus"/>
+   <result pre="ons for Anma massage therapy, we previously conducted a preliminary study to assess whether " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy confers physical and psychological benefits in five cancer survivors who had under" name="genus"/>
+   <result pre="cervical or endometrial cancer (stages Ia1 to IIa) [ 16]. All participants received " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy consisting of eight 40-min Anma massage sessions over 4 wk. In regard to im" name="genus"/>
+   <result pre=" href=&quot;#B16&quot;&gt;16]. All participants received Anma massage therapy consisting of eight 40-min " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage sessions over 4 wk. In regard to immediate changes in variables after a single Anma" name="genus"/>
+   <result pre="Anma massage sessions over 4 wk. In regard to immediate changes in variables after a single " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session, physical subjective symptoms assessed using a Visual Analogue Scale (VAS) were si" name="genus"/>
+   <result pre="ecretory immunoglobulin A (s-IgA) was significantly increased. In addition, after seven continuous " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage sessions, VAS score, anxiety score and depression score were all lowered. On the basis of " name="genus"/>
+   <result pre="s of these preliminary findings, we designed the present randomized trial to verify the effects of " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy compared with no Anma massage therapy. The primary objective of the trial i" name="genus"/>
+   <result pre="the present randomized trial to verify the effects of Anma massage therapy compared with no " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy. The primary objective of the trial is to verify the effects of continuous Anma" name="genus"/>
+   <result pre="nma massage therapy. The primary objective of the trial is to verify the effects of continuous " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy for cancer survivors. The secondary objective of the trial is to confirm the immed" name="genus"/>
+   <result pre="dary objective of the trial is to confirm the immediate physical and emotional effects of a single " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session. " name="genus"/>
+   <result pre="ration, the patients are allocated by block randomization by the coordinating office to continuous " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy or no Anma massage therapy, except for a single Anma massage therapy" name="genus"/>
+   <result pre=" by block randomization by the coordinating office to continuous Anma massage therapy or no " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy, except for a single Anma massage therapy intervention at the end of the tr" name="genus"/>
+   <result pre="e to continuous Anma massage therapy or no Anma massage therapy, except for a single " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy intervention at the end of the trial period (Figure 1). Allocation a" name="genus"/>
+   <result pre="al because of insufficient evidence at present regarding which factors affect the effectiveness of " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy. " name="genus"/>
+   <result pre="This group receives treatment by continuous " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy according to the trial protocol. The protocol treatment is completed when the pati" name="genus"/>
+   <result pre="protocol. The protocol treatment is completed when the patient finishes receiving the final 40-min " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session of a total of eight sessions given once weekly over a 2-month intervention period." name="genus"/>
+   <result pre="massage session of a total of eight sessions given once weekly over a 2-month intervention period. " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy techniques consist of standard versions of Japanese massage, mainly kneading with " name="genus"/>
+   <result pre="andard versions of Japanese massage, mainly kneading with lesser amounts of stroking and pressing. " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage is performed through clothing, with the intensity of stimulation applied being within each" name="genus"/>
+   <result pre="f stimulation applied being within each person’s range of comfort. On a massage table, a full-body " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage excluding the face, head and abdomen is performed following the procedure described in det" name="genus"/>
+   <result pre="e practitioner license and over 20 years of experience and was the therapist involved in providing " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage treatment sessions in our previous studies [ 16, 19, &lt;a href" name="genus"/>
+   <result pre="This control group is followed by their medical doctors as usual and do not receive the continuous " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage sessions. Patients visit the coordinating office and have a 40-min relaxing chat with a ma" name="genus"/>
+   <result pre="without receiving a massage. Two months later they return to the office to receive a single 40-min " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session. " name="genus"/>
+   <result pre="ustment to cancer (coping style to cancer) may change through such communication during continuous " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy. (5) The level of 8-hydroxydeoxyguanosine and catecholamine (noradrenaline, adrena" name="genus"/>
+   <result pre="Data collection is performed on three occasions in the " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage group: before and after the first Anma massage session (measurements A and B) and b" name="genus"/>
+   <result pre="ction is performed on three occasions in the Anma massage group: before and after the first " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session (measurements A and B) and before the last (eighth) Anma massage session (m" name="genus"/>
+   <result pre="nd after the first Anma massage session (measurements A and B) and before the last (eighth) " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session (measurement C) (Figure 1). Data collection is conducted on four occ" name="genus"/>
+   <result pre=" before and after the relaxing chat session (measurements D and E) and before and after the single " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session (measurements F and G) at 2 months (Figure 1). " name="genus"/>
+   <result pre="To assess the effects of continuous " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage sessions, changes in all end points between measurements A and C are compared with those b" name="genus"/>
+   <result pre="In addition, to confirm immediate changes following a single " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session, which is the secondary objective of the trial, changes in VAS score, POMS score, " name="genus"/>
+   <result pre="surement G are also considered as additional evidence to confirm the immediate effects of a single " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session. " name="genus"/>
+   <result pre="In our preliminary study [ 16], the mean VAS score before the first " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session in cancer survivors was 40.4, which was reduced to 19.6 before the last (eighth) &lt;" name="genus"/>
+   <result pre="&gt; massage session in cancer survivors was 40.4, which was reduced to 19.6 before the last (eighth) " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session. The mean VAS score difference during 2 months was −20.8 (standard deviation (SD) " name="genus"/>
+   <result pre="AS score difference during 2 months was −20.8 (standard deviation (SD) 19.6). We assume for the no " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage group that the mean difference will be unchanged (that is, zero) and that its SD will be t" name="genus"/>
+   <result pre=" mean difference will be unchanged (that is, zero) and that its SD will be the same as that of the " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage group (that is, 19.6). To test these differences between the two groups, with a 5% type I " name="genus"/>
+   <result pre="ity analysis, we also consider the following situations: the mean VAS score differences in the no– " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage group will be −5, –7.5 and −10, in which case sample sizes of 24, 33 and 49 patients per g" name="genus"/>
+   <result pre="e modified intention-to-treat principle and will include all participants who receive at least one " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage session in the Anma massage therapy group and one relaxing chat in the no– Anma&lt;" name="genus"/>
+   <result pre="iple and will include all participants who receive at least one Anma massage session in the " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy group and one relaxing chat in the no– Anma massage group. If necessary, we" name="genus"/>
+   <result pre="Anma massage session in the Anma massage therapy group and one relaxing chat in the no– " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage group. If necessary, we might also perform sensitivity analyses, adding all eligible patie" name="genus"/>
+   <result pre=" the analysis of covariance to compare the mean changes in VAS score over the 2 months between the " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage group and the no– Anma massage group, adjusting for the baseline VAS score and age." name="genus"/>
+   <result pre=" the mean changes in VAS score over the 2 months between the Anma massage group and the no– " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage group, adjusting for the baseline VAS score and age. If we find other significant prognost" name="genus"/>
+   <result pre="e positive or negative, in the current situation, where benefits conferred to the body and mind by " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy for cancer survivors are controversial, the findings of this trial will help to pr" name="genus"/>
+   <result pre="the guidelines for cancer care. At present, patients decide of their own will whether they receive " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage therapy. Using the evidence-based findings of this trial, medical professionals should be " name="genus"/>
+   <result pre=" findings of this trial, medical professionals should be able to explain the benefits conferred by " exact="Anma" xpath="/html[1]/body[1]/div[2]/div[5]/p[1]" match="Anma" post=" massage to cancer survivors and provide higher-quality information to better inform patients in th" name="genus"/>
+   <result pre="Anma massage therapy: Japanese massage/ " exact="Anma" match="Anma" post=" therapy; CI: Confidence interval; EORTC QLQ-C30: European Organization for Research and Treatment " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3751147/results/species/genus/results.xml">
+   <result pre=" " exact="Safety" match="Safety" post=" will be assessed by: " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3751878/results/species/genus/results.xml">
+   <result pre="sion of HIV and malaria parasite; NVP: nevirapine; PCR a, polymerase chain reaction for " exact="Plasmodium" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[6]" match="Plasmodium" post=" resistance markers; PCR b, nested species-specific polymerase chain reaction; RDT: rapi" name="genus"/>
+   <result pre="n of resistant strain markers ( dhfr and dhps) will be performed for all episodes of " exact="Plasmodium" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[6]" match="Plasmodium" post=" infection. " name="genus"/>
+   <result pre="ed episodes of malaria during follow-up. Maternal blood will be also collected on filter paper for " exact="Plasmodium" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[6]" match="Plasmodium" post=" DNA extraction. Early screening of HIV and malaria parasites transmission in infants will be deter" name="genus"/>
+   <result pre="Molecular studies to identify " exact="Plasmodium" match="Plasmodium" post=" resistance markers to pyrimethamine and sulfadoxine ( dhfr and dhps) will be perform" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3765940/results/species/genus/results.xml">
+   <result pre="Secondary objectives of the " exact="Umbrella" xpath="/html[1]/body[1]/div[2]/div[2]/div[13]/div[3]/p[1]" match="Umbrella" post=" trial include: " name="genus"/>
+   <result pre="not receiving chemotherapy in this sub-trial, the ADAPT reference group A-RG is the same as in the " exact="Umbrella" match="Umbrella" post=" trial: low-risk HR+/HER2- (N0-1 and RS 0–11) patients. As stated above, this reference group has e" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3816544/results/species/genus/results.xml">
+   <result pre="ologist. Based on TCM theory, a systematic review of the literature revealed that acupoints on the " exact="Shaoyang" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Shaoyang" post=" meridian were the ones chiefly selected for migraine [ 19]. There are three groups " name="genus"/>
+   <result pre="The individualized acupoint group " exact="Fengchi" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Fengchi" post=" (GB20) and Shuaigu (GB8) are obligatory acupoints. GB20 will be punctured obliquely 0.8 to " name="genus"/>
+   <result pre="The individualized acupoint group Fengchi (GB20) and " exact="Shuaigu" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Shuaigu" post=" (GB8) are obligatory acupoints. GB20 will be punctured obliquely 0.8 to 1.2 cm toward apex nasi an" name="genus"/>
+   <result pre="to 0.8 cm. Additional points can be chosen according to syndrome differentiation of meridians: (i) " exact="Shaoyang" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Shaoyang" post=" headache (headache only attacks the temporal side): Waiguan (SJ5) and Yanglingquan (" name="genus"/>
+   <result pre="ferentiation of meridians: (i) Shaoyang headache (headache only attacks the temporal side): " exact="Waiguan" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Waiguan" post=" (SJ5) and Yanglingquan (GB34); SJ5 should be punctured perpendicularly 0.5 to 1 cm and GB34" name="genus"/>
+   <result pre=": (i) Shaoyang headache (headache only attacks the temporal side): Waiguan (SJ5) and " exact="Yanglingquan" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Yanglingquan" post=" (GB34); SJ5 should be punctured perpendicularly 0.5 to 1 cm and GB34 perpendicularly 1 to 1.5 cm; " name="genus"/>
+   <result pre="4); SJ5 should be punctured perpendicularly 0.5 to 1 cm and GB34 perpendicularly 1 to 1.5 cm; (ii) " exact="Taiyang" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Taiyang" post=" headache (headache involving the occiput): Kunlun (BL 60) and Houxi (SI3); BL60 will" name="genus"/>
+   <result pre="d GB34 perpendicularly 1 to 1.5 cm; (ii) Taiyang headache (headache involving the occiput): " exact="Kunlun" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Kunlun" post=" (BL 60) and Houxi (SI3); BL60 will be punctured perpendicularly 0.5 to 0.8 cm and SI3 perpe" name="genus"/>
+   <result pre="o 1.5 cm; (ii) Taiyang headache (headache involving the occiput): Kunlun (BL 60) and " exact="Houxi" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Houxi" post=" (SI3); BL60 will be punctured perpendicularly 0.5 to 0.8 cm and SI3 perpendicularly 0.5 to 0.8 cm;" name="genus"/>
+   <result pre=" BL60 will be punctured perpendicularly 0.5 to 0.8 cm and SI3 perpendicularly 0.5 to 0.8 cm; (iii) " exact="Yangming" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Yangming" post=" headache (headache involving the forehead): Hegu (LI4) and Neiting (ST44); LI4 is ab" name="genus"/>
+   <result pre="3 perpendicularly 0.5 to 0.8 cm; (iii) Yangming headache (headache involving the forehead): " exact="Hegu" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Hegu" post=" (LI4) and Neiting (ST44); LI4 is about to be punctured perpendicularly 0.5 to 1 cm and ST44" name="genus"/>
+   <result pre="to 0.8 cm; (iii) Yangming headache (headache involving the forehead): Hegu (LI4) and " exact="Neiting" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Neiting" post=" (ST44); LI4 is about to be punctured perpendicularly 0.5 to 1 cm and ST44 perpendicularly 0.5 to 1" name="genus"/>
+   <result pre="I4 is about to be punctured perpendicularly 0.5 to 1 cm and ST44 perpendicularly 0.5 to 1 cm; (iv) " exact="Jueyin" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Jueyin" post=" headache (headache involving the vertex): Taichong (LR3) and Qiuxu (GB40), LR3 is in" name="genus"/>
+   <result pre="and ST44 perpendicularly 0.5 to 1 cm; (iv) Jueyin headache (headache involving the vertex): " exact="Taichong" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Taichong" post=" (LR3) and Qiuxu (GB40), LR3 is intended to be punctured perpendicularly 0.5 to 1 cm and GB4" name="genus"/>
+   <result pre=".5 to 1 cm; (iv) Jueyin headache (headache involving the vertex): Taichong (LR3) and " exact="Qiuxu" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Qiuxu" post=" (GB40), LR3 is intended to be punctured perpendicularly 0.5 to 1 cm and GB40 perpendicularly 0.5 t" name="genus"/>
+   <result pre="is of the humerus and ulnar side of the wrist; (iv) The edge of the tibia 1 to 2 cm lateral to the " exact="Zusanli" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Zusanli" post=" (ST36) horizontally. All of the four non-points ought to be punctured perpendicularly 0.5 to 1 cm." name="genus"/>
+   <result pre="heory, so it was used to select acupoints on the basis of the evolution of the patient’s symptoms. " exact="Fengchi" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Fengchi" post=" (GB20) and Shuaigu (GB8), having the highest frequency, were selected as obligatory acupoin" name="genus"/>
+   <result pre="elect acupoints on the basis of the evolution of the patient’s symptoms. Fengchi (GB20) and " exact="Shuaigu" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Shuaigu" post=" (GB8), having the highest frequency, were selected as obligatory acupoints. Additional points, whi" name="genus"/>
+   <result pre="tudy [ 25], could be chosen according to syndrome differentiation of meridians: (i) " exact="Shaoyang" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Shaoyang" post=" headache (headache only attacks the temporal side): Waiguan (SJ5) and Yanglingquan (" name="genus"/>
+   <result pre="ferentiation of meridians: (i) Shaoyang headache (headache only attacks the temporal side): " exact="Waiguan" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Waiguan" post=" (SJ5) and Yanglingquan (GB34); (ii) Taiyang headache (headache involves the occiput)" name="genus"/>
+   <result pre=": (i) Shaoyang headache (headache only attacks the temporal side): Waiguan (SJ5) and " exact="Yanglingquan" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Yanglingquan" post=" (GB34); (ii) Taiyang headache (headache involves the occiput): Kunlun (BL 60) and &lt;i" name="genus"/>
+   <result pre="eadache only attacks the temporal side): Waiguan (SJ5) and Yanglingquan (GB34); (ii) " exact="Taiyang" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Taiyang" post=" headache (headache involves the occiput): Kunlun (BL 60) and Houxi (SI3); (iii) Y" name="genus"/>
+   <result pre="SJ5) and Yanglingquan (GB34); (ii) Taiyang headache (headache involves the occiput): " exact="Kunlun" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Kunlun" post=" (BL 60) and Houxi (SI3); (iii) Yangming headache (headache involves the forehead): &lt;" name="genus"/>
+   <result pre="i&gt; (GB34); (ii) Taiyang headache (headache involves the occiput): Kunlun (BL 60) and " exact="Houxi" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Houxi" post=" (SI3); (iii) Yangming headache (headache involves the forehead): Hegu (LI4) and N" name="genus"/>
+   <result pre=" headache (headache involves the occiput): Kunlun (BL 60) and Houxi (SI3); (iii) " exact="Yangming" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Yangming" post=" headache (headache involves the forehead): Hegu (LI4) and Neiting (ST44); (iv) Ju" name="genus"/>
+   <result pre="&gt; (BL 60) and Houxi (SI3); (iii) Yangming headache (headache involves the forehead): " exact="Hegu" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Hegu" post=" (LI4) and Neiting (ST44); (iv) Jueyin headache (headache involves the vertex): Ta" name="genus"/>
+   <result pre=" (SI3); (iii) Yangming headache (headache involves the forehead): Hegu (LI4) and " exact="Neiting" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Neiting" post=" (ST44); (iv) Jueyin headache (headache involves the vertex): Taichong (LR3) and Q" name="genus"/>
+   <result pre="g headache (headache involves the forehead): Hegu (LI4) and Neiting (ST44); (iv) " exact="Jueyin" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Jueyin" post=" headache (headache involves the vertex): Taichong (LR3) and Qiuxu (GB40). " name="genus"/>
+   <result pre="u (LI4) and Neiting (ST44); (iv) Jueyin headache (headache involves the vertex): " exact="Taichong" xpath="/html[1]/body[1]/div[2]/div[2]/div[6]/div[3]/p[1]" match="Taichong" post=" (LR3) and Qiuxu (GB40). " name="genus"/>
+   <result pre=" (ST44); (iv) Jueyin headache (headache involves the vertex): Taichong (LR3) and " exact="Qiuxu" match="Qiuxu" post=" (GB40). " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3842677/results/species/genus/results.xml">
+   <result pre="t effect on the outcome; or (b) change the co-efficient of the study arm variable by more than 5%. " exact="Moderating" match="Moderating" post=" effect of a potential covariate × will be investigated by including a study arm × interaction term" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3844359/results/species/genus/results.xml">
+   <result pre=" cause of xerostomia in the elderly [ 14]. Generally, the balance of Yin and " exact="Yang" xpath="/html[1]/body[1]/div[2]/div[1]/p[4]" match="Yang" post=" is important for maintaining health and treating diseases in TKM [ 14]. Particularl" name="genus"/>
+   <result pre="ularly, Yin in ‘ Yin-Deficiency’ refers to general body fluids, including blood, and " exact="Jing" match="Jing" post=" (mostly translated as ‘essence of body’) [ 15]. Therefore, ‘ Yin-Deficiency’" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3844458/results/species/genus/results.xml">
+   <result pre="oint. Triglycerides will be measured by the Trinder GPO method. HDL-C will be assessed by the HDL- " exact="Directo" match="Directo" post=" (HDL-D) using the principles of elimination/catalase. LDL-C will be calculated using the Friedwald" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3849445/results/species/genus/results.xml">
+   <result pre="d indications and branding for AL cover treatment of uncomplicated malaria caused by mono or mixed " exact="Plasmodium" match="Plasmodium" post=" infections. The combination is expected to confer mutual protection against resistance and prevent" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3892115/results/species/genus/results.xml">
+   <result pre="T3–N1: &quot; " exact="Recruiting" match="Recruiting" post=" [participants] to a study when they’re ill, that’s the most difficult time to ask a [partic" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC3996200/results/species/genus/results.xml">
+   <result pre="reduction of the burden of stroke. As an important component of traditional Chinese Qigong, " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise is a simple, safe exercise, especially suitable for older adults. However, current eviden" name="genus"/>
+   <result pre="pecially suitable for older adults. However, current evidence is insufficient to inform the use of " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise in the prevention of stroke. " name="genus"/>
+   <result pre="The aim of this trail is to systematically evaluate the prevention effect of " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise on ischemic stroke in the community elder population with high risk factors. " name="genus"/>
+   <result pre=" 170 eligible participants from the community elder population will be randomly allocated into the " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise group and usual physical activity control group in a 1:1 ratio. Besides usual physical ac" name="genus"/>
+   <result pre="ysical activity control group in a 1:1 ratio. Besides usual physical activity, participants in the " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise group will accept a 12-week Baduanjin exercise training with a frequency of five d" name="genus"/>
+   <result pre="usual physical activity, participants in the Baduanjin exercise group will accept a 12-week " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise training with a frequency of five days a week and 40 minutes a day. Primary and secondary" name="genus"/>
+   <result pre="n older people is quite low [ 21]. As an important component of traditional Chinese " exact="Qigong" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Qigong" post=" exercises, Baduanjin exercise is an ancient art and science of healthcare that has been pra" name="genus"/>
+   <result pre="ow [ 21]. As an important component of traditional Chinese Qigong exercises, " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise is an ancient art and science of healthcare that has been practiced in China for thousand" name="genus"/>
+   <result pre="Many studies have demonstrated the beneficial effects of " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise on reducing blood lipids [ 28, 29], lowering blood pressure" name="genus"/>
+   <result pre="lated hemoglobin [ 31, 32]. Recent review has proven the benefits of " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise on cardiopulmonary function and body morphology [ 33]. Additionally, signi" name="genus"/>
+   <result pre="t methodological limitations, and we are not aware of any trials that have evaluated the impact of " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise on primary prevention of stroke in the community elder population with high risk factors " name="genus"/>
+   <result pre="trict randomized controlled design. The aim is to systematically evaluate the preventive effect of " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise on ischemic stroke in the community elder population with high stroke risk factors by obs" name="genus"/>
+   <result pre="the community elder population with high stroke risk factors by observing the difference between a " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise group and a general physical activity group. " name="genus"/>
+   <result pre="andomized, assessor blinded, parallel controlled trial. The primary aim is to assess the effect of " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise on risk factors for stroke in the community elder population. " name="genus"/>
+   <result pre="hina. A total of 170 eligible participants will be randomly allocated into intervention group (the " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise group) and control group (general physical activity group) in a 1:1 ratio. The participan" name="genus"/>
+   <result pre="l activity group) in a 1:1 ratio. The participants in the intervention group will accept a 12-week " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise training, at the same time the others in the control group will maintain their original p" name="genus"/>
+   <result pre=" respectively [ 37]. We expect a 10% mean improvement of this outcome after 12-week " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise intervention. A total of 170 participants is calculated as needed to detect the target ef" name="genus"/>
+   <result pre="ss to follow-up, we will illustrate in detail to the participants the potential health benefits of " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise. For completeness of whole trial progress we will also provide confidence incentives to p" name="genus"/>
+   <result pre="incentives to participants. Furthermore, we will collect information from participants in both the " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise and the usual physical activity control group regarding the likelihood that they will dro" name="genus"/>
+   <result pre="The eligible participants will be randomly allocated in a 1:1 ratio to either " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise group or the usual physical activity group. The random allocation sequence will be genera" name="genus"/>
+   <result pre="ssment, and statistical analysis procedure of this trial. The participants’ allocation result (the " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise group or usual physical activity group) will be replaced by using alphabet ‘A’ or ‘B’ in " name="genus"/>
+   <result pre="The participants in the " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise group will receive a 12-week Baduanjin exercise training with a frequency of five " name="genus"/>
+   <result pre="The participants in the Baduanjin exercise group will receive a 12-week " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise training with a frequency of five days per week and 40 minutes per day. Eighty-five parti" name="genus"/>
+   <result pre=" will be freely gathered into three training units with 25 to 30 people per training unit, and the " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise training will be performed at Wufeng Community Center. We will employ three professional " name="genus"/>
+   <result pre=" Chinese Medicine for at least five years, to guide participants’ training. The training scheme of " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise originated from the ‘ Health Qigong Baduanjin Standard’ enacted by the State Sport" name="genus"/>
+   <result pre="Although no adverse event from " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise is reported to this day, all unexpected adverse events during the intervention period wil" name="genus"/>
+   <result pre="nts during the intervention period will be reported to the project manager, and the causality with " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise intervention will be analyzed. If serious adverse events do occur, they will be reported " name="genus"/>
+   <result pre=" " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise is a traditional Chinese Qigong which is characterized by simple, slow, relaxing m" name="genus"/>
+   <result pre=" Baduanjin exercise is a traditional Chinese " exact="Qigong" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Qigong" post=" which is characterized by simple, slow, relaxing movements. It has been practiced as a popular and" name="genus"/>
+   <result pre="ar and safe community exercise to promote health for hundreds years in China [ 54]. " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise involves eight sections of movement, each of which benefits different parts of the body [" name="genus"/>
+   <result pre="ch benefits different parts of the body [ 38]. Previous studies have indicated that " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise can improve blood lipid metabolism, insulin sensitivity, and blood pressure for community" name="genus"/>
+   <result pre="ef=&quot;#B32&quot;&gt;32, 36]. Current evidence therefore, is insufficient to inform the use of " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise in the prevention of stroke. The primary purpose of this trial was to systematically asse" name="genus"/>
+   <result pre="troke. The primary purpose of this trial was to systematically assess the effectiveness of regular " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise on primary prevention of stroke in community elder population through detection of improv" name="genus"/>
+   <result pre="ject population and analysis according to the intent-to-treat (ITT) principle. It is expected that " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise will have an obvious positive effect on primary prevention of ischemic stroke in the comm" name="genus"/>
+   <result pre="icipants will be asked not to reveal their treatment group to assessors. The whole intervention of " exact="Baduanjin" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Baduanjin" post=" exercise in the treatment group will be performed in an outdoor setting, so occasional interventio" name="genus"/>
+   <result pre="In summary, this study will be the first randomized trial to evaluate the impact of " exact="Baduanjin" match="Baduanjin" post=" exercise on primary prevention of stroke in a community elder population with high risk factor of " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4015766/results/species/genus/results.xml">
+   <result pre="ction is characterised by low recurrent parasitaemia [ 7]. The prolonged carriage of " exact="Plasmodium" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" match="Plasmodium" post=" triggers the development of acquired immunity, the premunition that somewhat protects older childr" name="genus"/>
+   <result pre="reduces the risk of death in school-age children [ 7, 8]. Asymptomatic " exact="Plasmodium" match="Plasmodium" post=" infections, if untreated, persist and maintain malaria-induced inflammation that is commonly assoc" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4022358/results/species/genus/results.xml">
+   <result pre="oligomenorrhea, amenorrhea or irregular uterine bleeding, are essential for the diagnosis of PCOS. " exact="Oligomenorrhea" xpath="/html[1]/body[1]/div[2]/div[2]/div[2]/div[2]/p[11]" match="Oligomenorrhea" post=" is defined as spontaneous cycle length ≥35 days. Irregular uterine bleeding is defined as s" name="genus"/>
+   <result pre="35 days. Irregular uterine bleeding is defined as spontaneous cycle length &amp;amp;lt;21 days. " exact="Amenorrhea" xpath="/html[1]/body[1]/div[2]/div[2]/div[2]/div[2]/p[11]" match="Amenorrhea" post=" is defined as spontaneous cycle length ≥6 months. Hyperandrogenism is diagnosed on the basis of ei" name="genus"/>
+   <result pre=" by a modified Ferriman–Gallwey score [ 15] &amp;amp;gt;6 at the screening examination. " exact="Hyperandrogenemia" match="Hyperandrogenemia" post=" will be defined as an elevated total testosterone level according to local laboratory criteria. Lo" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4037747/results/species/genus/results.xml">
+   <result pre="67). The study will be employing very similar study design; however, a different probiotic agent ( " exact="Lactobacillus" match="Lactobacillus" post=" GG) will serve as the investigational agent. These parallel studies will provide a unique opportun" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4055374/results/species/genus/results.xml">
+   <result pre="eory of acupuncture and TCM, perimenopausal syndrome is caused by kidney deficiency, exhaustion of " exact="Tiangui" match="Tiangui" post=" (sex promoters), deficiency of essence and blood, depletion of the Chong and Ren meridians, imbala" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4059031/results/species/genus/results.xml">
+   <result pre="Since ancient times, cabbages and other extracts of the botanic family " exact="Brassicacea" xpath="/html[1]/body[1]/div[2]/div[3]/p[2]" match="Brassicacea" post=" have been used as natural antibiotics and key components of antiviral drugs and antimycotics. Memb" name="genus"/>
+   <result pre="used as natural antibiotics and key components of antiviral drugs and antimycotics. Members of the " exact="Brassicacea" xpath="/html[1]/body[1]/div[2]/div[3]/p[2]" match="Brassicacea" post=" family contain glycosides that trigger the release of mustard oils after enzymatical hydrolyzation" name="genus"/>
+   <result pre="s, an inverse relationship between consumption of cruciferous vegetables (including members of the " exact="Brassicacea" match="Brassicacea" post=" family) and the risk of neoplastic diseases has been observed, namely in colorectal, gastric, lung" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4066294/results/species/genus/results.xml">
+   <result pre="B52&quot;&gt;52]. Women are included if they score higher for Kidney Yin deficiency than for Kidney " exact="Yang" match="Yang" post=" deficiency. See Table 1 for details of the standardised history and examination used" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4068380/results/species/genus/results.xml">
+   <result pre="cal analyses, evaluating both primary and secondary outcomes, will be adjusted for the presence of " exact="Pseudomonas" match="Pseudomonas" post=" positive sputum cultures, as well as for the concurrent use of azithromycin during the course of t" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4083867/results/species/genus/results.xml">
+   <result pre="tein (CRP), white blood cell count, sputum and blood cultures, nasal swab for virus multiplex PCR, " exact="Legionella" match="Legionella" post=" and pneumococcal antigen in urine. Other laboratory markers as well as genetic markers will be mea" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4183771/results/species/genus/results.xml">
+   <result pre=" " exact="Trials" xpath="/html[1]/body[1]/div[2]/div[1]/p[3]" match="Trials" post=" was launched with the ambition of providing authors with the opportunity to provide all the necess" name="genus"/>
+   <result pre="However, while " exact="Trials" match="Trials" post=" regularly publishes the results of trials, primary trial reports are still predominantly published" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4192345/results/species/genus/results.xml">
+   <result pre="The majority of respondents published their trial in New England Journal of Medicine (36%), " exact="Lancet" xpath="/html[1]/body[1]/div[2]/div[3]/div[6]/p[1]" match="Lancet" post=" (22%), or Journal of the American Medical Association (14%). Approximately one fourth of re" name="genus"/>
+   <result pre="ntly when compared with respondents who published in New England Journal of Medicine (27%), " exact="Lancet" match="Lancet" post=" (26%), Journal of the American Medical Association (35%), and PLoS Medicine (21%). &lt;" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4209070/results/species/genus/results.xml">
+   <result pre="a, we formed the acupuncture protocol for this trial. Three basic points used for each subject are " exact="Tinggong" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Tinggong" post=" (SI19), Ermen (SJ21) and Tinghui (GB2) (Figure 2). These acupoints a" name="genus"/>
+   <result pre="ture protocol for this trial. Three basic points used for each subject are Tinggong (SI19), " exact="Ermen" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Ermen" post=" (SJ21) and Tinghui (GB2) (Figure 2). These acupoints are on the Small Intes" name="genus"/>
+   <result pre="rial. Three basic points used for each subject are Tinggong (SI19), Ermen (SJ21) and " exact="Tinghui" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Tinghui" post=" (GB2) (Figure 2). These acupoints are on the Small Intestinal Meridian of Hand - &lt;" name="genus"/>
+   <result pre="2). These acupoints are on the Small Intestinal Meridian of Hand - Taiyang, " exact="Sanjiao" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Sanjiao" post=" Meridian of Hand - Shaoyang and the Gallbladder Meridian of Foot - Shaoyang. The thr" name="genus"/>
+   <result pre="s are on the Small Intestinal Meridian of Hand - Taiyang, Sanjiao Meridian of Hand - " exact="Shaoyang" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Shaoyang" post=" and the Gallbladder Meridian of Foot - Shaoyang. The three meridians bypass the ear. Becaus" name="genus"/>
+   <result pre=" Location of basic acupoints - three basic points are used for each patient, and include " exact="Tinggong" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Tinggong" post=" (SI19), Ermen (SJ21) and Tinghui (GB2). " name="genus"/>
+   <result pre="c acupoints - three basic points are used for each patient, and include Tinggong (SI19), " exact="Ermen" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Ermen" post=" (SJ21) and Tinghui (GB2). " name="genus"/>
+   <result pre="points are used for each patient, and include Tinggong (SI19), Ermen (SJ21) and " exact="Tinghui" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Tinghui" post=" (GB2). " name="genus"/>
+   <result pre="rding to syndrome differentiation of tinnitus, the appropriate secondary points could be chosen: " exact="Fenglong" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Fenglong" post=" (ST40) and Laogong (PC8) for retention of phlegm-heat, Taichong (LR3) and Q" name="genus"/>
+   <result pre="tion of tinnitus, the appropriate secondary points could be chosen: Fenglong (ST40) and " exact="Laogong" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Laogong" post=" (PC8) for retention of phlegm-heat, Taichong (LR3) and Qiuxu (GB40) for hyperac" name="genus"/>
+   <result pre="uld be chosen: Fenglong (ST40) and Laogong (PC8) for retention of phlegm-heat, " exact="Taichong" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Taichong" post=" (LR3) and Qiuxu (GB40) for hyperactivity of Liver- yang , and Guanyuan " name="genus"/>
+   <result pre=" (ST40) and Laogong (PC8) for retention of phlegm-heat, Taichong (LR3) and " exact="Qiuxu" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Qiuxu" post=" (GB40) for hyperactivity of Liver- yang , and Guanyuan (BL26) and Taixi" name="genus"/>
+   <result pre=" Taichong (LR3) and Qiuxu (GB40) for hyperactivity of Liver- yang , and " exact="Guanyuan" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Guanyuan" post=" (BL26) and Taixi (KI13) for deficiency of Kidney- yin . " name="genus"/>
+   <result pre="Qiuxu (GB40) for hyperactivity of Liver- yang , and Guanyuan (BL26) and " exact="Taixi" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Taixi" post=" (KI13) for deficiency of Kidney- yin . " name="genus"/>
+   <result pre="For subtypes of retention of phlegm-heat: " exact="Fenglong" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Fenglong" post=" (ST40), Laogong (PC8) " name="genus"/>
+   <result pre="For subtypes of retention of phlegm-heat: Fenglong (ST40), " exact="Laogong" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Laogong" post=" (PC8) " name="genus"/>
+   <result pre="For subtypes of hyperactivity of Liver- yang: " exact="Taichong" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Taichong" post=" (LR3), Qiuxu (GB40) " name="genus"/>
+   <result pre="For subtypes of hyperactivity of Liver- yang: Taichong (LR3), " exact="Qiuxu" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Qiuxu" post=" (GB40) " name="genus"/>
+   <result pre="For subtypes of deficiency of Kidney- yin: " exact="Guanyuan" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/ol[1]/li[3]/p[1]" match="Guanyuan" post=" (BL26), Taixi (KI13) " name="genus"/>
+   <result pre="For subtypes of deficiency of Kidney- yin: Guanyuan (BL26), " exact="Taixi" match="Taixi" post=" (KI13) " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4210573/results/species/genus/results.xml">
+   <result pre=" " exact="Concentration" match="Concentration" post=" and factors that affect concentration, including noise, temperature, distractions, lighting, hunge" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4222830/results/species/genus/results.xml">
+   <result pre="al interest of antifungal treatment of non-immunocompromized patients with sepsis, extra-digestive " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" colonization and multiple organ failure is unknown. It represents three-quarters of antifungals pr" name="genus"/>
+   <result pre="ef=&quot;#B2&quot;&gt;2], is associated with a large increase in mortality [ 3- 5]. " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" accounts for up to 17% of all ICU-acquired infections [ 6] and multiple-site Cand" name="genus"/>
+   <result pre="ida accounts for up to 17% of all ICU-acquired infections [ 6] and multiple-site " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" colonization is found in approximately half of medical and surgical patients [ 7, &lt;a" name="genus"/>
+   <result pre=" half of medical and surgical patients [ 7, 8]. Major risk factors for " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" colonization include length of ICU stay, use of parenteral nutrition, broad-spectrum and long-term" name="genus"/>
+   <result pre="ng-term antibiotics, central lines, and abdominal surgery. Importantly, a continuum exists between " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" colonization and candidemia [ 9]. Thus, a colonization index (number of colonized si" name="genus"/>
+   <result pre=" a Candida score showed that factors associated with candidemia were surgery, multiple-site " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" colonization, severe sepsis, and parenteral nutrition [ 10]. Thus, Candida c" name="genus"/>
+   <result pre="e Candida colonization, severe sepsis, and parenteral nutrition [ 10]. Thus, " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" colonization, although not unique, is a reliable independent risk factor for candidemia [ &lt;a href=" name="genus"/>
+   <result pre="dical-surgical ICU patients do not support routine SAT in patients with nonresolving sepsis but no " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" colonization [ 29]. No study has been conducted in the same patients with multiple-" name="genus"/>
+   <result pre="nization [ 29]. No study has been conducted in the same patients with multiple-site " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" colonization. The appropriate modalities of use [ 31] of SAT and the potential bene" name="genus"/>
+   <result pre="ref=&quot;#B31&quot;&gt;31] of SAT and the potential benefits ascribable to SAT in ICU patients with sepsis and " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" colonization have not been reported. We therefore set up the EMPIRICUS trial to answer this questi" name="genus"/>
+   <result pre="Serum biomarkers ((1–3)-β-D-glucan level, mannan antigenemia, anti-mannan antibodies, blood " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" PCR) evolution throughout the trial " name="genus"/>
+   <result pre="Proven " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" IFIs are defined according to the modified criteria of EORTC/MSG Fungal Infections Consensus Group" name="genus"/>
+   <result pre="● Recovery of " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" by culture of a sample obtained by a sterile procedure (including a freshly placed (&amp;amp;lt; 24 ho" name="genus"/>
+   <result pre="ood cultures are systematically performed on days 3, 7, 14 and 28. In case of positive culture for " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" from a deep site or blood, the specimen is stored in Sabouraud broth at 4°C or in standard freezin" name="genus"/>
+   <result pre="y Hospitals. Blood samples for mycology and PK/PD as well as isolated strains of proven or treated " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" infections are transferred from the sites to Grenoble each month. The biobank (serum aliquots and " name="genus"/>
+   <result pre="ived at least one dose of study drug will be kept in the intent-to-treat analysis even if invasive " exact="Candida" xpath="/html[1]/body[1]/div[2]/div[3]/p[3]" match="Candida" post=" infection was diagnosed during the first 48 hours of randomization. " name="genus"/>
+   <result pre=" " exact="Candida" match="Candida" post=" colonization is a frequent event in ICU patients [ 12]. The colonization index, val" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4226966/results/species/genus/results.xml">
+   <result pre="Acupoints: " exact="Ashi" match="Ashi" post=" (tender) points will be selected as the primary acupoints for flash cupping and retained cupping. " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4227018/results/species/genus/results.xml">
+   <result pre=" sent to University of Antwerp (UA), Belgium for confirmation of ESBL-genes. Acinetobacter, " exact="Pseudomonas" match="Pseudomonas" post=" and Stenotrophomonas species will be sent to the Barcelona Centre for International Health " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4228121/results/species/genus/results.xml">
+   <result pre="/i&gt;) is commonly defined as the ancient healing art of fingers and strength [ 24]. " exact="Tuina" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/p[1]" match="Tuina" post=" has been practiced in China for over 5000 years [ 25]. It is a well-respected trea" name="genus"/>
+   <result pre="of conditions. For these reasons, it is rapidly gaining international favor [ 26]. " exact="Tuina" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/p[1]" match="Tuina" post=" involves a wide range of technical manipulations conducted by a practitioner’s finger, hand, elbow" name="genus"/>
+   <result pre="/i&gt; group receive a four-step massage treatment consisting both structural and relaxation massage. " exact="Tuina" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/p[1]" match="Tuina" post=" massage treatment consists of 20 sessions of approximately 20 minutes duration, each administered " name="genus"/>
+   <result pre="href=&quot;#CR35&quot;&gt;35]. Patients presenting for the first time to either the Neurology Department or the " exact="Tuina" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/p[1]" match="Tuina" post=" Department in the hospital for low back pain for over three months (without relief for over two we" name="genus"/>
+   <result pre="icensed TCM tuina therapists with at least five years clinical experience in the hospital’s " exact="Tuina" match="Tuina" post=" Department. Before taking part in this trial, they will be required to complete a 40-hour training" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4228261/results/species/genus/results.xml">
+   <result pre=" " exact="Tuina " match="Tuina" post=" intervention " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4234126/results/species/genus/results.xml">
+   <result pre="• Lumbar proprioception function will be measured by the " exact="Prokin" xpath="/html[1]/body[1]/div[2]/div[3]/p[1]" match="Prokin" post=" proprioception evaluation and training system (product type: PK254P) produced by Tecnobody .S.r.l," name="genus"/>
+   <result pre="nd. In this trial, we will apply modern devices including the Tergumed Work Station and the " exact="Prokin" match="Prokin" post=" proprioception evaluation system to measure the change of lumbar muscle strength and lumbar propri" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4234840/results/species/genus/results.xml">
+   <result pre="rement of additional funding to conduct further follow-up. The changes were agreed and we informed " exact="Trials" match="Trials" post=" on 12 June 2014 prior to finalising the statistical analysis plan and sealing the dataset. " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4234899/results/species/genus/results.xml">
+   <result pre="s, pseudo-ginseng, campanumaea pilosula, Astragalus, dried human placenta, plant worms, " exact="Baphicacanthus" match="Baphicacanthus" post=" root and farsythio (Table 1). RGT can soften hardness to dissipate stagnation, and" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4265499/results/species/genus/results.xml">
+   <result pre="Participants randomized to the treatment group receive the " exact="Praemensis" xpath="/html[1]/body[1]/div[2]/div[3]/p[8]" match="Praemensis" post=" Programme, a CBT-oriented self-help treatment lasting 8 weeks. After completion of the treatment, " name="genus"/>
+   <result pre="The treatment " exact="Praemensis" xpath="/html[1]/body[1]/div[2]/div[3]/p[8]" match="Praemensis" post=" Programme is based on CBT principles. The treatment lasts 8 weeks and its ingredients are distribu" name="genus"/>
+   <result pre="The current study evaluates an iCBT self-help for PMS, the " exact="Praemensis" xpath="/html[1]/body[1]/div[2]/div[3]/p[8]" match="Praemensis" post=" Programme, and aims to reduce the high impairment caused by the symptoms and improve the coping ab" name="genus"/>
+   <result pre="Future studies should focus on comparing the " exact="Praemensis" xpath="/html[1]/body[1]/div[2]/div[3]/p[8]" match="Praemensis" post=" Programme with a different psychological treatment as a control condition [ 38]. T" name="genus"/>
+   <result pre="d Kingdom [ 42, 73]. If proven effective, an implementation of the " exact="Praemensis" xpath="/html[1]/body[1]/div[2]/div[3]/p[8]" match="Praemensis" post=" Programme in the healthcare system would be desirable in the long term and should be pursued. " name="genus"/>
+   <result pre="The " exact="Praemensis" match="Praemensis" post=" Programme has at least three important implications. First, it addresses the problem of insufficie" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4289030/results/species/genus/results.xml">
+   <result pre="iency syndrome according to the traditional Chinese medicine diagnostic criteria. The Chinese term " exact="Shenyankangfu" xpath="/html[1]/body[1]/div[2]/div[2]/div[4]/div[3]/p[1]" match="Shenyankangfu" post=" refers to the cure of glomerulonephritis and promotion of patients’ rehabilitation. The clinical a" name="genus"/>
+   <result pre="xclusion criteria are: secondary nephropathy; therapy with glucocorticoids, immunosuppressants, or " exact="Tripterygium" xpath="/html[1]/body[1]/div[2]/div[2]/div[4]/div[3]/p[1]" match="Tripterygium" post=" drugs in the last 12 months; therapy with other Chinese patent medicines or decoctions that can re" name="genus"/>
+   <result pre="ma, or hypercoagulability will be symptomatically treated. Glucocorticoids, immunosuppressants, or " exact="Tripterygium" match="Tripterygium" post=" drugs will be forbidden throughout the entire study process. Throughout the study, the investigato" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4289250/results/species/genus/results.xml">
+   <result pre="urrent condition for which corticosteroids are indicated because of proven benefit (such as severe " exact="Pneumocystis" match="Pneumocystis" post=" pneumonia (pO 2 &amp;amp;lt; 70 mm Hg) or tuberculous meningitis) " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4301893/results/species/genus/results.xml">
+   <result pre="Mindfulness is a practice rooted in " exact="Vipassana" match="Vipassana" post=" (translation: insight) meditation, which has Buddhist roots. It is defined as ‘paying attention in" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4311465/results/species/genus/results.xml">
+   <result pre="in the first 4 days after enrolment, except that trimethoprim/sulfamethoxazole may be continued as " exact="Pneumocystis" xpath="/html[1]/body[1]/div[2]/div[2]/div[11]/p[2]" match="Pneumocystis" post=" prophylaxis. Table 2 " name="genus"/>
+   <result pre="etrospective analysis of 92 bacteraemia episodes caused by ceftriaxone-resistant E. coli or " exact="Klebsiella" match="Klebsiella" post=" in Singapore (one of the trial sites) over a 12-month period until May 2013, examining patients th" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4334591/results/species/genus/results.xml">
+   <result pre="In the initial editorial published when " exact="Trials" xpath="/html[1]/body[1]/div[2]/div[3]/p[8]" match="Trials" post=" was launched, the editors wrote that ‘we believe that there is scope for new and better ways to re" name="genus"/>
+   <result pre="ote that ‘we believe that there is scope for new and better ways to report the findings of trials. " exact="Trials" match="Trials" post=" will develop and refine innovative approaches to improving communication about trials’ [ &lt;a href=&quot;" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4347976/results/species/genus/results.xml">
+   <result pre=" The participants assigned to the treatment groups will receive suspended moxibustion treatment at " exact="Sanyinjiao" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/p[1]" match="Sanyinjiao" post=" (SP6) and Guanyuan (CV4), while the waiting list group will not receive moxibustion treatme" name="genus"/>
+   <result pre="o the treatment groups will receive suspended moxibustion treatment at Sanyinjiao (SP6) and " exact="Guanyuan" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/p[1]" match="Guanyuan" post=" (CV4), while the waiting list group will not receive moxibustion treatment until the completion of" name="genus"/>
+   <result pre="n and cold-damp coagulation in the uterus. According to previous surveys and expert consultations, " exact="Sanyinjiao" xpath="/html[1]/body[1]/div[2]/div[2]/div[8]/div[2]/p[1]" match="Sanyinjiao" post=" (SP6) and Guanyuan (CV4) are the most common acupoints used in PD treatment. SP6 is the con" name="genus"/>
+   <result pre="in the uterus. According to previous surveys and expert consultations, Sanyinjiao (SP6) and " exact="Guanyuan" match="Guanyuan" post=" (CV4) are the most common acupoints used in PD treatment. SP6 is the convergent point of the splee" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4351929/results/species/genus/results.xml">
+   <result pre="and dried under vacuum; and (7) the porphyrized powder of the Calculus Bovis Artifactus and " exact="Muscone" match="Muscone" post=" are mixed with the β-cyclodextrin and the other two fine powders mentioned above, pelleted and coa" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4374175/results/species/genus/results.xml">
+   <result pre=" " exact="Trials" match="Trials" post=" peer reviewers suggested that the comparisons we sought might be presented in secondary trial publ" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4374401/results/species/genus/results.xml">
+   <result pre=" pandrug-resistant bacteria. Acinetobacter baumannii, Pseudomonas aeruginosa and the " exact="Enterobacteriaceae" match="Enterobacteriaceae" post=" are the main MDR-GNB producing serious infections. The treatment of these infections is difficult " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4377011/results/species/genus/results.xml">
+   <result pre="mong people aged more than 65 years old is 1.70%. As an important component of traditional Chinese " exact="Qigong" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" match="Qigong" post=" exercises, Tai Chi is a popular and safe exercise, especially for older adults in China. And it ma" name="genus"/>
+   <result pre="Chinese people using such exercises is quite low. As an important component of traditional Chinese " exact="Qigong" match="Qigong" post=" exercises, Tai Chi is an ancient art and science of healthcare that is quite popular with Chinese " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4389731/results/species/genus/results.xml">
+   <result pre="ly representative data for Canadian children, regional studies suggest a similar rate that has led " exact="Hartfield" match="Hartfield" post=" to conclude that ‘iron deficiency is an inadequately addressed and significant public health probl" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4395969/results/species/genus/results.xml">
+   <result pre="otion Thermometers Tool [ 39] and homework compliance scale (see " exact="Assessments" xpath="/html[1]/body[1]/div[2]/div[2]/div[7]/div[4]/p[1]" match="Assessments" post=" ). " name="genus"/>
+   <result pre="en they complete the weekly Emotion Thermometers Tool [ 39] (see " exact="Assessments" match="Assessments" post=" ). Any deterioration in mood of more than three points on the tool will trigger protocols involvin" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4403711/results/species/genus/results.xml">
+   <result pre="ions [ 3]. It brings to mind Fermat’s aside to his infamous last theorem written in " exact="Artimetica" xpath="/html[1]/body[1]/div[2]/div[1]/div[2]/p[3]" match="Artimetica" post=" in 1637, claiming that the proof for what he stated was ‘too large to fit in the margin’ [ &lt;a href" name="genus"/>
+   <result pre=" such as the CONSORT Statement, has led to improved reporting [ 19]. Journals like " exact="Trials" match="Trials" post=" also encourage prospective publication of study protocols, which had rarely been possible in paper" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4404062/results/species/genus/results.xml">
+   <result pre="Ethics Committee of the Faculty of Psychology at the Ruhr-Universität Bochum on 4 September 2012 ( " exact="Votum" match="Votum" post=" 036). Prior to the training, we informed the participants about the purpose of the study and the v" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4413531/results/species/genus/results.xml">
+   <result pre="formed on all participants aged one year and older, using standard methods, with three allergens ( " exact="Dermatophagoides" xpath="/html[1]/body[1]/div[2]/div[3]/div[3]/p[7]" match="Dermatophagoides" post=" mix, Blomia tropicalis, and German cockroach ( Blattella germanica)) and positive an" name="genus"/>
+   <result pre="pecialities (Pty) Ltd, Randburg, South Africa). Total IgE and asIgE (specific to allergens such as " exact="Dermatophagoides" xpath="/html[1]/body[1]/div[2]/div[3]/div[3]/p[7]" match="Dermatophagoides" post=" and German cockroach) are measured using enzyme-linked immunosorbent assay (ELISA) [ &lt;a href=&quot;#CR3" name="genus"/>
+   <result pre="n cockroach being the most common allergen. The median (IQR) asIgE was 72 (8.5 to 199.5) ng/mL for " exact="Dermatophagoides" xpath="/html[1]/body[1]/div[2]/div[3]/div[3]/p[7]" match="Dermatophagoides" post=" and 11 (3.5 to 32.5) ng/mL for German cockroach, and 77% of participants had a Dermatophagoides" name="genus"/>
+   <result pre="ermatophagoides and 11 (3.5 to 32.5) ng/mL for German cockroach, and 77% of participants had a " exact="Dermatophagoides" match="Dermatophagoides" post=" IgE response higher than the EAACI cut-off of 0.35 kUa/L, with 87% above the cut-off for German co" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4414377/results/species/genus/results.xml">
+   <result pre="d by May 2015. A manuscript describing the trial protocol (Nichol and colleagues) was submitted to " exact="Trials" match="Trials" post=" in September 2014. The following statistical analysis plan, determined prior to final trial data a" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4422419/results/species/genus/results.xml">
+   <result pre=" " exact="Variables" xpath="/html[1]/body[1]/div[2]/div[2]/div[14]/p[5]" match="Variables" post=" will be summarized as frequencies and percentages, means and standard errors of the means, or medi" name="genus"/>
+   <result pre=" " exact="Results" match="Results" post=" will be analyzed with the use of chi-square testing, Student’s t-test or non-parametric tes" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4435653/results/species/genus/results.xml">
+   <result pre="ide for Eating Disorders (SHARED), a trial investigating whether a guided self-care intervention ( " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA) is a useful addition to treatment as usual for individuals with anorexia nervosa. Recov" name="genus"/>
+   <result pre="very MANTRA) is a useful addition to treatment as usual for individuals with anorexia nervosa. " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA , a 6-week self-care intervention supplemented by peer mentorship, is a module exten" name="genus"/>
+   <result pre="rvices for anorexia nervosa are randomized to either treatment as usual or treatment as usual plus " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA. Outcome variables include change in body weight at the end of the intervention (primary) a" name="genus"/>
+   <result pre="We have developed a six-week guided self-help intervention for anorexia nervosa ( " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA), which consists of a self-care workbook, a series of short video clips, and weekly guidanc" name="genus"/>
+   <result pre="nd weekly guidance from peer mentors with personal experience of recovery from an eating disorder. " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA is a guided self-care module extension of the Maudsley Model of Treatment for Adults with A" name="genus"/>
+   <result pre="through a process of neuroadaptation to the illness [ 11, 12]. The " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA manual offers a shorter and more focused version of the workbook originally developed for t" name="genus"/>
+   <result pre="del of Treatment of Adult Anorexia Nervosa (MANTRA) [ 13, 14]. The " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA programme consists of four different intervention modules that target difficulties associat" name="genus"/>
+   <result pre=" " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA integrates two novel strategies to provide peer support to individuals with anorexia nervos" name="genus"/>
+   <result pre="The second strategy to provide peer support in " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA involves weekly text-based guidance from peer mentors with personal experience of eating di" name="genus"/>
+   <result pre="ies [ 38] and will therefore follow the same strategy for training peer mentors in " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA. " name="genus"/>
+   <result pre="inspire, illustrate and model change for individuals with anorexia nervosa. These strategies focus " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA intervention efforts on modifiable processes, such as motivation and confidence to change, " name="genus"/>
+   <result pre="mes as compared with treatment as usual. Figure 1 outlines how the elements of the " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA intervention will target the hypothesized moderators and mediators of change within our mod" name="genus"/>
+   <result pre="eer mentors’ confounders, moderators and mediators, and primary and secondary outcome measures for " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA. BMI, body mass index. " name="genus"/>
+   <result pre="The aims of the current study are threefold: (1) to assess the impact of adjunct " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA on body mass index (BMI) and eating disorder symptoms for adults in the early stages of out" name="genus"/>
+   <result pre="ults in the early stages of outpatient treatment for anorexia nervosa; (2) to assess the impact of " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA on theorized mechanisms of change (and thereby evaluate mediators and moderators of BMI and" name="genus"/>
+   <result pre="mized controlled study (SHARED) exploring the efficacy of adding a guided self-help intervention ( " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA) to treatment as usual for anorexia nervosa. The study received ethical approval from a Nat" name="genus"/>
+   <result pre="After providing informed consent, participants are randomly assigned to either (1) " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA in addition to treatment as usual ( Recovery MANTRA condition) or (2) treatment as u" name="genus"/>
+   <result pre="nts are randomly assigned to either (1) Recovery MANTRA in addition to treatment as usual ( " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA condition) or (2) treatment as usual alone (control condition). Participants are recruited " name="genus"/>
+   <result pre=", during the intervention, after 6 weeks (that is, at the end of the intervention for those in the " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA condition), and at 6-month follow-up (Table 1). At the end of the study, in" name="genus"/>
+   <result pre="duals who had been randomized to the treatment as usual only control condition will be offered the " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA intervention materials (that is, vodcasts and workbook). T" name="genus"/>
+   <result pre=" Schedule of assessments in " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA " name="genus"/>
+   <result pre="orm. Assessments and a minimal level of feedback will occur following the same schedule as for the " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA condition (see Table 1). Treatment as usual will vary between centres (for " name="genus"/>
+   <result pre="Participants allocated to the " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA condition will receive self-help materials and weekly guidance from a peer mentor to supple" name="genus"/>
+   <result pre="similar format and includes ‘ awareness, planning and try it’ (APT) sections. " exact="Awareness" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Awareness" post=" includes psychoeducation and reflective exercises. Precise planning includes implementation" name="genus"/>
+   <result pre="href=&quot;#CR2&quot;&gt;2]. Peer mentors will receive all of these training components prior to delivering the " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA intervention. " name="genus"/>
+   <result pre="of training in motivational interviewing, during which they will also become familiarized with the " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA materials and practise using the online text-chat delivery system. For the duration of thei" name="genus"/>
+   <result pre="y outcome variable is patient BMI at the end of the 6-week intervention (treatment as usual versus " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA). The secondary outcome variables are patient BMI at 6-month and follow-up and eating disor" name="genus"/>
+   <result pre="der symptoms (assessed by EDE-Q scores) at 6-week and 6-month follow-up (treatment as usual versus " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA). The hypothesized mediators and moderators of primary and secondary outcomes include mood " name="genus"/>
+   <result pre="ey themes of narratives from peer mentors ( n = 10 to 15) reflecting on their experience of " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA will be analyzed using interpretative phenomenological analysis [ 56]. The " name="genus"/>
+   <result pre="The current study investigates the efficacy of the " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA intervention in improving outcomes for outpatients with anorexia nervosa while examining th" name="genus"/>
+   <result pre="ceived therapeutic alliance, work and social adjustment, social support and increased flexibility. " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA has been designed to be affordable and scalable, with the potential for a wide reach. The p" name="genus"/>
+   <result pre="&gt;58]. Thus, assessment of a theoretically grounded and novel mobile-delivered intervention such as " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA could make a significant contribution to the limited evidence base for the use of technolog" name="genus"/>
+   <result pre="This will be a pragmatic trial and will examine the impact of the addition of the " exact="Recovery" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[1]" match="Recovery" post=" MANTRA intervention to treatment as usual in a variety of treatment settings. Although it might be" name="genus"/>
+   <result pre="utic environment, we have not yet employed recovered individuals exactly in the capacity as in the " exact="Recovery" match="Recovery" post=" MANTRA intervention. We will thus examine whether this form of task-sharing is feasible. We will a" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4445984/results/species/genus/results.xml">
+   <result pre="trial (RCT) with four parallel arms: a control group and three electroacupuncture groups (one with " exact="Neiguan" xpath="/html[1]/body[1]/div[2]/div[3]/div[8]/p[1]" match="Neiguan" post=" (PC6), one with Zhongwan (CV12), and one with both PC6 and CV12). The control group receive" name="genus"/>
+   <result pre="arms: a control group and three electroacupuncture groups (one with Neiguan (PC6), one with " exact="Zhongwan" xpath="/html[1]/body[1]/div[2]/div[3]/div[8]/p[1]" match="Zhongwan" post=" (CV12), and one with both PC6 and CV12). The control group received standard antiemetic only, whil" name="genus"/>
+   <result pre=" antiemetic, and the other three arms consist of the antiemetic drug and one type of acupuncture ( " exact="Neiguan" xpath="/html[1]/body[1]/div[2]/div[3]/div[8]/p[1]" match="Neiguan" post=" (PC6) in one arm or Zhongwan (CV12) in another arm), and the antiemetic drug and both types" name="genus"/>
+   <result pre="ms consist of the antiemetic drug and one type of acupuncture ( Neiguan (PC6) in one arm or " exact="Zhongwan" xpath="/html[1]/body[1]/div[2]/div[3]/div[8]/p[1]" match="Zhongwan" post=" (CV12) in another arm), and the antiemetic drug and both types of acupuncture in the remaining arm" name="genus"/>
+   <result pre="Participants in experimental group I will receive electroacupuncture at the " exact="Neiguan" xpath="/html[1]/body[1]/div[2]/div[3]/div[8]/p[1]" match="Neiguan" post=" (PC6) point. The location of Neiguan (PC6) is on the anterior aspect of the forearm, betwee" name="genus"/>
+   <result pre="imental group I will receive electroacupuncture at the Neiguan (PC6) point. The location of " exact="Neiguan" xpath="/html[1]/body[1]/div[2]/div[3]/div[8]/p[1]" match="Neiguan" post=" (PC6) is on the anterior aspect of the forearm, between the tendons of the palmaris longus and the" name="genus"/>
+   <result pre="The experimental group II will receive electroacupunture at another single point, " exact="Zhongwan" xpath="/html[1]/body[1]/div[2]/div[3]/div[8]/p[1]" match="Zhongwan" post=" (CV12). The location of Zhongwan (CV12) is on the upper abdomen, 4 B-cun superior to the ce" name="genus"/>
+   <result pre="II will receive electroacupunture at another single point, Zhongwan (CV12). The location of " exact="Zhongwan" xpath="/html[1]/body[1]/div[2]/div[3]/div[8]/p[1]" match="Zhongwan" post=" (CV12) is on the upper abdomen, 4 B-cun superior to the center of the umbilicus, on the anterior m" name="genus"/>
+   <result pre="The experimental group III will receive electroacupuncture at both " exact="Neiguan" xpath="/html[1]/body[1]/div[2]/div[3]/div[8]/p[1]" match="Neiguan" post=" point (PC6) and Zhongwan point (CV12). After manipulation until a &quot; de qi&quot; sensation" name="genus"/>
+   <result pre="The experimental group III will receive electroacupuncture at both Neiguan point (PC6) and " exact="Zhongwan" match="Zhongwan" post=" point (CV12). After manipulation until a &quot; de qi&quot; sensation is achieved, the needle is conn" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4449561/results/species/genus/results.xml">
+   <result pre="these assessment techniques must be both reliable and valid [ 4, 6]. " exact="Reliability" xpath="/html[1]/body[1]/div[2]/div[3]/div[4]/p[6]" match="Reliability" post=" refers to the outcome‘s precision or repeatability on repeated testing. Interrater reliability ass" name="genus"/>
+   <result pre="t reliability. Values between 0.4 and 0.75 represent fair to good reliability [ 7]. " exact="Validity" xpath="/html[1]/body[1]/div[2]/div[3]/div[4]/p[6]" match="Validity" post=" refers to the ability of the outcome parameter to measure what is intended to measure, such as cli" name="genus"/>
+   <result pre=" shown that experience of the observer resulted in an increase in reliability [ 6]. " exact="Experience" match="Experience" post=" was defined by the authors as having experience in wound care, specifically in burn care, greater " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4460764/results/species/genus/results.xml">
+   <result pre=" " exact="High" xpath="/html[1]/body[1]/div[2]/div[3]/div[4]/div[2]/div[3]/div[1]/p[1]" match="High" post=" High force group (51 to 100 Newtons), Low Low force group (0 to 20 Newtons), Medium " name="genus"/>
+   <result pre=" High High force group (51 to 100 Newtons), Low Low force group (0 to 20 Newtons), " exact="Medium" match="Medium" post=" Medium force group (21 to 50 Newtons), PROMIS Patient-Reported Outcomes Measurement Informa" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4462085/results/species/genus/results.xml">
+   <result pre="ike a tingling or numbness on the specific points punctured. Subsequently, EA will be used between " exact="Xiyan" match="Xiyan" post=" points and also to the points that the patient recalls as the area of pain. If both knees are affe" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4477591/results/species/genus/results.xml">
+   <result pre="ntinence, this is measured through a combination of an objective and a subjective outcome measure. " exact="Cure" match="Cure" post=" is defined as a leakage of less than 1 g on the pad test [ 28] or a &quot;never&quot; respon" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4485558/results/species/genus/results.xml">
+   <result pre="ith basic knowledge on stroke, based on the Out of the Misunderstanding of Stroke Patients’ " exact="Rehabilitation" match="Rehabilitation" post=" (the bestseller books for health education after stroke from the Chinese Association of TCM) [ &lt;a " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4486703/results/species/genus/results.xml">
+   <result pre=" " exact="Randomisation" match="Randomisation" post=" LAC mentees participating in the RCT were individually randomised, with half receiving the peer me" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4488979/results/species/genus/results.xml">
+   <result pre=" Beikelian Pharmaceutical &amp;amp;amp; Technology Co., Ltd, Shenzhen, China. It is mainly composed of " exact="Chaihu" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" match="Chaihu" post=" ( Radix bupleuri), Gegen ( Radix puerariae), Niubangzi ( Fructus ar" name="genus"/>
+   <result pre="nology Co., Ltd, Shenzhen, China. It is mainly composed of Chaihu ( Radix bupleuri), " exact="Gegen" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" match="Gegen" post=" ( Radix puerariae), Niubangzi ( Fructus arctii), Bohe ( Herba menth" name="genus"/>
+   <result pre="mainly composed of Chaihu ( Radix bupleuri), Gegen ( Radix puerariae), " exact="Niubangzi" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" match="Niubangzi" post=" ( Fructus arctii), Bohe ( Herba menthae), Banlangen ( Radix isatidi" name="genus"/>
+   <result pre=" bupleuri), Gegen ( Radix puerariae), Niubangzi ( Fructus arctii), " exact="Bohe" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" match="Bohe" post=" ( Herba menthae), Banlangen ( Radix isatidis), Chuanbeimu ( Bulbus " name="genus"/>
+   <result pre="ix puerariae), Niubangzi ( Fructus arctii), Bohe ( Herba menthae), " exact="Banlangen" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" match="Banlangen" post=" ( Radix isatidis), Chuanbeimu ( Bulbus fritillariae unibracteatae), Qianhu" name="genus"/>
+   <result pre="uctus arctii), Bohe ( Herba menthae), Banlangen ( Radix isatidis), " exact="Chuanbeimu" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" match="Chuanbeimu" post=" ( Bulbus fritillariae unibracteatae), Qianhu ( Radix peucedani) and Jiegen" name="genus"/>
+   <result pre="angen ( Radix isatidis), Chuanbeimu ( Bulbus fritillariae unibracteatae), " exact="Qianhu" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" match="Qianhu" post=" ( Radix peucedani) and Jiegeng ( Radix platycodi). All of these ingredients h" name="genus"/>
+   <result pre="beimu ( Bulbus fritillariae unibracteatae), Qianhu ( Radix peucedani) and " exact="Jiegeng" match="Jiegeng" post=" ( Radix platycodi). All of these ingredients have been approved by the China Food and Drug " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4501089/results/species/genus/results.xml">
+   <result pre=" trial, comparing the use of the P-DA (with usual care) to usual care alone, has been published in " exact="Trials" xpath="/html[1]/body[1]/div[2]/div[1]/div[2]/p[2]" match="Trials" post=" http://www.trialsjournal.com/content/11/1/8" name="genus"/>
+   <result pre="d trial, comparing the use of the P-DA (with usual care) to usual care alone has been published in " exact="Trials" match="Trials" post=" [ 6]. We also previously reported the results of the primary outcome analysis of th" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4506607/results/species/genus/results.xml">
+   <result pre="The " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" Study involves two linked trials evaluating a telehealth intervention in patients with depression " name="genus"/>
+   <result pre="i&gt;Healthlines CVD). We conducted two trials of a recruitment intervention, embedded within the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" host trials. Patients identified as potentially eligible in each of the Healthlines trials " name="genus"/>
+   <result pre="hin the Healthlines host trials. Patients identified as potentially eligible in each of the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" trials were randomised to receive either the original patient information materials or optimised v" name="genus"/>
+   <result pre="The " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" Study was a large primary care research programme consisting of two multicentre trials that both e" name="genus"/>
+   <result pre="ines CVD) and those with depression ( Healthlines Depression) [ 5]. Both " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" trials identified potential participants by carrying out anonymised, code-based searches of patien" name="genus"/>
+   <result pre="d a similar socio-demographic profile (age, education and occupation) to the likely samples in the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" trials. We excluded people who had taken part in any healthcare trial or readability testing in th" name="genus"/>
+   <result pre="The first round tested the original " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" materials, after which the revised versions were developed. The second and third rounds tested the" name="genus"/>
+   <result pre="The original " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" patient information materials for both trials were 8-page A5 patient information sheets in booklet" name="genus"/>
+   <result pre="urvey. The patient information materials were developed and revised through discussion amongst the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" research team, and then reviewed for plain language by another researcher, external to the Heal" name="genus"/>
+   <result pre="nes research team, and then reviewed for plain language by another researcher, external to the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" team, with relevant expertise. " name="genus"/>
+   <result pre="The new versions of the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" information sheets evaluated in the embedded trials were presented as 4-page A4 booklets and were " name="genus"/>
+   <result pre="nterventions were conducted over a 4-month period (March 2013 to June 2013) towards the end of the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" recruitment window at the final 3 participating primary care practices in the Bristol area (from a" name="genus"/>
+   <result pre="Standard " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" procedure was for lists to be screened by GPs, and for patients with known exclusion criteria to b" name="genus"/>
+   <result pre="nt the appropriate allocated information materials as part of the invitation to participate in The " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" Study. Due to an expectation of lower recruitment, a reminder letter was mailed out to non-respond" name="genus"/>
+   <result pre="The sample size calculations for the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" host trials are detailed in the original protocol [ 5]. " name="genus"/>
+   <result pre="The " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" host trials were approved by the NRES Committee, South West, Frenchay, Bristol (Reference: 12/SW/0" name="genus"/>
+   <result pre="The " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" trials are registered with Current Controlled Trials: Healthlines Depression ISRCTN27508731" name="genus"/>
+   <result pre="ls are registered with Current Controlled Trials: Healthlines Depression ISRCTN27508731 and " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" CVD ISRCTN14172341. The embedded trials of recruitment interventions were added as sub-studies to " name="genus"/>
+   <result pre="Recruitment flowchart for " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" embedded trials " name="genus"/>
+   <result pre="The following are members of The " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" Study Group responsible for the MRC-START in Healthlines embedded trials: Mei-See Man (MSM)" name="genus"/>
+   <result pre="The following are members of The Healthlines Study Group responsible for the MRC-START in " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" embedded trials: Mei-See Man (MSM); Clare Thomas (CT); Louisa Edwards (LE); Alan A. Montgomery (AA" name="genus"/>
+   <result pre="CT); Louisa Edwards (LE); Alan A. Montgomery (AAM); and Chris Salisbury (CS). Other members of the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" research team not directly involved with the MRC-START sub-study are listed under acknowledgements" name="genus"/>
+   <result pre=" team not directly involved with the MRC-START sub-study are listed under acknowledgements. MM was " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" programme manager (maternity cover) during trial recruitment and led the ethics amendment and sub-" name="genus"/>
+   <result pre="ethics amendment and sub-study registration for conducting the embedded MRC-START trial within The " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" Study. CT was Healthlines programme manager during the set-up of the Healthlines tri" name="genus"/>
+   <result pre="gistration for conducting the embedded MRC-START trial within The Healthlines Study. CT was " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" programme manager during the set-up of the Healthlines trials. LE was the Research Associat" name="genus"/>
+   <result pre="The Healthlines Study. CT was Healthlines programme manager during the set-up of the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" trials. LE was the Research Associate and conducted the practice database searches, randomisation " name="genus"/>
+   <result pre="tcome data. CT and LE collated the data for analysis. AAM was the PI and lead statistician for the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" trials. CS is the chief investigator for the Healthlines research programme and has overall" name="genus"/>
+   <result pre="e PI and lead statistician for the Healthlines trials. CS is the chief investigator for the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" research programme and has overall responsibility for the design and implementation of the Heal" name="genus"/>
+   <result pre="nes research programme and has overall responsibility for the design and implementation of the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" trials. MM, LE, CT, AAM and CS all commented on a draft of this paper. " name="genus"/>
+   <result pre="rson (DT); and Shaun Treweek (ST). JR, as project manager for the MRC-START Study, worked with the " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" group to develop the embedded study protocol, data sharing agreement, substantial amendment and em" name="genus"/>
+   <result pre="The " exact="Healthlines" xpath="/html[1]/body[1]/div[3]/div[4]/p[1]" match="Healthlines" post=" Study research programme was carried out in partnership with NHS Direct. This programme was funded" name="genus"/>
+   <result pre="f the NHS, NIHR or Department of Health. In addition to those listed as authors on this paper, the " exact="Healthlines" match="Healthlines" post=" research programme is led by Alicia O’Cathain, Sandra Hollinghurst, Shirley Large, John Nicholl, A" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4531517/results/species/genus/results.xml">
+   <result pre=" " exact="Comp" match="Comp" post=" component, IQR interquartile range, KCCQ Kansas City cardiomyopathy questionnaire wi" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4537545/results/species/genus/results.xml">
+   <result pre="out their use, design and analysis is ongoing [ 1– 3]. This issue of " exact="Trials" xpath="/html[1]/body[1]/div[2]/div[3]/p[1]" match="Trials" post=" features a protocol for a study described as a ‘modified stepped wedge’ [ 4]. DiDio" name="genus"/>
+   <result pre="time-trends in the analysis. The DiDiodato et al. study protocol described in this issue of " exact="Trials" match="Trials" post=" is perhaps best conceptualised as a multi-ward, before-after study rather than a modified stepped " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4538902/results/species/genus/results.xml">
+   <result pre="ists of identified articles. These are reviewed in the other publications of this special issue of " exact="Trials" xpath="/html[1]/body[1]/div[2]/div[2]/div[4]/p[1]" match="Trials" post=" [ 17– 19]. " name="genus"/>
+   <result pre="nd JL). Additional, sections were collated by authors of the other papers in this special issue of " exact="Trials" match="Trials" post=" [ 17, 19, 18]. For conference abstracts or trial r" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4543451/results/species/genus/results.xml">
+   <result pre="In 2014, the " exact="Lancet" match="Lancet" post=" reported that 85 % of the US$240 billion expended on health research in 2010 was wasted because of" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4545876/results/species/genus/results.xml">
+   <result pre=" " exact="Recruitment" xpath="/html[1]/body[1]/div[2]/div[3]/div[6]/div[10]/p[1]" match="Recruitment" post=" is defined as all procedures up to the point of, and including, randomisation of eligible particip" name="genus"/>
+   <result pre=" " exact="Acceptability" match="Acceptability" post=" refers to the appropriateness and relevance of the intervention for recipients and PWPs [ &lt;a href=" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4545975/results/species/genus/results.xml">
+   <result pre=", we currently included 16 patients in the PISA trial at the time of submission of the protocol to " exact="Trials" match="Trials" post=" (17 June 2015). The first patient was included in the Academic Medical Center on 1 November 2013. " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4563900/results/species/genus/results.xml">
+   <result pre="2007-’09); previous commercial research funding for trials of surgery for stress incontinence from " exact="Gynecare" xpath="/html[1]/body[1]/div[3]/div[2]/div[1]/p[4]" match="Gynecare" post=" (1998–2003) and Gyne Ideas (now Mpathy Medical; 2001–’03). " name="genus"/>
+   <result pre="ived grant income for investigator-initiated research from Ethicon; paid consultancies from " exact="Ethicon" xpath="/html[1]/body[1]/div[3]/div[2]/div[1]/p[4]" match="Ethicon" post=" and Allergan for teaching and advisory boards; financial support to attend conferences in 2" name="genus"/>
+   <result pre="or investigator-initiated research from Ethicon; paid consultancies from Ethicon and " exact="Allergan" xpath="/html[1]/body[1]/div[3]/div[2]/div[1]/p[4]" match="Allergan" post=" for teaching and advisory boards; financial support to attend conferences in 2012/13 from Ethic" name="genus"/>
+   <result pre="rgan for teaching and advisory boards; financial support to attend conferences in 2012/13 from " exact="Ethicon" match="Ethicon" post=" and Astellas. All income managed by the University of Leicester Research and Business Devel" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4603920/results/species/genus/results.xml">
+   <result pre="tion (NRS ≥ 5, onset between 4 weeks and 6 months) will be recruited and randomized 20 each to the " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture (pharmacopuncture with acupuncture), acupuncture, and usual care groups, respecti" name="genus"/>
+   <result pre="cture in major treatment guidelines for Korean medicine doctors (KMDs), recommending bee venom and " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture amongst others for LDH patients [ 17]. " name="genus"/>
+   <result pre=" musculoskeletal diseases in Korea. Hence, we will evaluate the effects of a combined treatment of " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture with acupuncture in non-acute sciatica patients due to LDH through: 1) comparison" name="genus"/>
+   <result pre=" comparative effect and safety; 2) comparison with acupuncture to determine the specific effect of " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture; 3) comparison of acupuncture and usual care to evaluate the comparative effect o" name="genus"/>
+   <result pre="ic pain symptoms and MRI findings, the patient will be randomly allocated to one of three groups – " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture, acupuncture, or usual care group. The patient will receive 8 sessions of the ass" name="genus"/>
+   <result pre="The " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture group will receive Shinbaro pharmacopuncture and acupuncture, the acupunct" name="genus"/>
+   <result pre="The Shinbaro pharmacopuncture group will receive " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture and acupuncture, the acupuncture group acupuncture alone, and the usual care grou" name="genus"/>
+   <result pre="py and conventional medication, respectively. Each group will receive 8 interventional sessions of " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture, acupuncture, and physical therapy, respectively, twice a week over 4 weeks, and " name="genus"/>
+   <result pre="uce number of drop-outs, all participants will have the choice to be provided with acupuncture and " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture at the end of the trial phase (12 weeks post-randomization). " name="genus"/>
+   <result pre="ent for participation. The patients will receive explanations about the two types of acupuncture ( " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture and acupuncture) which will be conducted by KMDs in accordance with recommendatio" name="genus"/>
+   <result pre="roup while the patient lies prone during needle retention from initial acupuncture, and administer " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture or secondary acupuncture accordingly. The second physician will administer acupun" name="genus"/>
+   <result pre="ong-bang Acupuncture, SeongNam, Korea) will be used. The initial acupuncture physician will mark 1 " exact="Hyeopcheok" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Hyeopcheok" post=" ( Huatuo Jiaji, EX B2) point most relevant to patient symptoms with reference to the MR ima" name="genus"/>
+   <result pre="r contralateral needling is to avoid overlapping with the area marked for secondary acupuncture or " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture. The secondary acupuncture physician will disinfect the marked area with a povidi" name="genus"/>
+   <result pre=" physician will administer pharmacopuncture at the acupoint marked by the initial physician in the " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture group with no contact with the disinfected area. The secondary acupuncture physic" name="genus"/>
+   <result pre=" disposable Kovax-syringe (20 ml, 23G x 1″; Korea Vaccine, Ansan, Korea) with 6 cc of refrigerated " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture solution (prepared at Jaseng herbal medicine dispensary, an extramural facility m" name="genus"/>
+   <result pre=" " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture solution will be prepared at Jaseng herbal medicine dispensary following KMD pres" name="genus"/>
+   <result pre="and with no contact with the disinfected area. The physician will adopt a manner highly similar to " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture in method, procedure and timing to maintain patient-blinding. The physician will " name="genus"/>
+   <result pre="Administration of secondary acupuncture ( " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture or acupuncture) will take place within the 20-minute initial acupuncture needle r" name="genus"/>
+   <result pre="There are no prior RCTs which have assessed the effect of " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture in sciatic pain patients due to LDH. Therefore, the purpose of this pilot study i" name="genus"/>
+   <result pre="Physicians will record all unexpected or unintended reactions at every patient visit in the " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture, acupuncture, and usual care groups. The potential adverse effects of Shinbaro" name="genus"/>
+   <result pre="hinbaro pharmacopuncture, acupuncture, and usual care groups. The potential adverse effects of " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture will include those known of acupuncture while keeping potential unknown adverse e" name="genus"/>
+   <result pre="The purpose of this study is to assess the efficacy and safety of " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture, which is included in LDH clinical practice guidelines, in severe non-acute sciat" name="genus"/>
+   <result pre="points and needle-type hold relevance in determining effect, we will assign acupoint selection for " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture and acupuncture to the blinded initial acupuncture physician and administer acupu" name="genus"/>
+   <result pre="upuncture perpendicularly at the acupoint with an acupuncture needle of the same shape and size as " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture needles. To strengthen blinding and induce a homogeneous placebo effect in groups" name="genus"/>
+   <result pre="GCSB-5, which is the primary ingredient of " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture, has a long history of clinical use for spinal disorders such as LDH in Asia, and" name="genus"/>
+   <result pre="ture an average 8.2 ± 12.3 times out of 373,755 outpatients, and of these, 104,445 (36 %) received " exact="Shinbaro" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Shinbaro" post=" pharmacopuncture, ranking second after bee venom pharmacopuncture. A 2010 survey on clinicians wit" name="genus"/>
+   <result pre="ensu Zhusheye (puerarin pharmacopuncture), electroacupuncture and blood-letting cupping, using " exact="Hyeopcheok" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Hyeopcheok" post=" ( Huatuo Jiaji, EX B2) points showed better improvement than that of Ashi points in " name="genus"/>
+   <result pre="sing Hyeopcheok ( Huatuo Jiaji, EX B2) points showed better improvement than that of " exact="Ashi" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Ashi" post=" points in symptom and pain relief, interleukin-6 levels and hemodynamics, [ 49] bu" name="genus"/>
+   <result pre=" " exact="Hyeopcheok" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Hyeopcheok" post=" points are situated at or in close proximity to the nerve roots, and stimulation of this area is c" name="genus"/>
+   <result pre="ng therapy commonly used in conventional treatment for LDH. It can be surmised that the reason why " exact="Hyeopcheok" xpath="/html[1]/body[1]/div[2]/div[3]/p[7]" match="Hyeopcheok" post=" points, in addition to regular meridian acupuncture points, has a long history of use in spinal di" name="genus"/>
+   <result pre="tissue. While the current study aims to assess whether using pharmacopuncture is more effective at " exact="Hyeopcheok" match="Hyeopcheok" post=" points than regular acupuncture, we will consider further comparisons with nerve root blocking the" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4606498/results/species/genus/results.xml">
+   <result pre="ond-line treatments for unipolar major depressive episodes. The original protocol was published in " exact="Trials" match="Trials" post=" in 2011 [ 1], and we hereby report its updated protocol including the statistical a" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4616250/results/species/genus/results.xml">
+   <result pre=" " exact="Address" xpath="/html[1]/body[1]/div[3]/div[3]/div[2]/p[6]" match="Address" post=" : Direction de la Recherche Clinique et de l’Innovation, 80, rue Brochier, 13354 MARSEILLE" name="genus"/>
+   <result pre=" " exact="Phone" xpath="/html[1]/body[1]/div[3]/div[3]/div[2]/p[6]" match="Phone" post=" : +33(0) 491 381 966 " name="genus"/>
+   <result pre=" " exact="Email" match="Email" post=" : kahena.amichi@ap-hm.fr " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4618532/results/species/genus/results.xml">
+   <result pre="e reproducibility of their trial. For instance, one of the higher quality studies published in the " exact="Lancet" match="Lancet" post=" by Schottenfeld et al. (2008) provides a list of conditions they deemed problematic for inclusion " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4628243/results/species/genus/results.xml">
+   <result pre="Schematic representation of the experimental protocol. *Procedures are the same as in phase 1. " exact="Blood" match="Blood" post=" 12-h fasted blood collection, ANTH anthropometric measurements, BP blood pressure, &lt;" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4630875/results/species/genus/results.xml">
+   <result pre="belled with trial treatment numbers by an independent researcher. The kava is a high-quality noble " exact="Borogu" match="Borogu" post=" cultivar acquired from Southern Pentecost Island, Vanuatu, and manufactured by MediHerb (Integria " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4642751/results/species/genus/results.xml">
+   <result pre="e launched in August 2011, and the progress and activities up to 31 December 2013 were reported in " exact="Trials" match="Trials" post=" last year [ 1]. This letter outlines subsequent progress in 2014 (Source of data us" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4650298/results/species/genus/results.xml">
+   <result pre=" " exact="Psychoeducation" xpath="/html[1]/body[1]/div[2]/div[2]/div[7]/ul[1]/li[6]/p[1]" match="Psychoeducation" post=" Sometimes, but not always, patients and caregivers are inadequately informed of the diagnosis of A" name="genus"/>
+   <result pre=" " exact="Screening" xpath="/html[1]/body[1]/div[2]/div[2]/div[7]/ul[1]/li[6]/p[1]" match="Screening" post=" The Mini Mental State Examination [ 54]; " name="genus"/>
+   <result pre=" " exact="Memory" xpath="/html[1]/body[1]/div[2]/div[2]/div[7]/ul[1]/li[6]/p[1]" match="Memory" post=" The CERAD Word List Memory Test (learning, recall and recognition) [ 72]; a German" name="genus"/>
+   <result pre=" " exact="Language" xpath="/html[1]/body[1]/div[2]/div[2]/div[7]/ul[1]/li[6]/p[1]" match="Language" post=" The CERAD Animal Naming Task [ 75]; a modified Boston Naming Test [ &lt;a href=&quot;#CR76" name="genus"/>
+   <result pre=" " exact="Praxis" xpath="/html[1]/body[1]/div[2]/div[2]/div[7]/ul[1]/li[6]/p[1]" match="Praxis" post=" The CERAD Constructional Praxis [ 78]; the Rey–Osterrieth Complex Figure Test [ &lt;a" name="genus"/>
+   <result pre=" " exact="Attention" match="Attention" post=" The Trail Making Test, Part A [ 81]; the Digit Symbol Substitution Test from the W" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4650393/results/species/genus/results.xml">
+   <result pre="ed a diet rich in legumes, with European children showed a relative lack of potentially pathogenic " exact="Enterobacteriaceae" match="Enterobacteriaceae" post=" in the African children, conceivably protecting these children from severe gut inflammation and ba" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4652431/results/species/genus/results.xml">
+   <result pre="Anticoagulants (warfarin or new oral anticoagulants), antiplatelet drugs (aspirin, clopidogrel) or " exact="Xuesaitong" match="Xuesaitong" post=" (traditional Chinese medicine for activating blood circulation) can potentially interfere with hem" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4654827/results/species/genus/results.xml">
+   <result pre=" " exact="Cont" xpath="/html[1]/body[1]/div[2]/div[3]/div[5]/div[1]/p[2]" match="Cont" post=" control, Int intervention, QOL quality of life " name="genus"/>
+   <result pre=" " exact="Cont" match="Cont" post=" control, Int intervention, QOL quality of life " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4672490/results/species/genus/results.xml">
+   <result pre="logical growth of clinical trials. The range of qualitative and mixed methods studies published in " exact="Trials" match="Trials" post=" in recent years is indicative of the growing importance of these approaches. Now endorsed by funde" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4673756/results/species/genus/results.xml">
+   <result pre="quality of life. In traditional Chinese medicine (TCM), disease treatments are based on syndrome ( " exact="Zheng" match="Zheng" post=" in Chinese) differentiation, and improvement of the syndrome often indicates better prognosis of t" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4681032/results/species/genus/results.xml">
+   <result pre="The " exact="Alkalo" xpath="/html[1]/body[1]/div[2]/div[2]/div[19]/ul[1]/li[2]/p[1]" match="Alkalo" post=" (village chief) consents to allow the village to participate in the trial. " name="genus"/>
+   <result pre="een 2006 and 2010 in all villages meeting the criteria to be screened for eligibility in which the " exact="Alkalo" xpath="/html[1]/body[1]/div[2]/div[2]/div[19]/ul[1]/li[2]/p[1]" match="Alkalo" post=" consents. Participants will be recruited by the research team during enumeration. " name="genus"/>
+   <result pre=", supervising and facilitating the work of enumerators. They will also obtain consent from village " exact="Alkalos" match="Alkalos" post=" and school headmasters " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4682258/results/species/genus/results.xml">
+   <result pre=" AE adverse event, " exact="Carbo" match="Carbo" post=" carboplatin, Gem gemcitabine, HR hazard ratio, nab-P nab-paclitaxel, &lt;" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4683729/results/species/genus/results.xml">
+   <result pre=" right and relevant to older mentally ill Latinos who may have low literacy [ 42]. " exact="Fotonovelas" xpath="/html[1]/body[1]/div[2]/div[2]/div[4]/div[4]/p[1]" match="Fotonovelas" post=" are booklets that use posed photographs and simple text bubbles to portray soap opera stories that" name="genus"/>
+   <result pre="hotographs and simple text bubbles to portray soap opera stories that convey educational messages. " exact="Fotonovelas" match="Fotonovelas" post=" differ from common educational materials in that they incorporate popular images, cultural norms, " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4693427/results/species/genus/results.xml">
+   <result pre="Patients randomized to the Baxter group will receive Baxter " exact="Dianeal" match="Dianeal" post=" dialysis fluid. This product contains 1.5 % dextrose as an osmotic agent and 40 mmol/l lactate as " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4696326/results/species/genus/results.xml">
+   <result pre=" " exact="Preconditioning" match="Preconditioning" post=" is one such potential technique to achieve neuroprotection [ 6]. Preconditioning in" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4704425/results/species/genus/results.xml">
+   <result pre=" important research priority (after equality of healthcare access) for disabled people in a recent " exact="Lancet" match="Lancet" post=" expert panel [ 18]. Currently, most Indian stroke units are situated in the privat" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4711025/results/species/genus/results.xml">
+   <result pre="ametric approach based on an analysis of variance and simple graphical methods. Indoor and outdoor " exact="Anopheles" xpath="/html[1]/body[1]/div[2]/div[2]/div[16]/div[4]/p[1]" match="Anopheles" post=" densities will be compared among the study arms using a one-way analysis of variance (ANOVA) if da" name="genus"/>
+   <result pre="e study participants and from parents/guardians for children under 18 years of age using the local " exact="Afan" match="Afan" post=" Oromo language. Information sheets were provided to inform about the purpose of the study, and the" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4729116/results/species/genus/results.xml">
+   <result pre="ment for recruitment of consenting health centres. The main intervention phases then comprise: (1) " exact="Baseline" xpath="/html[1]/body[1]/div[2]/div[2]/div[12]/p[5]" match="Baseline" post=" data collection and planning (3 months); (2) Intensive implementation phase (15 months); (3" name="genus"/>
+   <result pre="ntervention phases then comprise: (1) Baseline data collection and planning (3 months); (2) " exact="Intensive" xpath="/html[1]/body[1]/div[2]/div[2]/div[12]/p[5]" match="Intensive" post=" implementation phase (15 months); (3) Maintenance implementation phase (up to 15 months dep" name="genus"/>
+   <result pre="ata collection and planning (3 months); (2) Intensive implementation phase (15 months); (3) " exact="Maintenance" xpath="/html[1]/body[1]/div[2]/div[2]/div[12]/p[5]" match="Maintenance" post=" implementation phase (up to 15 months depending on site’s start date) (Fig. 1). In" name="genus"/>
+   <result pre="d sustainability, as well as measures to examine implementation process, fidelity and performance. " exact="Efficiency" xpath="/html[1]/body[1]/div[2]/div[2]/div[12]/p[5]" match="Efficiency" post=" measures will answer: ‘To what extent did health centres change their delivery of ARF/RHD care to " name="genus"/>
+   <result pre="ealth centres change their delivery of ARF/RHD care to align with the systems-based intervention?’ " exact="Effectiveness" xpath="/html[1]/body[1]/div[2]/div[2]/div[12]/p[5]" match="Effectiveness" post=" measures will answer: ‘To what degree did adopting the systems-based intervention improve processe" name="genus"/>
+   <result pre="tems, improve overall adherence to secondary prophylaxis for ARF/RHD and minimise ‘days at risk’?’ " exact="Sustainability" xpath="/html[1]/body[1]/div[2]/div[2]/div[12]/p[5]" match="Sustainability" post=" measures will answer: ‘Which of the activities and streams of the CCM were sustained during mainte" name="genus"/>
+   <result pre=" and enablers of implementation?’, ‘What were the barriers and enablers of organisational change?’ " exact="Performance" match="Performance" post=" will be measured by asking: ‘What were the factors associated with success in achieving organisati" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4736108/results/species/genus/results.xml">
+   <result pre="T (and the BAT) will be harmless common varieties indigenous to the region, primarily of the genus " exact="Tegenaria" match="Tegenaria" post=" ( T. domestica and T. atrica). Spiders will be classified according to size: small (" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4738764/results/species/genus/results.xml">
+   <result pre=" " exact="Participants" match="Participants" post=" will be asked: (1) to identify positive and negative aspects of IPT, including content, delivery, " name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4754877/results/species/genus/results.xml">
+   <result pre=" Gender Equitable Men ( GEM) " exact="Scale" match="Scale" post=" [ 30]. A 24-item scale with two subscales (gender equitable and inequitable attitu" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4755005/results/species/genus/results.xml">
+   <result pre="on that reviewers bring to our deliberations. For these reasons, the Editors-in-Chief and staff of " exact="Trials" match="Trials" post=" warmly thank the 854 reviewers whose comments helped to shape the journal, for their invaluable as" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4761130/results/species/genus/results.xml">
+   <result pre=" and publications, notably in the New England Journal of Medicine [ 13] and " exact="Chest" match="Chest" post=" [ 14]. Throughout these papers, a consensus appears: care doesn’t end at the death" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4761186/results/species/genus/results.xml">
+   <result pre="e (LEfSe) algorithm [ 34]. Proportions of mutans-group streptococci, lactobacilli, " exact="Bifidobacteriaceae" match="Bifidobacteriaceae" post=" and Propionibacterium acidifaciens will be compared across intervention groups using approp" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4765218/results/species/genus/results.xml">
+   <result pre="sed are those of degree, closeness, betweenness, and Bonacich’s Power Index [ 28]. " exact="Degree" xpath="/html[1]/body[1]/div[2]/div[2]/div[5]/p[3]" match="Degree" post=" is a measure of volume of interactions that a participant has with others. High out-degree indicat" name="genus"/>
+   <result pre=" a participant receives many interactions (i.e., receives documents from many other participants). " exact="Closeness" xpath="/html[1]/body[1]/div[2]/div[2]/div[5]/p[3]" match="Closeness" post=" is a measure of distance between participants. High out-closeness implies that a participant can r" name="genus"/>
+   <result pre=" it reaches the intended receiver. Presumably, small closeness denotes faster flow of information. " exact="Betweenness" match="Betweenness" post=" is a measure of how important a participant is in connecting other participants. Participants with" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4772293/results/species/genus/results.xml">
+   <result pre="ght, BP blood pressure, BW body weight, CABG coronary artery bypass grafting, " exact="Cath" match="Cath" post=" coronary catheterization, CBC complete blood cell count, CRF case report form, D&lt;" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4778294/results/species/genus/results.xml">
+   <result pre="during the last treatment visit and at the following week (weeks 5 and 6 of each treatment stage). " exact="Remission" match="Remission" post=" is defined as a mean ISI score &amp;amp;lt; 8 for weeks 5 and 6, with neither one of these two ISI sco" name="genus"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/trials/trialsjournal/PMC4779241/results/species/genus/results.xml">
+   <result pre="t forms such as methicillin-resistant Staphylococcus aureus (MRSA) and vancomycin-resistant " exact="Enterococcus" match="Enterococcus" post=" (VRE), and against fungi and anaerobes [ 9– 11]. However, a Cochran" name="genus"/>
+  </snippets>
+ </snippetsTree>
+</projectSnippetsTree>

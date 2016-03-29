@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="120">Total</result>
+ <result title="frequency" count="87">Food and Drug Administration</result>
+ <result title="frequency" count="85">American Society of Clinical Oncology</result>
+ <result title="frequency" count="59">Roche</result>
+ <result title="frequency" count="58">National Cancer Institute</result>
+ <result title="frequency" count="54">Novartis</result>
+ <result title="frequency" count="51">Thompson</result>
+ <result title="frequency" count="41">Williams</result>
+ <result title="frequency" count="26">EMBO</result>
+ <result title="frequency" count="22">BP</result>
+ <result title="frequency" count="22">American Cancer Society</result>
+ <result title="frequency" count="22">American Association for Cancer Research</result>
+ <result title="frequency" count="19">GlaxoSmithKline</result>
+ <result title="frequency" count="18">Core</result>
+ <result title="frequency" count="16">World Health Organization</result>
+ <result title="frequency" count="16">School of Medicine,</result>
+ <result title="frequency" count="16">National Academy of Sciences</result>
+ <result title="frequency" count="13">AstraZeneca</result>
+ <result title="frequency" count="13">Genentech</result>
+ <result title="frequency" count="12">Seoul National University</result>
+ <result title="frequency" count="12">European Society for Medical Oncology</result>
+ <result title="frequency" count="12">National Institutes of Health</result>
+ <result title="frequency" count="12">Samsung</result>
+ <result title="frequency" count="11">Pfizer</result>
+ <result title="frequency" count="10">National Natural Science Foundation of China</result>
+ <result title="frequency" count="10">Dana-Farber Cancer Institute,</result>
+ <result title="frequency" count="10">American Society of Echocardiography</result>
+ <result title="frequency" count="9">University of California</result>
+ <result title="frequency" count="9">Cancer Research UK</result>
+ <result title="frequency" count="8">U.S. Food and Drug Administration</result>
+ <result title="frequency" count="8">Celgene</result>
+ <result title="frequency" count="8">Department of Surgery,</result>
+ <result title="frequency" count="8">Dana-Farber Cancer Institute</result>
+ <result title="frequency" count="8">Merck</result>
+ <result title="frequency" count="8">School of Medicine</result>
+ <result title="frequency" count="7">American Society of Clinical Oncology.</result>
+ <result title="frequency" count="7">American College of Surgeons</result>
+ <result title="frequency" count="7">Food and Drug Administration,</result>
+ <result title="frequency" count="7">Health Research</result>
+ <result title="frequency" count="7">West Virginia University</result>
+ <result title="frequency" count="6">University of Texas, MD Anderson Cancer Center</result>
+ <result title="frequency" count="6">Food and Drug Administration.</result>
+ <result title="frequency" count="6">Medical Research Council</result>
+ <result title="frequency" count="6">Cannon</result>
+ <result title="frequency" count="6">Genomic Health,</result>
+ <result title="frequency" count="6">Ministry of Health</result>
+ <result title="frequency" count="6">Bristol-Myers Squibb</result>
+ <result title="frequency" count="6">Sun Yat-sen University</result>
+ <result title="frequency" count="6">Department of Health</result>
+ <result title="frequency" count="5">American Society of Clinical Oncology,</result>
+ <result title="frequency" count="5">Amgen</result>
+ <result title="frequency" count="5">American Society of Clinical Oncology;</result>
+ <result title="frequency" count="5">GE Healthcare</result>
+ <result title="frequency" count="5">University of California,</result>
+ <result title="frequency" count="5">Gunma University</result>
+ <result title="frequency" count="5">National Cancer Center,</result>
+ <result title="frequency" count="4">University of New South Wales</result>
+ <result title="frequency" count="4">Food and Drug Administration;</result>
+ <result title="frequency" count="4">Thermo Scientific</result>
+ <result title="frequency" count="4">Beth Israel Deaconess Medical Center</result>
+ <result title="frequency" count="4">Mayo Clinic</result>
+ <result title="frequency" count="4">World Health Organization.</result>
+ <result title="frequency" count="4">National Cancer Institute.</result>
+ <result title="frequency" count="4">Microsoft</result>
+ <result title="frequency" count="4">Lord</result>
+ <result title="frequency" count="4">European Organisation for Research and Treatment of Cancer</result>
+ <result title="frequency" count="4">Cancer Research UK,</result>
+ <result title="frequency" count="4">University of Ulsan</result>
+ <result title="frequency" count="4">Harvard Medical School,</result>
+ <result title="frequency" count="4">Home Office</result>
+ <result title="frequency" count="4">Cancer Research Institute</result>
+ <result title="frequency" count="3">Instituto de Salud Carlos III</result>
+ <result title="frequency" count="3">McGill University</result>
+ <result title="frequency" count="3">European Commission</result>
+ <result title="frequency" count="3">University of South Carolina,</result>
+ <result title="frequency" count="3">Weill Cornell Medical College</result>
+ <result title="frequency" count="3">Delta</result>
+ <result title="frequency" count="3">National Institute for Health Research</result>
+ <result title="frequency" count="3">Genomic Health</result>
+ <result title="frequency" count="3">Ministry of Education</result>
+ <result title="frequency" count="3">Korea Health Industry Development Institute</result>
+ <result title="frequency" count="3">University of Maryland</result>
+ <result title="frequency" count="3">American Society for Radiation Oncology</result>
+ <result title="frequency" count="3">Ohio State University</result>
+ <result title="frequency" count="3">Boehringer Ingelheim.</result>
+ <result title="frequency" count="3">University of Maryland,</result>
+ <result title="frequency" count="3">University of Toronto,</result>
+ <result title="frequency" count="3">American Heart Association</result>
+ <result title="frequency" count="3">Baylor College of Medicine,</result>
+ <result title="frequency" count="3">Medical University of South Carolina,</result>
+ <result title="frequency" count="3">Mayo Clinic,</result>
+ <result title="frequency" count="3">Bayer</result>
+ <result title="frequency" count="3">University of Pennsylvania.</result>
+ <result title="frequency" count="2">Medical University of South Carolina</result>
+ <result title="frequency" count="2">Second Military Medical University</result>
+ <result title="frequency" count="2">Sun Yat-sen University.</result>
+ <result title="frequency" count="2">Shandong Province</result>
+ <result title="frequency" count="2">Tyson</result>
+ <result title="frequency" count="2">Harvard Medical School</result>
+ <result title="frequency" count="2">Dalhousie University</result>
+ <result title="frequency" count="2">Academy of Medical Sciences</result>
+ <result title="frequency" count="2">Cancer Research Foundation.</result>
+ <result title="frequency" count="2">National Institutes of Health,</result>
+ <result title="frequency" count="2">National Research Foundation</result>
+ <result title="frequency" count="2">Institute of Cancer Research,</result>
+ <result title="frequency" count="2">Taipei Medical University,</result>
+ <result title="frequency" count="2">King’s College London,</result>
+ <result title="frequency" count="2">Tongji University</result>
+ <result title="frequency" count="2">University of Cambridge</result>
+ <result title="frequency" count="2">Sungkyunkwan University</result>
+ <result title="frequency" count="2">Philips</result>
+ <result title="frequency" count="2">Yonsei University</result>
+ <result title="frequency" count="2">Interface</result>
+ <result title="frequency" count="2">American Cancer Society.</result>
+ <result title="frequency" count="2">Université de Montréal</result>
+ <result title="frequency" count="2">BGI</result>
+ <result title="frequency" count="2">Department of Surgery</result>
+ <result title="frequency" count="2">FOX</result>
+ <result title="frequency" count="2">Nanjing Medical University,</result>
+ <result title="frequency" count="2">Memorial Sloan-Kettering Cancer Center,</result>
+ <result title="frequency" count="2">Oracle</result>
+ <result title="frequency" count="2">Thermo Scientific,</result>
+ <result title="frequency" count="2">University of Texas MD Anderson Cancer Center</result>
+ <result title="frequency" count="2">International Association for the Study of Lung Cancer</result>
+ <result title="frequency" count="2">National Cancer Institute,</result>
+ <result title="frequency" count="2">Baylor College of Medicine</result>
+ <result title="frequency" count="2">Université de Lorraine</result>
+ <result title="frequency" count="2">Russian Academy of Sciences,</result>
+ <result title="frequency" count="2">Orange</result>
+ <result title="frequency" count="2">Duke University</result>
+ <result title="frequency" count="2">Breast Cancer Research Foundation</result>
+ <result title="frequency" count="2">Wellcome Trust</result>
+ <result title="frequency" count="2">Canadian Cancer Society,</result>
+ <result title="frequency" count="2">Institute of Cancer Research</result>
+ <result title="frequency" count="2">University of South Carolina</result>
+ <result title="frequency" count="2">Eisai</result>
+ <result title="frequency" count="2">Wenzhou Medical University,</result>
+ <result title="frequency" count="2">Santen</result>
+ <result title="frequency" count="2">Johns Hopkins University</result>
+ <result title="frequency" count="2">Clalit Health Services</result>
+ <result title="frequency" count="2">Natural Science Foundation of Jiangxi Province,</result>
+ <result title="frequency" count="2">Ministry of Education,</result>
+ <result title="frequency" count="2">Zimmer</result>
+ <result title="frequency" count="2">University of Florida</result>
+ <result title="frequency" count="2">University of Pittsburgh</result>
+ <result title="frequency" count="2">Centre National de la Recherche Scientifique</result>
+ <result title="frequency" count="2">American Association for Cancer Research,</result>
+ <result title="frequency" count="2">Beatrice Hunter Cancer Research Institute</result>
+ <result title="frequency" count="2">National Health and Medical Research Council</result>
+ <result title="frequency" count="2">Jackson Laboratory,</result>
+ <result title="frequency" count="2">Cancer Research Foundation</result>
+ <result title="frequency" count="2">SAS Institute,</result>
+ <result title="frequency" count="2">Brigham and Women's Hospital</result>
+ <result title="frequency" count="2">University of Pennsylvania,</result>
+ <result title="frequency" count="1">Cancer Research Foundation;</result>
+ <result title="frequency" count="1">Harvard University</result>
+ <result title="frequency" count="1">Sun Yat-sen University,</result>
+ <result title="frequency" count="1">University of Melbourne</result>
+ <result title="frequency" count="1">Breast Cancer Alliance</result>
+ <result title="frequency" count="1">European Parliament</result>
+ <result title="frequency" count="1">Peter MacCallum Cancer Centre,</result>
+ <result title="frequency" count="1">Shantou University</result>
+ <result title="frequency" count="1">SPIE</result>
+ <result title="frequency" count="1">European Social Fund</result>
+ <result title="frequency" count="1">University of Virginia</result>
+ <result title="frequency" count="1">Wuhan University,</result>
+ <result title="frequency" count="1">Universidade de Vigo,</result>
+ <result title="frequency" count="1">Cancer Research Foundation,</result>
+ <result title="frequency" count="1">University of Utah</result>
+ <result title="frequency" count="1">Boehringer Ingelheim</result>
+ <result title="frequency" count="1">RIKEN</result>
+ <result title="frequency" count="1">Canadian Breast Cancer Foundation,</result>
+ <result title="frequency" count="1">Jackson Laboratory</result>
+ <result title="frequency" count="1">University of Florida.</result>
+ <result title="frequency" count="1">University of Michigan</result>
+ <result title="frequency" count="1">Gunma University.</result>
+ <result title="frequency" count="1">Banco Bilbao Vizcaya Argentaria</result>
+ <result title="frequency" count="1">Ministry of Knowledge Economy</result>
+ <result title="frequency" count="1">Science Foundation Ireland,</result>
+ <result title="frequency" count="1">Imperial College, London,</result>
+ <result title="frequency" count="1">Wyeth</result>
+ <result title="frequency" count="1">Ministry of Economy</result>
+ <result title="frequency" count="1">National Center for Health Statistics</result>
+ <result title="frequency" count="1">International Centre for Genetic Engineering and Biotechnology,</result>
+ <result title="frequency" count="1">Dana-Farber/Harvard Cancer Center</result>
+ <result title="frequency" count="1">National Breast Cancer Foundation</result>
+ <result title="frequency" count="1">RSNA Research and Educational Foundation</result>
+ <result title="frequency" count="1">Sears</result>
+ <result title="frequency" count="1">Kyowa Hakko Kirin</result>
+ <result title="frequency" count="1">University of Washington</result>
+ <result title="frequency" count="1">Karolinska Institutet</result>
+ <result title="frequency" count="1">Medical Foundation</result>
+ <result title="frequency" count="1">University of Chicago,</result>
+ <result title="frequency" count="1">American Gastroenterological Association</result>
+ <result title="frequency" count="1">Hollings Cancer Center, Medical University of South Carolina</result>
+ <result title="frequency" count="1">American Cancer Society;</result>
+ <result title="frequency" count="1">Japanese Society of Medical Oncology</result>
+ <result title="frequency" count="1">Ministry of Health.</result>
+ <result title="frequency" count="1">Université de Bordeaux,</result>
+ <result title="frequency" count="1">Ministry of Health,</result>
+ <result title="frequency" count="1">Croucher Foundation</result>
+ <result title="frequency" count="1">University of Patras</result>
+ <result title="frequency" count="1">European Central Bank.</result>
+ <result title="frequency" count="1">American Cancer Society,</result>
+ <result title="frequency" count="1">Terry Fox Foundation</result>
+ <result title="frequency" count="1">University of Sydney</result>
+ <result title="frequency" count="1">Concern Foundation.</result>
+ <result title="frequency" count="1">Aston University.</result>
+ <result title="frequency" count="1">Ligue Contre le Cancer</result>
+ <result title="frequency" count="1">European Commission.</result>
+ <result title="frequency" count="1">National Cancer Research Institute</result>
+ <result title="frequency" count="1">San Francisco State University,</result>
+ <result title="frequency" count="1">Seoul National University,</result>
+ <result title="frequency" count="1">Sparks</result>
+ <result title="frequency" count="1">University of Crete,</result>
+ <result title="frequency" count="1">University of Texas MD Anderson Cancer Center,</result>
+ <result title="frequency" count="1">Albert Einstein Cancer Center.</result>
+ <result title="frequency" count="1">Canadian Breast Cancer Foundation</result>
+ <result title="frequency" count="1">Society of Surgical Oncology,</result>
+ <result title="frequency" count="1">International Society for Heart and Lung Transplantation</result>
+ <result title="frequency" count="1">Ministerio de Ciencia e Innovación</result>
+ <result title="frequency" count="1">Labex</result>
+ <result title="frequency" count="1">Weill Cornell Medical College,</result>
+ <result title="frequency" count="1">Research and Development</result>
+ <result title="frequency" count="1">University of Illinois at Chicago,</result>
+ <result title="frequency" count="1">Imperial College London,</result>
+ <result title="frequency" count="1">University of Rhode Island,</result>
+ <result title="frequency" count="1">Radiological Society of North America</result>
+ <result title="frequency" count="1">Dan L. Duncan Cancer Center, Baylor College of Medicine,</result>
+ <result title="frequency" count="1">Jonsson Comprehensive Cancer Center</result>
+ <result title="frequency" count="1">University of Warwick,</result>
+ <result title="frequency" count="1">Tunghai University,</result>
+ <result title="frequency" count="1">BASF</result>
+ <result title="frequency" count="1">Canadian Institutes of Health Research</result>
+ <result title="frequency" count="1">Shanghai Municipal Health Bureau</result>
+ <result title="frequency" count="1">Tufts Medical Center,</result>
+ <result title="frequency" count="1">Yale University</result>
+ <result title="frequency" count="1">Indiana University,</result>
+ <result title="frequency" count="1">Deutsche Forschungsgemeinschaft</result>
+ <result title="frequency" count="1">Genomic Health.</result>
+ <result title="frequency" count="1">SAS Institute</result>
+ <result title="frequency" count="1">Hilton</result>
+ <result title="frequency" count="1">National Cancer Institute;</result>
+ <result title="frequency" count="1">Capital Medical University,</result>
+ <result title="frequency" count="1">World Health Organization,</result>
+ <result title="frequency" count="1">Breast Cancer Research Foundation.</result>
+ <result title="frequency" count="1">Thermo Scientific.</result>
+ <result title="frequency" count="1">Georgetown University,</result>
+ <result title="frequency" count="1">Breast Cancer Research Foundation,</result>
+ <result title="frequency" count="1">Hitachi</result>
+ <result title="frequency" count="1">Tongji University,</result>
+ <result title="frequency" count="1">Breast Cancer Research Foundation;</result>
+ <result title="frequency" count="1">Fudan University,</result>
+ <result title="frequency" count="1">Agency for Healthcare Research and Quality,</result>
+ <result title="frequency" count="1">National Health Research Institutes,</result>
+ <result title="frequency" count="1">Cairo University</result>
+ <result title="frequency" count="1">American Association of Blood Banks,</result>
+ <result title="frequency" count="1">Loyola University, Chicago</result>
+ <result title="frequency" count="1">University of Western Australia,</result>
+ <result title="frequency" count="1">Thomas Jefferson University,</result>
+ <result title="frequency" count="1">University of North Carolina</result>
+ <result title="frequency" count="1">National Cancer Center</result>
+ <result title="frequency" count="1">Academy of Medical Sciences,</result>
+ <result title="frequency" count="1">Boehringer Ingelheim,</result>
+ <result title="frequency" count="1">Wuhan University</result>
+ <result title="frequency" count="1">China Postdoctoral Science Foundation</result>
+ <result title="frequency" count="1">Russian Academy of Sciences.</result>
+ <result title="frequency" count="1">Shanghai Jiao Tong University</result>
+ <result title="frequency" count="1">Siemens</result>
+ <result title="frequency" count="1">Society of Thoracic Surgeons</result>
+ <result title="frequency" count="1">Milliman</result>
+ <result title="frequency" count="1">Ministerio de Economía y Competitividad</result>
+ <result title="frequency" count="1">Wayne State University</result>
+ <result title="frequency" count="1">Case Western Reserve University,</result>
+ <result title="frequency" count="1">Clalit Health Services,</result>
+ <result title="frequency" count="1">American Association for Thoracic Surgery</result>
+ <result title="frequency" count="1">Google</result>
+ <result title="frequency" count="1">Astellas Pharma</result>
+ <result title="frequency" count="1">U.S. Department of Health and Human Services.</result>
+ <result title="frequency" count="1">University of Sydney,</result>
+ <result title="frequency" count="1">U.S. Public Health Service</result>
+ <result title="frequency" count="1">Alberta Cancer Foundation.</result>
+ <result title="frequency" count="1">Eli Lilly and Company,</result>
+ <result title="frequency" count="1">American Academy of Dermatology</result>
+ <result title="frequency" count="1">Van Andel Research Institute,</result>
+ <result title="frequency" count="1">Victorian Cancer Agency</result>
+ <result title="frequency" count="1">California Breast Cancer Research Program</result>
+ <result title="frequency" count="1">American Chemical Society</result>
+ <result title="frequency" count="1">American Heart Association,</result>
+ <result title="frequency" count="1">American Society for Radiation Oncology,</result>
+ <result title="frequency" count="1">Shahid Beheshti University of Medical Sciences</result>
+ <result title="frequency" count="1">University of Pennsylvania</result>
+ <result title="frequency" count="1">University of Cambridge,</result>
+ <result title="frequency" count="1">Louisiana State University</result>
+ <result title="frequency" count="1">University of Washington,</result>
+ <result title="frequency" count="1">Scion</result>
+ <result title="frequency" count="1">Peter MacCallum Cancer Centre</result>
+ <result title="frequency" count="1">Hollings Cancer Center, Medical University of South Carolina,</result>
+ <result title="frequency" count="1">Stanford University</result>
+ <result title="frequency" count="1">National Heart and Lung Institute,</result>
+ <result title="frequency" count="1">University of Western Australia</result>
+ <result title="frequency" count="1">Drexel University</result>
+ <result title="frequency" count="1">Hamilton Health Sciences,</result>
+ <result title="frequency" count="1">University of Kentucky,</result>
+ <result title="frequency" count="1">Cancer Care Ontario.</result>
+ <result title="frequency" count="1">U.S. Food and Drug Administration.</result>
+ <result title="frequency" count="1">Society for Surgery of the Alimentary Tract</result>
+ <result title="frequency" count="1">Bombardier</result>
+ <result title="frequency" count="1">Deutsche Herzstiftung</result>
+ <result title="frequency" count="1">American Medical Association</result>
+ <result title="frequency" count="1">Northwestern University</result>
+ <result title="frequency" count="1">Staples</result>
+ <result title="frequency" count="1">Florida Department of Health</result>
+ <result title="frequency" count="1">Brown University,</result>
+ <result title="frequency" count="1">Boston Medical Center,</result>
+ <result title="frequency" count="1">University of Utah,</result>
+ <result title="frequency" count="1">McGill University,</result>
+ <result title="frequency" count="1">Osaka University</result>
+ <result title="frequency" count="1">Georgetown University</result>
+ <result title="frequency" count="1">University of Michigan,</result>
+ <result title="frequency" count="1">Irish Cancer Society,</result>
+ <result title="frequency" count="1">Queensland University of Technology</result>
+ <result title="frequency" count="1">University of Iowa</result>
+ <result title="frequency" count="1">King's Health Partners</result>
+ <result title="frequency" count="1">American Geriatrics Society</result>
+ <result title="frequency" count="1">European Society for Medical Oncology.</result>
+ <result title="frequency" count="1">Flinders University</result>
+ <result title="frequency" count="1">National Institute of General Medical Sciences</result>
+ <result title="frequency" count="1">Università Cattolica del Sacro Cuore,</result>
+ <result title="frequency" count="1">Company of Biologists</result>
+ <result title="frequency" count="1">Johns Hopkins University,</result>
+ <result title="frequency" count="1">Science Foundation Ireland</result>
+ <result title="frequency" count="1">U.S. Department of Veterans Affairs</result>
+ <result title="frequency" count="1">Health Research.</result>
+ <result title="frequency" count="1">Vanderbilt University,</result>
+ <result title="frequency" count="1">American Association for Cancer Research.</result>
+ <result title="frequency" count="1">Kyoto University</result>
+ <result title="frequency" count="1">Second Military Medical University,</result>
+ <result title="frequency" count="1">University of Southern California,</result>
+ <result title="frequency" count="1">Commonwealth Foundation</result>
+ <result title="frequency" count="1">European Research Council</result>
+ <result title="frequency" count="1">Ohio State University,</result>
+ <result title="frequency" count="1">Institut national de la santé et de la recherche médicale</result>
+ <result title="frequency" count="1">Conquer Cancer Foundation</result>
+ <result title="frequency" count="1">Ashland</result>
+ <result title="frequency" count="1">Purdue University,</result>
+ <result title="frequency" count="1">Universität Wien,</result>
+ <result title="frequency" count="1">Allard Foundation</result>
+ <result title="frequency" count="1">Society of Surgical Oncology</result>
+ <result title="frequency" count="1">Chinese Academy of Medical Sciences</result>
+ <result title="frequency" count="1">Institució Catalana de Recerca i Estudis Avançats</result>
+ <result title="frequency" count="1">Vanderbilt-Ingram Cancer Center</result>
+ <result title="frequency" count="1">National Science Foundation,</result>
+ <result title="frequency" count="1">Wayne State University.</result>
+ <result title="frequency" count="1">Walter S. and Lucienne Driskill Foundation,</result>
+ <result title="frequency" count="1">Jichi Medical University,</result>
+ <result title="frequency" count="1">Seventh Framework Programme</result>
+ <result title="frequency" count="1">Queensland University of Technology.</result>
+</results>

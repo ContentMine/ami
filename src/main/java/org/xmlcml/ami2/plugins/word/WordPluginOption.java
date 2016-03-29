@@ -17,9 +17,6 @@ public class WordPluginOption extends AMIPluginOption {
 	}
 	
 	public static final String TAG = "word";
-	private static final String SEARCH = "search";
-	private String searchDictionary;
-	private String dictionary;
 
 	public WordPluginOption() {
 		super(TAG);
@@ -34,13 +31,6 @@ public class WordPluginOption extends AMIPluginOption {
 		commandString.append(" --w.words "+optionString);
 		String sw = getOptionFlagString("w.stopwords", " ");
 		commandString.append(sw);
-		searchDictionary = getOptionFlagString("w.search", " ");
-		if (searchDictionary != null && !searchDictionary.equals("")) {
-			commandString.append(searchDictionary);
-			plugin = "search";
-			dictionary = getOption(null);
-			optionString = dictionary;
-		}
 		DefaultArgProcessor.CM_LOG.debug("WORD "+commandString);
 		System.out.print("WS: "+projectDir+"  ");
 		new WordArgProcessor(commandString.toString()).runAndOutput();
@@ -50,39 +40,47 @@ public class WordPluginOption extends AMIPluginOption {
 		return plugin;
 	}
 
-	protected String getOption(String option) {
-		String opt = option;
-		if (searchDictionary != null && !searchDictionary.trim().equals("")) {
-			String[] ss = searchDictionary.split("/");
-			String sss = ss[ss.length-1];
-			sss = sss.split("\\.")[0];
-			opt = sss;
-		}
-		return opt;
-	}
+//	protected String getOption(String option) {
+//		String opt = option;
+////		if (searchDictionary != null && !searchDictionary.trim().equals("")) {
+////			String[] ss = searchDictionary.split("/");
+////			String sss = ss[ss.length-1];
+////			sss = sss.split("\\.")[0];
+////			opt = sss;
+////		}
+//		return opt;
+//	}
 
-	protected String createFilterCommandString(String option) {
-		String cmd = "--project "+projectDir;
-		String xpathFlags = createXpathQualifier();
-		option = (dictionary != null) ? dictionary : option;
-		cmd += " --filter file(**/"+getPlugin(plugin)+"/"+option+"/results.xml)xpath("+resultXPathBase+xpathFlags+") ";
-		cmd += " -o "+createSnippetsFilename(option)+"  ";
-		LOG.debug("runFilterResultsXMLOptions: >>>> "+cmd);
-		return cmd;
-	}
+//	protected String createFilterCommandString(String option) {
+//		String cmd = "--project "+projectDir;
+//		String xpathFlags = createXpathQualifier();
+//		cmd += " --filter file(**/"+getPlugin(plugin)+"/"+option+"/results.xml)xpath("+resultXPathBase+xpathFlags+") ";
+//		cmd += " -o "+createSnippetsFilename(option)+"  ";
+//		LOG.debug("runFilterResultsXMLOptions: >>>> "+cmd);
+//		return cmd;
+//	}
+//
+//	protected String createFilterCommandString(String option) {
+//		String cmd = "--project "+projectDir;
+//		String xpathFlags = createXpathQualifier();
+//		cmd += " --filter file(**/"+getPlugin(plugin)+"/"+getOption(option)+"/results.xml)xpath("+resultXPathBase+xpathFlags+") ";
+//		cmd += " -o "+createSnippetsFilename(option)+"  ";
+//		DefaultArgProcessor.CM_LOG.debug("runFilterResultsXMLOptions: "+cmd);
+//		System.out.print(option);
+//		return cmd;
+//	}
 
-
-	protected void runMatchSummaryAndCount(String option) {
-		if (dictionary == null) {
-			resultXPathAttribute = "@word";
-			super.runMatchSummaryAndCount(option);
-		} else {
-			String cmd = "--project "+projectDir+" -i "+createSnippetsFilename(dictionary)+"  "
-					+ "--xpath //result/"+resultXPathAttribute+" --summaryfile "+createCountFilename(dictionary);
-			DefaultArgProcessor.CM_LOG.debug("runMatchSummaryAndCount: "+cmd);
-			new DefaultArgProcessor(cmd).runAndOutput();
-		}
-	}
+//	protected void runMatchSummaryAndCount(String option) {
+//		if (dictionary == null) {
+//			resultXPathAttribute = "@word";
+//			super.runMatchSummaryAndCount(option);
+//		} else {
+//			String cmd = "--project "+projectDir+" -i "+createSnippetsFilename(dictionary)+"  "
+//					+ "--xpath //result/"+resultXPathAttribute+" --summaryfile "+createCountFilename(dictionary);
+//			DefaultArgProcessor.CM_LOG.debug("runMatchSummaryAndCount: "+cmd);
+//			new DefaultArgProcessor(cmd).runAndOutput();
+//		}
+//	}
 	
 	@Override
 	public CellRenderer getNewCellRenderer() {
@@ -93,13 +91,13 @@ public class WordPluginOption extends AMIPluginOption {
 		return cellRenderer;
 	}
 
-	protected boolean matches(String pluginOptionName) {
-		String pluginOptionTag0 = pluginOptionName.split(":")[0];
-		String pluginOptionTag1 = pluginOptionName.split(":")[1];
-		LOG.trace("TAG "+pluginOptionTag0+" : "+pluginOptionName);
-		boolean ok = SEARCH.equals(pluginOptionTag0) || TAG.equals(pluginOptionTag0);
-		return ok;
-	}
+//	protected boolean matches(String pluginOptionName) {
+//		String pluginOptionTag0 = pluginOptionName.split(":")[0];
+//		String pluginOptionTag1 = pluginOptionName.split(":")[1];
+//		LOG.trace("TAG "+pluginOptionTag0+" : "+pluginOptionName);
+//		boolean ok = SEARCH.equals(pluginOptionTag0) || TAG.equals(pluginOptionTag0);
+//		return ok;
+//	}
 
 
 

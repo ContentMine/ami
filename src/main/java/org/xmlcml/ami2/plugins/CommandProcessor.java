@@ -147,9 +147,9 @@ public class CommandProcessor {
 			File outfile = new File(projectDir, cellType.toString()+"."+CProject.DATA_TABLES_HTML);
 			XMLUtil.debug(html, outfile, 1);
 		}
-		LOG.trace(dataTablesTool.columnHeadingList);
+		LOG.trace(dataTablesTool.cellRendererList);
 		List<HtmlTd> footerList = new ArrayList<HtmlTd>();
-		for (CellRenderer cellRenderer : dataTablesTool.columnHeadingList) {
+		for (CellRenderer cellRenderer : dataTablesTool.cellRendererList) {
 			HtmlTd td = new HtmlTd();
 			td.appendChild(cellRenderer.getHeading());
 			footerList.add(td);

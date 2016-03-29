@@ -2,6 +2,7 @@ package org.xmlcml.ami2.plugins;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,7 @@ import org.xmlcml.ami2.plugins.regex.CompoundRegex;
 import org.xmlcml.ami2.plugins.regex.CompoundRegexList;
 import org.xmlcml.ami2.plugins.regex.RegexComponent;
 import org.xmlcml.ami2.plugins.word.WordCollectionFactory;
+import org.xmlcml.ami2.wordutil.WordSetWrapper;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
@@ -48,10 +50,32 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	private static final String ARG_PROCESSOR = "ArgProcessor";
 	protected static String RESOURCE_NAME_TOP = "/org/xmlcml/ami2";
 	protected static String PLUGIN_RESOURCE = RESOURCE_NAME_TOP+"/plugins";
+	public final static String DICTIONARY_RESOURCE = PLUGIN_RESOURCE+"/dictionary";
 	private static String ARGS_RESOURCE = PLUGIN_RESOURCE+"/"+"args.xml";
 	public static final VersionManager AMI_PLUGIN_VERSION_MANAGER = new VersionManager();
 
 	protected static final String NAME = "name";
+	public final static String ABBREVIATION = "abbreviation";
+	public final static String IGNORE = "ignore";
+	public final static String PRESERVE = "preserve";
+	public final static String CAPITALIZED = "capitalized";
+	public final static String ACRONYM = "acronym";
+	public final static List<String> CASE_TYPES = Arrays.asList(
+	new String[]{
+			IGNORE,
+			ABBREVIATION,
+			PRESERVE
+	});
+	public final static List<String> WORD_TYPES = Arrays.asList(
+	new String[]{
+			ABBREVIATION,
+			ACRONYM,
+			CAPITALIZED
+	});
+	
+
+	
+	
 	private Integer[] contextCount = new Integer[] {98, 98};
 	private List<String> params;
 	
@@ -66,7 +90,10 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	// searching
 	protected List<AMISearcher> searcherList; // req
 	protected DefaultAMIDictionary currentDictionary;
-	
+	private List<String> wordCaseList = new ArrayList<String>();
+	private Boolean stemming;
+	private List<WordSetWrapper> stopwordSetList;
+	public List<String> chosenWordTypes;
 	public AMIArgProcessor() {
 		super();
 		readArgsResourcesIntoOptions();
@@ -107,6 +134,38 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 
 	// ============= METHODS =============
 	
+	/** caseSensitive?
+	 * 
+	 * @param option list of methods (none gives help)
+	 * @param argIterator
+	 */
+	public void parseCase(ArgumentOption option, ArgIterator argIterator) {
+		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
+		wordCaseList = new ArrayList<String>();
+		if (tokens.size() == 0) {
+			wordCaseList.add(PRESERVE);
+		} else {
+			wordCaseList = tokens;
+		}
+		checkWordCaseList();
+	}
+
+	/** use stemming?
+	 * 
+	 * will have to use import org.apache.lucene.analysis.en.PorterStemFilter;
+	 * 
+	 * @param option list of methods (none gives help)
+	 * @param argIterator
+	 */
+	public void parseStem(ArgumentOption option, ArgIterator argIterator) {
+		stemming = argIterator.getBoolean(option);
+	}
+
+	public void parseStopwords(ArgumentOption option, ArgIterator argIterator) {
+		List<String> stopwordLocations = argIterator.createTokenListUpToNextNonDigitMinus(option);
+		addStopwords(stopwordLocations);
+	}
+
 	public void parseContext(ArgumentOption option, ArgIterator argIterator) {
 		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
 		if (tokens.size() == 0) {
@@ -447,6 +506,67 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 
 	public DefaultAMIDictionary getOrCreateCurrentDictionary() {
 		return currentDictionary;
+	}
+
+	private void checkWordCaseList() {
+		if (wordCaseList.size() == 1 && PRESERVE.equals(wordCaseList.get(0))) {
+			// OK
+		} else {
+			for (int i = wordCaseList.size() - 1; i >= 0; i--) {
+				String word = wordCaseList.get(i);
+				if (wordCaseList.contains(PRESERVE) || !CASE_TYPES.contains(word)) {
+					LOG.error("Removed forbidden/unknown word: "+word);
+					wordCaseList.remove(i);
+				}
+			}
+		}
+	}
+
+	private void addStopwords(String stopwordLocation) {
+		ensureStopwordSetList();
+		WordSetWrapper stopwordSet = WordSetWrapper.createStopwordSet(stopwordLocation);
+		if (stopwordSet != null) {
+			stopwordSetList.add(stopwordSet);
+		} else {
+			LOG.warn("Stopword set should not be null");
+		}
+	}
+
+	private void ensureStopwordSetList() {
+		if (stopwordSetList == null) {
+			stopwordSetList = new ArrayList<WordSetWrapper>();
+		}
+	}
+
+	private void addStopwords(List<String> stopwordLocations) {
+		ensureStopwordSetList();
+		for (String stopwordLocation : stopwordLocations) {
+			addStopwords(stopwordLocation);
+		}
+	}
+
+	public boolean getStemming() {
+		return stemming;
+	}
+
+	public List<WordSetWrapper> getStopwordSetList() {
+		ensureStopwordSetList();
+		return stopwordSetList;
+	}
+
+	public List<String> getWordCaseList() {
+		return wordCaseList;
+	}
+
+	public List<String> getChosenWordTypes() {
+		ensureChosenWordTypes();
+		return chosenWordTypes;
+	}
+
+	public void ensureChosenWordTypes() {
+		if (chosenWordTypes == null) {
+			chosenWordTypes = new ArrayList<String>();
+		}
 	}
 
 

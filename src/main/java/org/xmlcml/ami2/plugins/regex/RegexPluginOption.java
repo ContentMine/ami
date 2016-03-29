@@ -48,7 +48,7 @@ public class RegexPluginOption extends AMIPluginOption {
 		commandString.append(" --r.regex "+optionString);
 //		String sw = getOptionFlagString("w.stopwords", " ");
 //		commandString.append(sw);
-//		searchDictionary = getOptionFlagString("w.search", " ");
+//		searchDictionary = getOptionFlagString("sr.search", " ");
 //		if (searchDictionary != null && !searchDictionary.equals("")) {
 //			commandString.append(searchDictionary);
 //			plugin = "search";

@@ -1,0 +1,1417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="6567">cancer</result>
+ <result title="frequency" count="4974">stroke</result>
+ <result title="frequency" count="2175">dementia</result>
+ <result title="frequency" count="1723">malaria</result>
+ <result title="frequency" count="1410">asthma</result>
+ <result title="frequency" count="1330">obesity</result>
+ <result title="frequency" count="920">schizophrenia</result>
+ <result title="frequency" count="874">breast cancer</result>
+ <result title="frequency" count="780">osteoarthritis</result>
+ <result title="frequency" count="633">heart disease</result>
+ <result title="frequency" count="611">cardiovascular disease</result>
+ <result title="frequency" count="589">arthritis</result>
+ <result title="frequency" count="581">tuberculosis</result>
+ <result title="frequency" count="554">diabetes mellitus</result>
+ <result title="frequency" count="501">colorectal cancer</result>
+ <result title="frequency" count="478">hernia</result>
+ <result title="frequency" count="475">prostate cancer</result>
+ <result title="frequency" count="470">pneumonia</result>
+ <result title="frequency" count="346">rheumatoid arthritis</result>
+ <result title="frequency" count="335">chronic obstructive pulmonary disease</result>
+ <result title="frequency" count="334">acute myocardial infarction</result>
+ <result title="frequency" count="322">epilepsy</result>
+ <result title="frequency" count="315">glaucoma</result>
+ <result title="frequency" count="313">migraine</result>
+ <result title="frequency" count="313">influenza</result>
+ <result title="frequency" count="307">multiple sclerosis</result>
+ <result title="frequency" count="303">atrial fibrillation</result>
+ <result title="frequency" count="301">aids</result>
+ <result title="frequency" count="292">anemia</result>
+ <result title="frequency" count="279">fibromyalgia</result>
+ <result title="frequency" count="276">hepatitis</result>
+ <result title="frequency" count="260">osteoporosis</result>
+ <result title="frequency" count="236">bipolar disorder</result>
+ <result title="frequency" count="233">anxiety disorder</result>
+ <result title="frequency" count="232">allergy</result>
+ <result title="frequency" count="228">aphasia</result>
+ <result title="frequency" count="220">lung cancer</result>
+ <result title="frequency" count="219">constipation</result>
+ <result title="frequency" count="208">rhinitis</result>
+ <result title="frequency" count="206">personality disorder</result>
+ <result title="frequency" count="206">bronchiectasis</result>
+ <result title="frequency" count="203">pancreatitis</result>
+ <result title="frequency" count="200">sleep apnea</result>
+ <result title="frequency" count="198">major depressive disorder</result>
+ <result title="frequency" count="197">hypersensitivity</result>
+ <result title="frequency" count="192">eating disorder</result>
+ <result title="frequency" count="188">suppression</result>
+ <result title="frequency" count="182">nephropathy</result>
+ <result title="frequency" count="178">chronic kidney disease</result>
+ <result title="frequency" count="178">diarrhea</result>
+ <result title="frequency" count="175">metabolic syndrome</result>
+ <result title="frequency" count="174">atherosclerosis</result>
+ <result title="frequency" count="153">substance abuse</result>
+ <result title="frequency" count="151">heart disease,</result>
+ <result title="frequency" count="149">allergic rhinitis</result>
+ <result title="frequency" count="149">panic disorder</result>
+ <result title="frequency" count="144">cardiomyopathy</result>
+ <result title="frequency" count="143">neuropathy</result>
+ <result title="frequency" count="140">psoriasis</result>
+ <result title="frequency" count="136">cardiac arrest</result>
+ <result title="frequency" count="131">cirrhosis</result>
+ <result title="frequency" count="131">meningitis</result>
+ <result title="frequency" count="129">appendicitis</result>
+ <result title="frequency" count="122">autism</result>
+ <result title="frequency" count="120">liver disease</result>
+ <result title="frequency" count="115">congestive heart failure</result>
+ <result title="frequency" count="114">colon cancer</result>
+ <result title="frequency" count="113">diabetes mellitus,</result>
+ <result title="frequency" count="112">irritable bowel syndrome</result>
+ <result title="frequency" count="110">chronic fatigue syndrome</result>
+ <result title="frequency" count="109">aortic aneurysm</result>
+ <result title="frequency" count="109">cellulitis</result>
+ <result title="frequency" count="107">colitis</result>
+ <result title="frequency" count="106">hypothyroidism</result>
+ <result title="frequency" count="101">leishmaniasis</result>
+ <result title="frequency" count="99">social phobia</result>
+ <result title="frequency" count="97">respiratory failure</result>
+ <result title="frequency" count="97">encephalopathy</result>
+ <result title="frequency" count="97">pressure ulcer</result>
+ <result title="frequency" count="97">cardiovascular disease,</result>
+ <result title="frequency" count="95">otitis media</result>
+ <result title="frequency" count="91">proteinuria</result>
+ <result title="frequency" count="90">borderline personality disorder</result>
+ <result title="frequency" count="89">cataract</result>
+ <result title="frequency" count="88">pneumothorax</result>
+ <result title="frequency" count="87">acute respiratory distress syndrome</result>
+ <result title="frequency" count="87">dental caries</result>
+ <result title="frequency" count="87">periodontitis</result>
+ <result title="frequency" count="86">lung disease</result>
+ <result title="frequency" count="85">unstable angina</result>
+ <result title="frequency" count="84">hepatocellular carcinoma</result>
+ <result title="frequency" count="84">infectious disease</result>
+ <result title="frequency" count="83">ulcerative colitis</result>
+ <result title="frequency" count="82">anorexia nervosa</result>
+ <result title="frequency" count="80">post-traumatic stress disorder</result>
+ <result title="frequency" count="79">uveitis</result>
+ <result title="frequency" count="78">cervical cancer</result>
+ <result title="frequency" count="78">head and neck cancer</result>
+ <result title="frequency" count="75">skin cancer</result>
+ <result title="frequency" count="75">dermatitis</result>
+ <result title="frequency" count="73">ovarian cancer</result>
+ <result title="frequency" count="73">obstructive sleep apnea</result>
+ <result title="frequency" count="73">dyspepsia</result>
+ <result title="frequency" count="72">pancreatic cancer</result>
+ <result title="frequency" count="72">pulmonary hypertension</result>
+ <result title="frequency" count="72">macular degeneration</result>
+ <result title="frequency" count="71">abdominal aortic aneurysm</result>
+ <result title="frequency" count="71">mental disorder</result>
+ <result title="frequency" count="70">pulmonary embolism</result>
+ <result title="frequency" count="70">radiculopathy</result>
+ <result title="frequency" count="70">pulmonary tuberculosis</result>
+ <result title="frequency" count="69">apraxia</result>
+ <result title="frequency" count="69">cardiovascular disease.</result>
+ <result title="frequency" count="69">inguinal hernia</result>
+ <result title="frequency" count="68">rheumatoid arthritis,</result>
+ <result title="frequency" count="68">cholecystitis</result>
+ <result title="frequency" count="67">heart disease.</result>
+ <result title="frequency" count="65">esophageal cancer</result>
+ <result title="frequency" count="65">prediabetes</result>
+ <result title="frequency" count="64">generalized anxiety disorder</result>
+ <result title="frequency" count="64">cystic fibrosis</result>
+ <result title="frequency" count="64">adenoma</result>
+ <result title="frequency" count="63">agoraphobia</result>
+ <result title="frequency" count="61">peripheral neuropathy</result>
+ <result title="frequency" count="61">status epilepticus</result>
+ <result title="frequency" count="60">cerebral infarction</result>
+ <result title="frequency" count="59">ileus</result>
+ <result title="frequency" count="59">thrombocytopenia</result>
+ <result title="frequency" count="57">substance abuse,</result>
+ <result title="frequency" count="57">bulimia nervosa</result>
+ <result title="frequency" count="56">gestational diabetes</result>
+ <result title="frequency" count="55">breast cancer,</result>
+ <result title="frequency" count="55">peritonitis</result>
+ <result title="frequency" count="54">alcohol abuse</result>
+ <result title="frequency" count="54">postpartum depression</result>
+ <result title="frequency" count="54">retinopathy</result>
+ <result title="frequency" count="53">breast cancer.</result>
+ <result title="frequency" count="53">atopic dermatitis</result>
+ <result title="frequency" count="53">common cold</result>
+ <result title="frequency" count="52">macular hole</result>
+ <result title="frequency" count="52">thyroid cancer</result>
+ <result title="frequency" count="51">nicotine dependence</result>
+ <result title="frequency" count="51">prostate cancer.</result>
+ <result title="frequency" count="51">bacterial vaginosis</result>
+ <result title="frequency" count="50">trigeminal neuralgia</result>
+ <result title="frequency" count="50">hyperglycemia</result>
+ <result title="frequency" count="50">synovitis</result>
+ <result title="frequency" count="50">attention deficit hyperactivity disorder</result>
+ <result title="frequency" count="49">diabetes mellitus.</result>
+ <result title="frequency" count="49">hypoglycemia</result>
+ <result title="frequency" count="49">bipolar disorder,</result>
+ <result title="frequency" count="48">infertility</result>
+ <result title="frequency" count="48">acute pancreatitis</result>
+ <result title="frequency" count="48">pharyngitis</result>
+ <result title="frequency" count="47">alcohol dependence</result>
+ <result title="frequency" count="46">herpes simplex</result>
+ <result title="frequency" count="46">vitiligo</result>
+ <result title="frequency" count="45">hyperparathyroidism</result>
+ <result title="frequency" count="44">shortness</result>
+ <result title="frequency" count="43">amblyopia</result>
+ <result title="frequency" count="42">cutaneous leishmaniasis</result>
+ <result title="frequency" count="42">candidiasis</result>
+ <result title="frequency" count="42">bladder cancer</result>
+ <result title="frequency" count="42">prostate cancer,</result>
+ <result title="frequency" count="41">gout</result>
+ <result title="frequency" count="40">hypoparathyroidism</result>
+ <result title="frequency" count="40">heart disease;</result>
+ <result title="frequency" count="40">peptic ulcer</result>
+ <result title="frequency" count="39">urinary tract infection</result>
+ <result title="frequency" count="39">gastroenteritis</result>
+ <result title="frequency" count="38">congestive heart failure,</result>
+ <result title="frequency" count="37">gastritis</result>
+ <result title="frequency" count="37">atrial fibrillation,</result>
+ <result title="frequency" count="37">rectal prolapse</result>
+ <result title="frequency" count="37">respiratory disease</result>
+ <result title="frequency" count="37">endocarditis</result>
+ <result title="frequency" count="37">ocular hypertension</result>
+ <result title="frequency" count="35">pulmonary embolism,</result>
+ <result title="frequency" count="35">bruxism</result>
+ <result title="frequency" count="35">leukemia</result>
+ <result title="frequency" count="35">pulmonary edema</result>
+ <result title="frequency" count="35">mood disorder</result>
+ <result title="frequency" count="35">metabolic acidosis</result>
+ <result title="frequency" count="34">liver disease,</result>
+ <result title="frequency" count="34">periodontal disease</result>
+ <result title="frequency" count="34">polycystic ovary syndrome</result>
+ <result title="frequency" count="34">diverticulitis</result>
+ <result title="frequency" count="34">thrombophilia</result>
+ <result title="frequency" count="33">acute myocardial infarction,</result>
+ <result title="frequency" count="33">cerebral palsy</result>
+ <result title="frequency" count="33">anxiety disorder,</result>
+ <result title="frequency" count="33">bronchiolitis</result>
+ <result title="frequency" count="33">spondylitis</result>
+ <result title="frequency" count="32">congenital heart disease</result>
+ <result title="frequency" count="32">lymphoma</result>
+ <result title="frequency" count="32">metabolic syndrome,</result>
+ <result title="frequency" count="32">learning disability</result>
+ <result title="frequency" count="31">spondylosis</result>
+ <result title="frequency" count="31">spondylolisthesis</result>
+ <result title="frequency" count="31">neutropenia</result>
+ <result title="frequency" count="30">atrial fibrillation.</result>
+ <result title="frequency" count="30">diabetes mellitus;</result>
+ <result title="frequency" count="30">patent foramen ovale</result>
+ <result title="frequency" count="30">obsessive-compulsive disorder</result>
+ <result title="frequency" count="30">essential hypertension</result>
+ <result title="frequency" count="30">varicose veins</result>
+ <result title="frequency" count="30">anxiety disorder.</result>
+ <result title="frequency" count="30">nephrotic syndrome</result>
+ <result title="frequency" count="29">vascular dementia</result>
+ <result title="frequency" count="29">visceral leishmaniasis</result>
+ <result title="frequency" count="29">hyperuricemia</result>
+ <result title="frequency" count="29">personality disorder.</result>
+ <result title="frequency" count="29">mesothelioma</result>
+ <result title="frequency" count="28">hydrocephalus</result>
+ <result title="frequency" count="28">necrotizing enterocolitis</result>
+ <result title="frequency" count="28">metabolic syndrome.</result>
+ <result title="frequency" count="28">panic disorder,</result>
+ <result title="frequency" count="28">thyroiditis</result>
+ <result title="frequency" count="27">hepatic encephalopathy</result>
+ <result title="frequency" count="27">major depressive disorder.</result>
+ <result title="frequency" count="27">strabismus</result>
+ <result title="frequency" count="27">diabetic retinopathy</result>
+ <result title="frequency" count="27">lymphedema</result>
+ <result title="frequency" count="27">multiple sclerosis.</result>
+ <result title="frequency" count="27">multiple sclerosis,</result>
+ <result title="frequency" count="26">ankylosing spondylitis</result>
+ <result title="frequency" count="26">vasculitis</result>
+ <result title="frequency" count="26">chronic obstructive pulmonary disease;</result>
+ <result title="frequency" count="26">lupus erythematosus</result>
+ <result title="frequency" count="26">encephalomyelitis</result>
+ <result title="frequency" count="26">hyperthyroidism</result>
+ <result title="frequency" count="26">eye disease</result>
+ <result title="frequency" count="25">alcoholic hepatitis</result>
+ <result title="frequency" count="25">colorectal cancer.</result>
+ <result title="frequency" count="25">cholangiocarcinoma</result>
+ <result title="frequency" count="25">cardiac arrest,</result>
+ <result title="frequency" count="24">schizoaffective disorder,</result>
+ <result title="frequency" count="24">acute myocardial infarction.</result>
+ <result title="frequency" count="24">systemic lupus erythematosus</result>
+ <result title="frequency" count="24">dyslipidemia</result>
+ <result title="frequency" count="24">myositis</result>
+ <result title="frequency" count="24">unstable angina,</result>
+ <result title="frequency" count="24">multiple myeloma</result>
+ <result title="frequency" count="24">erectile dysfunction</result>
+ <result title="frequency" count="24">schizoaffective disorder</result>
+ <result title="frequency" count="23">rheumatoid arthritis.</result>
+ <result title="frequency" count="23">gingivitis</result>
+ <result title="frequency" count="23">retinal detachment</result>
+ <result title="frequency" count="23">bowel obstruction</result>
+ <result title="frequency" count="23">bipolar disorder.</result>
+ <result title="frequency" count="23">refractive error</result>
+ <result title="frequency" count="23">rash</result>
+ <result title="frequency" count="23">intermittent claudication</result>
+ <result title="frequency" count="22">oropharyngeal cancer</result>
+ <result title="frequency" count="22">diabetic neuropathy</result>
+ <result title="frequency" count="22">lung disease,</result>
+ <result title="frequency" count="22">respiratory failure,</result>
+ <result title="frequency" count="22">meningioma</result>
+ <result title="frequency" count="22">social phobia,</result>
+ <result title="frequency" count="22">cholangitis</result>
+ <result title="frequency" count="21">optic neuritis</result>
+ <result title="frequency" count="21">tetanus</result>
+ <result title="frequency" count="21">kidney failure</result>
+ <result title="frequency" count="21">oral cancer</result>
+ <result title="frequency" count="21">chronic obstructive pulmonary disease,</result>
+ <result title="frequency" count="21">carcinoma in situ</result>
+ <result title="frequency" count="21">autoimmune thyroiditis</result>
+ <result title="frequency" count="21">personality disorder,</result>
+ <result title="frequency" count="21">typhoid fever</result>
+ <result title="frequency" count="21">sleep apnea.</result>
+ <result title="frequency" count="21">chronic kidney disease,</result>
+ <result title="frequency" count="21">presbyopia</result>
+ <result title="frequency" count="21">substance dependence</result>
+ <result title="frequency" count="20">carpal tunnel syndrome</result>
+ <result title="frequency" count="20">conduct disorder</result>
+ <result title="frequency" count="20">peripheral artery disease</result>
+ <result title="frequency" count="20">tonsillitis</result>
+ <result title="frequency" count="20">secondary hyperparathyroidism</result>
+ <result title="frequency" count="20">juvenile idiopathic arthritis</result>
+ <result title="frequency" count="20">iron deficiency anemia</result>
+ <result title="frequency" count="20">lung cancer,</result>
+ <result title="frequency" count="19">uveal melanoma</result>
+ <result title="frequency" count="19">valvular heart disease</result>
+ <result title="frequency" count="19">major depressive disorder,</result>
+ <result title="frequency" count="19">colorectal cancer,</result>
+ <result title="frequency" count="19">amnesia</result>
+ <result title="frequency" count="19">cardiac arrest.</result>
+ <result title="frequency" count="19">osteomyelitis</result>
+ <result title="frequency" count="19">cardiovascular disease;</result>
+ <result title="frequency" count="18">anorexia nervosa,</result>
+ <result title="frequency" count="18">neurodegeneration</result>
+ <result title="frequency" count="18">nephritis</result>
+ <result title="frequency" count="18">sexual dysfunction</result>
+ <result title="frequency" count="18">acne vulgaris</result>
+ <result title="frequency" count="18">sleep apnea,</result>
+ <result title="frequency" count="17">specific phobia</result>
+ <result title="frequency" count="17">sick sinus syndrome</result>
+ <result title="frequency" count="17">cerebral malaria</result>
+ <result title="frequency" count="17">myopathy</result>
+ <result title="frequency" count="17">systolic heart failure</result>
+ <result title="frequency" count="17">chronic kidney disease.</result>
+ <result title="frequency" count="17">bowel obstruction,</result>
+ <result title="frequency" count="17">tetraplegia</result>
+ <result title="frequency" count="17">gallstone</result>
+ <result title="frequency" count="16">seasonal affective disorder</result>
+ <result title="frequency" count="16">dry eye syndrome</result>
+ <result title="frequency" count="16">myotonic dystrophy</result>
+ <result title="frequency" count="16">chronic obstructive pulmonary disease.</result>
+ <result title="frequency" count="16">allergic rhinitis,</result>
+ <result title="frequency" count="16">benign paroxysmal positional vertigo</result>
+ <result title="frequency" count="16">polycystic liver disease</result>
+ <result title="frequency" count="16">rheumatic fever</result>
+ <result title="frequency" count="16">urinary tract infection,</result>
+ <result title="frequency" count="16">spinal stenosis</result>
+ <result title="frequency" count="16">eating disorder,</result>
+ <result title="frequency" count="16">lung cancer.</result>
+ <result title="frequency" count="16">fasciitis</result>
+ <result title="frequency" count="15">encephalitis</result>
+ <result title="frequency" count="15">ankylosing spondylitis,</result>
+ <result title="frequency" count="15">dysthymia</result>
+ <result title="frequency" count="15">lichen planus</result>
+ <result title="frequency" count="15">malabsorption</result>
+ <result title="frequency" count="15">yellow fever</result>
+ <result title="frequency" count="15">autoimmune disease</result>
+ <result title="frequency" count="14">cholestasis</result>
+ <result title="frequency" count="14">congestive heart failure.</result>
+ <result title="frequency" count="14">alcohol dependence.</result>
+ <result title="frequency" count="14">infectious disease,</result>
+ <result title="frequency" count="14">post-traumatic stress disorder,</result>
+ <result title="frequency" count="14">pulmonary edema,</result>
+ <result title="frequency" count="14">alcohol abuse,</result>
+ <result title="frequency" count="14">urethral stricture</result>
+ <result title="frequency" count="14">glomerulonephritis</result>
+ <result title="frequency" count="14">exotropia</result>
+ <result title="frequency" count="13">thyroid disease</result>
+ <result title="frequency" count="13">allergic rhinitis.</result>
+ <result title="frequency" count="13">neurological disorder</result>
+ <result title="frequency" count="13">pyelonephritis</result>
+ <result title="frequency" count="13">bone disease</result>
+ <result title="frequency" count="13">lupus erythematosus,</result>
+ <result title="frequency" count="13">kidney failure,</result>
+ <result title="frequency" count="13">stomatitis</result>
+ <result title="frequency" count="13">mental disorder,</result>
+ <result title="frequency" count="13">nicotine dependence,</result>
+ <result title="frequency" count="13">esophageal cancer.</result>
+ <result title="frequency" count="13">colon cancer,</result>
+ <result title="frequency" count="13">heart attack</result>
+ <result title="frequency" count="13">borderline personality disorder.</result>
+ <result title="frequency" count="13">complex regional pain syndrome</result>
+ <result title="frequency" count="13">intrahepatic cholangiocarcinoma</result>
+ <result title="frequency" count="13">bullous pemphigoid</result>
+ <result title="frequency" count="12">congenital hypothyroidism</result>
+ <result title="frequency" count="12">diabetic neuropathy,</result>
+ <result title="frequency" count="12">herpes zoster</result>
+ <result title="frequency" count="12">obsessive-compulsive disorder,</result>
+ <result title="frequency" count="12">pulmonary embolism;</result>
+ <result title="frequency" count="12">learning disability,</result>
+ <result title="frequency" count="12">anorexia nervosa.</result>
+ <result title="frequency" count="12">allergic asthma</result>
+ <result title="frequency" count="12">arteriosclerosis</result>
+ <result title="frequency" count="12">gestational diabetes,</result>
+ <result title="frequency" count="12">lung disease;</result>
+ <result title="frequency" count="12">pelvic inflammatory disease</result>
+ <result title="frequency" count="12">pertussis</result>
+ <result title="frequency" count="12">arteriovenous malformation</result>
+ <result title="frequency" count="12">peanut allergy</result>
+ <result title="frequency" count="12">heart attack,</result>
+ <result title="frequency" count="12">myeloid leukemia</result>
+ <result title="frequency" count="12">eating disorder.</result>
+ <result title="frequency" count="12">cannabis abuse</result>
+ <result title="frequency" count="12">acute respiratory distress syndrome,</result>
+ <result title="frequency" count="12">respiratory disease,</result>
+ <result title="frequency" count="12">juvenile dermatomyositis</result>
+ <result title="frequency" count="12">polyneuropathy</result>
+ <result title="frequency" count="11">atrial fibrillation;</result>
+ <result title="frequency" count="11">pancreatic cancer.</result>
+ <result title="frequency" count="11">schistosomiasis</result>
+ <result title="frequency" count="11">systemic lupus erythematosus,</result>
+ <result title="frequency" count="11">bacterial meningitis</result>
+ <result title="frequency" count="11">substance abuse;</result>
+ <result title="frequency" count="11">acute myeloid leukemia</result>
+ <result title="frequency" count="11">alcohol dependence,</result>
+ <result title="frequency" count="11">postpartum depression,</result>
+ <result title="frequency" count="11">endometrial cancer</result>
+ <result title="frequency" count="11">pulmonary hypertension,</result>
+ <result title="frequency" count="11">respiratory failure.</result>
+ <result title="frequency" count="11">renal cell carcinoma</result>
+ <result title="frequency" count="11">plantar fasciitis</result>
+ <result title="frequency" count="11">anuria</result>
+ <result title="frequency" count="11">measles</result>
+ <result title="frequency" count="11">rickets</result>
+ <result title="frequency" count="11">pyoderma</result>
+ <result title="frequency" count="10">common cold,</result>
+ <result title="frequency" count="10">rheumatoid arthritis;</result>
+ <result title="frequency" count="10">ovarian cancer,</result>
+ <result title="frequency" count="10">chronic venous insufficiency</result>
+ <result title="frequency" count="10">sickle cell anemia</result>
+ <result title="frequency" count="10">endometritis</result>
+ <result title="frequency" count="10">psoriatic arthritis,</result>
+ <result title="frequency" count="10">skin cancer,</result>
+ <result title="frequency" count="10">ulcerative colitis.</result>
+ <result title="frequency" count="10">ulcerative colitis,</result>
+ <result title="frequency" count="10">mental disorder.</result>
+ <result title="frequency" count="10">pyuria</result>
+ <result title="frequency" count="10">bipolar disorder;</result>
+ <result title="frequency" count="10">neonatal jaundice</result>
+ <result title="frequency" count="10">paradoxical embolism</result>
+ <result title="frequency" count="10">spinal stenosis,</result>
+ <result title="frequency" count="10">leukopenia</result>
+ <result title="frequency" count="10">substance dependence,</result>
+ <result title="frequency" count="10">degenerative disc disease</result>
+ <result title="frequency" count="10">fatty liver disease</result>
+ <result title="frequency" count="10">aspiration pneumonia</result>
+ <result title="frequency" count="10">urticaria</result>
+ <result title="frequency" count="10">metabolic acidosis,</result>
+ <result title="frequency" count="9">irritable bowel syndrome,</result>
+ <result title="frequency" count="9">basilar artery occlusion</result>
+ <result title="frequency" count="9">enteropathy</result>
+ <result title="frequency" count="9">cerebral palsy,</result>
+ <result title="frequency" count="9">prostatitis</result>
+ <result title="frequency" count="9">breast cancer;</result>
+ <result title="frequency" count="9">conjunctivitis</result>
+ <result title="frequency" count="9">compartment syndrome</result>
+ <result title="frequency" count="9">pulmonary tuberculosis,</result>
+ <result title="frequency" count="9">food allergy</result>
+ <result title="frequency" count="9">gastrointestinal disease</result>
+ <result title="frequency" count="9">glucose intolerance</result>
+ <result title="frequency" count="9">arthropathy</result>
+ <result title="frequency" count="9">dental caries,</result>
+ <result title="frequency" count="9">urinary tract infection.</result>
+ <result title="frequency" count="9">neoplasm</result>
+ <result title="frequency" count="9">cerebral infarction,</result>
+ <result title="frequency" count="9">ectopic pregnancy</result>
+ <result title="frequency" count="9">erysipelas</result>
+ <result title="frequency" count="9">borderline personality disorder,</result>
+ <result title="frequency" count="9">movement disorder</result>
+ <result title="frequency" count="9">peripheral neuropathy,</result>
+ <result title="frequency" count="9">cleft palate</result>
+ <result title="frequency" count="8">umbilical hernia</result>
+ <result title="frequency" count="8">liver disease.</result>
+ <result title="frequency" count="8">pancreatic cancer,</result>
+ <result title="frequency" count="8">pulmonary embolism.</result>
+ <result title="frequency" count="8">cystic fibrosis.</result>
+ <result title="frequency" count="8">otitis media,</result>
+ <result title="frequency" count="8">aphthous stomatitis</result>
+ <result title="frequency" count="8">substance abuse.</result>
+ <result title="frequency" count="8">gynecomastia</result>
+ <result title="frequency" count="8">liver cancer</result>
+ <result title="frequency" count="8">ear disease</result>
+ <result title="frequency" count="8">rectal prolapse.</result>
+ <result title="frequency" count="8">disseminated intravascular coagulation</result>
+ <result title="frequency" count="8">lactic acidosis</result>
+ <result title="frequency" count="8">colon cancer.</result>
+ <result title="frequency" count="8">vaginal discharge</result>
+ <result title="frequency" count="8">portal hypertension</result>
+ <result title="frequency" count="8">croup</result>
+ <result title="frequency" count="8">chronic kidney disease;</result>
+ <result title="frequency" count="8">frontotemporal dementia</result>
+ <result title="frequency" count="8">amyotrophic lateral sclerosis</result>
+ <result title="frequency" count="8">multiple myeloma.</result>
+ <result title="frequency" count="8">anisometropia</result>
+ <result title="frequency" count="8">hyperinsulinemia</result>
+ <result title="frequency" count="7">irritable bowel syndrome.</result>
+ <result title="frequency" count="7">antisocial personality disorder</result>
+ <result title="frequency" count="7">syphilis</result>
+ <result title="frequency" count="7">ovarian cancer.</result>
+ <result title="frequency" count="7">gastroparesis</result>
+ <result title="frequency" count="7">anovulation</result>
+ <result title="frequency" count="7">diastolic heart failure</result>
+ <result title="frequency" count="7">bulimia nervosa,</result>
+ <result title="frequency" count="7">goiter</result>
+ <result title="frequency" count="7">muscular dystrophy</result>
+ <result title="frequency" count="7">cutaneous leishmaniasis.</result>
+ <result title="frequency" count="7">allergic rhinitis;</result>
+ <result title="frequency" count="7">atrioventricular block</result>
+ <result title="frequency" count="7">necrotizing enterocolitis,</result>
+ <result title="frequency" count="7">pulmonary fibrosis</result>
+ <result title="frequency" count="7">secondary hypertension,</result>
+ <result title="frequency" count="7">acute pancreatitis,</result>
+ <result title="frequency" count="7">bacterial vaginosis,</result>
+ <result title="frequency" count="7">bacterial vaginosis.</result>
+ <result title="frequency" count="7">aspergillosis</result>
+ <result title="frequency" count="7">social phobia.</result>
+ <result title="frequency" count="7">scoliosis</result>
+ <result title="frequency" count="7">patent ductus arteriosus</result>
+ <result title="frequency" count="7">infective endocarditis</result>
+ <result title="frequency" count="7">varicose veins,</result>
+ <result title="frequency" count="7">personality disorder;</result>
+ <result title="frequency" count="7">adjustment disorder</result>
+ <result title="frequency" count="7">multiple sclerosis;</result>
+ <result title="frequency" count="7">mood disorder,</result>
+ <result title="frequency" count="7">diabetic retinopathy,</result>
+ <result title="frequency" count="7">pressure ulcer,</result>
+ <result title="frequency" count="7">osteonecrosis</result>
+ <result title="frequency" count="7">lung cancer;</result>
+ <result title="frequency" count="6">compartment syndrome,</result>
+ <result title="frequency" count="6">primary open angle glaucoma</result>
+ <result title="frequency" count="6">sleep disorder</result>
+ <result title="frequency" count="6">cerebral palsy.</result>
+ <result title="frequency" count="6">acute myocardial infarction;</result>
+ <result title="frequency" count="6">macular degeneration,</result>
+ <result title="frequency" count="6">atopic dermatitis,</result>
+ <result title="frequency" count="6">gastrointestinal cancer</result>
+ <result title="frequency" count="6">hypokalemia</result>
+ <result title="frequency" count="6">alcohol dependence;</result>
+ <result title="frequency" count="6">placental abruption,</result>
+ <result title="frequency" count="6">congenital heart disease,</result>
+ <result title="frequency" count="6">trigeminal neuralgia.</result>
+ <result title="frequency" count="6">seasonal affective disorder,</result>
+ <result title="frequency" count="6">pulmonary edema.</result>
+ <result title="frequency" count="6">alcohol abuse.</result>
+ <result title="frequency" count="6">thyroid disease,</result>
+ <result title="frequency" count="6">nicotine dependence;</result>
+ <result title="frequency" count="6">astigmatism</result>
+ <result title="frequency" count="6">dental caries.</result>
+ <result title="frequency" count="6">cleft lip</result>
+ <result title="frequency" count="6">generalized anxiety disorder,</result>
+ <result title="frequency" count="6">urinary tract infection;</result>
+ <result title="frequency" count="6">pervasive developmental disorder</result>
+ <result title="frequency" count="6">hepatocellular carcinoma;</result>
+ <result title="frequency" count="6">cervical cancer.</result>
+ <result title="frequency" count="6">eclampsia</result>
+ <result title="frequency" count="6">myocarditis</result>
+ <result title="frequency" count="6">macular hole,</result>
+ <result title="frequency" count="6">bacterial pneumonia</result>
+ <result title="frequency" count="6">viral hepatitis</result>
+ <result title="frequency" count="6">acute respiratory distress syndrome;</result>
+ <result title="frequency" count="6">acute respiratory distress syndrome.</result>
+ <result title="frequency" count="6">peripheral neuropathy.</result>
+ <result title="frequency" count="6">cauda equina syndrome,</result>
+ <result title="frequency" count="6">pain disorder</result>
+ <result title="frequency" count="5">osteomalacia</result>
+ <result title="frequency" count="5">common cold.</result>
+ <result title="frequency" count="5">phlebitis</result>
+ <result title="frequency" count="5">liver disease;</result>
+ <result title="frequency" count="5">secondary hypertension</result>
+ <result title="frequency" count="5">sinusitis</result>
+ <result title="frequency" count="5">rheumatoid arthritis?</result>
+ <result title="frequency" count="5">aspiration pneumonia,</result>
+ <result title="frequency" count="5">pulmonary tuberculosis.</result>
+ <result title="frequency" count="5">erythema multiforme</result>
+ <result title="frequency" count="5">diabetes mellitus?</result>
+ <result title="frequency" count="5">metabolic disorder</result>
+ <result title="frequency" count="5">oral candidiasis</result>
+ <result title="frequency" count="5">temporal lobe epilepsy</result>
+ <result title="frequency" count="5">psoriatic arthritis</result>
+ <result title="frequency" count="5">infectious disease.</result>
+ <result title="frequency" count="5">bladder cancer,</result>
+ <result title="frequency" count="5">kwashiorkor</result>
+ <result title="frequency" count="5">cystitis</result>
+ <result title="frequency" count="5">major depressive disorder;</result>
+ <result title="frequency" count="5">secondary hypertension;</result>
+ <result title="frequency" count="5">carpal tunnel syndrome,</result>
+ <result title="frequency" count="5">peripheral artery disease,</result>
+ <result title="frequency" count="5">post-traumatic stress disorder.</result>
+ <result title="frequency" count="5">yellow fever.</result>
+ <result title="frequency" count="5">sensorineural hearing loss</result>
+ <result title="frequency" count="5">trigeminal neuralgia,</result>
+ <result title="frequency" count="5">male infertility</result>
+ <result title="frequency" count="5">pulmonary hypertension.</result>
+ <result title="frequency" count="5">carcinoma in situ.</result>
+ <result title="frequency" count="5">mental disorder;</result>
+ <result title="frequency" count="5">schizophreniform disorder.</result>
+ <result title="frequency" count="5">toxoplasmosis</result>
+ <result title="frequency" count="5">status epilepticus.</result>
+ <result title="frequency" count="5">esophageal cancer,</result>
+ <result title="frequency" count="5">conduct disorder,</result>
+ <result title="frequency" count="5">atrial septal defect</result>
+ <result title="frequency" count="5">periodontal disease.</result>
+ <result title="frequency" count="5">periodontal disease,</result>
+ <result title="frequency" count="5">complex regional pain syndrome.</result>
+ <result title="frequency" count="5">borderline personality disorder?</result>
+ <result title="frequency" count="5">neurological disorder,</result>
+ <result title="frequency" count="5">angioedema</result>
+ <result title="frequency" count="5">malignant pleural mesothelioma</result>
+ <result title="frequency" count="5">personality disorder?</result>
+ <result title="frequency" count="5">paraplegia</result>
+ <result title="frequency" count="5">lactose intolerance</result>
+ <result title="frequency" count="5">hepatocellular carcinoma.</result>
+ <result title="frequency" count="5">anxiety disorder;</result>
+ <result title="frequency" count="5">mouth disease</result>
+ <result title="frequency" count="5">interstitial lung disease</result>
+ <result title="frequency" count="5">panic disorder.</result>
+ <result title="frequency" count="5">neuromuscular disease</result>
+ <result title="frequency" count="5">suppurative otitis media</result>
+ <result title="frequency" count="5">macular edema</result>
+ <result title="frequency" count="5">rheumatic fever,</result>
+ <result title="frequency" count="5">reactive arthritis,</result>
+ <result title="frequency" count="5">pressure ulcer.</result>
+ <result title="frequency" count="5">sarcoma</result>
+ <result title="frequency" count="5">patellofemoral pain syndrome</result>
+ <result title="frequency" count="5">duodenal ulcer,</result>
+ <result title="frequency" count="5">optic neuropathy</result>
+ <result title="frequency" count="4">vascular dementia.</result>
+ <result title="frequency" count="4">cerebral aneurysm</result>
+ <result title="frequency" count="4">chronic open-angle glaucoma</result>
+ <result title="frequency" count="4">eye disease,</result>
+ <result title="frequency" count="4">amyloidosis</result>
+ <result title="frequency" count="4">eye disease.</result>
+ <result title="frequency" count="4">bone disease,</result>
+ <result title="frequency" count="4">chronic venous insufficiency,</result>
+ <result title="frequency" count="4">irritable bowel syndrome;</result>
+ <result title="frequency" count="4">fatty liver disease,</result>
+ <result title="frequency" count="4">vaginal discharge,</result>
+ <result title="frequency" count="4">endometrial cancer,</result>
+ <result title="frequency" count="4">primary pulmonary hypertension</result>
+ <result title="frequency" count="4">macular degeneration.</result>
+ <result title="frequency" count="4">macular degeneration;</result>
+ <result title="frequency" count="4">endophthalmitis</result>
+ <result title="frequency" count="4">obstructive sleep apnea,</result>
+ <result title="frequency" count="4">inguinal hernia,</result>
+ <result title="frequency" count="4">antiphospholipid syndrome</result>
+ <result title="frequency" count="4">aspiration pneumonia.</result>
+ <result title="frequency" count="4">uremia</result>
+ <result title="frequency" count="4">lactic acidosis,</result>
+ <result title="frequency" count="4">toxic shock syndrome</result>
+ <result title="frequency" count="4">oppositional defiant disorder</result>
+ <result title="frequency" count="4">glomerulosclerosis</result>
+ <result title="frequency" count="4">hypersomnia</result>
+ <result title="frequency" count="4">cocaine dependence</result>
+ <result title="frequency" count="4">myasthenia gravis</result>
+ <result title="frequency" count="4">spina bifida</result>
+ <result title="frequency" count="4">congenital heart disease;</result>
+ <result title="frequency" count="4">epidermolysis bullosa</result>
+ <result title="frequency" count="4">essential hypertension,</result>
+ <result title="frequency" count="4">alcohol abuse;</result>
+ <result title="frequency" count="4">post-traumatic stress disorder;</result>
+ <result title="frequency" count="4">sexual dysfunction.</result>
+ <result title="frequency" count="4">familial adenomatous polyposis</result>
+ <result title="frequency" count="4">right bundle branch block</result>
+ <result title="frequency" count="4">kidney failure.</result>
+ <result title="frequency" count="4">lung disease.</result>
+ <result title="frequency" count="4">delusional disorder</result>
+ <result title="frequency" count="4">food allergy,</result>
+ <result title="frequency" count="4">status epilepticus,</result>
+ <result title="frequency" count="4">nephrolithiasis</result>
+ <result title="frequency" count="4">arteriovenous malformation,</result>
+ <result title="frequency" count="4">prostate cancer;</result>
+ <result title="frequency" count="4">endocrine disease</result>
+ <result title="frequency" count="4">lung carcinoma</result>
+ <result title="frequency" count="4">periventricular leukomalacia</result>
+ <result title="frequency" count="4">optic neuritis,</result>
+ <result title="frequency" count="4">aortic aneurysm,</result>
+ <result title="frequency" count="4">aortic aneurysm.</result>
+ <result title="frequency" count="4">delusional disorder,</result>
+ <result title="frequency" count="4">avian influenza</result>
+ <result title="frequency" count="4">allergic asthma.</result>
+ <result title="frequency" count="4">male infertility.</result>
+ <result title="frequency" count="4">amyotrophic lateral sclerosis,</result>
+ <result title="frequency" count="4">myasthenia gravis,</result>
+ <result title="frequency" count="4">thyroid cancer,</result>
+ <result title="frequency" count="4">gonorrhea</result>
+ <result title="frequency" count="4">neurological disorder.</result>
+ <result title="frequency" count="4">pelvic inflammatory disease,</result>
+ <result title="frequency" count="4">varicose veins;</result>
+ <result title="frequency" count="4">septic arthritis</result>
+ <result title="frequency" count="4">atrioventricular block,</result>
+ <result title="frequency" count="4">shoulder impingement syndrome</result>
+ <result title="frequency" count="4">head and neck cancer.</result>
+ <result title="frequency" count="4">hepatocellular carcinoma,</result>
+ <result title="frequency" count="4">gastric ulcer,</result>
+ <result title="frequency" count="4">bowel obstruction.</result>
+ <result title="frequency" count="4">metabolic syndrome;</result>
+ <result title="frequency" count="4">panic disorder;</result>
+ <result title="frequency" count="4">myeloid leukemia,</result>
+ <result title="frequency" count="4">eating disorder;</result>
+ <result title="frequency" count="4">familial hypercholesterolemia</result>
+ <result title="frequency" count="4">valvular heart disease,</result>
+ <result title="frequency" count="4">macular hole.</result>
+ <result title="frequency" count="4">multiple sclerosis?</result>
+ <result title="frequency" count="4">acute leukemia</result>
+ <result title="frequency" count="4">myoma</result>
+ <result title="frequency" count="4">retinal detachment,</result>
+ <result title="frequency" count="4">acute pyelonephritis</result>
+ <result title="frequency" count="4">chronic fatigue syndrome,</result>
+ <result title="frequency" count="4">chronic fatigue syndrome.</result>
+ <result title="frequency" count="4">cervical incompetence</result>
+ <result title="frequency" count="4">cardiovascular disease?</result>
+ <result title="frequency" count="4">vasomotor rhinitis</result>
+ <result title="frequency" count="4">parasitic disease</result>
+ <result title="frequency" count="3">vascular dementia,</result>
+ <result title="frequency" count="3">scleroderma</result>
+ <result title="frequency" count="3">smallpox</result>
+ <result title="frequency" count="3">pulmonary fibrosis,</result>
+ <result title="frequency" count="3">chronic venous insufficiency.</result>
+ <result title="frequency" count="3">bone disease.</result>
+ <result title="frequency" count="3">esophageal varices,</result>
+ <result title="frequency" count="3">acute lymphoblastic leukemia</result>
+ <result title="frequency" count="3">erectile dysfunction,</result>
+ <result title="frequency" count="3">paranoid schizophrenia</result>
+ <result title="frequency" count="3">acute myocardial infarction?</result>
+ <result title="frequency" count="3">muscular dystrophy,</result>
+ <result title="frequency" count="3">ankylosing spondylitis;</result>
+ <result title="frequency" count="3">nasopharyngeal carcinoma</result>
+ <result title="frequency" count="3">bursitis</result>
+ <result title="frequency" count="3">diabetic neuropathy.</result>
+ <result title="frequency" count="3">idiopathic pulmonary fibrosis</result>
+ <result title="frequency" count="3">congestive heart failure;</result>
+ <result title="frequency" count="3">diabetic neuropathy;</result>
+ <result title="frequency" count="3">oral cancer,</result>
+ <result title="frequency" count="3">purpura</result>
+ <result title="frequency" count="3">atopic dermatitis;</result>
+ <result title="frequency" count="3">cystic fibrosis,</result>
+ <result title="frequency" count="3">otitis media.</result>
+ <result title="frequency" count="3">learning disability;</result>
+ <result title="frequency" count="3">exophthalmos</result>
+ <result title="frequency" count="3">glucose intolerance,</result>
+ <result title="frequency" count="3">abdominal aortic aneurysm;</result>
+ <result title="frequency" count="3">mitral valve prolapse</result>
+ <result title="frequency" count="3">paradoxical embolism.</result>
+ <result title="frequency" count="3">abdominal aortic aneurysm.</result>
+ <result title="frequency" count="3">pericarditis</result>
+ <result title="frequency" count="3">cystic fibrosis;</result>
+ <result title="frequency" count="3">peritoneal mesothelioma</result>
+ <result title="frequency" count="3">bulimia nervosa?</result>
+ <result title="frequency" count="3">malignant hyperthermia;</result>
+ <result title="frequency" count="3">plantar fasciitis,</result>
+ <result title="frequency" count="3">peptic ulcer,</result>
+ <result title="frequency" count="3">anal fistula</result>
+ <result title="frequency" count="3">specific phobia,</result>
+ <result title="frequency" count="3">skin cancer;</result>
+ <result title="frequency" count="3">periventricular leukomalacia,</result>
+ <result title="frequency" count="3">contact dermatitis</result>
+ <result title="frequency" count="3">opiate dependence</result>
+ <result title="frequency" count="3">secondary hyperparathyroidism,</result>
+ <result title="frequency" count="3">spondylolysis</result>
+ <result title="frequency" count="3">heart disease?</result>
+ <result title="frequency" count="3">photosensitive epilepsy</result>
+ <result title="frequency" count="3">acute pancreatitis.</result>
+ <result title="frequency" count="3">sexual dysfunction,</result>
+ <result title="frequency" count="3">dengue fever</result>
+ <result title="frequency" count="3">cardiac tamponade,</result>
+ <result title="frequency" count="3">pulpitis</result>
+ <result title="frequency" count="3">hypopituitarism</result>
+ <result title="frequency" count="3">amenorrhoea</result>
+ <result title="frequency" count="3">photosensitive epilepsy,</result>
+ <result title="frequency" count="3">lymphoblastic leukemia</result>
+ <result title="frequency" count="3">bacterial pneumonia,</result>
+ <result title="frequency" count="3">central sleep apnea</result>
+ <result title="frequency" count="3">schizophreniform disorder</result>
+ <result title="frequency" count="3">osteochondrosis</result>
+ <result title="frequency" count="3">ptosis</result>
+ <result title="frequency" count="3">hemorrhagic disease</result>
+ <result title="frequency" count="3">laryngitis</result>
+ <result title="frequency" count="3">hyperopia</result>
+ <result title="frequency" count="3">thyroid disease.</result>
+ <result title="frequency" count="3">ectopic pregnancy,</result>
+ <result title="frequency" count="3">eosinophilia</result>
+ <result title="frequency" count="3">bipolar disorder?</result>
+ <result title="frequency" count="3">trachoma</result>
+ <result title="frequency" count="3">respiratory failure;</result>
+ <result title="frequency" count="3">xerophthalmia</result>
+ <result title="frequency" count="3">chickenpox</result>
+ <result title="frequency" count="3">lip cancer</result>
+ <result title="frequency" count="3">hand, foot, and mouth disease</result>
+ <result title="frequency" count="3">spinal stenosis.</result>
+ <result title="frequency" count="3">generalized anxiety disorder.</result>
+ <result title="frequency" count="3">intermittent claudication.</result>
+ <result title="frequency" count="3">diabetic ketoacidosis</result>
+ <result title="frequency" count="3">aortic aneurysm;</result>
+ <result title="frequency" count="3">atypical autism</result>
+ <result title="frequency" count="3">unstable angina;</result>
+ <result title="frequency" count="3">nervous system disease</result>
+ <result title="frequency" count="3">unstable angina.</result>
+ <result title="frequency" count="3">onchocerciasis</result>
+ <result title="frequency" count="3">pelvic inflammatory disease;</result>
+ <result title="frequency" count="3">methemoglobinemia</result>
+ <result title="frequency" count="3">myasthenia gravis.</result>
+ <result title="frequency" count="3">squamous-cell carcinoma</result>
+ <result title="frequency" count="3">acute tubular necrosis</result>
+ <result title="frequency" count="3">neurological disorder;</result>
+ <result title="frequency" count="3">cerebral infarction.</result>
+ <result title="frequency" count="3">central nervous system disease</result>
+ <result title="frequency" count="3">vaginitis</result>
+ <result title="frequency" count="3">obsessive-compulsive personality disorder</result>
+ <result title="frequency" count="3">testicular cancer</result>
+ <result title="frequency" count="3">retinitis</result>
+ <result title="frequency" count="3">brain ischemia</result>
+ <result title="frequency" count="3">nephrocalcinosis</result>
+ <result title="frequency" count="3">endometriosis</result>
+ <result title="frequency" count="3">hypophosphatemia</result>
+ <result title="frequency" count="3">ovarian hyperstimulation syndrome</result>
+ <result title="frequency" count="3">cervical cancer,</result>
+ <result title="frequency" count="3">cardiac arrest;</result>
+ <result title="frequency" count="3">sleep apnea;</result>
+ <result title="frequency" count="3">tendinitis</result>
+ <result title="frequency" count="3">multiple myeloma,</result>
+ <result title="frequency" count="3">valvular heart disease;</result>
+ <result title="frequency" count="3">acute myeloid leukemia,</result>
+ <result title="frequency" count="3">mood disorder.</result>
+ <result title="frequency" count="3">gestational hypertension</result>
+ <result title="frequency" count="3">portal hypertension,</result>
+ <result title="frequency" count="3">scotoma</result>
+ <result title="frequency" count="3">polycystic ovary syndrome,</result>
+ <result title="frequency" count="3">post-thrombotic syndrome</result>
+ <result title="frequency" count="3">glucose-6-phosphate dehydrogenase deficiency</result>
+ <result title="frequency" count="3">necrotizing fasciitis</result>
+ <result title="frequency" count="3">autoimmune disease,</result>
+ <result title="frequency" count="3">respiratory disease.</result>
+ <result title="frequency" count="3">pervasive developmental disorder,</result>
+ <result title="frequency" count="2">uterine cancer</result>
+ <result title="frequency" count="2">vertebrobasilar insufficiency.</result>
+ <result title="frequency" count="2">compartment syndrome.</result>
+ <result title="frequency" count="2">bacterial meningitis,</result>
+ <result title="frequency" count="2">schizoaffective disorder.</result>
+ <result title="frequency" count="2">sick sinus syndrome,</result>
+ <result title="frequency" count="2">erectile dysfunction.</result>
+ <result title="frequency" count="2">acanthosis nigricans,</result>
+ <result title="frequency" count="2">gastrointestinal cancer,</result>
+ <result title="frequency" count="2">osteogenesis imperfecta</result>
+ <result title="frequency" count="2">hypercalcaemia</result>
+ <result title="frequency" count="2">retinoblastoma</result>
+ <result title="frequency" count="2">ocular hypertension.</result>
+ <result title="frequency" count="2">coronary thrombosis,</result>
+ <result title="frequency" count="2">ankylosing spondylitis.</result>
+ <result title="frequency" count="2">neuroendocrine tumor,</result>
+ <result title="frequency" count="2">somatization disorder</result>
+ <result title="frequency" count="2">uterine fibroid</result>
+ <result title="frequency" count="2">allergic contact dermatitis</result>
+ <result title="frequency" count="2">bullous pemphigoid,</result>
+ <result title="frequency" count="2">herpangina</result>
+ <result title="frequency" count="2">breast cancer?</result>
+ <result title="frequency" count="2">obstructive sleep apnea.</result>
+ <result title="frequency" count="2">atopic dermatitis.</result>
+ <result title="frequency" count="2">primary biliary cirrhosis</result>
+ <result title="frequency" count="2">sarcoidosis</result>
+ <result title="frequency" count="2">facioscapulohumeral muscular dystrophy</result>
+ <result title="frequency" count="2">fetal alcohol syndrome</result>
+ <result title="frequency" count="2">vasomotor rhinitis,</result>
+ <result title="frequency" count="2">oropharyngeal cancer,</result>
+ <result title="frequency" count="2">chorea</result>
+ <result title="frequency" count="2">hemolytic anemia</result>
+ <result title="frequency" count="2">paralytic ileus,</result>
+ <result title="frequency" count="2">scurvy</result>
+ <result title="frequency" count="2">otitis media;</result>
+ <result title="frequency" count="2">chronic obstructive pulmonary disease?</result>
+ <result title="frequency" count="2">paradoxical embolism,</result>
+ <result title="frequency" count="2">abdominal aortic aneurysm,</result>
+ <result title="frequency" count="2">vaccinia virus</result>
+ <result title="frequency" count="2">anorexia nervosa;</result>
+ <result title="frequency" count="2">acute leukemia,</result>
+ <result title="frequency" count="2">otitis media?</result>
+ <result title="frequency" count="2">dental fluorosis</result>
+ <result title="frequency" count="2">uveal melanoma,</result>
+ <result title="frequency" count="2">uveal melanoma.</result>
+ <result title="frequency" count="2">aseptic meningitis</result>
+ <result title="frequency" count="2">oppositional defiant disorder,</result>
+ <result title="frequency" count="2">bulimia nervosa.</result>
+ <result title="frequency" count="2">cryptococcosis</result>
+ <result title="frequency" count="2">oppositional defiant disorder;</result>
+ <result title="frequency" count="2">nervous system disease,</result>
+ <result title="frequency" count="2">cutaneous leishmaniasis,</result>
+ <result title="frequency" count="2">sleep disorder,</result>
+ <result title="frequency" count="2">myotonic dystrophy,</result>
+ <result title="frequency" count="2">oral candidiasis.</result>
+ <result title="frequency" count="2">short bowel syndrome</result>
+ <result title="frequency" count="2">acanthosis nigricans</result>
+ <result title="frequency" count="2">lipodystrophy</result>
+ <result title="frequency" count="2">atypical depression</result>
+ <result title="frequency" count="2">lymphadenopathy</result>
+ <result title="frequency" count="2">postpartum depression.</result>
+ <result title="frequency" count="2">necrotizing enterocolitis;</result>
+ <result title="frequency" count="2">biliary atresia,</result>
+ <result title="frequency" count="2">psoriatic arthritis.</result>
+ <result title="frequency" count="2">bladder cancer.</result>
+ <result title="frequency" count="2">periventricular leukomalacia.</result>
+ <result title="frequency" count="2">dengue fever.</result>
+ <result title="frequency" count="2">primary pulmonary hypertension.</result>
+ <result title="frequency" count="2">skin cancer.</result>
+ <result title="frequency" count="2">leiomyoma</result>
+ <result title="frequency" count="2">infectious mononucleosis</result>
+ <result title="frequency" count="2">megacolon</result>
+ <result title="frequency" count="2">stomach cancer</result>
+ <result title="frequency" count="2">lactose intolerance;</result>
+ <result title="frequency" count="2">infectious disease;</result>
+ <result title="frequency" count="2">corneal ectasia,</result>
+ <result title="frequency" count="2">normal pressure hydrocephalus,</result>
+ <result title="frequency" count="2">chronic rhinitis</result>
+ <result title="frequency" count="2">alcoholic hepatitis,</result>
+ <result title="frequency" count="2">alcoholic hepatitis.</result>
+ <result title="frequency" count="2">trypanosomiasis</result>
+ <result title="frequency" count="2">gestational diabetes.</result>
+ <result title="frequency" count="2">adjustment disorder,</result>
+ <result title="frequency" count="2">peripheral artery disease;</result>
+ <result title="frequency" count="2">rectal prolapse,</result>
+ <result title="frequency" count="2">adjustment disorder.</result>
+ <result title="frequency" count="2">thrombophlebitis</result>
+ <result title="frequency" count="2">bacterial vaginosis;</result>
+ <result title="frequency" count="2">degenerative disc disease,</result>
+ <result title="frequency" count="2">prion disease</result>
+ <result title="frequency" count="2">ankylosis</result>
+ <result title="frequency" count="2">pericardial effusion,</result>
+ <result title="frequency" count="2">pulmonary edema;</result>
+ <result title="frequency" count="2">meningoencephalitis</result>
+ <result title="frequency" count="2">lupus erythematosus.</result>
+ <result title="frequency" count="2">diabetic ketoacidosis,</result>
+ <result title="frequency" count="2">severe acute respiratory syndrome</result>
+ <result title="frequency" count="2">renal tubular acidosis</result>
+ <result title="frequency" count="2">refractive error.</result>
+ <result title="frequency" count="2">coronary aneurysm</result>
+ <result title="frequency" count="2">somatoform disorder,</result>
+ <result title="frequency" count="2">schizophreniform disorder,</result>
+ <result title="frequency" count="2">dental abscess</result>
+ <result title="frequency" count="2">exocrine pancreatic insufficiency,</result>
+ <result title="frequency" count="2">dumping syndrome.</result>
+ <result title="frequency" count="2">familial adenomatous polyposis.</result>
+ <result title="frequency" count="2">restless legs syndrome</result>
+ <result title="frequency" count="2">helminthiasis</result>
+ <result title="frequency" count="2">nicotine dependence.</result>
+ <result title="frequency" count="2">prostate cancer?</result>
+ <result title="frequency" count="2">dependent personality disorder</result>
+ <result title="frequency" count="2">contact dermatitis,</result>
+ <result title="frequency" count="2">kernicterus</result>
+ <result title="frequency" count="2">social phobia;</result>
+ <result title="frequency" count="2">urethral stricture.</result>
+ <result title="frequency" count="2">spinal stenosis;</result>
+ <result title="frequency" count="2">colon cancer;</result>
+ <result title="frequency" count="2">cognitive disorder</result>
+ <result title="frequency" count="2">critical illness polyneuropathy</result>
+ <result title="frequency" count="2">intermittent claudication,</result>
+ <result title="frequency" count="2">gastrointestinal disease,</result>
+ <result title="frequency" count="2">endemic goiter</result>
+ <result title="frequency" count="2">optic neuritis.</result>
+ <result title="frequency" count="2">acute myocarditis.</result>
+ <result title="frequency" count="2">gingival recession</result>
+ <result title="frequency" count="2">borderline personality disorder;</result>
+ <result title="frequency" count="2">thyroid cancer.</result>
+ <result title="frequency" count="2">sclerosing cholangitis</result>
+ <result title="frequency" count="2">hepatorenal syndrome</result>
+ <result title="frequency" count="2">pelvic inflammatory disease.</result>
+ <result title="frequency" count="2">nephrotic syndrome.</result>
+ <result title="frequency" count="2">nephrotic syndrome;</result>
+ <result title="frequency" count="2">patent foramen ovale,</result>
+ <result title="frequency" count="2">placental abruption</result>
+ <result title="frequency" count="2">post-thrombotic syndrome,</result>
+ <result title="frequency" count="2">heart attack.</result>
+ <result title="frequency" count="2">anterior ischemic optic neuropathy</result>
+ <result title="frequency" count="2">thrombocytosis</result>
+ <result title="frequency" count="2">cerebral infarction;</result>
+ <result title="frequency" count="2">portal vein thrombosis</result>
+ <result title="frequency" count="2">duodenal obstruction,</result>
+ <result title="frequency" count="2">sigmoid colon cancer</result>
+ <result title="frequency" count="2">amyotrophic lateral sclerosis;</result>
+ <result title="frequency" count="2">bowel dysfunction</result>
+ <result title="frequency" count="2">locked-in syndrome</result>
+ <result title="frequency" count="2">bowel obstruction;</result>
+ <result title="frequency" count="2">cannabis abuse,</result>
+ <result title="frequency" count="2">cerebral malaria.</result>
+ <result title="frequency" count="2">parathyroid disease,</result>
+ <result title="frequency" count="2">metabolic syndrome?</result>
+ <result title="frequency" count="2">primary angle-closure glaucoma</result>
+ <result title="frequency" count="2">peripheral vertigo</result>
+ <result title="frequency" count="2">myofascial pain syndrome</result>
+ <result title="frequency" count="2">glioma</result>
+ <result title="frequency" count="2">cervical incompetence,</result>
+ <result title="frequency" count="2">malignant hyperthermia</result>
+ <result title="frequency" count="2">facial nerve paralysis</result>
+ <result title="frequency" count="2">attention deficit hyperactivity disorder.</result>
+ <result title="frequency" count="2">macular hole;</result>
+ <result title="frequency" count="2">polyhydramnios</result>
+ <result title="frequency" count="2">attention deficit hyperactivity disorder,</result>
+ <result title="frequency" count="2">mumps</result>
+ <result title="frequency" count="2">polycystic liver disease,</result>
+ <result title="frequency" count="2">gastric ulcer</result>
+ <result title="frequency" count="2">thoracic aortic aneurysm</result>
+ <result title="frequency" count="2">separation anxiety disorder</result>
+ <result title="frequency" count="2">neuromuscular disease,</result>
+ <result title="frequency" count="2">infective endocarditis,</result>
+ <result title="frequency" count="2">diabetic retinopathy.</result>
+ <result title="frequency" count="2">polycystic ovary syndrome;</result>
+ <result title="frequency" count="2">portal hypertension.</result>
+ <result title="frequency" count="2">progressive multifocal leukoencephalopathy</result>
+ <result title="frequency" count="2">retinal detachment.</result>
+ <result title="frequency" count="2">body dysmorphic disorder</result>
+ <result title="frequency" count="2">cannabis dependence</result>
+ <result title="frequency" count="2">diabetic retinopathy;</result>
+ <result title="frequency" count="2">seminoma</result>
+ <result title="frequency" count="2">autoimmune thyroiditis.</result>
+ <result title="frequency" count="2">peripheral neuropathy;</result>
+ <result title="frequency" count="2">neuroleptic malignant syndrome,</result>
+ <result title="frequency" count="2">chronic fatigue syndrome;</result>
+ <result title="frequency" count="2">anal fissure,</result>
+ <result title="frequency" count="2">disseminated intravascular coagulation,</result>
+ <result title="frequency" count="2">metabolic acidosis.</result>
+ <result title="frequency" count="1">meconium aspiration syndrome,</result>
+ <result title="frequency" count="1">thrombotic thrombocytopenic purpura,</result>
+ <result title="frequency" count="1">thymus gland disease.</result>
+ <result title="frequency" count="1">femoral neuropathy,</result>
+ <result title="frequency" count="1">severe combined immunodeficiency,</result>
+ <result title="frequency" count="1">focal segmental glomerulosclerosis,</result>
+ <result title="frequency" count="1">neonatal respiratory failure</result>
+ <result title="frequency" count="1">vertebrobasilar insufficiency,</result>
+ <result title="frequency" count="1">renal artery obstruction</result>
+ <result title="frequency" count="1">pericoronitis</result>
+ <result title="frequency" count="1">pulmonary fibrosis;</result>
+ <result title="frequency" count="1">compartment syndrome;</result>
+ <result title="frequency" count="1">hereditary angioedema</result>
+ <result title="frequency" count="1">lichen planus,</result>
+ <result title="frequency" count="1">mitral valve disease</result>
+ <result title="frequency" count="1">paralytic ileus</result>
+ <result title="frequency" count="1">movement disorder,</result>
+ <result title="frequency" count="1">vaccinia virus,</result>
+ <result title="frequency" count="1">placental insufficiency</result>
+ <result title="frequency" count="1">vestibular disease</result>
+ <result title="frequency" count="1">primary hyperparathyroidism</result>
+ <result title="frequency" count="1">liver cancer,</result>
+ <result title="frequency" count="1">metabolic disorder.</result>
+ <result title="frequency" count="1">cognitive disorder;</result>
+ <result title="frequency" count="1">language disorder</result>
+ <result title="frequency" count="1">irritable bowel syndrome?</result>
+ <result title="frequency" count="1">mucocutaneous leishmaniasis</result>
+ <result title="frequency" count="1">schizoaffective disorder?</result>
+ <result title="frequency" count="1">sick sinus syndrome.</result>
+ <result title="frequency" count="1">cognitive disorder,</result>
+ <result title="frequency" count="1">allergic bronchopulmonary aspergillosis;</result>
+ <result title="frequency" count="1">lymphadenitis</result>
+ <result title="frequency" count="1">patent ductus arteriosus.</result>
+ <result title="frequency" count="1">patent ductus arteriosus,</result>
+ <result title="frequency" count="1">familial hemiplegic migraine</result>
+ <result title="frequency" count="1">miliary tuberculosis</result>
+ <result title="frequency" count="1">meconium aspiration syndrome</result>
+ <result title="frequency" count="1">gastrointestinal cancer.</result>
+ <result title="frequency" count="1">patent ductus arteriosus;</result>
+ <result title="frequency" count="1">septic arthritis,</result>
+ <result title="frequency" count="1">motor neuron disease,</result>
+ <result title="frequency" count="1">ascending cholangitis,</result>
+ <result title="frequency" count="1">macular corneal dystrophy</result>
+ <result title="frequency" count="1">ocular hypertension,</result>
+ <result title="frequency" count="1">labyrinthitis</result>
+ <result title="frequency" count="1">coronary thrombosis.</result>
+ <result title="frequency" count="1">movement disorder;</result>
+ <result title="frequency" count="1">transient cerebral ischemia,</result>
+ <result title="frequency" count="1">ankylosing spondylitis?</result>
+ <result title="frequency" count="1">cyclothymia</result>
+ <result title="frequency" count="1">gastroschisis</result>
+ <result title="frequency" count="1">transient global amnesia,</result>
+ <result title="frequency" count="1">peroneal nerve paralysis</result>
+ <result title="frequency" count="1">osteogenesis imperfecta,</result>
+ <result title="frequency" count="1">band keratopathy</result>
+ <result title="frequency" count="1">bullous pemphigoid.</result>
+ <result title="frequency" count="1">mastitis</result>
+ <result title="frequency" count="1">penicilliosis</result>
+ <result title="frequency" count="1">reflex sympathetic dystrophy</result>
+ <result title="frequency" count="1">bullous pemphigoid;</result>
+ <result title="frequency" count="1">mitral stenosis</result>
+ <result title="frequency" count="1">interstitial nephritis.</result>
+ <result title="frequency" count="1">osteosarcoma</result>
+ <result title="frequency" count="1">atrial fibrillation?</result>
+ <result title="frequency" count="1">mitral valve prolapse,</result>
+ <result title="frequency" count="1">tuberous sclerosis</result>
+ <result title="frequency" count="1">speech disorder,</result>
+ <result title="frequency" count="1">obstructive sleep apnea;</result>
+ <result title="frequency" count="1">cleft palate,</result>
+ <result title="frequency" count="1">impulse control disorder,</result>
+ <result title="frequency" count="1">hypertrichosis</result>
+ <result title="frequency" count="1">diabetic neuropathy?</result>
+ <result title="frequency" count="1">epidermolysis bullosa.</result>
+ <result title="frequency" count="1">inguinal hernia.</result>
+ <result title="frequency" count="1">critical illness polyneuropathy,</result>
+ <result title="frequency" count="1">systemic lupus erythematosus.</result>
+ <result title="frequency" count="1">vasomotor rhinitis.</result>
+ <result title="frequency" count="1">lymphoblastic leukemia.</result>
+ <result title="frequency" count="1">oral cancer.</result>
+ <result title="frequency" count="1">hairy leukoplakia</result>
+ <result title="frequency" count="1">rapidly progressive glomerulonephritis</result>
+ <result title="frequency" count="1">neurotic disorder,</result>
+ <result title="frequency" count="1">pancreatic cancer;</result>
+ <result title="frequency" count="1">cleft palate;</result>
+ <result title="frequency" count="1">skin melanoma</result>
+ <result title="frequency" count="1">pulmonary embolism?</result>
+ <result title="frequency" count="1">viral disease</result>
+ <result title="frequency" count="1">ovarian cancer;</result>
+ <result title="frequency" count="1">primary hyperparathyroidism;</result>
+ <result title="frequency" count="1">bowel dysfunction.</result>
+ <result title="frequency" count="1">pemphigus</result>
+ <result title="frequency" count="1">substance abuse?</result>
+ <result title="frequency" count="1">learning disability.</result>
+ <result title="frequency" count="1">radial neuropathy</result>
+ <result title="frequency" count="1">multiple system atrophy</result>
+ <result title="frequency" count="1">pulmonary tuberculosis;</result>
+ <result title="frequency" count="1">polymyalgia rheumatica</result>
+ <result title="frequency" count="1">lobular carcinoma in situ</result>
+ <result title="frequency" count="1">interstitial cystitis,</result>
+ <result title="frequency" count="1">hypopyon</result>
+ <result title="frequency" count="1">myelodysplastic syndrome.</result>
+ <result title="frequency" count="1">myelodysplastic syndrome,</result>
+ <result title="frequency" count="1">female genital prolapse</result>
+ <result title="frequency" count="1">fibrosarcoma</result>
+ <result title="frequency" count="1">tricuspid valve disease</result>
+ <result title="frequency" count="1">chronic myeloid leukemia,</result>
+ <result title="frequency" count="1">enophthalmos</result>
+ <result title="frequency" count="1">motion sickness</result>
+ <result title="frequency" count="1">histoplasmosis</result>
+ <result title="frequency" count="1">cauda equina syndrome</result>
+ <result title="frequency" count="1">hereditary fructose intolerance.</result>
+ <result title="frequency" count="1">aseptic meningitis,</result>
+ <result title="frequency" count="1">atypical depression,</result>
+ <result title="frequency" count="1">nervous system disease;</result>
+ <result title="frequency" count="1">sleep disorder.</result>
+ <result title="frequency" count="1">hypertensive heart disease.</result>
+ <result title="frequency" count="1">bulimia nervosa;</result>
+ <result title="frequency" count="1">sleep disorder;</result>
+ <result title="frequency" count="1">iron deficiency anemia.</result>
+ <result title="frequency" count="1">hypodontia</result>
+ <result title="frequency" count="1">thyrotoxicosis</result>
+ <result title="frequency" count="1">myotonic dystrophy.</result>
+ <result title="frequency" count="1">chronic inflammatory demyelinating polyneuropathy,</result>
+ <result title="frequency" count="1">herpes simplex,</result>
+ <result title="frequency" count="1">malignant hyperthermia.</result>
+ <result title="frequency" count="1">neural tube defect</result>
+ <result title="frequency" count="1">hemolytic anemia,</result>
+ <result title="frequency" count="1">peptic ulcer;</result>
+ <result title="frequency" count="1">palindromic rheumatism,</result>
+ <result title="frequency" count="1">allergic rhinitis?</result>
+ <result title="frequency" count="1">myelodysplastic syndrome</result>
+ <result title="frequency" count="1">anterograde amnesia,</result>
+ <result title="frequency" count="1">hypertensive encephalopathy</result>
+ <result title="frequency" count="1">short bowel syndrome,</result>
+ <result title="frequency" count="1">necrotizing enterocolitis.</result>
+ <result title="frequency" count="1">viral pneumonia,</result>
+ <result title="frequency" count="1">congenital heart disease.</result>
+ <result title="frequency" count="1">acute lymphoblastic leukemia.</result>
+ <result title="frequency" count="1">short bowel syndrome;</result>
+ <result title="frequency" count="1">sensorineural hearing loss.</result>
+ <result title="frequency" count="1">postpartum depression?</result>
+ <result title="frequency" count="1">postpartum depression;</result>
+ <result title="frequency" count="1">acute promyelocytic leukemia,</result>
+ <result title="frequency" count="1">mitral valve insufficiency,</result>
+ <result title="frequency" count="1">acute pyelonephritis?</result>
+ <result title="frequency" count="1">peanut allergy.</result>
+ <result title="frequency" count="1">keratoconjunctivitis</result>
+ <result title="frequency" count="1">hepatic encephalopathy;</result>
+ <result title="frequency" count="1">secondary hypertension.</result>
+ <result title="frequency" count="1">senile cataract</result>
+ <result title="frequency" count="1">essential hypertension?</result>
+ <result title="frequency" count="1">hepatic coma</result>
+ <result title="frequency" count="1">aortic valve stenosis.</result>
+ <result title="frequency" count="1">psoriatic arthritis;</result>
+ <result title="frequency" count="1">periventricular leukomalacia;</result>
+ <result title="frequency" count="1">mononeuropathy</result>
+ <result title="frequency" count="1">antisocial personality disorder.</result>
+ <result title="frequency" count="1">ear disease,</result>
+ <result title="frequency" count="1">major depressive disorder?</result>
+ <result title="frequency" count="1">secondary hyperparathyroidism.</result>
+ <result title="frequency" count="1">acute apical periodontitis;</result>
+ <result title="frequency" count="1">lactose intolerance,</result>
+ <result title="frequency" count="1">dengue hemorrhagic fever</result>
+ <result title="frequency" count="1">secondary hyperparathyroidism;</result>
+ <result title="frequency" count="1">aplastic anemia</result>
+ <result title="frequency" count="1">polycythemia</result>
+ <result title="frequency" count="1">aplastic anemia,</result>
+ <result title="frequency" count="1">neuroblastoma</result>
+ <result title="frequency" count="1">hypertensive retinopathy,</result>
+ <result title="frequency" count="1">primary ciliary dyskinesia,</result>
+ <result title="frequency" count="1">acute pancreatitis;</result>
+ <result title="frequency" count="1">urinary tract obstruction,</result>
+ <result title="frequency" count="1">vitreous detachment</result>
+ <result title="frequency" count="1">carpal tunnel syndrome;</result>
+ <result title="frequency" count="1">central nervous system disease,</result>
+ <result title="frequency" count="1">peripheral artery disease.</result>
+ <result title="frequency" count="1">post-traumatic stress disorder?</result>
+ <result title="frequency" count="1">dengue fever,</result>
+ <result title="frequency" count="1">pernicious anemia;</result>
+ <result title="frequency" count="1">aortic valve stenosis</result>
+ <result title="frequency" count="1">degenerative disc disease;</result>
+ <result title="frequency" count="1">bacterial pneumonia.</result>
+ <result title="frequency" count="1">transverse colon cancer,</result>
+ <result title="frequency" count="1">bacterial vaginosis?</result>
+ <result title="frequency" count="1">sexual dysfunction;</result>
+ <result title="frequency" count="1">degenerative disc disease.</result>
+ <result title="frequency" count="1">gingival overgrowth</result>
+ <result title="frequency" count="1">benign paroxysmal positional vertigo;</result>
+ <result title="frequency" count="1">ischemic colitis</result>
+ <result title="frequency" count="1">irregular astigmatism</result>
+ <result title="frequency" count="1">colorectal cancer;</result>
+ <result title="frequency" count="1">viral hepatitis,</result>
+ <result title="frequency" count="1">benign paroxysmal positional vertigo,</result>
+ <result title="frequency" count="1">uterine cancer,</result>
+ <result title="frequency" count="1">pulmonary hypertension;</result>
+ <result title="frequency" count="1">interstitial lung disease;</result>
+ <result title="frequency" count="1">atrophic gastritis</result>
+ <result title="frequency" count="1">lupus erythematosus;</result>
+ <result title="frequency" count="1">familial hypercholesterolemia;</result>
+ <result title="frequency" count="1">pseudomyxoma peritonei</result>
+ <result title="frequency" count="1">lung disease?</result>
+ <result title="frequency" count="1">seasonal affective disorder.</result>
+ <result title="frequency" count="1">placenta accreta,</result>
+ <result title="frequency" count="1">ulcerative colitis;</result>
+ <result title="frequency" count="1">carcinoma in situ,</result>
+ <result title="frequency" count="1">allergic contact dermatitis,</result>
+ <result title="frequency" count="1">seasonal affective disorder;</result>
+ <result title="frequency" count="1">diabetic ketoacidosis.</result>
+ <result title="frequency" count="1">typhoid fever,</result>
+ <result title="frequency" count="1">hydrocele</result>
+ <result title="frequency" count="1">pericardial effusion.</result>
+ <result title="frequency" count="1">thyroid lymphoma</result>
+ <result title="frequency" count="1">autoimmune hemolytic anemia,</result>
+ <result title="frequency" count="1">pterygium</result>
+ <result title="frequency" count="1">cerebral amyloid angiopathy</result>
+ <result title="frequency" count="1">leukoplakia</result>
+ <result title="frequency" count="1">otitis interna</result>
+ <result title="frequency" count="1">refractive error;</result>
+ <result title="frequency" count="1">craniosynostosis</result>
+ <result title="frequency" count="1">refractive error,</result>
+ <result title="frequency" count="1">rubeosis iridis.</result>
+ <result title="frequency" count="1">proctitis</result>
+ <result title="frequency" count="1">dumping syndrome</result>
+ <result title="frequency" count="1">plague</result>
+ <result title="frequency" count="1">bladder disease,</result>
+ <result title="frequency" count="1">food allergy.</result>
+ <result title="frequency" count="1">salpingitis</result>
+ <result title="frequency" count="1">exocrine pancreatic insufficiency.</result>
+ <result title="frequency" count="1">renovascular hypertension,</result>
+ <result title="frequency" count="1">esophageal varices</result>
+ <result title="frequency" count="1">corneal dystrophy</result>
+ <result title="frequency" count="1">acromegaly</result>
+ <result title="frequency" count="1">esophageal cancer?</result>
+ <result title="frequency" count="1">dental caries;</result>
+ <result title="frequency" count="1">optic neuropathy,</result>
+ <result title="frequency" count="1">optic neuropathy;</result>
+ <result title="frequency" count="1">red-green color blindness.</result>
+ <result title="frequency" count="1">cardia cancer</result>
+ <result title="frequency" count="1">arteriovenous malformation.</result>
+ <result title="frequency" count="1">viral pneumonia</result>
+ <result title="frequency" count="1">periapical periodontitis</result>
+ <result title="frequency" count="1">conduct disorder.</result>
+ <result title="frequency" count="1">periarthritis</result>
+ <result title="frequency" count="1">constrictive pericarditis,</result>
+ <result title="frequency" count="1">duodenal ulcer</result>
+ <result title="frequency" count="1">urethral stricture,</result>
+ <result title="frequency" count="1">premature ovarian failure</result>
+ <result title="frequency" count="1">exocrine pancreatic insufficiency</result>
+ <result title="frequency" count="1">spinal stenosis?</result>
+ <result title="frequency" count="1">color blindness.</result>
+ <result title="frequency" count="1">rubella</result>
+ <result title="frequency" count="1">color blindness,</result>
+ <result title="frequency" count="1">endocrine disease,</result>
+ <result title="frequency" count="1">urethral stricture;</result>
+ <result title="frequency" count="1">dyslexia</result>
+ <result title="frequency" count="1">urinary tract infection?</result>
+ <result title="frequency" count="1">motion sickness,</result>
+ <result title="frequency" count="1">lymphocytopenia</result>
+ <result title="frequency" count="1">prion disease.</result>
+ <result title="frequency" count="1">hypermobility syndrome,</result>
+ <result title="frequency" count="1">gastrointestinal disease.</result>
+ <result title="frequency" count="1">coeliac disease.</result>
+ <result title="frequency" count="1">spasmodic torticollis;</result>
+ <result title="frequency" count="1">mycosis</result>
+ <result title="frequency" count="1">communication disorder,</result>
+ <result title="frequency" count="1">pleural empyema,</result>
+ <result title="frequency" count="1">hematopoietic system disease;</result>
+ <result title="frequency" count="1">opioid abuse,</result>
+ <result title="frequency" count="1">cryptosporidiosis</result>
+ <result title="frequency" count="1">hereditary nonpolyposis colorectal cancer</result>
+ <result title="frequency" count="1">opioid abuse</result>
+ <result title="frequency" count="1">allergic asthma,</result>
+ <result title="frequency" count="1">cerebral aneurysm,</result>
+ <result title="frequency" count="1">testicular germ cell cancer</result>
+ <result title="frequency" count="1">vestibular neuronitis.</result>
+ <result title="frequency" count="1">functional diarrhea,</result>
+ <result title="frequency" count="1">complex regional pain syndrome?</result>
+ <result title="frequency" count="1">patent foramen ovale;</result>
+ <result title="frequency" count="1">male infertility,</result>
+ <result title="frequency" count="1">portal vein thrombosis,</result>
+ <result title="frequency" count="1">periodontal disease?</result>
+ <result title="frequency" count="1">congenital hypothyroidism.</result>
+ <result title="frequency" count="1">glycogen storage disease;</result>
+ <result title="frequency" count="1">mitral stenosis,</result>
+ <result title="frequency" count="1">cerebral aneurysm.</result>
+ <result title="frequency" count="1">thyroid cancer;</result>
+ <result title="frequency" count="1">substance dependence;</result>
+ <result title="frequency" count="1">thoracic cancer</result>
+ <result title="frequency" count="1">varicose veins.</result>
+ <result title="frequency" count="1">neonatal jaundice,</result>
+ <result title="frequency" count="1">pericardial effusion</result>
+ <result title="frequency" count="1">gestational hypertension,</result>
+ <result title="frequency" count="1">nephrotic syndrome,</result>
+ <result title="frequency" count="1">neonatal jaundice?</result>
+ <result title="frequency" count="1">hyperostosis</result>
+ <result title="frequency" count="1">tracheitis</result>
+ <result title="frequency" count="1">patent foramen ovale.</result>
+ <result title="frequency" count="1">pure red cell aplasia</result>
+ <result title="frequency" count="1">hemangioma</result>
+ <result title="frequency" count="1">heart attack?</result>
+ <result title="frequency" count="1">iridocyclitis</result>
+ <result title="frequency" count="1">atrioventricular block;</result>
+ <result title="frequency" count="1">focal segmental glomerulosclerosis</result>
+ <result title="frequency" count="1">keratitis</result>
+ <result title="frequency" count="1">biliary atresia</result>
+ <result title="frequency" count="1">cerebral infarction?</result>
+ <result title="frequency" count="1">blood coagulation disease</result>
+ <result title="frequency" count="1">opiate dependence,</result>
+ <result title="frequency" count="1">denture stomatitis</result>
+ <result title="frequency" count="1">cervicitis</result>
+ <result title="frequency" count="1">dissociative disorder,</result>
+ <result title="frequency" count="1">hypochondriasis</result>
+ <result title="frequency" count="1">intestinal cancer</result>
+ <result title="frequency" count="1">retinal ischemia,</result>
+ <result title="frequency" count="1">ventricular septal defect</result>
+ <result title="frequency" count="1">chronic kidney disease?</result>
+ <result title="frequency" count="1">cerebral vasculitis</result>
+ <result title="frequency" count="1">glucose-6-phosphate dehydrogenase deficiency.</result>
+ <result title="frequency" count="1">rapidly progressive glomerulonephritis,</result>
+ <result title="frequency" count="1">coronary thrombosis</result>
+ <result title="frequency" count="1">head and neck cancer,</result>
+ <result title="frequency" count="1">azoospermia</result>
+ <result title="frequency" count="1">endolymphatic hydrops</result>
+ <result title="frequency" count="1">anal fistula,</result>
+ <result title="frequency" count="1">hypospadias</result>
+ <result title="frequency" count="1">lobular carcinoma in situ,</result>
+ <result title="frequency" count="1">vaginal cancer</result>
+ <result title="frequency" count="1">placenta accreta</result>
+ <result title="frequency" count="1">myeloid leukemia;</result>
+ <result title="frequency" count="1">narcissistic personality disorder</result>
+ <result title="frequency" count="1">anxiety disorder?</result>
+ <result title="frequency" count="1">interstitial nephritis</result>
+ <result title="frequency" count="1">spina bifida,</result>
+ <result title="frequency" count="1">vulvovaginitis</result>
+ <result title="frequency" count="1">primary biliary cirrhosis;</result>
+ <result title="frequency" count="1">third-degree atrioventricular block</result>
+ <result title="frequency" count="1">cocaine abuse</result>
+ <result title="frequency" count="1">hemorrhoid</result>
+ <result title="frequency" count="1">primary biliary cirrhosis.</result>
+ <result title="frequency" count="1">separation anxiety disorder,</result>
+ <result title="frequency" count="1">hematopoietic system disease</result>
+ <result title="frequency" count="1">keratoconus</result>
+ <result title="frequency" count="1">newborn respiratory distress syndrome</result>
+ <result title="frequency" count="1">priapism</result>
+ <result title="frequency" count="1">descending colon cancer</result>
+ <result title="frequency" count="1">aphthous stomatitis;</result>
+ <result title="frequency" count="1">crohn's disease</result>
+ <result title="frequency" count="1">eating disorder?</result>
+ <result title="frequency" count="1">pain disorder.</result>
+ <result title="frequency" count="1">atrial septal defect.</result>
+ <result title="frequency" count="1">denture stomatitis,</result>
+ <result title="frequency" count="1">cervical incompetence.</result>
+ <result title="frequency" count="1">cervical cancer?</result>
+ <result title="frequency" count="1">suppurative otitis media.</result>
+ <result title="frequency" count="1">juvenile dermatomyositis,</result>
+ <result title="frequency" count="1">juvenile dermatomyositis.</result>
+ <result title="frequency" count="1">neuronal ceroid lipofuscinosis</result>
+ <result title="frequency" count="1">attention deficit hyperactivity disorder;</result>
+ <result title="frequency" count="1">neurogenic bladder,</result>
+ <result title="frequency" count="1">alopecia</result>
+ <result title="frequency" count="1">acute conjunctivitis</result>
+ <result title="frequency" count="1">glioblastoma multiforme,</result>
+ <result title="frequency" count="1">autoimmune hepatitis</result>
+ <result title="frequency" count="1">shoulder impingement syndrome?</result>
+ <result title="frequency" count="1">juvenile dermatomyositis;</result>
+ <result title="frequency" count="1">tenosynovitis</result>
+ <result title="frequency" count="1">antiphospholipid syndrome,</result>
+ <result title="frequency" count="1">infective endocarditis;</result>
+ <result title="frequency" count="1">mood disorder?</result>
+ <result title="frequency" count="1">hepatorenal syndrome.</result>
+ <result title="frequency" count="1">somatoform disorder</result>
+ <result title="frequency" count="1">hydronephrosis</result>
+ <result title="frequency" count="1">filariasis</result>
+ <result title="frequency" count="1">placenta praevia,</result>
+ <result title="frequency" count="1">congenital diaphragmatic hernia,</result>
+ <result title="frequency" count="1">acne vulgaris?</result>
+ <result title="frequency" count="1">breast disease.</result>
+ <result title="frequency" count="1">chronic myeloid leukemia</result>
+ <result title="frequency" count="1">neurofibromatosis</result>
+ <result title="frequency" count="1">malignant pleural mesothelioma.</result>
+ <result title="frequency" count="1">thalassemia</result>
+ <result title="frequency" count="1">polycystic ovary syndrome?</result>
+ <result title="frequency" count="1">scabies</result>
+ <result title="frequency" count="1">multiple system atrophy,</result>
+ <result title="frequency" count="1">transient cerebral ischemia</result>
+ <result title="frequency" count="1">optic atrophy</result>
+ <result title="frequency" count="1">kidney cancer</result>
+ <result title="frequency" count="1">coeliac disease</result>
+ <result title="frequency" count="1">avoidant personality disorder</result>
+ <result title="frequency" count="1">myelitis</result>
+ <result title="frequency" count="1">oligohydramnios</result>
+ <result title="frequency" count="1">polycystic ovary syndrome.</result>
+ <result title="frequency" count="1">autoimmune thyroiditis;</result>
+ <result title="frequency" count="1">acne vulgaris,</result>
+ <result title="frequency" count="1">interstitial emphysema</result>
+ <result title="frequency" count="1">toxic shock syndrome.</result>
+ <result title="frequency" count="1">toxic shock syndrome,</result>
+ <result title="frequency" count="1">hepatorenal syndrome;</result>
+ <result title="frequency" count="1">diabetic retinopathy?</result>
+ <result title="frequency" count="1">autoimmune thyroiditis,</result>
+ <result title="frequency" count="1">respiratory disease;</result>
+ <result title="frequency" count="1">iron deficiency, anemia</result>
+ <result title="frequency" count="1">cocaine abuse,</result>
+ <result title="frequency" count="1">restless legs syndrome,</result>
+ <result title="frequency" count="1">pervasive developmental disorder.</result>
+ <result title="frequency" count="1">neuroleptic malignant syndrome.</result>
+ <result title="frequency" count="1">mediastinitis</result>
+ <result title="frequency" count="1">biliary tract cancer</result>
+ <result title="frequency" count="1">autoimmune disease.</result>
+ <result title="frequency" count="1">chronic fatigue syndrome?</result>
+ <result title="frequency" count="1">autoimmune disease;</result>
+ <result title="frequency" count="1">herpes zoster.</result>
+ <result title="frequency" count="1">renovascular hypertension</result>
+ <result title="frequency" count="1">thyroid adenoma,</result>
+ <result title="frequency" count="1">chronic rhinitis,</result>
+ <result title="frequency" count="1">tarsal tunnel syndrome,</result>
+ <result title="frequency" count="1">chronic rhinitis.</result>
+ <result title="frequency" count="1">essential tremor</result>
+ <result title="frequency" count="1">intussusception</result>
+ <result title="frequency" count="1">graves' disease</result>
+ <result title="frequency" count="1">cleft lip.</result>
+ <result title="frequency" count="1">plasmodium falciparum malaria</result>
+ <result title="frequency" count="1">cauda equina syndrome;</result>
+ <result title="frequency" count="1">porphyria</result>
+ <result title="frequency" count="1">sudden infant death syndrome</result>
+ <result title="frequency" count="1">essential tremor,</result>
+ <result title="frequency" count="1">primary ciliary dyskinesia</result>
+ <result title="frequency" count="1">systolic heart failure.</result>
+ <result title="frequency" count="1">alpha 1-antitrypsin deficiency;</result>
+ <result title="frequency" count="1">disseminated intravascular coagulation.</result>
+</results>

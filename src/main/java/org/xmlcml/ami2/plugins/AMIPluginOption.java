@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 import org.jsoup.helper.StringUtil;
 import org.xmlcml.ami2.plugins.gene.GenePluginOption;
 import org.xmlcml.ami2.plugins.regex.RegexPluginOption;
+import org.xmlcml.ami2.plugins.search.SearchPluginOption;
 import org.xmlcml.ami2.plugins.sequence.SequencePluginOption;
 import org.xmlcml.ami2.plugins.species.SpeciesPluginOption;
 import org.xmlcml.ami2.plugins.word.WordPluginOption;
@@ -59,6 +60,9 @@ public abstract class AMIPluginOption extends PluginOption {
 
 	}
 
+	/** this is where the subclassing is created.
+	 * 
+	 * */
 	public static AMIPluginOption createPluginOption(String cmd) {
 		Matcher matcher = COMMAND.matcher(cmd);
 		if (cmd == null || cmd.trim().equals("")) {
@@ -81,6 +85,8 @@ public abstract class AMIPluginOption extends PluginOption {
 			pluginOption = new GenePluginOption(options,flags);
 		} else if (command.equals(RegexPluginOption.TAG)) {
 			pluginOption = new RegexPluginOption(options,flags); 
+		} else if (command.equals(SearchPluginOption.TAG)) {
+			pluginOption = new SearchPluginOption(options,flags); 
 		} else if (command.equals(SequencePluginOption.TAG)) {
 			pluginOption = new SequencePluginOption(options,flags); 
 		} else if (command.equals(SpeciesPluginOption.TAG)) {
