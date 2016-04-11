@@ -7,7 +7,7 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.ami2.tokens.PorterStemmer;
+import org.xmlcml.ami2.wordutil.PorterStemmer;
 
 public class TermPhrase implements Comparable<TermPhrase> {
 	

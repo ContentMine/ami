@@ -243,10 +243,11 @@ public class ResultsAnalysis implements CellCalculator {
 				throw new RuntimeException("Cannot find plugin: "+pluginOptionName);
 			}
 			CellRenderer cellRenderer = pluginOption.getNewCellRenderer();
+			cellRenderer.setFlag(pluginOptionName);
 			cellRendererList.add(cellRenderer);
 		}
 		LOG.trace("CELL "+cellRendererList);
-		dataTablesTool.setColumnHeadingList(cellRendererList);
+		dataTablesTool.setCellRendererList(cellRendererList);
 		dataTablesTool.setRowHeadingList(this.getSortedCTreeNameList());
 		
 		HtmlTable htmlTable = dataTablesTool.createHtmlDataTable();

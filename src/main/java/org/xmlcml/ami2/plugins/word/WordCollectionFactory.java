@@ -9,7 +9,8 @@ import java.util.Map;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.ami2.tokens.LuceneUtils;
+import org.xmlcml.ami2.wordutil.LuceneUtils;
+import org.xmlcml.ami2.wordutil.WordSetWrapper;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ResultElement;
@@ -25,6 +26,13 @@ import com.google.common.collect.Multisets;
 import nu.xom.Attribute;
 import nu.xom.IllegalCharacterDataException;
 
+/** creates collections of words.
+ * 
+ * ultimately move to wordutil
+ * 
+ * @author pm286
+ *
+ */
 public class WordCollectionFactory {
 	private static final Logger LOG = Logger.getLogger(WordCollectionFactory.class);
 	static {
@@ -76,12 +84,12 @@ public class WordCollectionFactory {
 	void extractWords() {
 		List<String> words = createWordList();
 		if (words == null) {
-			amiArgProcessor.TREE_LOG().warn("no words found to extract");
+			LOG.warn("no words found to extract");
 			System.err.print("!");
 			return;
 		}
 		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
-		List<String> chosenMethods = wordArgProcessor.getChosenMethods();
+		List<String> chosenMethods = wordArgProcessor.getChosenWordAggregationMethods();
 //		LOG.debug("chosen methods: "+chosenMethods);
 		if (chosenMethods.contains(WordArgProcessor.WORD_LENGTHS)) {
 			ResultsElement resultsElement = createWordLengthsResultsElement(words);
@@ -91,10 +99,6 @@ public class WordCollectionFactory {
 			ResultsElement resultsElement = getWordFrequencies(words);
 			wordArgProcessor.addResultsElement(resultsElement);
 		}
-//		if (chosenMethods.contains(WordArgProcessor.WORD_SEARCH) || chosenMethods.contains(WordArgProcessor.SEARCH)) {
-//			ResultsElement resultsElement = runSearch(words);
-//			wordArgProcessor.addResultsElement(resultsElement);
-//		}
 	}
 
 	public List<String> createWordList() {
@@ -107,7 +111,7 @@ public class WordCollectionFactory {
 				rawWords = currentCTree.extractWordsFromPDFTXT();
 			} else {
 				String msg = "No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory();
-				amiArgProcessor.TREE_LOG().warn(msg);
+				LOG.warn(msg);
 				System.err.print("!");
 			}
 		}
@@ -115,34 +119,28 @@ public class WordCollectionFactory {
 	}
 
 	private List<String> createTransformedWords(List<String> rawWords) {
-		LOG.trace("REFACTOR createTransformedWords");
 		List<String> transformedWords = null;
 		if (rawWords != null) {
-			transformedWords = rawWords;
-			if (!(amiArgProcessor instanceof WordArgProcessor)) {
-				LOG.trace("must develop TokenStream for : "+amiArgProcessor);
-			} else {
-				transformedWords = transformWordStream(transformedWords);
-			}
+			transformedWords = transformWordStream(rawWords);
 		}
 		return transformedWords;
 	}
 
 	private List<String> transformWordStream(List<String> transformedWords) {
-		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
-		if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.ABBREVIATION)) {
+		AMIArgProcessor wordArgProcessor = (AMIArgProcessor) amiArgProcessor;
+		if (amiArgProcessor.getChosenWordTypes().contains(AMIArgProcessor.ABBREVIATION)) {
 			transformedWords = createAbbreviations(transformedWords);
 		}
-		if (wordArgProcessor.getChosenWordTypes().contains(WordArgProcessor.CAPITALIZED)) {
+		if (amiArgProcessor.getChosenWordTypes().contains(AMIArgProcessor.CAPITALIZED)) {
 			transformedWords = createCapitalized(transformedWords);
 		} 
-		if (wordArgProcessor.getWordCaseList().contains(WordArgProcessor.IGNORE)) {
+		if (amiArgProcessor.getWordCaseList().contains(AMIArgProcessor.IGNORE)) {
 			transformedWords = toLowerCase(transformedWords);
 		}
 		for (WordSetWrapper stopwordSet : wordArgProcessor.getStopwordSetList()) {
 			transformedWords = applyStopwordFilter(stopwordSet, transformedWords);
 		}
-		if (wordArgProcessor.getStemming()) {
+		if (amiArgProcessor.getStemming()) {
 			transformedWords = LuceneUtils.applyPorterStemming(transformedWords);
 		}
 		return transformedWords;
@@ -266,7 +264,9 @@ public class WordCollectionFactory {
 			for (String rawWord : words) {
 	//			rawWord = rawWord.toLowerCase(); // normalize case
 				rawWord = rawWord.replaceAll("[\\d+]", ""); // remove numbers
-	//			if (!stopwords.contains(rawWord.toLowerCase()) 
+				if (stopwords != null && stopwords.contains(rawWord.toLowerCase())) {
+					continue;
+				}
 				if (rawWord.length() >= minRawWordLength 
 						&& rawWord.length() <= maxRawWordLength) { //remove stopwords and short strings
 					wordSet.add(rawWord);

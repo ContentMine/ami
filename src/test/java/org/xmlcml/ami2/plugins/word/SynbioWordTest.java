@@ -5,6 +5,8 @@ import java.io.IOException;
 
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.search.SearchArgProcessor;
 import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.norma.util.NormaTestFixtures;
 
@@ -16,11 +18,11 @@ public class SynbioWordTest {
 		CMineTestFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_PATENTS_DIR, "US08979/US08979000-20150317"), targetDir);
 		NormaTestFixtures.runNorma(targetDir, "project", "uspto2html"); // writes to test dir
 		String args = "-i scholarly.html"
-				+ " --w.search /org/xmlcml/ami2/plugins/synbio/synbio0.xml"
+				+ " --sr.search /org/xmlcml/ami2/plugins/synbio/synbio0.xml"
 				+ " --w.stem true"
 				+ " --w.case ignore"    
 				+ " -q "+targetDir; 
-		WordArgProcessor argProcessor = new WordArgProcessor(args);
+		AMIArgProcessor argProcessor = new SearchArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
 				"<results title=\"synbio\">"
@@ -38,9 +40,9 @@ public class SynbioWordTest {
 		CMineTestFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_PATENTS_DIR, "US08979"), targetDir);
 		NormaTestFixtures.runNorma(targetDir, "project", "uspto2html"); // writes to test dir
 		String args = "-i scholarly.html"
-				+ " --w.search /org/xmlcml/ami2/plugins/synbio/synbio0.xml"
+				+ " --sr.search /org/xmlcml/ami2/plugins/synbio/synbio0.xml"
 				+ " --project "+targetDir; 
-		WordArgProcessor argProcessor = new WordArgProcessor(args);
+		AMIArgProcessor argProcessor = new SearchArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
 				"<results title=\"synbio\" />"
@@ -54,9 +56,9 @@ public class SynbioWordTest {
 		CMineTestFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_PATENTS_DIR, "US08979"), targetDir);
 		NormaTestFixtures.runNorma(targetDir, "project", "uspto2html"); // writes to test dir
 		String args = "-i scholarly.html"
-				+ " --w.search /org/xmlcml/ami2/plugins/synbio/synbio.xml"
+				+ " --sr.search /org/xmlcml/ami2/plugins/synbio/synbio.xml"
 				+ " --project "+targetDir; 
-		WordArgProcessor argProcessor = new WordArgProcessor(args);
+		AMIArgProcessor argProcessor = new SearchArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
 				"<results title=\"synbioPhrases\" />"

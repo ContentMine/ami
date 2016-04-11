@@ -22,15 +22,4 @@ public class GeneResultsElement extends ResultsElement {
 		this(GENE);
 	}
 	
-//	public List<String> getExactList() {
-//		if (nameList == null) {
-//			nameList = new ArrayList<String>();
-//			for (ResultElement resultElement : this) {
-//				String name = resultElement.getExact();
-//				nameList.add(name);
-//			}
-//		}
-//		return nameList;
-//	}
-
 }

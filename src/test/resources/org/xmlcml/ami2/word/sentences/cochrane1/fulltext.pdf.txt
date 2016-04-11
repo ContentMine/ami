@@ -675,7 +675,7 @@ The recommendations are presented in tabular form in sections 5.2 and 5.3, which
 (oR) for the risk of wound infection and numbers needed to treat (NNT), ie the number of patients that must 
 receive prophylaxis in order to prevent one wound infection. The method of calculation of NNT from baseline 
 risk and odds ratio is given in Annex 6.
-Where possible the oRs and NNTs have been taken from published meta-analyses. In some cases, however, 
+here possible the oRs and NNTs have been taken from published meta-analyses. In some cases, however, 
 data from pooled trials has been combined without formal meta-analysis. In other cases, NNTs and oRs from 
 individual trials are presented (see supporting material for this guideline on the SIGN website: www.sign.ac.uk).
 A negative NNT indicates that the treatment has a harmful effect and is referred to as the number needed 
@@ -927,7 +927,7 @@ placement recommended insertion of a prosthetic device in
 adults
 GASTRoINTESTINAl
 Appendicectomy A Antibiotic prophylaxis is highly 0.64 47
-Wound infection
+ound infection
 recommended 0.29 64 Intra-abdominal 1
 ++107
 abscesses
@@ -940,7 +940,7 @@ gastrostomy (PEG)
 Splenectomy  Antibiotic prophylaxis is not Post-splenectomy prophylaxis is recommended covered elsewhere112
 uRoGENITAl
 Circumcision (routine  Antibiotic prophylaxis is not elective) recommended
-Where a urinary catheter has been Urinary tract 
+here a urinary catheter has been Urinary tract 
 Hypospadias repair B inserted, antibiotic prophylaxis should be 0.26 4 infection 1+ 145,146
 considered until the catheter is removed. 0.21 6 Wound infection
 | 21
@@ -1963,7 +1963,7 @@ BENEFITS AND RISKS oF ANTIBIoTIC PRoPHYLAxIS
 Key question See guideline section
 2. What is the likelihood that those people with a penicillin allergy are allergic to 4.2.1
 cephalosporins?
-What is the best definition of penicillin allergy?
+hat is the best definition of penicillin allergy?
 3. What is the evidence that administering antibiotic prophylaxis during surgery 4.2.2-4.2.4
 increases the risk of the following in the patient?
 • anaphylaxis

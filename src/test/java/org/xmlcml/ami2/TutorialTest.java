@@ -128,7 +128,7 @@ public class TutorialTest {
 				+ " --context 35 50"
 				+ " --w.words wordFrequencies"
 				+ " --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
-		WordArgProcessor wordArgProcessor = new WordArgProcessor(args);
+		AMIArgProcessor wordArgProcessor = new WordArgProcessor(args);
 		wordArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(wordArgProcessor, 1, 0, 
 				"<results title=\"frequencies\">"
@@ -153,7 +153,7 @@ public class TutorialTest {
 				+ " --context 35 50"
 				+ " --w.words wordFrequencies"
 				+ " --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
-		WordArgProcessor wordArgProcessor = new WordArgProcessor(args);
+		AMIArgProcessor wordArgProcessor = new WordArgProcessor(args);
 		wordArgProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(wordArgProcessor, 1, 0, 
 				"<results title=\"frequencies\">"
@@ -194,7 +194,7 @@ public class TutorialTest {
 					+ " -i fulltext.xml"
 					+ " --w.words wordFrequencies"
 					+ " -o scholarly.html";
-			WordArgProcessor wordArgProcessor = new WordArgProcessor(args);
+			AMIArgProcessor wordArgProcessor = new WordArgProcessor(args);
 			wordArgProcessor.runAndOutput();
 			AMIFixtures.checkResultsElementList(wordArgProcessor, 1, 0, 
 					"<results title=\"frequencies\">"

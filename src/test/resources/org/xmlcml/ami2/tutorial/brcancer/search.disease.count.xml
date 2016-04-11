@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="10064">cancer</result>
+ <result title="frequency" count="6033">breast cancer</result>
+ <result title="frequency" count="589">breast cancer.</result>
+ <result title="frequency" count="334">breast cancer,</result>
+ <result title="frequency" count="204">colorectal cancer</result>
+ <result title="frequency" count="188">lung cancer</result>
+ <result title="frequency" count="162">ovarian cancer</result>
+ <result title="frequency" count="118">suppression</result>
+ <result title="frequency" count="92">leukemia</result>
+ <result title="frequency" count="82">diarrhea</result>
+ <result title="frequency" count="81">bladder cancer</result>
+ <result title="frequency" count="75">pancreatic cancer</result>
+ <result title="frequency" count="64">lymphoma</result>
+ <result title="frequency" count="59">carcinoma in situ</result>
+ <result title="frequency" count="59">prostate cancer</result>
+ <result title="frequency" count="57">rash</result>
+ <result title="frequency" count="56">neutropenia</result>
+ <result title="frequency" count="54">esophageal cancer</result>
+ <result title="frequency" count="41">breast cancer;</result>
+ <result title="frequency" count="40">cholangiocarcinoma</result>
+ <result title="frequency" count="39">hepatocellular carcinoma</result>
+ <result title="frequency" count="39">ovarian cancer.</result>
+ <result title="frequency" count="39">colon cancer</result>
+ <result title="frequency" count="33">cardiomyopathy</result>
+ <result title="frequency" count="32">sarcoma</result>
+ <result title="frequency" count="29">myeloid leukemia</result>
+ <result title="frequency" count="26">multiple myeloma</result>
+ <result title="frequency" count="26">neuropathy</result>
+ <result title="frequency" count="25">hypersensitivity</result>
+ <result title="frequency" count="24">renal cell carcinoma</result>
+ <result title="frequency" count="23">corneal neovascularization</result>
+ <result title="frequency" count="21">gallbladder cancer</result>
+ <result title="frequency" count="21">cardiovascular disease</result>
+ <result title="frequency" count="21">heart disease</result>
+ <result title="frequency" count="21">lung cancer.</result>
+ <result title="frequency" count="17">breast cancer?</result>
+ <result title="frequency" count="17">congestive heart failure</result>
+ <result title="frequency" count="17">arthritis</result>
+ <result title="frequency" count="17">acute myeloid leukemia</result>
+ <result title="frequency" count="16">mesothelioma</result>
+ <result title="frequency" count="16">cervical cancer</result>
+ <result title="frequency" count="16">endometrial cancer</result>
+ <result title="frequency" count="16">lung cancer,</result>
+ <result title="frequency" count="15">bladder cancer.</result>
+ <result title="frequency" count="15">ovarian cancer,</result>
+ <result title="frequency" count="15">biliary tract cancer</result>
+ <result title="frequency" count="14">anemia</result>
+ <result title="frequency" count="14">malignant pleural mesothelioma</result>
+ <result title="frequency" count="13">colorectal cancer,</result>
+ <result title="frequency" count="12">lung carcinoma</result>
+ <result title="frequency" count="12">stomatitis</result>
+ <result title="frequency" count="12">thrombocytopenia</result>
+ <result title="frequency" count="11">glioma</result>
+ <result title="frequency" count="11">neoplasm</result>
+ <result title="frequency" count="11">colorectal cancer.</result>
+ <result title="frequency" count="10">atherosclerosis</result>
+ <result title="frequency" count="10">pancreatic cancer,</result>
+ <result title="frequency" count="10">hepatitis</result>
+ <result title="frequency" count="10">hyperglycemia</result>
+ <result title="frequency" count="9">intermittent claudication</result>
+ <result title="frequency" count="9">esophageal cancer.</result>
+ <result title="frequency" count="9">chronic lymphocytic leukemia</result>
+ <result title="frequency" count="9">pancreatic cancer.</result>
+ <result title="frequency" count="9">gastrointestinal cancer</result>
+ <result title="frequency" count="9">renal cell carcinoma,</result>
+ <result title="frequency" count="8">endometriosis</result>
+ <result title="frequency" count="8">male breast cancer</result>
+ <result title="frequency" count="8">multiple sclerosis</result>
+ <result title="frequency" count="8">stroke</result>
+ <result title="frequency" count="8">obesity</result>
+ <result title="frequency" count="8">cardiac arrest</result>
+ <result title="frequency" count="7">thyroid cancer</result>
+ <result title="frequency" count="7">prostate cancer.</result>
+ <result title="frequency" count="7">head and neck cancer</result>
+ <result title="frequency" count="7">stomach cancer</result>
+ <result title="frequency" count="7">tuberous sclerosis</result>
+ <result title="frequency" count="7">adenoma</result>
+ <result title="frequency" count="7">lung carcinoma,</result>
+ <result title="frequency" count="6">lung disease</result>
+ <result title="frequency" count="6">myeloid leukemia,</result>
+ <result title="frequency" count="6">prostate cancer,</result>
+ <result title="frequency" count="6">intrahepatic cholangiocarcinoma</result>
+ <result title="frequency" count="6">gastritis</result>
+ <result title="frequency" count="6">colon cancer,</result>
+ <result title="frequency" count="6">proteinuria</result>
+ <result title="frequency" count="6">heart disease,</result>
+ <result title="frequency" count="6">chronic myeloid leukemia</result>
+ <result title="frequency" count="6">squamous-cell carcinoma</result>
+ <result title="frequency" count="6">lymphoblastic leukemia</result>
+ <result title="frequency" count="6">carcinoma in situ,</result>
+ <result title="frequency" count="6">dermatitis</result>
+ <result title="frequency" count="6">pneumonia</result>
+ <result title="frequency" count="6">lung cancer;</result>
+ <result title="frequency" count="6">follicular lymphoma</result>
+ <result title="frequency" count="6">acute promyelocytic leukemia</result>
+ <result title="frequency" count="5">peritonitis</result>
+ <result title="frequency" count="5">tuberculosis</result>
+ <result title="frequency" count="5">gastrointestinal stromal tumor</result>
+ <result title="frequency" count="5">breast disease</result>
+ <result title="frequency" count="5">esophageal cancer,</result>
+ <result title="frequency" count="5">acute lymphoblastic leukemia</result>
+ <result title="frequency" count="5">lymphadenopathy</result>
+ <result title="frequency" count="5">retinoblastoma</result>
+ <result title="frequency" count="5">osteosarcoma</result>
+ <result title="frequency" count="5">neuroblastoma</result>
+ <result title="frequency" count="5">cardiovascular disease,</result>
+ <result title="frequency" count="5">rheumatoid arthritis</result>
+ <result title="frequency" count="5">paronychia</result>
+ <result title="frequency" count="5">colitis</result>
+ <result title="frequency" count="5">peripheral neuropathy</result>
+ <result title="frequency" count="4">interstitial lung disease</result>
+ <result title="frequency" count="4">allergy</result>
+ <result title="frequency" count="4">cervical cancer,</result>
+ <result title="frequency" count="4">cataract</result>
+ <result title="frequency" count="4">myelodysplastic syndrome</result>
+ <result title="frequency" count="4">leukopenia</result>
+ <result title="frequency" count="4">acute lymphoblastic leukemia,</result>
+ <result title="frequency" count="4">alopecia</result>
+ <result title="frequency" count="4">bladder cancer,</result>
+ <result title="frequency" count="4">meningitis</result>
+ <result title="frequency" count="4">tetanus</result>
+ <result title="frequency" count="4">corneal neovascularization.</result>
+ <result title="frequency" count="4">lymphoblastic leukemia,</result>
+ <result title="frequency" count="4">peripheral artery disease</result>
+ <result title="frequency" count="4">peripheral neuropathy,</result>
+ <result title="frequency" count="4">hypokalemia</result>
+ <result title="frequency" count="3">chronic myeloid leukemia,</result>
+ <result title="frequency" count="3">hepatocellular carcinoma,</result>
+ <result title="frequency" count="3">thymoma</result>
+ <result title="frequency" count="3">osteoarthritis</result>
+ <result title="frequency" count="3">mantle cell lymphoma</result>
+ <result title="frequency" count="3">cardiac arrest,</result>
+ <result title="frequency" count="3">diabetes mellitus,</result>
+ <result title="frequency" count="3">premature ovarian failure</result>
+ <result title="frequency" count="3">psoriatic arthritis,</result>
+ <result title="frequency" count="3">cholestasis</result>
+ <result title="frequency" count="3">pancytopenia</result>
+ <result title="frequency" count="3">acute myeloid leukemia,</result>
+ <result title="frequency" count="3">endometrial cancer,</result>
+ <result title="frequency" count="3">cystic fibrosis</result>
+ <result title="frequency" count="3">heart disease.</result>
+ <result title="frequency" count="3">skin cancer</result>
+ <result title="frequency" count="3">acinic cell carcinoma</result>
+ <result title="frequency" count="3">myelofibrosis</result>
+ <result title="frequency" count="3">gallbladder cancer.</result>
+ <result title="frequency" count="3">breast carcinoma in situ</result>
+ <result title="frequency" count="3">cardiovascular disease.</result>
+ <result title="frequency" count="3">thyroid cancer,</result>
+ <result title="frequency" count="3">thyroid cancer.</result>
+ <result title="frequency" count="3">psoriasis</result>
+ <result title="frequency" count="3">oligohydramnios</result>
+ <result title="frequency" count="3">osteoporosis</result>
+ <result title="frequency" count="3">lung disease,</result>
+ <result title="frequency" count="3">glioblastoma multiforme</result>
+ <result title="frequency" count="3">chronic lymphocytic leukemia,</result>
+ <result title="frequency" count="3">diabetes mellitus</result>
+ <result title="frequency" count="3">panhypopituitarism</result>
+ <result title="frequency" count="3">stomach cancer.</result>
+ <result title="frequency" count="3">shortness</result>
+ <result title="frequency" count="3">liver cancer</result>
+ <result title="frequency" count="2">uterine cancer</result>
+ <result title="frequency" count="2">primary peritoneal carcinoma</result>
+ <result title="frequency" count="2">testicular cancer</result>
+ <result title="frequency" count="2">cauda equina syndrome</result>
+ <result title="frequency" count="2">autoimmune disease</result>
+ <result title="frequency" count="2">acute respiratory distress syndrome</result>
+ <result title="frequency" count="2">dementia</result>
+ <result title="frequency" count="2">ankylosing spondylitis</result>
+ <result title="frequency" count="2">lymphedema</result>
+ <result title="frequency" count="2">rectum cancer,</result>
+ <result title="frequency" count="2">glaucoma</result>
+ <result title="frequency" count="2">amyotrophic lateral sclerosis</result>
+ <result title="frequency" count="2">gastrointestinal cancer.</result>
+ <result title="frequency" count="2">multiple myeloma,</result>
+ <result title="frequency" count="2">multiple myeloma.</result>
+ <result title="frequency" count="2">aids</result>
+ <result title="frequency" count="2">acute lymphoblastic leukemia.</result>
+ <result title="frequency" count="2">valvular heart disease,</result>
+ <result title="frequency" count="2">glioblastoma multiforme.</result>
+ <result title="frequency" count="2">glioblastoma multiforme,</result>
+ <result title="frequency" count="2">cystitis</result>
+ <result title="frequency" count="2">cholangitis</result>
+ <result title="frequency" count="2">acute leukemia</result>
+ <result title="frequency" count="2">polycythemia</result>
+ <result title="frequency" count="2">breast disease,</result>
+ <result title="frequency" count="2">constipation</result>
+ <result title="frequency" count="2">congestive heart failure.</result>
+ <result title="frequency" count="2">congestive heart failure,</result>
+ <result title="frequency" count="2">kidney cancer</result>
+ <result title="frequency" count="2">biliary tract cancer.</result>
+ <result title="frequency" count="2">malabsorption</result>
+ <result title="frequency" count="2">lymphoblastic leukemia.</result>
+ <result title="frequency" count="2">pulmonary embolism,</result>
+ <result title="frequency" count="2">peripheral neuropathy.</result>
+ <result title="frequency" count="2">schizophrenia</result>
+ <result title="frequency" count="2">ulcerative colitis</result>
+ <result title="frequency" count="2">leishmaniasis</result>
+ <result title="frequency" count="2">carcinoma in situ;</result>
+ <result title="frequency" count="2">spondylitis</result>
+ <result title="frequency" count="2">bowel obstruction</result>
+ <result title="frequency" count="2">acute leukemia,</result>
+ <result title="frequency" count="2">urticaria</result>
+ <result title="frequency" count="2">measles</result>
+ <result title="frequency" count="1">chronic myeloid leukemia.</result>
+ <result title="frequency" count="1">head and neck cancer,</result>
+ <result title="frequency" count="1">severe combined immunodeficiency;</result>
+ <result title="frequency" count="1">hydrocephalus</result>
+ <result title="frequency" count="1">hepatocellular carcinoma;</result>
+ <result title="frequency" count="1">atopic dermatitis</result>
+ <result title="frequency" count="1">hepatocellular carcinoma.</result>
+ <result title="frequency" count="1">pleomorphic adenoma</result>
+ <result title="frequency" count="1">myeloid leukemia;</result>
+ <result title="frequency" count="1">cutaneous leishmaniasis,</result>
+ <result title="frequency" count="1">leprosy</result>
+ <result title="frequency" count="1">familial adenomatous polyposis,</result>
+ <result title="frequency" count="1">pleurisy</result>
+ <result title="frequency" count="1">pulmonary fibrosis;</result>
+ <result title="frequency" count="1">pancreatitis</result>
+ <result title="frequency" count="1">ileus</result>
+ <result title="frequency" count="1">transient neonatal neutropenia,</result>
+ <result title="frequency" count="1">bowel obstruction,</result>
+ <result title="frequency" count="1">otitis externa,</result>
+ <result title="frequency" count="1">premature ovarian failure,</result>
+ <result title="frequency" count="1">pituitary adenoma</result>
+ <result title="frequency" count="1">hemolytic anemia,</result>
+ <result title="frequency" count="1">intrahepatic cholangiocarcinoma,</result>
+ <result title="frequency" count="1">eye disease.</result>
+ <result title="frequency" count="1">liver cancer,</result>
+ <result title="frequency" count="1">corneal disease</result>
+ <result title="frequency" count="1">liver cancer.</result>
+ <result title="frequency" count="1">myeloid leukemia.</result>
+ <result title="frequency" count="1">diabetes mellitus;</result>
+ <result title="frequency" count="1">b-cell lymphoma</result>
+ <result title="frequency" count="1">encephalitis</result>
+ <result title="frequency" count="1">ataxia telangiectasia</result>
+ <result title="frequency" count="1">glomerulonephritis</result>
+ <result title="frequency" count="1">lymphangitis</result>
+ <result title="frequency" count="1">non-hodgkin lymphoma,</result>
+ <result title="frequency" count="1">acute myocardial infarction,</result>
+ <result title="frequency" count="1">gastrointestinal stromal tumor,</result>
+ <result title="frequency" count="1">gastrointestinal cancer,</result>
+ <result title="frequency" count="1">respiratory disease</result>
+ <result title="frequency" count="1">fallopian tube cancer,</result>
+ <result title="frequency" count="1">ankylosing spondylitis,</result>
+ <result title="frequency" count="1">anthrax</result>
+ <result title="frequency" count="1">bronchiolitis</result>
+ <result title="frequency" count="1">metabolic syndrome</result>
+ <result title="frequency" count="1">dyslipidemia</result>
+ <result title="frequency" count="1">influenza</result>
+ <result title="frequency" count="1">heart attack</result>
+ <result title="frequency" count="1">gastrointestinal disease,</result>
+ <result title="frequency" count="1">follicular lymphoma,</result>
+ <result title="frequency" count="1">skin cancer.</result>
+ <result title="frequency" count="1">infectious mononucleosis</result>
+ <result title="frequency" count="1">nasopharyngeal carcinoma</result>
+ <result title="frequency" count="1">macular degeneration.</result>
+ <result title="frequency" count="1">diabetes insipidus,</result>
+ <result title="frequency" count="1">acute myocardial infarction</result>
+ <result title="frequency" count="1">allergic asthma.</result>
+ <result title="frequency" count="1">barrett's esophagus</result>
+ <result title="frequency" count="1">encephalopathy</result>
+ <result title="frequency" count="1">nephrotic syndrome</result>
+ <result title="frequency" count="1">breast disease.</result>
+ <result title="frequency" count="1">nervous system disease</result>
+ <result title="frequency" count="1">malignant pleural mesothelioma,</result>
+ <result title="frequency" count="1">renal agenesis,</result>
+ <result title="frequency" count="1">malignant pleural mesothelioma.</result>
+ <result title="frequency" count="1">male breast cancer,</result>
+ <result title="frequency" count="1">mantle cell lymphoma,</result>
+ <result title="frequency" count="1">brain cancer</result>
+ <result title="frequency" count="1">rectum cancer</result>
+ <result title="frequency" count="1">uveitis</result>
+ <result title="frequency" count="1">sexual dysfunction.</result>
+ <result title="frequency" count="1">macular degeneration</result>
+ <result title="frequency" count="1">congestive heart failure;</result>
+ <result title="frequency" count="1">biliary tract cancer,</result>
+ <result title="frequency" count="1">myelitis</result>
+ <result title="frequency" count="1">angioedema</result>
+ <result title="frequency" count="1">pulmonary embolism</result>
+ <result title="frequency" count="1">purpura</result>
+ <result title="frequency" count="1">bone disease</result>
+ <result title="frequency" count="1">pancreatic ductal carcinoma</result>
+ <result title="frequency" count="1">pulmonary embolism.</result>
+ <result title="frequency" count="1">lymphoblastic leukemia;</result>
+ <result title="frequency" count="1">colorectal cancer;</result>
+ <result title="frequency" count="1">ocular hypertension</result>
+ <result title="frequency" count="1">seminoma</result>
+ <result title="frequency" count="1">ovarian cancer;</result>
+ <result title="frequency" count="1">peliosis hepatis.</result>
+ <result title="frequency" count="1">peripheral neuropathy;</result>
+ <result title="frequency" count="1">otitis media,</result>
+ <result title="frequency" count="1">pulmonary tuberculosis</result>
+ <result title="frequency" count="1">nephritis</result>
+ <result title="frequency" count="1">pulmonary hypertension,</result>
+ <result title="frequency" count="1">necrotizing fasciitis</result>
+ <result title="frequency" count="1">neuroendocrine tumor</result>
+ <result title="frequency" count="1">autoimmune disease,</result>
+ <result title="frequency" count="1">oral cancer</result>
+ <result title="frequency" count="1">carcinoma in situ.</result>
+ <result title="frequency" count="1">sexual dysfunction</result>
+ <result title="frequency" count="1">liver disease</result>
+ <result title="frequency" count="1">renal cell carcinoma;</result>
+ <result title="frequency" count="1">vitiligo</result>
+ <result title="frequency" count="1">severe combined immunodeficiency</result>
+ <result title="frequency" count="1">central nervous system disease</result>
+ <result title="frequency" count="1">exanthem</result>
+ <result title="frequency" count="1">progressive multifocal leukoencephalopathy;</result>
+ <result title="frequency" count="1">keratitis</result>
+ <result title="frequency" count="1">portal vein thrombosis</result>
+ <result title="frequency" count="1">renal cell carcinoma.</result>
+ <result title="frequency" count="1">dyspepsia</result>
+ <result title="frequency" count="1">unstable angina</result>
+ <result title="frequency" count="1">cholecystitis</result>
+ <result title="frequency" count="1">pericardial effusion.</result>
+ <result title="frequency" count="1">lung carcinoma.</result>
+ <result title="frequency" count="1">chronic lymphocytic leukemia.</result>
+ <result title="frequency" count="1">fibroadenoma</result>
+ <result title="frequency" count="1">autoimmune hemolytic anemia,</result>
+ <result title="frequency" count="1">osteonecrosis</result>
+ <result title="frequency" count="1">myelodysplastic syndrome.</result>
+ <result title="frequency" count="1">malaria</result>
+ <result title="frequency" count="1">cheilitis</result>
+ <result title="frequency" count="1">intestinal cancer</result>
+ <result title="frequency" count="1">tuberous sclerosis;</result>
+ <result title="frequency" count="1">acute leukemia.</result>
+ <result title="frequency" count="1">fibrosarcoma</result>
+ <result title="frequency" count="1">gallbladder cancer;</result>
+ <result title="frequency" count="1">microcephaly</result>
+ <result title="frequency" count="1">craniosynostosis</result>
+ <result title="frequency" count="1">cleft palate</result>
+ <result title="frequency" count="1">food allergy</result>
+ <result title="frequency" count="1">cutaneous leishmaniasis</result>
+ <result title="frequency" count="1">kidney cancer,</result>
+ <result title="frequency" count="1">kidney cancer.</result>
+ <result title="frequency" count="1">lung carcinoma;</result>
+ <result title="frequency" count="1">fasciitis</result>
+</results>

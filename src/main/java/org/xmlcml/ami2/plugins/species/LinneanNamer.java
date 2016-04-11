@@ -141,6 +141,7 @@ public class LinneanNamer {
 	 * @param nameList
 	 */
 	public List<String> expandAbbreviations(List<String> nameList) {
+
 		List<String> newNameList = new ArrayList<String>();
 		genusByAbbreviationMap = new HashMap<String, String>();
 		for (String name : nameList) {
@@ -181,6 +182,7 @@ public class LinneanNamer {
 	 * @return
 	 */
 	public List<String> lookupByName(String name) {
+		LOG.debug("LOOKUP NAME "+name);
 		ensureNameMultimap();
 		List<String> idList = nameMultimap.searchByNameValue(name);
 		return (idList == null ) ? new ArrayList<String>() : idList;

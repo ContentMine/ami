@@ -29,7 +29,7 @@ public class JAXTest {
 		Assert.assertNotNull("missing regex", dictionary.getRegexString());
 		List<DictionaryTerm> nonMatchingTerms = dictionary.checkNonMatchingTerms();
 		Assert.assertEquals("non matching terms: ", 32, nonMatchingTerms.size());
-		LOG.debug(nonMatchingTerms);
+		LOG.trace(nonMatchingTerms);
 	}
 
 

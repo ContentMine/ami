@@ -219,7 +219,7 @@ public class RegexComponent {
 					LOG.trace(fieldList);
 				} else {
 //					LOG.debug(value);
-					LOG.debug("Unusual fieldList: "+fieldList+" in "+(compoundRegex == null ? "unknown" : compoundRegex.getTitle())+"; found: "+regexElement.toXML());
+					LOG.warn("Unusual fieldList: "+fieldList+" in "+(compoundRegex == null ? "unknown" : compoundRegex.getTitle())+"; found: "+regexElement.toXML());
 					hasWord = false;
 				}
 			} else {

@@ -9,11 +9,11 @@ import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
+import org.xmlcml.ami2.wordutil.WordSetWrapper;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public class ClinicalTrialsDemo {
 
-	private static final String STOPWORDS_TXT = "/org/xmlcml/ami2/plugins/words/stopwords.txt";
 	private static final Logger LOG = Logger.getLogger(ClinicalTrialsDemo.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -115,7 +115,7 @@ public class ClinicalTrialsDemo {
     "trialstemp/http_www.trialsjournal.com_content_16_1_85/",
     "trialstemp/http_www.trialsjournal.com_content_16_1_9/",
 	"--w.words", WordArgProcessor.WORD_FREQUENCIES,
-	"--w.stopwords", STOPWORDS_TXT,
+	"--w.stopwords", WordSetWrapper.COMMON_ENGLISH_STOPWORDS_TXT,
 	"--w.wordtypes", "acronym",
 		};
 		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
@@ -125,7 +125,7 @@ public class ClinicalTrialsDemo {
 	private static void runDirectoryWithCMDirs() throws IOException {
 		FileUtils.copyDirectory(new File("trialsdata/"), new File("trialstemp/"));
 		String args[] = {
-			"-q trialstemp/ --w.words " + WordArgProcessor.WORD_FREQUENCIES + " --w.stopwords" +STOPWORDS_TXT,
+			"-q trialstemp/ --w.words " + WordArgProcessor.WORD_FREQUENCIES + " --w.stopwords " +WordSetWrapper.COMMON_ENGLISH_STOPWORDS_TXT,
 		};
 		DefaultArgProcessor argProcessor = new WordArgProcessor(args);
 		argProcessor.runAndOutput();

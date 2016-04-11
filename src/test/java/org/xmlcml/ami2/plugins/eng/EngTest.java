@@ -7,9 +7,9 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
-import org.xmlcml.ami2.plugins.word.WordTest;
-import org.xmlcml.norma.Norma;
+import org.xmlcml.ami2.wordutil.WordSetWrapper;
 
 public class EngTest {
 
@@ -20,8 +20,8 @@ public class EngTest {
 		FileUtils.copyDirectory(new File(ENG), new File("target/eng/"));
 		String args = 
 				"-q target/eng/ -i scholarly.html --w.words "+WordArgProcessor.WORD_FREQUENCIES +
-				" --w.stopwords "+WordTest.STOPWORDS_TXT  ;
-			WordArgProcessor argProcessor = new WordArgProcessor(args);
+				" --w.stopwords "+WordSetWrapper.COMMON_ENGLISH_STOPWORDS_TXT;
+			AMIArgProcessor argProcessor = new WordArgProcessor(args);
 			argProcessor.runAndOutput();
 			AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
 					"<results title=\"frequencies\">"

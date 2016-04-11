@@ -7,10 +7,10 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.gene.GenePluginOption;
 import org.xmlcml.ami2.plugins.regex.RegexPluginOption;
+import org.xmlcml.ami2.plugins.search.SearchPluginOption;
 import org.xmlcml.ami2.plugins.sequence.SequencePluginOption;
 import org.xmlcml.ami2.plugins.species.SpeciesPluginOption;
 import org.xmlcml.ami2.plugins.word.WordPluginOption;
-import org.xmlcml.cmine.files.PluginOption;
 
 public class AMIPluginOptionList {
 
@@ -22,6 +22,7 @@ public class AMIPluginOptionList {
 	public List<AMIPluginOption> pluginOptionList;
 	public final static AMIPluginOption GENE = new GenePluginOption();
 	public final static AMIPluginOption REGEX = new RegexPluginOption();
+	public final static AMIPluginOption SEARCH = new SearchPluginOption();
 	public final static AMIPluginOption SEQUENCE = new SequencePluginOption();
 	public final static AMIPluginOption SPECIES = new SpeciesPluginOption();
 	public final static AMIPluginOption WORD = new WordPluginOption();
@@ -35,6 +36,7 @@ public class AMIPluginOptionList {
 		pluginOptionList = new ArrayList<AMIPluginOption>();
 		pluginOptionList.add(GENE);
 		pluginOptionList.add(REGEX);
+		pluginOptionList.add(SEARCH);
 		pluginOptionList.add(SEQUENCE);
 		pluginOptionList.add(SPECIES);
 		pluginOptionList.add(WORD);

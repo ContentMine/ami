@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="prepositions">
+ <result pre="EVIDENCE 1++ High-quality meta-analyses, systematic reviews of RCTs, or RCTs" exact="with" post="a very low risk of bias 1+ Well-conducted meta-analyses,"/>
+ <result pre="risk of bias 1+ Well-conducted meta-analyses, systematic reviews, or RCTs" exact="with" post="a low risk of bias 1 - Meta-analyses, systematic"/>
+ <result pre="risk of bias 1 - Meta-analyses, systematic reviews, or RCTs" exact="with" post="a high risk of bias H igh-quality systematic reviews"/>
+ <result pre="case-control or cohort studies 2++ High-quality case-control or cohort studies" exact="with" post="a very low risk of confounding or bias and"/>
+ <result pre="the relationship is causal 2+ Well-conducted case-control or cohort studies" exact="with" post="a low risk of confounding or bias and a"/>
+ <result pre="the relationship is causal 2 - Case-control or cohort studies" exact="with" post="a high risk of confounding or bias and a"/>
+ <result pre="series 4 Expert opinion RECOMMENDATIONS Some recommendations can be made" exact="with" post="more certainty than others. The wording used in the"/>
+ <result pre="used in the recommendations in this guideline denotes the certainty" exact="with" post="which the recommendation is made (the ‘strength’ of the"/>
+ <result pre="evidence. Although higher-quality evidence is more likely to be associated" exact="with" post="strong recommendations than lower-quality evidence, a particular level of"/>
+ <result pre="the healthcare professional should spend more time discussing the options" exact="with" post="the patient. GOOD-PRACTICE POINTS  Recommended best practice based"/>
+ <result pre="guideline development group NHS Evidence has accredited the process used" exact="by" post="Scottish Intercollegiate Guidelines Network to produce guidelines. Accreditation is"/>
+ <result pre="publications for likely impact on the six equality groups defined" exact="by" post="age, disability, gender, race, religion/belief and sexual orientation. SIGN"/>
+ <result pre="in paper form and/or alternative format is available on request" exact="from" post="the Healthcare Improvement Scotland Equality and Diversity Officer. Every"/>
+ <result pre="found on our web site www.sign.ac.uk. This document is produced" exact="from" post="elemental chlorine-free material and is sourced from sustainable forests."/>
+ <result pre="document is produced from elemental chlorine-free material and is sourced" exact="from" post="sustainable forests. Scottish Intercollegiate Guidelines Network Glaucoma referral and"/>
+ <result pre="Edinburgh: SIGN; 2015. (SIGN publication no. 144). [March 2015]. Available" exact="from" post="URL: http://www.sign.ac.uk SIGN consents to the photocopying of this"/>
+ <result pre="Criteria for referral to secondary-eye-care services .................................................................................................................... 5 2.5 Discharge" exact="from" post="secondary-eye-care services ............................................................................................................................... 5 2.6 Monitoring patients with ocular"/>
+ <result pre="2.5 Discharge from secondary-eye-care services ............................................................................................................................... 5 2.6 Monitoring patients" exact="with" post="ocular hypertension ........................................................................................................................... 6 3 Risk factors for primary"/>
+ <result pre="factors ................................................................................................................................................................................... 8 4 Primary-care examination and assessment of patients" exact="with" post="ocular hypertension or suspected glaucoma .............................................................................................................10 4.1 Good practice"/>
+ <result pre="5 Criteria for referral to secondary-eye-care services ..................................................................................................15 6 Discharge" exact="from" post="secondary-eye-care services.............................................................................................................16 6.1 Facilitating safe discharge ................................................................................................................................................................... 16 6.2"/>
+ <result pre="criteria .................................................................................................................................................................................... 17 7 Monitoring at-risk groups ..............................................................................................................................................18 7.1 Patients" exact="with" post="family history of glaucoma ....................................................................................................................................... 18 7.2 Patients with"/>
+ <result pre="Patients with family history of glaucoma ....................................................................................................................................... 18 7.2 Patients" exact="with" post="ocular hypertension .................................................................................................................................................... 18 7.3 Patients who have had"/>
+ <result pre="iridotomy secondary to primary angle closure ................................................... 18 7.4 Patients" exact="with" post="pseudoexfoliation ........................................................................................................................................................ 19 7.5 Patients with pigment dispersion syndrome"/>
+ <result pre="................................................... 18 7.4 Patients with pseudoexfoliation ........................................................................................................................................................ 19 7.5 Patients" exact="with" post="pigment dispersion syndrome ................................................................................................................................ 19 7.6 Patients with optic"/>
+ <result pre="7.5 Patients with pigment dispersion syndrome ................................................................................................................................ 19 7.6 Patients" exact="with" post="optic disc anomalies ................................................................................................................................................. 19 8 Provision of information.................................................................................................................................................21"/>
+ <result pre="Provision of information.................................................................................................................................................21 8.1 Introduction .............................................................................................................................................................................................. 21 8.2 Key messages" exact="from" post="patients with glaucoma ................................................................................................................................ 21 8.3 Checklist for provision"/>
+ <result pre="information.................................................................................................................................................21 8.1 Introduction .............................................................................................................................................................................................. 21 8.2 Key messages from patients" exact="with" post="glaucoma ................................................................................................................................ 21 8.3 Checklist for provision of information"/>
+ <result pre="NEED foR A GuIDElINE Glaucoma is an eye disease characterised" exact="by" post="a progressive optic neuropathy and associated visual field loss"/>
+ <result pre="ocular condition.3 The incidence of glaucoma in the UK increases" exact="with" post="age and glaucoma accounts for up to 20% of"/>
+ <result pre="of which come via community optometrists. Since glaucoma is associated" exact="with" post="advancing age, the number of patients requiring management of"/>
+ <result pre="as life expectancy increases.4 Early identification and referral of patients" exact="with" post="ophthalmic pathology, and prompt secondary-care response facilitates timely management"/>
+ <result pre="with ophthalmic pathology, and prompt secondary-care response facilitates timely management" exact="with" post="the aim of limiting visual disability.3, 5, 6 In"/>
+ <result pre="In one study in England around a third of referrals" exact="from" post="optometrists without special interest in glaucoma resulted in discharge"/>
+ <result pre="in Annex 1. The accuracy of the referral of patients" exact="with" post="suspected glaucoma from the community to secondary-eye-care services has"/>
+ <result pre="The accuracy of the referral of patients with suspected glaucoma" exact="from" post="the community to secondary-eye-care services has improved since introduction"/>
+ <result pre="do not incorporate guidance on which patient groups require referral" exact="from" post="primary to secondary care, and this may result in"/>
+ <result pre="groups can be safely monitored in the community or discharged" exact="from" post="secondary to primary care taking into account the existing"/>
+ <result pre="best practice in the primary-care assessment and referral of patients" exact="with" post="suspected glaucoma of any subtype, from the community into"/>
+ <result pre="and referral of patients with suspected glaucoma of any subtype," exact="from" post="the community into secondary-eye-care services and the safe discharge"/>
+ <result pre="community into secondary-eye-care services and the safe discharge of patients" exact="from" post="secondary-eye-care services back into the community. Recommendations are provided"/>
+ <result pre="treatment of ocular hypertension (OHT) and glaucoma which is covered" exact="by" post="National Institute for Health and Care Excellence (NICE) Clinical"/>
+ <result pre="at the same results. The ultimate judgement must be made" exact="by" post="the appropriate healthcare professional(s) responsible for clinical decisions regarding"/>
+ <result pre="should only be arrived at following discussion of the options" exact="with" post="the patient, covering the diagnostic and treatment choices available."/>
+ <result pre="treatment choices available. It is advised, however, that significant departures" exact="from" post="the national guideline or any local guidelines derived from"/>
+ <result pre="departures from the national guideline or any local guidelines derived" exact="from" post="it should be fully documented in the patient’s case"/>
+ <result pre="PATIENT VERSION A patient version of this guideline is available" exact="from" post="the SIGN website, www.sign.ac.uk 1.3.2 PRESCRIBING OF LICENSED MEDICINES"/>
+ <result pre="medicines becomes necessary if the clinical need cannot be met" exact="by" post="licensed medicines within the marketing authorisation. Such use should"/>
+ <result pre="medicines within the marketing authorisation. Such use should be supported" exact="by" post="appropriate evidence and experience.11 “Prescribing medicines outside the conditions"/>
+ <result pre="to show its safety and efficacy, seeking the necessary information" exact="from" post="appropriate sources y record in the patient’s clinical notes"/>
+ <result pre="• Introduction Non-medical prescribers should ensure that they are familiar" exact="with" post="the legislative framework and their own professional prescribing standards."/>
+ <result pre="multiple technology appraisals (MTAs) for NHSScotland that have been produced" exact="by" post="the National Institute for Health and Care Excellence (NICE)"/>
+ <result pre="Key recommendations The following recommendations and good-practice points were highlighted" exact="by" post="the guideline development group as those that should be"/>
+ <result pre="for implementation. 2.1 MEASuREMENT of INTRAoCulAR PRESSuRE R for patients" exact="with" post="ocular hypertension or suspected glaucoma a reliable baseline measure"/>
+ <result pre="assessing the need for referral to secondary-eye-care services. Patients" exact="with" post="the following optic disc parameters should be considered for"/>
+ <result pre="fIElD ASSESSMENT A minimum of two visual field tests" exact="with" post="consistent findings is recommended before referral to secondary-eye-care services."/>
+ <result pre="REfERRAl To SECoNDARy-EyE-CARE SERvICES Irrespective of intraocular pressure, patients" exact="with" post="one or more of the following findings should be"/>
+ <result pre="be referred to secondary-eye-care services: y optic disc signs consistent" exact="with" post="glaucoma in either eye y a reproducible visual field"/>
+ <result pre="in either eye y a reproducible visual field defect consistent" exact="with" post="glaucoma in either eye y risk of angle closure"/>
+ <result pre="meshwork is not visible. Patients who have ocular hypertension" exact="with" post="intraocular pressure &gt;25 mm Hg may be considered for"/>
+ <result pre="of central corneal thickness. Patients who have ocular hypertension" exact="with" post="intraocular pressure &lt;26 mm Hg and central corneal thickn ess"/>
+ <result pre="they are aged ≤65. Patients who have ocular hypertension" exact="with" post="intraocular pressure &lt;26 mm Hg and central corneal thickness"/>
+ <result pre="DISCHARGE fRoM SECoNDARy-EyE-CARE SERvICES When a patient is discharged" exact="from" post="secondary-eye-care services the responsibility for patient care is transferred"/>
+ <result pre="and monitoring in the community should include protocols for communicating" exact="with" post="patients who do not attend, or do not respond"/>
+ <result pre="not respond to invitations to make appointments, and for liaison" exact="with" post="general practice and secondary-eye-care services. The following groups"/>
+ <result pre="services. The following groups may be considered for discharge" exact="from" post="secondary-eye-care services where robust local arrangements are in place"/>
+ <result pre="and ocular examination is otherwise normal y untreated ocular hypertension" exact="with" post="intraocular pressure &gt;25 mm Hg with otherwise normal ocular"/>
+ <result pre="y untreated ocular hypertension with intraocular pressure &gt;25 mm Hg" exact="with" post="otherwise normal ocular examination and a low lifetime risk"/>
+ <result pre="treated ocular hypertension where re-referral criteria are documented. Patients" exact="with" post="primary angle closure who have had prophylactic iridotomy may"/>
+ <result pre="who have had prophylactic iridotomy may be considered for discharge" exact="from" post="secondary-eye-care services if they: y have confirmed open angle"/>
+ <result pre="topical medication y have no evidence of glaucoma. Patients" exact="with" post="treated glaucoma should normally be monitored in secondary-eye-care services"/>
+ <result pre="2.6 MoNIToRING PATIENTS wITH oCulAR HyPERTENSIoN R f or patients" exact="with" post="ocular hypertension, treated or untreated, a reliable baseline based"/>
+ <result pre="of a primary eye examination.7 When referring a patient" exact="with" post="suspected glaucoma to secondary-eye-care services, the optometrist should highlight"/>
+ <result pre="owing to study inclusion criteria. Table 1: Risk factors associated" exact="with" post="primary open-angle glaucoma Estimates from key meta-analyses (95% CI)"/>
+ <result pre="Table 1: Risk factors associated with primary open-angle glaucoma Estimates" exact="from" post="key meta-analyses (95% CI) Age % Prevalence1 Age %"/>
+ <result pre="Glaucoma referral and safe discharge Table 2: Risk factors associated" exact="with" post="primary angle-closure glaucoma Estimates from key meta-analyses (95% CI)"/>
+ <result pre="Table 2: Risk factors associated with primary angle-closure glaucoma Estimates" exact="from" post="key meta-analyses (95% CI) Age % Prevalence14 ≥70 0.94"/>
+ <result pre="of Asian Eastern Asian ethnicity and east Asian descent compared" exact="with" post="European descent14 3.3 oCulAR RISK fACToRS 3.3.1 RAISED INTRAOCULAR"/>
+ <result pre="clinical signs of glaucoma.15 The risk of developing glaucoma increases" exact="with" post="increasing IOP.13 Having a raised IOP, outside the generally"/>
+ <result pre="it is the only one that can be treated. People" exact="with" post="an IOP within the normal range can develop glaucoma."/>
+ <result pre="for development of the disease.16 These are based on data" exact="from" post="the Ocular Hypertension Treatment Study (OHTS)17 and the European"/>
+ <result pre="predicting the five-year risk of 2++ POAG in adult patients" exact="with" post="ocular hypertension. All of the variables included in the"/>
+ <result pre="online enables estimation of the five-year risk of a patient" exact="with" post="OHT developing POAG in at least one eye (http://ohts.wustl."/>
+ <result pre="C/D ratio is subjective and not easily quantified. Also, findings" exact="from" post="participants included in research studies may not be generalisable"/>
+ <result pre="glaucoma. A meta-analysis of 11 cross-sectional studies found that individuals" exact="with" post="myopia have around double the risk of glaucoma compared"/>
+ <result pre="CHAMBER DEPTH AND HyPERMETROPIA A narrative review notes that patients" exact="with" post="angle-closure glaucoma are more likely to be hypermetropic.3 4"/>
+ <result pre="and safe discharge 4 Primary-care examination and assessment of patients" exact="with" post="ocular hypertension or suspected glaucoma 4.1 GooD PRACTICE "/>
+ <result pre="suspected glaucoma 4.1 GooD PRACTICE When referring a patient" exact="with" post="suspected glaucoma to secondary-eye-care services the optometrist should indicate"/>
+ <result pre="secondary-eye-care services the optometrist should indicate findings of tonometry, examination" exact="by" post="slit-lamp biomicroscopy to include anterior segment and optic disc,"/>
+ <result pre="to discuss their diagnosis, prognosis and treatment, and provide them" exact="with" post="relevant information in an accessible format at initial and"/>
+ <result pre="technique for measuring IOP. No studies were identified comparing GAT" exact="with" post="other technologies in terms of referral accuracy or diagnostic"/>
+ <result pre="tonometers (HAT) (26 studies) achieved the measurements closest to the GAT" exact="with" post="around 59% and 66% within 2 mm Hg respectively"/>
+ <result pre="the 2++ order of 3 mm Hg could be reduced" exact="by" post="taking the average of two or three measurements at"/>
+ <result pre="(multiple IOP measurements over a minimum eight-hour period) in patients" exact="with" post="suspected glaucoma who had single 2++ IOP measurements within"/>
+ <result pre="2++ IOP measurements within the normal range.22 R for patients" exact="with" post="ocular hypertension or suspected glaucoma a reliable baseline measure"/>
+ <result pre="consistency between primary and secondary care, tonometry should be performed" exact="with" post="Goldmann or Perkins type tonometers. Protocols should be"/>
+ <result pre="safe discharge 4 • Primary-care examination and assessment of patients" exact="with" post="ocular hypertension or suspected glaucoma 4.3 MEASuREMENT of CENTRAl"/>
+ <result pre="measurements are provided in addition to IOP measurements in patients" exact="with" post="ocular hypertension. A high-quality systematic review and meta-analysis identified"/>
+ <result pre="IOP.23 R Central corneal thickness should be measured in patients" exact="with" post="ocular hypertension or suspected glaucoma and reported alongside the"/>
+ <result pre="standard for assessment of the anterior chamber angle in patients" exact="with" post="suspected glaucoma or OHT. It is not currently practised"/>
+ <result pre="with suspected glaucoma or OHT. It is not currently practised" exact="by" post="all optometrists and requires experience to interpret the angle"/>
+ <result pre="in research settings, where the tests were conducted almost exclusively" exact="by" post="glaucoma specialist ophthalmologists, and therefore the results may not"/>
+ <result pre="angles were reported in comparisons of optical coherence tomography (OCT)" exact="with" post="gonioscopy, there was generally high sensitivity (84–100%) but low"/>
+ <result pre="variability 3 was reported in the identification of angle closure" exact="by" post="OCT. In one study the level of agreement between"/>
+ <result pre="optometrists. In one study comparing a Van Herick grading method" exact="with" post="gonioscopy there was high sensitivity (84.9%) and high specificity"/>
+ <result pre="be used to detect narrow anterior chamber angles in patients" exact="with" post="ocular hypertension or suspected angle closure. Due to"/>
+ <result pre="was 7.3 (95% CI 3.3 to 16). The LR associated" exact="with" post="the presence of disc haemorrhage (five studies) was 12"/>
+ <result pre="address clinical assessment of optic disc size and morphology, evidence" exact="from" post="primary research papers confirmed the importance of disc size"/>
+ <result pre="assessed during slit-lamp biomicroscopy 2+ and when this is combined" exact="with" post="an assessment of the neuroretinal rim morphology, as in"/>
+ <result pre="allows discrimination between glaucomatous and normal discs and compares favourably" exact="with" post="Heidelberg Retina Tomograph II disc assessment.39-45 The clinical utility"/>
+ <result pre="diagnosis of glaucomatous 3 neuropathy has been called into question" exact="by" post="a number of studies.46-49 R for patients with suspected"/>
+ <result pre="into question by a number of studies.46-49 R for patients" exact="with" post="suspected glaucoma the optic discs should be examined by"/>
+ <result pre="patients with suspected glaucoma the optic discs should be examined" exact="by" post="slit-lamp biomicroscopy. The vertical optic disc diameter should be"/>
+ <result pre="medium or large. For optic disc examination in patients" exact="with" post="suspected glaucoma, the pupil should be dilated unless there"/>
+ <result pre="safe discharge 4 • Primary-care examination and assessment of patients" exact="with" post="ocular hypertension or suspected glaucoma Patients with the"/>
+ <result pre="of patients with ocular hypertension or suspected glaucoma Patients" exact="with" post="the following optic disc parameters should be considered for"/>
+ <result pre="basis of apparent violation of the ISNT rule. Patients" exact="with" post="an optic disc nerve fibre layer haemorrhage should be"/>
+ <result pre="The optic discs should be photographed and the images transmitted" exact="with" post="the electronic referral letter. Where available, use of"/>
+ <result pre="polarimetry. Nearly ++ all of the studies identified included patients" exact="with" post="visual field loss and the review concluded that they"/>
+ <result pre="the ability of such devices to detect disease in patients" exact="with" post="suspected glaucoma. The review also concluded that no one"/>
+ <result pre="No systematic reviews were identified comparing visual field assessment technologies" exact="with" post="the outcome of referral accuracy in patients suspected of"/>
+ <result pre="early/moderate stage glaucoma the sensitivity of OKP was 25% compared" exact="with" post="97% for SAP. Oculokinetic perimetry, although promising in a"/>
+ <result pre="optometric setting. Two studies in the review directly compared SAP" exact="with" post="FDT C-20-5, with both reporting that FDT had superior"/>
+ <result pre="studies in the review directly compared SAP with FDT C-20-5," exact="with" post="both reporting that FDT had superior sensitivity but poorer"/>
+ <result pre="of visual function tests in diagnosis and monitoring of patients" exact="with" post="glaucoma was based on a systematic, but limited, literature"/>
+ <result pre="full-threshold SAP testing in this patient group.52 R for patients" exact="with" post="ocular hypertension or suspected glaucoma, standard automated perimetry is"/>
+ <result pre="also acceptable. A minimum of two visual field tests" exact="with" post="consistent findings is recommended before referral to secondary-eye-care services."/>
+ <result pre="on the expertise of the SIGN guideline development group informed" exact="by" post="the NICE guideline on the diagnosis and management of"/>
+ <result pre="on the diagnosis and management of glaucoma,10 subsequent joint guidance" exact="from" post="the College of Optometrists and the Royal College of"/>
+ <result pre="during open consultation and the expertise of invited peer reviewers" exact="from" post="within and beyond Scotland. Irrespective of intraocular pressure,"/>
+ <result pre="within and beyond Scotland. Irrespective of intraocular pressure, patients" exact="with" post="one or more of the following findings should be"/>
+ <result pre="be referred to secondary-eye-care services: y optic disc signs consistent" exact="with" post="glaucoma in either eye y a reproducible visual field"/>
+ <result pre="in either eye y a reproducible visual field defect consistent" exact="with" post="glaucoma in either eye y risk of angle closure"/>
+ <result pre="meshwork is not visible. Patients who have ocular hypertension" exact="with" post="intraocular pressure &gt;25 mm Hg may be considered for"/>
+ <result pre="of central corneal thickness. Patients who have ocular hypertension" exact="with" post="intraocular pressure &lt;26 mm Hg and central corneal thickness &lt;555"/>
+ <result pre="they are aged ≤65. Patients who have ocular hypertension" exact="with" post="intraocular pressure &lt;26 mm Hg and central corneal thickness"/>
+ <result pre="4. | 15 Glaucoma referral and safe discharge 6 Discharge" exact="from" post="secondary-eye-care services 6.1 fACIlITATING SAfE DISCHARGE When deciding"/>
+ <result pre="DISCHARGE When deciding if a patient should be discharged" exact="from" post="secondary eye-care-services, there should be discussion with the patient"/>
+ <result pre="should be discharged from secondary eye-care-services, there should be discussion" exact="with" post="the patient to identify and take account of their"/>
+ <result pre="account of their preferences. When a patient is discharged" exact="from" post="secondary-eye-care services the responsibility for patient care is transferred"/>
+ <result pre="and monitoring in the community should include protocols for communicating" exact="with" post="patients who do not attend, or do not respond"/>
+ <result pre="not respond to invitations to make appointments, and for liaison" exact="with" post="general practice and secondary-eye-care services. 6.1.1 DISCHARGE LETTERS "/>
+ <result pre="and to their general practitioner. A sample discharge letter adapted" exact="from" post="NHS Grampian can be found in Annex 5. 6.1.2"/>
+ <result pre="the effectiveness of providing a patient-held record to individuals diagnosed" exact="with" post="or at risk of glaucoma. Three systematic reviews were"/>
+ <result pre="or at risk of glaucoma. Three systematic reviews were identified" exact="from" post="other healthcare contexts. One of these, pertaining to maternity"/>
+ <result pre="applicable, particularly owing to the older age group of patients" exact="with" post="or at risk of glaucoma.54 One systematic review of"/>
+ <result pre="effectiveness of specifying a named optometrist when discharging individuals diagnosed" exact="with" post="or at risk of glaucoma from secondary-eye-care services. Evidence"/>
+ <result pre="when discharging individuals diagnosed with or at risk of glaucoma" exact="from" post="secondary-eye-care services. Evidence from a synthesis of qualitative studies"/>
+ <result pre="with or at risk of glaucoma from secondary-eye-care services. Evidence" exact="from" post="a synthesis of qualitative studies suggests that patients with"/>
+ <result pre="Evidence from a synthesis of qualitative studies suggests that patients" exact="with" post="chronic conditions value continuity 3 of care providers.57 16"/>
+ <result pre="16 | Glaucoma referral and safe discharge 6 • Discharge" exact="from" post="secondary-eye-care services 6.2 DISCHARGE CRITERIA A systematic review of"/>
+ <result pre="ophthalmologists 2 during two years of follow up of patients" exact="with" post="glaucoma or suspected glaucoma.58 This finding may be limited"/>
+ <result pre="within the provisions of the GOS arrangements and are informed" exact="by" post="the NICE guideline on the diagnosis and management of"/>
+ <result pre="on the diagnosis and management of glaucoma,10 subsequent joint guidance" exact="from" post="the College of Optometrists and the Royal College of"/>
+ <result pre="during open consultation and the expertise of invited peer reviewers" exact="from" post="within and beyond Scotland. 6.2.1 PATIENTS WITH OCULAR HyPERTENSION"/>
+ <result pre="HyPERTENSION The following groups may be considered for discharge" exact="from" post="secondary-eye-care services where robust local arrangements are in place"/>
+ <result pre="and ocular examination is otherwise normal y untreated ocular hypertension" exact="with" post="intraocular pressure &gt;25 mm Hg with otherwise normal ocular"/>
+ <result pre="y untreated ocular hypertension with intraocular pressure &gt;25 mm Hg" exact="with" post="otherwise normal ocular examination and a low lifetime risk"/>
+ <result pre="are documented. 6.2.2 PATIENTS WHO HAVE HAD IRIDOTOMy Patients" exact="with" post="primary angle closure who have had prophylactic iridotomy may"/>
+ <result pre="who have had prophylactic iridotomy may be considered for discharge" exact="from" post="secondary-eye-care services if they: y have confirmed open angle"/>
+ <result pre="evidence of glaucoma. 6.2.3 PATIENTS WITH TREATED GLAUCOMA Patients" exact="with" post="treated glaucoma should normally be monitored in secondary-eye-care services."/>
+ <result pre="or economic evidence on the optimal monitoring interval for patients" exact="with" post="ocular hypertension and recommended, based 4 on expert opinion,"/>
+ <result pre="synthesis and economic evaluation explored optimal monitoring pathways for people" exact="with" post="ocular hypertension. A survey of public preferences for a"/>
+ <result pre="on the long-term variability of visual field parameters. Biennial monitoring," exact="by" post="practitioners experienced in glaucoma, was more cost effective than"/>
+ <result pre="more cost effective than more frequent monitoring.15 R for patients" exact="with" post="ocular hypertension, treated or untreated, a reliable baseline based"/>
+ <result pre="excessive pigment deposition on the trabecular surface. Primary angle closure" exact="with" post="evidence of glaucoma is primary angle closure glaucoma (PACG).60"/>
+ <result pre="reviews or meta-analyses were identified on the monitoring of patients" exact="with" post="PAC after iridotomy with healthy discs and full visual"/>
+ <result pre="identified on the monitoring of patients with PAC after iridotomy" exact="with" post="healthy discs and full visual field. Three observational studies;"/>
+ <result pre="and full visual field. Three observational studies; a retrospective study" exact="from" post="Canada and two small prospective studies from India were"/>
+ <result pre="a retrospective study from Canada and two small prospective studies" exact="from" post="India were identified which provided information on the risk"/>
+ <result pre="risk of IOP elevation and requirement for intervention in patients" exact="with" post="iridotrabecular contact or peripheral anterior synechiae who had peripheral"/>
+ <result pre="A small (n=72) prospective single-cohort study reported 36.1% of patients" exact="with" post="raised IOP and 11.1% with PACG after mean follow"/>
+ <result pre="study reported 36.1% of patients with raised IOP and 11.1%" exact="with" post="PACG after mean follow up of 6.89 years. This"/>
+ <result pre="increased risk of raised IOP/glaucoma in 3 older patients, those" exact="with" post="higher baseline IOP and longer follow up. 63 Another"/>
+ <result pre="five years, 28% of patients had 3 progressed to glaucoma," exact="with" post="or without medications.64 No evidence was identified on which"/>
+ <result pre="on the most appropriate healthcare setting for monitoring. Patients" exact="with" post="primary angle closure or suspected primary angle closure who"/>
+ <result pre="manage than primary open-angle glaucoma.65 Around 30–50% 4 of patients" exact="with" post="pseudoexfoliation will develop glaucoma.66 It is also reported to"/>
+ <result pre="will develop glaucoma.66 It is also reported to be associated" exact="with" post="angle- 3 closure glaucoma.67 No studies were identified which"/>
+ <result pre="the monitoring interval for this group of patients. Individuals" exact="with" post="signs of pseudoexfoliation require ongoing monitoring owing to their"/>
+ <result pre="in the community. 7.5 PATIENTS wITH PIGMENT DISPERSIoN SyNDRoME Patients" exact="with" post="pigment dispersion syndrome have an increased risk of developing"/>
+ <result pre="conversion of pigment dispersion syndrome to pigmentary glaucoma varies widely" exact="from" post="15% in 15 4 3 years to 50% in"/>
+ <result pre="in 15 4 3 years to 50% in four years," exact="with" post="IOP at presentation being a predictive factor.68 No studies"/>
+ <result pre="the monitoring interval for this group of patients. Individuals" exact="with" post="pigment dispersion syndrome require ongoing monitoring owing to the"/>
+ <result pre="should follow the relevant clinical guidelines and protocols in keeping" exact="with" post="each of these conditions and exercise clinical judgement with"/>
+ <result pre="keeping with each of these conditions and exercise clinical judgement" exact="with" post="regard to ongoing monitoring or referral. It is considered"/>
+ <result pre="the monitoring interval for this group of patients. Individuals" exact="with" post="myopic discs require ongoing monitoring owing to the increased"/>
+ <result pre="monitored in the community. 7.6.3 TILTED OPTIC DISC A review" exact="with" post="a limited literature search concluded that tilted optic disc"/>
+ <result pre="literature search concluded that tilted optic disc is not associated" exact="with" post="any increased risk of developing glaucoma.69 Tilted disc can"/>
+ <result pre="should be aware that tilted optic disc is not associated" exact="with" post="any increased risk of glaucoma. Visual field defect mimicking"/>
+ <result pre="glaucoma. Visual field defect mimicking glaucoma is common in patients" exact="with" post="tilted optic disc, but, in contrast to glaucomatous optic"/>
+ <result pre="DISC DRUSEN Optic nerve head drusen (ONHD) can be associated" exact="with" post="VFL. A small retrospective cohort study (n=60, 103 eyes)"/>
+ <result pre="study (n=60, 103 eyes) compared rates of VFL in patients" exact="with" post="ONHD with and without ocular hypertension. While 90.9% of"/>
+ <result pre="103 eyes) compared rates of VFL in patients with ONHD" exact="with" post="and without ocular hypertension. While 90.9% of 3 eyes"/>
+ <result pre="with and without ocular hypertension. While 90.9% of 3 eyes" exact="with" post="OHT had VFL, 66.7% of normotensive eyes had VFL"/>
+ <result pre="eyes had VFL (p=0.03). At the same intraocular pressure, eyes" exact="with" post="grade III ONHD are at increased risk for VFL"/>
+ <result pre="III ONHD are at increased risk for VFL when compared" exact="with" post="eyes with grade I ONHD.71 No studies were identified"/>
+ <result pre="are at increased risk for VFL when compared with eyes" exact="with" post="grade I ONHD.71 No studies were identified which investigated"/>
+ <result pre="the monitoring interval for this group of patients. Patients" exact="with" post="optic nerve head drusen who are normotensive and show"/>
+ <result pre="and show no evidence of glaucoma can be followed up" exact="by" post="community optometrists. Patients with optic nerve head drusen, with"/>
+ <result pre="of glaucoma can be followed up by community optometrists. Patients" exact="with" post="optic nerve head drusen, with ocular hypertension and/or a"/>
+ <result pre="up by community optometrists. Patients with optic nerve head drusen," exact="with" post="ocular hypertension and/or a visual field defect require more"/>
+ <result pre="Glaucoma and its risk factors are not well understood, neither" exact="by" post="the general public nor among patients. This makes early"/>
+ <result pre="challenging. The lack of knowledge and understanding means that patients" exact="with" post="this disease, and their carers, are often unable to"/>
+ <result pre="are well informed and fully participate in the decision-making process" exact="with" post="their clinical teams to ensure the best outcomes through"/>
+ <result pre="Patient-friendly information delivered at appropriate points in the patient journey," exact="with" post="time given for counselling, helps to promote understanding. Educating"/>
+ <result pre="the long term.72 Some groups, for example older people, people" exact="with" post="learning disabilities and those in remote areas may require"/>
+ <result pre="to eye-care services and formal and informal carers may benefit" exact="from" post="training in eye health and eye care for these"/>
+ <result pre="patients and their carers. These points are provided for use" exact="by" post="healthcare professionals when discussing glaucoma with patients and carers"/>
+ <result pre="are provided for use by healthcare professionals when discussing glaucoma" exact="with" post="patients and carers and in guiding the production of"/>
+ <result pre="MESSAGES fRoM PATIENTS wITH GlAuCoMA A focus group was held" exact="with" post="patients who have glaucoma in September 2013. The aim"/>
+ <result pre="highlighted in the checklist below, which also incorporates relevant points" exact="from" post="the NICE guideline on glaucoma diagnosis and management.10 8.3"/>
+ <result pre="consider language and communication support needs to ensure that people" exact="with" post="English as a second language, those with learning disability/cognitive"/>
+ <result pre="ensure that people with English as a second language, those" exact="with" post="learning disability/cognitive impairment and people with visual loss receive"/>
+ <result pre="a second language, those with learning disability/cognitive impairment and people" exact="with" post="visual loss receive good-quality accessible information throughout their patient"/>
+ <result pre="what glaucoma is and what to expect at the appointment" exact="with" post="the specialist. y Reassure the patient that if the"/>
+ <result pre="confirmed early, intervention can help preserve useful sight and that" exact="with" post="effective treatments patients are able to enjoy a good"/>
+ <result pre="of pupil dilation and to take along a carer/friend/family member" exact="with" post="them if possible. y Suggest that patients note down"/>
+ <result pre="of glaucoma risk factors and emphasise that although sight lost" exact="with" post="glaucoma cannot be recovered, adherence to treatment can preserve"/>
+ <result pre="appropriate advise patients of their rights and responsibilities in line" exact="with" post="current DVLA requirements. y Where appropriate explain the Certificate"/>
+ <result pre="implications. y Consolidate verbal information on glaucoma and medication use" exact="with" post="written information. y Consider describing how the medication works"/>
+ <result pre="into old age. Discharge into the community y Provide patients" exact="with" post="a copy of their discharge letter and clear information"/>
+ <result pre="to contact should they have any concerns. y Provide patients" exact="with" post="written information on their condition. y Allow sufficient time"/>
+ <result pre="of devices and eye-drop aids where necessary – side effects" exact="from" post="medication – storing medication. y Advise self carers of"/>
+ <result pre="support available and how to access this. y Provide patients" exact="with" post="information on issues regarding driving with glaucoma, explaining DVLA"/>
+ <result pre="this. y Provide patients with information on issues regarding driving" exact="with" post="glaucoma, explaining DVLA requirements. y Emphasise the importance of"/>
+ <result pre="Emphasise the importance of attending follow-up appointments. y Provide patients" exact="with" post="information on eye hygiene. y Advise patients to make"/>
+ <result pre="a note of any questions they have and take it" exact="with" post="them to follow-up appointments. 22 | Glaucoma referral and"/>
+ <result pre="info@iga.org.uk A UK charity which works to prevent glaucoma blindness" exact="by" post="providing information and advice. NHS Inform www.nhsinform.co.uk The organisation"/>
+ <result pre="The RNIB provides practical and emotional support for people affected" exact="by" post="sight loss. Sightline www.sightlinedirectory.org.uk Sightline is an online directory"/>
+ <result pre="out of practice to accommodate this. y Primary-care costs associated" exact="with" post="developing robust arrangements for follow up and monitoring of"/>
+ <result pre="developing robust arrangements for follow up and monitoring of patients" exact="with" post="or at risk of glaucoma following their discharge from"/>
+ <result pre="patients with or at risk of glaucoma following their discharge" exact="from" post="secondary-eye-care services. y Secondary-care costs associated with establishing and"/>
+ <result pre="following their discharge from secondary-eye-care services. y Secondary-care costs associated" exact="with" post="establishing and maintaining discharge protocols. These may include the"/>
+ <result pre="identified the following as key points to audit to assist" exact="with" post="the implementation of this guideline: y The proportion of"/>
+ <result pre="the implementation of this guideline: y The proportion of referrals" exact="from" post="community optometrists to secondary-eye-care services with complete information on"/>
+ <result pre="The proportion of referrals from community optometrists to secondary-eye-care services" exact="with" post="complete information on IOP, visual fields and optic nerve"/>
+ <result pre="and optic nerve head assessment. y The number of patients" exact="with" post="IOP &lt;26 mm Hg who are referred to secondary-eye-care"/>
+ <result pre="referral accuracy. y The number of patients who are discharged" exact="from" post="secondary-eye-care services to the community and proportion of these"/>
+ <result pre="The evidence base for this guideline was synthesised in accordance" exact="with" post="SIGN methodology. A systematic review of the literature was"/>
+ <result pre="literature was carried out using an explicit search strategy devised" exact="by" post="a SIGN Evidence and Information Scientist. Databases searched include"/>
+ <result pre="year range covered was 2007–2014. The main searches were supplemented" exact="by" post="material identified by individual members of the development group."/>
+ <result pre="was 2007–2014. The main searches were supplemented by material identified" exact="by" post="individual members of the development group. Each of the"/>
+ <result pre="the development group. Each of the selected papers was evaluated" exact="by" post="two members of the group using standard SIGN methodological"/>
+ <result pre="research have been identified: y A comparison of alternative tonometers" exact="with" post="investigation of all factors influencing IOP measurements. y Studies"/>
+ <result pre="field defects. y Intra- and inter-observer variability in DDLS assessment" exact="by" post="optometrist before and after targeted training. y Comparisons of"/>
+ <result pre="angle assessment (Van Herick method and OCT) in community practice" exact="with" post="gonioscopy conducted in the hospital eye service. y An"/>
+ <result pre="y The comparative effectiveness of alternative monitoring intervals for patients" exact="with" post="primary angle-closure postiridotomy. y The comparative effectiveness of optometry-led"/>
+ <result pre="comparative effectiveness of optometry-led versus ophthalmology-led follow up for patients" exact="with" post="ocular hypertension or glaucoma, to include clinical outcomes and"/>
+ <result pre="data to determine the optimal frequency of monitoring, for those" exact="with" post="glaucoma or at risk of glaucoma, to detect glaucoma"/>
+ <result pre="y Studies assessing components of glaucoma accreditation/qualification for managing patients" exact="with" post="or at risk of glaucoma in primary care. 10.3"/>
+ <result pre="is part of Healthcare Improvement Scotland. SIGN guidelines are developed" exact="by" post="multidisciplinary groups of practising clinicians using a standard methodology"/>
+ <result pre="membership of the guideline development group was confirmed following consultation" exact="with" post="the member organisations of SIGN. All members of the"/>
+ <result pre="development and literature review expertise, support and facilitation were provided" exact="by" post="the SIGN Executive. All members of the SIGN Executive"/>
+ <result pre="guideline was held on 20 March 2014 and was attended" exact="by" post="131 representatives of all the key specialties relevant to"/>
+ <result pre="THIS DRAFT This guideline was also reviewed in draft form" exact="by" post="the following independent expert referees, who were asked to"/>
+ <result pre="in the guideline. The guideline group addresses every comment made" exact="by" post="an external reviewer, and must justify any disagreement with"/>
+ <result pre="made by an external reviewer, and must justify any disagreement" exact="with" post="the reviewers’ comments. All expert referees made declarations of"/>
+ <result pre="interest and further details of these are available on request" exact="from" post="the SIGN Executive. SIGN is very grateful to all"/>
+ <result pre="As a final quality control check, the guideline is reviewed" exact="by" post="an editorial group comprising the relevant specialty representatives on"/>
+ <result pre="of primary eye examinations Patients aged 40 years or over" exact="with" post="a close family* Annually history of glaucoma *father, mother,"/>
+ <result pre="assessment of the optic history of glaucoma nerve head Patients" exact="with" post="suspect glaucoma or ocular hypertensives Intraocular pressure measurement by"/>
+ <result pre="Patients with suspect glaucoma or ocular hypertensives Intraocular pressure measurement" exact="by" post="non-contact or applanation tonometry as appropriate, automated supra- threshold"/>
+ <result pre="choroidal abnormalities have been Repeat of automated visual field assessment" exact="by" post="full detected during the primary eye examination threshold visual"/>
+ <result pre="during the primary eye examination threshold visual fields Repeat tonometry" exact="by" post="contact applanation Repeat internal examination of the eyes appropriate"/>
+ <result pre="detected or suspected eye abnormality, for example using slit-lamp biomicroscopy" exact="with" post="condensing lens, repeat digital imaging or scanning which may"/>
+ <result pre="4.5 which optic disc assessment techniques and parameters are associated" exact="with" post="the greatest referral accuracy or diagnostic accuracy for symptoms"/>
+ <result pre="accuracy for symptoms suggestive of glaucoma? Consider: fundoscopy versus fundoscopy" exact="with" post="dilation versus digital imaging (including stereophotography, monophotography, optical coherence"/>
+ <result pre="4.2 which techniques for assessment of intraocular pressure are associated" exact="with" post="greatest referral accuracy? Consider: Goldmann applanation tonometer, non-contact tonometry,"/>
+ <result pre="eye examination, 4.6 which visual field assessment techniques are associated" exact="with" post="the greatest referral accuracy or diagnostic accuracy for symptoms"/>
+ <result pre="the following patients groups 7 be conducted: a. Patients diagnosed" exact="with" post="glaucoma b. Patients with family history of glaucoma in"/>
+ <result pre="7 be conducted: a. Patients diagnosed with glaucoma b. Patients" exact="with" post="family history of glaucoma in first degree relative c."/>
+ <result pre="family history of glaucoma in first degree relative c. Patients" exact="with" post="ocular hypertension d. Patients postprophylactic iridotomy e. Patients with"/>
+ <result pre="Patients with ocular hypertension d. Patients postprophylactic iridotomy e. Patients" exact="with" post="isolated field defects f. Patients with myopia g. Patients"/>
+ <result pre="postprophylactic iridotomy e. Patients with isolated field defects f. Patients" exact="with" post="myopia g. Patients with optic disc drusen h. Patients"/>
+ <result pre="with isolated field defects f. Patients with myopia g. Patients" exact="with" post="optic disc drusen h. Patients with tilted discs Consider:"/>
+ <result pre="with myopia g. Patients with optic disc drusen h. Patients" exact="with" post="tilted discs Consider: Risk of glaucoma diagnosis, progression of"/>
+ <result pre="patients satisfaction, healthcare professional satisfaction. 7. In adult patients discharged" exact="from" post="secondary care what is the evidence for the following"/>
+ <result pre="Annexes Annex 3 Spaeth’s disc damage likelihood scale. Figure adapted" exact="from" post="DDLS supplied by Dr Spaeth 1. Measure vertical disc"/>
+ <result pre="Spaeth’s disc damage likelihood scale. Figure adapted from DDLS supplied" exact="by" post="Dr Spaeth 1. Measure vertical disc diameter using slit"/>
+ <result pre="Address: Tel: Email: The above named patient has been discharged" exact="from" post=".............................................................................................................................. The findings from their last examination (date….......................…) are:"/>
+ <result pre="above named patient has been discharged from .............................................................................................................................. The findings" exact="from" post="their last examination (date….......................…) are: Right eye Left eye"/>
+ <result pre="Ontario. Diurnal tension curves for assessing the people present late" exact="with" post="advanced glaucoma? A qualitative development or progression of glaucoma:"/>
+ <result pre="in the management of 2010. [cited 27 Nov 2014]. Available" exact="from" post="url: http://www.sehd. primary open-angle glaucoma: a report by the"/>
+ <result pre="2014]. Available from url: http://www.sehd. primary open-angle glaucoma: a report" exact="by" post="the American Academy scot.nhs.uk/pca/PCA2010(O)01.pdf of Ophthalmology. Ophthalmology 2007;114(9):1779-87. 8."/>
+ <result pre="Scottish Government. Eyecare integration project. [cited 27 Nov 2014]. Available" exact="from" post="url: http://www.scotland.gov.uk/Topics/ 25. Khor WB, Sakata LM, Friedman DS,"/>
+ <result pre="Evaluation of scanning protocols for imaging the anterior chamber angle" exact="with" post="anterior segment-optical coherence 10. NICE (National Institute for Health"/>
+ <result pre="Foster Pj, Sakata LM, Friedman DS, Kashiwagi K, Wong Available" exact="from" post="url: http://www.nice.org.uk/guidance/cg85/ Ty, et al. Screening for narrow angles"/>
+ <result pre="Diagnostic performance of anterior chamber angle measurements for detecting eyes" exact="with" post="narrow angles: an anterior 12. Medicines and Healthcare products"/>
+ <result pre="jo jW, Lee KS, Kook MS. Assessment of narrow angles" exact="by" post="gonioscopy, Van Herick method and anterior 14. Day AC,"/>
+ <result pre="B, Kannan P, et al. Neural of the iridocorneal angle" exact="with" post="the RTVue spectral domain optical rim characteristics of healthy"/>
+ <result pre="DS, Aung HT, Gao H, Kumar RS, et al. correlations" exact="with" post="ocular and general parameters in adult chinese: Comparison of"/>
+ <result pre="R, et al. The ISNT rule and differentiation of normal" exact="from" post="glaucomatous 34. Baskaran M, Oen FT, Chan yH, Hoh"/>
+ <result pre="nerve head and retinal nerve fiber layer analysis: a report" exact="by" post="the American Academy of Ophthalmology. Ophthalmology 35. Thomas R,"/>
+ <result pre="et al. Assessment of visual function in glaucoma: a report" exact="by" post="Vertical cup/disc ratio in relation to optic disc size:"/>
+ <result pre="Schmitz-Valckenberg P, Papastathopoulos Guidance on the referral of Glaucoma suspects" exact="by" post="community KI, Budde WM. Ranking of optic disc variables"/>
+ <result pre="for detection of optometrists. 2010. [cited 27 Nov 2014]. Available" exact="from" post="url: http:// glaucomatous optic nerve damage. Invest Ophthalmol Vis"/>
+ <result pre="estimating the amount of optic nerve damage caused Issue 2." exact="by" post="glaucoma. Trans Am Ophthalmol Soc 2002;100:181-5. 55. Gysels M,"/>
+ <result pre="review. Health Expect 2007;10(1):75-91. Heidelberg Retina Tomograph II in patients" exact="with" post="glaucoma. Eur j Ophthalmol 2008;18(5):739-47. 56. Ko H, Turner"/>
+ <result pre="T, jones C, Hill C. Patient-held medical records for patients" exact="with" post="chronic disease: a systematic review (Structured 41. Abdul Majid"/>
+ <result pre="S, Mason L. UK Eye Care Services Project: damage: correlation" exact="with" post="visual field damage. Am j Ophthalmol Phase one: Systematic"/>
+ <result pre="Warwick: Warwick Medical School; 2010. [cited 27 Nov 2014]. Available" exact="from" post="url: http://www.college- 43. Danesh-Meyer HV, Gaskin Bj, jayusundera T,"/>
+ <result pre="al. Importance of visual acuity and contrast sensitivity in patients" exact="with" post="glaucoma. Arch Ophthalmol 2010;128(12):1576-82. 61. Ng WS, Ang GS,"/>
+ <result pre="of angle closure glaucoma suspects after laser iridotomy in Caucasians" exact="with" post="normal intraocular pressure at diagnosis. Can j Ophthalmol 2011;46(3):247-"/>
+ <result pre="johnson DH. What is the risk of developing pigmentary glaucoma" exact="from" post="pigment dispersion syndrome? Am j Ophthalmol 2003;135(6):794-9. 69. Witmer"/>
+</results>

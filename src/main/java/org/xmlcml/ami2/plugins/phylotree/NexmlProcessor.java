@@ -299,10 +299,10 @@ public class NexmlProcessor {
 			if (speciesPatternString != null) {
 				speciesPatternInputStream = this.getClass().getResourceAsStream(PHYLOTREE_RESOURCE+speciesPatternString);
 				if (speciesPatternInputStream == null) {
-					argProcessor.LOG.warn("Cannot read/create speciesPatternInputStream: "+PHYLOTREE_RESOURCE+speciesPatternString);
+					argProcessor.TREE_LOG().warn("Cannot read/create speciesPatternInputStream: "+PHYLOTREE_RESOURCE+speciesPatternString);
 				}
 			} else {
-				argProcessor.LOG.warn("should give speciesPatternString in arguments");
+				argProcessor.TREE_LOG().warn("should give speciesPatternString in arguments");
 			}
 		}
 		return speciesPatternInputStream;
@@ -341,9 +341,9 @@ public class NexmlProcessor {
 					}
 					matchedPhraseList.add(phrases.get(0));
 				} else if (phrases.size() > 1) {
-					argProcessor.LOG.error("competing words for tip");
+					argProcessor.TREE_LOG().error("competing words for tip");
 				} else if (phrases.size() == 0) {
-					argProcessor.LOG.trace("failed to find phrases to match node:" +unmatchedNode.getLabelString()+"("+unmatchedNode.getXY2()+")");
+					argProcessor.TREE_LOG().trace("failed to find phrases to match node:" +unmatchedNode.getLabelString()+"("+unmatchedNode.getXY2()+")");
 	//				unmatchedTipList.add(unmatchedNode);
 				}
 			}
@@ -351,7 +351,7 @@ public class NexmlProcessor {
 			unmatchedNodeList.removeAll(matchedNodeList);
 			
 			if (unusedPhraseList.size() > 0) {
-				argProcessor.LOG.trace("unmatched phrases: \n"+unusedPhraseList);
+				argProcessor.TREE_LOG().trace("unmatched phrases: \n"+unusedPhraseList);
 			}
 			if (unmatchedNodeList.size() > 0) {
 				argProcessor.LOG.trace("unmatched tips: \n"+unmatchedNodeList);

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="281">PIK3CA</result>
+ <result title="frequency" count="251">HER2</result>
+ <result title="frequency" count="120">EGFR</result>
+ <result title="frequency" count="102">ERBB2</result>
+ <result title="frequency" count="97">BCAR4</result>
+ <result title="frequency" count="93">KRAS</result>
+ <result title="frequency" count="73">SERPINA1</result>
+ <result title="frequency" count="59">TP53</result>
+ <result title="frequency" count="55">RAS</result>
+ <result title="frequency" count="42">PTEN</result>
+ <result title="frequency" count="35">BRAF</result>
+ <result title="frequency" count="31">MET</result>
+ <result title="frequency" count="29">KLF4</result>
+ <result title="frequency" count="21">CD44</result>
+ <result title="frequency" count="19">CDH1</result>
+ <result title="frequency" count="19">ARID1A</result>
+ <result title="frequency" count="17">MRP2</result>
+ <result title="frequency" count="15">MDM2</result>
+ <result title="frequency" count="15">PIK3R1</result>
+ <result title="frequency" count="14">TOM1L1</result>
+ <result title="frequency" count="14">MCL1</result>
+ <result title="frequency" count="14">ESR1</result>
+ <result title="frequency" count="13">ZNF217</result>
+ <result title="frequency" count="13">RHOA</result>
+ <result title="frequency" count="12">ZNF207</result>
+ <result title="frequency" count="12">PI3KCA</result>
+ <result title="frequency" count="11">KLF5</result>
+ <result title="frequency" count="11">MRP1</result>
+ <result title="frequency" count="11">HRAS</result>
+ <result title="frequency" count="11">CCND1</result>
+ <result title="frequency" count="10">PFS</result>
+ <result title="frequency" count="10">NOS2</result>
+ <result title="frequency" count="10">VEGF</result>
+ <result title="frequency" count="9">AKT1</result>
+ <result title="frequency" count="9">CDKN2A</result>
+ <result title="frequency" count="9">GAPDH</result>
+ <result title="frequency" count="9">PI3K</result>
+ <result title="frequency" count="9">ABCG2</result>
+ <result title="frequency" count="9">ERBB4</result>
+ <result title="frequency" count="8">RB1</result>
+ <result title="frequency" count="8">NTRK1</result>
+ <result title="frequency" count="8">PARP</result>
+ <result title="frequency" count="8">ERBB3</result>
+ <result title="frequency" count="7">GATA3</result>
+ <result title="frequency" count="7">MDK</result>
+ <result title="frequency" count="7">RAD51</result>
+ <result title="frequency" count="7">HER3</result>
+ <result title="frequency" count="6">TOLLIP</result>
+ <result title="frequency" count="6">GPNMB</result>
+ <result title="frequency" count="6">AKT</result>
+ <result title="frequency" count="6">BCL2</result>
+ <result title="frequency" count="6">NF1</result>
+ <result title="frequency" count="6">DTC</result>
+ <result title="frequency" count="6">CTC</result>
+ <result title="frequency" count="6">T790M</result>
+ <result title="frequency" count="6">FISH</result>
+ <result title="frequency" count="6">KIT</result>
+ <result title="frequency" count="6">HDGF</result>
+ <result title="frequency" count="6">IHC</result>
+ <result title="frequency" count="5">SFC</result>
+ <result title="frequency" count="5">NACT</result>
+ <result title="frequency" count="5">NOTCH1</result>
+ <result title="frequency" count="5">TPR</result>
+ <result title="frequency" count="5">L858R</result>
+ <result title="frequency" count="5">APC</result>
+ <result title="frequency" count="5">BRCA1</result>
+ <result title="frequency" count="5">AUC</result>
+ <result title="frequency" count="5">FGFR2</result>
+ <result title="frequency" count="4">MYC</result>
+ <result title="frequency" count="4">AKT2</result>
+ <result title="frequency" count="4">BCR</result>
+ <result title="frequency" count="4">BCS</result>
+ <result title="frequency" count="4">ABC</result>
+ <result title="frequency" count="4">ABL</result>
+ <result title="frequency" count="4">NRAS</result>
+ <result title="frequency" count="4">ACTB</result>
+ <result title="frequency" count="4">SOX2</result>
+ <result title="frequency" count="4">INPP4B</result>
+ <result title="frequency" count="4"> ERBB2</result>
+ <result title="frequency" count="4">CLDN18</result>
+ <result title="frequency" count="4">ORR</result>
+ <result title="frequency" count="4">CTNNB1</result>
+ <result title="frequency" count="4">PDGFRA</result>
+ <result title="frequency" count="4">FGFR1</result>
+ <result title="frequency" count="4">LVEF</result>
+ <result title="frequency" count="4">ABCC3</result>
+ <result title="frequency" count="4">ERRB2</result>
+ <result title="frequency" count="4">ERCC1</result>
+ <result title="frequency" count="3">TFRC</result>
+ <result title="frequency" count="3">CDK</result>
+ <result title="frequency" count="3">VPS34</result>
+ <result title="frequency" count="3">ABCB1</result>
+ <result title="frequency" count="3">BARD1</result>
+ <result title="frequency" count="3"> EGFR</result>
+ <result title="frequency" count="3">WT1</result>
+ <result title="frequency" count="3">PGR</result>
+ <result title="frequency" count="3">CNS</result>
+ <result title="frequency" count="3">MBC</result>
+ <result title="frequency" count="3">ALK</result>
+ <result title="frequency" count="3">NRG1</result>
+ <result title="frequency" count="3">TTP</result>
+ <result title="frequency" count="3">MDR1</result>
+ <result title="frequency" count="3"> APC</result>
+ <result title="frequency" count="3">B2M</result>
+ <result title="frequency" count="3">IBC</result>
+ <result title="frequency" count="3">AJCC</result>
+ <result title="frequency" count="3">ECOG</result>
+ <result title="frequency" count="3">MLH1</result>
+ <result title="frequency" count="3">HER</result>
+ <result title="frequency" count="3">MRI</result>
+ <result title="frequency" count="3">ARHGAP26</result>
+ <result title="frequency" count="3">GNAS</result>
+ <result title="frequency" count="3">FGFR3</result>
+ <result title="frequency" count="2">GLS</result>
+ <result title="frequency" count="2">TNBC</result>
+ <result title="frequency" count="2">STARD3</result>
+ <result title="frequency" count="2">IQR</result>
+ <result title="frequency" count="2"> PIK3CA</result>
+ <result title="frequency" count="2">PDGFR</result>
+ <result title="frequency" count="2">ATG5</result>
+ <result title="frequency" count="2">FAM135B</result>
+ <result title="frequency" count="2">RET</result>
+ <result title="frequency" count="2">JAK2</result>
+ <result title="frequency" count="2">BRCA</result>
+ <result title="frequency" count="2">E545K</result>
+ <result title="frequency" count="2">DM1</result>
+ <result title="frequency" count="2">EGFP</result>
+ <result title="frequency" count="2">RPL13P5</result>
+ <result title="frequency" count="2">CDKN2B</result>
+ <result title="frequency" count="2">CEP17</result>
+ <result title="frequency" count="2">NCF2</result>
+ <result title="frequency" count="2">ERK</result>
+ <result title="frequency" count="2">FGFR</result>
+ <result title="frequency" count="2">FANCG</result>
+ <result title="frequency" count="2">CDK6</result>
+ <result title="frequency" count="2">CDK4</result>
+ <result title="frequency" count="2">BCAR3</result>
+ <result title="frequency" count="2">PIK3CB</result>
+ <result title="frequency" count="2"> MET</result>
+ <result title="frequency" count="2">WIPI1</result>
+ <result title="frequency" count="2">H1047R</result>
+ <result title="frequency" count="2">MTOR</result>
+ <result title="frequency" count="2">RECK</result>
+ <result title="frequency" count="2">BCAR1</result>
+ <result title="frequency" count="2">CCNC</result>
+ <result title="frequency" count="2">GRB7</result>
+ <result title="frequency" count="2">TNTD</result>
+ <result title="frequency" count="2">XBP1</result>
+ <result title="frequency" count="2">GREB1</result>
+ <result title="frequency" count="2">ICD</result>
+ <result title="frequency" count="2">ATM</result>
+ <result title="frequency" count="2">IDH</result>
+ <result title="frequency" count="2">BRCA2</result>
+ <result title="frequency" count="2">ORM2</result>
+ <result title="frequency" count="2">MAPK</result>
+ <result title="frequency" count="2">MMP</result>
+ <result title="frequency" count="2">TFF1</result>
+ <result title="frequency" count="2">PCNA</result>
+ <result title="frequency" count="2">VEGFA</result>
+ <result title="frequency" count="2"> FGFR1</result>
+ <result title="frequency" count="2"> FGFR2</result>
+ <result title="frequency" count="2">FOXA1</result>
+ <result title="frequency" count="2">III</result>
+ <result title="frequency" count="2">PBMC</result>
+ <result title="frequency" count="2">CCNE1</result>
+ <result title="frequency" count="2">ELMO1</result>
+ <result title="frequency" count="2">EBC</result>
+ <result title="frequency" count="2">ECD</result>
+ <result title="frequency" count="2">ESR2</result>
+ <result title="frequency" count="2">CASP8</result>
+ <result title="frequency" count="2">KDM6A</result>
+ <result title="frequency" count="2">AURKA</result>
+ <result title="frequency" count="2">TWIST</result>
+ <result title="frequency" count="2">MAPK9</result>
+ <result title="frequency" count="2">CBR</result>
+ <result title="frequency" count="2">RAF</result>
+ <result title="frequency" count="2">HER4</result>
+ <result title="frequency" count="1">PNMT</result>
+ <result title="frequency" count="1">BBB</result>
+ <result title="frequency" count="1">PGAP3</result>
+ <result title="frequency" count="1">GLI</result>
+ <result title="frequency" count="1">MMTV</result>
+ <result title="frequency" count="1">ASCI</result>
+ <result title="frequency" count="1">MRGPRF</result>
+ <result title="frequency" count="1">MRGPRD</result>
+ <result title="frequency" count="1">F11R</result>
+ <result title="frequency" count="1"> CDKN2A</result>
+ <result title="frequency" count="1">DFS</result>
+ <result title="frequency" count="1">RBC</result>
+ <result title="frequency" count="1">AKT3</result>
+ <result title="frequency" count="1">MYB</result>
+ <result title="frequency" count="1">CYP1B1</result>
+ <result title="frequency" count="1">PRKACA</result>
+ <result title="frequency" count="1">SERD</result>
+ <result title="frequency" count="1">T854A</result>
+ <result title="frequency" count="1">SERM</result>
+ <result title="frequency" count="1">TGF</result>
+ <result title="frequency" count="1">HMBS</result>
+ <result title="frequency" count="1">HPRT1</result>
+ <result title="frequency" count="1">RCT</result>
+ <result title="frequency" count="1">XPB</result>
+ <result title="frequency" count="1">MIR206</result>
+ <result title="frequency" count="1">LDHA</result>
+ <result title="frequency" count="1">TERT</result>
+ <result title="frequency" count="1">LIMMA</result>
+ <result title="frequency" count="1">PRKAR2A</result>
+ <result title="frequency" count="1">LINC01405</result>
+ <result title="frequency" count="1">JUN</result>
+ <result title="frequency" count="1"> CDK6</result>
+ <result title="frequency" count="1"> FHIT</result>
+ <result title="frequency" count="1">ACR</result>
+ <result title="frequency" count="1">D761Y</result>
+ <result title="frequency" count="1">CDK12</result>
+ <result title="frequency" count="1">CHF</result>
+ <result title="frequency" count="1">FNH</result>
+ <result title="frequency" count="1">CDKN1A</result>
+ <result title="frequency" count="1">CDKN1B</result>
+ <result title="frequency" count="1">NSAI</result>
+ <result title="frequency" count="1">HCC1428</result>
+ <result title="frequency" count="1">G13D</result>
+ <result title="frequency" count="1">XRT</result>
+ <result title="frequency" count="1">RFS</result>
+ <result title="frequency" count="1">PPMID</result>
+ <result title="frequency" count="1">RASSF1A</result>
+ <result title="frequency" count="1">PGAM1</result>
+ <result title="frequency" count="1">SKT11</result>
+ <result title="frequency" count="1">L747S</result>
+ <result title="frequency" count="1">SLC7A5</result>
+ <result title="frequency" count="1">TKI</result>
+ <result title="frequency" count="1">LACB</result>
+ <result title="frequency" count="1">PCI</result>
+ <result title="frequency" count="1">RARB</result>
+ <result title="frequency" count="1">KI67</result>
+ <result title="frequency" count="1">HTN</result>
+ <result title="frequency" count="1">AHNAK</result>
+ <result title="frequency" count="1">MEK3</result>
+ <result title="frequency" count="1">GSTP1</result>
+ <result title="frequency" count="1">MEK6</result>
+ <result title="frequency" count="1"> CDH1</result>
+ <result title="frequency" count="1">ADCY2</result>
+ <result title="frequency" count="1">FIGO</result>
+ <result title="frequency" count="1">PTGS2</result>
+ <result title="frequency" count="1"> CDH4</result>
+ <result title="frequency" count="1">ADAM29</result>
+ <result title="frequency" count="1">GGA3</result>
+ <result title="frequency" count="1">RPL13</result>
+ <result title="frequency" count="1"> WT1</result>
+ <result title="frequency" count="1">LINC00636</result>
+ <result title="frequency" count="1">ORAOV1</result>
+ <result title="frequency" count="1">LINC00511</result>
+ <result title="frequency" count="1">STAT1</result>
+ <result title="frequency" count="1">CMYC</result>
+ <result title="frequency" count="1">PET</result>
+ <result title="frequency" count="1">NAT</result>
+ <result title="frequency" count="1">RANKL</result>
+ <result title="frequency" count="1"> MGMT</result>
+ <result title="frequency" count="1">IRS2</result>
+ <result title="frequency" count="1"> RUNX3</result>
+ <result title="frequency" count="1">CML</result>
+ <result title="frequency" count="1">ER1</result>
+ <result title="frequency" count="1">TUBA4A</result>
+ <result title="frequency" count="1"> NEIL2</result>
+ <result title="frequency" count="1">CD274</result>
+ <result title="frequency" count="1">CBFB</result>
+ <result title="frequency" count="1">KMT2C</result>
+ <result title="frequency" count="1">HIF1</result>
+ <result title="frequency" count="1">NEUROD2</result>
+ <result title="frequency" count="1">ABL1</result>
+ <result title="frequency" count="1">PI3</result>
+ <result title="frequency" count="1">BMI</result>
+ <result title="frequency" count="1"> VEGFA</result>
+ <result title="frequency" count="1">NSCLC</result>
+ <result title="frequency" count="1">HPRT</result>
+ <result title="frequency" count="1">CXCL12</result>
+ <result title="frequency" count="1"> BRAF</result>
+ <result title="frequency" count="1">ALB</result>
+ <result title="frequency" count="1">NER</result>
+ <result title="frequency" count="1">NF2</result>
+ <result title="frequency" count="1">BCL2L1</result>
+ <result title="frequency" count="1">FLT3</result>
+ <result title="frequency" count="1">ALT</result>
+ <result title="frequency" count="1">SYNE2</result>
+ <result title="frequency" count="1">PIK3CG</result>
+ <result title="frequency" count="1">SYNE1</result>
+ <result title="frequency" count="1">MDP</result>
+ <result title="frequency" count="1">MDR</result>
+ <result title="frequency" count="1">DSP</result>
+ <result title="frequency" count="1">JNK1</result>
+ <result title="frequency" count="1">MEF</result>
+ <result title="frequency" count="1"> THBS1</result>
+ <result title="frequency" count="1">MEK</result>
+ <result title="frequency" count="1"> RASSF1</result>
+ <result title="frequency" count="1">DAD1</result>
+ <result title="frequency" count="1"> LGALS4</result>
+ <result title="frequency" count="1">ANP</result>
+ <result title="frequency" count="1">PRCC</result>
+ <result title="frequency" count="1">LKB1</result>
+ <result title="frequency" count="1">TTN</result>
+ <result title="frequency" count="1">CSC</result>
+ <result title="frequency" count="1">MIEN1</result>
+ <result title="frequency" count="1">SRS</result>
+ <result title="frequency" count="1">CSF</result>
+ <result title="frequency" count="1">PMA</result>
+ <result title="frequency" count="1">NAGA</result>
+ <result title="frequency" count="1">PTPN11</result>
+ <result title="frequency" count="1">TBX3</result>
+ <result title="frequency" count="1">TPCN2</result>
+ <result title="frequency" count="1">BETA</result>
+ <result title="frequency" count="1">DRFI</result>
+ <result title="frequency" count="1">JAG</result>
+ <result title="frequency" count="1"> CHFR</result>
+ <result title="frequency" count="1">DCIS</result>
+ <result title="frequency" count="1">PDGF</result>
+ <result title="frequency" count="1"> TSLC1</result>
+ <result title="frequency" count="1">PFKP</result>
+ <result title="frequency" count="1">TPT1</result>
+ <result title="frequency" count="1"> GSTP1</result>
+ <result title="frequency" count="1">MDSC</result>
+ <result title="frequency" count="1">DVT</result>
+ <result title="frequency" count="1">CCNE</result>
+ <result title="frequency" count="1">RPS16</result>
+ <result title="frequency" count="1"> HER2</result>
+ <result title="frequency" count="1"> HER3</result>
+ <result title="frequency" count="1">RPS10</result>
+ <result title="frequency" count="1">RECIST</result>
+ <result title="frequency" count="1"> CDH17</result>
+ <result title="frequency" count="1">DXA</result>
+ <result title="frequency" count="1">RUNX2</result>
+ <result title="frequency" count="1">RUNX1</result>
+ <result title="frequency" count="1">EPHA2</result>
+ <result title="frequency" count="1">PPE</result>
+ <result title="frequency" count="1">MAOB</result>
+ <result title="frequency" count="1">IGFR</result>
+ <result title="frequency" count="1">PIK3R3</result>
+ <result title="frequency" count="1">PIK3R2</result>
+ <result title="frequency" count="1">IBE</result>
+ <result title="frequency" count="1">KALRN</result>
+ <result title="frequency" count="1">PRKCDBP</result>
+ <result title="frequency" count="1">PNUTS</result>
+ <result title="frequency" count="1">AST</result>
+ <result title="frequency" count="1">WBRT</result>
+ <result title="frequency" count="1">PBGD</result>
+ <result title="frequency" count="1">PTK6</result>
+ <result title="frequency" count="1">IGF1</result>
+ <result title="frequency" count="1">MRP3</result>
+ <result title="frequency" count="1">MRP4</result>
+ <result title="frequency" count="1">PTK2</result>
+ <result title="frequency" count="1">MRP5</result>
+ <result title="frequency" count="1">BST2</result>
+ <result title="frequency" count="1"> MYO1A</result>
+ <result title="frequency" count="1">RPS29</result>
+ <result title="frequency" count="1">ZNF814</result>
+ <result title="frequency" count="1">RPS24</result>
+ <result title="frequency" count="1">MLL</result>
+ <result title="frequency" count="1">CYB</result>
+ <result title="frequency" count="1">MAP1LC3B</result>
+ <result title="frequency" count="1">ACADL</result>
+ <result title="frequency" count="1"> NOTCH1</result>
+ <result title="frequency" count="1">VEGFR</result>
+ <result title="frequency" count="1"> ARHGAP26</result>
+ <result title="frequency" count="1">NPLD</result>
+ <result title="frequency" count="1"> MBNL1</result>
+ <result title="frequency" count="1">PDCD1LG2</result>
+ <result title="frequency" count="1">HCP</result>
+ <result title="frequency" count="1">GABA</result>
+ <result title="frequency" count="1"> RECIST</result>
+ <result title="frequency" count="1">DDR2</result>
+ <result title="frequency" count="1"> CCND1</result>
+ <result title="frequency" count="1">CA125</result>
+ <result title="frequency" count="1">WBC</result>
+ <result title="frequency" count="1">GIST</result>
+ <result title="frequency" count="1">MAP3K1</result>
+ <result title="frequency" count="1"> MTMR9</result>
+ <result title="frequency" count="1">PI3KCD</result>
+ <result title="frequency" count="1"> CDX1</result>
+ <result title="frequency" count="1">TCAP</result>
+ <result title="frequency" count="1"> NDUF</result>
+ <result title="frequency" count="1">IGF1R</result>
+ <result title="frequency" count="1">CCND2</result>
+ <result title="frequency" count="1">SNIP1</result>
+ <result title="frequency" count="1">D16HER2</result>
+ <result title="frequency" count="1"> LOX</result>
+ <result title="frequency" count="1">FGFR2F</result>
+ <result title="frequency" count="1">HGF</result>
+ <result title="frequency" count="1">ANGEL1</result>
+ <result title="frequency" count="1">WNT5A</result>
+ <result title="frequency" count="1">TSC1</result>
+ <result title="frequency" count="1"> RHOA</result>
+ <result title="frequency" count="1">FDA</result>
+ <result title="frequency" count="1">MRM</result>
+ <result title="frequency" count="1"> CLDN18</result>
+ <result title="frequency" count="1">GFR</result>
+ <result title="frequency" count="1">I491M</result>
+ <result title="frequency" count="1">MLL3</result>
+ <result title="frequency" count="1">SMAD4</result>
+ <result title="frequency" count="1">TGFB1</result>
+ <result title="frequency" count="1">FEC</result>
+ <result title="frequency" count="1">CAV1</result>
+ <result title="frequency" count="1">IBCR</result>
+ <result title="frequency" count="1">A2ML1</result>
+ <result title="frequency" count="1">BMPR1B</result>
+ <result title="frequency" count="1">FGFR4</result>
+ <result title="frequency" count="1">JNK</result>
+ <result title="frequency" count="1"> DCC</result>
+ <result title="frequency" count="1">PP2R1A</result>
+ <result title="frequency" count="1">DC1</result>
+ <result title="frequency" count="1">GUSB</result>
+ <result title="frequency" count="1">MYEOV</result>
+ <result title="frequency" count="1">CAD</result>
+ <result title="frequency" count="1">HUNK</result>
+ <result title="frequency" count="1">DCI</result>
+ <result title="frequency" count="1">YWHAZ</result>
+ <result title="frequency" count="1">DCK</result>
+ <result title="frequency" count="1">TGFBR1</result>
+ <result title="frequency" count="1">DDX19A</result>
+ <result title="frequency" count="1">SAC</result>
+ <result title="frequency" count="1">SAI</result>
+ <result title="frequency" count="1">DOCK2</result>
+ <result title="frequency" count="1">HLA</result>
+ <result title="frequency" count="1">CBC</result>
+ <result title="frequency" count="1">MAPK8</result>
+ <result title="frequency" count="1">MUC1</result>
+ <result title="frequency" count="1">EFS</result>
+ <result title="frequency" count="1">RRM1</result>
+ <result title="frequency" count="1">CCC</result>
+ <result title="frequency" count="1">RRM2</result>
+ <result title="frequency" count="1">CCB</result>
+ <result title="frequency" count="1">EGF</result>
+ <result title="frequency" count="1">NYR</result>
+ <result title="frequency" count="1">SOD1</result>
+ <result title="frequency" count="1">SLC4A7</result>
+ <result title="frequency" count="1">MAPK10</result>
+ <result title="frequency" count="1">BECN</result>
+ <result title="frequency" count="1">CD4</result>
+ <result title="frequency" count="1">PIK3IP1</result>
+ <result title="frequency" count="1">CD8</result>
+ <result title="frequency" count="1"> MYC</result>
+ <result title="frequency" count="1">BAX</result>
+ <result title="frequency" count="1">VIM</result>
+</results>
