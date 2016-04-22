@@ -14,6 +14,7 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
 import org.xmlcml.euclid.IntArray;
 import org.xmlcml.xml.XMLUtil;
@@ -99,17 +100,20 @@ public class WikipediaLookupTest {
 //	}
 	
 	@Test
-	@Ignore // takes too long
+//	@Ignore // takes too long
 	public void testLookup() throws Exception {
 		File target = new File("target/lookup/pone_0115884");
 		FileUtils.copyDirectory(new File(AMIFixtures.TEST_PLOSONE_DIR, "journal.pone.0115884/"), target);
 		String cmd = "--sp.species --context 35 --sp.type binomial binomialsp "
 				+ "-q "+target+" -i scholarly.html "
 				+ "--lookup wikipedia";
-		LOG.debug(cmd);
-		SpeciesArgProcessor argProcessor = new SpeciesArgProcessor();
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor();
 		argProcessor.parseArgs(cmd);
 		argProcessor.runAndOutput();
+		// doesn't work
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"binomial\" />"
+				);
 	}
 
 	

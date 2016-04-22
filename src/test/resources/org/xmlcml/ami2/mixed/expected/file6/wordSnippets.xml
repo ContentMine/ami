@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/mixed/file6/results/word/frequencies/results.xml">
+  <result title="frequency" word="Sulawesi" count="46"/>
+  <result title="frequency" word="species" count="41"/>
+  <result title="frequency" word="larvaepartus" count="37"/>
+  <result title="frequency" word="Limnonectes" count="35"/>
+  <result title="frequency" word="tadpoles" count="33"/>
+ </snippets>
+</snippetsTree>

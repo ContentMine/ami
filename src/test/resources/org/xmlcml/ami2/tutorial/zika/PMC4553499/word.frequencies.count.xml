@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="70">control</result>
+ <result title="frequency" count="57">dengue</result>
+ <result title="frequency" count="45">mosquito</result>
+ <result title="frequency" count="39">vector</result>
+ <result title="frequency" count="38">Wolbachia</result>
+ <result title="frequency" count="37">aegypti</result>
+ <result title="frequency" count="33">mosquitoes</result>
+ <result title="frequency" count="29">population</result>
+ <result title="frequency" count="28">Aedes</result>
+ <result title="frequency" count="24">Ae.</result>
+ <result title="frequency" count="22">disease</result>
+ <result title="frequency" count="22">Brazil</result>
+</results>

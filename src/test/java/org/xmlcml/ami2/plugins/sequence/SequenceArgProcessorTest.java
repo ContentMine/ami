@@ -15,8 +15,6 @@ import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 
 public class SequenceArgProcessorTest {
-
-	
 	
 	private static final Logger LOG = Logger.getLogger(SequenceArgProcessorTest.class);
 	static {

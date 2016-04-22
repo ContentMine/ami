@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4671560/results/species/genus/results.xml">
+  <result pre="ecies in a large number of cases and has been widely used to delimit closely related mosquitoes in " exact="Anopheles" xpath="/html[1]/body[1]/div[1]/div[8]/p[4]" match="Anopheles" post=" complexes [ 35 , &lt;a href=&quot;#pntd.0004250.ref038" name="genus"/>
+  <result pre="ly related mosquito taxa [ 33 ]. Given this, and that " exact="Aedine" match="Aedine" post=" mosquitoes may be particularly prone to NUMT’s due to their large genome size [ &lt;a href=&quot;#p" name="genus"/>
+ </snippets>
+</snippetsTree>

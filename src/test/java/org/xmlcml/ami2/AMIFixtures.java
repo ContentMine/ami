@@ -1,7 +1,6 @@
 package org.xmlcml.ami2;
 
 import java.io.File;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,9 +9,14 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
+import org.xmlcml.ami2.plugins.CommandProcessor;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
+import org.xmlcml.cmine.files.ContentProcessor;
+import org.xmlcml.cmine.files.ResultsElementList;
+import org.xmlcml.cmine.util.CMineTestFixtures;
 import org.xmlcml.xml.XMLUtil;
 
 public class AMIFixtures {
@@ -36,6 +40,8 @@ public class AMIFixtures {
 	
 	public final static File TEST_MIXED_DIR        = new File(AMIFixtures.TEST_AMI_DIR, "mixed");
 
+	public final static File TEST_PATENTS_DIR      = new File(AMIFixtures.TEST_AMI_DIR, "patents");
+
 	public final static File TEST_PLOSONE_DIR      = new File(AMIFixtures.TEST_AMI_DIR, "plosone");
 	public final static File TEST_PLOSONE_0115884  = new File(AMIFixtures.TEST_PLOSONE_DIR, "journal.pone.0115884");
 	public final static File TEST_PLOSONE_SEQUENCE_0121780  = new File(AMIFixtures.TEST_PLOSONE_DIR, "plosjournal.pone.0121780_sequence");
@@ -47,14 +53,19 @@ public class AMIFixtures {
 	public final static File TEST_IJSEM_MALARIA_0119475  = new File(AMIFixtures.TEST_IJSEM_DIR, "journal.pone.0119475");
 
 	public final static File TEST_PHYLO_DIR          = new File(AMIFixtures.TEST_AMI_DIR, "phylo");
+	public final static File TEST_RESULTS_DIR        = new File(AMIFixtures.TEST_AMI_DIR, "results/");
 	public final static File TEST_RRID_DIR           = new File(AMIFixtures.TEST_AMI_DIR, "rrid/");
 
-	public static final File TEST_WORD_EXAMPLES      = new File(TEST_AMI_DIR, "word/examples");
-	public static final File EXAMPLES_TEMP_16_1_1  = new File("target/examples_16_1_1");
+	public final static File TEST_TUTORIAL_DIR       = new File(AMIFixtures.TEST_AMI_DIR, "tutorial/");
+
+	public static final File TEST_WORD_DIR           = new File(TEST_AMI_DIR, "word");
+	public static final File TEST_WORD_EXAMPLES      = new File(TEST_WORD_DIR, "examples");
+	public static final File TARGET_EXAMPLES_TEMP_16_1_1  = new File("target/examples_16_1_1");
 
 	public static final String RESULTS_XML = "results.xml";
 	private static final String RESULTS_DIR = "results/";
 	private static final String EXPECTED_DIR = "expected/";
+	private static final String TARGET_TEST = "target/test/";
 
 
 	/** runs tests and compares expected and actual output.
@@ -69,7 +80,7 @@ public class AMIFixtures {
 			throws IOException {
 		LOG.trace("++++++++++++++++++++++   harness   +++++++++++++++++++++++");
 		LOG.trace("newDir exists: "+newDir+"; e: "+newDir.exists()+"; d "+newDir.isDirectory());
-		CMDir cTree = new CMDir(cTreeDirectory);
+		CTree cTree = new CTree(cTreeDirectory);
 		if (newDir.exists()) FileUtils.deleteDirectory(newDir);
 		cTree.copyTo(newDir, true);
 		
@@ -110,5 +121,43 @@ public class AMIFixtures {
 		}
 	    Assert.assertNull("message: "+msg, msg);
 	}
+	
+	
+
+	// utility method to check first part of resultsElementList
+	
+	public static void checkResultsElementList(AMIArgProcessor argProcessor, int size, int elem, String start) {
+		CTree currentTree = argProcessor.getCurrentCTree();
+		if (currentTree == null) {
+			LOG.warn("Null CTree");
+			return;
+		}
+		ContentProcessor contentProcessor = argProcessor.getOrCreateContentProcessor();
+		ResultsElementList reList = contentProcessor.getOrCreateResultsElementList();
+		reList.sortByTitle();
+		Assert.assertEquals(size, reList.size());
+		if (elem < size) {
+			String results = reList.get(elem).toXML();
+			if (!results.startsWith(start)) {
+				String ss = results.substring(0,  Math.min(300,  results.length()));
+				// replace " apos by \"
+				String sss = ss.replaceAll("\"", "\\\\\\\"");
+				LOG.debug("start (escaped) \n"+sss);
+				Assert.fail("results assertion failure: starts with: "+ss);
+			}
+		}
+	}
+
+	public static CommandProcessor createDefaultDirectoriesAndProcessor(String projectName) {
+		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, projectName);
+		File projectDir = new File(AMIFixtures.TARGET_TEST, projectName);
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		LOG.debug("wrote clean copy: "+projectDir);
+		return commandProcessor;
+	}
+
+	
+
 	
 }

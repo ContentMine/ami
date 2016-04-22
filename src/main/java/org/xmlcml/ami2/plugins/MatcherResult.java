@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 
-import nu.xom.IllegalNameException;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cmine.files.ResultsElement;
+
+import nu.xom.IllegalNameException;
 
 /** holds immediate result of match.
  * 
@@ -103,13 +104,13 @@ public class MatcherResult {
 
 	}
 
-	public List<ResultElement> createResultElementList() {
-		List<ResultElement> resultElementList = new ArrayList<ResultElement>();
+	public ResultsElement createResultsElement() {
+		ResultsElement resultElementList = new ResultsElement();
 		ensureNamedGroupListList();
 		for (NamedGroupList namedGroupList : namedGroupListList) {
 			try {
 				ResultElement resultElement = namedGroupList.createResultElement();
-				resultElementList.add(resultElement);
+				resultElementList.appendChild(resultElement);
 			} catch (IllegalNameException e) {
 				LOG.error("Illegal attribute name "+e);
 			}

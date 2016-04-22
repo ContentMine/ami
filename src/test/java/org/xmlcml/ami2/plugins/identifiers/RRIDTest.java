@@ -7,12 +7,11 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.lookups.RRIDLookup;
 import org.xmlcml.ami2.plugins.identifier.IdentifierArgProcessor;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CMDir;
 import org.xmlcml.cmine.lookup.AbstractLookup;
 import org.xmlcml.norma.NormaArgProcessor;
 
@@ -31,6 +30,7 @@ public class RRIDTest {
 	}
 	
 	@Test
+	@Ignore // fails with http 502 
 	public void testAnyXML() throws IOException {
 		AbstractLookup rridLookup = new RRIDLookup();
 		rridLookup.setOutputFormat(".xml");
@@ -40,6 +40,7 @@ public class RRIDTest {
 
 	@Test
 	// SHOWCASE
+	// TESTED 2016-01-12
 	public void testAmiIdentifier() throws IOException {
 
 	    File neuro4415html = new File(AMIFixtures.TEST_RRID_DIR, "JNEUROSCI.4415-13.2014.html");
@@ -53,7 +54,13 @@ public class RRIDTest {
 	    rridDir.mkdirs();
 	    FileUtils.copyDirectory(AMIFixtures.TEST_RRID_DIR, rridDir);
 	    cmd = "--id.identifier --context 35 50 --id.regex  regex/identifiers.xml --id.type rrid.ab -q "+rridDir+" -i scholarly.html"; 
-	    new IdentifierArgProcessor(cmd).runAndOutput();
+	    IdentifierArgProcessor argProcessor = new IdentifierArgProcessor(cmd);
+	    argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"rrid.ab\">"
+				+ "<result pre=\" receptor α2 (catalog #600-401-D45 \" exact=\"RRID:AB_11182018\" "
+				+ "post=\"; Rockland Immunochemicals), α5 (catalog #AB9678 R\" "
+				+ "xpath=\"/html[1]/body[1]/div[1]/div[3]/div[3]/");
 	    Assert.assertTrue("exists", rridDir.exists());
 	    File resultsXml = new File(rridDir, "q4415/results/identifier/rrid.ab/results.xml");
 	    Assert.assertTrue("results", resultsXml.exists());

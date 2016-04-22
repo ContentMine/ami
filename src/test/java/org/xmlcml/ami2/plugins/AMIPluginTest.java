@@ -4,18 +4,33 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import nu.xom.Element;
-
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
+
+import nu.xom.Element;
 
 public class AMIPluginTest {
 
 	@Test
+	@Ignore // outputs heklp
 	public void testAMIPlugin() {
 		String[] args = {"regex"};
+		AMIPlugin.main(args);
+	}
+	
+	@Test
+	@Ignore // avoid help output
+	public void testAMIPluginHelp() {
+		String[] args = {"regex", "--help"};
+		AMIPlugin.main(args);
+	}
+	
+	@Test
+	public void testAMIPluginIO() {
+		String[] args = {"regex", "--input", "foo", "--output", "bar"};
 		AMIPlugin.main(args);
 	}
 	
@@ -58,5 +73,22 @@ public class AMIPluginTest {
 				+ " --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
 		AMIArgProcessor argProcessor = new WordArgProcessor(cmd);
 		argProcessor.runAndOutput();
+	}
+	
+	@Test
+	public void testWordArgs() throws IOException {
+		FileUtils.copyDirectory(new File("src/test/resources/org/xmlcml/ami2/ieee"), new File("target/ieee/words"));
+		String[] args = {
+				"word", 
+				"--ctree", 
+				"target/ieee/words",
+				"--input", 
+				"scholarly.html",
+				"--w.words",
+				"wordFrequencies",
+				"--w.stopwords", 
+				"/org/xmlcml/ami2/plugins/word/stopwords.txt"
+				};
+		AMIPlugin.main(args);
 	}
 }

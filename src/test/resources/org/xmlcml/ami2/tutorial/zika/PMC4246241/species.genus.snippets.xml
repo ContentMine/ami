@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4246241/results/species/genus/results.xml">
+  <result pre="nd, CHIKV has historically been maintained in an urban cycle transmitted to humans by the mosquito " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Aedes" post=" ( Stegomyia) aegypti and, to a lesser extent, Aedes ( Stegomyia) " name="genus"/>
+  <result pre="o humans by the mosquito Aedes ( Stegomyia) aegypti and, to a lesser extent, " exact=" Aedes" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Aedes" post=" ( Stegomyia) albopictus [ 6 ]. " name="genus"/>
+  <result pre="ruses-06-04628&quot;&gt;47 ]. In Senegal, CHIKV has been detected in vectors of yellow fever virus: " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Aedes" post=" ( Diceromyia) furcifer, A. ( Diceromyia) taylori, A. (" name="genus"/>
+  <result pre="ctory mosquitoes [ 114 ]. For this latter strategy, " exact="Aedes" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Aedes" post=" mosquitoes have been successfully transformed using transposon vectors [ &lt;a href=&quot;#B115-vir" name="genus"/>
+  <result pre=" 115 ] or infections with the intracellular bacterium " exact="Wolbachia" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Wolbachia" post=" [ 116 ]. However, a system is required to spread th" name="genus"/>
+  <result pre="rten mosquito life span [ 119 ], certain strains of " exact="Wolbachia" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Wolbachia" post=" are also able to reduce arboviral transmission [ 120 &lt;/sup" name="genus"/>
+  <result pre="a href=&quot;#B120-viruses-06-04628&quot;&gt;120 , 121 ]. " exact="Wolbachia" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Wolbachia" post=" induce various distortions of host reproduction via a form of sterility known as cytoplasmic incom" name="genus"/>
+  <result pre=" populations [ 122 ]. Therefore, certain strains of " exact="Wolbachia" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Wolbachia" post=" provide the double role of a gene driver system and carrier of a refractory phenotype. While the m" name="genus"/>
+  <result pre=" not affect CHIKV replication [ 124 ]. In contrast, " exact="Wolbachia" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Wolbachia" post=" are able to limit DENV in A. albopictus [ 125 &lt;/sup" name="genus"/>
+  <result pre="126-viruses-06-04628&quot;&gt;126 ]. Moreover, A. albopictus transfected with a heterologous " exact="Wolbachia" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Wolbachia" post=" isolated from the fruit fly Drosophila melanogaster ( wMel) inhibit the transmission" name="genus"/>
+  <result pre="&gt; ]. Several mechanisms have been proposed to explain the molecular basis of the pathogen-blocking " exact="Wolbachia" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Wolbachia" post=" infection phenotype: upregulation of immune genes, production of reactive oxygen species, or compe" name="genus"/>
+  <result pre="utes, including the genera Acinetobacter, Asaia, Delftia, Pseudomonas, " exact="Wolbachia" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Wolbachia" post=" and Bacillus as well as members of the family Enterobacteriaceae [ &lt;a href=&quot;#B132-vi" name="genus"/>
+  <result pre="enera Acinetobacter, Asaia, Delftia, Pseudomonas, Wolbachia and " exact="Bacillus" xpath="/html[1]/body[1]/div[1]/div[6]/div[1]/p[1]" match="Bacillus" post=" as well as members of the family Enterobacteriaceae [ 132 " name="genus"/>
+  <result pre="&gt; 9 , 12 ] and " exact="Culex" match="Culex" post=" ( Melanoconion) taeniopus in the case of VEEV [ &lt;a href=&quot;#B158-viruses-06-046" name="genus"/>
+ </snippets>
+</snippetsTree>

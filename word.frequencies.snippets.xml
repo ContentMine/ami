@@ -1,0 +1,1753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectSnippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC2640145/results/word/frequencies/results.xml">
+   <result word="virus" count="62"/>
+   <result word="health" count="49"/>
+   <result word="human" count="49"/>
+   <result word="Gabon" count="42"/>
+   <result word="diseases" count="40"/>
+   <result word="therapy" count="32"/>
+   <result word="zoonotic" count="30"/>
+   <result word="fever" count="29"/>
+   <result word="endemic" count="28"/>
+   <result word="wildlife" count="28"/>
+   <result word="public" count="26"/>
+   <result word="Africa" count="24"/>
+   <result word="infectious" count="24"/>
+   <result word="potentially" count="24"/>
+   <result word="Central" count="23"/>
+   <result word="Health" count="22"/>
+   <result word="areas" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3289602/results/word/frequencies/results.xml">
+   <result word="left" count="187"/>
+   <result word="[]," count="59"/>
+   <result word="ZIKV" count="47"/>
+   <result word="virus" count="44"/>
+   <result word="Zika" count="38"/>
+   <result word="strains" count="29"/>
+   <result word="Ae." count="28"/>
+   <result word="leftX" count="26"/>
+   <result word="strain" count="26"/>
+   <result word="Med" count="21"/>
+   <result word="[]." count="21"/>
+  </snippets>
+ </snippetsTree>
+  <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4654492/results/word/frequencies/results.xml">
+   <result word="resistance" count="80"/>
+   <result word="aegypti" count="50"/>
+   <result word="genes" count="47"/>
+   <result word="populations" count="46"/>
+   <result word="Aedes" count="44"/>
+   <result word="left" count="33"/>
+   <result word="GUA" count="32"/>
+   <result word="center" count="29"/>
+   <result word="insecticide" count="28"/>
+   <result word="GUY" count="27"/>
+   <result word="Guiana," count="26"/>
+   <result word="deltamethrin" count="26"/>
+   <result word="population" count="26"/>
+   <result word="mosquito" count="25"/>
+   <result word="pyrethroid" count="25"/>
+   <result word="CAL" count="24"/>
+   <result word="using" count="23"/>
+   <result word="gene" count="22"/>
+   <result word="leftFrench" count="21"/>
+   <result word="resistant" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3342053/results/word/frequencies/results.xml">
+   <result word="sylvatic" count="41"/>
+   <result word="DENV-" count="25"/>
+   <result word="topcenter" count="24"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3343050/results/word/frequencies/results.xml">
+   <result word="results" count="70"/>
+   <result word="YFV" count="53"/>
+   <result word="laboratories" count="48"/>
+   <result word="RT-PCR" count="43"/>
+   <result word="samples" count="41"/>
+   <result word="serological" count="37"/>
+   <result word="detection" count="36"/>
+   <result word="diagnosis" count="33"/>
+   <result word="IgG" count="30"/>
+   <result word="reported" count="30"/>
+   <result word="sample" count="28"/>
+   <result word="OPTIMAL" count="27"/>
+   <result word="using" count="27"/>
+   <result word="EQA" count="25"/>
+   <result word="laboratory" count="25"/>
+   <result word="IgM" count="24"/>
+   <result word="used" count="24"/>
+   <result word="presence" count="23"/>
+   <result word="antibodies" count="22"/>
+   <result word="molecular" count="22"/>
+   <result word="(%)" count="21"/>
+   <result word="virus" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3810876/results/word/frequencies/results.xml">
+   <result word="left" count="1275"/>
+   <result word="forest" count="140"/>
+   <result word="forests" count="81"/>
+   <result word="species" count="70"/>
+   <result word="left." count="67"/>
+   <result word="fragments" count="44"/>
+   <result word="Forest" count="29"/>
+   <result word="size" count="28"/>
+   <result word="Uganda" count="27"/>
+   <result word="tree" count="26"/>
+   <result word="changes" count="25"/>
+   <result word="area" count="21"/>
+   <result word="tropical" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3384601/results/word/frequencies/results.xml">
+   <result word="HPV" count="106"/>
+   <result word="particles" count="43"/>
+   <result word="antibodies" count="41"/>
+   <result word="mice" count="40"/>
+   <result word="AAVLP(HPV/L)" count="38"/>
+   <result word="capsid" count="34"/>
+   <result word="AAV" count="32"/>
+   <result word="protein" count="30"/>
+   <result word="immunized" count="24"/>
+   <result word="sera" count="24"/>
+   <result word="titers" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3429392/results/word/frequencies/results.xml">
+   <result word="virus" count="60"/>
+   <result word="ZIKV" count="50"/>
+   <result word="Ae." count="37"/>
+   <result word="aegypti" count="36"/>
+   <result word="mosquitoes" count="32"/>
+   <result word="Med" count="26"/>
+   <result word="day" count="26"/>
+   <result word="Hyg" count="25"/>
+   <result word="Trop" count="24"/>
+   <result word="Zika" count="23"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3499821/results/word/frequencies/results.xml">
+   <result word="virus" count="90"/>
+   <result word="Ebola" count="34"/>
+   <result word="CIRMF" count="23"/>
+   <result word="Ebolavirus/Ebola" count="23"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3616844/results/word/frequencies/results.xml">
+   <result word="virus" count="77"/>
+   <result word="assay" count="65"/>
+   <result word="Flavi" count="51"/>
+   <result word="flaviviruses" count="49"/>
+   <result word="Pan-Flavi" count="42"/>
+   <result word="flavivirus" count="36"/>
+   <result word="detection" count="34"/>
+   <result word="probe" count="34"/>
+   <result word="using" count="34"/>
+   <result word="RNA" count="31"/>
+   <result word="primer" count="26"/>
+   <result word="primers" count="23"/>
+   <result word="encephalitis" count="21"/>
+   <result word="fever" count="21"/>
+   <result word="used" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3622304/results/word/frequencies/results.xml">
+   <result word="disorder" count="56"/>
+   <result word="protein" count="56"/>
+   <result word="proteins" count="43"/>
+   <result word="virus" count="42"/>
+   <result word="disordered" count="34"/>
+   <result word="conformational" count="33"/>
+   <result word="evolutionary" count="32"/>
+   <result word="structural" count="26"/>
+   <result word="regions" count="25"/>
+   <result word="sites" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3715421/results/word/frequencies/results.xml">
+   <result word="virus" count="64"/>
+   <result word="ILHV" count="31"/>
+   <result word="mosquitoes" count="25"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3731215/results/word/frequencies/results.xml">
+   <result word="Ae." count="50"/>
+   <result word="ZIKV" count="44"/>
+   <result word="albopictus" count="34"/>
+   <result word="virus" count="31"/>
+   <result word="mosquitoes" count="24"/>
+   <result word="day" count="22"/>
+   <result word="Zika" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3744434/results/word/frequencies/results.xml">
+   <result word="microarray" count="107"/>
+   <result word="PCR" count="104"/>
+   <result word="virus" count="99"/>
+   <result word="using" count="78"/>
+   <result word="probes" count="62"/>
+   <result word="RNA" count="60"/>
+   <result word="detection" count="58"/>
+   <result word="mosquito" count="49"/>
+   <result word="viruses" count="43"/>
+   <result word="mosquitoes" count="38"/>
+   <result word="used" count="36"/>
+   <result word="infected" count="33"/>
+   <result word="amplification" count="32"/>
+   <result word="Table" count="31"/>
+   <result word="gene" count="30"/>
+   <result word="Cx." count="27"/>
+   <result word="detected" count="27"/>
+   <result word="identification" count="27"/>
+   <result word="species" count="27"/>
+   <result word="viral" count="27"/>
+   <result word="amplicons" count="25"/>
+   <result word="identified" count="25"/>
+   <result word="positive" count="25"/>
+   <result word="probe" count="25"/>
+   <result word="assays" count="22"/>
+   <result word="evaluated" count="22"/>
+   <result word="pools" count="22"/>
+   <result word="flaviviruses" count="21"/>
+   <result word="z-scores" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3765938/results/word/frequencies/results.xml">
+   <result word="DENV" count="130"/>
+   <result word="detection" count="119"/>
+   <result word="DENV-" count="70"/>
+   <result word="RNA" count="58"/>
+   <result word="virus" count="58"/>
+   <result word="AuNPs" count="44"/>
+   <result word="aggregation" count="43"/>
+   <result word="dengue" count="42"/>
+   <result word="DNAzyme" count="39"/>
+   <result word="containing" count="36"/>
+   <result word="DDZ-AuNP" count="34"/>
+   <result word="assay" count="30"/>
+   <result word="target" count="28"/>
+   <result word="using" count="28"/>
+   <result word="NaCl" count="27"/>
+   <result word="NGC" count="26"/>
+   <result word="colorimetric" count="26"/>
+   <result word="cell" count="25"/>
+   <result word="infected" count="25"/>
+   <result word="incubated" count="24"/>
+   <result word="DDZ-M-AuNP" count="23"/>
+   <result word="serotype" count="23"/>
+   <result word="AuNP" count="22"/>
+   <result word="DNAzymes" count="22"/>
+   <result word="presence" count="22"/>
+   <result word="MgCl" count="21"/>
+   <result word="method" count="21"/>
+   <result word="reaction" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3766601/results/word/frequencies/results.xml">
+   <result word="virus" count="148"/>
+   <result word="mAbs" count="95"/>
+   <result word="neutralizing" count="86"/>
+   <result word="human" count="70"/>
+   <result word="infection" count="58"/>
+   <result word="DENV" count="56"/>
+   <result word="Virology" count="54"/>
+   <result word="mice" count="52"/>
+   <result word="encephalitis" count="50"/>
+   <result word="mAb" count="50"/>
+   <result word="protein" count="49"/>
+   <result word="monoclonal" count="46"/>
+   <result word="dengue" count="44"/>
+   <result word="antibody" count="37"/>
+   <result word="activity" count="36"/>
+   <result word="described" count="36"/>
+   <result word="glycoprotein" count="36"/>
+   <result word="viral" count="36"/>
+   <result word="Abs" count="35"/>
+   <result word="envelope" count="34"/>
+   <result word="fusion" count="34"/>
+   <result word="However," count="33"/>
+   <result word="WNV" count="32"/>
+   <result word="murine" count="31"/>
+   <result word="antibodies" count="30"/>
+   <result word="left" count="29"/>
+   <result word="West" count="28"/>
+   <result word="DENV:" count="27"/>
+   <result word="DIII" count="26"/>
+   <result word="left[" count="26"/>
+   <result word="strain" count="26"/>
+   <result word="μg/mL" count="26"/>
+   <result word="acid" count="25"/>
+   <result word="neutralization" count="25"/>
+   <result word="therapeutic" count="25"/>
+   <result word="Nile" count="24"/>
+   <result word="centerE" count="24"/>
+   <result word="epitope" count="24"/>
+   <result word="epitopes" count="24"/>
+   <result word="infections" count="23"/>
+   <result word="particular," count="23"/>
+   <result word="residues" count="23"/>
+   <result word="Moreover," count="22"/>
+   <result word="fever" count="22"/>
+   <result word="mouse" count="22"/>
+   <result word="challenge" count="21"/>
+   <result word="infected" count="21"/>
+   <result word="isolated" count="21"/>
+   <result word="protection" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3854913/results/word/frequencies/results.xml">
+   <result word="ZIKV" count="87"/>
+   <result word="virus" count="48"/>
+   <result word="sequence" count="28"/>
+   <result word="region" count="27"/>
+   <result word="Zika" count="23"/>
+   <result word="using" count="23"/>
+   <result word="data" count="22"/>
+   <result word="patients" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3863887/results/word/frequencies/results.xml">
+   <result word="virus" count="154"/>
+   <result word="WNV" count="119"/>
+   <result word="West" count="116"/>
+   <result word="Nile" count="113"/>
+   <result word="flaviviruses" count="80"/>
+   <result word="flavivirus" count="58"/>
+   <result word="encephalitis" count="49"/>
+   <result word="Europe" count="46"/>
+   <result word="antibodies" count="46"/>
+   <result word="Dis." count="44"/>
+   <result word="strain" count="44"/>
+   <result word="serological" count="40"/>
+   <result word="infections" count="39"/>
+   <result word="virus," count="38"/>
+   <result word="vaccine" count="35"/>
+   <result word="vaccination" count="33"/>
+   <result word="infection" count="31"/>
+   <result word="Virol." count="30"/>
+   <result word="vaccines" count="29"/>
+   <result word="Infect." count="28"/>
+   <result word="protection" count="28"/>
+   <result word="virulent" count="27"/>
+   <result word="JEV" count="24"/>
+   <result word="Japanese" count="23"/>
+   <result word="tick-borne" count="23"/>
+   <result word="viruses" count="23"/>
+   <result word="human" count="22"/>
+   <result word="tests" count="22"/>
+   <result word="using" count="22"/>
+   <result word="Emerg." count="21"/>
+   <result word="Vet." count="21"/>
+   <result word="birds" count="21"/>
+   <result word="clinical" count="21"/>
+   <result word="humans" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3880869/results/word/frequencies/results.xml">
+   <result word="center" count="79"/>
+   <result word="()," count="55"/>
+   <result word="Aedes" count="38"/>
+   <result word="Kosrae" count="29"/>
+   <result word="Ae." count="26"/>
+   <result word="dengue" count="22"/>
+   <result word="Culex" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3888466/results/word/frequencies/results.xml">
+   <result word="ZIKV" count="82"/>
+   <result word="glycosylation" count="32"/>
+   <result word="strains" count="31"/>
+   <result word="Figure" count="29"/>
+   <result word="virus" count="27"/>
+   <result word="phylogenetic" count="26"/>
+   <result word="using" count="26"/>
+   <result word="Zika" count="25"/>
+   <result word="recombination" count="25"/>
+   <result word="viral" count="25"/>
+   <result word="protein" count="24"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3901491/results/word/frequencies/results.xml">
+   <result word="virus" count="45"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3916288/results/word/frequencies/results.xml">
+   <result word="left" count="184"/>
+   <result word="ZIKV" count="57"/>
+   <result word="Aedes" count="32"/>
+   <result word="virus" count="29"/>
+   <result word="[]," count="24"/>
+   <result word="Zika" count="23"/>
+   <result word="albopictus" count="23"/>
+   <result word="human" count="22"/>
+   <result word="Ae." count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3929025/results/word/frequencies/results.xml">
+   <result word="life" count="79"/>
+   <result word="meaning" count="61"/>
+   <result word="positive" count="52"/>
+   <result word="spiritual" count="46"/>
+   <result word="hope" count="37"/>
+   <result word="experiences" count="34"/>
+   <result word="satisfaction" count="31"/>
+   <result word="life," count="25"/>
+   <result word="wellbeing" count="25"/>
+   <result word="study" count="23"/>
+   <result word="affect" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3945292/results/word/frequencies/results.xml">
+   <result word="left" count="130"/>
+   <result word="real-time" count="63"/>
+   <result word="YFV" count="58"/>
+   <result word="RT-RPA" count="43"/>
+   <result word="left," count="40"/>
+   <result word="detection" count="36"/>
+   <result word="assay" count="33"/>
+   <result word="virus" count="32"/>
+   <result word="RNA" count="29"/>
+   <result word="RPA" count="29"/>
+   <result word="center" count="25"/>
+   <result word="fever" count="22"/>
+   <result word="amplification" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC3979174/results/word/frequencies/results.xml">
+   <result word="virus" count="181"/>
+   <result word="Human" count="41"/>
+   <result word="species" count="39"/>
+   <result word="bunya" count="38"/>
+   <result word="discovery" count="28"/>
+   <result word="human" count="27"/>
+   <result word="viruses" count="25"/>
+   <result word="flavi" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4016539/results/word/frequencies/results.xml">
+   <result word="leftbottom" count="138"/>
+   <result word="ZIKV" count="71"/>
+   <result word="Aedes" count="56"/>
+   <result word="virus" count="43"/>
+   <result word="leftbottomSenegal" count="40"/>
+   <result word="assay" count="36"/>
+   <result word="leftbottomArD" count="34"/>
+   <result word="RNA" count="31"/>
+   <result word="Zika" count="30"/>
+   <result word="detection" count="27"/>
+   <result word="left" count="23"/>
+   <result word="rRT-PCR" count="23"/>
+   <result word="using" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4023339/results/word/frequencies/results.xml">
+   <result word="Crataegus" count="272"/>
+   <result word="KC," count="148"/>
+   <result word="TRT" count="67"/>
+   <result word="monogyna" count="66"/>
+   <result word="Dickinson" count="60"/>
+   <result word="suksdorfii" count="54"/>
+   <result word="leaf" count="38"/>
+   <result word="punctata" count="32"/>
+   <result word="&amp;amp;" count="30"/>
+   <result word="(TRT)" count="30"/>
+   <result word="Co.," count="30"/>
+   <result word="(TRT!)," count="27"/>
+   <result word="×cogswellii" count="27"/>
+   <result word="long," count="26"/>
+   <result word="--," count="25"/>
+   <result word="DNA" count="25"/>
+   <result word="Phipps" count="24"/>
+   <result word="doi:" count="24"/>
+   <result word="Table" count="23"/>
+   <result word="data" count="22"/>
+   <result word="species" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4036769/results/word/frequencies/results.xml">
+   <result word="ZIKV" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4042264/results/word/frequencies/results.xml">
+   <result word="virus" count="48"/>
+   <result word="autophagy" count="38"/>
+   <result word="protein" count="35"/>
+   <result word="UPR" count="31"/>
+   <result word="replication" count="29"/>
+   <result word="infection" count="24"/>
+   <result word="induction" count="22"/>
+   <result word="viral" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4055592/results/word/frequencies/results.xml">
+   <result word="ZIKV" count="39"/>
+   <result word="Zika" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4093116/results/word/frequencies/results.xml">
+   <result word="does" count="78"/>
+   <result word="rabbits" count="54"/>
+   <result word="Szendrő" count="51"/>
+   <result word="rabbit" count="47"/>
+   <result word="Rabbit" count="43"/>
+   <result word="litter" count="41"/>
+   <result word="reproductive" count="40"/>
+   <result word="higher" count="36"/>
+   <result word="World" count="35"/>
+   <result word="number" count="30"/>
+   <result word="performance" count="30"/>
+   <result word="Proc." count="28"/>
+   <result word="nursing" count="28"/>
+   <result word="kits" count="27"/>
+   <result word="Sci" count="26"/>
+   <result word="age" count="26"/>
+   <result word="effect" count="26"/>
+   <result word="mortality" count="25"/>
+   <result word="mating" count="23"/>
+   <result word="suckling" count="23"/>
+   <result word="weight" count="23"/>
+   <result word="Effect" count="22"/>
+   <result word="days" count="21"/>
+   <result word="feed" count="21"/>
+   <result word="group" count="21"/>
+   <result word="production" count="21"/>
+   <result word="size" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4177891/results/word/frequencies/results.xml">
+   <result word="control" count="71"/>
+   <result word="education" count="68"/>
+   <result word="community" count="58"/>
+   <result word="reduction" count="56"/>
+   <result word="containers" count="49"/>
+   <result word="mosquito" count="45"/>
+   <result word="[]." count="44"/>
+   <result word="treatment" count="43"/>
+   <result word="container" count="39"/>
+   <result word="source" count="37"/>
+   <result word="sites" count="33"/>
+   <result word="[]," count="31"/>
+   <result word="habitats" count="30"/>
+   <result word="home" count="25"/>
+   <result word="site" count="25"/>
+   <result word="Aedes" count="24"/>
+   <result word="Mercer" count="24"/>
+   <result word="number" count="24"/>
+   <result word="Monmouth" count="23"/>
+   <result word="active" count="23"/>
+   <result word="residents" count="23"/>
+   <result word="educational" count="22"/>
+   <result word="mosquitoes" count="22"/>
+   <result word="public" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4191940/results/word/frequencies/results.xml">
+   <result word="left" count="267"/>
+   <result word="virus" count="49"/>
+   <result word="Aedes" count="39"/>
+   <result word="left." count="32"/>
+   <result word="mosquito" count="31"/>
+   <result word="species" count="30"/>
+   <result word="mosquitoes" count="26"/>
+   <result word="center" count="24"/>
+   <result word="Zika" count="23"/>
+   <result word="collected" count="23"/>
+   <result word="[]." count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4195678/results/word/frequencies/results.xml">
+   <result word="left." count="330"/>
+   <result word="left" count="235"/>
+   <result word="Ae." count="116"/>
+   <result word="ZIKV" count="47"/>
+   <result word="Aedes" count="44"/>
+   <result word="virus" count="39"/>
+   <result word="center" count="32"/>
+   <result word="[]." count="29"/>
+   <result word="infection" count="29"/>
+   <result word="mosquitoes" count="26"/>
+   <result word="Zika" count="23"/>
+   <result word="land" count="22"/>
+   <result word="Med" count="21"/>
+   <result word="forest" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4215987/results/word/frequencies/results.xml">
+   <result word="Zimbabwe" count="110"/>
+   <result word="left" count="109"/>
+   <result word="Mapela" count="84"/>
+   <result word="Mapungubwe" count="63"/>
+   <result word="culture" count="54"/>
+   <result word="Kopje" count="51"/>
+   <result word="Leopard's" count="50"/>
+   <result word="Figure" count="44"/>
+   <result word="glass" count="40"/>
+   <result word="southern" count="36"/>
+   <result word="beads" count="33"/>
+   <result word="[]." count="31"/>
+   <result word="sites" count="30"/>
+   <result word="Great" count="28"/>
+   <result word="[]," count="25"/>
+   <result word="early" count="25"/>
+   <result word="stone" count="24"/>
+   <result word="evidence" count="23"/>
+   <result word="various" count="23"/>
+   <result word="left." count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4239016/results/word/frequencies/results.xml">
+   <result word="left−" count="116"/>
+   <result word="left" count="111"/>
+   <result word="dengue" count="59"/>
+   <result word="mAbs" count="55"/>
+   <result word="DENV-" count="45"/>
+   <result word="virus" count="45"/>
+   <result word="[]." count="41"/>
+   <result word="DENV" count="36"/>
+   <result word="[]," count="36"/>
+   <result word="antibodies" count="36"/>
+   <result word="protein" count="34"/>
+   <result word="():" count="32"/>
+   <result word="cells" count="28"/>
+   <result word="used" count="28"/>
+   <result word="leftDENV" count="27"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4240730/results/word/frequencies/results.xml">
+   <result word="leftmiddle" count="115"/>
+   <result word="PfRH" count="82"/>
+   <result word="chain" count="66"/>
+   <result word="leftmiddleside" count="61"/>
+   <result word="using" count="40"/>
+   <result word="bond" count="38"/>
+   <result word="leftmiddlehydrogen" count="37"/>
+   <result word="basigin" count="36"/>
+   <result word="Data" count="32"/>
+   <result word="protein" count="32"/>
+   <result word="PfRHΔNL" count="30"/>
+   <result word="Extended" count="27"/>
+   <result word="residues" count="26"/>
+   <result word="falciparum" count="25"/>
+   <result word="leftmiddle." count="25"/>
+   <result word="Plasmodium" count="23"/>
+   <result word="binding" count="23"/>
+   <result word="leftmiddlebackbone" count="23"/>
+   <result word="structure" count="22"/>
+   <result word="antibodies" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4246241/results/word/frequencies/results.xml">
+   <result word="centermiddle" count="505"/>
+   <result word="centermiddlen.d." count="230"/>
+   <result word="(/)" count="198"/>
+   <result word="Aedes" count="139"/>
+   <result word="centermiddle." count="136"/>
+   <result word="virus" count="127"/>
+   <result word="centermiddlepatient" count="115"/>
+   <result word="CHIKV" count="101"/>
+   <result word="albopictus" count="98"/>
+   <result word="aegypti" count="87"/>
+   <result word="chikungunya" count="68"/>
+   <result word="Island," count="66"/>
+   <result word="Reunion" count="64"/>
+   <result word="mosquito" count="58"/>
+   <result word="transmission" count="49"/>
+   <result word="vector" count="49"/>
+   <result word="mosquitoes" count="48"/>
+   <result word="Dis." count="44"/>
+   <result word="infection" count="41"/>
+   <result word="Med." count="39"/>
+   <result word="dengue" count="38"/>
+   <result word="Chikungunya" count="36"/>
+   <result word="Trop." count="33"/>
+   <result word="(EV)" count="25"/>
+   <result word="populations" count="25"/>
+   <result word="stated" count="25"/>
+   <result word="RNA" count="24"/>
+   <result word="centermiddleVazeille" count="24"/>
+   <result word="A.B." count="23"/>
+   <result word="Infect." count="23"/>
+   <result word="USA" count="22"/>
+   <result word="Vector" count="22"/>
+   <result word="centermiddle-" count="22"/>
+   <result word="centermiddleTesh" count="22"/>
+   <result word="Failloux" count="21"/>
+   <result word="centermiddleVega-Rua" count="21"/>
+   <result word="centermiddle–" count="21"/>
+   <result word="genetic" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4270494/results/word/frequencies/results.xml">
+   <result word="DENV" count="100"/>
+   <result word="RT-PCR" count="68"/>
+   <result word="dengue" count="64"/>
+   <result word="assay" count="57"/>
+   <result word="samples" count="56"/>
+   <result word="virus" count="51"/>
+   <result word="RNA" count="41"/>
+   <result word="sequences" count="37"/>
+   <result word="[]," count="33"/>
+   <result word="detection" count="33"/>
+   <result word="using" count="32"/>
+   <result word="positive" count="31"/>
+   <result word="[]." count="30"/>
+   <result word="clinical" count="28"/>
+   <result word="patients" count="28"/>
+   <result word="days" count="26"/>
+   <result word="DENV-" count="24"/>
+   <result word="diagnosis" count="23"/>
+   <result word="IgM" count="21"/>
+   <result word="primers" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4285245/results/word/frequencies/results.xml">
+   <result word="ZIKV" count="43"/>
+   <result word="topcenter" count="42"/>
+   <result word="topcenter–" count="31"/>
+   <result word="virus" count="25"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4295104/results/word/frequencies/results.xml">
+   <result word="AQP" count="65"/>
+   <result word="water" count="45"/>
+   <result word="AQPs" count="37"/>
+   <result word="aegypti" count="32"/>
+   <result word="Ae." count="30"/>
+   <result word="&amp;amp;" count="29"/>
+   <result word="mosquitoes" count="26"/>
+   <result word="blood" count="24"/>
+   <result word="expression" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4306835/results/word/frequencies/results.xml">
+   <result word="centermiddle" count="131"/>
+   <result word="virus" count="109"/>
+   <result word="USUV" count="93"/>
+   <result word="Usutu" count="49"/>
+   <result word="Nile" count="30"/>
+   <result word="West" count="27"/>
+   <result word="encephalitis" count="24"/>
+   <result word="substitutions" count="23"/>
+   <result word="human" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4313657/results/word/frequencies/results.xml">
+   <result word="ZIKV" count="34"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4342338/results/word/frequencies/results.xml">
+   <result word="virus" count="158"/>
+   <result word="viruses" count="88"/>
+   <result word="left" count="80"/>
+   <result word="Fig." count="57"/>
+   <result word="doi:" count="57"/>
+   <result word="flaviviruses" count="56"/>
+   <result word="flavivirus" count="46"/>
+   <result word="isolated" count="46"/>
+   <result word="sequences" count="42"/>
+   <result word="using" count="40"/>
+   <result word="group" count="39"/>
+   <result word="sequence" count="38"/>
+   <result word="Virol" count="36"/>
+   <result word="ORF" count="33"/>
+   <result word="analysis" count="32"/>
+   <result word="site" count="32"/>
+   <result word="phylogenetic" count="29"/>
+   <result word="New" count="28"/>
+   <result word="associated" count="28"/>
+   <result word="years" count="28"/>
+   <result word="new" count="26"/>
+   <result word="divergence" count="24"/>
+   <result word="Culex" count="23"/>
+   <result word="ancestral" count="23"/>
+   <result word="introduced" count="23"/>
+   <result word="node" count="23"/>
+   <result word="Gen" count="22"/>
+   <result word="PRF" count="22"/>
+   <result word="World" count="22"/>
+   <result word="NKV" count="21"/>
+   <result word="clade" count="21"/>
+   <result word="evolutionary" count="21"/>
+   <result word="mosquito" count="21"/>
+   <result word="mosquitoes" count="21"/>
+   <result word="synonymous" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4344295/results/word/frequencies/results.xml">
+   <result word="topleft" count="106"/>
+   <result word="topcenter" count="50"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4347352/results/word/frequencies/results.xml">
+   <result word="Ae." count="117"/>
+   <result word="Yap" count="46"/>
+   <result word="hensilli" count="41"/>
+   <result word="virus" count="40"/>
+   <result word="CHIKV" count="39"/>
+   <result word="aegypti" count="38"/>
+   <result word="pools" count="26"/>
+   <result word="vector" count="26"/>
+   <result word="sites" count="25"/>
+   <result word="mosquito" count="23"/>
+   <result word="species" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4355442/results/word/frequencies/results.xml">
+   <result word="meaning" count="46"/>
+   <result word="group" count="40"/>
+   <result word="life" count="37"/>
+   <result word="depression" count="36"/>
+   <result word=".char." count="24"/>
+   <result word="experimental" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4361343/results/word/frequencies/results.xml">
+   <result word="health" count="84"/>
+   <result word="climate" count="68"/>
+   <result word="Health" count="48"/>
+   <result word="change" count="42"/>
+   <result word="FSM" count="38"/>
+   <result word="climate-sensitive" count="37"/>
+   <result word="diseases" count="32"/>
+   <result word="disease" count="31"/>
+   <result word="infectious" count="30"/>
+   <result word="Climate" count="23"/>
+   <result word="diarrheal" count="22"/>
+   <result word="Pacific" count="21"/>
+   <result word="data" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4375606/results/word/frequencies/results.xml">
+   <result word="land" count="162"/>
+   <result word="HANPP" count="124"/>
+   <result word="use" count="64"/>
+   <result word="Fig." count="45"/>
+   <result word="NPP" count="43"/>
+   <result word="South" count="39"/>
+   <result word="change" count="38"/>
+   <result word="harv" count="37"/>
+   <result word="North" count="32"/>
+   <result word="productivity" count="32"/>
+   <result word="agricultural" count="31"/>
+   <result word="biomass" count="31"/>
+   <result word="levels" count="31"/>
+   <result word="Italian" count="30"/>
+   <result word="Italy" count="28"/>
+   <result word="level" count="28"/>
+   <result word="cropland" count="26"/>
+   <result word="socio-economic" count="24"/>
+   <result word="production" count="22"/>
+   <result word="increased" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4378499/results/word/frequencies/results.xml">
+   <result word="French" count="31"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4381565/results/word/frequencies/results.xml">
+   <result word="albopictus" count="88"/>
+   <result word="Ae." count="87"/>
+   <result word="Aedes" count="53"/>
+   <result word="aegypti" count="31"/>
+   <result word="species" count="31"/>
+   <result word="central" count="25"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4395659/results/word/frequencies/results.xml">
+   <result word="virus" count="49"/>
+   <result word="arboviruses" count="26"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4396129/results/word/frequencies/results.xml">
+   <result word="purpose" count="115"/>
+   <result word="personal" count="83"/>
+   <result word="goals" count="54"/>
+   <result word="work" count="52"/>
+   <result word="task" count="46"/>
+   <result word="people" count="42"/>
+   <result word="vision" count="40"/>
+   <result word="higher" count="34"/>
+   <result word="motivation" count="34"/>
+   <result word="engagement" count="33"/>
+   <result word="goal" count="33"/>
+   <result word="group" count="32"/>
+   <result word="socio-emotional" count="31"/>
+   <result word="appear" count="29"/>
+   <result word="positive" count="27"/>
+   <result word="research" count="27"/>
+   <result word="company" count="25"/>
+   <result word="driven" count="22"/>
+   <result word="motivated" count="22"/>
+   <result word="one's" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4400050/results/word/frequencies/results.xml">
+   <result word="left" count="127"/>
+   <result word="million" count="93"/>
+   <result word="left." count="84"/>
+   <result word="doi:" count="49"/>
+   <result word="infections" count="40"/>
+   <result word="Southeast" count="36"/>
+   <result word="ASEAN" count="35"/>
+   <result word="Health" count="33"/>
+   <result word="Trop" count="33"/>
+   <result word="World" count="28"/>
+   <result word="Accessed" count="23"/>
+   <result word="disease" count="21"/>
+   <result word="diseases" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4409421/results/word/frequencies/results.xml">
+   <result word="species" count="82"/>
+   <result word="left" count="71"/>
+   <result word="forest" count="57"/>
+   <result word="forests" count="34"/>
+   <result word="left." count="26"/>
+   <result word="sampling" count="25"/>
+   <result word="Saturnidae" count="24"/>
+   <result word="Sphingidae" count="24"/>
+   <result word="moth" count="23"/>
+   <result word="moths" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4447349/results/word/frequencies/results.xml">
+   <result word="left." count="179"/>
+   <result word="amino" count="83"/>
+   <result word="diabetic" count="79"/>
+   <result word="BCAA" count="74"/>
+   <result word="left" count="65"/>
+   <result word="blastocysts" count="58"/>
+   <result word="acid" count="54"/>
+   <result word="rabbits" count="46"/>
+   <result word="acids" count="40"/>
+   <result word="embryos" count="35"/>
+   <result word="maternal" count="32"/>
+   <result word="concentrations" count="31"/>
+   <result word="stage" count="30"/>
+   <result word="protein" count="27"/>
+   <result word="diabetes" count="25"/>
+   <result word="insulin" count="25"/>
+   <result word="levels" count="25"/>
+   <result word="increased" count="24"/>
+   <result word="plasma" count="24"/>
+   <result word="Amino" count="23"/>
+   <result word="Bcat" count="23"/>
+   <result word="Fig" count="23"/>
+   <result word="gastrulation" count="22"/>
+   <result word="tissue" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4461419/results/word/frequencies/results.xml">
+   <result word="effusus" count="66"/>
+   <result word="eff" count="58"/>
+   <result word="lineages" count="55"/>
+   <result word="Juncus" count="51"/>
+   <result word="flowering" count="45"/>
+   <result word="species" count="42"/>
+   <result word="conglomeratus" count="41"/>
+   <result word="groups" count="32"/>
+   <result word="genetic" count="29"/>
+   <result word="cryptic" count="28"/>
+   <result word="reproductive" count="26"/>
+   <result word="differentiation" count="24"/>
+   <result word="hybrids" count="24"/>
+   <result word="seed" count="24"/>
+   <result word="individuals" count="23"/>
+   <result word="isolation" count="23"/>
+   <result word="using" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4468249/results/word/frequencies/results.xml">
+   <result word="RT-RPA" count="91"/>
+   <result word="DENV" count="64"/>
+   <result word="RNA" count="56"/>
+   <result word="detection" count="49"/>
+   <result word="real-time" count="42"/>
+   <result word="assays" count="41"/>
+   <result word="doi:" count="40"/>
+   <result word="virus" count="35"/>
+   <result word="DENV-" count="34"/>
+   <result word="assay" count="33"/>
+   <result word="RPA" count="32"/>
+   <result word="RT-PCR" count="32"/>
+   <result word="amplification" count="32"/>
+   <result word="Central" count="31"/>
+   <result word="PMC." count="31"/>
+   <result word="PMCID:" count="31"/>
+   <result word="primers" count="27"/>
+   <result word="Fig" count="26"/>
+   <result word="using" count="26"/>
+   <result word="dengue" count="24"/>
+   <result word="sensitivity" count="24"/>
+   <result word="left" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4472270/results/word/frequencies/results.xml">
+   <result word="dengue" count="95"/>
+   <result word=".char." count="32"/>
+   <result word="study" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4480070/results/word/frequencies/results.xml">
+   <result word="DNA" count="103"/>
+   <result word="Crataegus" count="98"/>
+   <result word="species" count="91"/>
+   <result word="Supporting" count="71"/>
+   <result word="plastid" count="60"/>
+   <result word="barcode" count="51"/>
+   <result word="data" count="49"/>
+   <result word="using" count="44"/>
+   <result word="Dickinson" count="42"/>
+   <result word="loci" count="42"/>
+   <result word="Zarrei" count="41"/>
+   <result word="ITS" count="40"/>
+   <result word="sequences" count="40"/>
+   <result word="North" count="39"/>
+   <result word="sequence" count="39"/>
+   <result word="hawthorn" count="34"/>
+   <result word="barcoding" count="30"/>
+   <result word="markers" count="30"/>
+   <result word="phylogenetic" count="29"/>
+   <result word="Table" count="27"/>
+   <result word="[see" count="27"/>
+   <result word="(Fig." count="26"/>
+   <result word="American" count="26"/>
+   <result word="section" count="26"/>
+   <result word="analysis" count="23"/>
+   <result word="Botany" count="22"/>
+   <result word="analyses" count="22"/>
+   <result word="information" count="21"/>
+   <result word="plant" count="21"/>
+   <result word="variation" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4491199/results/word/frequencies/results.xml">
+   <result word="mosquito" count="71"/>
+   <result word="Aedes" count="67"/>
+   <result word="invasive" count="66"/>
+   <result word="surveillance" count="58"/>
+   <result word="mosquitoes" count="54"/>
+   <result word="species" count="39"/>
+   <result word="Mosquito" count="35"/>
+   <result word="centerX" count="29"/>
+   <result word="virus" count="28"/>
+   <result word="used" count="26"/>
+   <result word="albopictus" count="25"/>
+   <result word="control" count="21"/>
+   <result word="japonicus" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4495344/results/word/frequencies/results.xml">
+   <result word="PvDBP_RII" count="67"/>
+   <result word="responses" count="66"/>
+   <result word="protein" count="61"/>
+   <result word="Plasmodium" count="59"/>
+   <result word="vivax" count="57"/>
+   <result word="using" count="54"/>
+   <result word="vaccine" count="54"/>
+   <result word="mice" count="53"/>
+   <result word="binding" count="48"/>
+   <result word="malaria" count="43"/>
+   <result word="immunization" count="42"/>
+   <result word="antigen" count="39"/>
+   <result word="IgG" count="37"/>
+   <result word="immunized" count="36"/>
+   <result word="recombinant" count="35"/>
+   <result word="human" count="33"/>
+   <result word="cell" count="32"/>
+   <result word="antibodies" count="31"/>
+   <result word="vaccines" count="31"/>
+   <result word="clinical" count="29"/>
+   <result word="serum" count="29"/>
+   <result word="vectors" count="29"/>
+   <result word="falciparum" count="27"/>
+   <result word="viral" count="27"/>
+   <result word="antibody" count="26"/>
+   <result word="previously" count="25"/>
+   <result word="regimes" count="25"/>
+   <result word="immunogenicity" count="24"/>
+   <result word=" weeks" count="24"/>
+   <result word="MVA" count="23"/>
+   <result word="inhibition" count="23"/>
+   <result word="vectored" count="23"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4501423/results/word/frequencies/results.xml">
+   <result word="virus" count="24"/>
+   <result word="Zika" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4518591/results/word/frequencies/results.xml">
+   <result word="HCN" count="24"/>
+   <result word="cyanide" count="24"/>
+   <result word="smoke" count="22"/>
+   <result word="cigarette" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4520491/results/word/frequencies/results.xml">
+   <result word="left" count="579"/>
+   <result word="Aedes" count="149"/>
+   <result word="Ochlerotatus" count="107"/>
+   <result word="Ochlerotatus)" count="78"/>
+   <result word="(Theobald)" count="69"/>
+   <result word="species" count="62"/>
+   <result word="&amp;amp;" count="61"/>
+   <result word="doi:" count="42"/>
+   <result word="genus" count="40"/>
+   <result word="classification" count="38"/>
+   <result word="'Ochlerotatus'" count="35"/>
+   <result word="(Diptera:" count="35"/>
+   <result word="Aedini" count="33"/>
+   <result word="RH&amp;amp;K" count="33"/>
+   <result word="unassigned)" count="31"/>
+   <result word="'Ochlerotatus')" count="29"/>
+   <result word="(subgenus" count="29"/>
+   <result word="mosquitoes" count="29"/>
+   <result word="Stegomyia" count="26"/>
+   <result word="new" count="26"/>
+   <result word="Entomol" count="25"/>
+   <result word="genera" count="25"/>
+   <result word="subgenera" count="25"/>
+   <result word="(Coquillett)" count="23"/>
+   <result word="Fig" count="23"/>
+   <result word="characters" count="23"/>
+   <result word="support" count="23"/>
+   <result word="Culicidae)" count="22"/>
+   <result word="Finlaya)" count="22"/>
+   <result word="Knab)" count="22"/>
+   <result word="data" count="22"/>
+   <result word="Med" count="21"/>
+   <result word="parsimony" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4527740/results/word/frequencies/results.xml">
+   <result word="Ae." count="97"/>
+   <result word="CHIKV" count="54"/>
+   <result word="albopictus" count="47"/>
+   <result word="species" count="45"/>
+   <result word="Aedes" count="42"/>
+   <result word="aegypti" count="39"/>
+   <result word="transmission" count="39"/>
+   <result word="vector" count="38"/>
+   <result word="virus" count="37"/>
+   <result word="doi:" count="34"/>
+   <result word="potential" count="31"/>
+   <result word="feeding" count="30"/>
+   <result word="Australia" count="27"/>
+   <result word="Australian" count="27"/>
+   <result word="host" count="27"/>
+   <result word="mosquito" count="25"/>
+   <result word="human" count="24"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4530765/results/word/frequencies/results.xml">
+   <result word="ZIKV" count="59"/>
+   <result word="Zika" count="25"/>
+   <result word="virus" count="23"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4553466/results/word/frequencies/results.xml">
+   <result word="virus" count="133"/>
+   <result word="Glossina" count="98"/>
+   <result word="tsetse" count="98"/>
+   <result word="pallidipes" count="79"/>
+   <result word="GpSGHV" count="69"/>
+   <result word="viral" count="67"/>
+   <result word="flies" count="59"/>
+   <result word="salivary" count="52"/>
+   <result word="infection" count="42"/>
+   <result word="SGH" count="41"/>
+   <result word="fly" count="38"/>
+   <result word="gland" count="35"/>
+   <result word="insect" count="35"/>
+   <result word="transmission" count="34"/>
+   <result word="control" count="30"/>
+   <result word="host" count="30"/>
+   <result word="viruses" count="30"/>
+   <result word="Insect" count="28"/>
+   <result word="DNA" count="27"/>
+   <result word="hypertrophy" count="27"/>
+   <result word="MdSGHV" count="26"/>
+   <result word="centermiddle[" count="26"/>
+   <result word="colonies" count="25"/>
+   <result word="glands" count="25"/>
+   <result word="centermiddle" count="24"/>
+   <result word="particles" count="24"/>
+   <result word="hytrosavirus" count="23"/>
+   <result word="infected" count="23"/>
+   <result word="membrane" count="23"/>
+   <result word="Musca" count="22"/>
+   <result word="colony" count="22"/>
+   <result word="infections" count="22"/>
+   <result word="laboratory" count="22"/>
+   <result word="morsitans" count="22"/>
+   <result word="sterile" count="22"/>
+   <result word="Abd-Alla" count="21"/>
+   <result word="Entomol." count="21"/>
+   <result word="populations" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4553499/results/word/frequencies/results.xml">
+   <result word="control" count="70"/>
+   <result word="dengue" count="57"/>
+   <result word="mosquito" count="45"/>
+   <result word="vector" count="39"/>
+   <result word="Wolbachia" count="38"/>
+   <result word="aegypti" count="37"/>
+   <result word="mosquitoes" count="33"/>
+   <result word="population" count="29"/>
+   <result word="Aedes" count="28"/>
+   <result word="Brazil" count="26"/>
+   <result word="Ae." count="24"/>
+   <result word="disease" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4561566/results/word/frequencies/results.xml">
+   <result word="Wolbachia" count="316"/>
+   <result word="host" count="104"/>
+   <result word="effects" count="95"/>
+   <result word="infection" count="81"/>
+   <result word="Drosophila" count="68"/>
+   <result word="cytoplasmic" count="68"/>
+   <result word="incompatibility" count="58"/>
+   <result word="strains" count="56"/>
+   <result word="Aedes" count="55"/>
+   <result word="Hoffmann" count="55"/>
+   <result word="left" count="54"/>
+   <result word="populations" count="51"/>
+   <result word="fitness" count="50"/>
+   <result word="infections" count="49"/>
+   <result word="leftHigh" count="45"/>
+   <result word="aegypti" count="44"/>
+   <result word="viral" count="43"/>
+   <result word="dengue" count="42"/>
+   <result word="density" count="40"/>
+   <result word="melanogaster" count="40"/>
+   <result word="strain" count="39"/>
+   <result word="high" count="37"/>
+   <result word="natural" count="37"/>
+   <result word="changes" count="35"/>
+   <result word="simulans" count="35"/>
+   <result word="Ae." count="34"/>
+   <result word="mosquito" count="34"/>
+   <result word="deleterious" count="32"/>
+   <result word="transmission" count="32"/>
+   <result word="virus" count="32"/>
+   <result word="disease" count="31"/>
+   <result word="release" count="30"/>
+   <result word="albopictus" count="29"/>
+   <result word="wMelPop" count="29"/>
+   <result word="O'Neill" count="28"/>
+   <result word="blockage" count="28"/>
+   <result word="Turelli" count="26"/>
+   <result word="mosquitoes" count="26"/>
+   <result word="species" count="26"/>
+   <result word="infected" count="25"/>
+   <result word="Tropical" count="24"/>
+   <result word="strong" count="24"/>
+   <result word="invasion" count="23"/>
+   <result word="hosts" count="22"/>
+   <result word="particularly" count="22"/>
+   <result word="vector" count="22"/>
+   <result word="wMel" count="22"/>
+   <result word="(Hoffmann" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4568054/results/word/frequencies/results.xml">
+   <result word="dengue" count="132"/>
+   <result word="-s.-" count="94"/>
+   <result word="DENV-" count="79"/>
+   <result word="Brazil" count="72"/>
+   <result word="Dengue" count="59"/>
+   <result word="cases" count="57"/>
+   <result word="virus" count="42"/>
+   <result word="reported" count="36"/>
+   <result word="center," count="33"/>
+   <result word="Rio" count="32"/>
+   <result word="center,," count="29"/>
+   <result word="Health" count="28"/>
+   <result word="Ae." count="27"/>
+   <result word="Brazilian" count="27"/>
+   <result word="DENV" count="27"/>
+   <result word="Diseases" count="26"/>
+   <result word="aegypti" count="26"/>
+   <result word="Aedes" count="25"/>
+   <result word="Janeiro" count="25"/>
+   <result word="Tropical" count="22"/>
+   <result word="state" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4569826/results/word/frequencies/results.xml">
+   <result word="aegypti" count="35"/>
+   <result word="Ae." count="29"/>
+   <result word="Aedes" count="23"/>
+   <result word="clusianone" count="22"/>
+   <result word="development" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4570817/results/word/frequencies/results.xml">
+   <result word="left" count="82"/>
+   <result word="patients" count="50"/>
+   <result word="symptoms" count="50"/>
+   <result word="diagnostic" count="45"/>
+   <result word="travelers" count="38"/>
+   <result word="virus;" count="36"/>
+   <result word="travel" count="32"/>
+   <result word="arbovirus" count="28"/>
+   <result word="arboviral" count="27"/>
+   <result word="Fig" count="22"/>
+   <result word="requests" count="22"/>
+   <result word="DENV" count="21"/>
+   <result word="Dutch" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4580713/results/word/frequencies/results.xml">
+   <result word="meaning" count="181"/>
+   <result word="left" count="132"/>
+   <result word="life" count="127"/>
+   <result word=".char.***" count="111"/>
+   <result word="coping" count="98"/>
+   <result word="religious" count="87"/>
+   <result word="negative" count="48"/>
+   <result word="personal" count="48"/>
+   <result word="well-being" count="42"/>
+   <result word="PWB" count="41"/>
+   <result word="positive" count="41"/>
+   <result word="religion" count="39"/>
+   <result word="presence" count="29"/>
+   <result word="PWB." count="28"/>
+   <result word="psychological" count="25"/>
+   <result word="relations" count="25"/>
+   <result word="relation" count="23"/>
+   <result word=".char–" count="22"/>
+   <result word="sense" count="22"/>
+   <result word="dimensions" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4583371/results/word/frequencies/results.xml">
+   <result word="left" count="313"/>
+   <result word="(/)" count="214"/>
+   <result word="urine" count="202"/>
+   <result word="saliva" count="171"/>
+   <result word="left.%" count="168"/>
+   <result word="samples" count="153"/>
+   <result word="plasma" count="107"/>
+   <result word="leftNA" count="103"/>
+   <result word="detection" count="98"/>
+   <result word="dengue" count="81"/>
+   <result word="(.)" count="69"/>
+   <result word="left." count="69"/>
+   <result word="tested" count="69"/>
+   <result word="specimens" count="67"/>
+   <result word="patients" count="66"/>
+   <result word="IgG" count="61"/>
+   <result word="positive" count="61"/>
+   <result word="DAOF" count="59"/>
+   <result word="virus" count="52"/>
+   <result word="plasma," count="51"/>
+   <result word="obtained" count="48"/>
+   <result word="infection" count="45"/>
+   <result word="RNA" count="43"/>
+   <result word="collected" count="43"/>
+   <result word="doi:" count="43"/>
+   <result word="viral" count="42"/>
+   <result word="DENV" count="41"/>
+   <result word="anti-DENV" count="41"/>
+   <result word="leftmiddle" count="40"/>
+   <result word="left%" count="39"/>
+   <result word="onset" count="39"/>
+   <result word="disease" count="37"/>
+   <result word="used" count="37"/>
+   <result word="sensitivity" count="36"/>
+   <result word="fever" count="35"/>
+   <result word="protein" count="35"/>
+   <result word="Table" count="34"/>
+   <result word="antibodies" count="33"/>
+   <result word="genome" count="32"/>
+   <result word="ELISA" count="31"/>
+   <result word="concentration" count="30"/>
+   <result word="qRT-PCR" count="30"/>
+   <result word="day" count="29"/>
+   <result word="IgA" count="28"/>
+   <result word="results" count="26"/>
+   <result word="using" count="26"/>
+   <result word="(/," count="25"/>
+   <result word="load" count="25"/>
+   <result word="study" count="25"/>
+   <result word="Fig" count="24"/>
+   <result word="IgM" count="24"/>
+   <result word="blood" count="24"/>
+   <result word="detected" count="24"/>
+   <result word="diagnostic" count="24"/>
+   <result word="[.–.])" count="23"/>
+   <result word="antigen" count="23"/>
+   <result word="number" count="23"/>
+   <result word="Dengue" count="21"/>
+   <result word="saliva." count="21"/>
+   <result word="sample" count="21"/>
+   <result word="variable" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4629289/results/word/frequencies/results.xml">
+   <result word="Ae." count="110"/>
+   <result word="ZIKV" count="52"/>
+   <result word="virus" count="50"/>
+   <result word="aegypti" count="33"/>
+   <result word="species" count="30"/>
+   <result word="transmission" count="30"/>
+   <result word="infection" count="27"/>
+   <result word="Zika" count="23"/>
+   <result word="mosquito" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4630907/results/word/frequencies/results.xml">
+   <result word="DENV" count="125"/>
+   <result word="RT-PCR" count="77"/>
+   <result word="DENV," count="55"/>
+   <result word="assays" count="43"/>
+   <result word="virus" count="36"/>
+   <result word="dengue" count="35"/>
+   <result word="samples" count="27"/>
+   <result word="RNA" count="25"/>
+   <result word="CDC" count="24"/>
+   <result word="positive" count="22"/>
+   <result word="using" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4632385/results/word/frequencies/results.xml">
+   <result word="dengue" count="139"/>
+   <result word="detection" count="77"/>
+   <result word="virus" count="48"/>
+   <result word="biosensor" count="47"/>
+   <result word="Dengue" count="42"/>
+   <result word="assay" count="42"/>
+   <result word="centermiddleborder-bottom:solid" count="42"/>
+   <result word="DENV" count="38"/>
+   <result word="diagnosis" count="34"/>
+   <result word="centermiddle[" count="33"/>
+   <result word="antibody" count="32"/>
+   <result word="based" count="31"/>
+   <result word="centermiddle" count="31"/>
+   <result word="centermiddle." count="31"/>
+   <result word="ELISA" count="30"/>
+   <result word="serum" count="30"/>
+   <result word="IgM" count="28"/>
+   <result word="developed" count="27"/>
+   <result word="target" count="27"/>
+   <result word="specific" count="26"/>
+   <result word="used" count="26"/>
+   <result word="electrochemical" count="25"/>
+   <result word="sensitivity" count="25"/>
+   <result word="using" count="24"/>
+   <result word="infection" count="23"/>
+   <result word="test" count="22"/>
+   <result word="limit" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4637084/results/word/frequencies/results.xml">
+   <result word="infectious" count="46"/>
+   <result word="international" count="46"/>
+   <result word="children" count="42"/>
+   <result word="refugees" count="40"/>
+   <result word="United" count="33"/>
+   <result word="adopted" count="31"/>
+   <result word="diseases" count="29"/>
+   <result word="-s.-" count="27"/>
+   <result word="States" count="25"/>
+   <result word="adoptees" count="25"/>
+   <result word="disease" count="24"/>
+   <result word="health" count="24"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4645344/results/word/frequencies/results.xml">
+   <result word="virus" count="100"/>
+   <result word="EPEV" count="90"/>
+   <result word="doi:" count="89"/>
+   <result word="flaviviruses" count="65"/>
+   <result word="sequence" count="60"/>
+   <result word="sand" count="58"/>
+   <result word="virus;" count="52"/>
+   <result word="flavivirus" count="48"/>
+   <result word="RNA" count="44"/>
+   <result word="viruses" count="39"/>
+   <result word="Virol" count="36"/>
+   <result word="conserved" count="33"/>
+   <result word="amino" count="29"/>
+   <result word="flies" count="29"/>
+   <result word="viral" count="28"/>
+   <result word="sequences" count="27"/>
+   <result word="using" count="27"/>
+   <result word="flaviviruses." count="25"/>
+   <result word="isolated" count="24"/>
+   <result word="protein" count="24"/>
+   <result word="genome" count="23"/>
+   <result word="mosquito-borne" count="23"/>
+   <result word="acid" count="22"/>
+   <result word="region" count="22"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4651505/results/word/frequencies/results.xml">
+   <result word="center." count="103"/>
+   <result word="left" count="92"/>
+   <result word="CHIKV" count="80"/>
+   <result word="right" count="42"/>
+   <result word="left(.)" count="41"/>
+   <result word="DENV" count="39"/>
+   <result word="individuals" count="39"/>
+   <result word="confirmed" count="36"/>
+   <result word="pain" count="36"/>
+   <result word="using" count="36"/>
+   <result word="doi:" count="35"/>
+   <result word="infection" count="35"/>
+   <result word="positive" count="30"/>
+   <result word="right(.)" count="30"/>
+   <result word="blood" count="29"/>
+   <result word="Chikungunya" count="28"/>
+   <result word="RT-qPCR" count="28"/>
+   <result word="leftmiddle" count="28"/>
+   <result word="patients" count="28"/>
+   <result word="(%)" count="27"/>
+   <result word="left." count="27"/>
+   <result word="count" count="26"/>
+   <result word="center" count="24"/>
+   <result word="virus" count="24"/>
+   <result word="Trinidad" count="23"/>
+   <result word="cell" count="23"/>
+   <result word="reported" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4661982/results/word/frequencies/results.xml">
+   <result word="cover" count="55"/>
+   <result word="glass" count="48"/>
+   <result word="embryos" count="47"/>
+   <result word="PBS" count="41"/>
+   <result word="blastomeres" count="41"/>
+   <result word="microscopy" count="41"/>
+   <result word="zona" count="35"/>
+   <result word="oil" count="30"/>
+   <result word="pellucida" count="27"/>
+   <result word="D-SIM" count="24"/>
+   <result word="medium" count="23"/>
+   <result word="scanning" count="22"/>
+   <result word="using" count="22"/>
+   <result word="image" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4666598/results/word/frequencies/results.xml">
+   <result word="dengue" count="163"/>
+   <result word="left" count="159"/>
+   <result word="incidence" count="118"/>
+   <result word="people" count="109"/>
+   <result word="spatial" count="101"/>
+   <result word="left." count="97"/>
+   <result word="rates" count="93"/>
+   <result word="temperature" count="88"/>
+   <result word="mean" count="78"/>
+   <result word="variables" count="71"/>
+   <result word="average" count="68"/>
+   <result word="New" count="66"/>
+   <result word="epidemic" count="64"/>
+   <result word="Dengue" count="62"/>
+   <result word="annual" count="56"/>
+   <result word="climate" count="54"/>
+   <result word="cases" count="53"/>
+   <result word="data" count="44"/>
+   <result word="doi:" count="44"/>
+   <result word="leftPercentage" count="44"/>
+   <result word="Fig" count="41"/>
+   <result word="explanatory" count="41"/>
+   <result word="rainfall" count="40"/>
+   <result word="model" count="39"/>
+   <result word="commune" count="38"/>
+   <result word="number" count="36"/>
+   <result word="factors" count="32"/>
+   <result word="distribution" count="31"/>
+   <result word="left-." count="31"/>
+   <result word="models" count="30"/>
+   <result word="observed" count="30"/>
+   <result word="leftActivity" count="29"/>
+   <result word="epidemics" count="28"/>
+   <result word="increase" count="27"/>
+   <result word="Caledonia" count="26"/>
+   <result word="Aedes" count="25"/>
+   <result word="aegypti" count="25"/>
+   <result word="socio-economic" count="24"/>
+   <result word="unemployed" count="24"/>
+   <result word="years" count="24"/>
+   <result word="Spatial" count="23"/>
+   <result word="communes" count="22"/>
+   <result word="fever" count="22"/>
+   <result word="selected" count="22"/>
+   <result word="study" count="22"/>
+   <result word="used" count="22"/>
+   <result word="variable" count="22"/>
+   <result word="year" count="22"/>
+   <result word="Caledonia," count="21"/>
+   <result word="days" count="21"/>
+   <result word="quarter" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4669736/results/word/frequencies/results.xml">
+   <result word="health" count="26"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4671560/results/word/frequencies/results.xml">
+   <result word="Ae." count="154"/>
+   <result word="species" count="83"/>
+   <result word="bromeliae" count="62"/>
+   <result word="lilii" count="43"/>
+   <result word="fever" count="30"/>
+   <result word="Simpsoni" count="28"/>
+   <result word="center" count="28"/>
+   <result word="left" count="26"/>
+   <result word="yellow" count="26"/>
+   <result word="Aedes" count="24"/>
+   <result word="Mukwaya" count="24"/>
+   <result word="identification" count="22"/>
+   <result word="sequence" count="22"/>
+   <result word="used" count="22"/>
+   <result word="PCR" count="21"/>
+   <result word="simpsoni" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4673751/results/word/frequencies/results.xml">
+   <result word="dengue" count="175"/>
+   <result word="virus" count="87"/>
+   <result word="vaccine" count="82"/>
+   <result word="infection" count="48"/>
+   <result word="DENV" count="39"/>
+   <result word="Dengue" count="33"/>
+   <result word="disease" count="27"/>
+   <result word="fever" count="24"/>
+   <result word="clinical" count="23"/>
+   <result word="Vaccine" count="22"/>
+   <result word="genes" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4681859/results/word/frequencies/results.xml">
+   <result word="Figure" count="64"/>
+   <result word="Aigarchaeota" count="49"/>
+   <result word="aerorheumensis" count="48"/>
+   <result word="Supplementary" count="42"/>
+   <result word="Table" count="32"/>
+   <result word="genes" count="28"/>
+   <result word="using" count="25"/>
+   <result word="identified" count="24"/>
+   <result word="Microbiol" count="23"/>
+   <result word="community" count="23"/>
+   <result word="Calditenuis" count="22"/>
+   <result word="aigarchaeon" count="21"/>
+   <result word="streamer" count="21"/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="target/tutorial/zika/PMC4686165/results/word/frequencies/results.xml">
+   <result word="diapause" count="103"/>
+   <result word="albopictus" count="57"/>
+   <result word="eggs" count="54"/>
+   <result word="egg" count="47"/>
+   <result word="Aedes" count="45"/>
+   <result word="field" count="36"/>
+   <result word="day" count="27"/>
+   <result word="winter" count="25"/>
+   <result word="incidence" count="24"/>
+   <result word="population" count="24"/>
+   <result word="temperature" count="24"/>
+   <result word="mosquito" count="23"/>
+   <result word="Fig" count="21"/>
+   <result word="time" count="21"/>
+  </snippets>
+ </snippetsTree>
+</projectSnippetsTree>

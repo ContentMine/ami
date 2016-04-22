@@ -9,7 +9,7 @@ public class Prototype {
 	@Test
 	public void testBoWIEEE() {
 		String cmd = "-q ../cmine/target/ieee/musti/Henniger/ -i fulltext.txt --w.words wordFrequencies "
-				+ "--w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt "
+				+ "--w.stopwords /org/xmlcml/ami2/wordutil/stopwords.txt "
 				+ "    /org/xmlcml/ami2/plugins/word/clinicaltrials200.txt";		
 		AMIArgProcessor amiArgProcessor = new WordArgProcessor();
 		amiArgProcessor.parseArgs(cmd);

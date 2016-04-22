@@ -1,6 +1,6 @@
 # `contentMine` directories and `results` files
 
-The `ami` plugins all use a conventional directory structure, modelled on theoutput from `quickscrape`. This used to be called a `quickscrape` directory, then `quickscrapeNorma` and now simply `contemtmine` or `cmdir` . (These names are still in flux, sorry). The flags `-q` and `qsN`, etc will become obsolete.
+The `ami` plugins all use a conventional directory structure, modelled on the output from `quickscrape`. This used to be called a `quickscrape` directory, then `quickscrapeNorma` and now simply `contemtmine` or `cmdir` . (These names are still in flux, sorry). The flags `-q` and `qsN`, etc will become obsolete.
 
 ## contentMine directory
 

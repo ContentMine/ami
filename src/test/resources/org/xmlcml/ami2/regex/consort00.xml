@@ -1,0 +1,3 @@
+<compoundRegex title="consort00">
+  <regex fields="diagnose">(diagnos~)</regex>
+</compoundRegex>

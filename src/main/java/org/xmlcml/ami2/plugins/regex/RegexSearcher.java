@@ -14,7 +14,6 @@ import org.xmlcml.cmine.files.ResultsElement;
 
 public class RegexSearcher extends AMISearcher {
 
-	
 	private static final Logger LOG = Logger.getLogger(RegexSearcher.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -39,22 +38,28 @@ public class RegexSearcher extends AMISearcher {
 
 	// ====== args ========
 
+	/** specific search, iterates thorugh RegexComponents
+	 * 
+	 */
 	public ResultsElement searchXomElement(Element xomElement) {
 		List<RegexComponent> regexComponents = compoundRegex.getOrCreateRegexComponentList();
 		ResultsElement resultsElement = new ResultsElement();
+		String xomValue = xomElement.getValue();
+		LOG.trace("XOM "+xomValue);
 		for (RegexComponent regexComponent : regexComponents) {
-			MatcherResult matcherResult = regexComponent.searchWithPattern(xomElement.getValue()); // crude to start with
-			List<ResultElement> resultElementList = matcherResult.createResultElementList();
-			
-			addXpathAndAddtoResultsElement(xomElement, resultsElement, resultElementList);
+			LOG.trace("RGXCOMP "+regexComponent);
+			MatcherResult matcherResult = regexComponent.searchWithPattern(xomValue); // crude to start with
+			ResultsElement resultsElementToAdd = matcherResult.createResultsElement();
+			if (resultsElementToAdd != null) {
+				LOG.trace("RESELEM "+resultsElementToAdd);
+				addXpathAndAddtoResultsElement(xomElement, resultsElement, resultsElementToAdd);
+			}
 		}
 		return resultsElement;
 	}
 
-	
-
-
 	// ===============
+
 	
 	public void debug() {
 		LOG.debug(compoundRegex.getTitle()+"/"+compoundRegex.getRegexValues().size());

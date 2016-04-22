@@ -3,8 +3,10 @@ package org.xmlcml.ami2.plugins.species;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
@@ -31,6 +33,8 @@ public class LinneanNamer {
 	private Map<String, String> genusByAbbreviationMap;
 
 	private NameMultimap nameMultimap;
+
+	private Set<String> unresolvedAbbreviationSet;
 	
 	public LinneanNamer() {
 		
@@ -68,6 +72,7 @@ public class LinneanNamer {
 	private void getOrCreateLinneanNameSetIncludingAbbreviationExpansion(List<String> speciesNameList) {
 		if (linneanNameSet == null) {
 			linneanNameSet = HashMultiset.create();
+			unresolvedAbbreviationSet = new HashSet<String>();
 			for (String speciesName : speciesNameList) {
 				LinneanName binomial = LinneanNamer.createBinomial(speciesName);
 				if (binomial == null) {
@@ -81,13 +86,20 @@ public class LinneanNamer {
 					LinneanName fullLinnean = linneanNames == null || linneanNames.size() == 0 ? null :
 						new ArrayList<LinneanName>(linneanNames).get(0);
 					if (fullLinnean == null) {
-						LOG.error("Cannot resolve abbreviation: "+binomial);
+						announceUnknown(binomial.getGenus());
 					} else {
 						binomial = fullLinnean;
 					}
 					linneanNameSet.add(binomial);
 				}
 			}
+		}
+	}
+
+	private void announceUnknown(String genusAbb) {
+		if (!unresolvedAbbreviationSet.contains(genusAbb)) {
+			LOG.trace("Cannot resolve abbreviation: "+genusAbb);
+			unresolvedAbbreviationSet.add(genusAbb);
 		}
 	}
 
@@ -129,23 +141,21 @@ public class LinneanNamer {
 	 * @param nameList
 	 */
 	public List<String> expandAbbreviations(List<String> nameList) {
+
 		List<String> newNameList = new ArrayList<String>();
 		genusByAbbreviationMap = new HashMap<String, String>();
 		for (String name : nameList) {
 			name = name.trim().replace("\\s*", "\\s");
-//			if (name.indexOf("\\.") == -1) {
-//				LOG.debug("non dot: "+name);
-//				continue;
-//			}
 			LinneanName linneanName = LinneanNamer.createBinomial(name);
 			if (linneanName == null) {
 				LOG.trace("Not a binomial: "+name);
 			} else {
+				unresolvedAbbreviationSet = new HashSet<String>();
 				String genusAbbreviation = linneanName.getGenusAbbreviation();
 				String fullGenus = genusByAbbreviationMap.get(genusAbbreviation);
 				if (linneanName.isSingleCharacterGenus()) {
 					if (fullGenus == null) {
-						LOG.error("Cannot resolve abbreviation: ["+genusAbbreviation+"]");
+						announceUnknown(genusAbbreviation);
 					} else {
 						linneanName.setGenus(fullGenus);
 					}
@@ -172,6 +182,7 @@ public class LinneanNamer {
 	 * @return
 	 */
 	public List<String> lookupByName(String name) {
+		LOG.debug("LOOKUP NAME "+name);
 		ensureNameMultimap();
 		List<String> idList = nameMultimap.searchByNameValue(name);
 		return (idList == null ) ? new ArrayList<String>() : idList;
@@ -192,6 +203,20 @@ public class LinneanNamer {
 
 	private void ensureNameMultimap() {
 		nameMultimap = new NameMultimap();
+	}
+
+	/** assumes either a genus or Genus followed by species or "sp" or ...
+	 * simplistic
+	 * @param exact
+	 * @return
+	 */
+	public static String createGenus(String exact) {
+		String genus = null;
+		if (exact != null) {
+			String[] bits = exact.trim().split("\\s+");
+			genus = bits[0];
+		}
+		return genus;
 	}
 
 }

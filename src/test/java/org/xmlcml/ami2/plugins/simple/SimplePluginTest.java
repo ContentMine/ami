@@ -13,7 +13,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.xml.XMLUtil;
 
 public class SimplePluginTest {
@@ -26,7 +26,7 @@ public class SimplePluginTest {
 	
 	@Test
 	public void testReadCMDir() {
-		CMDir cTree = new CMDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR);
+		CTree cTree = new CTree(AMIFixtures.TEST_BMC_15_1_511_CMDIR);
 		Assert.assertTrue("fulltext.xml", cTree.hasExistingFulltextXML());
 		Assert.assertTrue("fulltext.html", cTree.hasFulltextHTML());
 		Assert.assertTrue("fulltext.pdf", cTree.hasFulltextPDF());
@@ -37,7 +37,7 @@ public class SimplePluginTest {
 	@Test
 	@Ignore // plugin argprocessor not yet working
 	public void testSimplePlugin() throws IOException {
-		CMDir cTree = new CMDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR);
+		CTree cTree = new CTree(AMIFixtures.TEST_BMC_15_1_511_CMDIR);
 		File normaTemp = new File("target/bmc/15_1_511_test");
 		cTree.copyTo(normaTemp, true);
 		String[] args = {
@@ -51,7 +51,7 @@ public class SimplePluginTest {
 		Assert.assertNotNull(argProcessor);
 		LOG.debug(argProcessor.getInputList());
 		argProcessor.runAndOutput();
-		CMDir cTreeTemp = new CMDir(normaTemp);
+		CTree cTreeTemp = new CTree(normaTemp);
 		Assert.assertTrue("results.xml", cTreeTemp.hasResultsDir());
 	}
 	
@@ -68,7 +68,7 @@ public class SimplePluginTest {
 		File test = new File("target/simple/multiple");
 		if (test.exists()) FileUtils.deleteQuietly(test);
 		for (int i = 0; i < nfiles; i++) {
-			CMDir cTree = new CMDir(new File(AMIFixtures.TEST_MIXED_DIR, "file"+i));
+			CTree cTree = new CTree(new File(AMIFixtures.TEST_MIXED_DIR, "file"+i));
 			normaTemp[i] = new File(test, "file"+i);
 			cTree.copyTo(normaTemp[i], true);
 		}

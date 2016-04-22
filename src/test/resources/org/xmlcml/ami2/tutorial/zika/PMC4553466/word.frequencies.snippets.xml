@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4553466/results/word/frequencies/results.xml">
+  <result title="frequency" word="virus" count="133"/>
+  <result title="frequency" word="Glossina" count="98"/>
+  <result title="frequency" word="tsetse" count="98"/>
+  <result title="frequency" word="pallidipes" count="79"/>
+  <result title="frequency" word="GpSGHV" count="69"/>
+  <result title="frequency" word="viral" count="67"/>
+  <result title="frequency" word="flies" count="59"/>
+  <result title="frequency" word="salivary" count="52"/>
+  <result title="frequency" word="infection" count="42"/>
+  <result title="frequency" word="SGH" count="41"/>
+  <result title="frequency" word="fly" count="38"/>
+  <result title="frequency" word="M.," count="35"/>
+  <result title="frequency" word="gland" count="35"/>
+  <result title="frequency" word="insect" count="35"/>
+  <result title="frequency" word="transmission" count="34"/>
+  <result title="frequency" word="J.," count="33"/>
+  <result title="frequency" word="A.," count="32"/>
+  <result title="frequency" word="control" count="30"/>
+  <result title="frequency" word="host" count="30"/>
+  <result title="frequency" word="viruses" count="30"/>
+  <result title="frequency" word="Insect" count="28"/>
+  <result title="frequency" word="DNA" count="27"/>
+  <result title="frequency" word="hypertrophy" count="27"/>
+  <result title="frequency" word="MdSGHV" count="26"/>
+  <result title="frequency" word="Abd-Alla" count="25"/>
+  <result title="frequency" word="colonies" count="25"/>
+  <result title="frequency" word="glands" count="25"/>
+  <result title="frequency" word="particles" count="24"/>
+  <result title="frequency" word="hytrosavirus" count="23"/>
+  <result title="frequency" word="infected" count="23"/>
+  <result title="frequency" word="membrane" count="23"/>
+  <result title="frequency" word="Musca" count="22"/>
+  <result title="frequency" word="colony" count="22"/>
+  <result title="frequency" word="infections" count="22"/>
+  <result title="frequency" word="laboratory" count="22"/>
+  <result title="frequency" word="morsitans" count="22"/>
+  <result title="frequency" word="sterile" count="22"/>
+  <result title="frequency" word="Entomol." count="21"/>
+  <result title="frequency" word="populations" count="21"/>
+ </snippets>
+</snippetsTree>

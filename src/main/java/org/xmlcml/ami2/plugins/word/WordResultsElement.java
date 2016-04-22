@@ -23,7 +23,7 @@ import org.xmlcml.html.HtmlSpan;
 import org.xmlcml.html.HtmlStyle;
 import org.xmlcml.xml.XMLUtil;
 
-/** not sure this is used?
+/** contains results for bag of words
  * 
  * @author pm286
  *
@@ -96,7 +96,7 @@ public class WordResultsElement extends ResultsElement {
 		return fontSizeIntArray;
 	}
 
-	void writeResultsElementAsHTML(File outputFile, AMIArgProcessor wordArgProcessor) {
+	public void writeResultsElementAsHTML(File outputFile, AMIArgProcessor wordArgProcessor) {
 		IntArray fontSizeIntArray = createOrderedFontSizeArray();
 		if (fontSizeIntArray != null) {
 			Set<Integer> fontSizeSet = fontSizeIntArray.createIntegerSet();

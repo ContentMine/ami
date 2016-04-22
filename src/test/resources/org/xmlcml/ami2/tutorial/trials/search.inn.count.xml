@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="397">clopidogrel</result>
+ <result title="frequency" count="311">prednisolone</result>
+ <result title="frequency" count="273">dexamethasone</result>
+ <result title="frequency" count="272">melatonin</result>
+ <result title="frequency" count="229">fluoxetine</result>
+ <result title="frequency" count="225">metformin</result>
+ <result title="frequency" count="225">sertraline</result>
+ <result title="frequency" count="223">nitric oxide</result>
+ <result title="frequency" count="202">atorvastatin</result>
+ <result title="frequency" count="189">propofol</result>
+ <result title="frequency" count="164">bevacizumab</result>
+ <result title="frequency" count="155">simvastatin</result>
+ <result title="frequency" count="144">adenosine</result>
+ <result title="frequency" count="143">fentanyl</result>
+ <result title="frequency" count="138">lithium</result>
+ <result title="frequency" count="135">memantine</result>
+ <result title="frequency" count="135">vancomycin</result>
+ <result title="frequency" count="134">paclitaxel</result>
+ <result title="frequency" count="134">warfarin</result>
+ <result title="frequency" count="133">lidocaine</result>
+ <result title="frequency" count="131">minocycline</result>
+ <result title="frequency" count="129">cotinine</result>
+ <result title="frequency" count="126">prasugrel</result>
+ <result title="frequency" count="125">rifampicin</result>
+ <result title="frequency" count="125">sevoflurane</result>
+ <result title="frequency" count="123">methotrexate</result>
+ <result title="frequency" count="122">cilostazol</result>
+ <result title="frequency" count="119">haloperidol</result>
+ <result title="frequency" count="116">carbon dioxide</result>
+ <result title="frequency" count="114">azithromycin</result>
+ <result title="frequency" count="112">spironolactone</result>
+ <result title="frequency" count="109">methadone</result>
+ <result title="frequency" count="109">rosuvastatin</result>
+ <result title="frequency" count="108">everolimus</result>
+ <result title="frequency" count="106">niacin</result>
+ <result title="frequency" count="103">cisplatin</result>
+ <result title="frequency" count="102">gemcitabine</result>
+ <result title="frequency" count="102">progesterone</result>
+ <result title="frequency" count="102">donepezil</result>
+ <result title="frequency" count="102">sorafenib</result>
+ <result title="frequency" count="100">folic acid</result>
+ <result title="frequency" count="96">paracetamol</result>
+ <result title="frequency" count="96">hydrocortisone</result>
+ <result title="frequency" count="95">ticagrelor</result>
+ <result title="frequency" count="94">escitalopram</result>
+ <result title="frequency" count="90">chlorhexidine</result>
+ <result title="frequency" count="88">gabapentin</result>
+ <result title="frequency" count="87">venlafaxine</result>
+ <result title="frequency" count="86">dopamine</result>
+ <result title="frequency" count="86">furosemide</result>
+ <result title="frequency" count="84">remifentanil</result>
+ <result title="frequency" count="83">norepinephrine</result>
+ <result title="frequency" count="83">cholecalciferol</result>
+ <result title="frequency" count="82">dobutamine</result>
+ <result title="frequency" count="81">salbutamol</result>
+ <result title="frequency" count="79">prednisone</result>
+ <result title="frequency" count="78">metronidazole</result>
+ <result title="frequency" count="78">tranexamic acid</result>
+ <result title="frequency" count="78">celecoxib</result>
+ <result title="frequency" count="78">bupropion</result>
+ <result title="frequency" count="77">tamoxifen</result>
+ <result title="frequency" count="76">capecitabine</result>
+ <result title="frequency" count="74">pregabalin</result>
+ <result title="frequency" count="73">amlexanox</result>
+ <result title="frequency" count="70">artesunate</result>
+ <result title="frequency" count="69">misoprostol</result>
+ <result title="frequency" count="69">clonidine</result>
+ <result title="frequency" count="69">losartan</result>
+ <result title="frequency" count="69">tacrolimus</result>
+ <result title="frequency" count="69">mirtazapine</result>
+ <result title="frequency" count="68">propranolol</result>
+ <result title="frequency" count="67">ketamine</result>
+ <result title="frequency" count="66">fluconazole</result>
+ <result title="frequency" count="64">timolol</result>
+ <result title="frequency" count="64">irinotecan</result>
+ <result title="frequency" count="63">oxaliplatin</result>
+ <result title="frequency" count="63">amiodarone</result>
+ <result title="frequency" count="63">cyclosporine</result>
+ <result title="frequency" count="63">nitroglycerin</result>
+ <result title="frequency" count="63">tenofovir</result>
+ <result title="frequency" count="62">citalopram</result>
+ <result title="frequency" count="62">anastrozole</result>
+ <result title="frequency" count="61">naloxone</result>
+ <result title="frequency" count="60">isoniazid</result>
+ <result title="frequency" count="58">linagliptin</result>
+ <result title="frequency" count="58">acetaminophen</result>
+ <result title="frequency" count="58">latanoprost</result>
+ <result title="frequency" count="58">meglumine</result>
+ <result title="frequency" count="57">adalimumab</result>
+ <result title="frequency" count="57">buprenorphine</result>
+ <result title="frequency" count="57">carboplatin</result>
+ <result title="frequency" count="56">moxifloxacin</result>
+ <result title="frequency" count="56">carbamazepine</result>
+ <result title="frequency" count="55">somatostatin</result>
+ <result title="frequency" count="55">fluvastatin</result>
+ <result title="frequency" count="55">testosterone</result>
+ <result title="frequency" count="55">abciximab</result>
+ <result title="frequency" count="54">daptomycin</result>
+ <result title="frequency" count="54">ramipril</result>
+ <result title="frequency" count="54">varenicline</result>
+ <result title="frequency" count="53">ropivacaine</result>
+ <result title="frequency" count="53">levosimendan</result>
+ <result title="frequency" count="52">ranibizumab</result>
+ <result title="frequency" count="52">acetylcysteine</result>
+ <result title="frequency" count="52">ciprofloxacin</result>
+ <result title="frequency" count="51">ondansetron</result>
+ <result title="frequency" count="50">ephedrine</result>
+ <result title="frequency" count="49">ethanol</result>
+ <result title="frequency" count="48">lamotrigine</result>
+ <result title="frequency" count="48">azathioprine</result>
+ <result title="frequency" count="47">bupivacaine</result>
+ <result title="frequency" count="47">midazolam</result>
+ <result title="frequency" count="47">acetylsalicylic acid</result>
+ <result title="frequency" count="47">meropenem</result>
+ <result title="frequency" count="46">dexmedetomidine</result>
+ <result title="frequency" count="46">baclofen</result>
+ <result title="frequency" count="45">permethrin</result>
+ <result title="frequency" count="45">indomethacin</result>
+ <result title="frequency" count="45">flurbiprofen</result>
+ <result title="frequency" count="44">oxytocin</result>
+ <result title="frequency" count="44">miltefosine</result>
+ <result title="frequency" count="44">rituximab</result>
+ <result title="frequency" count="44">valsartan</result>
+ <result title="frequency" count="43">levofloxacin</result>
+ <result title="frequency" count="43">udenafil</result>
+ <result title="frequency" count="43">clozapine</result>
+ <result title="frequency" count="42">hydroxychloroquine</result>
+ <result title="frequency" count="41">clobetasol</result>
+ <result title="frequency" count="41">desflurane</result>
+ <result title="frequency" count="41">nortriptyline</result>
+ <result title="frequency" count="41">methylprednisolone</result>
+ <result title="frequency" count="41">etanercept</result>
+ <result title="frequency" count="41">fluorouracil</result>
+ <result title="frequency" count="40">ibuprofen</result>
+ <result title="frequency" count="40">afatinib</result>
+ <result title="frequency" count="40">isoflurane</result>
+ <result title="frequency" count="40">sodium chloride</result>
+ <result title="frequency" count="40">gefitinib</result>
+ <result title="frequency" count="39">budesonide</result>
+ <result title="frequency" count="39">probucol</result>
+ <result title="frequency" count="38">calcitriol</result>
+ <result title="frequency" count="38">imiquimod</result>
+ <result title="frequency" count="38">basiliximab</result>
+ <result title="frequency" count="38">acenocoumarol</result>
+ <result title="frequency" count="37">ceftriaxone</result>
+ <result title="frequency" count="37">lovastatin</result>
+ <result title="frequency" count="37">diclofenac</result>
+ <result title="frequency" count="37">alteplase</result>
+ <result title="frequency" count="37">vildagliptin</result>
+ <result title="frequency" count="36">etomidate</result>
+ <result title="frequency" count="36">irbesartan</result>
+ <result title="frequency" count="36">aripiprazole</result>
+ <result title="frequency" count="36">rofecoxib</result>
+ <result title="frequency" count="35">phenylephrine</result>
+ <result title="frequency" count="35">rifaximin</result>
+ <result title="frequency" count="35">etoricoxib</result>
+ <result title="frequency" count="34">infliximab</result>
+ <result title="frequency" count="34">duloxetine</result>
+ <result title="frequency" count="34">rosiglitazone</result>
+ <result title="frequency" count="33">olmesartan</result>
+ <result title="frequency" count="33">milrinone</result>
+ <result title="frequency" count="33">valproate</result>
+ <result title="frequency" count="33">lactulose</result>
+ <result title="frequency" count="32">ascorbic acid</result>
+ <result title="frequency" count="32">ciclosporin</result>
+ <result title="frequency" count="32">oseltamivir</result>
+ <result title="frequency" count="32">amlodipine</result>
+ <result title="frequency" count="31">calcipotriol</result>
+ <result title="frequency" count="31">antazoline</result>
+ <result title="frequency" count="31">atomoxetine</result>
+ <result title="frequency" count="30">pasireotide</result>
+ <result title="frequency" count="30">docetaxel</result>
+ <result title="frequency" count="30">ivabradine</result>
+ <result title="frequency" count="29">povidone</result>
+ <result title="frequency" count="29">sildenafil</result>
+ <result title="frequency" count="28">sirolimus</result>
+ <result title="frequency" count="28">bortezomib</result>
+ <result title="frequency" count="28">pamidronate</result>
+ <result title="frequency" count="27">estradiol</result>
+ <result title="frequency" count="27">nitroprusside</result>
+ <result title="frequency" count="27">travoprost</result>
+ <result title="frequency" count="27">paroxetine</result>
+ <result title="frequency" count="27">oxycodone</result>
+ <result title="frequency" count="26">triamcinolone</result>
+ <result title="frequency" count="26">flucloxacillin</result>
+ <result title="frequency" count="26">metyrapone</result>
+ <result title="frequency" count="26">tramadol</result>
+ <result title="frequency" count="25">verteporfin</result>
+ <result title="frequency" count="25">nitrous oxide</result>
+ <result title="frequency" count="25">cetuximab</result>
+ <result title="frequency" count="25">allopurinol</result>
+ <result title="frequency" count="25">bimatoprost</result>
+ <result title="frequency" count="25">calcitonin</result>
+ <result title="frequency" count="24">pentoxifylline</result>
+ <result title="frequency" count="24">mesalazine</result>
+ <result title="frequency" count="24">amiloride</result>
+ <result title="frequency" count="24">apixaban</result>
+ <result title="frequency" count="24">topiramate</result>
+ <result title="frequency" count="23">erlotinib</result>
+ <result title="frequency" count="23">streptokinase</result>
+ <result title="frequency" count="23">pioglitazone</result>
+ <result title="frequency" count="23">abiraterone</result>
+ <result title="frequency" count="23">phenytoin</result>
+ <result title="frequency" count="23">atropine</result>
+ <result title="frequency" count="23">ferric carboxymaltose</result>
+ <result title="frequency" count="23">hydrochlorothiazide</result>
+ <result title="frequency" count="23">naproxen</result>
+ <result title="frequency" count="23">bisoprolol</result>
+ <result title="frequency" count="22">urokinase</result>
+ <result title="frequency" count="22">metoprolol</result>
+ <result title="frequency" count="22">isosorbide mononitrate</result>
+ <result title="frequency" count="22">epinephrine</result>
+ <result title="frequency" count="22">exenatide</result>
+ <result title="frequency" count="22">tibolone</result>
+ <result title="frequency" count="22">tryptophan</result>
+ <result title="frequency" count="22">quetiapine</result>
+ <result title="frequency" count="22">salmeterol</result>
+ <result title="frequency" count="22">chlorthalidone</result>
+ <result title="frequency" count="22">raloxifene</result>
+ <result title="frequency" count="21">telmisartan</result>
+ <result title="frequency" count="21">gatifloxacin</result>
+ <result title="frequency" count="21">epoetin alfa</result>
+ <result title="frequency" count="21">enalapril</result>
+ <result title="frequency" count="21">methylphenidate</result>
+ <result title="frequency" count="21">ampicillin</result>
+ <result title="frequency" count="20">indapamide</result>
+ <result title="frequency" count="20">sugammadex</result>
+ <result title="frequency" count="20">arginine</result>
+ <result title="frequency" count="20">salicylic acid</result>
+ <result title="frequency" count="20">tamsulosin</result>
+ <result title="frequency" count="20">tetracycline</result>
+ <result title="frequency" count="20">doxycycline</result>
+ <result title="frequency" count="20">corticotropin</result>
+ <result title="frequency" count="19">norfloxacin</result>
+ <result title="frequency" count="19">ethambutol</result>
+ <result title="frequency" count="19">zolpidem</result>
+ <result title="frequency" count="19">amoxicillin</result>
+ <result title="frequency" count="19">perhexiline</result>
+ <result title="frequency" count="19">nifedipine</result>
+ <result title="frequency" count="19">albendazole</result>
+ <result title="frequency" count="18">sitagliptin</result>
+ <result title="frequency" count="18">nitric oxide,</result>
+ <result title="frequency" count="18">anakinra</result>
+ <result title="frequency" count="18">cefuroxime</result>
+ <result title="frequency" count="18">pravastatin</result>
+ <result title="frequency" count="18">cefazolin</result>
+ <result title="frequency" count="18">sufentanil</result>
+ <result title="frequency" count="18">lorazepam</result>
+ <result title="frequency" count="17">praziquantel</result>
+ <result title="frequency" count="17">darbepoetin alfa</result>
+ <result title="frequency" count="17">glycerol</result>
+ <result title="frequency" count="16">doxorubicin</result>
+ <result title="frequency" count="16">erythromycin</result>
+ <result title="frequency" count="16">olanzapine</result>
+ <result title="frequency" count="16">aprepitant</result>
+ <result title="frequency" count="16">voriconazole</result>
+ <result title="frequency" count="15">fluticasone</result>
+ <result title="frequency" count="15">sevelamer</result>
+ <result title="frequency" count="15">fludrocortisone</result>
+ <result title="frequency" count="15">glucagon</result>
+ <result title="frequency" count="14">cyclophosphamide</result>
+ <result title="frequency" count="14">oxcarbazepine</result>
+ <result title="frequency" count="14">ticlopidine</result>
+ <result title="frequency" count="14">perindopril</result>
+ <result title="frequency" count="14">chorionic gonadotropin</result>
+ <result title="frequency" count="14">pyrazinamide</result>
+ <result title="frequency" count="14">betamethasone</result>
+ <result title="frequency" count="14">omalizumab</result>
+ <result title="frequency" count="14">metoclopramide</result>
+ <result title="frequency" count="13">ofloxacin</result>
+ <result title="frequency" count="13">nevirapine</result>
+ <result title="frequency" count="13">voglibose</result>
+ <result title="frequency" count="13">micafungin</result>
+ <result title="frequency" count="13">primaquine</result>
+ <result title="frequency" count="13">dipyridamole</result>
+ <result title="frequency" count="13">ribavirin</result>
+ <result title="frequency" count="13">dihydrocodeine</result>
+ <result title="frequency" count="13">artemisinin</result>
+ <result title="frequency" count="13">pyrimethamine</result>
+ <result title="frequency" count="12">risperidone</result>
+ <result title="frequency" count="12">cerivastatin</result>
+ <result title="frequency" count="12">verapamil</result>
+ <result title="frequency" count="12">sulfadiazine</result>
+ <result title="frequency" count="12">betahistine</result>
+ <result title="frequency" count="12">flunarizine</result>
+ <result title="frequency" count="12">mycophenolic acid</result>
+ <result title="frequency" count="12">promethazine</result>
+ <result title="frequency" count="12">rivastigmine</result>
+ <result title="frequency" count="12">phenoxymethylpenicillin</result>
+ <result title="frequency" count="11">sulfadoxine</result>
+ <result title="frequency" count="11">chloroquine</result>
+ <result title="frequency" count="11">alendronate</result>
+ <result title="frequency" count="11">phenol</result>
+ <result title="frequency" count="11">imipramine</result>
+ <result title="frequency" count="11">streptomycin</result>
+ <result title="frequency" count="11">levodopa</result>
+ <result title="frequency" count="11">azilsartan</result>
+ <result title="frequency" count="11">captopril</result>
+ <result title="frequency" count="11">candesartan</result>
+ <result title="frequency" count="10">naltrexone</result>
+ <result title="frequency" count="10">nitric oxide;</result>
+ <result title="frequency" count="10">silver sulfadiazine</result>
+ <result title="frequency" count="10">tirofiban</result>
+ <result title="frequency" count="10">glibenclamide</result>
+ <result title="frequency" count="10">chlorpromazine</result>
+ <result title="frequency" count="10">efavirenz</result>
+ <result title="frequency" count="10">dorzolamide</result>
+ <result title="frequency" count="10">ketorolac</result>
+ <result title="frequency" count="10">amitriptyline</result>
+ <result title="frequency" count="10">atenolol</result>
+ <result title="frequency" count="10">folic acid,</result>
+ <result title="frequency" count="10">levonorgestrel</result>
+ <result title="frequency" count="10">dextran</result>
+ <result title="frequency" count="10">sodium stibogluconate</result>
+ <result title="frequency" count="9">levamisole</result>
+ <result title="frequency" count="9">trazodone</result>
+ <result title="frequency" count="9">aminophylline</result>
+ <result title="frequency" count="9">digoxin</result>
+ <result title="frequency" count="9">brimonidine</result>
+ <result title="frequency" count="9">bivalirudin</result>
+ <result title="frequency" count="9">diazepam</result>
+ <result title="frequency" count="9">lamivudine</result>
+ <result title="frequency" count="8">galantamine</result>
+ <result title="frequency" count="8">kanamycin</result>
+ <result title="frequency" count="8">melphalan</result>
+ <result title="frequency" count="8">salicylic acid,</result>
+ <result title="frequency" count="8">lofexidine</result>
+ <result title="frequency" count="8">orlistat</result>
+ <result title="frequency" count="8">hydromorphone</result>
+ <result title="frequency" count="8">triclosan</result>
+ <result title="frequency" count="8">amphetamine</result>
+ <result title="frequency" count="8">clarithromycin</result>
+ <result title="frequency" count="8">ezetimibe</result>
+ <result title="frequency" count="8">flucytosine</result>
+ <result title="frequency" count="8">artemether</result>
+ <result title="frequency" count="8">vinorelbine</result>
+ <result title="frequency" count="8">cefotaxime</result>
+ <result title="frequency" count="8">valproic acid</result>
+ <result title="frequency" count="8">mitoxantrone</result>
+ <result title="frequency" count="7">sunitinib</result>
+ <result title="frequency" count="7">mifepristone</result>
+ <result title="frequency" count="7">paromomycin</result>
+ <result title="frequency" count="7">lysine</result>
+ <result title="frequency" count="7">sodium chloride,</result>
+ <result title="frequency" count="7">letrozole</result>
+ <result title="frequency" count="7">linezolid</result>
+ <result title="frequency" count="7">aprotinin</result>
+ <result title="frequency" count="7">valganciclovir</result>
+ <result title="frequency" count="6">tegafur</result>
+ <result title="frequency" count="6">interferon beta-1b</result>
+ <result title="frequency" count="6">sulfasalazine</result>
+ <result title="frequency" count="6">nimodipine</result>
+ <result title="frequency" count="6">risedronate</result>
+ <result title="frequency" count="6">mefloquine</result>
+ <result title="frequency" count="6">levetiracetam</result>
+ <result title="frequency" count="6">zoledronic acid,</result>
+ <result title="frequency" count="6">glycine</result>
+ <result title="frequency" count="6">chorionic gonadotropin;</result>
+ <result title="frequency" count="6">trimethoprim</result>
+ <result title="frequency" count="6">isotretinoin</result>
+ <result title="frequency" count="6">zidovudine</result>
+ <result title="frequency" count="6">prucalopride</result>
+ <result title="frequency" count="6">nonoxynol-9</result>
+ <result title="frequency" count="6">droperidol</result>
+ <result title="frequency" count="6">formoterol</result>
+ <result title="frequency" count="6">cefotetan</result>
+ <result title="frequency" count="6">insulin aspart</result>
+ <result title="frequency" count="6">beclomethasone</result>
+ <result title="frequency" count="6">chloramphenicol</result>
+ <result title="frequency" count="6">succinylcholine</result>
+ <result title="frequency" count="6">riluzole</result>
+ <result title="frequency" count="6">ketoconazole</result>
+ <result title="frequency" count="6">omeprazole</result>
+ <result title="frequency" count="5">cytarabine</result>
+ <result title="frequency" count="5">vincristine</result>
+ <result title="frequency" count="5">thalidomide</result>
+ <result title="frequency" count="5">pancuronium</result>
+ <result title="frequency" count="5">mupirocin</result>
+ <result title="frequency" count="5">papaverine</result>
+ <result title="frequency" count="5">nicorandil</result>
+ <result title="frequency" count="5">natalizumab</result>
+ <result title="frequency" count="5">epirubicin</result>
+ <result title="frequency" count="5">unoprostone</result>
+ <result title="frequency" count="5">menthol</result>
+ <result title="frequency" count="5">pyridoxine</result>
+ <result title="frequency" count="5">valaciclovir</result>
+ <result title="frequency" count="5">pralidoxime</result>
+ <result title="frequency" count="5">lanreotide</result>
+ <result title="frequency" count="5">insulin glargine</result>
+ <result title="frequency" count="5">icodextrin</result>
+ <result title="frequency" count="5">tazobactam</result>
+ <result title="frequency" count="5">vecuronium</result>
+ <result title="frequency" count="5">nicotinamide</result>
+ <result title="frequency" count="5">cetylpyridinium chloride</result>
+ <result title="frequency" count="5">desipramine</result>
+ <result title="frequency" count="5">folic acid.</result>
+ <result title="frequency" count="5">paricalcitol</result>
+ <result title="frequency" count="5">entecavir</result>
+ <result title="frequency" count="5">bedaquiline</result>
+ <result title="frequency" count="5">thyroglobulin</result>
+ <result title="frequency" count="5">ibandronate</result>
+ <result title="frequency" count="4">troglitazone</result>
+ <result title="frequency" count="4">cyclopentolate</result>
+ <result title="frequency" count="4">isosorbide mononitrate,</result>
+ <result title="frequency" count="4">acamprosate</result>
+ <result title="frequency" count="4">zoledronate</result>
+ <result title="frequency" count="4">nitric oxide.</result>
+ <result title="frequency" count="4">eszopiclone</result>
+ <result title="frequency" count="4">sulbactam</result>
+ <result title="frequency" count="4">clofazimine</result>
+ <result title="frequency" count="4">zoledronic acid</result>
+ <result title="frequency" count="4">pemetrexed</result>
+ <result title="frequency" count="4">isosorbide dinitrate,</result>
+ <result title="frequency" count="4">palifermin</result>
+ <result title="frequency" count="4">carvedilol</result>
+ <result title="frequency" count="4">pantoprazole</result>
+ <result title="frequency" count="4">glatiramer acetate,</result>
+ <result title="frequency" count="4">ferric carboxymaltose.</result>
+ <result title="frequency" count="4">salicylic acid.</result>
+ <result title="frequency" count="4">pimozide</result>
+ <result title="frequency" count="4">ertapenem</result>
+ <result title="frequency" count="4">clavulanic acid</result>
+ <result title="frequency" count="4">glatiramer acetate</result>
+ <result title="frequency" count="4">amikacin</result>
+ <result title="frequency" count="4">lumefantrine</result>
+ <result title="frequency" count="4">gadobutrol</result>
+ <result title="frequency" count="4">temozolomide</result>
+ <result title="frequency" count="4">miconazole</result>
+ <result title="frequency" count="4">parecoxib</result>
+ <result title="frequency" count="4">phenprocoumon</result>
+ <result title="frequency" count="4">acarbose</result>
+ <result title="frequency" count="4">rifapentine</result>
+ <result title="frequency" count="4">cimetidine</result>
+ <result title="frequency" count="4">peginterferon alfa-2a</result>
+ <result title="frequency" count="4">carbon dioxide,</result>
+ <result title="frequency" count="4">fluvoxamine</result>
+ <result title="frequency" count="4">selegiline</result>
+ <result title="frequency" count="4">ramelteon</result>
+ <result title="frequency" count="4">mianserin</result>
+ <result title="frequency" count="4">disulfiram</result>
+ <result title="frequency" count="4">alfentanil</result>
+ <result title="frequency" count="4">loxoprofen</result>
+ <result title="frequency" count="4">trastuzumab</result>
+ <result title="frequency" count="4">diphenhydramine</result>
+ <result title="frequency" count="4">carbamide</result>
+ <result title="frequency" count="4">leflunomide</result>
+ <result title="frequency" count="4">zopiclone</result>
+ <result title="frequency" count="4">aciclovir</result>
+ <result title="frequency" count="4">ziprasidone</result>
+ <result title="frequency" count="4">valdecoxib</result>
+ <result title="frequency" count="4">acetylsalicylic acid.</result>
+ <result title="frequency" count="4">acetylsalicylic acid,</result>
+ <result title="frequency" count="4">sumatriptan</result>
+ <result title="frequency" count="4">doxepin</result>
+ <result title="frequency" count="3">acitretin</result>
+ <result title="frequency" count="3">amantadine</result>
+ <result title="frequency" count="3">eptifibatide</result>
+ <result title="frequency" count="3">isosorbide dinitrate</result>
+ <result title="frequency" count="3">reteplase</result>
+ <result title="frequency" count="3">atazanavir</result>
+ <result title="frequency" count="3">oxybutynin</result>
+ <result title="frequency" count="3">ocriplasmin</result>
+ <result title="frequency" count="3">sulfamethoxazole</result>
+ <result title="frequency" count="3">tegaserod</result>
+ <result title="frequency" count="3">bendroflumethiazide</result>
+ <result title="frequency" count="3">levobupivacaine</result>
+ <result title="frequency" count="3">valproic acid,</result>
+ <result title="frequency" count="3">alosetron</result>
+ <result title="frequency" count="3">ipratropium bromide</result>
+ <result title="frequency" count="3">selumetinib</result>
+ <result title="frequency" count="3">chorionic gonadotropin,</result>
+ <result title="frequency" count="3">dapsone</result>
+ <result title="frequency" count="3">piroxicam</result>
+ <result title="frequency" count="3">mycophenolic acid,</result>
+ <result title="frequency" count="3">etoposide</result>
+ <result title="frequency" count="3">prazosin</result>
+ <result title="frequency" count="3">daclizumab</result>
+ <result title="frequency" count="3">sotalol</result>
+ <result title="frequency" count="3">methamphetamine</result>
+ <result title="frequency" count="3">imipenem</result>
+ <result title="frequency" count="3">chondroitin sulfate,</result>
+ <result title="frequency" count="3">sodium picosulfate</result>
+ <result title="frequency" count="3">loperamide</result>
+ <result title="frequency" count="3">clomipramine</result>
+ <result title="frequency" count="3">nicotinic acid</result>
+ <result title="frequency" count="3">clavulanate</result>
+ <result title="frequency" count="3">doxazosin</result>
+ <result title="frequency" count="3">oxacillin</result>
+ <result title="frequency" count="3">glutamic acid</result>
+ <result title="frequency" count="3">tropicamide</result>
+ <result title="frequency" count="3">trimetazidine</result>
+ <result title="frequency" count="3">eplerenone</result>
+ <result title="frequency" count="3">carbon dioxide;</result>
+ <result title="frequency" count="3">carbon dioxide.</result>
+ <result title="frequency" count="3">stavudine</result>
+ <result title="frequency" count="3">glyburide</result>
+ <result title="frequency" count="3">rifabutin</result>
+ <result title="frequency" count="3">iloprost</result>
+ <result title="frequency" count="3">primidone</result>
+ <result title="frequency" count="3">sibutramine</result>
+ <result title="frequency" count="3">hydroxyzine</result>
+ <result title="frequency" count="3">codeine</result>
+ <result title="frequency" count="3">amodiaquine</result>
+ <result title="frequency" count="3">exemestane</result>
+ <result title="frequency" count="3">ethionamide</result>
+ <result title="frequency" count="3">benzylpenicillin</result>
+ <result title="frequency" count="3">fleroxacin</result>
+ <result title="frequency" count="3">riboflavin</result>
+ <result title="frequency" count="3">acetylsalicylic acid;</result>
+ <result title="frequency" count="3">emtricitabine</result>
+ <result title="frequency" count="3">cosyntropin</result>
+ <result title="frequency" count="2">nitrazepam</result>
+ <result title="frequency" count="2">fosfomycin</result>
+ <result title="frequency" count="2">daunorubicin</result>
+ <result title="frequency" count="2">interferon beta-1a</result>
+ <result title="frequency" count="2">pseudoephedrine</result>
+ <result title="frequency" count="2">pimecrolimus</result>
+ <result title="frequency" count="2">canakinumab</result>
+ <result title="frequency" count="2">labetalol</result>
+ <result title="frequency" count="2">clonazepam</result>
+ <result title="frequency" count="2">mebendazole</result>
+ <result title="frequency" count="2">isosorbide mononitrate.</result>
+ <result title="frequency" count="2">teriparatide</result>
+ <result title="frequency" count="2">tolterodine</result>
+ <result title="frequency" count="2">nicotinic acid,</result>
+ <result title="frequency" count="2">maprotiline</result>
+ <result title="frequency" count="2">nicotinic acid;</result>
+ <result title="frequency" count="2">halothane</result>
+ <result title="frequency" count="2">belimumab</result>
+ <result title="frequency" count="2">metronidazol</result>
+ <result title="frequency" count="2">polysorbate</result>
+ <result title="frequency" count="2">cisapride</result>
+ <result title="frequency" count="2">megestrol</result>
+ <result title="frequency" count="2">darbepoetin alfa,</result>
+ <result title="frequency" count="2">ivermectin</result>
+ <result title="frequency" count="2">cycloserine</result>
+ <result title="frequency" count="2">roxithromycin</result>
+ <result title="frequency" count="2">ranitidine</result>
+ <result title="frequency" count="2">fenofibrate</result>
+ <result title="frequency" count="2">ifosfamide</result>
+ <result title="frequency" count="2">axitinib</result>
+ <result title="frequency" count="2">proguanil</result>
+ <result title="frequency" count="2">nicergoline</result>
+ <result title="frequency" count="2">rocuronium bromide</result>
+ <result title="frequency" count="2">tobramycin</result>
+ <result title="frequency" count="2">ximelagatran</result>
+ <result title="frequency" count="2">buserelin</result>
+ <result title="frequency" count="2">tizanidine</result>
+ <result title="frequency" count="2">mianserine</result>
+ <result title="frequency" count="2">mycophenolic acid.</result>
+ <result title="frequency" count="2">nitrous oxide.</result>
+ <result title="frequency" count="2">aflibercept</result>
+ <result title="frequency" count="2">levomethadyl acetate,</result>
+ <result title="frequency" count="2">carbidopa</result>
+ <result title="frequency" count="2">mexiletine</result>
+ <result title="frequency" count="2">ketotifen</result>
+ <result title="frequency" count="2">insulin lispro</result>
+ <result title="frequency" count="2">teicoplanin</result>
+ <result title="frequency" count="2">fosphenytoin</result>
+ <result title="frequency" count="2">imatinib</result>
+ <result title="frequency" count="2">medroxyprogesterone</result>
+ <result title="frequency" count="2">mepivacaine</result>
+ <result title="frequency" count="2">tranexamic acid,</result>
+ <result title="frequency" count="2">tranexamic acid.</result>
+ <result title="frequency" count="2">methoxyflurane</result>
+ <result title="frequency" count="2">cephalexin</result>
+ <result title="frequency" count="2">carbimazole</result>
+ <result title="frequency" count="2">cyproterone</result>
+ <result title="frequency" count="2">ergocalciferol</result>
+ <result title="frequency" count="2">rivaroxaban</result>
+ <result title="frequency" count="2">caspofungin</result>
+ <result title="frequency" count="2">zanamivir</result>
+ <result title="frequency" count="2">rimantadine</result>
+ <result title="frequency" count="2">quinacrine</result>
+ <result title="frequency" count="2">filgrastim</result>
+ <result title="frequency" count="2">alprazolam</result>
+ <result title="frequency" count="2">oxazepam</result>
+ <result title="frequency" count="2">linaclotide</result>
+ <result title="frequency" count="2">vardenafil</result>
+ <result title="frequency" count="2">xylometazoline</result>
+ <result title="frequency" count="2">nimesulide</result>
+ <result title="frequency" count="2">fingolimod</result>
+ <result title="frequency" count="2">nystatin</result>
+ <result title="frequency" count="2">lumiracoxib</result>
+ <result title="frequency" count="2">chlorpropamide</result>
+ <result title="frequency" count="2">acetazolamide</result>
+ <result title="frequency" count="2">polyglycolic acid</result>
+ <result title="frequency" count="2">salsalate</result>
+ <result title="frequency" count="2">sofosbuvir</result>
+ <result title="frequency" count="2">nicardipine</result>
+ <result title="frequency" count="2">balsalazide</result>
+ <result title="frequency" count="2">diltiazem</result>
+ <result title="frequency" count="2">procainamide</result>
+ <result title="frequency" count="2">cidofovir</result>
+ <result title="frequency" count="2">trandolapril</result>
+ <result title="frequency" count="2">ethinyl estradiol</result>
+ <result title="frequency" count="2">defibrotide</result>
+ <result title="frequency" count="2">hydrocodone</result>
+ <result title="frequency" count="2">sodium tetradecyl sulfate</result>
+ <result title="frequency" count="2">brinzolamide</result>
+ <result title="frequency" count="2">fludarabine</result>
+ <result title="frequency" count="2">glimepiride</result>
+ <result title="frequency" count="1">cefoxitin</result>
+ <result title="frequency" count="1">ritonavir</result>
+ <result title="frequency" count="1">belatacept</result>
+ <result title="frequency" count="1">topotecan</result>
+ <result title="frequency" count="1">dimethyl sulfoxide.</result>
+ <result title="frequency" count="1">lansoprazole</result>
+ <result title="frequency" count="1">alendronic acid</result>
+ <result title="frequency" count="1">cyclothiazide</result>
+ <result title="frequency" count="1">deferoxamine</result>
+ <result title="frequency" count="1">prochlorperazine</result>
+ <result title="frequency" count="1">cetirizine</result>
+ <result title="frequency" count="1">levothyroxine sodium</result>
+ <result title="frequency" count="1">nefazodone</result>
+ <result title="frequency" count="1">prilocaine</result>
+ <result title="frequency" count="1">finasteride</result>
+ <result title="frequency" count="1">tocainide</result>
+ <result title="frequency" count="1">nicotinic acid.</result>
+ <result title="frequency" count="1">trametinib</result>
+ <result title="frequency" count="1">oteracil</result>
+ <result title="frequency" count="1">flumazenil</result>
+ <result title="frequency" count="1">rifamycin</result>
+ <result title="frequency" count="1">ketanserin</result>
+ <result title="frequency" count="1">terazosin</result>
+ <result title="frequency" count="1">auranofin</result>
+ <result title="frequency" count="1">panitumumab</result>
+ <result title="frequency" count="1">tocilizumab</result>
+ <result title="frequency" count="1">gadopentetate dimeglumine</result>
+ <result title="frequency" count="1">ipilimumab</result>
+ <result title="frequency" count="1">telithromycin</result>
+ <result title="frequency" count="1">tenecteplase</result>
+ <result title="frequency" count="1">dronabinol</result>
+ <result title="frequency" count="1">cephaloridine</result>
+ <result title="frequency" count="1">lysergic acid diethylamide,</result>
+ <result title="frequency" count="1">rimonabant</result>
+ <result title="frequency" count="1">physostigmine</result>
+ <result title="frequency" count="1">dofetilide</result>
+ <result title="frequency" count="1">gestodene</result>
+ <result title="frequency" count="1">bacitracin</result>
+ <result title="frequency" count="1">temazepam</result>
+ <result title="frequency" count="1">valproic acid.</result>
+ <result title="frequency" count="1">adapalene</result>
+ <result title="frequency" count="1">pivmecillinam</result>
+ <result title="frequency" count="1">dutasteride</result>
+ <result title="frequency" count="1">aztreonam</result>
+ <result title="frequency" count="1">gimeracil</result>
+ <result title="frequency" count="1">raltegravir</result>
+ <result title="frequency" count="1">lubiprostone</result>
+ <result title="frequency" count="1">golimumab</result>
+ <result title="frequency" count="1">dimethyl sulfoxide</result>
+ <result title="frequency" count="1">telaprevir</result>
+ <result title="frequency" count="1">enoximone</result>
+ <result title="frequency" count="1">glatiramer acetate.</result>
+ <result title="frequency" count="1">levomethadyl acetate</result>
+ <result title="frequency" count="1">bleomycin</result>
+ <result title="frequency" count="1">flecainide</result>
+ <result title="frequency" count="1">amisulpride</result>
+ <result title="frequency" count="1">fusidic acid</result>
+ <result title="frequency" count="1">cyclizine</result>
+ <result title="frequency" count="1">cabazitaxel</result>
+ <result title="frequency" count="1">carteolol</result>
+ <result title="frequency" count="1">ferric carboxymaltose,</result>
+ <result title="frequency" count="1">bosentan</result>
+ <result title="frequency" count="1">aminocaproic acid,</result>
+ <result title="frequency" count="1">biperiden</result>
+ <result title="frequency" count="1">salicylic acid;</result>
+ <result title="frequency" count="1">mezlocilline</result>
+ <result title="frequency" count="1">gemfibrozil</result>
+ <result title="frequency" count="1">dicumarol</result>
+ <result title="frequency" count="1">perphenazine</result>
+ <result title="frequency" count="1">thioridazine</result>
+ <result title="frequency" count="1">tomoxetine</result>
+ <result title="frequency" count="1">cyproheptadine</result>
+ <result title="frequency" count="1">flupirtine</result>
+ <result title="frequency" count="1">abatacept</result>
+ <result title="frequency" count="1">tropisetron</result>
+ <result title="frequency" count="1">vapreotide</result>
+ <result title="frequency" count="1">pentamidine</result>
+ <result title="frequency" count="1">liraglutide</result>
+ <result title="frequency" count="1">cefdinir</result>
+ <result title="frequency" count="1">lapatinib</result>
+ <result title="frequency" count="1">benzalkonium chloride</result>
+ <result title="frequency" count="1">phencyclidine</result>
+ <result title="frequency" count="1">phenelzine</result>
+ <result title="frequency" count="1">iopromide</result>
+ <result title="frequency" count="1">phenobarbital</result>
+ <result title="frequency" count="1">nitrous oxide,</result>
+ <result title="frequency" count="1">naproxcinod</result>
+ <result title="frequency" count="1">esmolol</result>
+ <result title="frequency" count="1">vitamin a</result>
+ <result title="frequency" count="1">nesiritide</result>
+ <result title="frequency" count="1">citicolina</result>
+ <result title="frequency" count="1">tenoxicam</result>
+ <result title="frequency" count="1">pitavastatin</result>
+ <result title="frequency" count="1">peginterferon alfa-2a,</result>
+ <result title="frequency" count="1">cloxacillin</result>
+ <result title="frequency" count="1">domperidone</result>
+ <result title="frequency" count="1">denosumab</result>
+ <result title="frequency" count="1">pivampicillin</result>
+ <result title="frequency" count="1">methohexital</result>
+ <result title="frequency" count="1">sulfinpyrazone</result>
+ <result title="frequency" count="1">moricizine</result>
+ <result title="frequency" count="1">mercaptopurine</result>
+ <result title="frequency" count="1">triazolam</result>
+ <result title="frequency" count="1">methimazole</result>
+ <result title="frequency" count="1">sodium stibogluconate,</result>
+ <result title="frequency" count="1">nalidixic acid</result>
+ <result title="frequency" count="1">gadopentetate dimeglumine.</result>
+ <result title="frequency" count="1">sodium chloride.</result>
+ <result title="frequency" count="1">l-arginine</result>
+ <result title="frequency" count="1">sulpiride</result>
+ <result title="frequency" count="1">didanosine</result>
+ <result title="frequency" count="1">silodosin</result>
+ <result title="frequency" count="1">ticarcillin</result>
+ <result title="frequency" count="1">rifaximine</result>
+ <result title="frequency" count="1">ethyl carbamate</result>
+ <result title="frequency" count="1">heparine</result>
+ <result title="frequency" count="1">pindolol</result>
+ <result title="frequency" count="1">pentobarbital</result>
+ <result title="frequency" count="1">leuprolide</result>
+ <result title="frequency" count="1">cladribine</result>
+ <result title="frequency" count="1">vindesine</result>
+ <result title="frequency" count="1">moclobemide</result>
+ <result title="frequency" count="1">alefacept</result>
+ <result title="frequency" count="1">miglitol</result>
+ <result title="frequency" count="1">ergotamine</result>
+ <result title="frequency" count="1">mefenamic acid</result>
+ <result title="frequency" count="1">felbamate</result>
+ <result title="frequency" count="1">fluoxymesterone</result>
+ <result title="frequency" count="1">ebselen</result>
+ <result title="frequency" count="1">thiamine</result>
+ <result title="frequency" count="1">cefixime</result>
+ <result title="frequency" count="1">oxybuprocaine</result>
+ <result title="frequency" count="1">enzalutamide</result>
+ <result title="frequency" count="1">levomepromazine</result>
+ <result title="frequency" count="1">hydroxypropyl cellulose,</result>
+ <result title="frequency" count="1">trimipramine</result>
+ <result title="frequency" count="1">proglumide</result>
+ <result title="frequency" count="1">gadodiamide</result>
+ <result title="frequency" count="1">esomeprazole</result>
+ <result title="frequency" count="1">agomelatine</result>
+ <result title="frequency" count="1">cisplatinum</result>
+ <result title="frequency" count="1">fenoterol</result>
+ <result title="frequency" count="1">apraclonidine</result>
+ <result title="frequency" count="1">inosine</result>
+ <result title="frequency" count="1">triptorelin</result>
+ <result title="frequency" count="1">alimemazine</result>
+ <result title="frequency" count="1">ambroxol</result>
+ <result title="frequency" count="1">mefenamic acid,</result>
+ <result title="frequency" count="1">epoetin alfa,</result>
+ <result title="frequency" count="1">glutamic acid,</result>
+ <result title="frequency" count="1">ganciclovir</result>
+ <result title="frequency" count="1">cefprozil</result>
+ <result title="frequency" count="1">abacavir</result>
+ <result title="frequency" count="1">articaine</result>
+ <result title="frequency" count="1">mecamylamine</result>
+ <result title="frequency" count="1">dihydroergotamine</result>
+ <result title="frequency" count="1">ceftazidime</result>
+ <result title="frequency" count="1">moxonidine</result>
+ <result title="frequency" count="1">insulin detemir</result>
+ <result title="frequency" count="1">estramustine</result>
+ <result title="frequency" count="1">piperacillin</result>
+ <result title="frequency" count="1">azelastine</result>
+ <result title="frequency" count="1">meclizine</result>
+ <result title="frequency" count="1">tadalafil</result>
+ <result title="frequency" count="1">azelaic acid</result>
+ <result title="frequency" count="1">piracetam</result>
+ <result title="frequency" count="1">lomustine</result>
+ <result title="frequency" count="1">lopinavir</result>
+ <result title="frequency" count="1">oxandrolone</result>
+ <result title="frequency" count="1">beclometasone</result>
+ <result title="frequency" count="1">rizatriptan</result>
+ <result title="frequency" count="1">benzalkonium chloride,</result>
+ <result title="frequency" count="1">tazarotene</result>
+ <result title="frequency" count="1">ketoprofen</result>
+ <result title="frequency" count="1">norethisterone</result>
+ <result title="frequency" count="1">nafcillin</result>
+ <result title="frequency" count="1">boceprevir</result>
+ <result title="frequency" count="1">raltitrexed</result>
+ <result title="frequency" count="1">ketanserine</result>
+ <result title="frequency" count="1">clofarabine</result>
+ <result title="frequency" count="1">cefamandole</result>
+ <result title="frequency" count="1">carbocisteine</result>
+ <result title="frequency" count="1">encainide</result>
+ <result title="frequency" count="1">dronedarone</result>
+ <result title="frequency" count="1">limaprost</result>
+ <result title="frequency" count="1">flutamide</result>
+ <result title="frequency" count="1">metamizole</result>
+ <result title="frequency" count="1">nitrofurantoin</result>
+ <result title="frequency" count="1">goserelin</result>
+ <result title="frequency" count="1">tinidazole</result>
+ <result title="frequency" count="1">itraconazole</result>
+ <result title="frequency" count="1">bisacodyl</result>
+ <result title="frequency" count="1">phentermine</result>
+ <result title="frequency" count="1">sertindole</result>
+ <result title="frequency" count="1">chlordiazepoxide</result>
+ <result title="frequency" count="1">alfacalcidol</result>
+ <result title="frequency" count="1">tiotropium bromide</result>
+ <result title="frequency" count="1">procarbazine</result>
+ <result title="frequency" count="1">edoxaban</result>
+ <result title="frequency" count="1">nebivolol</result>
+ <result title="frequency" count="1">ixabepilone</result>
+ <result title="frequency" count="1">olopatadine</result>
+ <result title="frequency" count="1">clotrimazole</result>
+ <result title="frequency" count="1">propafenone</result>
+ <result title="frequency" count="1">iomeprol</result>
+ <result title="frequency" count="1">iodixanol</result>
+ <result title="frequency" count="1">temsirolimus</result>
+ <result title="frequency" count="1">ketoconazol</result>
+ <result title="frequency" count="1">mezlocillin</result>
+ <result title="frequency" count="1">medetomidine</result>
+ <result title="frequency" count="1">fenfluramine</result>
+ <result title="frequency" count="1">famciclovir</result>
+ <result title="frequency" count="1">cefepime</result>
+ <result title="frequency" count="1">acepromazine</result>
+ <result title="frequency" count="1">nafarelin</result>
+ <result title="frequency" count="1">chondroitin sulfate</result>
+ <result title="frequency" count="1">felypressin</result>
+ <result title="frequency" count="1">loratadine</result>
+ <result title="frequency" count="1">dantrolene</result>
+ <result title="frequency" count="1">palonosetron</result>
+</results>

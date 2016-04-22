@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="3">DENV</result>
+ <result title="frequency" count="3">YFV</result>
+ <result title="frequency" count="2">TBEV</result>
+ <result title="frequency" count="2">RSSEV</result>
+ <result title="frequency" count="2">JEV</result>
+ <result title="frequency" count="2">WNV</result>
+ <result title="frequency" count="1">RVFV</result>
+ <result title="frequency" count="1">TBE</result>
+ <result title="frequency" count="1">SLEV</result>
+</results>

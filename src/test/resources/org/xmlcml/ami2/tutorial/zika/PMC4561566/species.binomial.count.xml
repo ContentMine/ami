@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="18">Drosophila melanogaster</result>
+ <result title="frequency" count="16">Drosophila simulans</result>
+ <result title="frequency" count="15">Ae. aegypti</result>
+ <result title="frequency" count="7">Ae. albopictus</result>
+ <result title="frequency" count="2">Drosophila paulistorum</result>
+ <result title="frequency" count="2">Culex pipiens</result>
+ <result title="frequency" count="2">Culex quinquefasciatus</result>
+ <result title="frequency" count="2">Ae. polynesiensis</result>
+ <result title="frequency" count="1">Hypolimnas bolina</result>
+ <result title="frequency" count="1">Aedes albopictus</result>
+ <result title="frequency" count="1">Anopheles stephensi</result>
+ <result title="frequency" count="1">Aedes aegypti</result>
+ <result title="frequency" count="1">Drosophila innubila</result>
+ <result title="frequency" count="1">Culex dorsalis</result>
+ <result title="frequency" count="1">Cadra cautella</result>
+</results>

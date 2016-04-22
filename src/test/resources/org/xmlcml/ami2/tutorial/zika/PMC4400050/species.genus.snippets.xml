@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4400050/results/species/genus/results.xml">
+  <result pre="itted helminth infections determined that 126.7 million people in Southeast Asia are infected with " exact="Ascaris" xpath="/html[1]/body[1]/div[1]/div[5]/p[1]" match="Ascaris" post=" roundworms, while 115.3 million are infected with Trichuris whipworms, and 77.0 million hav" name="genus"/>
+  <result pre=" Southeast Asia are infected with Ascaris roundworms, while 115.3 million are infected with " exact="Trichuris" xpath="/html[1]/body[1]/div[1]/div[5]/p[1]" match="Trichuris" post=" whipworms, and 77.0 million have hookworm infections, including a high proportion of cases with &lt;i" name="genus"/>
+  <result pre=" 42 , 43 ], and " exact="Blastocystis" match="Blastocystis" post=" infection [ 44 ]. In recent reports from the region, " name="genus"/>
+ </snippets>
+</snippetsTree>

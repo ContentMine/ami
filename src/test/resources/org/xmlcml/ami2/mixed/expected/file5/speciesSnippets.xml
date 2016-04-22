@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/mixed/file5/results/species/binomial/results.xml">
+  <result pre=" " exact="Cutaneous musculature" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='p'][5]" match="Cutaneous musculature" post=" (Figs 7–8). Three layers, viz. a t" name="binomial"/>
+  <result pre=" " exact="Sensory organs" xpath="/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='div'][1]/*[local-name()='div'][1]/*[local-name()='div'][6]/*[local-name()='p'][5]" match="Sensory organs" post=". The auricular sensory organs are " name="binomial"/>
+  <result pre=" " exact="Digestive system" match="Digestive system" post=" (Figs 5–6, 11–13). Pharynx cylindr" name="binomial"/>
+ </snippets>
+ <snippets file="target/tutorial/mixed/file5/results/species/genus/results.xml">
+  <result pre=" " exact="Epidermis" match="Epidermis" post=" (Figs 7–10). Columnar epithelium, " name="genus"/>
+ </snippets>
+</snippetsTree>

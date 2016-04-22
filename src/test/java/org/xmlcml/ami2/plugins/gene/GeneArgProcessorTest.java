@@ -2,16 +2,15 @@ package org.xmlcml.ami2.plugins.gene;
 
 import java.io.File;
 
-import nu.xom.Builder;
-import nu.xom.Element;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.cmine.util.CMineTestFixtures;
+import org.xmlcml.norma.util.NormaTestFixtures;
 
 public class GeneArgProcessorTest {
 
@@ -21,74 +20,93 @@ public class GeneArgProcessorTest {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-	
-//	@Test
-//	public void testGeneArgProcessor() throws Exception {
-//		File newDir = new File("target/plosone/species");
-//		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
-//		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
-//		AMIArgProcessor speciesArgProcessor = new GeneArgProcessor(args);
-//		speciesArgProcessor.runAndOutput();
-//		Assert.assertTrue("results dir: ", new File(newDir, "results").exists());
-//		Assert.assertTrue("species dir: ", new File(newDir, "results/species").exists());
-//		Assert.assertTrue("binomial dir ", new File(newDir, "results/species/binomial").exists());
-//		File binomialFile = new File(newDir, "results/species/binomial/results.xml");
-//		Assert.assertTrue("binomial file ", binomialFile.exists());
-//		Element binomialElement = new Builder().build(binomialFile).getRootElement();
-//		String binomialXml = binomialElement.toXML().replaceAll("\\s+", " ");
-//		binomialXml = binomialXml.substring(0,  200);
-//		/** mend the test
-//		Assert.assertEquals("binomial file ", "<results title=\"binomial\"> <result pre=\"ntimicrobial activity (assessed on \" match=\"Vibrio harveyi\" post=\" cultures) was limited in both H and WSU samples (\" />"
-//				+ " <result pre=\"ia genus Vibrio, including", binomialXml);
-//				*/
-//	}
-	
-	@Test
-	@Ignore // accesses net
-	public void testGeneArgProcessorLookup() throws Exception {
-		File newDir = new File("target/plosone/species");
-		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
-		String args = "--sp.species --context 35 50 --sp.type binomial binomialsp -q "+newDir+" -i scholarly.html --lookup wikipedia"; 
-		DefaultArgProcessor speciesArgProcessor = new GeneArgProcessor(args);
-		speciesArgProcessor.runAndOutput();
-		File binomialFile = new File(newDir, "results/species/binomial/results.xml");
-		Element binomialElement = new Builder().build(binomialFile).getRootElement();
-	}
-	
-	
-//	@Test
-//	public void testMalariaArgProcessor() throws Exception {
-//		File newDir = new File("target/plosone/species/malaria");
-//		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_MALARIA_0119475, newDir);
-//		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
-//		AMIArgProcessor speciesArgProcessor = new GeneArgProcessor(args);
-//		speciesArgProcessor.runAndOutput();
-//		Assert.assertTrue("results dir: ", new File(newDir, "results").exists());
-//		Assert.assertTrue("species dir: ", new File(newDir, "results/species").exists());
-//		Assert.assertTrue("binomial dir ", new File(newDir, "results/species/binomial").exists());
-//		File binomialFile = new File(newDir, "results/species/binomial/results.xml");
-//		Assert.assertTrue("binomial file ", binomialFile.exists());
-//		Element binomialElement = new Builder().build(binomialFile).getRootElement();
-//		String binomialXml = binomialElement.toXML().replaceAll("\\s+", " ");
-////		binomialXml = binomialXml.substring(0,  200);
-//		/** mend the test
-//		Assert.assertEquals("binomial file ", "<results title=\"binomial\"> <result pre=\"ntimicrobial activity (assessed on \" match=\"Vibrio harveyi\" post=\" cultures) was limited in both H and WSU samples (\" />"
-//				+ " <result pre=\"ia genus Vibrio, including", binomialXml);
-//				*/
-//	}
+	static File GENE_DIR = new File(AMIFixtures.TEST_AMI_DIR, "gene/");
 
+	
 	@Test
+	@Ignore // copy output files
 	public void testGeneHarness() throws Exception {
 		// SHOWCASE
 		String cmd = "--g.gene --context 35 50 --g.type human -q target/plosone/gene/ -i scholarly.html"; 
  
 		AMIFixtures.runStandardTestHarness(
-				new File("./src/test/resources/org/xmlcml/ami2/plosone/journal.pone.0008887/"), 
-				new File("target/plosone/gene/"), 
-				new GenePlugin(),
-				cmd,
-				"gene/human/");
+			new File("./src/test/resources/org/xmlcml/ami2/plosone/journal.pone.0008887/"), 
+			new File("target/plosone/gene/"), 
+			new GenePlugin(),
+			cmd,
+			"gene/human/");
 	}
+
+	@Test
+	public void testGenePlos() throws Exception {
+		File targetDir = new File("target/plosone/gene1/");
+		CMineTestFixtures.cleanAndCopyDir(new File(AMIFixtures.TEST_PLOSONE_DIR, "journal.pone.0008887"), targetDir);
+		String cmd = "--g.gene --context 35 50 --g.type human -q "+targetDir+" -i scholarly.html"; 
+ 
+		GeneArgProcessor argProcessor = new GeneArgProcessor();
+		argProcessor.parseArgs(cmd);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"human\"><result pre=\"the hepatocyte nuclear factor 4α"
+				+ " ( \" exact=\"HNF4A\" post=\") gene, a well-known diabetes candidate gene not"
+				+ " p\" xpath=\"/html[1]/body[1]/div[1]/div[7]/p[4]\""
+				);
+	}
+
+	@Test
+	public void testGeneDictionary() {
+		File large = new File(AMIFixtures.TEST_PATENTS_DIR, "US08979");
+		NormaTestFixtures.runNorma(large, "project", "uspto2html"); // writes to test dir
+		String args = "-i scholarly.html --g.gene "
+				+ "--c.dictionary /org/xmlcml/ami2/plugins/gene/hgnc/hgnc.xml"
+				+ " --project "+large; 
+		GeneArgProcessor argProcessor = new GeneArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"hgnc\"><result pre=\"Theodore Columbus OH US Agents Agent: [addressbook]:"
+				+ " Patterson &amp;amp; Sheridan,\" exact=\"LLP\" post=\"unknown Assignees Assignee: [addressbook]:"
+				+ " Fater S.p.A. 03 Pescara IT\" xpath=\"/html[1]/body[1]/div[1]/"
+				);
+
+	}
+	
+	@Test
+	@Ignore // too large and requires word processor
+	public void testGeneDictionaryLarge() {
+		File large = new File("../patents/US08979");
+		if (!large.exists()) return; // only on PMR machine
+//		WordTest.runNorma(large);
+		String args = "-i scholarly.html --g.gene "
+				+ "--c.dictionary /org/xmlcml/ami2/plugins/gene/hgnc/hgnc.xml"
+				+ " --project "+large; 
+		GeneArgProcessor argProcessor = new GeneArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"hgnc\">"
+				);
+
+	}
+	
+	/** this works when run singly.
+	 * 
+	 * suspect the test requires setup()
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void testSimpleGeneArgProcessor() throws Exception {
+		File newDir = new File("target/gene/simple/");
+		FileUtils.copyDirectory(new File(GENE_DIR, "simple"), newDir);
+		String args = "--g.gene --context 35 50 --g.type human -q "+newDir+" -i scholarly.html"; 
+		AMIArgProcessor argProcessor = new GeneArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"human\"><result pre=\"This is \" exact=\"BRCA1\" post=\" and"
+				+ " BRCA2, not FOOBAR.\" xpath=\"/html[1]/body[1]/p[3]\" name=\"human\" /><result"
+				+ " pre=\"This is BRCA1 and \" exact=\"BRCA2\" post=\", not FOOBAR.\" xpath=\"/html[1]/"
+				);
+	}
+
 
 
 

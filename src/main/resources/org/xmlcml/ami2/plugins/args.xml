@@ -1,4 +1,29 @@
-<argList name="ami" version="0.1.18">
+<argList name="ami" version="0.2.24">
+
+  <p>201603-29 separated search from word statistics (some bugs might remain)</p>
+  <p>201603-20 minor fixes following norma sections</p>
+  <p>201603-15 can use multiple dictionaries in cmine</p>
+  <p>201603-05 added output of nlm2html to zika10</p>
+  <p>201603-05 major tidying of output </p>
+  <p>201603-02 cell rendering </p>
+  <p>201602-23 fixed tests </p>
+  <p>201602-23 more dataTablers </p>
+  <p>201602-19 added CellRenderer </p>
+  <p>201602-11 added sdataTable analysis of spreadsheet</p>
+  <p>201602-07 developed new commandline, fixed inconsistencies and bugs</p>
+  <p>201602-04 added Zika examples, and Pre/Post tools</p>
+  <p>201602-01 added summarization counts and Tutorial</p>
+  <p>201602-01 fixed summary routines</p>
+  <p>201602-01 moved xpath to CMine</p>
+  <p>201602-01 fixed commandline</p>
+  <p>201601-22 fixed tests, and dictionaries</p>
+  <p>201601-20 added dictionary checker</p>
+  <p>201601-19 ignored failing tests</p>
+  <p>201601-18 fixed tests</p>
+  <p>201601-18 added dictionary lookup</p>
+  <p>201601-18 fixed bugs</p>
+  <p>201601-14 fixed ResultsList bugs</p>
+  <!-- 20160112 refactoring of Searchers, added dictionaries, improved testing of output-->
   <!-- 20150926 fixed RRID; fixed sequence and species; tidied debug -->
   <!-- 20150913 added rrid to lookup -->
   <!-- 20150912 added RRID -->
@@ -62,20 +87,6 @@
 		</help>
 	</arg>	
 	
-	<arg name="xpath" 
-		brief="-x"
-		long="--xpath"
-		args="xpath [xpath]"
-		countRange="{1,*}"
-		parseMethod="parseXpath"
-		>
-		<help>
-			XPATH
-			Defines the section/s of the document to analyze. The argument is one or more xpath
-			strings separated by spaces. (The xpaths cannot contain spaces currently.)
-		</help>
-	</arg>	
-	
 	<arg name="lookup" 
 		long="--lookup"
 		args="site [site...]"
@@ -106,6 +117,55 @@
 		A dummy parameter to test conformance
 		</help>
 	</arg>	
+
+	<arg name="stopwords" 
+		long="--w.stopwords"
+		args="location [location...]"
+		countRange="{0,*}"
+		parseMethod="parseStopwords"
+		>
+		<help>
+		
+			STOPWORDS:
+			select sets of stopwords. Locations are given by resource locations.
+			
+			
+		</help>
+	</arg>	
+	
+	
+	<arg name="case" 
+		long="--w.case"
+		args="options"
+		countRange="{1,*}"
+		class="java.lang.String"
+		parseMethod="parseCase"
+		>
+		<help>
+			CASE
+			respects or ignores case:
+			* default is to respect case
+			* ignore = ignore case (everything is internally lowercased)
+			* respectCamel = don't lowercase anything with midWord uppercase (URL, eBook,)
+			
+		</help>
+	</arg>	
+	
+	<arg name="stemming" 
+		long="--w.stem"
+		args=""
+		countRange="{1,1}"
+		class="java.lang.Boolean"
+		default="false"
+		parseMethod="parseStem"
+		>
+		<help>
+		STEM
+		Stemming removes computable suffixes from words (e.g. walks, walked => walk)
+		Uses the Porter Stemming algorithm in Lucene.
+		</help>
+	</arg>	
+	
 	
 </argList>
 			

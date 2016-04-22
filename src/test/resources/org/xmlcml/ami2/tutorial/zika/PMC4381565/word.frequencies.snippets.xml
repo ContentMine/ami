@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4381565/results/word/frequencies/results.xml">
+  <result title="frequency" word="albopictus" count="88"/>
+  <result title="frequency" word="Ae." count="87"/>
+  <result title="frequency" word="Aedes" count="53"/>
+  <result title="frequency" word="aegypti" count="31"/>
+  <result title="frequency" word="species" count="31"/>
+  <result title="frequency" word="central" count="25"/>
+ </snippets>
+</snippetsTree>

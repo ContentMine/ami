@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="56">disorder</result>
+ <result title="frequency" count="56">protein</result>
+ <result title="frequency" count="43">proteins</result>
+ <result title="frequency" count="42">virus</result>
+ <result title="frequency" count="34">disordered</result>
+ <result title="frequency" count="33">conformational</result>
+ <result title="frequency" count="32">evolutionary</result>
+ <result title="frequency" count="26">structural</result>
+ <result title="frequency" count="25">regions</result>
+ <result title="frequency" count="21">sites</result>
+</results>

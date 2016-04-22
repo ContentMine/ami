@@ -19,6 +19,4 @@ public class SequenceSearcher extends AMISearcher {
 		return new SequenceResultElement();
 	}
 
-
-
 }

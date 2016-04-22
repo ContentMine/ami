@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4561566/results/word/frequencies/results.xml">
+  <result title="frequency" word="Wolbachia" count="316"/>
+  <result title="frequency" word="host" count="104"/>
+  <result title="frequency" word="effects" count="95"/>
+  <result title="frequency" word="infection" count="81"/>
+  <result title="frequency" word="Drosophila" count="68"/>
+  <result title="frequency" word="cytoplasmic" count="68"/>
+  <result title="frequency" word="incompatibility" count="58"/>
+  <result title="frequency" word="Hoffmann" count="56"/>
+  <result title="frequency" word="strains" count="56"/>
+  <result title="frequency" word="Aedes" count="55"/>
+  <result title="frequency" word="populations" count="51"/>
+  <result title="frequency" word="fitness" count="50"/>
+  <result title="frequency" word="infections" count="49"/>
+  <result title="frequency" word="High" count="47"/>
+  <result title="frequency" word="aegypti" count="44"/>
+  <result title="frequency" word="viral" count="43"/>
+  <result title="frequency" word="dengue" count="42"/>
+  <result title="frequency" word="density" count="40"/>
+  <result title="frequency" word="melanogaster" count="40"/>
+  <result title="frequency" word="strain" count="39"/>
+  <result title="frequency" word="high" count="37"/>
+  <result title="frequency" word="natural" count="37"/>
+  <result title="frequency" word="changes" count="35"/>
+  <result title="frequency" word="simulans" count="35"/>
+  <result title="frequency" word="AA," count="34"/>
+  <result title="frequency" word="Ae." count="34"/>
+  <result title="frequency" word="mosquito" count="34"/>
+  <result title="frequency" word="SL," count="32"/>
+  <result title="frequency" word="deleterious" count="32"/>
+  <result title="frequency" word="transmission" count="32"/>
+  <result title="frequency" word="virus" count="32"/>
+  <result title="frequency" word="disease" count="31"/>
+  <result title="frequency" word="release" count="30"/>
+  <result title="frequency" word="albopictus" count="29"/>
+  <result title="frequency" word="wMelPop" count="29"/>
+  <result title="frequency" word="O'Neill" count="28"/>
+  <result title="frequency" word="blockage" count="28"/>
+  <result title="frequency" word="Turelli" count="26"/>
+  <result title="frequency" word="mosquitoes" count="26"/>
+  <result title="frequency" word="species" count="26"/>
+  <result title="frequency" word="infected" count="25"/>
+  <result title="frequency" word="Tropical" count="24"/>
+  <result title="frequency" word="strong" count="24"/>
+  <result title="frequency" word="invasion" count="23"/>
+  <result title="frequency" word="hosts" count="22"/>
+  <result title="frequency" word="particularly" count="22"/>
+  <result title="frequency" word="vector" count="22"/>
+  <result title="frequency" word="wMel" count="22"/>
+  <result title="frequency" word="(Hoffmann" count="21"/>
+ </snippets>
+</snippetsTree>

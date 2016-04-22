@@ -1,13 +1,18 @@
 package org.xmlcml.ami2.plugins.gene;
 
-import org.apache.log4j.Level;
+import java.util.ArrayList;
 
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
+import org.xmlcml.ami2.dictionary.gene.HGNCDictionary;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.DefaultSearcher;
+import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 
 /** 
  * Processes commandline arguments.
@@ -42,16 +47,25 @@ public class GeneArgProcessor extends AMIArgProcessor {
 		createAndStoreNamedSearchers(option);
 	}
 
+	// this will probably become deprecated
 	public void parseTypes(ArgumentOption option, ArgIterator argIterator) {
 		createSearcherList(option, argIterator);
 	}
 
 	public void runExtractGene(ArgumentOption option) {
+		ensureDictionaryList();
+		if (dictionaryList.size() > 0) {
+			searcherList = new ArrayList<AMISearcher>();
+			for (DefaultStringDictionary dictionary : dictionaryList) {
+				GeneSearcher searcher = new GeneSearcher(this, dictionary);
+				searcherList.add(searcher);
+			}
+		} 
 		searchSectionElements();
 	}
 
 	public void outputGene(ArgumentOption option) {
-		getOrCreateContentProcessor().outputResultElements(option, this);
+		getOrCreateContentProcessor().outputResultElements(option.getName(), this);
 	}
 	
 	public void parseSummary(ArgumentOption option, ArgIterator argIterator) {
@@ -72,11 +86,35 @@ public class GeneArgProcessor extends AMIArgProcessor {
 	 * Most plugins should Override this and create a FooSearcher.
 	 * 
 	 * @param namedPattern 
-	 * @return subclassed Plugin
+	 * @return subclassed searcher
 	 */
-	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
+	@Override
+	protected AMISearcher createSearcher(NamedPattern namedPattern) {
 		return new GeneSearcher(this, namedPattern);
 	}
+
+	/**
+	 * 
+	 * @param dictionary
+	 * @return subclassed searcher
+	 */
+	@Override
+	protected AMISearcher createSearcher(DefaultStringDictionary dictionary) {
+		return new GeneSearcher(this, dictionary);
+	}
+
+	@Override
+	protected ResultsElement createResultsElement() {
+		return new GeneResultsElement();
+	}
+
+	public DefaultAMIDictionary getOrCreateCurrentDictionary() {
+		if (currentDictionary == null) {
+			currentDictionary = new HGNCDictionary();
+		}
+		return currentDictionary;
+	}
+
 
 
 

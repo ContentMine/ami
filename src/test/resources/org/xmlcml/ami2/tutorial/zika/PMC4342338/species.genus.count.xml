@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="4">Flavivirus</result>
+ <result title="frequency" count="4">Aedes</result>
+ <result title="frequency" count="3">Culex</result>
+ <result title="frequency" count="2">Muridae</result>
+ <result title="frequency" count="2">Coquillettidia</result>
+ <result title="frequency" count="1">Stegomyia</result>
+ <result title="frequency" count="1">Ochlerotatus</result>
+ <result title="frequency" count="1">Mansonia</result>
+ <result title="frequency" count="1">Mesoniviridae</result>
+ <result title="frequency" count="1">Peromyscus</result>
+ <result title="frequency" count="1">Apodemus</result>
+ <result title="frequency" count="1">Tadarida</result>
+</results>

@@ -79,9 +79,13 @@ public class RegexComponent {
 	private String centralRegex;
 
 	public RegexComponent(CompoundRegex compoundRegex, AMIArgProcessor regexArgProcessor) {
+		this(compoundRegex);
 		this.regexArgProcessor = regexArgProcessor;
-		this.compoundRegex = compoundRegex;
 		
+	}
+
+	public RegexComponent(CompoundRegex compoundRegex) {
+		this.compoundRegex = compoundRegex;
 	}
 
 	void createPatternAndFields() {
@@ -215,7 +219,7 @@ public class RegexComponent {
 					LOG.trace(fieldList);
 				} else {
 //					LOG.debug(value);
-					LOG.debug("Unusual fieldList: "+fieldList+" in "+(compoundRegex == null ? "unknown" : compoundRegex.getTitle())+"; found: "+regexElement.toXML());
+					LOG.warn("Unusual fieldList: "+fieldList+" in "+(compoundRegex == null ? "unknown" : compoundRegex.getTitle())+"; found: "+regexElement.toXML());
 					hasWord = false;
 				}
 			} else {
@@ -337,29 +341,45 @@ public class RegexComponent {
 		return sb.toString();
 	}
 
-	private Element createElement() {
-		/**
-		private Element regexElement;
-		private Pattern pattern;
-		private Double weight = null;
-		private List<String> fieldList;
-		private List<NamedGroup> namedGroupList;
-		private Integer count;
-		*/
-		
-		Element regex = new Element(REGEX);
-		if (pattern != null) {
-			Element patternElement = new Element(PATTERN);
-			patternElement.appendChild(pattern.toString());
-			regex.appendChild(patternElement);
-		}
-		if (weight != null) {
-			regex.addAttribute(new Attribute(WEIGHT, String.valueOf(weight)));
-		}
-		if (fieldList != null) {
-			regex.addAttribute(new Attribute(FIELDS, String.valueOf(fieldList)));
-		}
-		return regex;
-
+	public void setValue(String rawRegex) {
+		getOrCreateRegexElement();
+		regexElement.appendChild(rawRegex);
 	}
+
+	private void getOrCreateRegexElement() {
+		if (regexElement == null) {
+			regexElement= new Element(REGEX);
+			compoundRegex.getOrCreateCompoundRegexElement().appendChild(regexElement);
+		}
+	}
+
+	public void setField(String fieldname) {
+		this.createFieldList(fieldname);
+	}
+
+//	private Element createElement() {
+//		/**
+//		private Element regexElement;
+//		private Pattern pattern;
+//		private Double weight = null;
+//		private List<String> fieldList;
+//		private List<NamedGroup> namedGroupList;
+//		private Integer count;
+//		*/
+//		
+//		Element regex = new Element(REGEX);
+//		if (pattern != null) {
+//			Element patternElement = new Element(PATTERN);
+//			patternElement.appendChild(pattern.toString());
+//			regex.appendChild(patternElement);
+//		}
+//		if (weight != null) {
+//			regex.addAttribute(new Attribute(WEIGHT, String.valueOf(weight)));
+//		}
+//		if (fieldList != null) {
+//			regex.addAttribute(new Attribute(FIELDS, String.valueOf(fieldList)));
+//		}
+//		return regex;
+//
+//	}
 }

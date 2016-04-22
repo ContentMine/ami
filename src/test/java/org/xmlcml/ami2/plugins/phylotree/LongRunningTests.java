@@ -17,6 +17,7 @@ import org.vafer.jdeb.shaded.compress.io.FilenameUtils;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtu;
+import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
 import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.graphics.svg.SVGSVG;
 import org.xmlcml.norma.editor.EditList;
@@ -25,7 +26,7 @@ import org.xmlcml.norma.editor.SubstitutionEditor;
 import org.xmlcml.norma.image.ocr.HOCRReader;
 import org.xmlcml.xml.XMLUtil;
 
-@Ignore("remove exception for development")
+@Ignore("remove Ignore for development")
 public class LongRunningTests {
 
 	public static final Logger LOG = Logger.getLogger(LongRunningTests.class);
@@ -59,11 +60,16 @@ public class LongRunningTests {
 	}
 
 	@Test
+	// TESTED 2016-01-12
 	public void testSpanishRegex() {
-		RegexPlugin regexPlugin = new RegexPlugin("-q "
+		String args = "-q "
 				+ "     examples/theses/tesis_alexv6.5"
-				+ " -i scholarly.html --xpath //* --r.regex regex/spanish.xml");
-		regexPlugin.runAndOutput();
+				+ " -i scholarly.html --xpath //* --r.regex regex/spanish.xml";
+		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"<results title=\"spanish\">"
+				+ "<result pre=\"ultados . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150 6. Brillo de \" name0=\"cielo\" value0=\"cielo\" post=\"en la Comunidad de Madrid 153 6.1. Introduccio´n . . . . . . . . . . . . . . . . . . . . . . . . . \" xpath=\"/*[local-name()='h");
 		
 	}
 
@@ -83,6 +89,7 @@ public class LongRunningTests {
 				"";
 		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor(cmd);
 		phyloTreeArgProcessor.runAndOutput();
+
 		NexmlNEXML nexml = phyloTreeArgProcessor.getNexml();
 
 		SubstitutionEditor substitutionEditor = new SubstitutionEditor();

@@ -2,32 +2,36 @@ package org.xmlcml.ami2.plugins;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import nu.xom.Builder;
-import nu.xom.Document;
-import nu.xom.Element;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
 import org.xmlcml.ami2.plugins.regex.CompoundRegex;
 import org.xmlcml.ami2.plugins.regex.CompoundRegexList;
 import org.xmlcml.ami2.plugins.regex.RegexComponent;
+import org.xmlcml.ami2.plugins.word.WordCollectionFactory;
+import org.xmlcml.ami2.wordutil.WordSetWrapper;
 import org.xmlcml.cmine.args.ArgIterator;
 import org.xmlcml.cmine.args.ArgumentOption;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.args.ValueElement;
 import org.xmlcml.cmine.args.VersionManager;
-import org.xmlcml.cmine.files.CMDir;
+import org.xmlcml.cmine.files.CTree;
 import org.xmlcml.cmine.files.ContentProcessor;
-import org.xmlcml.cmine.files.DefaultSearcher;
-import org.xmlcml.cmine.files.EuclidSource;
+import org.xmlcml.cmine.files.ResourceLocation;
 import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cmine.lookup.DefaultStringDictionary;
 import org.xmlcml.cmine.lookup.AbstractLookup;
 import org.xmlcml.norma.NormaArgProcessor;
 import org.xmlcml.xml.XMLUtil;
+
+import nu.xom.Builder;
+import nu.xom.Document;
+import nu.xom.Element;
 
 /** 
  * Processes commandline arguments.
@@ -44,24 +48,52 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	
 	private static final String AMI = "ami";
 	private static final String ARG_PROCESSOR = "ArgProcessor";
-//	public static final String RESULTS = "results";
 	protected static String RESOURCE_NAME_TOP = "/org/xmlcml/ami2";
 	protected static String PLUGIN_RESOURCE = RESOURCE_NAME_TOP+"/plugins";
+	public final static String DICTIONARY_RESOURCE = PLUGIN_RESOURCE+"/dictionary";
 	private static String ARGS_RESOURCE = PLUGIN_RESOURCE+"/"+"args.xml";
 	public static final VersionManager AMI_PLUGIN_VERSION_MANAGER = new VersionManager();
 
 	protected static final String NAME = "name";
+	public final static String ABBREVIATION = "abbreviation";
+	public final static String IGNORE = "ignore";
+	public final static String PRESERVE = "preserve";
+	public final static String CAPITALIZED = "capitalized";
+	public final static String ACRONYM = "acronym";
+	public final static List<String> CASE_TYPES = Arrays.asList(
+	new String[]{
+			IGNORE,
+			ABBREVIATION,
+			PRESERVE
+	});
+	public final static List<String> WORD_TYPES = Arrays.asList(
+	new String[]{
+			ABBREVIATION,
+			ACRONYM,
+			CAPITALIZED
+	});
+	
+
+	
+	
 	private Integer[] contextCount = new Integer[] {98, 98};
 	private List<String> params;
 	
-	private XPathProcessor xPathProcessor;
 	private String plugin;
     Map<String,AbstractLookup> lookupInstanceByName;
 	protected CompoundRegexList compoundRegexList;
 	protected List<Element> regexElementList;
 	protected List<? extends Element> sectionElements;
 	protected List<String> lookupNames;
-	
+	public WordCollectionFactory wordCollectionFactory;
+	protected HashMap<String, AMISearcher> searcherByNameMap; // req
+	// searching
+	protected List<AMISearcher> searcherList; // req
+	protected DefaultAMIDictionary currentDictionary;
+	private List<String> wordCaseList = new ArrayList<String>();
+	private Boolean stemming;
+	private List<WordSetWrapper> stopwordSetList;
+	public List<String> chosenWordTypes;
 	public AMIArgProcessor() {
 		super();
 		readArgsResourcesIntoOptions();
@@ -102,6 +134,38 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 
 	// ============= METHODS =============
 	
+	/** caseSensitive?
+	 * 
+	 * @param option list of methods (none gives help)
+	 * @param argIterator
+	 */
+	public void parseCase(ArgumentOption option, ArgIterator argIterator) {
+		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
+		wordCaseList = new ArrayList<String>();
+		if (tokens.size() == 0) {
+			wordCaseList.add(PRESERVE);
+		} else {
+			wordCaseList = tokens;
+		}
+		checkWordCaseList();
+	}
+
+	/** use stemming?
+	 * 
+	 * will have to use import org.apache.lucene.analysis.en.PorterStemFilter;
+	 * 
+	 * @param option list of methods (none gives help)
+	 * @param argIterator
+	 */
+	public void parseStem(ArgumentOption option, ArgIterator argIterator) {
+		stemming = argIterator.getBoolean(option);
+	}
+
+	public void parseStopwords(ArgumentOption option, ArgIterator argIterator) {
+		List<String> stopwordLocations = argIterator.createTokenListUpToNextNonDigitMinus(option);
+		addStopwords(stopwordLocations);
+	}
+
 	public void parseContext(ArgumentOption option, ArgIterator argIterator) {
 		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
 		if (tokens.size() == 0) {
@@ -136,17 +200,6 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	public void parseTest(ArgumentOption option, ArgIterator argIterator) {
 		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
 		LOG.debug("The test strings are..."+tokens+"; override this if you want to use your own parseTest()");
-	}
-
-	public void parseXpath(ArgumentOption option, ArgIterator argIterator) {
-		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
-		if (tokens.size() == 0) {
-//			LOG.debug(XPATH_OPTION).getHelp());
-		} else if (tokens.size() > 1) {
-			LOG.debug("Exactly one xpath required");
-		} else {
-			xPathProcessor = new XPathProcessor(tokens.get(0));
-		}
 	}
 
 	public void parseLookup(ArgumentOption option, ArgIterator argIterator) {
@@ -248,9 +301,15 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	 * @param namedPattern may be null for non-regex-based searchers
 	 * @return subclassed Plugin
 	 */
-	protected DefaultSearcher createSearcher(NamedPattern namedPattern) {
+	protected AMISearcher createSearcher(NamedPattern namedPattern) {
+		AMISearcher amiSearcher = new AMISearcher(this);
+		amiSearcher.setNamedPattern(namedPattern);
+		return amiSearcher;
+	}
+
+	protected AMISearcher createSearcher(DefaultStringDictionary dictionary) {
 		AMISearcher defaultSearcher = new AMISearcher(this);
-		defaultSearcher.setNamedPattern(namedPattern);
+		defaultSearcher.setDictionary(dictionary);
 		return defaultSearcher;
 	}
 
@@ -258,7 +317,7 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		ensureSearcherBySearcherNameMap();
 		ensureSearcherList();
 		for (String name : names) {
-			DefaultSearcher optionSearcher = (DefaultSearcher) searcherByNameMap.get(name);
+			AMISearcher optionSearcher = (AMISearcher) searcherByNameMap.get(name);
 			if (optionSearcher == null) {
 				LOG.error("unknown optionType: "+name+"; allowed: "+searcherByNameMap);
 			} else {
@@ -269,23 +328,35 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 
 	private void ensureSearcherBySearcherNameMap() {
 		if (searcherByNameMap == null) {
-			searcherByNameMap = new HashMap<String, DefaultSearcher>();
+			searcherByNameMap = new HashMap<String, AMISearcher>();
 		}
 	}
 
 	protected void searchSectionElements() {
 		if (currentCTree != null) {
 			ensureSectionElements();
-			for (DefaultSearcher searcher : searcherList) {
+			if (searcherList == null) {
+				throw new RuntimeException("No searchers created");
+			}
+			for (AMISearcher searcher : searcherList) {
 				String name = searcher.getName();
+				this.TREE_LOG().info("search "+name);
 				LOG.trace("search "+name);
-				ResultsElement resultsElement = searcher.search(sectionElements);
+				ResultsElement resultsElement = searcher.search(sectionElements, createResultsElement());
 				resultsElement.lookup(lookupInstanceByName, lookupNames);
 				LOG.trace("exactList "+resultsElement.getExactList());
 				resultsElement.setAllResultElementNames(name);
 				currentCTree.putInContentProcessor(name, resultsElement);
 			}
 		}
+	}
+
+	/** normally overridden
+	 * 
+	 * @return
+	 */
+	protected ResultsElement createResultsElement() {
+		return new ResultsElement();
 	}
 	
 
@@ -312,27 +383,22 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 	}
 
 	public void createSearcherAndAddToMap(Element valueElement) {
-		ensureSearcherByNameMap();
 		NamedPattern namedPattern = NamedPattern.createFromValueElement(valueElement);
-		if (namedPattern != null) {
-			LOG.trace("added named pattern "+namedPattern);
-			DefaultSearcher searcher = createSearcher(namedPattern);
-			searcherByNameMap.put(namedPattern.getName(), searcher);
-		}
+		createSearcherAndAddToMap(namedPattern);
 	}
 
 	public void createSearcherAndAddToMap(NamedPattern namedPattern) {
 		if (namedPattern != null) {
 			ensureSearcherByNameMap();
 			LOG.trace("added named pattern "+namedPattern);
-			DefaultSearcher searcher = createSearcher(namedPattern);
+			AMISearcher searcher = createSearcher(namedPattern);
 			searcherByNameMap.put(namedPattern.getName(), searcher);
 		}
 	}
 
 	private void ensureSearcherByNameMap() {
 		if (searcherByNameMap == null) {
-			searcherByNameMap = new HashMap<String, DefaultSearcher>();
+			searcherByNameMap = new HashMap<String, AMISearcher>();
 		}
 	}
 
@@ -347,7 +413,8 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		for (String regexLocation : regexLocations) {
 			LOG.trace("RegexLocation "+regexLocation);
 			try {
-				Element rawCompoundRegex = new Builder().build(EuclidSource.getInputStream(regexLocation)).getRootElement();
+				InputStream is = new ResourceLocation().getInputStreamHeuristically(regexLocation);
+				Element rawCompoundRegex = new Builder().build(is).getRootElement();
 				List<Element> elements = XMLUtil.getQueryElements(rawCompoundRegex, ".//*[local-name()='regex']");
 				regexElementList.addAll(elements);
 			} catch (Exception e) {
@@ -368,7 +435,11 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		for (String regexLocation : regexLocations) {
 			LOG.trace("RegexLocation "+regexLocation);
 			try {
-				CompoundRegex compoundRegex = readAndCreateCompoundRegex(EuclidSource.getInputStream(regexLocation));
+				InputStream is = new ResourceLocation().getInputStreamHeuristically(regexLocation);
+				if (is == null) {
+					throw new RuntimeException("cannot find regex: "+regexLocation);
+				}
+				CompoundRegex compoundRegex = readAndCreateCompoundRegex(is);
 				compoundRegexList.add(compoundRegex);
 			} catch (Exception e) {
 				LOG.error("Cannot parse regexLocation: ("+e+")"+regexLocation);
@@ -402,11 +473,11 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 		return new CompoundRegex(this, rootElement);
 	}
 
-	public CMDir getCurrentCMDir() {
+	public CTree getCurrentCTree() {
 		return currentCTree;
 	}
 
-	protected ContentProcessor getOrCreateContentProcessor() {
+	public ContentProcessor getOrCreateContentProcessor() {
 		return (currentCTree == null) ? null : currentCTree.getOrCreateContentProcessor();
 	}
 
@@ -415,5 +486,88 @@ public class AMIArgProcessor extends DefaultArgProcessor {
 			getOrCreateContentProcessor().addResultsElement(resultsElement);
 		}
 	}
+
+	protected WordCollectionFactory ensureWordCollectionFactory() {
+		if (wordCollectionFactory == null) {
+			this.wordCollectionFactory = new WordCollectionFactory(this);
+		}
+		return wordCollectionFactory;
+	}
+
+	protected void ensureSearcherList() {
+		if (searcherList == null) {
+			searcherList = new ArrayList<AMISearcher>();
+		}
+	}
+
+	public List<AMISearcher> getSearcherList() {
+		return searcherList;
+	}
+
+	public DefaultAMIDictionary getOrCreateCurrentDictionary() {
+		return currentDictionary;
+	}
+
+	private void checkWordCaseList() {
+		if (wordCaseList.size() == 1 && PRESERVE.equals(wordCaseList.get(0))) {
+			// OK
+		} else {
+			for (int i = wordCaseList.size() - 1; i >= 0; i--) {
+				String word = wordCaseList.get(i);
+				if (wordCaseList.contains(PRESERVE) || !CASE_TYPES.contains(word)) {
+					LOG.error("Removed forbidden/unknown word: "+word);
+					wordCaseList.remove(i);
+				}
+			}
+		}
+	}
+
+	private void addStopwords(String stopwordLocation) {
+		ensureStopwordSetList();
+		WordSetWrapper stopwordSet = WordSetWrapper.createStopwordSet(stopwordLocation);
+		if (stopwordSet != null) {
+			stopwordSetList.add(stopwordSet);
+		} else {
+			LOG.warn("Stopword set should not be null");
+		}
+	}
+
+	private void ensureStopwordSetList() {
+		if (stopwordSetList == null) {
+			stopwordSetList = new ArrayList<WordSetWrapper>();
+		}
+	}
+
+	private void addStopwords(List<String> stopwordLocations) {
+		ensureStopwordSetList();
+		for (String stopwordLocation : stopwordLocations) {
+			addStopwords(stopwordLocation);
+		}
+	}
+
+	public boolean getStemming() {
+		return stemming;
+	}
+
+	public List<WordSetWrapper> getStopwordSetList() {
+		ensureStopwordSetList();
+		return stopwordSetList;
+	}
+
+	public List<String> getWordCaseList() {
+		return wordCaseList;
+	}
+
+	public List<String> getChosenWordTypes() {
+		ensureChosenWordTypes();
+		return chosenWordTypes;
+	}
+
+	public void ensureChosenWordTypes() {
+		if (chosenWordTypes == null) {
+			chosenWordTypes = new ArrayList<String>();
+		}
+	}
+
 
 }

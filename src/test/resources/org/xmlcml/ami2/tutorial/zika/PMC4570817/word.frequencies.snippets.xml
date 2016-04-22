@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4570817/results/word/frequencies/results.xml">
+  <result title="frequency" word="patients" count="50"/>
+  <result title="frequency" word="symptoms" count="50"/>
+  <result title="frequency" word="diagnostic" count="46"/>
+  <result title="frequency" word="travelers" count="38"/>
+  <result title="frequency" word="virus;" count="36"/>
+  <result title="frequency" word="travel" count="32"/>
+  <result title="frequency" word="arbovirus" count="28"/>
+  <result title="frequency" word="arboviral" count="27"/>
+  <result title="frequency" word="Fig" count="22"/>
+  <result title="frequency" word="requests" count="22"/>
+  <result title="frequency" word="DENV" count="21"/>
+  <result title="frequency" word="Dutch" count="21"/>
+ </snippets>
+</snippetsTree>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/tutorial/zika/PMC4306835/results/word/frequencies/results.xml">
+  <result title="frequency" word="virus" count="109"/>
+  <result title="frequency" word="USUV" count="93"/>
+  <result title="frequency" word="Usutu" count="50"/>
+  <result title="frequency" word="M.," count="46"/>
+  <result title="frequency" word="A.," count="42"/>
+  <result title="frequency" word="Nile" count="30"/>
+  <result title="frequency" word="West" count="30"/>
+  <result title="frequency" word="G.," count="27"/>
+  <result title="frequency" word="H.," count="27"/>
+  <result title="frequency" word="N.," count="27"/>
+  <result title="frequency" word="S.," count="25"/>
+  <result title="frequency" word="T.," count="25"/>
+  <result title="frequency" word="encephalitis" count="24"/>
+  <result title="frequency" word="J.," count="23"/>
+  <result title="frequency" word="P.," count="23"/>
+  <result title="frequency" word="substitutions" count="23"/>
+  <result title="frequency" word="human" count="21"/>
+ </snippets>
+</snippetsTree>

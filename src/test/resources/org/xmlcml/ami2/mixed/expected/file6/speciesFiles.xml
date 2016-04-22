@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cTreeFiles cTree="target/tutorial/mixed/file6">
+ <file name="target/tutorial/mixed/file6/results/species/binomial/results.xml"/>
+ <file name="target/tutorial/mixed/file6/results/species/genus/results.xml"/>
+</cTreeFiles>

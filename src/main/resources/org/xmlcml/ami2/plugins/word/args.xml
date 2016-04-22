@@ -29,21 +29,6 @@
 		</help>
 	</arg>	
 	
-	<arg name="stopwords" 
-		long="--w.stopwords"
-		args="location [location...]"
-		countRange="{0,*}"
-		parseMethod="parseStopwords"
-		>
-		<help>
-		
-			STOPWORDS:
-			select sets of stopwords. Locations are given by resource locations.
-			
-			
-		</help>
-	</arg>	
-	
 	<arg name="wordlengths" 
 		long="--w.wordlengths"
 		args="shortest longest"
@@ -54,38 +39,6 @@
 		<help>
 			WORDLENGTHS:
 			set limits on lengths of words (values are inclusive)
-		</help>
-	</arg>	
-	
-	<arg name="case" 
-		long="--w.case"
-		args="options"
-		countRange="{1,*}"
-		class="java.lang.String"
-		parseMethod="parseCase"
-		>
-		<help>
-			CASE
-			respects or ignores case:
-			* default is to respect case
-			* ignore = ignore case (everything is internally lowercased)
-			* respectCamel = don't lowercase anything with midWord uppercase (URL, eBook,)
-			
-		</help>
-	</arg>	
-	
-	<arg name="stemming" 
-		long="--w.stem"
-		args=""
-		countRange="{1,1}"
-		class="java.lang.Boolean"
-		default="false"
-		parseMethod="parseStem"
-		>
-		<help>
-		STEM
-		Stemming removes computable suffixes from words (e.g. walks, walked => walk)
-		Uses the Porter Stemming algorithm in Lucene.
 		</help>
 	</arg>	
 	
@@ -115,6 +68,20 @@
 		</help>
 	</arg>	
 	
+	<!-- MOVED TO sr.search
+	<arg name="search" 
+		long="- -w.search"
+		args="dictionary [...dictionary]"
+		countRange="{1,*}"
+		parseMethod="parseSearch"
+		runMethod="runSearch"
+		outputMethod="outputSearch"
+		>
+		<help>
+		 arguments are names of dictionaries (currently filenames)
+		</help>
+	</arg>	
+-->	
 	
 </argList>
 			

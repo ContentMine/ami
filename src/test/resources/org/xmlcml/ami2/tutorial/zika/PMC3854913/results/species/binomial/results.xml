@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="binomial">
+ <result pre="st of Uganda ( 1 ). The virus was subsequently isolated from a pool of " exact="Aedes africanus" xpath="/html[1]/body[1]/div[1]/div[6]/p[2]" match="Aedes africanus" post=" mosquitoes collected in 1948 from the same region of the Zika forest; a serologic survey conducted" name="binomial"/>
+ <result pre="Over the next 20 years, several ZIKV isolates were obtained from Aedes spp. in Africa ( " exact="Ae. africanus" xpath="/html[1]/body[1]/div[1]/div[6]/p[2]" match="Ae. africanus" post=") and Malaysia ( Ae. aegypti), implicating these species as likely epidemic or enzootic vect" name="binomial"/>
+ <result pre="IKV isolates were obtained from Aedes spp. in Africa ( Ae. africanus) and Malaysia ( " exact="Ae. aegypti" xpath="/html[1]/body[1]/div[1]/div[6]/p[2]" match="Ae. aegypti" post="), implicating these species as likely epidemic or enzootic vectors ( 3 " name="binomial"/>
+ <result pre="nteer showed low viremia; virus was isolated only on day 4, and the volunteer was unable to infect " exact="Ae. aegypti" match="Ae. aegypti" post=" mosquitoes that fed on the patient during the acute stage of disease ( 10 &lt;/" name="binomial"/>
+</results>

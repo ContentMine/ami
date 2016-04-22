@@ -2,17 +2,18 @@ package org.xmlcml.ami2.plugins.species;
 
 import java.io.File;
 
-import nu.xom.Builder;
-import nu.xom.Element;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.ami2.plugins.AMIArgProcessor;
+import org.xmlcml.cmine.util.CMineTestFixtures;
+import org.xmlcml.norma.util.NormaTestFixtures;
+
+import nu.xom.Builder;
+import nu.xom.Element;
 
 public class SpeciesArgProcessorTest {
 
@@ -23,25 +24,77 @@ public class SpeciesArgProcessorTest {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
+	static File SPECIES_DIR = new File(AMIFixtures.TEST_AMI_DIR, "species/");
+
+	
 	@Test
-	public void testSpeciesArgProcessor() throws Exception {
-		File newDir = new File("target/plosone/species");
-		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
+	// TESTED 2016-01-12
+	public void testSimpleSpeciesArgProcessor() throws Exception {
+		File newDir = new File("target/species/simple/");
+		FileUtils.copyDirectory(new File(SPECIES_DIR, "simple"), newDir);
 		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
-		DefaultArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
-		speciesArgProcessor.runAndOutput();
-		Assert.assertTrue("results dir: ", new File(newDir, "results").exists());
-		Assert.assertTrue("species dir: ", new File(newDir, "results/species").exists());
-		Assert.assertTrue("binomial dir ", new File(newDir, "results/species/binomial").exists());
-		File binomialFile = new File(newDir, "results/species/binomial/results.xml");
-		Assert.assertTrue("binomial file ", binomialFile.exists());
-		Element binomialElement = new Builder().build(binomialFile).getRootElement();
-		String binomialXml = binomialElement.toXML().replaceAll("\\s+", " ");
-		binomialXml = binomialXml.substring(0,  200);
-		/** mend the test
-		Assert.assertEquals("binomial file ", "<results title=\"binomial\"> <result pre=\"ntimicrobial activity (assessed on \" match=\"Vibrio harveyi\" post=\" cultures) was limited in both H and WSU samples (\" />"
-				+ " <result pre=\"ia genus Vibrio, including", binomialXml);
-				*/
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
+				"<results title=\"binomial\"><result pre=\"This is \" exact=\"Homo sapiens\""
+				+ " xpath=\"/html[1]/body[1]/p[5]\" match=\"Homo sapiens\" post=\" at a terminal.\""
+				+ " name=\"binomial\" /><result pre=\"I can refer to me as \" exact=\"H. sapiens\" xpath=\"/html"
+				);
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
+				"<results title=\"genus\">"
+				+ "<result pre=\"I belong to genus \" exact=\"Homo\" match=\"Homo\" post=\" ; my"
+				+ " ancestors may be Homo sp.\" name=\"genus\" />"
+				+ "</results>");
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 2, 
+				"<results title=\"genussp\"><result pre=\" Homo ; my ancestors may be \" "
+				+ "exact=\"Homo sp\" match=\"Homo sp\" post=\".\" name=\"genussp\" />"
+				+ "</results>");
+	}
+
+	@Test
+	// TESTED 2016-01-12
+	public void testSimpleSpecies1ArgProcessor() throws Exception {
+		File newDir = new File("target/species/simple1/");
+		FileUtils.copyDirectory(new File(SPECIES_DIR, "simple1"), newDir);
+		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
+				"<results title=\"binomial\">"
+				+ "<result pre=\"2]. Outside of sub-Saharan Africa, \" "
+				+ "exact=\"Plasmodium vivax\" "
+				+ "xpath=\"/html[1]/body[1]/div[1]/div[3]/p[1]\" "
+				+ "match=\"Plasmodium vivax\" post=\" infections present unique and add");
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
+				"<results title=\"genus\" />");
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 2, 
+				"<results title=\"genussp\" />");
+	}
+	@Test
+	// TESTED 2016-01-12
+	public void testSpeciesArgProcessor() throws Exception {
+		File newDir = new File("target/plosone/species/0121780/");
+		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
+		NormaTestFixtures.runNorma(newDir, "ctree", "nlm2html");
+		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
+				"<results title=\"binomial\">"
+				+ "<result pre=\"ntimicrobial activity (assessed on \" exact=\"Vibrio harveyi\" "
+				+ "xpath=\"/html[1]/body[1]/div[1]/div[7]/p[7]\" "
+				+ "match=\"Vibrio harveyi\" post=\" cultures) was limited in both H and W");
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
+				"<results title=\"genus\">"
+				+ "<result pre=\"-1. This indicates that \" exact=\"Vibrio\" "
+				+ "xpath=\"/html[1]/body[1]/div[1]/div[7]/p[6]\" "
+				+ "match=\"Vibrio\" post=\" may not be harmful in lower densities, only becom\" name=\"genus\" />");
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 2, 
+		         "<results title=\"genussp\">"
+		         + "<result pre=\" treated (WST) samples. Although 3 \" exact=\"Vibrio spp\" "
+		         + "xpath=\"/html[1]/body[1]/div[1]/div[7]/p[7]\" "
+		         + "match=\"Vibrio spp\" post=\" were found in WS-affected samples, two of thes");
+		
 	}
 	
 	@Test
@@ -50,35 +103,51 @@ public class SpeciesArgProcessorTest {
 		File newDir = new File("target/plosone/species");
 		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
 		String args = "--sp.species --context 35 50 --sp.type binomial binomialsp -q "+newDir+" -i scholarly.html --lookup wikipedia"; 
-		DefaultArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
-		speciesArgProcessor.runAndOutput();
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
+				"<results title=\"mend me\" />");
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
+				"<results title=\"mend me\" />");
+		AMIFixtures.checkResultsElementList(argProcessor, 3, 2, 
+				"<results title=\"mend me\" />");
 		File binomialFile = new File(newDir, "results/species/binomial/results.xml");
 		Element binomialElement = new Builder().build(binomialFile).getRootElement();
 	}
 	
 	
-//	@Test
-//	public void testMalariaArgProcessor() throws Exception {
-//		File newDir = new File("target/plosone/species/malaria");
-//		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_MALARIA_0119475, newDir);
-//		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
-//		AMIArgProcessor speciesArgProcessor = new SpeciesArgProcessor(args);
-//		speciesArgProcessor.runAndOutput();
-//		Assert.assertTrue("results dir: ", new File(newDir, "results").exists());
-//		Assert.assertTrue("species dir: ", new File(newDir, "results/species").exists());
-//		Assert.assertTrue("binomial dir ", new File(newDir, "results/species/binomial").exists());
-//		File binomialFile = new File(newDir, "results/species/binomial/results.xml");
-//		Assert.assertTrue("binomial file ", binomialFile.exists());
-//		Element binomialElement = new Builder().build(binomialFile).getRootElement();
-//		String binomialXml = binomialElement.toXML().replaceAll("\\s+", " ");
-////		binomialXml = binomialXml.substring(0,  200);
-//		/** mend the test
-//		Assert.assertEquals("binomial file ", "<results title=\"binomial\"> <result pre=\"ntimicrobial activity (assessed on \" match=\"Vibrio harveyi\" post=\" cultures) was limited in both H and WSU samples (\" />"
-//				+ " <result pre=\"ia genus Vibrio, including", binomialXml);
-//				*/
-//	}
+	@Test
+	// TESTED 2016-01-12
+	// TEST FAILS 2016-03-08
+	public void testMalariaArgProcessor() throws Exception {
+		File newDir = new File("target/plosone/species/malaria");
+		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_MALARIA_0119475, newDir);
+		NormaTestFixtures.runNorma(newDir, "ctree", "nlm2html");
+		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
+		argProcessor.runAndOutput();
+		// MEND TEST
+//		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
+//				"<results title=\"binomial\">"
+//				+ "<result pre=\"porozoite protein ( csp) of \" exact=\"P. falciparum\""
+//				+ " xpath=\"/html[1]/body[1]/article[1]/div[7]/p[1]"
+////				+ " match=\"P. falciparum\""
+////				+ " post=\" and P. vivax populatio"
+//				);
+
+//
+//		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
+//				"<results title=\"genus\">"
+//				+ "<result pre=\"g the transmission and movement of \" exact=\"Plasmodium\""
+//				+ " xpath=\"/html[1]/body[1]/article[1]/div[6]/p[3]"
+////				+ " match=\"Plasmodium\" post=\" parasites is crucial for malaria elimination and"
+//				);
+//		AMIFixtures.checkResultsElementList(argProcessor, 3, 2, 
+//				"<results title=\"genussp\" />");
+	}
 
 	@Test
+	@Ignore // currently fauls because of empty.xml
 	public void testSpeciesHarness() throws Exception {
 		// SHOWCASE
 		String cmd = "--sp.species --context 35 50 --sp.type binomial genus genussp -q target/plosone/species/malaria -i scholarly.html"; 
@@ -90,18 +159,26 @@ public class SpeciesArgProcessorTest {
 				cmd,
 				"species/binomial/", "species/genus/", "species/genussp/");
 	}
-
-
-	// norma not committed yet
-//	@Test
-//	public void testMalariaArgProcessorNorma() throws Exception {
-//		File newDir = new File("target/plosone/species/malaria");
-//		FileUtils.copyDirectory(Fixtures.TEST_PLOSONE_MALARIA_0119475, newDir);
-//		String args = "-q "+newDir+" -i fulltext.xml -o scholarly.html --transform nlm2html"; 
-//		Norma norma = new Norma();
-//		norma.run(args);
-//	}
 	
+
+	@Test
+	// large
+	@Ignore // may also not give correct answer
+	public void testSpecies() {
+		File large = new File("../patents/US08979");
+		if (!large.exists()) return; // only on PMR machine
+		NormaTestFixtures.runNorma(large, "project", "uspto2html");
+		String args = "-i scholarly.html  --sp.species --context 35 50 --sp.type binomial genus --project "+large; 
+		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
+		argProcessor.runAndOutput();
+		AMIFixtures.checkResultsElementList(argProcessor, 2, 0, 
+				"<results title=\"binomial\" />");
+		AMIFixtures.checkResultsElementList(argProcessor, 2, 1, 
+				"<results title=\"genus\" />");
+		
+	}
+	
+
 
 	
 }

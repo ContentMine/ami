@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="binomial">
+ <result pre=" " exact="Crataegus monogyna" xpath="/html[1]/body[1]/div[1]/div[3]/p[1]" match="Crataegus monogyna" post=" Jacq. is naturalized in North America, where it has hybridized with native diploid hawthorns at le" name="binomial"/>
+ <result pre="e for nothosp. nov. Crataegus × ninae-celottiae K.I. Chr. &amp;amp;amp; T.A. Dickinson ( " exact="C. monogyna" xpath="/html[1]/body[1]/div[1]/div[3]/p[1]" match="Crataegus monogyna" post=" × C. punctata Jacq.). New data are provided to further document nothosp. nov. Crataegus&lt;" name="binomial"/>
+ <result pre="i&gt;Crataegus × ninae-celottiae K.I. Chr. &amp;amp;amp; T.A. Dickinson ( C. monogyna × " exact="C. punctata" xpath="/html[1]/body[1]/div[1]/div[3]/p[1]" match="Crataegus punctata" post=" Jacq.). New data are provided to further document nothosp. nov. Crataegus × cogswellii&lt;/" name="binomial"/>
+ <result pre="r document nothosp. nov. Crataegus × cogswellii K.I. Chr. &amp;amp;amp; T.A. Dickinson ( " exact="C. monogyna" xpath="/html[1]/body[1]/div[1]/div[3]/p[1]" match="Crataegus monogyna" post=" × C. suksdorfii (Sarg.) Kruschke). In both cases, the striking differences in leaf shape be" name="binomial"/>
+ <result pre="ov. Crataegus × cogswellii K.I. Chr. &amp;amp;amp; T.A. Dickinson ( C. monogyna × " exact="C. suksdorfii" match="Crataegus suksdorfii" post=" (Sarg.) Kruschke). In both cases, the striking differences in leaf shape between most New World ha" name="binomial"/>
+</results>

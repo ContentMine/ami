@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="frequencies">
+ <result title="frequency" count="8">Plasmodium falciparum</result>
+ <result title="frequency" count="3">Plasmodium vivax</result>
+ <result title="frequency" count="3">Plasmodium reichenowi</result>
+ <result title="frequency" count="3">Plasmodium yoelii</result>
+ <result title="frequency" count="1">Drosophila melanogaster</result>
+</results>
