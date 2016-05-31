@@ -95,37 +95,6 @@ public class ResultsAnalysisTest {
 	}
 	
 	@Test
-	@Ignore
-	public void testMakeTable() throws IOException {
-//		DataTablesTool dataTablesTool = new DataTablesTool("Zika", "example");
-//		ResultsAnalysis resultsAnalysis = createTestResultsAnalysis(dataTablesTool);
-//		resultsAnalysis.setLink0("../../src/test/resources/org/xmlcml/ami2/zika/");
-//		resultsAnalysis.setLink1("/scholarly.html");
-//		resultsAnalysis.setRowHeadingName("EPMCID");
-//		HtmlTable table = resultsAnalysis.makeHtmlTable(dataTablesTool);
-//		HtmlHtml html = new HtmlHtml();
-//		HtmlHead head = new HtmlHead();
-//		html.appendChild(head);
-//		head.addUTF8Charset();
-//		head.addCSSStylesheetLink("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
-//		head.addCSSStylesheetLink("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css");
-//		head.addJavascriptLink("https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js");
-//		head.addJavascriptLink("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js");
-//		head.addCssStyle(".bs-example{"
-//				+ "margin: 20px;	"
-//				+ "}");
-//		HtmlBody body = new HtmlBody();
-//		html.appendChild(body);
-//		HtmlDiv htmlDiv = new HtmlDiv();
-//		htmlDiv.setClassAttribute("bs-example table-responsive");
-//		body.appendChild(htmlDiv);
-//		table.setClassAttribute("table table-striped table-bordered table-hover");
-//		body.appendChild(table);
-//		
-//		XMLUtil.debug(html, new File("target/resultsAnalysis/table.html"), 1);
-	}
-	
-	@Test
 	public void testMakeDataTable() throws IOException {
 		DataTablesTool dataTablesTool = new DataTablesTool();
 		dataTablesTool.setTitle("Zika");

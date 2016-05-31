@@ -54,6 +54,25 @@ public class CommandProcessorTest {
 	}
 
 	@Test
+	public void testCommandLinePreprocessor() throws IOException {
+		String project = "zika2";
+		File projectDir = new File("target/tutorial/"+project);
+		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		String cmd = ""
+		+ "w_fstop"
+		+ " sq_d"
+		+ " g_h"
+		+ " s_tv"
+		+ " s_inn"
+		+ " s_nal"
+		+ " s_phch"
+		
+	    ;
+		CommandProcessor.main((projectDir+" "+cmd).split("\\s+"));
+	}
+
+	@Test
 	//@Ignore
 	// runs defaults
 	public void testCommandLineShortEmpty() throws IOException {
