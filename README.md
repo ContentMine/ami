@@ -7,11 +7,13 @@ There are binaries provided with releases which enable running of ami's plugins;
 Run on a CTree which contains scholarly.html files of the papers you are analysing. This can be made using Norma.
 
 Schema
-```ami2-<pluginname> --project <foldername> <plugin option> <options relating to plugin>
+```
+ami2-<pluginname> --project <foldername> <plugin option> <options relating to plugin>
 ami2-gene --project zika --g.gene --g.type human
 ``` 
 
 ## Building
+
 ```
 mvn package
 ```
@@ -65,5 +67,4 @@ and a sub-subdirectory for each plugin option: Example:
                     results.xml
 
 
-        
 
