@@ -15,6 +15,7 @@ import org.xmlcml.ami2.plugins.identifier.IdentifierArgProcessor;
 import org.xmlcml.cmine.lookup.AbstractLookup;
 import org.xmlcml.norma.NormaArgProcessor;
 
+
 public class RRIDTest {
 
 	public static final Logger LOG = Logger.getLogger(RRIDTest.class);
@@ -23,6 +24,7 @@ public class RRIDTest {
 	}
 
 	@Test
+	@Ignore // uses lookup
 	public void testAny() throws IOException {
 		AbstractLookup rridLookup = new RRIDLookup();
 		String response = rridLookup.lookup("AB_570435");
@@ -41,6 +43,7 @@ public class RRIDTest {
 	@Test
 	// SHOWCASE
 	// TESTED 2016-01-12
+	@Ignore // uses lookup
 	public void testAmiIdentifier() throws IOException {
 
 	    File neuro4415html = new File(AMIFixtures.TEST_RRID_DIR, "JNEUROSCI.4415-13.2014.html");

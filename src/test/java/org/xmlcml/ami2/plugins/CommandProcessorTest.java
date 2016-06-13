@@ -55,7 +55,7 @@ public class CommandProcessorTest {
 
 	@Test
 	public void testCommandLinePreprocessor() throws IOException {
-		String project = "zika2";
+		String project = "zika10";
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
@@ -86,7 +86,7 @@ public class CommandProcessorTest {
 	@Test
 	@Ignore // LONG
 	public void testCommandLine() throws IOException {
-		String project = "zika";
+		String project = "zika10";
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
