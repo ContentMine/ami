@@ -490,5 +490,22 @@ public class TutorialTest {
 		commandProcessor.processCommands(cmd);
 
 	}
+	
+	@Test
+	public void testHindawiSample() throws IOException {
+		File rawDir = new File("../../hindawi/sample");
+		File projectDir = new File("target/tutorial/hindawi/sample");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.processCommands(""
+				+ "species(binomial,genus) "
+				+ " gene(human)"
+				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
+				+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml"
+				+ " word(search)w.search:/org/xmlcml/ami2/plugins/places/wikiplaces.xml"
+				+ " sequence(dnaprimer) ");
+	}
+
+
 
 }

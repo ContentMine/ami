@@ -98,4 +98,40 @@ public class CommandProcessorTest {
 		CommandProcessor.main((projectDir+" "+cmd).split("\\s+"));
 	}
 
+	@Test
+	@Ignore // as not test directory
+	public void  testHindawiSampleMini() throws IOException {
+		File rawDir = new File("../../hindawi/samplemini");
+		File projectDir = new File("target/tutorial/hindawi/samplemini");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		String cmd = ""
+//		+ "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
+//		+ " sequence(dnaprimer)"
+//		+ " species(binomial)"
+//		+ " gene(human) "
+		+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/disease.xml"
+//		+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/phytochemicals2.xml"
+//		+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/inn.xml"
+	    ;
+		CommandProcessor.main((projectDir+" "+cmd).split("\\s+"));
+	}
+		
+	@Test
+	@Ignore // as not test directory
+	public void  testHindawiEPMC() throws IOException {
+		
+		File rawDir = new File("../../hindawi/epmc");
+		File projectDir = new File("target/tutorial/hindawi/epmc");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
+		+ " sequence(dnaprimer)"
+		+ " species(binomial)"
+		+ " gene(human) "
+		+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/disease.xml"
+		+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/phytochemicals2.xml"
+		+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/inn.xml"
+	    ;
+		CommandProcessor.main((projectDir+" "+cmd).split("\\s+"));
+			
+	}
 }

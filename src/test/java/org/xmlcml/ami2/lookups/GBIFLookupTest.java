@@ -11,6 +11,7 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.cmine.lookup.AbstractLookup;
+import org.xmlcml.cmine.util.CMineUtil;
 
 public class GBIFLookupTest {
 
@@ -29,7 +30,7 @@ public class GBIFLookupTest {
 		LOG.trace("result: "+json);
 		new File("target/gbif/").mkdirs();
 		IOUtils.write(json, new FileOutputStream("target/gbif/whale.json"));
-		String canonicalName = gbifLookup.getStringForJsonPath(json, CANONICAL_NAME_PATH);
+		String canonicalName = CMineUtil.getStringForJsonPath(json, CANONICAL_NAME_PATH);
 		// this test seems unstable - sometimes the subspecies is given
 		Assert.assertTrue("name", canonicalName.startsWith("Balaenoptera musculus"));
 	}

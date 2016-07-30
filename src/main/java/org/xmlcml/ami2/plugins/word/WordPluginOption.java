@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIPluginOption;
-import org.xmlcml.ami2.plugins.phylotree.ArgProcessorRunnable;
+import org.xmlcml.ami2.plugins.search.SearchArgProcessor;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
 import org.xmlcml.cmine.util.CellRenderer;
 
@@ -31,9 +31,10 @@ public class WordPluginOption extends AMIPluginOption {
 		commandString.append(" --w.words "+optionString);
 		String sw = getOptionFlagString("w.stopwords", " ");
 		commandString.append(sw);
-		DefaultArgProcessor.CM_LOG.debug("WORD "+commandString);
+		LOG.debug("WORD "+commandString);
 		System.out.print("WS: "+projectDir+"  ");
 		new WordArgProcessor(commandString.toString()).runAndOutput();
+//		new SearchArgProcessor(commandString.toString()).runAndOutput();
 	}
 
 	protected String getPlugin(String plugin) {

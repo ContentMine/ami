@@ -69,6 +69,7 @@ public class WordCollectionFactory {
 	private WordResultsElement frequenciesElement;
 	private WordResultsElement aggregatedFrequenciesElement;
 	private WordResultsElement booleanFrequenciesElement;
+	private boolean stripNumbers;
 
 	public WordCollectionFactory(AMIArgProcessor argProcessor) {
 		this.amiArgProcessor = argProcessor;
@@ -79,6 +80,20 @@ public class WordCollectionFactory {
 		minCountInSet = DEFAULT_MIN_COUNT_IN_SET;
 		minRawWordLength = DEFAULT_MIN_RAW_WORD_LENGTH;
 		maxRawWordLength = DEFAULT_MAX_RAW_WORD_LENGTH;
+		stripNumbers = true;
+	}
+
+	public boolean isStripNumbers() {
+		return stripNumbers;
+	}
+
+	/**
+	 * remove numbers from words.
+	 * 
+	 * @param stripNumbers
+	 */
+	public void setStripNumbers(boolean stripNumbers) {
+		this.stripNumbers = stripNumbers;
 	}
 
 	void extractWords() {
@@ -263,7 +278,10 @@ public class WordCollectionFactory {
 		} else {
 			for (String rawWord : words) {
 	//			rawWord = rawWord.toLowerCase(); // normalize case
-				rawWord = rawWord.replaceAll("[\\d+]", ""); // remove numbers
+				// BAD !
+				if (stripNumbers) {
+					rawWord = removeNumbersFromWord(rawWord);
+				}
 				if (stopwords != null && stopwords.contains(rawWord.toLowerCase())) {
 					continue;
 				}
@@ -280,6 +298,11 @@ public class WordCollectionFactory {
 		}
 		return frequenciesElement;
 			
+	}
+
+	private String removeNumbersFromWord(String rawWord) {
+		rawWord = rawWord.replaceAll("[\\d+]", ""); // remove numbers
+		return rawWord;
 	}
 
 	private WordResultsElement createFrequenciesElement(
