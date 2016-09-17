@@ -30,7 +30,7 @@ public class SimplePluginTest {
 		Assert.assertTrue("fulltext.xml", cTree.hasExistingFulltextXML());
 		Assert.assertTrue("fulltext.html", cTree.hasFulltextHTML());
 		Assert.assertTrue("fulltext.pdf", cTree.hasFulltextPDF());
-		Assert.assertTrue("results.json", cTree.hasResultsJSON());
+		Assert.assertTrue("results.json", cTree.hasQuickscrapeMD());
 		Assert.assertTrue("scholarly.html", cTree.hasScholarlyHTML());
 	}
 	

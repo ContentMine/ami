@@ -25,6 +25,7 @@ import org.xmlcml.xml.XMLUtil;
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnel;
 import com.google.common.hash.PrimitiveSink;
+import com.google.gson.JsonElement;
 
 import nu.xom.Attribute;
 import nu.xom.Element;
@@ -57,6 +58,21 @@ import nu.xom.Elements;
  * @author pm286
  *
  */
+
+/**
+ * 
+ * <?xml version="1.0" encoding="UTF-8"?>
+<dictionary title="cochrane">
+<entry term="Cochrane Library" name="cochrane library" />
+<entry term="Cochrane Reviews" name="cochrane reviews" />
+...
+<entry term="adverse events" name="adverse events"/>
+
+</dictionary>
+
+ * @author pm286
+ *
+ */
 public class DefaultAMIDictionary extends DefaultStringDictionary {
 
 	private static final Logger LOG = Logger.getLogger(DefaultAMIDictionary.class);
@@ -64,11 +80,12 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		LOG.setLevel(Level.DEBUG);
 	}
 
+	public static final String ID = "id";
 	private static final String DICTIONARY = "dictionary";
-	private static final String ENTRY = "entry";
-	private static final String NAME = "name";
+	public static final String ENTRY = "entry";
+	public static final String NAME = "name";
 	private static final String REGEX = "regex";
-	private static final String TERM = "term";
+	public static final String TERM = "term";
 	public static final String TITLE = "title";
 	private static final String URL = "url";
 	private static final String WIKIDATA = "wikidata";
@@ -92,7 +109,8 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	private String dictionarySource;
 	private List<DictionaryTerm> dictionaryTermList; 
 	private List<DictionaryTerm> stemmedTermList;
-	private Set<String> rawTermSet; 
+	private Set<String> rawTermSet;
+	private JsonElement jsonElement; 
 	
 	public DefaultAMIDictionary() {
 		init();
@@ -162,6 +180,23 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		} catch (IOException e) {
 			throw new RuntimeException("Cannot write dictionary file: "+file, e);
 		}
+	}
+	
+	public String toXML() {
+		return dictionaryElement == null ? null : dictionaryElement.toXML();
+	}
+	
+	public JsonElement createJsonObject() {
+		CMJsonDictionary jsonDictionary = null;
+		jsonElement = null;
+		if (dictionaryElement != null) {
+			jsonDictionary = new CMJsonDictionary();
+			String id = dictionaryElement.getAttributeValue(ID);
+			if (id != null) {
+				jsonDictionary.setId(id);
+			}
+		}
+		return jsonElement;
 	}
 
 	/** stores entries in hashMap (term, name) and also creates BloomFilter.
@@ -311,6 +346,10 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	
 	public String getTitle() {
 		return dictionaryElement == null ? null : dictionaryElement.getAttributeValue(DefaultAMIDictionary.TITLE);
+	}
+
+	public Element getDictionaryElement() {
+		return dictionaryElement;
 	}
 
 }

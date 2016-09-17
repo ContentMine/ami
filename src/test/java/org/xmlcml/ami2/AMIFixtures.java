@@ -35,6 +35,8 @@ public class AMIFixtures {
 	public final static File TEST_BMC_15_1_511_CMDIR = new File(AMIFixtures.TEST_BMC_DIR, "15_1_511");
 	public final static File TEST_TRIALS_16_1_1 = new File(AMIFixtures.TEST_BMC_DIR, "http_www.trialsjournal.com_content_16_1_1");
 	
+	public final static File TEST_DICTIONARY_DIR    = new File(AMIFixtures.TEST_AMI_DIR, "dictionary");
+	
 	public final static File TEST_GRAPHCHEM_DIR    = new File(AMIFixtures.TEST_AMI_DIR, "graphchem");
 	public final static File TEST_GRAPHCHEM_ASPERGILLUS    = new File(AMIFixtures.TEST_GRAPHCHEM_DIR, "aspergillus_9");
 	

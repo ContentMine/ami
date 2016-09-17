@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.xmlcml.cmine.lookup.AbstractLookup;
 import org.xmlcml.xml.XMLUtil;
 
+@Ignore // uses web
 public class RRIDLookupTest {
 
 	private static final Logger LOG = Logger.getLogger(RRIDLookupTest.class);

@@ -81,6 +81,14 @@
 
 					<programs>
  						<program>
+							<mainClass>org.xmlcml.cmine.files.CProject</mainClass>
+							<id>cproject</id>
+						</program>
+ 						<program>
+							<mainClass>org.xmlcml.norma.Norma</mainClass>
+							<id>norma</id>
+						</program>
+ 						<program>
 							<mainClass>org.xmlcml.ami2.plugins.CommandProcessor</mainClass>
 							<id>cmine</id>
 						</program>
