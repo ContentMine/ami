@@ -9,7 +9,6 @@ import java.util.Map;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.vafer.jdeb.shaded.compress.io.FileUtils;
-import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.cmine.util.RectangularTable;
 import org.xmlcml.xml.XMLUtil;
 
@@ -266,8 +265,8 @@ public class CMJsonDictionary {
 	 * @param dictionaries
 	 * @throws IOException 
 	 */
-	public void UpdateDictionariesWithMixMatch(List<File> dictionaries) {
-		File mapping = new File(AMIFixtures.TEST_DICTIONARY_DIR, "mixmatch.tsv");
+	public void UpdateDictionariesWithMixMatch(List<File> dictionaries, File mapping) {
+//		File mapping = new File(AMIFixtures.TEST_DICTIONARY_DIR, "mixmatch.tsv");
 		boolean useHeader = true;
 		RectangularTable table;
 		try {
