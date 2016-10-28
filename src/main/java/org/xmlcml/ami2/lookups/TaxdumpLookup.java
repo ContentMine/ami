@@ -88,7 +88,7 @@ public class TaxdumpLookup extends AbstractLookup {
 	}
 
 	public List<String> lookupSpeciesList(String genus) {
-		LOG.debug("TAXDUMP "+genus);
+		LOG.trace("TAXDUMP "+genus);
 		List<String> speciesList = new ArrayList<String>(speciesByGenusSet.get(genus));
 		Collections.sort(speciesList);
 		return speciesList;

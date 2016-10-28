@@ -1,0 +1,328 @@
+{
+  "id": [
+    "26885411"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26885411"
+  ],
+  "pmcid": [
+    "PMC4739007"
+  ],
+  "doi": [
+    "10.1155/2016/9852073"
+  ],
+  "title": [
+    "Cytokine Reduction in the Setting of an ARDS-Associated Inflammatory Response with Multiple Organ Failure."
+  ],
+  "authorString": [
+    "Träger K, Schütz C, Fischer G, Schröder J, Skrabal C, Liebold A, Reinelt H."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Träger K"
+          ],
+          "firstName": [
+            "Karl"
+          ],
+          "lastName": [
+            "Träger"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Department of Cardiac Anesthesia, University Hospital Ulm, 89070 Ulm, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Schütz C"
+          ],
+          "firstName": [
+            "Christian"
+          ],
+          "lastName": [
+            "Schütz"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Department of Cardiac Anesthesia, University Hospital Ulm, 89070 Ulm, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Fischer G"
+          ],
+          "firstName": [
+            "Günther"
+          ],
+          "lastName": [
+            "Fischer"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Department of Cardiac Anesthesia, University Hospital Ulm, 89070 Ulm, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Schröder J"
+          ],
+          "firstName": [
+            "Janpeter"
+          ],
+          "lastName": [
+            "Schröder"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Cardiac Anesthesia, University Hospital Ulm, 89070 Ulm, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Skrabal C"
+          ],
+          "firstName": [
+            "Christian"
+          ],
+          "lastName": [
+            "Skrabal"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Clinic for Cardiothoracic and Vascular Surgery, University Hospital Ulm, 89070 Ulm, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Liebold A"
+          ],
+          "firstName": [
+            "Andreas"
+          ],
+          "lastName": [
+            "Liebold"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Clinic for Cardiothoracic and Vascular Surgery, University Hospital Ulm, 89070 Ulm, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Reinelt H"
+          ],
+          "firstName": [
+            "Helmut"
+          ],
+          "lastName": [
+            "Reinelt"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Department of Cardiac Anesthesia, University Hospital Ulm, 89070 Ulm, Germany."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375899"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in critical care"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Crit Care"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Crit Care"
+          ],
+          "NLMid": [
+            "101598416"
+          ],
+          "ISSN": [
+            "2090-6420"
+          ],
+          "ESSN": [
+            "2090-6439"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "9852073"
+  ],
+  "abstractText": [
+    "A 45-year-old male was admitted to our hospital with a small bowel obstruction due to torsion and was immediately scheduled for surgical intervention. At anesthesia induction, the patient aspirated and subsequently developed a severe SIRS with ARDS and multiple organ failure requiring the use of ECMO, CRRT, antibiotics, and low dose steroids. Due to a rapid deterioration in clinical status and a concurrent surge in inflammatory biomarkers, an extracorporeal cytokine adsorber (CytoSorb) was added to the CRRT blood circuit. The combined treatment resulted in a rapid and significant reduction in the levels of circulating inflammatory mediators. This decrease was paralleled by marked clinical stabilization of the patient including a significant improvement in hemodynamic stability and a reduced need for norepinephrine and improved respiratory function as measured by PaO2/FIO2, ventilator parameters, lung mechanics, and indirect measures of capillary leak syndrome. The patient could be discharged to a respiratory weaning unit where successful respiratory weaning could be achieved later on. We attribute the clinical improvement to the rapid control of the hyperinflammatory response and the reduction of inflammatory mediators using a combination of CytoSorb and these other therapies. CytoSorb treatment was safe and well tolerated, with no device-related adverse effects observed."
+  ],
+  "affiliation": [
+    "Department of Cardiac Anesthesia, University Hospital Ulm, 89070 Ulm, Germany."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4739007?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4739007"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/9852073"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-17"
+  ],
+  "dateOfCreation": [
+    "2016-02-17"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-17"
+  ],
+  "firstPublicationDate": [
+    "2016-01-17"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

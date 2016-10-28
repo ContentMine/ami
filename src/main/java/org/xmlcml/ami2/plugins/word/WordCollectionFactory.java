@@ -99,7 +99,7 @@ public class WordCollectionFactory {
 	void extractWords() {
 		List<String> words = createWordList();
 		if (words == null) {
-			LOG.warn("no words found to extract");
+			LOG.trace("no words found to extract");
 			System.err.print("!");
 			return;
 		}
@@ -126,7 +126,7 @@ public class WordCollectionFactory {
 				rawWords = currentCTree.extractWordsFromPDFTXT();
 			} else {
 				String msg = "No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory();
-				LOG.warn(msg);
+				LOG.trace(msg);
 				System.err.print("!");
 			}
 		}

@@ -1,0 +1,305 @@
+{
+  "id": [
+    "26885510"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26885510"
+  ],
+  "pmcid": [
+    "PMC4739456"
+  ],
+  "doi": [
+    "10.1155/2016/6047876"
+  ],
+  "title": [
+    "The Role of a Primary Arthroplasty in the Treatment of Proximal Tibia Fractures in Orthogeriatric Patients."
+  ],
+  "authorString": [
+    "Haufe T, Förch S, Müller P, Plath J, Mayr E."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Haufe T"
+          ],
+          "firstName": [
+            "Thomas"
+          ],
+          "lastName": [
+            "Haufe"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Department of Traumatology, Klinikum Augsburg, Stenglinstraße 2, 86156 Augsburg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Förch S"
+          ],
+          "firstName": [
+            "Stefan"
+          ],
+          "lastName": [
+            "Förch"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Traumatology, Klinikum Augsburg, Stenglinstraße 2, 86156 Augsburg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Müller P"
+          ],
+          "firstName": [
+            "Peter"
+          ],
+          "lastName": [
+            "Müller"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "Department of Traumatology, Klinikum Augsburg, Stenglinstraße 2, 86156 Augsburg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Plath J"
+          ],
+          "firstName": [
+            "Johannes"
+          ],
+          "lastName": [
+            "Plath"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Traumatology, Klinikum Augsburg, Stenglinstraße 2, 86156 Augsburg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Mayr E"
+          ],
+          "firstName": [
+            "Edgar"
+          ],
+          "lastName": [
+            "Mayr"
+          ],
+          "initials": [
+            "E"
+          ],
+          "affiliation": [
+            "Department of Traumatology, Klinikum Augsburg, Stenglinstraße 2, 86156 Augsburg, Germany."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375656"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BioMed research international"
+          ],
+          "ISOAbbreviation": [
+            "Biomed Res Int"
+          ],
+          "medlineAbbreviation": [
+            "Biomed Res Int"
+          ],
+          "NLMid": [
+            "101600173"
+          ],
+          "ISSN": [
+            "2314-6133"
+          ],
+          "ESSN": [
+            "2314-6141"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "6047876"
+  ],
+  "abstractText": [
+    "The total knee arthroplasty (TKA) is the gold standard for patients with an advanced symptomatic gonarthrosis. However, there are very few publications dealing with the primary TKA for patients with a proximal tibia fracture. In our retrospective study we evaluated 30 patients treated with a TKA for a proximal tibia fracture in our institution between 01/2008 and 12/2014. We collected the following statistical data from each patient: age, classification of the fracture (AO-classification), type of prosthesis used, length of the operation and hospitalization, and complications during the follow-up. We used the Knee Society Score (KSS) and the WOMAC score to evaluate the function. The Knee Society Score showed an average \"general knee score\" (KSS1) of 81.1 points and an average \"functional knee score\" (KSS2) of 74.5 points. The average WOMAC score was 78.6 points. Immediate postoperative mobilization with the possibility of a full-weight bearing is of crucial importance for the geriatric patients to maintain the mobility they had prior to the operation and reduce medical complications. Because of these advantages, the primary TKA seems to be a promising alternative to the ORIF of a proximal tibia fracture in the orthogeriatric patient."
+  ],
+  "affiliation": [
+    "Department of Traumatology, Klinikum Augsburg, Stenglinstraße 2, 86156 Augsburg, Germany."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4739456?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4739456"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/6047876"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2016-02-17"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-18"
+  ],
+  "firstPublicationDate": [
+    "2016-01-18"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

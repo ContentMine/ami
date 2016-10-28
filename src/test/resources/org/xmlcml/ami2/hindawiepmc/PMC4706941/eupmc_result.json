@@ -1,0 +1,312 @@
+{
+  "id": [
+    "26819614"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26819614"
+  ],
+  "pmcid": [
+    "PMC4706941"
+  ],
+  "doi": [
+    "10.1155/2016/8763205"
+  ],
+  "title": [
+    "Application of Different Imaging Methods in the Early Diagnosis of Primary Hepatic Carcinoma."
+  ],
+  "authorString": [
+    "Wu X, Li J, Wang C, Zhang G, Zheng N, Wang X."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Wu X"
+          ],
+          "firstName": [
+            "Xin'ai"
+          ],
+          "lastName": [
+            "Wu"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Inner Mongolia Medical University, Hohhot 010050, China; Department of Nuclear Medicine, Inner Mongolia Medical University Affiliated Hospital, Hohhot 010050, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Li J"
+          ],
+          "firstName": [
+            "Jianbo"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Nuclear Medicine, Inner Mongolia Medical University Affiliated Hospital, Hohhot 010050, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang C"
+          ],
+          "firstName": [
+            "Cheng"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Department of Nuclear Medicine, Inner Mongolia Medical University Affiliated Hospital, Hohhot 010050, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang G"
+          ],
+          "firstName": [
+            "Guojian"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Department of Nuclear Medicine, Inner Mongolia Medical University Affiliated Hospital, Hohhot 010050, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zheng N"
+          ],
+          "firstName": [
+            "Na"
+          ],
+          "lastName": [
+            "Zheng"
+          ],
+          "initials": [
+            "N"
+          ],
+          "affiliation": [
+            "Inner Mongolia Medical University, Hohhot 010050, China; Department of Nuclear Medicine, Inner Mongolia Medical University Affiliated Hospital, Hohhot 010050, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang X"
+          ],
+          "firstName": [
+            "Xuemei"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Department of Nuclear Medicine, Inner Mongolia Medical University Affiliated Hospital, Hohhot 010050, China."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2367873"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Gastroenterology research and practice"
+          ],
+          "ISOAbbreviation": [
+            "Gastroenterol Res Pract"
+          ],
+          "medlineAbbreviation": [
+            "Gastroenterol Res Pract"
+          ],
+          "NLMid": [
+            "101475557"
+          ],
+          "ISSN": [
+            "1687-6121"
+          ],
+          "ESSN": [
+            "1687-630X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "8763205"
+  ],
+  "abstractText": [
+    "Primary hepatic carcinoma (PHC) is the one of the most common tumors and the common cause of cancer death in the world. Detecting PHC in its early stage by imaging methods may greatly increase survival rates of patients. Ultrasound, computed tomography, magnetic resonance imaging, and positron emission tomography/computed tomography are common imaging methods in the diagnosis of PHC. In this paper, the application of different imaging methods in diagnosing the primary hepatic carcinoma will be discussed."
+  ],
+  "affiliation": [
+    "Inner Mongolia Medical University, Hohhot 010050, China; Department of Nuclear Medicine, Inner Mongolia Medical University Affiliated Hospital, Hohhot 010050, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article",
+        "Review"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4706941?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4706941"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/8763205"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-01-28"
+  ],
+  "dateOfCreation": [
+    "2016-01-28"
+  ],
+  "dateOfRevision": [
+    "2016-01-31"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-24"
+  ],
+  "firstPublicationDate": [
+    "2015-12-24"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

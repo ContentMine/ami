@@ -1,0 +1,348 @@
+{
+  "id": [
+    "26880908"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26880908"
+  ],
+  "pmcid": [
+    "PMC4736773"
+  ],
+  "doi": [
+    "10.1155/2016/2614692"
+  ],
+  "title": [
+    "Bacteriospermia and Its Impact on Basic Semen Parameters among Infertile Men."
+  ],
+  "authorString": [
+    "Vilvanathan S, Kandasamy B, Jayachandran AL, Sathiyanarayanan S, Tanjore Singaravelu V, Krishnamurthy V, Elangovan V."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Vilvanathan S"
+          ],
+          "firstName": [
+            "Sangeetha"
+          ],
+          "lastName": [
+            "Vilvanathan"
+          ],
+          "initials": [
+            "S"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-4330-347X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Microbiology, Karpaga Vinayaga Institute of Medical Sciences and Research Centre, Chinna Kolambakkam Post, Madurantakam Taluk, Kanchipuram, Tamil Nadu 603 308, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Kandasamy B"
+          ],
+          "firstName": [
+            "Balan"
+          ],
+          "lastName": [
+            "Kandasamy"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "Department of Microbiology, Karpaga Vinayaga Institute of Medical Sciences and Research Centre, Chinna Kolambakkam Post, Madurantakam Taluk, Kanchipuram, Tamil Nadu 603 308, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Jayachandran AL"
+          ],
+          "firstName": [
+            "Abiramy Lakshmy"
+          ],
+          "lastName": [
+            "Jayachandran"
+          ],
+          "initials": [
+            "AL"
+          ],
+          "affiliation": [
+            "Department of Microbiology, Karpaga Vinayaga Institute of Medical Sciences and Research Centre, Chinna Kolambakkam Post, Madurantakam Taluk, Kanchipuram, Tamil Nadu 603 308, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Sathiyanarayanan S"
+          ],
+          "firstName": [
+            "Sarasa"
+          ],
+          "lastName": [
+            "Sathiyanarayanan"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Microbiology, Karpaga Vinayaga Institute of Medical Sciences and Research Centre, Chinna Kolambakkam Post, Madurantakam Taluk, Kanchipuram, Tamil Nadu 603 308, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Tanjore Singaravelu V"
+          ],
+          "firstName": [
+            "Vijayalakshmi"
+          ],
+          "lastName": [
+            "Tanjore Singaravelu"
+          ],
+          "initials": [
+            "V"
+          ],
+          "affiliation": [
+            "Department of Microbiology, Karpaga Vinayaga Institute of Medical Sciences and Research Centre, Chinna Kolambakkam Post, Madurantakam Taluk, Kanchipuram, Tamil Nadu 603 308, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Krishnamurthy V"
+          ],
+          "firstName": [
+            "Veeraraghavan"
+          ],
+          "lastName": [
+            "Krishnamurthy"
+          ],
+          "initials": [
+            "V"
+          ],
+          "affiliation": [
+            "Department of Medical Gastroenterology, Rajiv Gandhi Government General Hospital, Chennai, Tamil Nadu 600 003, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Elangovan V"
+          ],
+          "firstName": [
+            "Vanithadevi"
+          ],
+          "lastName": [
+            "Elangovan"
+          ],
+          "initials": [
+            "V"
+          ],
+          "affiliation": [
+            "Department of Microbiology, Karpaga Vinayaga Institute of Medical Sciences and Research Centre, Chinna Kolambakkam Post, Madurantakam Taluk, Kanchipuram, Tamil Nadu 603 308, India."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-4330-347X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375734"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Interdisciplinary perspectives on infectious diseases"
+          ],
+          "ISOAbbreviation": [
+            "Interdiscip Perspect Infect Dis"
+          ],
+          "medlineAbbreviation": [
+            "Interdiscip Perspect Infect Dis"
+          ],
+          "NLMid": [
+            "101496545"
+          ],
+          "ISSN": [
+            "1687-708X"
+          ],
+          "ESSN": [
+            "1687-7098"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "2614692"
+  ],
+  "abstractText": [
+    "Introduction. Semen analysis is considered as the surrogate marker for male fecundity while assessing infertile men. There are several reasons for altered semen quality and bacteriospermia could be one among them. Thereby the aim of our work is to study the semen culture and its impact on semen parameters among infertile men. Materials and Methods. Semen samples were collected from men attending infertility clinic. Semen parameters were analysed based on WHO guidelines. Also, samples were subjected to culture using standard bacteriological techniques. Results. A total of 85 samples were collected. A number of 47 (55.30%) had normal sperm count, 37 (43.50%) had oligozoospermia, and one (1.17%) had azoospermia. Teratozoospermia was the most common abnormality observed (81.17%) followed by asthenozoospermia (28.23%). The prevalence of bacteriospermia was 35.3%. Enterococcus faecalis (30%) was the most common organism isolated followed by Coagulase negative Staphylococcus (23.33%), Staphylococcus aureus (20%), and E. coli (10%). Other less frequently isolated organisms were Klebsiella pneumoniae (6.66%), Proteus sp. (6.66%), and Citrobacter sp. (3.33%). Conclusion. The presence of asymptomatic bacteriospermia did not correlate with abnormal semen parameters."
+  ],
+  "affiliation": [
+    "Department of Microbiology, Karpaga Vinayaga Institute of Medical Sciences and Research Centre, Chinna Kolambakkam Post, Madurantakam Taluk, Kanchipuram, Tamil Nadu 603 308, India."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736773?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736773"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/2614692"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-16"
+  ],
+  "dateOfCreation": [
+    "2016-02-16"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-06"
+  ],
+  "firstPublicationDate": [
+    "2016-01-06"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

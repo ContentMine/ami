@@ -11,6 +11,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
+import org.xmlcml.cmine.files.ResourceLocation;
 
 import com.google.common.collect.Multiset;
 
@@ -24,7 +25,8 @@ import com.google.common.collect.Multiset;
 public class WordSetWrapper {
 
 	
-	private static final String XML = ".xml";
+	private static final String DOT_TXT = ".txt";
+	private static final String DOT_XML = ".xml";
 	private static final Logger LOG = Logger.getLogger(WordSetWrapper.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -84,15 +86,24 @@ public class WordSetWrapper {
 	
 	private static Set<String> getStopwords(String stopwordsResource) {
 		Set<String> stopwords0 = new HashSet<String>();
+		// symbolic name located in package
 		if (!stopwordsResource.contains("/")) {
 			String packagex = WordSetWrapper.class.getPackage().toString().replaceAll("\\.", "/").replace("package ", "");
 			stopwordsResource = "/"+packagex+"/"+stopwordsResource;
-			LOG.debug("symbol expands to: "+stopwordsResource);
+			stopwordsResource = addTxt(stopwordsResource);
+			LOG.trace("symbol expands to: "+stopwordsResource);
 		}
 		InputStream stopwordsStream = AMIArgProcessor.class.getResourceAsStream(stopwordsResource);
 		if (stopwordsStream == null) {
+			if (stopwordsResource.endsWith(DOT_XML)) {
+				LOG.warn("Cannot read XML stopwords yet");
+			} else {
+				stopwordsResource = addTxt(stopwordsResource);
+				stopwordsStream = new ResourceLocation().getInputStreamHeuristically(stopwordsResource);
+			}
+		}
+		if (stopwordsStream == null) {
 			LOG.warn("Cannot read stopword stream: "+stopwordsResource);
-		} else if (stopwordsResource.endsWith(XML)){
 		} else {
 			try {
 				List<String> lines = IOUtils.readLines(stopwordsStream);
@@ -105,6 +116,13 @@ public class WordSetWrapper {
 		}
 		LOG.trace("stopword set: "+stopwords0.size());
 		return stopwords0;
+	}
+
+	private static String addTxt(String stopwordsResource) {
+		if (stopwordsResource.indexOf(".") == -1) {
+			stopwordsResource += DOT_TXT;
+		}
+		return stopwordsResource;
 	}
 
 	public boolean contains(String word) {

@@ -1,0 +1,243 @@
+{
+  "id": [
+    "26885432"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26885432"
+  ],
+  "pmcid": [
+    "PMC4738720"
+  ],
+  "doi": [
+    "10.1155/2016/4560745"
+  ],
+  "title": [
+    "Treatment of Cytomegalovirus Infection with Cidofovir and CMV Immune Globulin in a Lung Transplant Recipient."
+  ],
+  "authorString": [
+    "Wilkens H, Sester M."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Wilkens H"
+          ],
+          "firstName": [
+            "Heinrike"
+          ],
+          "lastName": [
+            "Wilkens"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Department of Internal Medicine V-Pneumology, Allergology, Respiratory and Environmental Medicine, University Hospital of Saarland, Kirrbergerstrasse 100, Homburg, 66421 Saarland, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Sester M"
+          ],
+          "firstName": [
+            "Martina"
+          ],
+          "lastName": [
+            "Sester"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Transplant and Infection Immunology, Saarland University, Kirrbergerstrasse, Building 47, Homburg, 66421 Saarland, Germany."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375905"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in transplantation"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Transplant"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Transplant"
+          ],
+          "NLMid": [
+            "101591863"
+          ],
+          "ISSN": [
+            "2090-6943"
+          ],
+          "ESSN": [
+            "2090-6951"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "4560745"
+  ],
+  "abstractText": [
+    "Cytomegalovirus (CMV) infection after lung transplantation is associated with increased risk for pneumonitis and bronchiolitis obliterans as well as allograft rejection and opportunistic infections. Ganciclovir is the mainstay of prophylaxis and treatment but CMV infections can be unresponsive. Apart from direct antiviral drugs, CMV immunoglobulin (CMVIG) preparations may be considered but are only licensed for prophylaxis. A CMV-seronegative 42-year-old man with cystic fibrosis received a lung from a CMV-seropositive donor. Intravenous ganciclovir prophylaxis was delayed until day 12 due to acute postoperative renal failure and was accompanied by five doses of CMVIG (10 g). By day 16, CMV-DNA was detectable and rising; CMV-specific T-cells were undetectable. Switch from ganciclovir to foscarnet prompted a transient decrease in CMV viral load, but after increasing again to reach 3600 copies/mL foscarnet was changed to intravenous cidofovir and CMVIG was restarted. CMV load continued to fluctuate and declined slowly, whereas CMV-specific T-cells were detected five months later and increased thereafter. At last follow-up, the patient was in very good clinical condition with no evidence of bronchiolitis obliterans. No side effects of this treatment were observed. In this hard-to-treat case, the combination of cidofovir with off-label use of CMVIG contributed to a successful outcome."
+  ],
+  "affiliation": [
+    "Department of Internal Medicine V-Pneumology, Allergology, Respiratory and Environmental Medicine, University Hospital of Saarland, Kirrbergerstrasse 100, Homburg, 66421 Saarland, Germany."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4738720?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4738720"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/4560745"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-17"
+  ],
+  "dateOfCreation": [
+    "2016-02-17"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-13"
+  ],
+  "firstPublicationDate": [
+    "2016-01-13"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

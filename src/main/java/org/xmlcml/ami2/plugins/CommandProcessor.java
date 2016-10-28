@@ -42,12 +42,14 @@ public class CommandProcessor {
 	public final static String SYMBOLS = "/org/xmlcml/ami2/plugins/symbols.xml";
 	private static final String EXPAND = "expand";
 	private static final String ABBREVIATION = "abbreviation";
+	private static final String ARTICLES = "articles";
 
 	private List<AMIPluginOption> pluginOptions;
 	private File projectDir = null;
 	private List<String> cmdList = new ArrayList<String>();
 
 	private Map<String, String> symbolMap;
+	private String helpString;
 	
 	private CommandProcessor() {
 		init();
@@ -69,13 +71,16 @@ public class CommandProcessor {
 		}
 		Element symbolsElement = XMLUtil.parseQuietlyToDocument(is).getRootElement();
 		symbolMap = new HashMap<String, String>();
+		helpString = "";
 		for (int i = 0; i < symbolsElement.getChildElements().size(); i++) {
 			Element childElement = symbolsElement.getChildElements().get(i);
 			String abbrev = childElement.getAttributeValue(ABBREVIATION);
 			String replace = childElement.getAttributeValue(EXPAND);
-			LOG.debug(abbrev+" => "+replace);
+			helpString += (abbrev+" => "+replace+"; ");
+			if (i % 4 == 0) helpString += "\n";
 			symbolMap.put(abbrev, replace);
 		}
+		LOG.debug("symbols:\n"+helpString);
 	}
 
 	private void setProjectDir(File projectDir) {
@@ -145,7 +150,7 @@ public class CommandProcessor {
 	}
 
 	public void runNormaIfNecessary() {
-		if (!new CProject(projectDir).hasScholarlyHTML()) {
+		if (!new CProject(projectDir).hasScholarlyHTML(0.1)) {
 			String args = "-i fulltext.xml -o scholarly.html --transform nlm2html --project "+projectDir;
 			LOG.debug("running NORMA "+args);
 			new Norma().run(args);
@@ -183,7 +188,7 @@ public class CommandProcessor {
 			throw new RuntimeException("projectDir must be set");
 		}
 		String project = FilenameUtils.getBaseName(projectDir.toString());
-		DataTablesTool dataTablesTool = new DataTablesTool();
+		DataTablesTool dataTablesTool = new DataTablesTool(ARTICLES);
 		dataTablesTool.setTitle(project);
 		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
 		resultsAnalysis.addDefaultSnippets(projectDir);

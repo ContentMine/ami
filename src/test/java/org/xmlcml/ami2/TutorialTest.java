@@ -430,7 +430,7 @@ public class TutorialTest {
 				+ " gene(human)"
 				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
 				+ " sequence(dnaprimer) ");
-		DataTablesTool dataTablesTool = new DataTablesTool();
+		DataTablesTool dataTablesTool = new DataTablesTool(DataTablesTool.ARTICLES);
 		dataTablesTool.setTitle(project);
 		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
 		resultsAnalysis.addDefaultSnippets(projectDir);

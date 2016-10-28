@@ -1,0 +1,246 @@
+{
+  "id": [
+    "26904587"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904587"
+  ],
+  "pmcid": [
+    "PMC4745318"
+  ],
+  "doi": [
+    "10.1155/2016/9385364"
+  ],
+  "title": [
+    "Psychometric Validation of the Bangla Version of the Patient-Doctor Relationship Questionnaire."
+  ],
+  "authorString": [
+    "Arafat SM."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Arafat SM"
+          ],
+          "firstName": [
+            "S M Yasir"
+          ],
+          "lastName": [
+            "Arafat"
+          ],
+          "initials": [
+            "SM"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-0521-5708",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Public Health, ASA University Bangladesh, ASA Tower, 23/3 Bir Uttam ANM Nuruzzaman Sarak, Shyamoli, Dhaka 1207, Bangladesh."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-0521-5708",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2377763"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Psychiatry journal"
+          ],
+          "ISOAbbreviation": [
+            "Psychiatry J"
+          ],
+          "medlineAbbreviation": [
+            "Psychiatry J"
+          ],
+          "NLMid": [
+            "101607838"
+          ],
+          "ISSN": [
+            "2314-4327"
+          ],
+          "ESSN": [
+            "2314-4335"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "9385364"
+  ],
+  "abstractText": [
+    "Background. The patient-doctor relationship is an important issue in health care as it is linked to patient satisfaction, treatment adherence, and treatment outcome. The PDRQ-9 is brief instrument which has an excellent overall internal consistency to measure it. Objective. It was aimed at developing a culturally adapted and validated Bangla version of Patient-Doctor Relationship Questionnaire (PDRQ-9). Method. Data were collected during the period of May 2015 to July 2015 from 50 patients by interviewing with the final Bangla version of PDRQ-9 obtained by ideal translation-back translation procedure with nonprobability purposive consecutive sampling and analyzed by Statistical Package of Social Science (SPSS) 16.0 and Microsoft Excel 2007 version software. Result. The internal consistency of Bangla PDRQ-9 was measured by Cronbach's α which was 0.97. Only one factor was extracted from varimax rotation factor analysis with high commonalities between the items. Conclusion. Bangla version of PDRQ-9 is valid, accepted, and widely applicable in clinical practice, research, public health, and primary health care in Bangladesh."
+  ],
+  "affiliation": [
+    "Department of Public Health, ASA University Bangladesh, ASA Tower, 23/3 Bir Uttam ANM Nuruzzaman Sarak, Shyamoli, Dhaka 1207, Bangladesh."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745318?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745318"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/9385364"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-21"
+  ],
+  "firstPublicationDate": [
+    "2016-01-21"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "id": [
+    "26880894"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26880894"
+  ],
+  "pmcid": [
+    "PMC4736012"
+  ],
+  "doi": [
+    "10.1155/2016/6802810"
+  ],
+  "title": [
+    "Optimal Bowel Preparation for Video Capsule Endoscopy."
+  ],
+  "authorString": [
+    "Song HJ, Moon JS, Shim KN."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Song HJ"
+          ],
+          "firstName": [
+            "Hyun Joo"
+          ],
+          "lastName": [
+            "Song"
+          ],
+          "initials": [
+            "HJ"
+          ],
+          "affiliation": [
+            "Department of Internal Medicine, Jeju National University School of Medicine, Jeju, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Moon JS"
+          ],
+          "firstName": [
+            "Jeong Seop"
+          ],
+          "lastName": [
+            "Moon"
+          ],
+          "initials": [
+            "JS"
+          ],
+          "affiliation": [
+            "Department of Internal Medicine, Inje University College of Medicine, Seoul, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Shim KN"
+          ],
+          "firstName": [
+            "Ki-Nam"
+          ],
+          "lastName": [
+            "Shim"
+          ],
+          "initials": [
+            "KN"
+          ],
+          "affiliation": [
+            "Department of Internal Medicine, Ewha Womans University School of Medicine, Seoul, Republic of Korea."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2370404"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Gastroenterology research and practice"
+          ],
+          "ISOAbbreviation": [
+            "Gastroenterol Res Pract"
+          ],
+          "medlineAbbreviation": [
+            "Gastroenterol Res Pract"
+          ],
+          "NLMid": [
+            "101475557"
+          ],
+          "ISSN": [
+            "1687-6121"
+          ],
+          "ESSN": [
+            "1687-630X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "6802810"
+  ],
+  "abstractText": [
+    "During video capsule endoscopy (VCE), several factors, such as air bubbles, food material in the small bowel, and delayed gastric and small bowel transit time, influence diagnostic yield, small bowel visualization quality, and cecal completion rate. Therefore, bowel preparation before VCE is as essential as bowel preparation before colonoscopy. To date, there have been many comparative studies, consensus, and guidelines regarding different kinds of bowel cleansing agents in bowel preparation for small bowel VCE. Presently, polyethylene glycol- (PEG-) based regimens are given primary recommendation. Sodium picosulphate-based regimens are secondarily recommended, as their cleansing efficacy is less than that of PEG-based regimens. Sodium phosphate as well as complementary simethicone and prokinetics use are considered. In this paper, we reviewed previous studies regarding bowel preparation for small bowel VCE and suggested optimal bowel preparation of VCE."
+  ],
+  "affiliation": [
+    "Department of Internal Medicine, Jeju National University School of Medicine, Jeju, Republic of Korea."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article",
+        "Review"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736012?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736012"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/6802810"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-16"
+  ],
+  "dateOfCreation": [
+    "2016-02-16"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-31"
+  ],
+  "firstPublicationDate": [
+    "2015-12-31"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

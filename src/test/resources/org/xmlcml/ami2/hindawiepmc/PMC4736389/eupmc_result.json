@@ -1,0 +1,294 @@
+{
+  "id": [
+    "26881154"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26881154"
+  ],
+  "pmcid": [
+    "PMC4736389"
+  ],
+  "doi": [
+    "10.1155/2016/2670307"
+  ],
+  "title": [
+    "Native Valve Streptococcus bovis Endocarditis and Refractory Transfusion Dependent Iron Deficiency Anaemia Associated with Concomitant Carcinoma of the Colon: A Case Report and Review of the Literature."
+  ],
+  "authorString": [
+    "Ahamed Riyaaz AA, Samarasinghe R, Sellahewa K, Sivakumaran S, Tampoe MS."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Ahamed Riyaaz AA"
+          ],
+          "firstName": [
+            "Abdul Azeez"
+          ],
+          "lastName": [
+            "Ahamed Riyaaz"
+          ],
+          "initials": [
+            "AA"
+          ],
+          "affiliation": [
+            "Department of Internal Medicine, Dr Neville Fernando Teaching Hospital, Millennium Drive, Chandrika Kumaratunga Mawatha, 10115 Malabe, Sri Lanka."
+          ]
+        },
+        {
+          "fullName": [
+            "Samarasinghe R"
+          ],
+          "firstName": [
+            "Randula"
+          ],
+          "lastName": [
+            "Samarasinghe"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "Department of Internal Medicine, Dr Neville Fernando Teaching Hospital, Millennium Drive, Chandrika Kumaratunga Mawatha, 10115 Malabe, Sri Lanka."
+          ]
+        },
+        {
+          "fullName": [
+            "Sellahewa K"
+          ],
+          "firstName": [
+            "Kolitha"
+          ],
+          "lastName": [
+            "Sellahewa"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Department of Internal Medicine, Dr Neville Fernando Teaching Hospital, Millennium Drive, Chandrika Kumaratunga Mawatha, 10115 Malabe, Sri Lanka."
+          ]
+        },
+        {
+          "fullName": [
+            "Sivakumaran S"
+          ],
+          "firstName": [
+            "Sabaratnam"
+          ],
+          "lastName": [
+            "Sivakumaran"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Internal Medicine, Dr Neville Fernando Teaching Hospital, Millennium Drive, Chandrika Kumaratunga Mawatha, 10115 Malabe, Sri Lanka."
+          ]
+        },
+        {
+          "fullName": [
+            "Tampoe MS"
+          ],
+          "firstName": [
+            "Manjula Sri"
+          ],
+          "lastName": [
+            "Tampoe"
+          ],
+          "initials": [
+            "MS"
+          ],
+          "affiliation": [
+            "South Asian Institute of Technology and Medicine, Millennium Drive, Chandrika Kumaratunga Mawatha, 10115 Malabe, Sri Lanka."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375669"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in infectious diseases"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Infect Dis"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Infect Dis"
+          ],
+          "NLMid": [
+            "101573243"
+          ],
+          "ISSN": [
+            "2090-6625"
+          ],
+          "ESSN": [
+            "2090-6633"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "2670307"
+  ],
+  "abstractText": [
+    "Streptococcus bovis is found as a commensal organism in human gut and may become opportunistically pathogenic. Infective endocarditis is one of the commonest modes of presentation of this infection. The association between Streptococcus bovis endocarditis and colorectal cancer is well recognized. We report a case of Streptococcus bovis endocarditis along with a refractory iron deficiency anaemia associated with concomitant carcinoma of ascending colon in a 63-year-old male. Cooccurrence of these two conditions may cause a challenge in the management. Considering the strong association of colon cancer with Streptococcus bovis endocarditis, a detailed screening colonoscopy is mandatory following the diagnosis of the latter."
+  ],
+  "affiliation": [
+    "Department of Internal Medicine, Dr Neville Fernando Teaching Hospital, Millennium Drive, Chandrika Kumaratunga Mawatha, 10115 Malabe, Sri Lanka."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736389?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736389"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/2670307"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-16"
+  ],
+  "dateOfCreation": [
+    "2016-02-16"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-05"
+  ],
+  "firstPublicationDate": [
+    "2016-01-05"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

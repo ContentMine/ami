@@ -1,0 +1,226 @@
+{
+  "id": [
+    "26904326"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904326"
+  ],
+  "pmcid": [
+    "PMC4745348"
+  ],
+  "doi": [
+    "10.1155/2016/8165414"
+  ],
+  "title": [
+    "Risk Factors and Epidemiology of Coccidioidomycosis Demonstrated by a Case of Spontaneous Pulmonary Rupture of Cavitary Coccidioidomycosis."
+  ],
+  "authorString": [
+    "Yau AA."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Yau AA"
+          ],
+          "firstName": [
+            "Amy A"
+          ],
+          "lastName": [
+            "Yau"
+          ],
+          "initials": [
+            "AA"
+          ],
+          "affiliation": [
+            "Internal Medicine, William Beaumont Army Medical Center, 5005 North Piedras Street, El Paso, TX 79920, USA."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375669"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in infectious diseases"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Infect Dis"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Infect Dis"
+          ],
+          "NLMid": [
+            "101573243"
+          ],
+          "ISSN": [
+            "2090-6625"
+          ],
+          "ESSN": [
+            "2090-6633"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "8165414"
+  ],
+  "abstractText": [
+    "A 31-year-old Hispanic male with no medical history was admitted for fevers, pleurisy, and cough after recent oral surgery and completing demolition and construction work in Juarez, Mexico. Imaging showed a 4.4 cm cavitary lesion and bilateral tree-in-bud opacities. Initial suspicion of bacterial infection confirmed with clinical improvement on culture specific antibiotics, but after discharge he returned with progression of symptoms and new dyspnea. Radiograph showed a pyopneumothorax. Chest computed tomography after thoracostomy showed worsening infiltrates and another cavitary lesion. Symptoms persisted despite addition of broad spectrum antibiotics. Surgical repair for persistent air leak was required. Weeks after discharge, cultures and serologies returned positive for Coccidioidomycosis immitis. Coccidioides species cause up to 30% of community-acquired pneumonia and incidental cavitary lesions in endemic regions. Symptoms are nonspecific yet usually involve fatigue, cough, and pleurisy. Most hosts have spontaneous resolution; however, certain demographics such as Hispanics and diabetics, later diagnosed in our patient, have higher morbidity. As seen with our patient, cavitary rupture and bronchopleural fistulas are rare occurring in 2.6% of cavitary lesions. High suspicion based on symptoms and host demographics is important to assist in early diagnosis and treatment to avoid and treat this common pathogen's presentations."
+  ],
+  "affiliation": [
+    "Internal Medicine, William Beaumont Army Medical Center, 5005 North Piedras Street, El Paso, TX 79920, USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745348?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745348"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/8165414"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-24"
+  ],
+  "firstPublicationDate": [
+    "2016-01-24"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

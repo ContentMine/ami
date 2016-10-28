@@ -1,0 +1,362 @@
+{
+  "id": [
+    "26904322"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904322"
+  ],
+  "pmcid": [
+    "PMC4745278"
+  ],
+  "doi": [
+    "10.1155/2016/6545861"
+  ],
+  "title": [
+    "Acute Lymphoblastic Leukemia Arising in CALR Mutated Essential Thrombocythemia."
+  ],
+  "authorString": [
+    "Langabeer SE, Haslam K, O'Brien D, Kelly J, Andrews C, Ryan C, Flavin R, Hayden PJ, Bacon CL."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Langabeer SE"
+          ],
+          "firstName": [
+            "Stephen E"
+          ],
+          "lastName": [
+            "Langabeer"
+          ],
+          "initials": [
+            "SE"
+          ],
+          "affiliation": [
+            "Cancer Molecular Diagnostics, St. James's Hospital, Dublin 8, Ireland."
+          ]
+        },
+        {
+          "fullName": [
+            "Haslam K"
+          ],
+          "firstName": [
+            "Karl"
+          ],
+          "lastName": [
+            "Haslam"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Cancer Molecular Diagnostics, St. James's Hospital, Dublin 8, Ireland."
+          ]
+        },
+        {
+          "fullName": [
+            "O'Brien D"
+          ],
+          "firstName": [
+            "David"
+          ],
+          "lastName": [
+            "O'Brien"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Department of Haematology, St. James's Hospital, Dublin 8, Ireland."
+          ]
+        },
+        {
+          "fullName": [
+            "Kelly J"
+          ],
+          "firstName": [
+            "Johanna"
+          ],
+          "lastName": [
+            "Kelly"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Clinical Genetics, Our Lady's Children's Hospital, Dublin 12, Ireland."
+          ]
+        },
+        {
+          "fullName": [
+            "Andrews C"
+          ],
+          "firstName": [
+            "Claire"
+          ],
+          "lastName": [
+            "Andrews"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Department of Haematology, St. James's Hospital, Dublin 8, Ireland."
+          ]
+        },
+        {
+          "fullName": [
+            "Ryan C"
+          ],
+          "firstName": [
+            "Ciara"
+          ],
+          "lastName": [
+            "Ryan"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Department of Histopathology, St. James's Hospital, Dublin 8, Ireland."
+          ]
+        },
+        {
+          "fullName": [
+            "Flavin R"
+          ],
+          "firstName": [
+            "Richard"
+          ],
+          "lastName": [
+            "Flavin"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "Department of Histopathology, St. James's Hospital, Dublin 8, Ireland."
+          ]
+        },
+        {
+          "fullName": [
+            "Hayden PJ"
+          ],
+          "firstName": [
+            "Patrick J"
+          ],
+          "lastName": [
+            "Hayden"
+          ],
+          "initials": [
+            "PJ"
+          ],
+          "affiliation": [
+            "Department of Haematology, St. James's Hospital, Dublin 8, Ireland."
+          ]
+        },
+        {
+          "fullName": [
+            "Bacon CL"
+          ],
+          "firstName": [
+            "Christopher L"
+          ],
+          "lastName": [
+            "Bacon"
+          ],
+          "initials": [
+            "CL"
+          ],
+          "affiliation": [
+            "Department of Haematology, St. James's Hospital, Dublin 8, Ireland."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375901"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in hematology"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Hematol"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Hematol"
+          ],
+          "NLMid": [
+            "101576456"
+          ],
+          "ISSN": [
+            "2090-6560"
+          ],
+          "ESSN": [
+            "2090-6579"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "6545861"
+  ],
+  "abstractText": [
+    "The development of acute lymphoblastic leukemia in an existing myeloproliferative neoplasm is rare with historical cases unable to differentiate between concomitant malignancies or leukemic transformation. Molecular studies of coexisting JAK2 V617F-positive myeloproliferative neoplasms and mature B cell malignancies indicate distinct disease entities arising in myeloid and lymphoid committed hematopoietic progenitor cells, respectively. Mutations of CALR in essential thrombocythemia appear to be associated with a distinct phenotype and a lower risk of thrombosis yet their impact on disease progression is less well defined. The as yet undescribed scenario of pro-B cell acute lymphoblastic leukemia arising in CALR mutated essential thrombocythemia is presented. Intensive treatment for the leukemia allowed for expansion of the original CALR mutated clone. Whether CALR mutations in myeloproliferative neoplasms predispose to the acquisition of additional malignancies, particularly lymphoproliferative disorders, is not yet known."
+  ],
+  "affiliation": [
+    "Cancer Molecular Diagnostics, St. James's Hospital, Dublin 8, Ireland."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745278?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745278"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/6545861"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-21"
+  ],
+  "firstPublicationDate": [
+    "2016-01-21"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

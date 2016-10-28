@@ -4,7 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.xml-cml</groupId>
 	<artifactId>ami2</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<!--  now synced with ami -->
+	<version>0.3.0</version>
 	<description>Plugin architecture for converting Normalized science to Semantic science</description>
     <name>AMI</name>
 <!--
@@ -296,10 +297,11 @@
 		</dependency>
 -->
 
+<!--  MUST KEEP THIS IN SYNC WITH NORMA -->
 		<dependency>
 			<groupId>org.xml-cml</groupId>
 			<artifactId>norma</artifactId>
-			<version>0.1-SNAPSHOT</version>
+			<version>0.3.0</version>
 		</dependency>
 		<!-- removed until the functionality is added
 		<dependency>

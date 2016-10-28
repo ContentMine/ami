@@ -96,7 +96,7 @@ public class ResultsAnalysisTest {
 	
 	@Test
 	public void testMakeDataTable() throws IOException {
-		DataTablesTool dataTablesTool = new DataTablesTool();
+		DataTablesTool dataTablesTool = new DataTablesTool(DataTablesTool.ARTICLES);
 		dataTablesTool.setTitle("Zika");
 		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
 		File inputFile = ZIKA_DIR;
@@ -129,7 +129,7 @@ public class ResultsAnalysisTest {
 //	
 	private void analyzeResults(File projectDir, SummaryType cellType, File outfile) throws IOException {
 		List<SummaryType> cellTypes = Arrays.asList(new SummaryType[]{SummaryType.COMMONEST});
-		DataTablesTool dataTablesTool = new DataTablesTool();
+		DataTablesTool dataTablesTool = new DataTablesTool(DataTablesTool.ARTICLES);
 		dataTablesTool.setTitle("Zika");
 		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
 		resultsAnalysis.addDefaultSnippets(projectDir);

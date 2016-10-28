@@ -1,0 +1,385 @@
+{
+  "id": [
+    "26880990"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26880990"
+  ],
+  "pmcid": [
+    "PMC4736558"
+  ],
+  "doi": [
+    "10.1155/2016/7958361"
+  ],
+  "title": [
+    "Corrigendum to \"Particle Radiation-Induced Nontargeted Effects in Bone-Marrow-Derived Endothelial Progenitor Cells\"."
+  ],
+  "authorString": [
+    "Sasi SP, Park D, Muralidharan S, Wage J, Kiladjian A, Onufrak J, Enderling H, Yan X, Goukassian DA."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Sasi SP"
+          ],
+          "firstName": [
+            "Sharath P"
+          ],
+          "lastName": [
+            "Sasi"
+          ],
+          "initials": [
+            "SP"
+          ],
+          "affiliation": [
+            "Cardiovascular Research Center, GeneSys Research Institute, Boston, MA 02135, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Park D"
+          ],
+          "firstName": [
+            "Daniel"
+          ],
+          "lastName": [
+            "Park"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Cardiovascular Research Center, GeneSys Research Institute, Boston, MA 02135, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Muralidharan S"
+          ],
+          "firstName": [
+            "Sujatha"
+          ],
+          "lastName": [
+            "Muralidharan"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Whitaker Cardiovascular Institute, Boston University School of Medicine, Boston, MA 02118, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Wage J"
+          ],
+          "firstName": [
+            "Justin"
+          ],
+          "lastName": [
+            "Wage"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Cardiovascular Research Center, GeneSys Research Institute, Boston, MA 02135, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Kiladjian A"
+          ],
+          "firstName": [
+            "Albert"
+          ],
+          "lastName": [
+            "Kiladjian"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Cardiovascular Research Center, GeneSys Research Institute, Boston, MA 02135, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Onufrak J"
+          ],
+          "firstName": [
+            "Jillian"
+          ],
+          "lastName": [
+            "Onufrak"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Cardiovascular Research Center, GeneSys Research Institute, Boston, MA 02135, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Enderling H"
+          ],
+          "firstName": [
+            "Heiko"
+          ],
+          "lastName": [
+            "Enderling"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Department of Integrated Mathematical Oncology, H. Lee Moffitt Cancer Center and Research Institute, Tampa, FL 33612, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Yan X"
+          ],
+          "firstName": [
+            "Xinhua"
+          ],
+          "lastName": [
+            "Yan"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Cardiovascular Research Center, GeneSys Research Institute, Boston, MA 02135, USA; Tufts University School of Medicine, Boston, MA 02118, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Goukassian DA"
+          ],
+          "firstName": [
+            "David A"
+          ],
+          "lastName": [
+            "Goukassian"
+          ],
+          "initials": [
+            "DA"
+          ],
+          "affiliation": [
+            "Cardiovascular Research Center, GeneSys Research Institute, Boston, MA 02135, USA; Whitaker Cardiovascular Institute, Boston University School of Medicine, Boston, MA 02118, USA; Tufts University School of Medicine, Boston, MA 02118, USA."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2348750"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Stem cells international"
+          ],
+          "ISOAbbreviation": [
+            "Stem Cells Int"
+          ],
+          "medlineAbbreviation": [
+            "Stem Cells Int"
+          ],
+          "NLMid": [
+            "101535822"
+          ],
+          "ISSN": [
+            "1687-966X"
+          ],
+          "ESSN": [
+            "1687-9678"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "7958361"
+  ],
+  "abstractText": [
+    "[This corrects the article DOI: 10.1155/2015/496512.]."
+  ],
+  "affiliation": [
+    "Cardiovascular Research Center, GeneSys Research Institute, Boston, MA 02135, USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Published Erratum"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736558?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736558"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/7958361"
+          ]
+        }
+      ]
+    }
+  ],
+  "commentCorrectionList": [
+    {
+      "commentCorrection": [
+        {
+          "id": [
+            "26074973"
+          ],
+          "source": [
+            "MED"
+          ],
+          "reference": [
+            "Stem Cells Int. 2015;2015:496512"
+          ],
+          "type": [
+            "Erratum for"
+          ],
+          "orderIn": [
+            "1"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-17"
+  ],
+  "dateOfCreation": [
+    "2016-02-16"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-06"
+  ],
+  "firstPublicationDate": [
+    "2016-01-06"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

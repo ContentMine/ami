@@ -1,0 +1,305 @@
+{
+  "id": [
+    "26824037"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26824037"
+  ],
+  "pmcid": [
+    "PMC4707348"
+  ],
+  "doi": [
+    "10.1155/2016/1635361"
+  ],
+  "title": [
+    "Comparative Study of the Antioxidant Effects of Metformin, Glibenclamide, and Repaglinide in Alloxan-Induced Diabetic Rats."
+  ],
+  "authorString": [
+    "Chukwunonso Obi B, Chinwuba Okoye T, Okpashi VE, Nonye Igwe C, Olisah Alumanah E."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Chukwunonso Obi B"
+          ],
+          "firstName": [
+            "Bonaventure"
+          ],
+          "lastName": [
+            "Chukwunonso Obi"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "Department of Pharmacology and Toxicology, Faculty of Pharmaceutical Sciences, University of Nigeria, Nsukka 410001, Enugu State, Nigeria."
+          ]
+        },
+        {
+          "fullName": [
+            "Chinwuba Okoye T"
+          ],
+          "firstName": [
+            "Theophine"
+          ],
+          "lastName": [
+            "Chinwuba Okoye"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Department of Pharmacology and Toxicology, Faculty of Pharmaceutical Sciences, University of Nigeria, Nsukka 410001, Enugu State, Nigeria."
+          ]
+        },
+        {
+          "fullName": [
+            "Okpashi VE"
+          ],
+          "firstName": [
+            "Victor Eshu"
+          ],
+          "lastName": [
+            "Okpashi"
+          ],
+          "initials": [
+            "VE"
+          ],
+          "affiliation": [
+            "Department of Biochemistry, University of Nigeria, Nsukka 410001, Enugu State, Nigeria."
+          ]
+        },
+        {
+          "fullName": [
+            "Nonye Igwe C"
+          ],
+          "firstName": [
+            "Christiana"
+          ],
+          "lastName": [
+            "Nonye Igwe"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Synthetic Organic Chemistry Division, Department of Pure and Industrial Chemistry, University of Nigeria, Nsukka 410001, Enugu State, Nigeria."
+          ]
+        },
+        {
+          "fullName": [
+            "Olisah Alumanah E"
+          ],
+          "firstName": [
+            "Edwin"
+          ],
+          "lastName": [
+            "Olisah Alumanah"
+          ],
+          "initials": [
+            "E"
+          ],
+          "affiliation": [
+            "Department of Biochemistry, University of Nigeria, Nsukka 410001, Enugu State, Nigeria."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2348772"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of diabetes research"
+          ],
+          "ISOAbbreviation": [
+            "J Diabetes Res"
+          ],
+          "medlineAbbreviation": [
+            "J Diabetes Res"
+          ],
+          "NLMid": [
+            "101605237"
+          ],
+          "ISSN": [
+            "2314-6745"
+          ],
+          "ESSN": [
+            "2314-6753"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "1635361"
+  ],
+  "abstractText": [
+    "Diabetes mellitus is one of the serious global health problems affecting a significant proportion of both developed and developing countries. Overproduction of free radicals and oxidative stress has been associated with the development of diabetic complications. In the present study, the antioxidant effects of metformin (MET), glibenclamide (GLI), and repaglinide (REP) were evaluated in alloxan-induced diabetic rats. The findings from this study may possibly help in understanding the efficacy of these standard drugs in managing the complications arising from diabetes mellitus (DM). Alloxan (130 mg/kg BW) was administered as a single dose to induce diabetes. Four (4) groups of rats (n = 6) were used; group 1 served as diabetic control while groups 2, 3, and 4 were the diabetic test groups that received MET (25 mg/kg), GLI (2.5 mg/kg), and REP (0.5 mg/kg), respectively. The result of the study showed significant (p < 0.05) improvement in the altered antioxidant enzymes (SOD, CAT) and GSH concentration in diabetic treated rats compared with the diabetic control group. MET and REP produced significant effect on the MDA concentration while GLI showed insignificant reduction in the MDA concentration compared with the diabetic control. Findings from this study suggest that the administration of MET, GLI, and REP exerts significant antioxidant effects in alloxan-induced diabetic rats, thus contributing to the protective effect against oxidative stress-induced damage during diabetic complications."
+  ],
+  "affiliation": [
+    "Department of Pharmacology and Toxicology, Faculty of Pharmaceutical Sciences, University of Nigeria, Nsukka 410001, Enugu State, Nigeria."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4707348?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4707348"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/1635361"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2016-01-29"
+  ],
+  "dateOfRevision": [
+    "2016-02-02"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-28"
+  ],
+  "firstPublicationDate": [
+    "2015-12-28"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "id": [
+    "26885426"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26885426"
+  ],
+  "pmcid": [
+    "PMC4738714"
+  ],
+  "doi": [
+    "10.1155/2016/8068513"
+  ],
+  "title": [
+    "Biliary Adenofibroma with Invasive Carcinoma: Case Report and Review of the Literature."
+  ],
+  "authorString": [
+    "Godambe A, Brunt EM, Fulling KH, Reza Kermanshahi T."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Godambe A"
+          ],
+          "firstName": [
+            "Anjali"
+          ],
+          "lastName": [
+            "Godambe"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Ameripath Indiana, Indianapolis, IN, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Brunt EM"
+          ],
+          "firstName": [
+            "Elizabeth M"
+          ],
+          "lastName": [
+            "Brunt"
+          ],
+          "initials": [
+            "EM"
+          ],
+          "affiliation": [
+            "Department of Pathology and Immunology, Washington University, St. Louis, MO, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Fulling KH"
+          ],
+          "firstName": [
+            "Keith H"
+          ],
+          "lastName": [
+            "Fulling"
+          ],
+          "initials": [
+            "KH"
+          ],
+          "affiliation": [
+            "Mercy Hospital, St. Louis, MO, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Reza Kermanshahi T"
+          ],
+          "firstName": [
+            "Taher"
+          ],
+          "lastName": [
+            "Reza Kermanshahi"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Department of Pathology, University of Pittsburgh Medical Center, Pittsburgh, PA, USA."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375676"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in pathology"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Pathol"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Pathol"
+          ],
+          "NLMid": [
+            "101576609"
+          ],
+          "ISSN": [
+            "2090-6781"
+          ],
+          "ESSN": [
+            "2090-679X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "8068513"
+  ],
+  "abstractText": [
+    "We report a case of biliary adenofibroma with an invasive carcinoma in a 71-year-old female who presented with bilateral upper abdominal pain. Imaging revealed a 6.3 cm heterogeneously enhancing mass in the left lateral segment of the liver. Histologically, the adenofibroma showed the characteristic components as previously described of biliary adenofibromata, namely, cystic and tubular structures lined by cuboidal to low columnar biliary type epithelium and a dense fibrous stroma composed of spindled cells. Intimately admixed with the adenofibroma was a distinct tumor composed of malignant clear cells which demonstrated stromal and vascular invasion. Although mitotic figures were inconspicuous, Ki67 was brisk and p53 demonstrated 25-50% positivity. Sections also showed a von Meyenberg complex located adjacent to the tumor. This case expands the understanding of this rare tumor and proves two important assertions from previous case reports. First, the presence of an associated von Meyenberg complex with similar morphology and immunohistochemical staining pattern suggests that biliary adenofibromata and von Meyenberg complexes may share related histogenesis. Second, biliary adenofibromata harbor malignant potential and may show malignant transformation. Furthermore, this case highlights the need for these rare tumors to be followed aggressively, as their biological behavior is poorly understood."
+  ],
+  "affiliation": [
+    "Ameripath Indiana, Indianapolis, IN, USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4738714?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4738714"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/8068513"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-17"
+  ],
+  "dateOfCreation": [
+    "2016-02-17"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-13"
+  ],
+  "firstPublicationDate": [
+    "2016-01-13"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

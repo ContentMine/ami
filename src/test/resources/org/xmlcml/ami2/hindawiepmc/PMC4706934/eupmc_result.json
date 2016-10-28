@@ -1,0 +1,549 @@
+{
+  "id": [
+    "26858751"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26858751"
+  ],
+  "pmcid": [
+    "PMC4706934"
+  ],
+  "doi": [
+    "10.1155/2016/6527653"
+  ],
+  "title": [
+    "Surrounding Gastric Mucosa Findings Facilitate Diagnosis of Gastric Neoplasm as Gastric Adenoma or Early Gastric Cancer."
+  ],
+  "authorString": [
+    "Miike T, Yamamoto S, Miyata Y, Hirata T, Noda Y, Noda T, Suzuki S, Takeda S, Natsuda S, Sakaguchi M, Maemura K, Hashimoto K, Yamaji T, Abe H, Iwakiri H, Tahara Y, Hasuike S, Nagata K, Kitanaka A, Shimoda K."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Miike T"
+          ],
+          "firstName": [
+            "Tadashi"
+          ],
+          "lastName": [
+            "Miike"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Yamamoto S"
+          ],
+          "firstName": [
+            "Shojiro"
+          ],
+          "lastName": [
+            "Yamamoto"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Miyata Y"
+          ],
+          "firstName": [
+            "Yoshifumi"
+          ],
+          "lastName": [
+            "Miyata"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Hirata T"
+          ],
+          "firstName": [
+            "Tomoya"
+          ],
+          "lastName": [
+            "Hirata"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Noda Y"
+          ],
+          "firstName": [
+            "Yuko"
+          ],
+          "lastName": [
+            "Noda"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Noda T"
+          ],
+          "firstName": [
+            "Takaho"
+          ],
+          "lastName": [
+            "Noda"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Suzuki S"
+          ],
+          "firstName": [
+            "Sho"
+          ],
+          "lastName": [
+            "Suzuki"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Takeda S"
+          ],
+          "firstName": [
+            "Sachiko"
+          ],
+          "lastName": [
+            "Takeda"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Natsuda S"
+          ],
+          "firstName": [
+            "Shuichiro"
+          ],
+          "lastName": [
+            "Natsuda"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Sakaguchi M"
+          ],
+          "firstName": [
+            "Mai"
+          ],
+          "lastName": [
+            "Sakaguchi"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Maemura K"
+          ],
+          "firstName": [
+            "Kosuke"
+          ],
+          "lastName": [
+            "Maemura"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Hashimoto K"
+          ],
+          "firstName": [
+            "Kanna"
+          ],
+          "lastName": [
+            "Hashimoto"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Yamaji T"
+          ],
+          "firstName": [
+            "Takumi"
+          ],
+          "lastName": [
+            "Yamaji"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Abe H"
+          ],
+          "firstName": [
+            "Hiroo"
+          ],
+          "lastName": [
+            "Abe"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Iwakiri H"
+          ],
+          "firstName": [
+            "Hisayoshi"
+          ],
+          "lastName": [
+            "Iwakiri"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Tahara Y"
+          ],
+          "firstName": [
+            "Yoshihiro"
+          ],
+          "lastName": [
+            "Tahara"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Hasuike S"
+          ],
+          "firstName": [
+            "Satoru"
+          ],
+          "lastName": [
+            "Hasuike"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Nagata K"
+          ],
+          "firstName": [
+            "Kenji"
+          ],
+          "lastName": [
+            "Nagata"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Kitanaka A"
+          ],
+          "firstName": [
+            "Akira"
+          ],
+          "lastName": [
+            "Kitanaka"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Shimoda K"
+          ],
+          "firstName": [
+            "Kazuya"
+          ],
+          "lastName": [
+            "Shimoda"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2370404"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Gastroenterology research and practice"
+          ],
+          "ISOAbbreviation": [
+            "Gastroenterol Res Pract"
+          ],
+          "medlineAbbreviation": [
+            "Gastroenterol Res Pract"
+          ],
+          "NLMid": [
+            "101475557"
+          ],
+          "ISSN": [
+            "1687-6121"
+          ],
+          "ESSN": [
+            "1687-630X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "6527653"
+  ],
+  "abstractText": [
+    "Background and Aim. It is difficult to master the skill of discriminating gastric adenoma from early gastric cancer by conventional endoscopy or magnifying endoscopy combined with narrow-band imaging, because the colors and morphologies of these neoplasms are occasionally similar. We focused on the surrounding gastric mucosa findings in order to determine how to discriminate between early gastric cancer and gastric adenoma by analyzing the characteristics of the gastric background mucosa. Methods. We retrospectively examined 146 patients who underwent endoscopic submucosal dissection for gastric neoplasm between October 2009 and January 2015. The boundary of atrophic gastritis was classified endoscopically according to the Kimura-Takemoto classification system. Of 146 lesions, 63 early gastric cancers and 21 gastric adenomas were ultimately evaluated and assessed. Results. Almost all gastric adenomas were accompanied by open-type gastritis, whereas 47 and 16 early gastric cancers were accompanied by open-type and closed-type gastritis, respectively (p = 0.037). Conclusions. The evaluation of the boundary of atrophic gastritis associated with gastric neoplasms appears to be useful for discrimination between early gastric cancer and gastric adenoma. When gastric neoplasm is present in the context of surrounding localized gastric atrophy, gastric cancer is probable but not certain."
+  ],
+  "affiliation": [
+    "Division of Gastroenterology and Hematology, Department of Internal Medicine, Faculty of Medicine, University of Miyazaki, 5200 Kiyotakecho Kihara, Miyazaki, Miyazaki 889-1692, Japan."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4706934?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4706934"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/6527653"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-09"
+  ],
+  "dateOfCreation": [
+    "2016-02-09"
+  ],
+  "dateOfRevision": [
+    "2016-02-11"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-24"
+  ],
+  "firstPublicationDate": [
+    "2015-12-24"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "id": [
+    "26904320"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904320"
+  ],
+  "pmcid": [
+    "PMC4745298"
+  ],
+  "doi": [
+    "10.1155/2016/9814928"
+  ],
+  "title": [
+    "Osteoporosis-Pseudoglioma in a Mauritanian Child due to a Novel Mutation in LRP5."
+  ],
+  "authorString": [
+    "Biha N, Ghaber SM, Hacen MM, Collet C."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Biha N"
+          ],
+          "firstName": [
+            "Noura"
+          ],
+          "lastName": [
+            "Biha"
+          ],
+          "initials": [
+            "N"
+          ],
+          "affiliation": [
+            "Rheumatology Department, Nouakchott Military Hospital, Mauritania; Faculté de Médecine de Nouakchott, Mauritania."
+          ]
+        },
+        {
+          "fullName": [
+            "Ghaber SM"
+          ],
+          "firstName": [
+            "S M"
+          ],
+          "lastName": [
+            "Ghaber"
+          ],
+          "initials": [
+            "SM"
+          ],
+          "affiliation": [
+            "Faculté de Médecine de Nouakchott, Mauritania; Service des Laboratoires, Centre Hospitalier National de Nouakchott, Mauritania."
+          ]
+        },
+        {
+          "fullName": [
+            "Hacen MM"
+          ],
+          "firstName": [
+            "M M"
+          ],
+          "lastName": [
+            "Hacen"
+          ],
+          "initials": [
+            "MM"
+          ],
+          "affiliation": [
+            "Service de Chirurgie Orthopédique, Hôpital Militaire de Nouakchott, Mauritania."
+          ]
+        },
+        {
+          "fullName": [
+            "Collet C"
+          ],
+          "firstName": [
+            "Corinne"
+          ],
+          "lastName": [
+            "Collet"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Assistance Publique-Hôpitaux de Paris, Hôpital Lariboisière, Laboratoire de Biochimie et de Biologie Moléculaire, Paris, France."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375900"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in genetics"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Genet"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Genet"
+          ],
+          "NLMid": [
+            "101583302"
+          ],
+          "ISSN": [
+            "2090-6544"
+          ],
+          "ESSN": [
+            "2090-6552"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "9814928"
+  ],
+  "abstractText": [
+    "Osteoporosis-pseudoglioma (OPPG) syndrome is a very rare autosomal recessive disorder, caused by mutations in the low-density lipoprotein receptor-related protein 5 (LRP5) gene. It manifests by severe juvenile osteoporosis with congenital or infancy-onset visual loss. We describe a case of OPPG due to novel mutation in LRP5 gene, occurring in a female Mauritanian child. This 10-year-old female child was born blind, and after then multiple fragility fractures appeared. PCR amplification and sequencing revealed a novel homozygous nonsense mutation in exon 10 of the LRP5 gene (c.2270G>A; pTrP757(⁎)); this mutation leads to the production of a truncated protein containing 757 amino acids instead of 1615, located in the third β-propeller domain of the LRP5 protein. Both parents were heterozygous for the mutation. This is the first case of the OPPG described in black Africans, which broadens the spectrum of LRP5 gene mutations in OPPG."
+  ],
+  "affiliation": [
+    "Rheumatology Department, Nouakchott Military Hospital, Mauritania; Faculté de Médecine de Nouakchott, Mauritania."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745298?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745298"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/9814928"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "omim"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-19"
+  ],
+  "firstPublicationDate": [
+    "2016-01-19"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

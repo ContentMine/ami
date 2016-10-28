@@ -1,0 +1,243 @@
+{
+  "id": [
+    "26885416"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26885416"
+  ],
+  "pmcid": [
+    "PMC4739215"
+  ],
+  "doi": [
+    "10.1155/2016/9515404"
+  ],
+  "title": [
+    "Primary Myelofibrosis Presenting as Extramedullary Hematopoiesis in a Transplanted Liver Graft: Case Report and Review of the Literature."
+  ],
+  "authorString": [
+    "Mohyuddin GR, Yacoub A."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Mohyuddin GR"
+          ],
+          "firstName": [
+            "Ghulam Rehman"
+          ],
+          "lastName": [
+            "Mohyuddin"
+          ],
+          "initials": [
+            "GR"
+          ],
+          "affiliation": [
+            "Department of Internal Medicine, Kansas University Medical Center, 3901 Rainbow Boulevard, Kansas City, KS 66103, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Yacoub A"
+          ],
+          "firstName": [
+            "Abdulraheem"
+          ],
+          "lastName": [
+            "Yacoub"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Hematology-Oncology, Kansas University Medical Center, 3901 Rainbow Boulevard, Kansas City, KS 66103, USA."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375901"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in hematology"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Hematol"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Hematol"
+          ],
+          "NLMid": [
+            "101576456"
+          ],
+          "ISSN": [
+            "2090-6560"
+          ],
+          "ESSN": [
+            "2090-6579"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "9515404"
+  ],
+  "abstractText": [
+    "Primary myelofibrosis (PMF) commonly results in extramedullary hematopoiesis (EMH) in the spleen and liver as well as a variety of other organs. We present a first report of a unique presentation of PMF in a liver transplant recipient patient as EMH in the transplanted liver graft. A 76-year-old man with history of cryptogenic cirrhosis received cadaveric liver transplantation in 1996. He maintained a normal graft function and stable hematologic parameters until 2013 when he presented with anemia and progressive fatigue. Extensive work-up did not identify the etiology of the recent decline in his hemoglobin; thus a liver biopsy was done which showed findings of EMH within the sinusoids with increased megakaryocytes, some with atypical morphology. A BM biopsy revealed a hypercellular marrow, moderately increased reticulin fibrosis, and features consistent with primary myelofibrosis. Abdominal imaging showed a normal-size spleen and did not identify any sites of EMH outside of the liver. The diagnosis of myelofibrosis was thus made, and this case demonstrated predominant tropism to a transplanted liver graft with absence of EMH elsewhere. We would thus like to emphasize that findings of EMH in subjects with no preexisting hematologic neoplasm should warrant close follow-up and assessment."
+  ],
+  "affiliation": [
+    "Department of Internal Medicine, Kansas University Medical Center, 3901 Rainbow Boulevard, Kansas City, KS 66103, USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4739215?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4739215"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/9515404"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-17"
+  ],
+  "dateOfCreation": [
+    "2016-02-17"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-17"
+  ],
+  "firstPublicationDate": [
+    "2016-01-17"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

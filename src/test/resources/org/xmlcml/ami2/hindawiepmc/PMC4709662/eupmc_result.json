@@ -1,0 +1,379 @@
+{
+  "id": [
+    "26839537"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26839537"
+  ],
+  "pmcid": [
+    "PMC4709662"
+  ],
+  "doi": [
+    "10.1155/2016/2405437"
+  ],
+  "title": [
+    "Dysfunctions in the Mature Dendritic Cells Are Associated with the Presence of Metastases of Colorectal Cancer in the Surrounding Lymph Nodes."
+  ],
+  "authorString": [
+    "Pryczynicz A, Cepowicz D, Zaręba K, Gryko M, Hołody-Zaręba J, Kędra B, Kemona A, Guzińska-Ustymowicz K."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Pryczynicz A"
+          ],
+          "firstName": [
+            "Anna"
+          ],
+          "lastName": [
+            "Pryczynicz"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-2786-7179",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of General Pathomorphology, Medical University of Bialystok, Waszyngtona 13, 15-276 Białystok, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Cepowicz D"
+          ],
+          "firstName": [
+            "Dariusz"
+          ],
+          "lastName": [
+            "Cepowicz"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "2nd Department of General and Gastroenterological Surgery, Medical University of Bialystok, M. Sklodowskiej-Curie 24 A, 15-276 Białystok, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Zaręba K"
+          ],
+          "firstName": [
+            "Konrad"
+          ],
+          "lastName": [
+            "Zaręba"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "2nd Department of General and Gastroenterological Surgery, Medical University of Bialystok, M. Sklodowskiej-Curie 24 A, 15-276 Białystok, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Gryko M"
+          ],
+          "firstName": [
+            "Mariusz"
+          ],
+          "lastName": [
+            "Gryko"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "2nd Department of General and Gastroenterological Surgery, Medical University of Bialystok, M. Sklodowskiej-Curie 24 A, 15-276 Białystok, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Hołody-Zaręba J"
+          ],
+          "firstName": [
+            "Joanna"
+          ],
+          "lastName": [
+            "Hołody-Zaręba"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Gynecology and Obstetrics, Śniadecki Memorial Hospital, M. Sklodowskiej-Curie 26, 15-276 Białystok, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Kędra B"
+          ],
+          "firstName": [
+            "Bogusław"
+          ],
+          "lastName": [
+            "Kędra"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "2nd Department of General and Gastroenterological Surgery, Medical University of Bialystok, M. Sklodowskiej-Curie 24 A, 15-276 Białystok, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Kemona A"
+          ],
+          "firstName": [
+            "Andrzej"
+          ],
+          "lastName": [
+            "Kemona"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-0893-2198",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of General Pathomorphology, Medical University of Bialystok, Waszyngtona 13, 15-276 Białystok, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Guzińska-Ustymowicz K"
+          ],
+          "firstName": [
+            "Katarzyna"
+          ],
+          "lastName": [
+            "Guzińska-Ustymowicz"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Department of General Pathomorphology, Medical University of Bialystok, Waszyngtona 13, 15-276 Białystok, Poland."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-2786-7179",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-0893-2198",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2370404"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Gastroenterology research and practice"
+          ],
+          "ISOAbbreviation": [
+            "Gastroenterol Res Pract"
+          ],
+          "medlineAbbreviation": [
+            "Gastroenterol Res Pract"
+          ],
+          "NLMid": [
+            "101475557"
+          ],
+          "ISSN": [
+            "1687-6121"
+          ],
+          "ESSN": [
+            "1687-630X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "2405437"
+  ],
+  "abstractText": [
+    "Dendritic cells play a key role in the antigen presentation and T cell activation. The aim of this study was a detailed analysis of the presence of mature dendritic cells (CD 83 positive) in colorectal cancer in correlation with selected clinicopathological parameters. The presence of mature dendritic cells (mDCs) was determined immunohistochemically using the anti-CD83 antibody. The morphometric analysis of the mDCs was performed in the normal colon wall adjacent to the cancerous tumor as well as in the front of the tumor and in the main mass of the cancerous tumor. Decrease in mDCs in the front and in the main tumor mass was observed. The increase in the number of mDCs in both of these locations was associated with the presence of metastases in the nearby lymph nodes (p < 0.05 and p < 0.01). Furthermore, the increase in the proportion of mDCs in the main tumor mass was associated with the presence of the invasion of tumor cells into the blood and lymph vessels (p < 0.01). The increase in the amount of mDCs in the cancerous tumor is associated with the invasiveness of the tumor and especially with the metastasis to the surrounding lymph nodes."
+  ],
+  "affiliation": [
+    "Department of General Pathomorphology, Medical University of Bialystok, Waszyngtona 13, 15-276 Białystok, Poland."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4709662?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4709662"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/2405437"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-03"
+  ],
+  "dateOfCreation": [
+    "2016-02-03"
+  ],
+  "dateOfRevision": [
+    "2016-02-05"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-29"
+  ],
+  "firstPublicationDate": [
+    "2015-12-29"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

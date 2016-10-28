@@ -8,6 +8,7 @@ import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPluginOption;
 import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cmine.files.ResourceLocation;
 import org.xmlcml.cmine.util.CellRenderer;
 
 public class SearchPluginOption extends AMIPluginOption {
@@ -39,7 +40,12 @@ public class SearchPluginOption extends AMIPluginOption {
 			return;
 		}
 		commandString.append(" --sr.search");
-		commandString.append(" "+AMIArgProcessor.DICTIONARY_RESOURCE+"/"+searchDictionary+".xml");
+		
+		// just letters and numbers? expand to resourceString
+		if (searchDictionary.toLowerCase().replaceAll("[a-z0-9]", "").length() == 0) {
+			searchDictionary = AMIArgProcessor.DICTIONARY_RESOURCE+"/"+searchDictionary+".xml";
+		}
+		commandString.append(" "+searchDictionary);
 		plugin = "search";
 //		commandString.append(plugin);
 //		commandString.append(searchDictionary);
@@ -65,17 +71,6 @@ public class SearchPluginOption extends AMIPluginOption {
 		return opt;
 	}
 
-//	protected String createFilterCommandString(String option) {
-//		String cmd = "--project "+projectDir;
-//		String xpathFlags = createXpathQualifier();
-//		option = dictionary;
-//		cmd += " --filter file(**/"+getPlugin(plugin)+"/"+option+"/results.xml)xpath("+resultXPathBase+xpathFlags+") ";
-//		cmd += " -o "+createSnippetsFilename(option)+"  ";
-//		LOG.debug("runFilterResultsXMLOptions: >>>> "+cmd);
-//		return cmd;
-//	}
-
-
 	protected void runMatchSummaryAndCount(String option) {
 		if (dictionary == null) {
 			resultXPathAttribute = "@word";
@@ -96,14 +91,6 @@ public class SearchPluginOption extends AMIPluginOption {
 		cellRenderer.setUseHrefWords(1, "_");
 		return cellRenderer;
 	}
-
-//	protected boolean matches(String pluginOptionName) {
-//		String pluginOptionTag0 = pluginOptionName.split(":")[0];
-//		String pluginOptionTag1 = pluginOptionName.split(":")[1];
-//		LOG.trace("TAG "+pluginOptionTag0+" : "+pluginOptionName);
-//		boolean ok = SEARCH.equals(pluginOptionTag0) || TAG.equals(pluginOptionTag0);
-//		return ok;
-//	}
 
 
 
