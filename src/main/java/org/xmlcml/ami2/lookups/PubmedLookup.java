@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cmine.lookup.AbstractLookup;
+import org.xmlcml.cproject.lookup.AbstractLookup;
 
 public class PubmedLookup extends AbstractLookup {
 

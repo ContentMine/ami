@@ -10,8 +10,8 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.cmine.lookup.AbstractLookup;
-import org.xmlcml.cmine.util.CMineUtil;
+import org.xmlcml.cproject.lookup.AbstractLookup;
+import org.xmlcml.cproject.util.CMineUtil;
 
 public class GBIFLookupTest {
 

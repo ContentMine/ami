@@ -7,8 +7,8 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.util.CMineTestFixtures;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
+import org.xmlcml.cproject.util.CMineTestFixtures;
 
 /** summary of file contents
  * 

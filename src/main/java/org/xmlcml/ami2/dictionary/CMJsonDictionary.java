@@ -9,7 +9,7 @@ import java.util.Map;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.vafer.jdeb.shaded.compress.io.FileUtils;
-import org.xmlcml.cmine.util.RectangularTable;
+import org.xmlcml.cproject.util.RectangularTable;
 import org.xmlcml.xml.XMLUtil;
 
 import com.google.gson.Gson;

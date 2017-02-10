@@ -6,8 +6,8 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIPluginOption;
 import org.xmlcml.ami2.plugins.search.SearchArgProcessor;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.util.CellRenderer;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
+import org.xmlcml.cproject.util.CellRenderer;
 
 public class WordPluginOption extends AMIPluginOption {
 

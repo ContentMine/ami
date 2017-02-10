@@ -2,8 +2,8 @@ package org.xmlcml.ami2.plugins.word;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.cmine.files.ResultsElementList;
+import org.xmlcml.cproject.files.ResultsElement;
+import org.xmlcml.cproject.files.ResultsElementList;
 
 public class WordResultsElementList extends ResultsElementList {
 

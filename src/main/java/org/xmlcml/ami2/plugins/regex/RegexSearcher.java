@@ -9,8 +9,8 @@ import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.MatcherResult;
-import org.xmlcml.cmine.files.ResultElement;
-import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cproject.files.ResultElement;
+import org.xmlcml.cproject.files.ResultsElement;
 
 public class RegexSearcher extends AMISearcher {
 

@@ -4,7 +4,7 @@ import nu.xom.Attribute;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cproject.files.ResultElement;
 import org.xmlcml.xml.XMLUtil;
 
 public class WordResultElement extends ResultElement {

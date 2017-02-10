@@ -16,7 +16,7 @@ import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlElement;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtu;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtus;
-import org.xmlcml.cmine.util.CMineUtil;
+import org.xmlcml.cproject.util.CMineUtil;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Lists;
@@ -124,7 +124,7 @@ public class SpeciesAnalyzer {
 				    fw.write(species+"="+result+NN);//appends the string to the file
 				    fw.close();
 				} catch(IOException ioe) {
-				    System.err.println("IOException: " + ioe.getMessage());
+				    LOG.error("IOException: " + ioe.getMessage());
 				}
 			} catch (IOException e) {
 				LOG.error("failed to lookup "+species+"; "+e);

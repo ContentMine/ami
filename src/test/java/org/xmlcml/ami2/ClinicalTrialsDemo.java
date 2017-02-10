@@ -10,7 +10,7 @@ import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.ami2.plugins.regex.RegexPlugin;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
 import org.xmlcml.ami2.wordutil.WordSetWrapper;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
 
 public class ClinicalTrialsDemo {
 

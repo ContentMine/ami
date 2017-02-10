@@ -1,7 +1,7 @@
 package org.xmlcml.ami2.plugins.phylotree;
 
-import org.xmlcml.cmine.files.ResultElement;
-import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cproject.files.ResultElement;
+import org.xmlcml.cproject.files.ResultsElement;
 import org.xmlcml.xml.XMLUtil;
 
 public class PhyloResultsElement extends ResultsElement {

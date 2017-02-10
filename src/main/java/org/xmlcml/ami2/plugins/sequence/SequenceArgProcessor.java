@@ -3,8 +3,8 @@ package org.xmlcml.ami2.plugins.sequence;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.cmine.args.ArgIterator;
-import org.xmlcml.cmine.args.ArgumentOption;
+import org.xmlcml.cproject.args.ArgIterator;
+import org.xmlcml.cproject.args.ArgumentOption;
 import org.xmlcml.euclid.IntRange;
 
 /** 

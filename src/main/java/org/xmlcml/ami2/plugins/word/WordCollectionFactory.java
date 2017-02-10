@@ -11,11 +11,11 @@ import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.wordutil.LuceneUtils;
 import org.xmlcml.ami2.wordutil.WordSetWrapper;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CTree;
-import org.xmlcml.cmine.files.ResultElement;
-import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.cmine.files.ResultsElementList;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
+import org.xmlcml.cproject.files.CTree;
+import org.xmlcml.cproject.files.ResultElement;
+import org.xmlcml.cproject.files.ResultsElement;
+import org.xmlcml.cproject.files.ResultsElementList;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableSortedMultiset;
@@ -100,7 +100,6 @@ public class WordCollectionFactory {
 		List<String> words = createWordList();
 		if (words == null) {
 			LOG.trace("no words found to extract");
-			System.err.print("!");
 			return;
 		}
 		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
@@ -127,7 +126,6 @@ public class WordCollectionFactory {
 			} else {
 				String msg = "No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory();
 				LOG.trace(msg);
-				System.err.print("!");
 			}
 		}
 		return createTransformedWords(rawWords);

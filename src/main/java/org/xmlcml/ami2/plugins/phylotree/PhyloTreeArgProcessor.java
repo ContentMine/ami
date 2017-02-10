@@ -13,9 +13,9 @@ import org.xmlcml.ami2.plugins.phylotree.nexml.NWKTree;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtu;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlTree;
-import org.xmlcml.cmine.args.ArgIterator;
-import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cproject.args.ArgIterator;
+import org.xmlcml.cproject.args.ArgumentOption;
+import org.xmlcml.cproject.files.ResultsElement;
 import org.xmlcml.graphics.svg.text.SVGPhrase;
 import org.xmlcml.norma.editor.Extraction;
 import org.xmlcml.norma.image.ocr.HOCRReader;
@@ -144,7 +144,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		try {
 			return phyloCore.mergeOCRAndPixelTree(infile);
 		} catch (Exception e) {
-			System.err.println("ERROR: "+e);
+			LOG.error("ERROR: "+e);
 			return false;
 		}
 	}

@@ -7,9 +7,9 @@ import org.apache.log4j.Logger;
 import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPluginOption;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.ResourceLocation;
-import org.xmlcml.cmine.util.CellRenderer;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
+import org.xmlcml.cproject.files.ResourceLocation;
+import org.xmlcml.cproject.util.CellRenderer;
 
 public class SearchPluginOption extends AMIPluginOption {
 

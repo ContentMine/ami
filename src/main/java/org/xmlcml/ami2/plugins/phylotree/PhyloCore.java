@@ -18,7 +18,7 @@ import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlElement;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNEXML;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNode;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlTree;
-import org.xmlcml.cmine.files.CTree;
+import org.xmlcml.cproject.files.CTree;
 import org.xmlcml.diagrams.phylo.PhyloTreePixelAnalyzer;
 import org.xmlcml.euclid.Real2Range;
 import org.xmlcml.euclid.RealRange;

@@ -12,8 +12,8 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CTree;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
+import org.xmlcml.cproject.files.CTree;
 import org.xmlcml.xml.XMLUtil;
 
 public class SimplePluginTest {

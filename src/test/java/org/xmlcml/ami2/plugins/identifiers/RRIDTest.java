@@ -12,7 +12,7 @@ import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.lookups.RRIDLookup;
 import org.xmlcml.ami2.plugins.identifier.IdentifierArgProcessor;
-import org.xmlcml.cmine.lookup.AbstractLookup;
+import org.xmlcml.cproject.lookup.AbstractLookup;
 import org.xmlcml.norma.NormaArgProcessor;
 
 

@@ -12,7 +12,7 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
 
 public class SequenceArgProcessorTest {
 	

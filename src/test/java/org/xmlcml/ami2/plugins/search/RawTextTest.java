@@ -7,7 +7,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.cmine.util.CMineTestFixtures;
+import org.xmlcml.cproject.util.CMineTestFixtures;
 import org.xmlcml.norma.Norma;
 
 public class RawTextTest {

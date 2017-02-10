@@ -12,11 +12,11 @@ import org.junit.Assert;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
 import org.xmlcml.ami2.plugins.CommandProcessor;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CTree;
-import org.xmlcml.cmine.files.ContentProcessor;
-import org.xmlcml.cmine.files.ResultsElementList;
-import org.xmlcml.cmine.util.CMineTestFixtures;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
+import org.xmlcml.cproject.files.CTree;
+import org.xmlcml.cproject.files.ContentProcessor;
+import org.xmlcml.cproject.files.ResultsElementList;
+import org.xmlcml.cproject.util.CMineTestFixtures;
 import org.xmlcml.xml.XMLUtil;
 
 public class AMIFixtures {

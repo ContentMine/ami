@@ -16,10 +16,10 @@ import org.xmlcml.ami2.plugins.search.SearchPluginOption;
 import org.xmlcml.ami2.plugins.sequence.SequencePluginOption;
 import org.xmlcml.ami2.plugins.species.SpeciesPluginOption;
 import org.xmlcml.ami2.plugins.word.WordPluginOption;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.OptionFlag;
-import org.xmlcml.cmine.files.PluginOption;
-import org.xmlcml.cmine.util.CellRenderer;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
+import org.xmlcml.cproject.files.OptionFlag;
+import org.xmlcml.cproject.files.PluginOption;
+import org.xmlcml.cproject.util.CellRenderer;
 
 public abstract class AMIPluginOption extends PluginOption {
 

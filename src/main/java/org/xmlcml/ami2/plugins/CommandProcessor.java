@@ -13,10 +13,10 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.ResultsAnalysis.SummaryType;
-import org.xmlcml.cmine.files.CProject;
-import org.xmlcml.cmine.files.ResourceLocation;
-import org.xmlcml.cmine.util.CellRenderer;
-import org.xmlcml.cmine.util.DataTablesTool;
+import org.xmlcml.cproject.files.CProject;
+import org.xmlcml.cproject.files.ResourceLocation;
+import org.xmlcml.cproject.util.CellRenderer;
+import org.xmlcml.cproject.util.DataTablesTool;
 import org.xmlcml.html.HtmlHtml;
 import org.xmlcml.html.HtmlTable;
 import org.xmlcml.html.HtmlTd;
@@ -248,7 +248,7 @@ public class CommandProcessor {
 
 	private static void help() {
 		System.err.println("Command processor: \n"
-				+ "   cmine projectDir [command [command]...]");
+				+ "   cproject projectDir [command [command]...]");
 	}
 
 }

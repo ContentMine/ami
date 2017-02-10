@@ -14,8 +14,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.wordutil.LuceneUtils;
-import org.xmlcml.cmine.files.CTree;
-import org.xmlcml.cmine.util.CMineTestFixtures;
+import org.xmlcml.cproject.files.CTree;
+import org.xmlcml.cproject.util.CMineTestFixtures;
 import org.xmlcml.xml.XMLUtil;
 
 

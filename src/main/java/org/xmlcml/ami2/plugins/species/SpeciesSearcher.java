@@ -8,9 +8,9 @@ import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.ResultElement;
-import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
+import org.xmlcml.cproject.files.ResultElement;
+import org.xmlcml.cproject.files.ResultsElement;
 
 import nu.xom.Element;
 

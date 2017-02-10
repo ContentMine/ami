@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
 
 public class AMIPlugin {
 
@@ -73,7 +73,7 @@ public class AMIPlugin {
 			argProcessor.parseArgs(args1);
 			argProcessor.runAndOutput();
 		} else {
-			System.err.println("Must give plugin to run: choose from: "+argProcessorNameByName.keySet());
+			LOG.error("Must give plugin to run: choose from: "+argProcessorNameByName.keySet());
 		}
 	}
 

@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cmine.lookup.DefaultStringDictionary;
+import org.xmlcml.cproject.lookup.DefaultStringDictionary;
 import org.xmlcml.xml.XMLUtil;
 
 import com.google.common.hash.BloomFilter;

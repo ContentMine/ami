@@ -11,7 +11,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMIPlugin;
-import org.xmlcml.cmine.files.ResourceLocation;
+import org.xmlcml.cproject.files.ResourceLocation;
 
 import com.google.common.collect.Multiset;
 

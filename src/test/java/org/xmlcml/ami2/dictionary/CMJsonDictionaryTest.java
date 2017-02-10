@@ -10,7 +10,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.vafer.jdeb.shaded.compress.io.FileUtils;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.cmine.util.RectangularTable;
+import org.xmlcml.cproject.util.RectangularTable;
 
 public class CMJsonDictionaryTest {
 

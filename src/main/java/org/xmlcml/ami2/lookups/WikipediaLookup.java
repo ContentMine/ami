@@ -10,8 +10,8 @@ import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cmine.lookup.AbstractLookup;
-import org.xmlcml.cmine.util.CMineUtil;
+import org.xmlcml.cproject.lookup.AbstractLookup;
+import org.xmlcml.cproject.util.CMineUtil;
 import org.xmlcml.euclid.IntArray;
 
 import com.google.gson.JsonElement;
