@@ -4,14 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	    <ami.version>0.3.3</ami.version>
-	    <!--  upstream -->
-	    <norma.version>0.3.5</norma.version>
-	    <diagramanalyzer.version>0.3.5</diagramanalyzer.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <ami.version>0.3.3</ami.version>
+        <!--  upstream -->
+        <norma.version>0.3.5</norma.version>
+        <diagramanalyzer.version>0.3.5</diagramanalyzer.version>
 <!-- this should not be necessary -->
-	    <guava.version>18.0</guava.version>
-	    
+        <guava.version>18.0</guava.version>
+        
     </properties>
 
     <groupId>org.contentmine</groupId>
@@ -19,7 +19,6 @@
     <version>${ami.version}</version>
     <description>Plugin architecture for converting Normalized science to Semantic science</description>
     <name>AMI</name>
-    
 
 
     <build>
