@@ -116,7 +116,7 @@ public class SpeciesAnalyzer {
 			String result = null;
 			try {
 				result = lookup.lookup(species);
-				System.out.println(result);
+				LOG.debug(result);
 				wikidataBySpecies.put(species, result);
 				try
 				{

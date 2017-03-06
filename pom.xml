@@ -5,10 +5,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <ami.version>0.3.3</ami.version>
+        <ami.version>0.3.6</ami.version>
         <!--  upstream -->
-        <norma.version>0.3.5</norma.version>
-        <diagramanalyzer.version>0.3.5</diagramanalyzer.version>
+        <norma.version>0.3.8</norma.version>
+        <diagramanalyzer.version>0.3.6</diagramanalyzer.version>
 <!-- this should not be necessary -->
         <guava.version>18.0</guava.version>
         
@@ -279,17 +279,20 @@
             <scope>test</scope>
         </dependency>
 
+<!-- 
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.3.2</version>
         </dependency>
-            
+-->            
+<!--  already in euclid
         <dependency>
             <groupId>blogspot.software-and-algorithms</groupId>
             <artifactId>stern-library</artifactId>
             <version>0.1</version>
         </dependency>
+        -->
         <dependency>
             <groupId>org.vafer</groupId>
             <artifactId>jdeb</artifactId>
@@ -299,13 +302,15 @@
         </dependency>
                 <!-- https://github.com/jayway/JsonPath/blob/master/README.md -->
                 <!--  shouldn't be needed as it's in Norma -->
+                <!-- 
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path</artifactId>
             <version>2.0.0</version>
         </dependency>
+        -->
         <dependency>
-        <!-- https://github.com/uniVocity/univocity-parsers -->
+        <!-- https://github.com/uniVocity/univocity-parsers // needed for JAX -->
             <groupId>com.univocity</groupId>
             <artifactId>univocity-parsers</artifactId>
             <version>1.5.6</version>
