@@ -318,5 +318,16 @@
         </dependency>        
         
     </dependencies>
+    
+    <repositories>
+    <repository>
+        <id>cm-pom</id>
+        <url>https://raw.github.com/ContentMine/cm-pom/mvn-repo/</url>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+        </snapshots>
+    </repository>
+    </repositories>
 
 </project>
