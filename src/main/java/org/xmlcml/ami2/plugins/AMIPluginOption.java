@@ -127,7 +127,7 @@ public abstract class AMIPluginOption extends PluginOption {
 	private void runFilterResultsXMLOptions(String option) {
 		String filterCommandString = createFilterCommandString(option);
 		DefaultArgProcessor.CM_LOG.debug("filter: "+filterCommandString);
-		System.out.print(option);
+		LOG.debug(option);
 		new DefaultArgProcessor(filterCommandString).runAndOutput();
 	}
 
@@ -137,7 +137,7 @@ public abstract class AMIPluginOption extends PluginOption {
 		cmd += " --filter file(**/"+getPlugin(plugin)+"/"+getOption(option)+"/results.xml)xpath("+resultXPathBase+xpathFlags+") ";
 		cmd += " -o "+createSnippetsFilename(option)+"  ";
 		DefaultArgProcessor.CM_LOG.debug("runFilterResultsXMLOptions: "+cmd);
-		System.out.print(option);
+		LOG.debug(option);
 		return cmd;
 	}
 
