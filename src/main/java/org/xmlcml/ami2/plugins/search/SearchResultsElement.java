@@ -2,7 +2,7 @@ package org.xmlcml.ami2.plugins.search;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cproject.files.ResultsElement;
 
 public class SearchResultsElement extends ResultsElement {
 

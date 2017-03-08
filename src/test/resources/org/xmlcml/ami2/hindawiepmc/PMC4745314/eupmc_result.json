@@ -1,0 +1,311 @@
+{
+  "id": [
+    "26904330"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904330"
+  ],
+  "pmcid": [
+    "PMC4745314"
+  ],
+  "doi": [
+    "10.1155/2016/6961202"
+  ],
+  "title": [
+    "Essure Surgical Removal and Subsequent Resolution of Chronic Pelvic Pain: A Case Report and Review of the Literature."
+  ],
+  "authorString": [
+    "Lora Alcantara I, Rezai S, Kirby C, Chadee A, Henderson CE, Elmadjian M."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Lora Alcantara I"
+          ],
+          "firstName": [
+            "Isamarie"
+          ],
+          "lastName": [
+            "Lora Alcantara"
+          ],
+          "initials": [
+            "I"
+          ],
+          "affiliation": [
+            "Department of Obstetrics and Gynecology, Lincoln Medical and Mental Health Center, Bronx, NY 10451, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Rezai S"
+          ],
+          "firstName": [
+            "Shadi"
+          ],
+          "lastName": [
+            "Rezai"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Obstetrics and Gynecology, Lincoln Medical and Mental Health Center, Bronx, NY 10451, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Kirby C"
+          ],
+          "firstName": [
+            "Catherine"
+          ],
+          "lastName": [
+            "Kirby"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "West Virginia School of Osteopathic Medicine (WVSOM), Lewisburg, WV 24901, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Chadee A"
+          ],
+          "firstName": [
+            "Annika"
+          ],
+          "lastName": [
+            "Chadee"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Obstetrics and Gynecology, Lincoln Medical and Mental Health Center, Bronx, NY 10451, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Henderson CE"
+          ],
+          "firstName": [
+            "Cassandra E"
+          ],
+          "lastName": [
+            "Henderson"
+          ],
+          "initials": [
+            "CE"
+          ],
+          "affiliation": [
+            "Department of Obstetrics and Gynecology, Lincoln Medical and Mental Health Center, Bronx, NY 10451, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Elmadjian M"
+          ],
+          "firstName": [
+            "Malvina"
+          ],
+          "lastName": [
+            "Elmadjian"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Obstetrics and Gynecology, Lincoln Medical and Mental Health Center, Bronx, NY 10451, USA."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375672"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in obstetrics and gynecology"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Obstet Gynecol"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Obstet Gynecol"
+          ],
+          "NLMid": [
+            "101576454"
+          ],
+          "ISSN": [
+            "2090-6684"
+          ],
+          "ESSN": [
+            "2090-6692"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "6961202"
+  ],
+  "abstractText": [
+    "Background. Hysteroscopic tubal sterilization (Essure) is a minimally invasive option for permanent contraception with high reported rates of patient satisfaction. A small percentage of these women subsequently choose to have the tubal inserts removed due to regret or perceived side effects such as late-onset pelvic pain secondary to placement of the Essure device. Case. A twenty-nine-year-old woman G4P4014 presented with a two-year complaint of chronic pelvic pain and dyspareunia after the hysteroscopic placement of an Essure device for sterilization. On reviewing the images of the HSG, it was noted that although tubal occlusion was confirmed, the left Essure coil appeared curved on itself in an elliptical fashion and did not seem to follow the expected anatomic trajectory of the fallopian tube. The patient reported resolution of chronic pelvic pain following laparoscopic removal of Essure device. Conclusion. A misplaced Essure device should be considered in the differential diagnosis of chronic pelvic pain in women who had difficult placement of the device. In addition to demonstrating tubal occlusion, careful examination of the configuration of the Essure microinserts on HSG examination provides valuable information in patients with pelvic pain after Essure placement."
+  ],
+  "affiliation": [
+    "Department of Obstetrics and Gynecology, Lincoln Medical and Mental Health Center, Bronx, NY 10451, USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745314?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745314"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/6961202"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-24"
+  ],
+  "firstPublicationDate": [
+    "2016-01-24"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "id": [
+    "26881168"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26881168"
+  ],
+  "pmcid": [
+    "PMC4736587"
+  ],
+  "doi": [
+    "10.1155/2016/9684910"
+  ],
+  "title": [
+    "Trichohepatoenteric Syndrome or Syndromic Diarrhea-Report of Three Members in a Family, First Report from Iran."
+  ],
+  "authorString": [
+    "Mahjoub FE, Imanzadeh F, Mahdavi Izadi S, Nahali Moghaddam A."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Mahjoub FE"
+          ],
+          "firstName": [
+            "F E"
+          ],
+          "lastName": [
+            "Mahjoub"
+          ],
+          "initials": [
+            "FE"
+          ],
+          "affiliation": [
+            "Imam Khomeini Hospital Complex, Tehran University of Medical Sciences, Tehran 14197-33141, Iran; Maternal, Fetal and Neonatal Research Center, Tehran University of Medical Sciences, Tehran 14197-33141, Iran; Pediatric Nephrology Research Center, Tehran University of Medical Sciences, Tehran 14197-33151, Iran; Roshan Azma Pathobiology Private Laboratory, Tehran 15149-35754, Iran."
+          ]
+        },
+        {
+          "fullName": [
+            "Imanzadeh F"
+          ],
+          "firstName": [
+            "F"
+          ],
+          "lastName": [
+            "Imanzadeh"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "Pediatric Gastroenterology, Mofid Children Hospital, Shahid Beheshti University of Medical Sciences, Tehran 15514-15468, Iran."
+          ]
+        },
+        {
+          "fullName": [
+            "Mahdavi Izadi S"
+          ],
+          "firstName": [
+            "S"
+          ],
+          "lastName": [
+            "Mahdavi Izadi"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Imam Khomeini Hospital Complex, Tehran University of Medical Sciences, Tehran 14197-33141, Iran."
+          ]
+        },
+        {
+          "fullName": [
+            "Nahali Moghaddam A"
+          ],
+          "firstName": [
+            "A"
+          ],
+          "lastName": [
+            "Nahali Moghaddam"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Roshan Azma Pathobiology Private Laboratory, Tehran 15149-35754, Iran."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375676"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in pathology"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Pathol"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Pathol"
+          ],
+          "NLMid": [
+            "101576609"
+          ],
+          "ISSN": [
+            "2090-6781"
+          ],
+          "ESSN": [
+            "2090-679X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "9684910"
+  ],
+  "abstractText": [
+    "Introduction. Intractable diarrhea of infancy (IDI) includes several types of early onset diarrhea; one of the rare etiologies is trichohepatoenteric (THE) syndrome, also known as syndromic diarrhea (SD) which was primarily described by Stankler et al. Hereby we report a family with several affected members which to our knowledge is the first case report from Iran. Report of Cases. A three-year-old boy referred with short stature, poor weight gain, and intermittent steatotic diarrhea to our center. He was born to healthy, relative parents (cousins). He did not gain any weight after four months of age and began having intermittent steatotic diarrhea, abdominal distension, and fever. He was hospitalized several times. Two other children in the family also showed somewhat similar symptoms. Two sweat tests were negative for cystic fibrosis. Workup for Celiac disease was performed several times which was negative; however, gluten-free diet was tried several times which was not effective. Workup for Hirschsprung's disease was performed but colon was ganglionic. Evidence of liver involvement was approved by elevated liver enzymes and coarse echo of liver on sonography. Discussion. Trichoenterohepatic syndrome should be put in mind in cases of intractable diarrhea presenting in a family with several affected members. Early diagnosis would save patients from unnecessary workups."
+  ],
+  "affiliation": [
+    "Imam Khomeini Hospital Complex, Tehran University of Medical Sciences, Tehran 14197-33141, Iran; Maternal, Fetal and Neonatal Research Center, Tehran University of Medical Sciences, Tehran 14197-33141, Iran; Pediatric Nephrology Research Center, Tehran University of Medical Sciences, Tehran 14197-33151, Iran; Roshan Azma Pathobiology Private Laboratory, Tehran 15149-35754, Iran."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736587?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736587"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/9684910"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-16"
+  ],
+  "dateOfCreation": [
+    "2016-02-16"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-06"
+  ],
+  "firstPublicationDate": [
+    "2016-01-06"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

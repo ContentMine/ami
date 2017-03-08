@@ -1,0 +1,328 @@
+{
+  "id": [
+    "26904331"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904331"
+  ],
+  "pmcid": [
+    "PMC4745307"
+  ],
+  "doi": [
+    "10.1155/2016/7816306"
+  ],
+  "title": [
+    "Prenatal Ultrasound Diagnosis of a Cyst of the Oral Cavity: An Unusual Case of Thyroglossal Duct Cyst Located on the Tongue Base."
+  ],
+  "authorString": [
+    "Rodríguez Tárrega E, Fuster Rojas S, Gómez Portero R, Roig Boronat S, Pérez Martínez G, Zamora Prado J, Perales Marín A."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Rodríguez Tárrega E"
+          ],
+          "firstName": [
+            "E"
+          ],
+          "lastName": [
+            "Rodríguez Tárrega"
+          ],
+          "initials": [
+            "E"
+          ],
+          "affiliation": [
+            "Department of Obstetrics and Gynaecology, University Hospital La Fe, Avinguda de Fernando Abril Martorell, No. 106, 46026 Valencia, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Fuster Rojas S"
+          ],
+          "firstName": [
+            "S"
+          ],
+          "lastName": [
+            "Fuster Rojas"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Obstetrics and Gynaecology, University Hospital La Fe, Avinguda de Fernando Abril Martorell, No. 106, 46026 Valencia, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Gómez Portero R"
+          ],
+          "firstName": [
+            "R"
+          ],
+          "lastName": [
+            "Gómez Portero"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "Department of Obstetrics and Gynaecology, University Hospital La Fe, Avinguda de Fernando Abril Martorell, No. 106, 46026 Valencia, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Roig Boronat S"
+          ],
+          "firstName": [
+            "S"
+          ],
+          "lastName": [
+            "Roig Boronat"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Obstetrics and Gynaecology, University Hospital La Fe, Avinguda de Fernando Abril Martorell, No. 106, 46026 Valencia, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Pérez Martínez G"
+          ],
+          "firstName": [
+            "G"
+          ],
+          "lastName": [
+            "Pérez Martínez"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Department of Obstetrics and Gynaecology, University Hospital La Fe, Avinguda de Fernando Abril Martorell, No. 106, 46026 Valencia, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Zamora Prado J"
+          ],
+          "firstName": [
+            "J"
+          ],
+          "lastName": [
+            "Zamora Prado"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Obstetrics and Gynaecology, University Hospital La Fe, Avinguda de Fernando Abril Martorell, No. 106, 46026 Valencia, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Perales Marín A"
+          ],
+          "firstName": [
+            "A"
+          ],
+          "lastName": [
+            "Perales Marín"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Obstetrics and Gynaecology, University Hospital La Fe, Avinguda de Fernando Abril Martorell, No. 106, 46026 Valencia, Spain."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375672"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in obstetrics and gynecology"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Obstet Gynecol"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Obstet Gynecol"
+          ],
+          "NLMid": [
+            "101576454"
+          ],
+          "ISSN": [
+            "2090-6684"
+          ],
+          "ESSN": [
+            "2090-6692"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "7816306"
+  ],
+  "abstractText": [
+    "We describe a case of a lingual thyroglossal duct cyst diagnosed prenatally by ultrasound at 26 weeks of gestation. The follow-up ultrasound scans revealed no changes in the cyst measurement. Surgical treatment was performed without any complication 72 hours after delivery with good results."
+  ],
+  "affiliation": [
+    "Department of Obstetrics and Gynaecology, University Hospital La Fe, Avinguda de Fernando Abril Martorell, No. 106, 46026 Valencia, Spain."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745307?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745307"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/7816306"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-21"
+  ],
+  "firstPublicationDate": [
+    "2016-01-21"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

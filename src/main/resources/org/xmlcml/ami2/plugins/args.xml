@@ -1,4 +1,6 @@
-<argList name="ami" version="0.2.24">
+<argList name="ami" version="0.2.25p">
+
+  <p>201603-29 tweaks to allow Norma HTML to run</p>
 
   <p>201603-29 separated search from word statistics (some bugs might remain)</p>
   <p>201603-20 minor fixes following norma sections</p>

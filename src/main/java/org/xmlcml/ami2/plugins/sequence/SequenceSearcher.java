@@ -3,7 +3,7 @@ package org.xmlcml.ami2.plugins.sequence;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
-import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cproject.files.ResultElement;
 
 public class SequenceSearcher extends AMISearcher {
 

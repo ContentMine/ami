@@ -1,0 +1,260 @@
+{
+  "id": [
+    "26881158"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26881158"
+  ],
+  "pmcid": [
+    "PMC4736312"
+  ],
+  "doi": [
+    "10.1155/2016/9740403"
+  ],
+  "title": [
+    "Rare Case of Methemoglobinemia Complicating Pregnancy."
+  ],
+  "authorString": [
+    "Verma S, Sachdeva P, Gandhi G."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Verma S"
+          ],
+          "firstName": [
+            "S"
+          ],
+          "lastName": [
+            "Verma"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Maulana Azad Medical College, Delhi 110002, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Sachdeva P"
+          ],
+          "firstName": [
+            "P"
+          ],
+          "lastName": [
+            "Sachdeva"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "Maulana Azad Medical College, Delhi 110002, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Gandhi G"
+          ],
+          "firstName": [
+            "G"
+          ],
+          "lastName": [
+            "Gandhi"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Maulana Azad Medical College, Delhi 110002, India."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375672"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in obstetrics and gynecology"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Obstet Gynecol"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Obstet Gynecol"
+          ],
+          "NLMid": [
+            "101576454"
+          ],
+          "ISSN": [
+            "2090-6684"
+          ],
+          "ESSN": [
+            "2090-6692"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "9740403"
+  ],
+  "abstractText": [
+    "A patient at 38 weeks of gestation when taken for emergency cesarean section had her oxygen saturation of 66 to 70% (by saturation probe on monitor) in operation theatre. She was otherwise asymptomatic but her oxygen saturation was persistently low on the monitors. Her arterial blood gas analysis showed all parameters to be normal. Her electrocardiography was normal. Her surgery was imperative but due to her reduced oxygen saturation she became a high-risk case. In presence of senior consultants of anesthesia and gynecology and under high-risk consent she had an uneventful cesarean delivery. Physician and cardiologist opinions were sought thereafter. The outcomes and the results of our efforts to find the etiology of her reduced saturation on monitors despite being clinically asymptomatic lead to the disclosure of this rare hemoglobinopathy. Mother and baby had uneventful course after delivery and were discharged well."
+  ],
+  "affiliation": [
+    "Maulana Azad Medical College, Delhi 110002, India."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736312?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736312"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/9740403"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-16"
+  ],
+  "dateOfCreation": [
+    "2016-02-16"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-04"
+  ],
+  "firstPublicationDate": [
+    "2016-01-04"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

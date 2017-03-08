@@ -1,0 +1,277 @@
+{
+  "id": [
+    "26904316"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904316"
+  ],
+  "pmcid": [
+    "PMC4745306"
+  ],
+  "doi": [
+    "10.1155/2016/4852907"
+  ],
+  "title": [
+    "An Ectopic ACTH Secreting Metastatic Parotid Tumour."
+  ],
+  "authorString": [
+    "Dacruz T, Kalhan A, Rashid M, Obuobie K."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Dacruz T"
+          ],
+          "firstName": [
+            "Thomas"
+          ],
+          "lastName": [
+            "Dacruz"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "University Hospital of Wales, Cardiff, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Kalhan A"
+          ],
+          "firstName": [
+            "Atul"
+          ],
+          "lastName": [
+            "Kalhan"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Diabetes & Endocrinology, Royal Glamorgan Hospital, Mid Glamorgan CF72 8XR, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Rashid M"
+          ],
+          "firstName": [
+            "Majid"
+          ],
+          "lastName": [
+            "Rashid"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Royal Gwent Hospital, Newport, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Obuobie K"
+          ],
+          "firstName": [
+            "Kofi"
+          ],
+          "lastName": [
+            "Obuobie"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Royal Gwent Hospital, Newport, UK."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375667"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in endocrinology"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Endocrinol"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Endocrinol"
+          ],
+          "NLMid": [
+            "101576457"
+          ],
+          "ISSN": [
+            "2090-6501"
+          ],
+          "ESSN": [
+            "2090-651X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "4852907"
+  ],
+  "abstractText": [
+    "A 60-year old woman presented with features of Cushing's syndrome (CS) secondary to an ectopic adrenocorticotropic hormone (ACTH) secreting metastatic parotid tumour 3 years after excision of the original tumour. She subsequently developed fatal intestinal perforation and unfortunately died despite best possible medical measures. Ectopic ACTH secretion accounts for 5-10% of all patients presenting with ACTH dependent hypercortisolism; small cell carcinoma of lung (SCLC) and neuroendocrine tumours (NET) account for the majority of such cases. Although there are 4 previous case reports of ectopic ACTH secreting salivary tumours in literature, to our knowledge this is the first published case report in which the CS developed after 3 years of what was deemed as a successful surgical excision of primary salivary tumour. Our patient initially had nonspecific symptoms which may have contributed to a delay in diagnosis. Perforation of sigmoid colon is a recognised though underdiagnosed complication associated with steroid therapy and hypercortisolism. This case demonstrates the challenges faced in diagnosis as well as management of patients with CS apart from the practical difficulties faced while trying to identify source of ectopic ACTH."
+  ],
+  "affiliation": [
+    "University Hospital of Wales, Cardiff, UK."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745306?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745306"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/4852907"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-20"
+  ],
+  "firstPublicationDate": [
+    "2016-01-20"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

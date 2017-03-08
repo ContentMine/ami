@@ -10,7 +10,7 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.cmine.args.log.CMineLog;
+import org.xmlcml.cproject.args.log.CMineLog;
 
 /** analysis of CTreeLog output which might later go in argProcessor.summary actions.
  * 

@@ -8,16 +8,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import net.minidev.json.JSONArray;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cmine.lookup.AbstractLookup;
+import org.xmlcml.cproject.lookup.AbstractLookup;
+import org.xmlcml.cproject.util.CMineUtil;
 import org.xmlcml.euclid.IntArray;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
+
+import net.minidev.json.JSONArray;
 
 public class WikipediaLookup extends AbstractLookup {
 
@@ -122,7 +123,7 @@ Mar 14 (9 days ago)
 		JsonElement jsonElement = this.getWikidataSpeciesJSONElement(names);
 		if (jsonElement != null) {
 			String jsonPath = DOLLAR_PROPS+property;
-			JSONArray jsonArray = (JSONArray) getObjectForJsonPath(jsonElement.toString(), jsonPath);
+			JSONArray jsonArray = (JSONArray) CMineUtil.getObjectForJsonPath(jsonElement.toString(), jsonPath);
 			Map<String, Integer> namesToIdMap = new HashMap<String, Integer>();
 			for (int i = 0; i < jsonArray.size(); i++) {
 				JSONArray jsonArray1 = (JSONArray) jsonArray.get(i);

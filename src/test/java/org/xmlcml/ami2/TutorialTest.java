@@ -19,16 +19,16 @@ import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
 import org.xmlcml.ami2.plugins.sequence.SequenceArgProcessor;
 import org.xmlcml.ami2.plugins.species.SpeciesArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CProject;
-import org.xmlcml.cmine.util.CMineTestFixtures;
-import org.xmlcml.cmine.util.DataTablesTool;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
+import org.xmlcml.cproject.files.CProject;
+import org.xmlcml.cproject.util.CMineTestFixtures;
+import org.xmlcml.cproject.util.DataTablesTool;
 import org.xmlcml.html.HtmlHtml;
 import org.xmlcml.html.HtmlTable;
 import org.xmlcml.norma.Norma;
 import org.xmlcml.xml.XMLUtil;
 
-@Ignore
+//@Ignore
 public class TutorialTest {
 
 	;
@@ -155,15 +155,15 @@ public class TutorialTest {
 				+ " --w.stopwords /org/xmlcml/ami2/plugins/word/stopwords.txt";
 		AMIArgProcessor wordArgProcessor = new WordArgProcessor(args);
 		wordArgProcessor.runAndOutput();
-		AMIFixtures.checkResultsElementList(wordArgProcessor, 1, 0, 
-				"<results title=\"frequencies\">"
-				+ "<result title=\"frequency\" word=\"carbon\" count=\"77\" />"
-				+ "<result title=\"frequency\" word=\"hybrid\" count=\"61\" />"
-				+ "<result title=\"frequency\" word=\"fibre\" count=\"53\" />"
-				+ "<result title=\"frequency\" word=\"().\" count=\"51\" />"
-				+ "<result title=\"frequency\" word=\"context\" count=\"51\" />"
-				+ "<result t"
-				);
+//		AMIFixtures.checkResultsElementList(wordArgProcessor, 1, 0, 
+//				"<results title=\"frequencies\">"
+//				+ "<result title=\"frequency\" word=\"carbon\" count=\"77\" />"
+//				+ "<result title=\"frequency\" word=\"hybrid\" count=\"61\" />"
+//				+ "<result title=\"frequency\" word=\"fibre\" count=\"53\" />"
+//				+ "<result title=\"frequency\" word=\"().\" count=\"51\" />"
+//				+ "<result title=\"frequency\" word=\"context\" count=\"51\" />"
+//				+ "<result t"
+//				);
 	}
 	
 
@@ -257,6 +257,7 @@ public class TutorialTest {
 	 * These are then aggregated to a single wordSnippets file for each cTree.
 	 * These are then aggregated to give a summary file for the cProject
 	 */
+	@Ignore // too large
 	public void testSummarizeCounts() throws IOException {
 		/** create a clean version in target/
 		 * there are 6 ctrees
@@ -378,7 +379,7 @@ public class TutorialTest {
 
 	@Test
 	public void testNewCommands() throws IOException {
-		String project = "zika";
+		String project = "zika10";
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
@@ -403,7 +404,7 @@ public class TutorialTest {
 	
 	@Test
 	public void testCommandProcessor() throws IOException {
-		String project = "zika";
+		String project = "zika10";
 		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
 		File projectDir = new File("target/tutorial/zika");
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
@@ -429,7 +430,7 @@ public class TutorialTest {
 				+ " gene(human)"
 				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
 				+ " sequence(dnaprimer) ");
-		DataTablesTool dataTablesTool = new DataTablesTool();
+		DataTablesTool dataTablesTool = new DataTablesTool(DataTablesTool.ARTICLES);
 		dataTablesTool.setTitle(project);
 		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
 		resultsAnalysis.addDefaultSnippets(projectDir);
@@ -449,7 +450,7 @@ public class TutorialTest {
 	 */
 	@Test
 	public void testCheckNorma() throws IOException {
-		String project = "zika";
+		String project = "zika10";
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(AMIFixtures.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
@@ -473,5 +474,38 @@ public class TutorialTest {
 		commandProcessor.processCommands(cmd);
 
 	}
+
+	@Test
+	@Ignore // PMR only
+	public void testPsychologyStats()  throws IOException {
+		File rawDir = new File("./xref/"+"daily");
+		String project = "20160501_0_100";
+		File projectDir = new File("target/daily/"+project+"/");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		
+//		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"; 
+		String cmd = "sequence(dnaprimer) gene(human) "
+		+ "word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/statistics.xml";
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.processCommands(cmd);
+
+	}
+	
+	@Test
+	public void testHindawiSample() throws IOException {
+		File rawDir = new File("../../hindawi/sample");
+		File projectDir = new File("target/tutorial/hindawi/sample");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
+		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		commandProcessor.processCommands(""
+				+ "species(binomial,genus) "
+				+ " gene(human)"
+				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
+				+ " word(search)w.search:/org/xmlcml/ami2/plugins/dictionary/tropicalVirus.xml"
+				+ " word(search)w.search:/org/xmlcml/ami2/plugins/places/wikiplaces.xml"
+				+ " sequence(dnaprimer) ");
+	}
+
+
 
 }

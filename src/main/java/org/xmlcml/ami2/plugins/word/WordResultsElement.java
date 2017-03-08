@@ -9,8 +9,8 @@ import java.util.Set;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
-import org.xmlcml.cmine.files.ResultElement;
-import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cproject.files.ResultElement;
+import org.xmlcml.cproject.files.ResultsElement;
 import org.xmlcml.euclid.IntArray;
 import org.xmlcml.euclid.IntRange;
 import org.xmlcml.euclid.RealArray;
@@ -111,7 +111,7 @@ public class WordResultsElement extends ResultsElement {
 	}
 
 	HtmlElement createHtmlElement(AMIArgProcessor wordArgProcessor, IntArray fontSizeIntArray, Set<Integer> fontSizeSet) {
-		HtmlElement html = new HtmlHtml();
+		HtmlHtml html = HtmlHtml.createUTF8Html();
 		HtmlStyle style = new HtmlStyle();
 		html.appendChild(style);
 		style.addCss("* { font-family : helvetica;}");
@@ -119,10 +119,8 @@ public class WordResultsElement extends ResultsElement {
 			String cssStyle = ".font"+fontSize+" { font-size : "+fontSize+"; }";
 			style.addCss(cssStyle);
 		}
-		HtmlBody body = new HtmlBody();
-		html.appendChild(body);
 		HtmlP p = new HtmlP();
-		body.appendChild(p);
+		html.ensureBody().appendChild(p);
 		addWordsWithFontSizesInSpans(fontSizeIntArray, p);
 		return html;
 	}

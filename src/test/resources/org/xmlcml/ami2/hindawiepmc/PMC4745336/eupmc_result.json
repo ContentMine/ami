@@ -1,0 +1,240 @@
+{
+  "id": [
+    "26904361"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904361"
+  ],
+  "pmcid": [
+    "PMC4745336"
+  ],
+  "doi": [
+    "10.1155/2016/4257180"
+  ],
+  "title": [
+    "Prevention of Mother-to-Child Transmission of HIV/AIDS: Perception of Health Care Workers in Rural Areas of Oyo State."
+  ],
+  "authorString": [
+    "Aishat U, Olubunmi A."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Aishat U"
+          ],
+          "firstName": [
+            "Usman"
+          ],
+          "lastName": [
+            "Aishat"
+          ],
+          "initials": [
+            "U"
+          ],
+          "affiliation": [
+            "Department of Community Medicine, LAUTECH Teaching Hospital, PMB 5000, Osogbo, Osun State, Nigeria."
+          ]
+        },
+        {
+          "fullName": [
+            "Olubunmi A"
+          ],
+          "firstName": [
+            "Ayinde"
+          ],
+          "lastName": [
+            "Olubunmi"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "HIV/AIDS Unit, Oyo State Ministry of Health, Ibadan, Nigeria."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375810"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Scientifica"
+          ],
+          "ISOAbbreviation": [
+            "Scientifica (Cairo)"
+          ],
+          "medlineAbbreviation": [
+            "Scientifica (Cairo)"
+          ],
+          "NLMid": [
+            "101589932"
+          ],
+          "ESSN": [
+            "2090-908X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "4257180"
+  ],
+  "abstractText": [
+    "Introduction. Proper implementation of prevention of mother-to-child transmission (PMTCT) services requires adequate knowledge and appropriate attitudes and practices on the part of the health care providers especially in rural areas where access to health care delivery is very limited in Oyo State. Materials and Methods. This is a descriptive cross-sectional survey of 350 health care workers in a two-stage sampling technique. Data was obtained using interviewer-administered, pretested, semistructured questionnaires. The data was analyzed using Epi Info software version 7. Results. The knowledge of PMTCT of HIV was poor among the health care workers (69.1%). However, more than half (58.3%) had good attitudes towards PMTCT of HIV/AIDS. Predictors of good knowledge of PMTCT were religion [AOR = 1.6, 95% CI (1.1-2.6)], cadre of occupation [AOR = 10.2, 95% CI (2.9-35.1)], and length of service [AOR = 4.3, 95% CI (2.3-19.4)]. Predictors of good attitude towards PMTCT were length of service in the current hospital [AOR = 2.8, 95% CI (1.5-5.2)] and cadre of occupation [AOR = 3.9, 95% CI (1.28-11.9)]. Conclusion. Despite poor knowledge of PMTCT of HIV/AIDS among the health care workers, the attitude towards PMTCT of HIV/AIDS was good. There is need for the involvement of the stakeholders in bridging the gap between knowledge of and attitude towards prevention of MTCT of HIV/AIDS among health care workers in the rural areas."
+  ],
+  "affiliation": [
+    "Department of Community Medicine, LAUTECH Teaching Hospital, PMB 5000, Osogbo, Osun State, Nigeria."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745336?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745336"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/4257180"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-19"
+  ],
+  "firstPublicationDate": [
+    "2016-01-19"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

@@ -13,10 +13,10 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.plugins.ResultsAnalysis;
 import org.xmlcml.ami2.plugins.ResultsAnalysis.SummaryType;
-import org.xmlcml.cmine.files.CProject;
-import org.xmlcml.cmine.files.ProjectSnippetsTree;
-import org.xmlcml.cmine.util.CMineTestFixtures;
-import org.xmlcml.cmine.util.DataTablesTool;
+import org.xmlcml.cproject.files.CProject;
+import org.xmlcml.cproject.files.ProjectSnippetsTree;
+import org.xmlcml.cproject.util.CMineTestFixtures;
+import org.xmlcml.cproject.util.DataTablesTool;
 import org.xmlcml.html.HtmlHtml;
 import org.xmlcml.html.HtmlTable;
 import org.xmlcml.xml.XMLUtil;
@@ -95,39 +95,8 @@ public class ResultsAnalysisTest {
 	}
 	
 	@Test
-	@Ignore
-	public void testMakeTable() throws IOException {
-//		DataTablesTool dataTablesTool = new DataTablesTool("Zika", "example");
-//		ResultsAnalysis resultsAnalysis = createTestResultsAnalysis(dataTablesTool);
-//		resultsAnalysis.setLink0("../../src/test/resources/org/xmlcml/ami2/zika/");
-//		resultsAnalysis.setLink1("/scholarly.html");
-//		resultsAnalysis.setRowHeadingName("EPMCID");
-//		HtmlTable table = resultsAnalysis.makeHtmlTable(dataTablesTool);
-//		HtmlHtml html = new HtmlHtml();
-//		HtmlHead head = new HtmlHead();
-//		html.appendChild(head);
-//		head.addUTF8Charset();
-//		head.addCSSStylesheetLink("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
-//		head.addCSSStylesheetLink("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css");
-//		head.addJavascriptLink("https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js");
-//		head.addJavascriptLink("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js");
-//		head.addCssStyle(".bs-example{"
-//				+ "margin: 20px;	"
-//				+ "}");
-//		HtmlBody body = new HtmlBody();
-//		html.appendChild(body);
-//		HtmlDiv htmlDiv = new HtmlDiv();
-//		htmlDiv.setClassAttribute("bs-example table-responsive");
-//		body.appendChild(htmlDiv);
-//		table.setClassAttribute("table table-striped table-bordered table-hover");
-//		body.appendChild(table);
-//		
-//		XMLUtil.debug(html, new File("target/resultsAnalysis/table.html"), 1);
-	}
-	
-	@Test
 	public void testMakeDataTable() throws IOException {
-		DataTablesTool dataTablesTool = new DataTablesTool();
+		DataTablesTool dataTablesTool = new DataTablesTool(DataTablesTool.ARTICLES);
 		dataTablesTool.setTitle("Zika");
 		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
 		File inputFile = ZIKA_DIR;
@@ -160,7 +129,7 @@ public class ResultsAnalysisTest {
 //	
 	private void analyzeResults(File projectDir, SummaryType cellType, File outfile) throws IOException {
 		List<SummaryType> cellTypes = Arrays.asList(new SummaryType[]{SummaryType.COMMONEST});
-		DataTablesTool dataTablesTool = new DataTablesTool();
+		DataTablesTool dataTablesTool = new DataTablesTool(DataTablesTool.ARTICLES);
 		dataTablesTool.setTitle("Zika");
 		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
 		resultsAnalysis.addDefaultSnippets(projectDir);

@@ -11,11 +11,11 @@ import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.wordutil.LuceneUtils;
 import org.xmlcml.ami2.wordutil.WordSetWrapper;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CTree;
-import org.xmlcml.cmine.files.ResultElement;
-import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.cmine.files.ResultsElementList;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
+import org.xmlcml.cproject.files.CTree;
+import org.xmlcml.cproject.files.ResultElement;
+import org.xmlcml.cproject.files.ResultsElement;
+import org.xmlcml.cproject.files.ResultsElementList;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableSortedMultiset;
@@ -69,6 +69,7 @@ public class WordCollectionFactory {
 	private WordResultsElement frequenciesElement;
 	private WordResultsElement aggregatedFrequenciesElement;
 	private WordResultsElement booleanFrequenciesElement;
+	private boolean stripNumbers;
 
 	public WordCollectionFactory(AMIArgProcessor argProcessor) {
 		this.amiArgProcessor = argProcessor;
@@ -79,13 +80,26 @@ public class WordCollectionFactory {
 		minCountInSet = DEFAULT_MIN_COUNT_IN_SET;
 		minRawWordLength = DEFAULT_MIN_RAW_WORD_LENGTH;
 		maxRawWordLength = DEFAULT_MAX_RAW_WORD_LENGTH;
+		stripNumbers = true;
+	}
+
+	public boolean isStripNumbers() {
+		return stripNumbers;
+	}
+
+	/**
+	 * remove numbers from words.
+	 * 
+	 * @param stripNumbers
+	 */
+	public void setStripNumbers(boolean stripNumbers) {
+		this.stripNumbers = stripNumbers;
 	}
 
 	void extractWords() {
 		List<String> words = createWordList();
 		if (words == null) {
-			LOG.warn("no words found to extract");
-			System.err.print("!");
+			LOG.trace("no words found to extract");
 			return;
 		}
 		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
@@ -111,8 +125,7 @@ public class WordCollectionFactory {
 				rawWords = currentCTree.extractWordsFromPDFTXT();
 			} else {
 				String msg = "No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory();
-				LOG.warn(msg);
-				System.err.print("!");
+				LOG.trace(msg);
 			}
 		}
 		return createTransformedWords(rawWords);
@@ -263,7 +276,10 @@ public class WordCollectionFactory {
 		} else {
 			for (String rawWord : words) {
 	//			rawWord = rawWord.toLowerCase(); // normalize case
-				rawWord = rawWord.replaceAll("[\\d+]", ""); // remove numbers
+				// BAD !
+				if (stripNumbers) {
+					rawWord = removeNumbersFromWord(rawWord);
+				}
 				if (stopwords != null && stopwords.contains(rawWord.toLowerCase())) {
 					continue;
 				}
@@ -280,6 +296,11 @@ public class WordCollectionFactory {
 		}
 		return frequenciesElement;
 			
+	}
+
+	private String removeNumbersFromWord(String rawWord) {
+		rawWord = rawWord.replaceAll("[\\d+]", ""); // remove numbers
+		return rawWord;
 	}
 
 	private WordResultsElement createFrequenciesElement(

@@ -1,0 +1,294 @@
+{
+  "id": [
+    "26880960"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26880960"
+  ],
+  "pmcid": [
+    "PMC4736431"
+  ],
+  "doi": [
+    "10.1155/2016/4078215"
+  ],
+  "title": [
+    "Stem Cell Mobilization with G-CSF versus Cyclophosphamide plus G-CSF in Mexican Children."
+  ],
+  "authorString": [
+    "Meraz JE, Arellano-Galindo J, Avalos AM, Mendoza-García E, Jiménez-Hernández E."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Meraz JE"
+          ],
+          "firstName": [
+            "José Eugenio Vázquez"
+          ],
+          "lastName": [
+            "Meraz"
+          ],
+          "initials": [
+            "JE"
+          ],
+          "affiliation": [
+            "Banco de Sangre, Hospital General de Ecatepec las Américas, Simón Bolivar esq. Libertadores de América Fracc. las Américas, 55076 Ecatepec de Morelos, MEX, Mexico."
+          ]
+        },
+        {
+          "fullName": [
+            "Arellano-Galindo J"
+          ],
+          "firstName": [
+            "José"
+          ],
+          "lastName": [
+            "Arellano-Galindo"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Area de Virología, Laboratorio de Microbiología y Enfermedades Infecciosas, Hospital Infantil de México Federico Gómez, Mexico."
+          ]
+        },
+        {
+          "fullName": [
+            "Avalos AM"
+          ],
+          "firstName": [
+            "Armando Martínez"
+          ],
+          "lastName": [
+            "Avalos"
+          ],
+          "initials": [
+            "AM"
+          ],
+          "affiliation": [
+            "Departamento de Oncología, Instituto Nacional de Pediatría, Mexico."
+          ]
+        },
+        {
+          "fullName": [
+            "Mendoza-García E"
+          ],
+          "firstName": [
+            "Emma"
+          ],
+          "lastName": [
+            "Mendoza-García"
+          ],
+          "initials": [
+            "E"
+          ],
+          "affiliation": [
+            "Laboratorio de Hematología e Investigación, Hospital General de México, OD and Laboratorio Clínico, Central Hospital Infantil de México Federico Gómez, Ciudad de México, DF, Mexico."
+          ]
+        },
+        {
+          "fullName": [
+            "Jiménez-Hernández E"
+          ],
+          "firstName": [
+            "Elva"
+          ],
+          "lastName": [
+            "Jiménez-Hernández"
+          ],
+          "initials": [
+            "E"
+          ],
+          "affiliation": [
+            "Departamento de Hematología Pediátrica, UMAE CMN la Raza IMSS, Mexico."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2348750"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Stem cells international"
+          ],
+          "ISOAbbreviation": [
+            "Stem Cells Int"
+          ],
+          "medlineAbbreviation": [
+            "Stem Cells Int"
+          ],
+          "NLMid": [
+            "101535822"
+          ],
+          "ISSN": [
+            "1687-966X"
+          ],
+          "ESSN": [
+            "1687-9678"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "4078215"
+  ],
+  "abstractText": [
+    "Fifty-six aphaereses were performed in 23 pediatric patients with malignant hematological and solid tumors, following three different protocols for PBPC mobilization and distributed as follows: A: seventeen mobilized with 4 g/m(2) of cyclophosphamide (CFA) and 10 μg/kg/day of granulocyte colony stimulating factor (G-CSF), B: nineteen with CFA + G-CSF, and C: twenty only with G-CSF when the WBC count exceeded 10 × 10(9)/L. The average number of MNC/kg body weight (BW)/aphaeresis was 0.4 × 10(8) (0.1-1.4), 2.25 × 10(8) (0.56-6.28), and 1.02 × 10(8) (0.34-2.5) whereas the average number of CD34+ cells/kg BW/aphaeresis was 0.18 × 10(6)/kg (0.09-0.34), 1.04 × 10(6) (0.19-9.3), and 0.59 × 10(6) (0.17-0.87) and the count of CFU/kg BW/aphaeresis was 1.11 × 10(5) (0.31-2.12), 1.16 × 10(5) (0.64-2.97), and 1.12 × 10(5) (0.3-6.63) in groups A, B, and C, respectively. The collection was better in group B versus group A (p = 0.007 and p = 0.05, resp.) and in group C versus group A (p = 0.08 and p = 0.05, resp.). The collection of PBPCs was more effective in the group mobilized with CFM + G-CSF when the WBC exceeded 10 × 10(3)/μL in terms of MNC and CD34+ cells and there was no toxicity of the chemotherapy."
+  ],
+  "affiliation": [
+    "Banco de Sangre, Hospital General de Ecatepec las Américas, Simón Bolivar esq. Libertadores de América Fracc. las Américas, 55076 Ecatepec de Morelos, MEX, Mexico."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736431?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736431"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/4078215"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-16"
+  ],
+  "dateOfCreation": [
+    "2016-02-16"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-06"
+  ],
+  "firstPublicationDate": [
+    "2016-01-06"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

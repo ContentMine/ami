@@ -1,0 +1,260 @@
+{
+  "id": [
+    "26904348"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904348"
+  ],
+  "pmcid": [
+    "PMC4745309"
+  ],
+  "doi": [
+    "10.1155/2016/5108471"
+  ],
+  "title": [
+    "Double Incomplete Internal Biliary Fistula: Coexisting Cholecystogastric and Cholecystoduodenal Fistula."
+  ],
+  "authorString": [
+    "Beksac K, Erkan A, Kaynaroglu V."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Beksac K"
+          ],
+          "firstName": [
+            "Kemal"
+          ],
+          "lastName": [
+            "Beksac"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Department of General Surgery, Hacettepe University Medical School, Sihhiye, 06100 Ankara, Turkey."
+          ]
+        },
+        {
+          "fullName": [
+            "Erkan A"
+          ],
+          "firstName": [
+            "Arman"
+          ],
+          "lastName": [
+            "Erkan"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of General Surgery, Hacettepe University Medical School, Sihhiye, 06100 Ankara, Turkey."
+          ]
+        },
+        {
+          "fullName": [
+            "Kaynaroglu V"
+          ],
+          "firstName": [
+            "Volkan"
+          ],
+          "lastName": [
+            "Kaynaroglu"
+          ],
+          "initials": [
+            "V"
+          ],
+          "affiliation": [
+            "Department of General Surgery, Hacettepe University Medical School, Sihhiye, 06100 Ankara, Turkey."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375677"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in surgery"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Surg"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Surg"
+          ],
+          "NLMid": [
+            "101580191"
+          ],
+          "ISSN": [
+            "2090-6900"
+          ],
+          "ESSN": [
+            "2090-6919"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "5108471"
+  ],
+  "abstractText": [
+    "Internal biliary fistula is a rare complication of a common surgical disease, cholelithiasis. It is seen in 0.74% of all biliary tract surgeries and is thought to be a result of repeated inflammatory periods of the gallbladder. In this report we present a case of incomplete cholecystogastric and cholecystoduodenal fistulae in a single patient missed by ultrasonography and endoscopic retrograde cholangiopancreatography and diagnosed intraoperatively. In the literature there is only one report of an incomplete cholecystogastric fistula. To our knowledge this is the first case of double incomplete internal biliary fistulae."
+  ],
+  "affiliation": [
+    "Department of General Surgery, Hacettepe University Medical School, Sihhiye, 06100 Ankara, Turkey."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745309?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745309"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/5108471"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-19"
+  ],
+  "firstPublicationDate": [
+    "2016-01-19"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

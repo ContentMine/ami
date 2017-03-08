@@ -1,0 +1,382 @@
+{
+  "id": [
+    "26819603"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26819603"
+  ],
+  "pmcid": [
+    "PMC4706911"
+  ],
+  "doi": [
+    "10.1155/2016/2657876"
+  ],
+  "title": [
+    "Imaging in the Evaluation of Endoscopic or Surgical Treatment for Achalasia."
+  ],
+  "authorString": [
+    "Palladino D, Mardighian A, D'Amora M, Roberto L, Lassandro F, Rossi C, Gatta G, Scaglione M, Giuseppe G."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Palladino D"
+          ],
+          "firstName": [
+            "Diego"
+          ],
+          "lastName": [
+            "Palladino"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Radiology Department, IRCCS \"Casa Sollievo della Sofferenza\", San Giovanni Rotondo, Foggia, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Mardighian A"
+          ],
+          "firstName": [
+            "Andrea"
+          ],
+          "lastName": [
+            "Mardighian"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Radiology Department, University of Foggia, Foggia, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "D'Amora M"
+          ],
+          "firstName": [
+            "Marilina"
+          ],
+          "lastName": [
+            "D'Amora"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Radiology Department, Second University of Naples, Napoli, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Roberto L"
+          ],
+          "firstName": [
+            "Luca"
+          ],
+          "lastName": [
+            "Roberto"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Radiology Department, Second University of Naples, Napoli, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Lassandro F"
+          ],
+          "firstName": [
+            "Francesco"
+          ],
+          "lastName": [
+            "Lassandro"
+          ],
+          "initials": [
+            "F"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-4819-3193",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Radiology Department, \"V. Monaldi\" Hospital, Napoli, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Rossi C"
+          ],
+          "firstName": [
+            "Claudia"
+          ],
+          "lastName": [
+            "Rossi"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Radiology Department, Second University of Naples, Napoli, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Gatta G"
+          ],
+          "firstName": [
+            "Gianluca"
+          ],
+          "lastName": [
+            "Gatta"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Radiology Department, Second University of Naples, Napoli, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Scaglione M"
+          ],
+          "firstName": [
+            "Mariano"
+          ],
+          "lastName": [
+            "Scaglione"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Radiology Department, Pineta Grande Medical Center, Castel Volturno, Caserta, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Giuseppe G"
+          ],
+          "firstName": [
+            "Guglielmi"
+          ],
+          "lastName": [
+            "Giuseppe"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Radiology Department, University of Foggia, Foggia, Italy."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-4819-3193",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2367873"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Gastroenterology research and practice"
+          ],
+          "ISOAbbreviation": [
+            "Gastroenterol Res Pract"
+          ],
+          "medlineAbbreviation": [
+            "Gastroenterol Res Pract"
+          ],
+          "NLMid": [
+            "101475557"
+          ],
+          "ISSN": [
+            "1687-6121"
+          ],
+          "ESSN": [
+            "1687-630X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "2657876"
+  ],
+  "abstractText": [
+    "Purpose. Aim of the study is to evaluate the efficacy of the endoscopic (pneumatic dilation) versus surgical (Heller myotomy) treatment in patients affected by esophageal achalasia using barium X-ray examination of the digestive tract performed before and after the treatment. Materials and Methods. 19 patients (10 males and 9 females) were enrolled in this study; each patient underwent a barium X-ray examination to evaluate the esophageal diameter and the height of the barium column before and after endoscopic or surgical treatment. Results. The mean variation of oesophageal diameter before and after treatment is -2.1 mm for surgery and 1.74 mm for pneumatic dilation (OR 0.167, CI 95% 0.02-1.419, and P: 0.10). The variations of all variables, with the exception of the oesophageal diameter variation, are strongly related to the treatment performed. Conclusions. The barium X-ray study of the digestive tract, performed before and after different treatment approaches, demonstrates that the surgical treatment has to be considered as the treatment of choice of achalasia, reserving endoscopic treatment to patients with high operative risk and refusing surgery."
+  ],
+  "affiliation": [
+    "Radiology Department, IRCCS \"Casa Sollievo della Sofferenza\", San Giovanni Rotondo, Foggia, Italy."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4706911?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4706911"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/2657876"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-01-28"
+  ],
+  "dateOfCreation": [
+    "2016-01-28"
+  ],
+  "dateOfRevision": [
+    "2016-01-31"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-27"
+  ],
+  "firstPublicationDate": [
+    "2015-12-27"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

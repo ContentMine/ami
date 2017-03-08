@@ -1,0 +1,348 @@
+{
+  "id": [
+    "26884761"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26884761"
+  ],
+  "pmcid": [
+    "PMC4739229"
+  ],
+  "doi": [
+    "10.1155/2016/7402469"
+  ],
+  "title": [
+    "Circulating Visfatin in Hypothyroidism Is Associated with Free Thyroid Hormones and Antithyroperoxidase Antibodies."
+  ],
+  "authorString": [
+    "Sawicka-Gutaj N, Zybek-Kocik A, Klimowicz A, Kloska M, Mańkowska-Wierzbicka D, Sowiński J, Ruchała M."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Sawicka-Gutaj N"
+          ],
+          "firstName": [
+            "Nadia"
+          ],
+          "lastName": [
+            "Sawicka-Gutaj"
+          ],
+          "initials": [
+            "N"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-1510-4702",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Endocrinology, Metabolism and Internal Medicine, Poznan University of Medical Sciences, Przybyszewski Street 49, 60-355 Poznań, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Zybek-Kocik A"
+          ],
+          "firstName": [
+            "Ariadna"
+          ],
+          "lastName": [
+            "Zybek-Kocik"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Endocrinology, Metabolism and Internal Medicine, Poznan University of Medical Sciences, Przybyszewski Street 49, 60-355 Poznań, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Klimowicz A"
+          ],
+          "firstName": [
+            "Aleksandra"
+          ],
+          "lastName": [
+            "Klimowicz"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Endocrinology, Metabolism and Internal Medicine, Poznan University of Medical Sciences, Przybyszewski Street 49, 60-355 Poznań, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Kloska M"
+          ],
+          "firstName": [
+            "Michał"
+          ],
+          "lastName": [
+            "Kloska"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Gastroenterology, Human Nutrition and Internal Diseases, Poznan University of Medical Sciences, Przybyszewski Street 49, 60-355 Poznań, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Mańkowska-Wierzbicka D"
+          ],
+          "firstName": [
+            "Dorota"
+          ],
+          "lastName": [
+            "Mańkowska-Wierzbicka"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Department of Gastroenterology, Human Nutrition and Internal Diseases, Poznan University of Medical Sciences, Przybyszewski Street 49, 60-355 Poznań, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Sowiński J"
+          ],
+          "firstName": [
+            "Jerzy"
+          ],
+          "lastName": [
+            "Sowiński"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Endocrinology, Metabolism and Internal Medicine, Poznan University of Medical Sciences, Przybyszewski Street 49, 60-355 Poznań, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Ruchała M"
+          ],
+          "firstName": [
+            "Marek"
+          ],
+          "lastName": [
+            "Ruchała"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Endocrinology, Metabolism and Internal Medicine, Poznan University of Medical Sciences, Przybyszewski Street 49, 60-355 Poznań, Poland."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-1510-4702",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375724"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "International journal of endocrinology"
+          ],
+          "ISOAbbreviation": [
+            "Int J Endocrinol"
+          ],
+          "medlineAbbreviation": [
+            "Int J Endocrinol"
+          ],
+          "NLMid": [
+            "101516376"
+          ],
+          "ISSN": [
+            "1687-8337"
+          ],
+          "ESSN": [
+            "1687-8345"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "7402469"
+  ],
+  "abstractText": [
+    "We hypothesized that regulation of visfatin in hypothyroidism might be altered by coexisting chronic autoimmune thyroiditis. This is a prospective case-control study of 118 subjects. The autoimmune study group (AIT) consisted of 39 patients newly diagnosed with hypothyroidism in a course of chronic autoimmune thyroiditis. The nonautoimmune study group (TT) consisted of 40 patients thyroidectomized due to the differentiated thyroid cancer staged pT1. The control group comprised 39 healthy volunteers adjusted for age, sex, and BMI with normal thyroid function and negative thyroid antibodies. Exclusion criteria consisted of other autoimmune diseases, active neoplastic disease, diabetes mellitus, and infection, which were reported to alter visfatin level. Fasting blood samples were taken for visfatin, TSH, free thyroxine (FT4), free triiodothyronine (FT3), antithyroperoxidase antibodies (TPOAb), antithyroglobulin antibodies (TgAb), glucose, and insulin levels. The highest visfatin serum concentration was in AIT group, and healthy controls had visfatin level higher than TT (p = 0.0001). Simple linear regression analysis revealed that visfatin serum concentration was significantly associated with autoimmunity (β = 0.1014; p = 0.003), FT4 (β = 0.05412; p = 0.048), FT3 (β = 0.05242; p = 0.038), and TPOAb (β = 0.0002; p = 0.0025), and the relationships were further confirmed in the multivariate regression analysis."
+  ],
+  "affiliation": [
+    "Department of Endocrinology, Metabolism and Internal Medicine, Poznan University of Medical Sciences, Przybyszewski Street 49, 60-355 Poznań, Poland."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4739229?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4739229"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/7402469"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-17"
+  ],
+  "dateOfCreation": [
+    "2016-02-17"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-17"
+  ],
+  "firstPublicationDate": [
+    "2016-01-17"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

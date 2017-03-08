@@ -1,0 +1,288 @@
+{
+  "id": [
+    "26962395"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26962395"
+  ],
+  "pmcid": [
+    "PMC4745327"
+  ],
+  "doi": [
+    "10.1155/2016/4860582"
+  ],
+  "title": [
+    "Memory Deficit Recovery after Chronic Vanadium Exposure in Mice."
+  ],
+  "authorString": [
+    "Folarin O, Olopade F, Onwuka S, Olopade J."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Folarin O"
+          ],
+          "firstName": [
+            "Oluwabusayo"
+          ],
+          "lastName": [
+            "Folarin"
+          ],
+          "initials": [
+            "O"
+          ],
+          "affiliation": [
+            "Neuroscience Unit, Department of Veterinary Anatomy, University of Ibadan, Ibadan 20001, Nigeria; Department of Anatomy, Ladoke Akintola University, Ogbomosho 21001, Nigeria."
+          ]
+        },
+        {
+          "fullName": [
+            "Olopade F"
+          ],
+          "firstName": [
+            "Funmilayo"
+          ],
+          "lastName": [
+            "Olopade"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "Department of Anatomy, University of Ibadan, Ibadan 20001, Nigeria."
+          ]
+        },
+        {
+          "fullName": [
+            "Onwuka S"
+          ],
+          "firstName": [
+            "Silas"
+          ],
+          "lastName": [
+            "Onwuka"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Neuroscience Unit, Department of Veterinary Anatomy, University of Ibadan, Ibadan 20001, Nigeria."
+          ]
+        },
+        {
+          "fullName": [
+            "Olopade J"
+          ],
+          "firstName": [
+            "James"
+          ],
+          "lastName": [
+            "Olopade"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Neuroscience Unit, Department of Veterinary Anatomy, University of Ibadan, Ibadan 20001, Nigeria."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2365069"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Oxidative medicine and cellular longevity"
+          ],
+          "ISOAbbreviation": [
+            "Oxid Med Cell Longev"
+          ],
+          "medlineAbbreviation": [
+            "Oxid Med Cell Longev"
+          ],
+          "NLMid": [
+            "101479826"
+          ],
+          "ISSN": [
+            "1942-0900"
+          ],
+          "ESSN": [
+            "1942-0994"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "4860582"
+  ],
+  "abstractText": [
+    "Vanadium is a transitional metal with an ability to generate reactive oxygen species in the biological system. This work was designed to assess memory deficits in mice chronically exposed to vanadium. A total of 132 male BALB/c mice (4 weeks old) were used for the experiment and were divided into three major groups of vanadium treated, matched controls, and animals exposed to vanadium for three months and thereafter vanadium was withdrawn. Animals were tested using Morris water maze and forelimb grip test at 3, 6, 9, and 12 months of age. The results showed that animals across the groups showed no difference in learning but had significant loss in memory abilities after 3 months of vanadium exposure and this trend continued in all vanadium-exposed groups relative to the controls. Animals exposed to vanadium for three months recovered significantly only 9 months after vanadium withdrawal. There was no significant difference in latency to fall in the forelimb grip test between vanadium-exposed groups and the controls in all age groups. In conclusion, we have shown that chronic administration of vanadium in mice leads to memory deficit which is reversible but only after a long period of vanadium withdrawal."
+  ],
+  "affiliation": [
+    "Neuroscience Unit, Department of Veterinary Anatomy, University of Ibadan, Ibadan 20001, Nigeria; Department of Anatomy, Ladoke Akintola University, Ogbomosho 21001, Nigeria."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745327?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745327"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/4860582"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2016-03-10"
+  ],
+  "dateOfRevision": [
+    "2016-03-12"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-19"
+  ],
+  "firstPublicationDate": [
+    "2016-01-19"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

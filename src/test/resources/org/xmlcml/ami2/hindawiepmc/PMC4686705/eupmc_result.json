@@ -1,0 +1,398 @@
+{
+  "id": [
+    "26779543"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26779543"
+  ],
+  "pmcid": [
+    "PMC4686705"
+  ],
+  "doi": [
+    "10.1155/2016/8943092"
+  ],
+  "title": [
+    "Synaptosomal Protein of 25 kDa (Snap25) Polymorphisms Associated with Glycemic Parameters in Type 2 Diabetes Patients."
+  ],
+  "authorString": [
+    "Al-Daghri NM, Costa AS, Alokail MS, Zanzottera M, Alenad AM, Mohammed AK, Clerici M, Guerini FR."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Al-Daghri NM"
+          ],
+          "firstName": [
+            "Nasser M"
+          ],
+          "lastName": [
+            "Al-Daghri"
+          ],
+          "initials": [
+            "NM"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-5472-1725",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Biomarkers Research Program, Biochemistry Department, College of Science, King Saud University, Riyadh 11451, Saudi Arabia; Prince Mutaib Chair for Biomarkers of Osteoporosis, Biochemistry Department, College of Science, King Saud University, Riyadh 11451, Saudi Arabia."
+          ]
+        },
+        {
+          "fullName": [
+            "Costa AS"
+          ],
+          "firstName": [
+            "Andrea S"
+          ],
+          "lastName": [
+            "Costa"
+          ],
+          "initials": [
+            "AS"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-7353-157X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Fondazione Don C Gnocchi, IRCCS, 20148 Milano, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Alokail MS"
+          ],
+          "firstName": [
+            "Majed S"
+          ],
+          "lastName": [
+            "Alokail"
+          ],
+          "initials": [
+            "MS"
+          ],
+          "affiliation": [
+            "Biomarkers Research Program, Biochemistry Department, College of Science, King Saud University, Riyadh 11451, Saudi Arabia; Prince Mutaib Chair for Biomarkers of Osteoporosis, Biochemistry Department, College of Science, King Saud University, Riyadh 11451, Saudi Arabia."
+          ]
+        },
+        {
+          "fullName": [
+            "Zanzottera M"
+          ],
+          "firstName": [
+            "Milena"
+          ],
+          "lastName": [
+            "Zanzottera"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Fondazione Don C Gnocchi, IRCCS, 20148 Milano, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Alenad AM"
+          ],
+          "firstName": [
+            "Amal M"
+          ],
+          "lastName": [
+            "Alenad"
+          ],
+          "initials": [
+            "AM"
+          ],
+          "affiliation": [
+            "School of Biological Sciences, University of Southampton, Southampton SO17 1 BJ, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Mohammed AK"
+          ],
+          "firstName": [
+            "Abdul Khader"
+          ],
+          "lastName": [
+            "Mohammed"
+          ],
+          "initials": [
+            "AK"
+          ],
+          "affiliation": [
+            "Biomarkers Research Program, Biochemistry Department, College of Science, King Saud University, Riyadh 11451, Saudi Arabia; Prince Mutaib Chair for Biomarkers of Osteoporosis, Biochemistry Department, College of Science, King Saud University, Riyadh 11451, Saudi Arabia."
+          ]
+        },
+        {
+          "fullName": [
+            "Clerici M"
+          ],
+          "firstName": [
+            "Mario"
+          ],
+          "lastName": [
+            "Clerici"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Fondazione Don C Gnocchi, IRCCS, 20148 Milano, Italy; Università degli Studi di Milano, 20122 Milano, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Guerini FR"
+          ],
+          "firstName": [
+            "Franca R"
+          ],
+          "lastName": [
+            "Guerini"
+          ],
+          "initials": [
+            "FR"
+          ],
+          "affiliation": [
+            "Fondazione Don C Gnocchi, IRCCS, 20148 Milano, Italy."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-5472-1725",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-7353-157X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2348772"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of diabetes research"
+          ],
+          "ISOAbbreviation": [
+            "J Diabetes Res"
+          ],
+          "medlineAbbreviation": [
+            "J Diabetes Res"
+          ],
+          "NLMid": [
+            "101605237"
+          ],
+          "ISSN": [
+            "2314-6745"
+          ],
+          "ESSN": [
+            "2314-6753"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "8943092"
+  ],
+  "abstractText": [
+    "A possible role of Snap25 polymorphisms in type 2 diabetes mellitus (T2DM) was evaluated by analyzing three SNPs within intron 1 in a region known to affect the gene expression in vitro. Genomic DNA from 1019 Saudi individuals (489 confirmed T2DM and 530 controls) was genotyped for SNPs rs363039, rs363043, and rs363050 in Snap25 using the TaqMan Genotyping Assay. Significantly higher levels of fasting glucose and HbA1c were detected in T2DM patients carrying the rs363050 (AG/GG) genotypes compared to the (AA) genotype (f = 4.41, df = 1, and p = 0.03 and f = 5.31, df = 1, and p = 0.03, resp.). In these same patients, insulin levels were significantly decreased compared to the (AA) individuals (f = 7.29, df = 1, and p = 0.009). Significant associations were detected between rs363050 (AG/GG) genotypes and increasing fasting glucose levels (p = 0.01 and OR: 1.05), HbA1c levels (OR: 5.06 and p = 0.02), and lower insulinemia (p = 0.03 and OR: 0.95) in T2DM patients. The minor Snap25 rs363050 (G) allele, which results in a reduced expression of Snap25, is associated with altered glycemic parameters in T2DM possibly because of reduced functionality in the exocytotic machinery leading to suboptimal release of insulin."
+  ],
+  "affiliation": [
+    "Biomarkers Research Program, Biochemistry Department, College of Science, King Saud University, Riyadh 11451, Saudi Arabia; Prince Mutaib Chair for Biomarkers of Osteoporosis, Biochemistry Department, College of Science, King Saud University, Riyadh 11451, Saudi Arabia."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4686705?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4686705"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/8943092"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "refsnp"
+      ]
+    }
+  ],
+  "dateOfCreation": [
+    "2016-01-18"
+  ],
+  "dateOfRevision": [
+    "2016-01-20"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-08"
+  ],
+  "firstPublicationDate": [
+    "2015-12-08"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

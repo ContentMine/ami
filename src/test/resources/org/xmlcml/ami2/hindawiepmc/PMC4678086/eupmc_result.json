@@ -1,0 +1,360 @@
+{
+  "id": [
+    "26697503"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26697503"
+  ],
+  "pmcid": [
+    "PMC4678086"
+  ],
+  "doi": [
+    "10.1155/2016/7245947"
+  ],
+  "title": [
+    "The Initial Assessment of Daily Insulin Dose in Chinese Newly Diagnosed Type 2 Diabetes."
+  ],
+  "authorString": [
+    "Ma J, Zhou H, Xu H, Chen X, Teng X, Liu Q, Liu W."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Ma J"
+          ],
+          "firstName": [
+            "Jing"
+          ],
+          "lastName": [
+            "Ma"
+          ],
+          "initials": [
+            "J"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-1098-945X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Endocrinology and Metabolism, Renji Hospital, School of Medicine, Shanghai Jiao Tong University, No. 1630 Dongfang Road, Shanghai 200127, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhou H"
+          ],
+          "firstName": [
+            "Huan"
+          ],
+          "lastName": [
+            "Zhou"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Department of Endocrinology and Metabolism, Renji Hospital, School of Medicine, Shanghai Jiao Tong University, No. 1630 Dongfang Road, Shanghai 200127, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Xu H"
+          ],
+          "firstName": [
+            "Hua"
+          ],
+          "lastName": [
+            "Xu"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Department of Endocrinology and Metabolism, Renji Hospital, School of Medicine, Shanghai Jiao Tong University, No. 1630 Dongfang Road, Shanghai 200127, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Chen X"
+          ],
+          "firstName": [
+            "Xie"
+          ],
+          "lastName": [
+            "Chen"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Department of Endocrinology and Metabolism, Renji Hospital, School of Medicine, Shanghai Jiao Tong University, No. 1630 Dongfang Road, Shanghai 200127, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Teng X"
+          ],
+          "firstName": [
+            "Xiangyu"
+          ],
+          "lastName": [
+            "Teng"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Department of Endocrinology and Metabolism, Renji Hospital, School of Medicine, Shanghai Jiao Tong University, No. 1630 Dongfang Road, Shanghai 200127, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Liu Q"
+          ],
+          "firstName": [
+            "Qianjing"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "Q"
+          ],
+          "affiliation": [
+            "Department of Endocrinology and Metabolism, Renji Hospital, School of Medicine, Shanghai Jiao Tong University, No. 1630 Dongfang Road, Shanghai 200127, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Liu W"
+          ],
+          "firstName": [
+            "Wei"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "W"
+          ],
+          "affiliation": [
+            "Department of Endocrinology and Metabolism, Renji Hospital, School of Medicine, Shanghai Jiao Tong University, No. 1630 Dongfang Road, Shanghai 200127, China."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-1098-945X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2348772"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of diabetes research"
+          ],
+          "ISOAbbreviation": [
+            "J Diabetes Res"
+          ],
+          "medlineAbbreviation": [
+            "J Diabetes Res"
+          ],
+          "NLMid": [
+            "101605237"
+          ],
+          "ISSN": [
+            "2314-6745"
+          ],
+          "ESSN": [
+            "2314-6753"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "7245947"
+  ],
+  "abstractText": [
+    "It has been well accepted that insulin therapy is the ideal treatment for newly diagnosed diabetic patients. However, there was no study about assessment of the initial insulin dosage in new onset Chinese patients with type 2 diabetes.65 newly diagnosed patients with type 2 diabetes (39 males/26 females; HbA1c ≥ 11.80 ± 0.22%) were investigated. All patients had random hyperglycaemia (at 21.8 ± 3.9 mmol/L) on the first day of admission and received insulin infusion intravenously (5 U/per hour). When the blood glucose level dropped to around 10 mmol/L, patients were then transferred to continuous subcutaneous insulin infusion (CSII). The reduction of blood glucose levels in response to per unit of insulin (RBG/RI) was recorded. The target glucose level was achieved in about 3 days. The total daily insulin dose (TDD) and basal insulin dose (TBD) were calculated.TDD was 45.97 ± 1.28 units and TBD was 19.00 ± 0.54 units. TBD was about 40% of the total daily insulin requirement. There was a negative correlation between the ratio of RBG/RI and TDD.TDD was correlated with blood glucose reduction in response to intravenous insulin infusion in Chinese new onset patients with type 2 diabetes."
+  ],
+  "affiliation": [
+    "Department of Endocrinology and Metabolism, Renji Hospital, School of Medicine, Shanghai Jiao Tong University, No. 1630 Dongfang Road, Shanghai 200127, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4678086?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4678086"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/7245947"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2015-12-23"
+  ],
+  "dateOfRevision": [
+    "2015-12-25"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-01"
+  ],
+  "firstPublicationDate": [
+    "2015-12-01"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

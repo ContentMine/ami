@@ -1,0 +1,403 @@
+{
+  "id": [
+    "26885413"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26885413"
+  ],
+  "pmcid": [
+    "PMC4738710"
+  ],
+  "doi": [
+    "10.1155/2016/8195321"
+  ],
+  "title": [
+    "Gingival Overgrowth Leading to the Diagnosis of Familial Tuberous Sclerosis Complex."
+  ],
+  "authorString": [
+    "Purwar P, Sareen S, Sheel V, Gupta A, Ansari U, Becharbhai PU, Dixit M, Bhargava A, Yadav RR, Bansal U, Dixit J."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Purwar P"
+          ],
+          "firstName": [
+            "Parth"
+          ],
+          "lastName": [
+            "Purwar"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "Department of Periodontology, Faculty of Dental Sciences, King George's Medical University, Lucknow, Uttar Pradesh, India; Ankur Diagnostic Center, Lakhimpur Road, Gola Gokaran Nath, Kheri, Uttar Pradesh 262802, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Sareen S"
+          ],
+          "firstName": [
+            "Sagar"
+          ],
+          "lastName": [
+            "Sareen"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Periodontology, Faculty of Dental Sciences, King George's Medical University, Lucknow, Uttar Pradesh, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Sheel V"
+          ],
+          "firstName": [
+            "Vaibhav"
+          ],
+          "lastName": [
+            "Sheel"
+          ],
+          "initials": [
+            "V"
+          ],
+          "affiliation": [
+            "Department of Periodontology, Faculty of Dental Sciences, King George's Medical University, Lucknow, Uttar Pradesh, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Gupta A"
+          ],
+          "firstName": [
+            "Abhishek"
+          ],
+          "lastName": [
+            "Gupta"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Community Medicine, Hind Institute of Medical Sciences, Barabanki, Uttar Pradesh, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Ansari U"
+          ],
+          "firstName": [
+            "Uzma"
+          ],
+          "lastName": [
+            "Ansari"
+          ],
+          "initials": [
+            "U"
+          ],
+          "affiliation": [
+            "Department of Periodontology, Faculty of Dental Sciences, King George's Medical University, Lucknow, Uttar Pradesh, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Becharbhai PU"
+          ],
+          "firstName": [
+            "Patel Umeshbhai"
+          ],
+          "lastName": [
+            "Becharbhai"
+          ],
+          "initials": [
+            "PU"
+          ],
+          "affiliation": [
+            "Department of Periodontology, Faculty of Dental Sciences, King George's Medical University, Lucknow, Uttar Pradesh, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Dixit M"
+          ],
+          "firstName": [
+            "Manisha"
+          ],
+          "lastName": [
+            "Dixit"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Periodontology, Faculty of Dental Sciences, King George's Medical University, Lucknow, Uttar Pradesh, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Bhargava A"
+          ],
+          "firstName": [
+            "Amitesh"
+          ],
+          "lastName": [
+            "Bhargava"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Periodontology, Faculty of Dental Sciences, King George's Medical University, Lucknow, Uttar Pradesh, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Yadav RR"
+          ],
+          "firstName": [
+            "Rajiv Ratan Singh"
+          ],
+          "lastName": [
+            "Yadav"
+          ],
+          "initials": [
+            "RR"
+          ],
+          "affiliation": [
+            "Emergency Medicine, Dr. Ram Manohar Lohia Institute of Medical Sciences, Uttar Pradesh, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Bansal U"
+          ],
+          "firstName": [
+            "Utkarsh"
+          ],
+          "lastName": [
+            "Bansal"
+          ],
+          "initials": [
+            "U"
+          ],
+          "affiliation": [
+            "Department of Paediatrics, Hind Institute of Medical Sciences, Barabanki, Uttar Pradesh, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Dixit J"
+          ],
+          "firstName": [
+            "Jaya"
+          ],
+          "lastName": [
+            "Dixit"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Periodontology, Faculty of Dental Sciences, King George's Medical University, Lucknow, Uttar Pradesh, India."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375664"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in dentistry"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Dent"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Dent"
+          ],
+          "NLMid": [
+            "101573242"
+          ],
+          "ISSN": [
+            "2090-6447"
+          ],
+          "ESSN": [
+            "2090-6455"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "8195321"
+  ],
+  "abstractText": [
+    "Tuberous sclerosis complex (TSC), a neurocutaneous syndrome, is characterized by the development of benign tumours affecting different body systems. We herein present a report of a 40-year-old female patient presenting with dental enamel pits and localized gingival overgrowth that eventually lead to the diagnosis of a case of familial TSC. Diagnosis of familial TSC by comprehensive oral examination and detection of oral manifestations proved to be inevitable as it resulted in institution of appropriate treatment strategies and genetic counselling of the affected family."
+  ],
+  "affiliation": [
+    "Department of Periodontology, Faculty of Dental Sciences, King George's Medical University, Lucknow, Uttar Pradesh, India; Ankur Diagnostic Center, Lakhimpur Road, Gola Gokaran Nath, Kheri, Uttar Pradesh 262802, India."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4738710?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4738710"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/8195321"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "omim"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2016-02-17"
+  ],
+  "dateOfCreation": [
+    "2016-02-17"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-13"
+  ],
+  "firstPublicationDate": [
+    "2016-01-13"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

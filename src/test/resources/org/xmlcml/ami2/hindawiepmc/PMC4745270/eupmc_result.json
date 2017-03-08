@@ -1,0 +1,234 @@
+{
+  "id": [
+    "26902673"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26902673"
+  ],
+  "pmcid": [
+    "PMC4745270"
+  ],
+  "doi": [
+    "10.1155/2016/2747402"
+  ],
+  "title": [
+    "Retracted: Cure of Chronic Viral Infection and Virus-Induced Type 1 Diabetes by Neutralizing Antibodies."
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2389516"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of immunology research"
+          ],
+          "ISOAbbreviation": [
+            "J Immunol Res"
+          ],
+          "medlineAbbreviation": [
+            "J Immunol Res"
+          ],
+          "NLMid": [
+            "101627166"
+          ],
+          "ISSN": [
+            "2314-8861"
+          ],
+          "ESSN": [
+            "2314-7156"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "2747402"
+  ],
+  "abstractText": [
+    "[This retracts the article DOI: 10.1080/17402520600579028.]."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Retraction of Publication"
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745270?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745270"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/2747402"
+          ]
+        }
+      ]
+    }
+  ],
+  "commentCorrectionList": [
+    {
+      "commentCorrection": [
+        {
+          "id": [
+            "16603445"
+          ],
+          "source": [
+            "MED"
+          ],
+          "reference": [
+            "Ejrnaes M, von Herrath MG, Christen U. Clin Dev Immunol. 2006 Mar;13(1):67-77"
+          ],
+          "type": [
+            "Retraction of"
+          ],
+          "orderIn": [
+            "2"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-06-15"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-21"
+  ],
+  "firstPublicationDate": [
+    "2016-01-21"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

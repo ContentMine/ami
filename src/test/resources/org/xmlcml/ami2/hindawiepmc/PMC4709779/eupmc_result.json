@@ -1,0 +1,294 @@
+{
+  "id": [
+    "26858758"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26858758"
+  ],
+  "pmcid": [
+    "PMC4709779"
+  ],
+  "doi": [
+    "10.1155/2016/2527349"
+  ],
+  "title": [
+    "Autologous Fat Grafting Reduces Pain in Irradiated Breast: A Review of Our Experience."
+  ],
+  "authorString": [
+    "Caviggioli F, Maione L, Klinger F, Lisa A, Klinger M."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Caviggioli F"
+          ],
+          "firstName": [
+            "Fabio"
+          ],
+          "lastName": [
+            "Caviggioli"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "Reconstructive and Aesthetic Plastic Surgery School, University of Milan, MultiMedica Holding S.p.A., Plastic Surgery Unit, Via Milanese 300, Sesto San Giovanni, 20099 Milan, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Maione L"
+          ],
+          "firstName": [
+            "Luca"
+          ],
+          "lastName": [
+            "Maione"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Reconstructive and Aesthetic Plastic Surgery School, Department of Medical Biotechnology and Translational Medicine (BIOMETRA), University of Milan, Plastic Surgery Unit, Humanitas Research Hospital, Via Alessandro Manzoni 56, Rozzano, 20089 Milan, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Klinger F"
+          ],
+          "firstName": [
+            "Francesco"
+          ],
+          "lastName": [
+            "Klinger"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "Reconstructive and Aesthetic Plastic Surgery School, University of Milan, MultiMedica Holding S.p.A., Plastic Surgery Unit, Via Milanese 300, Sesto San Giovanni, 20099 Milan, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Lisa A"
+          ],
+          "firstName": [
+            "Andrea"
+          ],
+          "lastName": [
+            "Lisa"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Reconstructive and Aesthetic Plastic Surgery School, Department of Medical Biotechnology and Translational Medicine (BIOMETRA), University of Milan, Plastic Surgery Unit, Humanitas Research Hospital, Via Alessandro Manzoni 56, Rozzano, 20089 Milan, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Klinger M"
+          ],
+          "firstName": [
+            "Marco"
+          ],
+          "lastName": [
+            "Klinger"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Reconstructive and Aesthetic Plastic Surgery School, Department of Medical Biotechnology and Translational Medicine (BIOMETRA), University of Milan, Plastic Surgery Unit, Humanitas Research Hospital, Via Alessandro Manzoni 56, Rozzano, 20089 Milan, Italy."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2348750"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Stem cells international"
+          ],
+          "ISOAbbreviation": [
+            "Stem Cells Int"
+          ],
+          "medlineAbbreviation": [
+            "Stem Cells Int"
+          ],
+          "NLMid": [
+            "101535822"
+          ],
+          "ISSN": [
+            "1687-966X"
+          ],
+          "ESSN": [
+            "1687-9678"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "2527349"
+  ],
+  "abstractText": [
+    "Introduction. Pain syndromes affect women after conservative and radical breast oncological procedures. Radiation therapy influences their development. We report autologous fat grafting therapeutical role in treating chronic pain in irradiated patients. Materials and Methods. From February 2006 to November 2014, we collect a total of 209 patients who meet the definition of \"Postmastectomy Pain Syndrome\" (PMPS) and had undergone mastectomy with axillary dissection (113 patients) or quadrantectomy (96 patients). Both procedures were followed by radiotherapy. We performed fat grafting following Coleman's procedure. Mean amount of adipose tissue injected was 52 cc (±8.9 cc) per breast. Seventy-eight in 209 patients were not treated surgically and were considered as control group. Data were gathered through preoperative and postoperative VAS questionnaires; analgesic drug intake was recorded. Results. The follow-up was at 12 months (range 11.7-13.5 months). In 120 treated patients we detected pain decrease (mean ± SD point reduction, 3.19 ± 2.86). Forty-eight in 59 patients stopped their analgesic drug therapy. Controls reported a mean ± SD decrease of pain of 1.14 ± 2.72. Results showed that pain decreased significantly in patients treated (p < 0.005, Wilcoxon rank-sum test). Conclusion. Our 8-year experience confirms fat grafting effectiveness in decreasing neuropathic pain."
+  ],
+  "affiliation": [
+    "Reconstructive and Aesthetic Plastic Surgery School, University of Milan, MultiMedica Holding S.p.A., Plastic Surgery Unit, Via Milanese 300, Sesto San Giovanni, 20099 Milan, Italy."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4709779?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4709779"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/2527349"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-09"
+  ],
+  "dateOfCreation": [
+    "2016-02-09"
+  ],
+  "dateOfRevision": [
+    "2016-02-11"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-29"
+  ],
+  "firstPublicationDate": [
+    "2015-12-29"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "id": [
+    "26839899"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26839899"
+  ],
+  "pmcid": [
+    "PMC4709665"
+  ],
+  "doi": [
+    "10.1155/2016/8352957"
+  ],
+  "title": [
+    "Inability of Some Commercial Assays to Measure Suppression of Glucagon Secretion."
+  ],
+  "authorString": [
+    "Wewer Albrechtsen NJ, Veedfald S, Plamboeck A, Deacon CF, Hartmann B, Knop FK, Vilsboll T, Holst JJ."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Wewer Albrechtsen NJ"
+          ],
+          "firstName": [
+            "Nicolai J"
+          ],
+          "lastName": [
+            "Wewer Albrechtsen"
+          ],
+          "initials": [
+            "NJ"
+          ],
+          "affiliation": [
+            "Department of Biomedical Sciences, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark; Novo Nordisk Foundation Center for Basic Metabolic Research, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Veedfald S"
+          ],
+          "firstName": [
+            "Simon"
+          ],
+          "lastName": [
+            "Veedfald"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Biomedical Sciences, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark; Novo Nordisk Foundation Center for Basic Metabolic Research, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Plamboeck A"
+          ],
+          "firstName": [
+            "Astrid"
+          ],
+          "lastName": [
+            "Plamboeck"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Biomedical Sciences, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark; Novo Nordisk Foundation Center for Basic Metabolic Research, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Deacon CF"
+          ],
+          "firstName": [
+            "Carolyn F"
+          ],
+          "lastName": [
+            "Deacon"
+          ],
+          "initials": [
+            "CF"
+          ],
+          "affiliation": [
+            "Department of Biomedical Sciences, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark; Novo Nordisk Foundation Center for Basic Metabolic Research, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Hartmann B"
+          ],
+          "firstName": [
+            "Bolette"
+          ],
+          "lastName": [
+            "Hartmann"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "Department of Biomedical Sciences, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark; Novo Nordisk Foundation Center for Basic Metabolic Research, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Knop FK"
+          ],
+          "firstName": [
+            "Filip K"
+          ],
+          "lastName": [
+            "Knop"
+          ],
+          "initials": [
+            "FK"
+          ],
+          "affiliation": [
+            "Department of Biomedical Sciences, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark; Novo Nordisk Foundation Center for Basic Metabolic Research, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark; Center for Diabetes Research, Gentofte Hospital, University of Copenhagen, 2900 Hellerup, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Vilsboll T"
+          ],
+          "firstName": [
+            "Tina"
+          ],
+          "lastName": [
+            "Vilsboll"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Center for Diabetes Research, Gentofte Hospital, University of Copenhagen, 2900 Hellerup, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Holst JJ"
+          ],
+          "firstName": [
+            "Jens J"
+          ],
+          "lastName": [
+            "Holst"
+          ],
+          "initials": [
+            "JJ"
+          ],
+          "affiliation": [
+            "Department of Biomedical Sciences, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark; Novo Nordisk Foundation Center for Basic Metabolic Research, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2348772"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of diabetes research"
+          ],
+          "ISOAbbreviation": [
+            "J Diabetes Res"
+          ],
+          "medlineAbbreviation": [
+            "J Diabetes Res"
+          ],
+          "NLMid": [
+            "101605237"
+          ],
+          "ISSN": [
+            "2314-6745"
+          ],
+          "ESSN": [
+            "2314-6753"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "8352957"
+  ],
+  "abstractText": [
+    "Glucagon levels are increasingly being included as endpoints in clinical study design and more than 400 current diabetes-related clinical trials have glucagon as an outcome measure. The reliability of immune-based technologies used to measure endogenous glucagon concentrations is, therefore, important. We studied the ability of immunoassays based on four different technologies to detect changes in levels of glucagon under conditions where glucagon levels are strongly suppressed. To our surprise, the most advanced technological methods, employing electrochemiluminescence or homogeneous time resolved fluorescence (HTRF) detection, were not capable of detecting the suppression induced by a glucose clamp (6 mmol/L) with or without atropine in five healthy male participants, whereas a radioimmunoassay and a spectrophotometry-based ELISA were. In summary, measurement of glucagon is challenging even when state-of-the-art immune-based technologies are used. Clinical researchers using glucagon as outcome measures may need to reconsider the validity of their chosen glucagon assay. The current study demonstrates that the most advanced approach is not necessarily the best when measuring a low-abundant peptide such as glucagon in humans."
+  ],
+  "affiliation": [
+    "Department of Biomedical Sciences, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark; Novo Nordisk Foundation Center for Basic Metabolic Research, Faculty of Health and Medical Sciences, University of Copenhagen, 2200 Copenhagen, Denmark."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4709665?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4709665"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/8352957"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "nct"
+      ]
+    }
+  ],
+  "dateOfCreation": [
+    "2016-02-03"
+  ],
+  "dateOfRevision": [
+    "2016-02-05"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-29"
+  ],
+  "firstPublicationDate": [
+    "2015-12-29"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

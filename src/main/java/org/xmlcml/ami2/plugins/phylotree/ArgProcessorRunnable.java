@@ -2,7 +2,7 @@ package org.xmlcml.ami2.plugins.phylotree;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
 
 /** Runs argProcessor in thread.
  * 

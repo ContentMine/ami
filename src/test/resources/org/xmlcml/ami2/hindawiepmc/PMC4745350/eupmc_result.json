@@ -1,0 +1,328 @@
+{
+  "id": [
+    "26904354"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904354"
+  ],
+  "pmcid": [
+    "PMC4745350"
+  ],
+  "doi": [
+    "10.1155/2016/7597265"
+  ],
+  "title": [
+    "Juxtarenal Modular Aortic Stent Graft Infection Caused by Staphylococcus aureus."
+  ],
+  "authorString": [
+    "Novotný R, Mitáš P, Hlubocký J, Hrubý J, Slautin A, Špunda R, Lindner J."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Novotný R"
+          ],
+          "firstName": [
+            "Róbert"
+          ],
+          "lastName": [
+            "Novotný"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "1-2nd Department of Cardiovascular Surgery, General Teaching Hospital and 1st Faculty of Medicine, Charles University, 12000 Prague, Czech Republic."
+          ]
+        },
+        {
+          "fullName": [
+            "Mitáš P"
+          ],
+          "firstName": [
+            "Petr"
+          ],
+          "lastName": [
+            "Mitáš"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "1-2nd Department of Cardiovascular Surgery, General Teaching Hospital and 1st Faculty of Medicine, Charles University, 12000 Prague, Czech Republic."
+          ]
+        },
+        {
+          "fullName": [
+            "Hlubocký J"
+          ],
+          "firstName": [
+            "Jaroslav"
+          ],
+          "lastName": [
+            "Hlubocký"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "1-2nd Department of Cardiovascular Surgery, General Teaching Hospital and 1st Faculty of Medicine, Charles University, 12000 Prague, Czech Republic."
+          ]
+        },
+        {
+          "fullName": [
+            "Hrubý J"
+          ],
+          "firstName": [
+            "Ján"
+          ],
+          "lastName": [
+            "Hrubý"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "1-2nd Department of Cardiovascular Surgery, General Teaching Hospital and 1st Faculty of Medicine, Charles University, 12000 Prague, Czech Republic."
+          ]
+        },
+        {
+          "fullName": [
+            "Slautin A"
+          ],
+          "firstName": [
+            "Andrey"
+          ],
+          "lastName": [
+            "Slautin"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "1-2nd Department of Cardiovascular Surgery, General Teaching Hospital and 1st Faculty of Medicine, Charles University, 12000 Prague, Czech Republic."
+          ]
+        },
+        {
+          "fullName": [
+            "Špunda R"
+          ],
+          "firstName": [
+            "Rudolf"
+          ],
+          "lastName": [
+            "Špunda"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "1-2nd Department of Cardiovascular Surgery, General Teaching Hospital and 1st Faculty of Medicine, Charles University, 12000 Prague, Czech Republic."
+          ]
+        },
+        {
+          "fullName": [
+            "Lindner J"
+          ],
+          "firstName": [
+            "Jaroslav"
+          ],
+          "lastName": [
+            "Lindner"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "1-2nd Department of Cardiovascular Surgery, General Teaching Hospital and 1st Faculty of Medicine, Charles University, 12000 Prague, Czech Republic."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375906"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in vascular medicine"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Vasc Med"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Vasc Med"
+          ],
+          "NLMid": [
+            "101585357"
+          ],
+          "ISSN": [
+            "2090-6986"
+          ],
+          "ESSN": [
+            "2090-6994"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "7597265"
+  ],
+  "abstractText": [
+    "Introduction. We are presenting a case report of an infected modular abdominal stent graft. Case Presentation. A 67-year-old male patient three years after Cook's modular abdominal aortic aneurysm (AAA) graft implantation for juxtarenal AAA with an implantation of a stent extension into the right common iliac artery for type Ib endoleak. The patient was admitted into our center in severe condition with suspected retroperitoneal bleeding. Computed tomography angiography (CTAG) confirmed retroperitoneal bleeding in the right common iliac artery. An urgent surgical revision was indicated; destructed arterial wall around the stent extension in the right common iliac artery was discovered. Due to the severe state of health of the patient, a resection of the infected stent and affected arterial wall was performed, followed by an iliac-femoral crossover bypass. The patient was transported to the intensive care unit with hepatic and renal failure, with maximal catecholamine support. Combined antibiotic treatment was started. The patient died five hours after the procedure. The cause of death was multiorgan failure caused by sepsis. Hemocultures and perioperative microbiological cultures showed the infection agent to be Staphylococcus aureus methicillin sensitive. Conclusion. Stent graft infection is a rare complication. Treatment is associated with high mortality and morbidity."
+  ],
+  "affiliation": [
+    "1-2nd Department of Cardiovascular Surgery, General Teaching Hospital and 1st Faculty of Medicine, Charles University, 12000 Prague, Czech Republic."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745350?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745350"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/7597265"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-24"
+  ],
+  "firstPublicationDate": [
+    "2016-01-24"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

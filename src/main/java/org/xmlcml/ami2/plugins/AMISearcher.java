@@ -12,11 +12,11 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.dictionary.DefaultAMIDictionary;
 import org.xmlcml.ami2.plugins.word.WordCollectionFactory;
-import org.xmlcml.cmine.files.AbstractSearcher;
-import org.xmlcml.cmine.files.ResultElement;
-import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.cmine.lookup.AbstractLookup;
-import org.xmlcml.cmine.lookup.DefaultStringDictionary;
+import org.xmlcml.cproject.files.AbstractSearcher;
+import org.xmlcml.cproject.files.ResultElement;
+import org.xmlcml.cproject.files.ResultsElement;
+import org.xmlcml.cproject.lookup.AbstractLookup;
+import org.xmlcml.cproject.lookup.DefaultStringDictionary;
 import org.xmlcml.xml.XPathGenerator;
 
 import nu.xom.Attribute;

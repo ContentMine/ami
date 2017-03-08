@@ -9,10 +9,10 @@ import org.xmlcml.ami2.dictionary.gene.HGNCDictionary;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.NamedPattern;
-import org.xmlcml.cmine.args.ArgIterator;
-import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.cmine.lookup.DefaultStringDictionary;
+import org.xmlcml.cproject.args.ArgIterator;
+import org.xmlcml.cproject.args.ArgumentOption;
+import org.xmlcml.cproject.files.ResultsElement;
+import org.xmlcml.cproject.lookup.DefaultStringDictionary;
 
 /** 
  * Processes commandline arguments.

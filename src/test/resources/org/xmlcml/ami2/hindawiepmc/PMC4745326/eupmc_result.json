@@ -1,0 +1,311 @@
+{
+  "id": [
+    "26904340"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904340"
+  ],
+  "pmcid": [
+    "PMC4745326"
+  ],
+  "doi": [
+    "10.1155/2016/3741291"
+  ],
+  "title": [
+    "Pulmonary Empty Spaces: Silicone Embolism-A Decade of Increased Incidence and Its Histological Diagnosis."
+  ],
+  "authorString": [
+    "Lyapichev K, Chinea FM, Poveda J, Pereda J, Bejarano PA, Garcia-Buitrago MT."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Lyapichev K"
+          ],
+          "firstName": [
+            "Kirill"
+          ],
+          "lastName": [
+            "Lyapichev"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Pathology and Laboratory Medicine Department, Miller School of Medicine, University of Miami, Miami, FL 33136, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Chinea FM"
+          ],
+          "firstName": [
+            "Felix Manuel"
+          ],
+          "lastName": [
+            "Chinea"
+          ],
+          "initials": [
+            "FM"
+          ],
+          "affiliation": [
+            "Department of Radiation Oncology, Miller School of Medicine, University of Miami, Miami, FL, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Poveda J"
+          ],
+          "firstName": [
+            "Julio"
+          ],
+          "lastName": [
+            "Poveda"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Pathology and Laboratory Medicine Department, Miller School of Medicine, University of Miami, Miami, FL 33136, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Pereda J"
+          ],
+          "firstName": [
+            "Jeniffer"
+          ],
+          "lastName": [
+            "Pereda"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Kornberg School of Dentistry, Temple University, Philadelphia, PA, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Bejarano PA"
+          ],
+          "firstName": [
+            "Pablo A"
+          ],
+          "lastName": [
+            "Bejarano"
+          ],
+          "initials": [
+            "PA"
+          ],
+          "affiliation": [
+            "Department of Pathology, Cleveland Clinic Florida, Weston, FL, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Garcia-Buitrago MT"
+          ],
+          "firstName": [
+            "Monica T"
+          ],
+          "lastName": [
+            "Garcia-Buitrago"
+          ],
+          "initials": [
+            "MT"
+          ],
+          "affiliation": [
+            "Pathology and Laboratory Medicine Department, Miller School of Medicine, University of Miami, Miami, FL 33136, USA."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375676"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in pathology"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Pathol"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Pathol"
+          ],
+          "NLMid": [
+            "101576609"
+          ],
+          "ISSN": [
+            "2090-6781"
+          ],
+          "ESSN": [
+            "2090-679X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "3741291"
+  ],
+  "abstractText": [
+    "Pulmonary embolism (PE) is a critical complication related to multiple disorders and different medical or cosmetic procedures. This case report presents two patients who were admitted for respiratory symptoms in the setting of previously receiving silicone injections for cosmetic purposes and were diagnosed with silicone pulmonary embolism. The relevance of including questions about all cosmetic procedures as a part of a medical history is highlighted, in particular about silicone injections. The diagnosis is confirmed by histological means. Additionally, our review showed the change of most common sites of silicone injections and a significant increase in cosmetic procedures causing silicone embolism during the past twelve years."
+  ],
+  "affiliation": [
+    "Pathology and Laboratory Medicine Department, Miller School of Medicine, University of Miami, Miami, FL 33136, USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745326?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745326"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/3741291"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-27"
+  ],
+  "firstPublicationDate": [
+    "2016-01-27"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "id": [
+    "26884765"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26884765"
+  ],
+  "pmcid": [
+    "PMC4738708"
+  ],
+  "doi": [
+    "10.1155/2016/4080725"
+  ],
+  "title": [
+    "Eucalyptus Tree: A Potential Source of Cryptococcus neoformans in Egyptian Environment."
+  ],
+  "authorString": [
+    "Elhariri M, Hamza D, Elhelw R, Refai M."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Elhariri M"
+          ],
+          "firstName": [
+            "Mahmoud"
+          ],
+          "lastName": [
+            "Elhariri"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-0866-0460",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Microbiology, Faculty of Veterinary Medicine, Cairo University, Giza 12211, Egypt."
+          ]
+        },
+        {
+          "fullName": [
+            "Hamza D"
+          ],
+          "firstName": [
+            "Dalia"
+          ],
+          "lastName": [
+            "Hamza"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Department of Zoonoses, Faculty of Veterinary Medicine, Cairo University, Giza 12211, Egypt."
+          ]
+        },
+        {
+          "fullName": [
+            "Elhelw R"
+          ],
+          "firstName": [
+            "Rehab"
+          ],
+          "lastName": [
+            "Elhelw"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "Department of Microbiology, Faculty of Veterinary Medicine, Cairo University, Giza 12211, Egypt."
+          ]
+        },
+        {
+          "fullName": [
+            "Refai M"
+          ],
+          "firstName": [
+            "Mohamed"
+          ],
+          "lastName": [
+            "Refai"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Microbiology, Faculty of Veterinary Medicine, Cairo University, Giza 12211, Egypt."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-0866-0460",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375729"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "International journal of microbiology"
+          ],
+          "ISOAbbreviation": [
+            "Int J Microbiol"
+          ],
+          "medlineAbbreviation": [
+            "Int J Microbiol"
+          ],
+          "NLMid": [
+            "101516125"
+          ],
+          "ISSN": [
+            "1687-918X"
+          ],
+          "ESSN": [
+            "1687-9198"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "4080725"
+  ],
+  "abstractText": [
+    "In Egypt, the River Red Gum (Eucalyptus camaldulensis) is a well-known tree and is highly appreciated by the rural and urban dwellers. The role of Eucalyptus trees in the ecology of Cryptococcus neoformans is documented worldwide. The aim of this survey was to show the prevalence of C. neoformans during the flowering season of E. camaldulensis at the Delta region in Egypt. Three hundred and eleven samples out of two hundred Eucalyptus trees, including leaves, flowers, and woody trunks, were collected from four governorates in the Delta region. Thirteen isolates of C. neoformans were recovered from Eucalyptus tree samples (4.2%). Molecular identification of C. neoformans was done by capsular gene specific primer CAP64 and serotype identification was done depending on LAC1 gene. This study represents an update on the ecology of C. neoformans associated with Eucalyptus tree in Egyptian environment."
+  ],
+  "affiliation": [
+    "Department of Microbiology, Faculty of Veterinary Medicine, Cairo University, Giza 12211, Egypt."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4738708?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4738708"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/4080725"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-17"
+  ],
+  "dateOfCreation": [
+    "2016-02-17"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-13"
+  ],
+  "firstPublicationDate": [
+    "2016-01-13"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

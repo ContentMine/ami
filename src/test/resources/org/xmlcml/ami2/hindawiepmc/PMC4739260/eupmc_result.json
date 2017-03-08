@@ -1,0 +1,239 @@
+{
+  "id": [
+    "26884649"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26884649"
+  ],
+  "pmcid": [
+    "PMC4739260"
+  ],
+  "doi": [
+    "10.1155/2016/7852168"
+  ],
+  "title": [
+    "Manipulation of P2X Receptor Activities by Light Stimulation."
+  ],
+  "authorString": [
+    "Kim SS."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Kim SS"
+          ],
+          "firstName": [
+            "Sang Seong"
+          ],
+          "lastName": [
+            "Kim"
+          ],
+          "initials": [
+            "SS"
+          ],
+          "affiliation": [
+            "Department of Pharmacy, Hanyang University, ERICA Campus, 55 Hanyangdaehak-ro, Sangnok-gu, Ansan, Gyeonggi-do 426-791, Republic of Korea."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2389471"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Mediators of inflammation"
+          ],
+          "ISOAbbreviation": [
+            "Mediators Inflamm."
+          ],
+          "medlineAbbreviation": [
+            "Mediators Inflamm"
+          ],
+          "NLMid": [
+            "9209001"
+          ],
+          "ISSN": [
+            "0962-9351"
+          ],
+          "ESSN": [
+            "1466-1861"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "7852168"
+  ],
+  "abstractText": [
+    "P2X receptors are involved in amplification of inflammatory responses in peripheral nociceptive fibers and in mediating pain-related signals to the CNS. Control of P2X activation has significant importance in managing unwanted hypersensitive neuron responses. To overcome the limitations of chemical ligand treatment, optical stimulation methods of optogenetics and photoswitching achieve efficient control of P2X activation while allowing specificity at the target site and convenient stimulation by light illumination. There are many potential applications for photosensitive elements, such as improved uncaging methods, photoisomerizable ligands, photoswitches, and gold nanoparticles. Each technique has both advantages and downsides, and techniques are selected according to the purpose of the application. Technical advances not only provide novel approaches to manage inflammation or pain mediated by P2X receptors but also suggest a similar approach for controlling other ion channels."
+  ],
+  "affiliation": [
+    "Department of Pharmacy, Hanyang University, ERICA Campus, 55 Hanyangdaehak-ro, Sangnok-gu, Ansan, Gyeonggi-do 426-791, Republic of Korea."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article",
+        "Review",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4739260?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4739260"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/7852168"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2016-02-17"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-17"
+  ],
+  "firstPublicationDate": [
+    "2016-01-17"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

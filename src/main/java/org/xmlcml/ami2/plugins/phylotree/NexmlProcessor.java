@@ -25,7 +25,7 @@ import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlNode;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtu;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlOtus;
 import org.xmlcml.ami2.plugins.phylotree.nexml.NexmlTree;
-import org.xmlcml.cmine.args.log.AbstractLogElement.LogLevel;
+import org.xmlcml.cproject.args.log.AbstractLogElement.LogLevel;
 import org.xmlcml.diagrams.DiagramTree;
 import org.xmlcml.diagrams.phylo.PhyloTreePixelAnalyzer;
 import org.xmlcml.euclid.Real2;
@@ -68,6 +68,7 @@ public class NexmlProcessor {
 	}
 	
 	public NexmlNEXML createNexmlAndTreeFromPixels(File inputImageFile) throws IOException {
+		int largestSmallEdgeAllaowed = 5;
 		if (inputImageFile != null && inputImageFile.exists()) {
 			BufferedImage image = ImageIO.read(inputImageFile);
 			phyloTreePixelAnalyzer = argProcessor.getPhyloCore().createAndConfigurePixelAnalyzer(image);
@@ -78,7 +79,7 @@ public class NexmlProcessor {
 			PixelNode rootPixelNode = diagramTree.getRootPixelNode();
 			PixelGraph graph = diagramTree.getGraph();
 			// use root node later...
-			graph.tidyNodesAndEdges(5.0);
+			graph.tidyNodesAndEdges(largestSmallEdgeAllaowed);
 			diagramTree = new PhyloTreePixelAnalyzer().createFromGraph(graph, rootPixelNode);
 			NexmlFactory nexmlFactory = new NexmlFactory(argProcessor);
 			nexmlFactory.setRootPixelNode(rootPixelNode);

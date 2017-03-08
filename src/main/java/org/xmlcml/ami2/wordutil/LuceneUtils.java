@@ -53,7 +53,9 @@ public class LuceneUtils {
 		try {
 			tokenStream = analyzer.tokenStream(null, new StringReader(string));
 			LuceneUtils.resetTokenStreamQuietly(tokenStream);
+			analyzer.close();
 		} catch (IOException e) {
+			analyzer.close();
 			throw new RuntimeException("cannot create tokenStream", e);
 		}
 		return tokenStream;

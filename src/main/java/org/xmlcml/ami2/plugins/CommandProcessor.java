@@ -2,23 +2,29 @@ package org.xmlcml.ami2.plugins;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.ResultsAnalysis.SummaryType;
-import org.xmlcml.cmine.files.CProject;
-import org.xmlcml.cmine.util.CellRenderer;
-import org.xmlcml.cmine.util.DataTablesTool;
+import org.xmlcml.cproject.files.CProject;
+import org.xmlcml.cproject.files.ResourceLocation;
+import org.xmlcml.cproject.util.CellRenderer;
+import org.xmlcml.cproject.util.DataTablesTool;
 import org.xmlcml.html.HtmlHtml;
 import org.xmlcml.html.HtmlTable;
 import org.xmlcml.html.HtmlTd;
 import org.xmlcml.norma.Norma;
 import org.xmlcml.norma.biblio.json.EPMCConverter;
 import org.xmlcml.xml.XMLUtil;
+
+import nu.xom.Element;
 
 /** processes commandline , higher level functions
  * 
@@ -27,21 +33,54 @@ import org.xmlcml.xml.XMLUtil;
  */
 public class CommandProcessor {
 
+
 	private static final Logger LOG = Logger.getLogger(CommandProcessor.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+	
+	public final static String SYMBOLS = "/org/xmlcml/ami2/plugins/symbols.xml";
+	private static final String EXPAND = "expand";
+	private static final String ABBREVIATION = "abbreviation";
+	private static final String ARTICLES = "articles";
 
 	private List<AMIPluginOption> pluginOptions;
 	private File projectDir = null;
 	private List<String> cmdList = new ArrayList<String>();
+
+	private Map<String, String> symbolMap;
+	private String helpString;
 	
 	private CommandProcessor() {
-		
+		init();
+	}
+
+	private void init() {
+		readSymbols();
 	}
 
 	public CommandProcessor(File projectDir) {
+		this();
 		setProjectDir(projectDir);
+	}
+
+	private void readSymbols() {
+		InputStream is = new ResourceLocation().getInputStreamHeuristically(SYMBOLS);
+		if (is == null) {
+			throw new RuntimeException("cannot find symbols");
+		}
+		Element symbolsElement = XMLUtil.parseQuietlyToDocument(is).getRootElement();
+		symbolMap = new HashMap<String, String>();
+		helpString = "";
+		for (int i = 0; i < symbolsElement.getChildElements().size(); i++) {
+			Element childElement = symbolsElement.getChildElements().get(i);
+			String abbrev = childElement.getAttributeValue(ABBREVIATION);
+			String replace = childElement.getAttributeValue(EXPAND);
+			helpString += (abbrev+" => "+replace+"; ");
+			if (i % 4 == 0) helpString += "\n";
+			symbolMap.put(abbrev, replace);
+		}
+		LOG.debug("symbols:\n"+helpString);
 	}
 
 	private void setProjectDir(File projectDir) {
@@ -60,25 +99,43 @@ public class CommandProcessor {
 		runCommands();
 	}
 
-	private void parseCommands(List<String> cmds) {
+	private void parseCommands(List<String> cmds0) {
 		pluginOptions = new ArrayList<AMIPluginOption>();
-		if (cmds.size() == 0) {
+		if (cmds0.size() == 0) {
 			throw new RuntimeException("No commands given");
 		}
-		for (int i = 0; i < cmds.size(); i++) {
-			String cmd = cmds.get(i);
-			LOG.trace("creating pluginOption: "+cmd);
-			AMIPluginOption pluginOption = AMIPluginOption.createPluginOption(cmd);
-			if (pluginOption == null) {
-				LOG.error("skipping unknown command: "+cmd);
-			} else {
-				LOG.trace(pluginOption);
-				pluginOption.setProject(projectDir);
-				pluginOptions.add(pluginOption);
-			}
+		List<String> cmds = preprocess(cmds0);
+		
+		for (String cmd : cmds) {
+			createPluginOption(cmd);
+		}
+	}
+
+	private void createPluginOption(String cmd) {
+		LOG.trace("creating pluginOption: "+cmd);
+		AMIPluginOption pluginOption = AMIPluginOption.createPluginOption(cmd);
+		if (pluginOption == null) {
+			LOG.error("skipping unknown command: "+cmd);
+		} else {
+			LOG.trace(pluginOption);
+			pluginOption.setProject(projectDir);
+			pluginOptions.add(pluginOption);
 		}
 	}
 	
+	private List<String> preprocess(List<String> cmds0) {
+		List<String> cmds = new ArrayList<String>();
+		for (String cmd0 : cmds0) {
+			String cmd = symbolMap.get(cmd0);
+			if (cmd == null) {
+				cmds.add(cmd0); 
+			} else {
+				cmds.addAll(Arrays.asList(cmd.split("\\s+")));
+			}
+		}
+		return cmds;
+	}
+
 	public void runCommands() {
 		runNormaIfNecessary();
 		for (AMIPluginOption pluginOption : pluginOptions) {
@@ -93,7 +150,7 @@ public class CommandProcessor {
 	}
 
 	public void runNormaIfNecessary() {
-		if (!new CProject(projectDir).hasScholarlyHTML()) {
+		if (!new CProject(projectDir).hasScholarlyHTML(0.1)) {
 			String args = "-i fulltext.xml -o scholarly.html --transform nlm2html --project "+projectDir;
 			LOG.debug("running NORMA "+args);
 			new Norma().run(args);
@@ -131,7 +188,7 @@ public class CommandProcessor {
 			throw new RuntimeException("projectDir must be set");
 		}
 		String project = FilenameUtils.getBaseName(projectDir.toString());
-		DataTablesTool dataTablesTool = new DataTablesTool();
+		DataTablesTool dataTablesTool = new DataTablesTool(ARTICLES);
 		dataTablesTool.setTitle(project);
 		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
 		resultsAnalysis.addDefaultSnippets(projectDir);
@@ -191,7 +248,7 @@ public class CommandProcessor {
 
 	private static void help() {
 		System.err.println("Command processor: \n"
-				+ "   cmine projectDir [command [command]...]");
+				+ "   cproject projectDir [command [command]...]");
 	}
 
 }

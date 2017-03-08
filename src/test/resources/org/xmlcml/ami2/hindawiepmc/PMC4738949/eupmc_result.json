@@ -1,0 +1,311 @@
+{
+  "id": [
+    "26884766"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26884766"
+  ],
+  "pmcid": [
+    "PMC4738949"
+  ],
+  "doi": [
+    "10.1155/2016/1397434"
+  ],
+  "title": [
+    "Nonthrombotic Pulmonary Embolism: A Potential Complication of Polyacrylamide Hydrogel Cosmetic Injection."
+  ],
+  "authorString": [
+    "Inayat F, Cheema AR, Virk HU, Yoon DJ, Farooq S, Manan A."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Inayat F"
+          ],
+          "firstName": [
+            "Faisal"
+          ],
+          "lastName": [
+            "Inayat"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "Department of Medicine, New York-Presbyterian Hospital, Weill Cornell Medical College, New York, NY 10065, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Cheema AR"
+          ],
+          "firstName": [
+            "Ahmad R"
+          ],
+          "lastName": [
+            "Cheema"
+          ],
+          "initials": [
+            "AR"
+          ],
+          "affiliation": [
+            "Department of Medicine, Mount Sinai St. Luke's and Mount Sinai Roosevelt Hospitals, Icahn School of Medicine, New York, NY 10019, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Virk HU"
+          ],
+          "firstName": [
+            "Hafeez Ul Hasan"
+          ],
+          "lastName": [
+            "Virk"
+          ],
+          "initials": [
+            "HU"
+          ],
+          "affiliation": [
+            "Department of Medicine, Mount Sinai St. Luke's and Mount Sinai Roosevelt Hospitals, Icahn School of Medicine, New York, NY 10019, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Yoon DJ"
+          ],
+          "firstName": [
+            "Daniel J"
+          ],
+          "lastName": [
+            "Yoon"
+          ],
+          "initials": [
+            "DJ"
+          ],
+          "affiliation": [
+            "Department of Radiology, Mount Sinai St. Luke's and Mount Sinai Roosevelt Hospitals, Icahn School of Medicine, New York, NY 10025, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Farooq S"
+          ],
+          "firstName": [
+            "Salman"
+          ],
+          "lastName": [
+            "Farooq"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Neurology, Froedtert Memorial Lutheran Hospital, Medical College of Wisconsin, Milwaukee, WI 53226, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Manan A"
+          ],
+          "firstName": [
+            "Abdul"
+          ],
+          "lastName": [
+            "Manan"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Medicine, Mount Sinai St. Luke's and Mount Sinai Roosevelt Hospitals, Icahn School of Medicine, New York, NY 10019, USA."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375670"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in medicine"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Med"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Med"
+          ],
+          "NLMid": [
+            "101512910"
+          ],
+          "ISSN": [
+            "1687-9627"
+          ],
+          "ESSN": [
+            "1687-9635"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "1397434"
+  ],
+  "abstractText": [
+    "Context. Polyacrylamide hydrogel (PAAG) has gained importance as a synthetic soft tissue filling agent. It has been commonly employed by physicians in Europe for facial contouring and soft tissue augmentation. Previously, PAAG is considered nontoxic and well tolerated with a few mild procedural complications. Case Presentation. A 26-year-old female was hospitalized for dry cough, worsening dyspnea, and chest discomfort after 3 hours of multiple PAAG injections in buttocks. The patient's condition deteriorated and rapidly advanced to acute respiratory failure. Therein, the diagnosis of nonthrombotic pulmonary embolism (NTPE) was established on standard set of investigations. She was intubated; corticosteroid and empiric antibiotic therapy was initiated resulting in improvement of her condition. Subsequently, extubation was done, and she was discharged from the hospital after an uneventful recovery. On 1-month follow-up, the patient had no previous symptoms. Conclusion. This report implicates clinicians to maintain a high index of suspicion for NTPE in patients presenting with respiratory symptoms following PAAG usage."
+  ],
+  "affiliation": [
+    "Department of Medicine, New York-Presbyterian Hospital, Weill Cornell Medical College, New York, NY 10065, USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4738949?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4738949"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/1397434"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-17"
+  ],
+  "dateOfCreation": [
+    "2016-02-17"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-14"
+  ],
+  "firstPublicationDate": [
+    "2016-01-14"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

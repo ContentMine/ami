@@ -1,0 +1,311 @@
+{
+  "id": [
+    "26881169"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26881169"
+  ],
+  "pmcid": [
+    "PMC4736760"
+  ],
+  "doi": [
+    "10.1155/2016/4296059"
+  ],
+  "title": [
+    "A Case of a 4-Year-Old Boy with a Mesenteric Chylous Cyst Infected with Histoplasma capsulatum."
+  ],
+  "authorString": [
+    "Kweyamba V, Apiyo M, Olika B, Kituuka O."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Kweyamba V"
+          ],
+          "firstName": [
+            "Vianney"
+          ],
+          "lastName": [
+            "Kweyamba"
+          ],
+          "initials": [
+            "V"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3941-5169",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Surgery, Case Hospital, Kampala, Uganda."
+          ]
+        },
+        {
+          "fullName": [
+            "Apiyo M"
+          ],
+          "firstName": [
+            "Mirraim"
+          ],
+          "lastName": [
+            "Apiyo"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Pediatrics, Case Hospital, Kampala, Uganda."
+          ]
+        },
+        {
+          "fullName": [
+            "Olika B"
+          ],
+          "firstName": [
+            "Biratu"
+          ],
+          "lastName": [
+            "Olika"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "Gamma Path Laboratory, Kampala, Uganda."
+          ]
+        },
+        {
+          "fullName": [
+            "Kituuka O"
+          ],
+          "firstName": [
+            "Olivia"
+          ],
+          "lastName": [
+            "Kituuka"
+          ],
+          "initials": [
+            "O"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-7779-4035",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Surgery, Case Hospital, Kampala, Uganda."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-3941-5169",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-7779-4035",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375677"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in surgery"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Surg"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Surg"
+          ],
+          "NLMid": [
+            "101580191"
+          ],
+          "ISSN": [
+            "2090-6900"
+          ],
+          "ESSN": [
+            "2090-6919"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "4296059"
+  ],
+  "abstractText": [
+    "Mesenteric cysts are uncommon entities and chyle- (lymph-) containing cysts are the rarest of this group. This is a case report of a 4-year-old boy with a mesenteric chylous cyst who was later found to have Histoplasma capsulatum infection."
+  ],
+  "affiliation": [
+    "Department of Surgery, Case Hospital, Kampala, Uganda."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736760?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4736760"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/4296059"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-16"
+  ],
+  "dateOfCreation": [
+    "2016-02-16"
+  ],
+  "dateOfRevision": [
+    "2016-02-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-06"
+  ],
+  "firstPublicationDate": [
+    "2016-01-06"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

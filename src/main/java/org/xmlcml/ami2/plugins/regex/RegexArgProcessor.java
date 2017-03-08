@@ -8,10 +8,10 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
-import org.xmlcml.cmine.args.ArgIterator;
-import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.ContentProcessor;
-import org.xmlcml.cmine.files.ResultsElement;
+import org.xmlcml.cproject.args.ArgIterator;
+import org.xmlcml.cproject.args.ArgumentOption;
+import org.xmlcml.cproject.files.ContentProcessor;
+import org.xmlcml.cproject.files.ResultsElement;
 
 /** 
  * Processes commandline arguments.

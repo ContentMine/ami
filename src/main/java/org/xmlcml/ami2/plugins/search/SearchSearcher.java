@@ -10,8 +10,8 @@ import org.xmlcml.ami2.plugins.regex.CompoundRegex;
 import org.xmlcml.ami2.plugins.regex.RegexComponent;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordCollectionFactory;
-import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.cmine.lookup.DefaultStringDictionary;
+import org.xmlcml.cproject.files.ResultsElement;
+import org.xmlcml.cproject.lookup.DefaultStringDictionary;
 
 import nu.xom.Element;
 

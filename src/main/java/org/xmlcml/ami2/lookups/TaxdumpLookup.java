@@ -12,7 +12,7 @@ import java.util.Set;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.vafer.jdeb.shaded.compress.io.FileUtils;
-import org.xmlcml.cmine.lookup.AbstractLookup;
+import org.xmlcml.cproject.lookup.AbstractLookup;
 
 import blogspot.software_and_algorithms.stern_library.string.DamerauLevenshteinAlgorithm;
 
@@ -88,7 +88,7 @@ public class TaxdumpLookup extends AbstractLookup {
 	}
 
 	public List<String> lookupSpeciesList(String genus) {
-		LOG.debug("TAXDUMP "+genus);
+		LOG.trace("TAXDUMP "+genus);
 		List<String> speciesList = new ArrayList<String>(speciesByGenusSet.get(genus));
 		Collections.sort(speciesList);
 		return speciesList;

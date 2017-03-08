@@ -7,7 +7,7 @@ import java.util.List;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.ami2.plugins.AMIPluginOption;
-import org.xmlcml.cmine.files.ResourceLocation;
+import org.xmlcml.cproject.files.ResourceLocation;
 import org.xmlcml.xml.XMLUtil;
 
 import nu.xom.Document;

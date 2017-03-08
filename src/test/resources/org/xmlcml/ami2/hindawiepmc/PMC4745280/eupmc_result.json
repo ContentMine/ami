@@ -1,0 +1,277 @@
+{
+  "id": [
+    "26904339"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904339"
+  ],
+  "pmcid": [
+    "PMC4745280"
+  ],
+  "doi": [
+    "10.1155/2016/4295601"
+  ],
+  "title": [
+    "Sudden Sensorineural Hearing Loss after Orthopedic Surgery under Combined Spinal and Epidural Anesthesia."
+  ],
+  "authorString": [
+    "Vilhena D, Pereira L, Duarte D, Oliveira N."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Vilhena D"
+          ],
+          "firstName": [
+            "Ditza"
+          ],
+          "lastName": [
+            "Vilhena"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Department of Otolaryngology & Head-Neck Surgery, Hospital Pedro Hispano, 4464-513 Matosinhos, Portugal."
+          ]
+        },
+        {
+          "fullName": [
+            "Pereira L"
+          ],
+          "firstName": [
+            "Luís"
+          ],
+          "lastName": [
+            "Pereira"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Department of Anesthesiology, Hospital São João, Porto, Portugal."
+          ]
+        },
+        {
+          "fullName": [
+            "Duarte D"
+          ],
+          "firstName": [
+            "Delfim"
+          ],
+          "lastName": [
+            "Duarte"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Department of Otolaryngology & Head-Neck Surgery, Hospital Pedro Hispano, 4464-513 Matosinhos, Portugal."
+          ]
+        },
+        {
+          "fullName": [
+            "Oliveira N"
+          ],
+          "firstName": [
+            "Nuno"
+          ],
+          "lastName": [
+            "Oliveira"
+          ],
+          "initials": [
+            "N"
+          ],
+          "affiliation": [
+            "Department of Otolaryngology & Head-Neck Surgery, Hospital Pedro Hispano, 4464-513 Matosinhos, Portugal."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375675"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in otolaryngology"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Otolaryngol"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Otolaryngol"
+          ],
+          "NLMid": [
+            "101576603"
+          ],
+          "ISSN": [
+            "2090-6765"
+          ],
+          "ESSN": [
+            "2090-6773"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "4295601"
+  ],
+  "abstractText": [
+    "Postoperative hearing loss following nonotologic surgery is rare. For patients undergoing subarachnoid anesthesia, the loss of cerebral spinal fluid and hence the drop in intracranial pressure can result in hearing loss and cranial nerve palsy. We report a case in which a patient sustained orthopedic surgery under combined spinal and epidural anesthesia complicated by severe and persistent sensorineural hearing loss. This report is a reminder that postoperative sudden sensorineural hearing loss is a poorly understood complication. A high index of suspicion is required for early diagnosis of this complication, although prompt treatment does not guarantee a good outcome."
+  ],
+  "affiliation": [
+    "Department of Otolaryngology & Head-Neck Surgery, Hospital Pedro Hispano, 4464-513 Matosinhos, Portugal."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745280?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745280"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/4295601"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-21"
+  ],
+  "firstPublicationDate": [
+    "2016-01-21"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "id": [
+    "26640617"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26640617"
+  ],
+  "pmcid": [
+    "PMC4657150"
+  ],
+  "doi": [
+    "10.1155/2016/8752821"
+  ],
+  "title": [
+    "Induction of Expression of p75 Neurotrophin Receptor Intracellular Domain Does Not Induce Expression or Enhance Activity of Mitochondrial Complex II."
+  ],
+  "authorString": [
+    "Yang YP, Lotta L, Beutner G, Li X, Schor NF."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Yang YP"
+          ],
+          "firstName": [
+            "Yaoli Pu"
+          ],
+          "lastName": [
+            "Yang"
+          ],
+          "initials": [
+            "YP"
+          ],
+          "affiliation": [
+            "Department of Pediatrics, University of Rochester School of Medicine and Dentistry, Rochester, NY 14642, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Lotta L"
+          ],
+          "firstName": [
+            "Louis"
+          ],
+          "lastName": [
+            "Lotta"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Department of Pediatrics, University of Rochester School of Medicine and Dentistry, Rochester, NY 14642, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Beutner G"
+          ],
+          "firstName": [
+            "Gisela"
+          ],
+          "lastName": [
+            "Beutner"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Department of Pediatrics, University of Rochester School of Medicine and Dentistry, Rochester, NY 14642, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Li X"
+          ],
+          "firstName": [
+            "Xingguo"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Department of Pediatrics, University of Rochester School of Medicine and Dentistry, Rochester, NY 14642, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Schor NF"
+          ],
+          "firstName": [
+            "Nina F"
+          ],
+          "lastName": [
+            "Schor"
+          ],
+          "initials": [
+            "NF"
+          ],
+          "affiliation": [
+            "Department of Pediatrics, University of Rochester School of Medicine and Dentistry, Rochester, NY 14642, USA."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2365069"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Oxidative medicine and cellular longevity"
+          ],
+          "ISOAbbreviation": [
+            "Oxid Med Cell Longev"
+          ],
+          "medlineAbbreviation": [
+            "Oxid Med Cell Longev"
+          ],
+          "NLMid": [
+            "101479826"
+          ],
+          "ISSN": [
+            "1942-0900"
+          ],
+          "ESSN": [
+            "1942-0994"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "8752821"
+  ],
+  "abstractText": [
+    "Fenretinide is a chemotherapeutic agent in clinical trials for the treatment of neuroblastoma, among the most common and most deadly cancers of childhood. Fenretinide induces apoptosis in neuroblastoma cells through accumulation of mitochondrial reactive oxygen species released from Complex II. The neurotrophin receptor, p75NTR, potentiates this effect. The signaling activity of p75NTR is dependent upon its cleavage to its intracellular domain, p75ICD, trafficking of p75ICD to the nucleus, and functioning of p75ICD as a transcription factor. Mitochondrial Complex II comprises 4 subunits, all of which are encoded by nuclear DNA. We therefore hypothesized that the fenretinide-potentiating effects of p75NTR are the result of transcriptional enrichment of Complex II by p75ICD. However, the present studies demonstrate that neither induced expression of p75ICD or its active fragments nor overexpression of p75NTR results in altered expression or activity of Complex II."
+  ],
+  "affiliation": [
+    "Department of Pediatrics, University of Rochester School of Medicine and Dentistry, Rochester, NY 14642, USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't",
+        "Research Support, N.I.H., Extramural"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "TL1 TR000096"
+          ],
+          "agency": [
+            "NCATS NIH HHS"
+          ],
+          "acronym": [
+            "TR"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4657150?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4657150"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/8752821"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2015-12-07"
+  ],
+  "dateOfRevision": [
+    "2015-12-09"
+  ],
+  "electronicPublicationDate": [
+    "2015-11-10"
+  ],
+  "firstPublicationDate": [
+    "2015-11-10"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

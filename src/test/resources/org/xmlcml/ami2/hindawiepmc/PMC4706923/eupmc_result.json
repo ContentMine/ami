@@ -1,0 +1,396 @@
+{
+  "id": [
+    "26819616"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26819616"
+  ],
+  "pmcid": [
+    "PMC4706923"
+  ],
+  "doi": [
+    "10.1155/2016/9686815"
+  ],
+  "title": [
+    "Small-Bowel Neoplasms: Role of MRI Enteroclysis."
+  ],
+  "authorString": [
+    "Faggian A, Fracella MR, D'Alesio G, Alabiso ME, Berritto D, Feragalli B, Miele V, Iasiello F, Grassi R."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Faggian A"
+          ],
+          "firstName": [
+            "Angela"
+          ],
+          "lastName": [
+            "Faggian"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Institute of Radiology, Second University of Naples, Piazza Miraglia 2, 80138 Naples, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Fracella MR"
+          ],
+          "firstName": [
+            "Maria Rosaria"
+          ],
+          "lastName": [
+            "Fracella"
+          ],
+          "initials": [
+            "MR"
+          ],
+          "affiliation": [
+            "Department of Radiology, San Paolo Hospital, Contrada Caposcardicchio, 70123 Bari, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "D'Alesio G"
+          ],
+          "firstName": [
+            "Grazia"
+          ],
+          "lastName": [
+            "D'Alesio"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Department of Radiology, San Paolo Hospital, Contrada Caposcardicchio, 70123 Bari, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Alabiso ME"
+          ],
+          "firstName": [
+            "Maria Eleonora"
+          ],
+          "lastName": [
+            "Alabiso"
+          ],
+          "initials": [
+            "ME"
+          ],
+          "affiliation": [
+            "Department of Radiology, IGEA Sant'Antimo, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Berritto D"
+          ],
+          "firstName": [
+            "Daniela"
+          ],
+          "lastName": [
+            "Berritto"
+          ],
+          "initials": [
+            "D"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3336-8437",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Institute of Radiology, Second University of Naples, Piazza Miraglia 2, 80138 Naples, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Feragalli B"
+          ],
+          "firstName": [
+            "Beatrice"
+          ],
+          "lastName": [
+            "Feragalli"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "Department of Oral Science, Nano and Biotechnology, University G. d'Annunzio of Chieti-Pescara, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Miele V"
+          ],
+          "firstName": [
+            "Vittorio"
+          ],
+          "lastName": [
+            "Miele"
+          ],
+          "initials": [
+            "V"
+          ],
+          "affiliation": [
+            "Department of Emergency Radiology, S. Camillo Hospital, Circonvallazione Gianicolense 87, 00152 Rome, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Iasiello F"
+          ],
+          "firstName": [
+            "Francesca"
+          ],
+          "lastName": [
+            "Iasiello"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "Department of Radiology, IGEA Sant'Antimo, Italy."
+          ]
+        },
+        {
+          "fullName": [
+            "Grassi R"
+          ],
+          "firstName": [
+            "Roberto"
+          ],
+          "lastName": [
+            "Grassi"
+          ],
+          "initials": [
+            "R"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-3587-474X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Institute of Radiology, Second University of Naples, Piazza Miraglia 2, 80138 Naples, Italy."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-3336-8437",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-3587-474X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2367873"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Gastroenterology research and practice"
+          ],
+          "ISOAbbreviation": [
+            "Gastroenterol Res Pract"
+          ],
+          "medlineAbbreviation": [
+            "Gastroenterol Res Pract"
+          ],
+          "NLMid": [
+            "101475557"
+          ],
+          "ISSN": [
+            "1687-6121"
+          ],
+          "ESSN": [
+            "1687-630X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "9686815"
+  ],
+  "abstractText": [
+    "Small-bowel neoplasms are the 3%-6% of all gastrointestinal tract neoplasms. Due to the rarity of these lesions, the low index of clinical suspicion, and the inadequate radiologic examinations or incorrect interpretation of radiologic findings, a delay in diagnosis of 6-8 months from the first symptoms often occurs. Even if conventional enteroclysis and capsule endoscopy are the most common procedures used to accurately depict the bowel lumen and mucosal surface, their use in evaluating the mural and extramural extents of small-bowel tumors is limited. Instead multidetector computed tomographic enteroclysis and magnetic resonance enteroclysis have the potential to simultaneously depict intraluminal, mural, and extraintestinal abnormalities. In particular MR enteroclysis has an excellent soft tissue contrast resolution and multiplanar imaging capability. It can provide anatomic, functional, and real time information without the need of ionizing radiation. MR findings, appearances of the lesions, combined with the contrast-enhancement behavior and characteristic of the stenosis are important to differentiate small-bowel neoplasm from other nonneoplastic diseases."
+  ],
+  "affiliation": [
+    "Institute of Radiology, Second University of Naples, Piazza Miraglia 2, 80138 Naples, Italy."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4706923?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4706923"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/9686815"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-01-28"
+  ],
+  "dateOfCreation": [
+    "2016-01-28"
+  ],
+  "dateOfRevision": [
+    "2016-01-31"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-24"
+  ],
+  "firstPublicationDate": [
+    "2015-12-24"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

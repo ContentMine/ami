@@ -16,10 +16,10 @@ import org.xmlcml.ami2.plugins.search.SearchPluginOption;
 import org.xmlcml.ami2.plugins.sequence.SequencePluginOption;
 import org.xmlcml.ami2.plugins.species.SpeciesPluginOption;
 import org.xmlcml.ami2.plugins.word.WordPluginOption;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.OptionFlag;
-import org.xmlcml.cmine.files.PluginOption;
-import org.xmlcml.cmine.util.CellRenderer;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
+import org.xmlcml.cproject.files.OptionFlag;
+import org.xmlcml.cproject.files.PluginOption;
+import org.xmlcml.cproject.util.CellRenderer;
 
 public abstract class AMIPluginOption extends PluginOption {
 
@@ -127,7 +127,7 @@ public abstract class AMIPluginOption extends PluginOption {
 	private void runFilterResultsXMLOptions(String option) {
 		String filterCommandString = createFilterCommandString(option);
 		DefaultArgProcessor.CM_LOG.debug("filter: "+filterCommandString);
-		System.out.print(option);
+		LOG.debug(option);
 		new DefaultArgProcessor(filterCommandString).runAndOutput();
 	}
 
@@ -137,7 +137,7 @@ public abstract class AMIPluginOption extends PluginOption {
 		cmd += " --filter file(**/"+getPlugin(plugin)+"/"+getOption(option)+"/results.xml)xpath("+resultXPathBase+xpathFlags+") ";
 		cmd += " -o "+createSnippetsFilename(option)+"  ";
 		DefaultArgProcessor.CM_LOG.debug("runFilterResultsXMLOptions: "+cmd);
-		System.out.print(option);
+		LOG.debug(option);
 		return cmd;
 	}
 

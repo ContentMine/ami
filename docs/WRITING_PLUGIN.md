@@ -42,7 +42,7 @@ This contains (static) resources for the Plugin, normally computed at startup, t
 
 ### `src/main/resources/org/xmlcml/ami2/plugins/foo/args.xml`
 
-Mandatory if there are any Plugin-specific commands/options. Some options (e.g. `--input`) are inherited from `/org/xmlcml/cmine/args/args.xml` (processed by `org.xmlcml.cmine.args.DefaultArgProcessor.java` ) and others (e.g. `--context`)  inherit from  `/org/xmlcml/ami2/plugins/args.xml` (processed by `org.xmlcml.ami2.plugins.AmiArgProcessor.java`).   Each command requires an `<arg>` in `args.xml`.
+Mandatory if there are any Plugin-specific commands/options. Some options (e.g. `--input`) are inherited from `/org/xmlcml/cmine/args/args.xml` (processed by `org.xmlcml.cproject.args.DefaultArgProcessor.java` ) and others (e.g. `--context`)  inherit from  `/org/xmlcml/ami2/plugins/args.xml` (processed by `org.xmlcml.ami2.plugins.AmiArgProcessor.java`).   Each command requires an `<arg>` in `args.xml`.
 
 ## `src/test/java` Mandatory
 

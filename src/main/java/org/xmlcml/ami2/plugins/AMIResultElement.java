@@ -2,7 +2,7 @@ package org.xmlcml.ami2.plugins;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cmine.files.ResultElement;
+import org.xmlcml.cproject.files.ResultElement;
 
 public class AMIResultElement extends ResultElement {
 

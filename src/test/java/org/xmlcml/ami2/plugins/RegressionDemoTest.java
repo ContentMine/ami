@@ -15,7 +15,7 @@ import org.xmlcml.ami2.plugins.sequence.SequencePlugin;
 import org.xmlcml.ami2.plugins.species.SpeciesPlugin;
 import org.xmlcml.ami2.plugins.word.WordPlugin;
 import org.xmlcml.ami2.wordutil.WordSetWrapper;
-import org.xmlcml.cmine.files.CTree;
+import org.xmlcml.cproject.files.CTree;
 
 /** collection of archetypal tests from each plugin.
  * 

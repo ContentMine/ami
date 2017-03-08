@@ -11,7 +11,7 @@ import org.xmlcml.ami2.plugins.CommandProcessor;
 import org.xmlcml.ami2.plugins.regex.RegexArgProcessor;
 import org.xmlcml.ami2.plugins.word.WordArgProcessor;
 import org.xmlcml.ami2.wordutil.WordSetWrapper;
-import org.xmlcml.cmine.util.CMineTestFixtures;
+import org.xmlcml.cproject.util.CMineTestFixtures;
 import org.xmlcml.norma.NormaArgProcessor;
 
 //@Ignore

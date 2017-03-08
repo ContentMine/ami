@@ -12,8 +12,8 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
-import org.xmlcml.cmine.args.DefaultArgProcessor;
-import org.xmlcml.cmine.files.CTree;
+import org.xmlcml.cproject.args.DefaultArgProcessor;
+import org.xmlcml.cproject.files.CTree;
 import org.xmlcml.xml.XMLUtil;
 
 public class SimplePluginTest {
@@ -30,7 +30,7 @@ public class SimplePluginTest {
 		Assert.assertTrue("fulltext.xml", cTree.hasExistingFulltextXML());
 		Assert.assertTrue("fulltext.html", cTree.hasFulltextHTML());
 		Assert.assertTrue("fulltext.pdf", cTree.hasFulltextPDF());
-		Assert.assertTrue("results.json", cTree.hasResultsJSON());
+		Assert.assertTrue("results.json", cTree.hasQuickscrapeMD());
 		Assert.assertTrue("scholarly.html", cTree.hasScholarlyHTML());
 	}
 	

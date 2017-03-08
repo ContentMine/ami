@@ -11,13 +11,13 @@ import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.plugins.AMISearcher;
 import org.xmlcml.ami2.plugins.word.WordResultsElement;
 import org.xmlcml.ami2.plugins.word.WordResultsElementList;
-import org.xmlcml.cmine.args.ArgIterator;
-import org.xmlcml.cmine.args.ArgumentOption;
-import org.xmlcml.cmine.files.CTree;
-import org.xmlcml.cmine.files.ContentProcessor;
-import org.xmlcml.cmine.files.ResultsElement;
-import org.xmlcml.cmine.files.ResultsElementList;
-import org.xmlcml.cmine.lookup.DefaultStringDictionary;
+import org.xmlcml.cproject.args.ArgIterator;
+import org.xmlcml.cproject.args.ArgumentOption;
+import org.xmlcml.cproject.files.CTree;
+import org.xmlcml.cproject.files.ContentProcessor;
+import org.xmlcml.cproject.files.ResultsElement;
+import org.xmlcml.cproject.files.ResultsElementList;
+import org.xmlcml.cproject.lookup.DefaultStringDictionary;
 
 /** 
  * Processes commandline arguments.
@@ -283,64 +283,5 @@ public class SearchArgProcessor extends AMIArgProcessor {
 		}
 	}
 
-//	private void checkWordCaseList() {
-//		if (wordCaseList.size() == 1 && PRESERVE.equals(wordCaseList.get(0))) {
-//			// OK
-//		} else {
-//			for (int i = wordCaseList.size() - 1; i >= 0; i--) {
-//				String word = wordCaseList.get(i);
-//				if (wordCaseList.contains(PRESERVE) || !CASE_TYPES.contains(word)) {
-//					LOG.error("Removed forbidden/unknown word: "+word);
-//					wordCaseList.remove(i);
-//				}
-//			}
-//		}
-//	}
-//
-//	private void addStopwords(String stopwordLocation) {
-//		ensureStopwordSetList();
-//		WordSetWrapper stopwordSet = WordSetWrapper.createStopwordSet(stopwordLocation);
-//		if (stopwordSet != null) {
-//			stopwordSetList.add(stopwordSet);
-//		}
-//	}
-//	
-//	private void ensureStopwordSetList() {
-//		if (stopwordSetList == null) {
-//			stopwordSetList = new ArrayList<WordSetWrapper>();
-//		}
-//	}
-//	
-//	public IntRange getWordLengthRange() {
-//		return wordLengthRange;
-//	}
-//
-//	public List<WordSetWrapper> getStopwordSetList() {
-//		ensureStopwordSetList();
-//		return stopwordSetList;
-//	}
-//
-//	public List<String> getChosenMethods() {
-//		return chosenMethods;
-//	}
-//
-//	public boolean getStemming() {
-//		return stemming;
-//	}
-//
-//	public List<String> getWordCaseList() {
-//		return wordCaseList;
-//	}
-//
-//	public List<String> getChosenWordTypes() {
-//		ensureChosenWordTypes();
-//		return chosenWordTypes;
-//	}
-//
-//	private void ensureChosenWordTypes() {
-//		if (chosenWordTypes == null) {
-//			chosenWordTypes = new ArrayList<String>();
-//		}
-//	}
 
 }

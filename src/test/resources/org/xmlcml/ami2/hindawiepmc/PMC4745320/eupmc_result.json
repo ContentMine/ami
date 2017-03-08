@@ -1,0 +1,294 @@
+{
+  "id": [
+    "26904308"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26904308"
+  ],
+  "pmcid": [
+    "PMC4745320"
+  ],
+  "doi": [
+    "10.1155/2016/8506357"
+  ],
+  "title": [
+    "Identification Bracelet Precipitated Acute Compartment Syndrome during Intravenous Infusion in an Obtunded Patient."
+  ],
+  "authorString": [
+    "Zafar W, Chaucer B, Felek S, Arsura EL, Nfonoyim J."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Zafar W"
+          ],
+          "firstName": [
+            "Wahib"
+          ],
+          "lastName": [
+            "Zafar"
+          ],
+          "initials": [
+            "W"
+          ],
+          "affiliation": [
+            "Department of Medicine, Richmond University Medical Center, Staten Island, NY 10301, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Chaucer B"
+          ],
+          "firstName": [
+            "Benjamin"
+          ],
+          "lastName": [
+            "Chaucer"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "St. Georges University School of Medicine, 3500 Sunrise Highway, Great River, NY 11739, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Felek S"
+          ],
+          "firstName": [
+            "Suleyman"
+          ],
+          "lastName": [
+            "Felek"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Medicine, Richmond University Medical Center, Staten Island, NY 10301, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Arsura EL"
+          ],
+          "firstName": [
+            "Edward L"
+          ],
+          "lastName": [
+            "Arsura"
+          ],
+          "initials": [
+            "EL"
+          ],
+          "affiliation": [
+            "Department of Medicine, Richmond University Medical Center, Staten Island, NY 10301, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Nfonoyim J"
+          ],
+          "firstName": [
+            "Jay"
+          ],
+          "lastName": [
+            "Nfonoyim"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Medicine, Richmond University Medical Center, Staten Island, NY 10301, USA."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2016"
+      ],
+      "journalIssueId": [
+        "2375899"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Case reports in critical care"
+          ],
+          "ISOAbbreviation": [
+            "Case Rep Crit Care"
+          ],
+          "medlineAbbreviation": [
+            "Case Rep Crit Care"
+          ],
+          "NLMid": [
+            "101598416"
+          ],
+          "ISSN": [
+            "2090-6420"
+          ],
+          "ESSN": [
+            "2090-6439"
+          ]
+        }
+      ]
+    }
+  ],
+  "pageInfo": [
+    "8506357"
+  ],
+  "abstractText": [
+    "Acute compartment syndrome is a serious condition requiring immediate medical care. A lack of urgent medical treatment can result in serious complications such as loss of function and even amputation. While the pathophysiology of acute compartment syndrome is well understood, numerous potential causes are still being discovered. A rare cause of acute compartment syndrome is IV infiltration. We present a case of acute compartment syndrome resulting from intravenous infusion due to proximal placement of a patient identification bracelet. We conclude that both routine evaluation for IV infiltration and proximal placement of IV lines are essential for prevention of acute compartment syndrome."
+  ],
+  "affiliation": [
+    "Department of Medicine, Richmond University Medical Center, Staten Island, NY 10301, USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745320?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4745320"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "http://dx.doi.org/10.1155/2016/8506357"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-23"
+  ],
+  "dateOfCreation": [
+    "2016-02-23"
+  ],
+  "dateOfRevision": [
+    "2016-02-25"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-19"
+  ],
+  "firstPublicationDate": [
+    "2016-01-19"
+  ],
+  "luceneScore": [
+    "NaN"
+  ]
+}

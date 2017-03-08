@@ -11,7 +11,7 @@ import org.junit.Test;
 import org.xmlcml.ami2.AMIFixtures;
 import org.xmlcml.ami2.plugins.AMIArgProcessor;
 import org.xmlcml.ami2.wordutil.WordSetWrapper;
-import org.xmlcml.cmine.util.CMineTestFixtures;
+import org.xmlcml.cproject.util.CMineTestFixtures;
 
 
 public class WordTest {
